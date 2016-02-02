@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454416966 < time()) $expired = true; else{$expired = false; $value = 's:39:"node-13ul.pool-182-53.dynamic.totbb.net";';}?>

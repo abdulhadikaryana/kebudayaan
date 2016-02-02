@@ -1,1 +1,1 @@
-<?php if (!defined('SMF')) die; if (1454415696 < time()) $expired = true; else{$expired = false; $value = 's:35:"SOL-FTTB.37.114.118.46.sovam.net.ua";';}?>
+<?php if (!defined('SMF')) die; if (1454416421 < time()) $expired = true; else{$expired = false; $value = 's:35:"SOL-FTTB.37.114.118.46.sovam.net.ua";';}?>
