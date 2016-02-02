@@ -1,0 +1,54 @@
+<div class="filter-panel hidden">
+    
+    <h4 style="margin-top: 10px;"><label for="filterPage">Filter:</label></h4>
+    
+    <form action="<?php echo $this->currentUrl(); ?>" method="post">
+        <select class="filter-box" name="filterPage" id="filterPage" 
+                onchange="filterSwitch(this.value);">
+            <option value="0">Show All</option>
+            <option value="1">Title</option>
+            <option value="2">Related Destination</option>
+            <option value="3">Date</option>
+            <option value="4">Status</option>
+        </select>
+        
+        <select class="status-box hidden" name="filterStatus">
+            <option value="1">Published</option>
+            <option value="0">Draft</option>
+        </select>
+        
+        <select class="year-box hidden" name="filterYear">
+            <?php foreach ($this->year as $year) : ?>
+                <?php if ($year['year'] != 0) : ?>
+                    <option value="<?php echo $year['year']; ?>">
+                        <?php echo $year['year']; ?>
+                    </option>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </select>
+        
+        <select class="month-box hidden" name="filterMonth">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">Novemer</option>
+            <option value="12">December</option>
+        </select>
+        
+        <input type="text" class="poi-box mediumele hidden" name="filterPoi"/>
+               
+        <input type="text" class="title-box mediumele hidden" 
+               name="filterTitle"/>
+        
+        <input type="submit" value="Go" class="btn radius"/>
+        
+        <span class="ajax-loader"></span>
+    </form>
+</div>

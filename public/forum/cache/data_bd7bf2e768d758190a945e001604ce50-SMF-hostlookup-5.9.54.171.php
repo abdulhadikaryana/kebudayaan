@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454404339 < time()) $expired = true; else{$expired = false; $value = 's:40:"static.171.54.9.5.clients.your-server.de";';}?>

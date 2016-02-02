@@ -1,0 +1,206 @@
+    <div id="search-result" class="tabbed_box">                
+        <h2 class="section-title">
+            <span><?php echo $this->translate("Search Result For ") . '"' . $this->param . '"'?></span>
+        </h2>        
+        
+        <?php echo $this->render('partials/widgets/google-search.phtml'); ?>
+        
+        <div class="tabbed_area">
+            <ul class="tabs" id="tabs">
+                <li class="active"><a href="#tab1" id="all" class="tabsearch">Semua</a></li>
+                <li><a href="#tab2" id="dest" class="tabsearch"><?php echo $this->translate('Culture') ?></a></li>
+                <li><a href="#tab3" id="news" class="tabsearch"><?php echo $this->translate('News') ?></a></li>
+                <li><a href="#tab4" id="event" class="tabsearch"><?php echo $this->translate('Event') ?></a></li>
+                <li><a href="#tab5" id="article" class="tabsearch"><?php echo $this->translate('Figure') ?></a></li>
+                <!--<li><a href="#top" id="gallery" class="tabsearch">Galleries</a></li>-->
+            </ul>
+            <div class="clear"></div>
+            <?php if($this->emptyResult) :?>
+                <div class="contentEmpty">
+                    <?php echo $this->emptyResult;?>
+                </div>
+
+            <?php else :?>
+                
+                <div id="content_all" class="content">
+                    <ul id="all_content">
+                        <!--culture-->
+                        <?php if(!empty($this->destination)): ?>
+                            <h3 class="green"><?php echo $this->translate('Culture') ?></h3>
+                            <?php echo $this->destination; ?>
+                        <?php endif; ?>
+                        <!--news-->
+                        <?php if(!empty($this->news)): ?>
+                            <h3 class="orange"><?php echo $this->translate('News') ?></h3>
+                            <?php echo $this->news; ?>
+                        <?php endif; ?>
+                        <!--event-->
+                        <?php if(!empty($this->event)): ?>
+                        <h3 class="green"><?php echo $this->translate('Event') ?></h3>
+                        <?php echo $this->event; ?>
+                        <?php endif; ?>
+                        <!--figure-->
+                        <?php if(!empty($this->article)): ?>
+                        <h3 class="blue"><?php echo $this->translate('Figure') ?></h3>
+                        <?php echo $this->article; ?>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            
+                <?php if(!empty($this->destination)): ?>
+                    <div id="content_dest" class="content">
+                        <h3 class="green"><?php echo $this->translate('Culture') ?></h1>
+                        <ul id="dest_content">
+                            <?php echo $this->destination;?>
+                        </ul>
+                    </div>    
+                <?php endif; ?>
+
+                <?php if(!empty($this->news)): ?>
+                    <div id="content_news" class="content" >
+                        <h3 class="orange"><?php echo $this->translate('News') ?></h1>
+                        <ul id="news_content">
+                            <?php echo $this->news;?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+    
+                <?php if(!empty($this->event)): ?>
+                    <div id="content_event" class="content" >
+                        <h3 class="green"><?php echo $this->translate('Event') ?></h1>
+                        <ul id="event_content">
+                            <?php echo $this->event;?>
+                        </ul>
+                    </div>  
+                <?php endif; ?>
+            
+                <?php if(!empty($this->article)): ?>
+                    <div id="content_article" class="content">
+                        <h3 class="blue"><?php echo $this->translate('Figure') ?></h1>
+                        <ul id="article_content">
+                            <?php echo $this->article;?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            <?php endif;?>
+
+            <div class="paging">
+
+                <div class="navigation" id="nav_dest">                  
+                        <div class="linkpages" id="linkpage_dest" style="float:left;display:none;" title="dest">
+                           <?php echo $this->linkpage_dest;?>
+                       </div>
+                </div>
+ 
+                
+                <div class="navigation" id="nav_news" style="display:none">
+                        <div class="linkpages" id="linkpage_news" style="float:left" title="news">
+                            <?php echo $this->linkpage_news;?>
+                        </div>
+                </div>
+                
+                <div class="navigation" id="nav_event" style="display:none">
+                   
+
+                        <div class="linkpages" id="linkpage_event" style="float:left;display:none;" title="event">
+                            <?php echo $this->linkpage_event;?>
+                        </div>
+
+                </div>
+                
+                 <div class="navigation" id="nav_article" style="display:none">
+                   
+                        <div class="linkpages" id="linkpage_article" style="float:left;display:none;" title="article">
+                            <?php echo $this->linkpage_article;?>
+                        </div>
+                </div>
+           </div>              
+        </div>                
+    </div>
+
+
+
+<!--event param nav-->
+<input type="hidden" id="paramlast_event" title="last_event" value="<?php echo $this->totalpage_event;?>" />
+<input type="hidden" id="offset_event" title="offset_event" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_event" title="curpage_event" value="1" />
+<input type="hidden" id="allpage_event" title="allpage_event" value="<?php echo $this->totalpage_event;?>" />
+<input type="hidden" id="param_event" title="param_event" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_event" title="first_event" value="1" />
+<!--end event param nav-->
+<br />
+<br />
+
+<!--news param nav-->
+<input type="hidden" id="paramlast_news" title="last_news" value="<?php echo $this->totalpage_news;?>" />
+<input type="hidden" id="offset_news" title="offset_news" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_news" title="curpage_news" value="1" />
+<input type="hidden" id="allpage_news" title="allpage_news" value="<?php echo $this->totalpage_news;?>" />
+<input type="hidden" id="param_news" title="param_news" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_news" title="first_news" value="1" />
+<!--end news param nav-->
+<br />
+<br />
+
+
+<!--dest param nav-->
+
+<input type="hidden" id="paramlast_dest" title="last_dest" value="<?php echo $this->totalpage_dest;?>" />
+<input type="hidden" id="offset_dest" title="offset_dest" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_dest" title="curpage_dest" value="1" />
+<input type="hidden" id="allpage_dest" title="allpage_dest" value="<?php echo $this->totalpage_dest;?>" />
+<input type="hidden" id="param_dest" title="param_dest" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_dest" title="first_dest" value="1" />
+<!--enddest param nav-->
+<br />
+<br />
+
+<!--article param nav-->
+<input type="hidden" id="paramlast_article" title="last_article" value="<?php echo $this->totalpage_article;?>" />
+<input type="hidden" id="offset_article" title="offset_article" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_article" title="curpage_article" value="1" />
+<input type="hidden" id="allpage_article" title="allpage_article" value="<?php echo $this->totalpage_article;?>" />
+<input type="hidden" id="param_article" title="param_article" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_article" title="first_article" value="1" />
+<!--end article param nav-->
+<br />
+<br />
+
+<!--galley param nav
+<input type="hidden" id="paramlast_gallery" title="last_gallery" value="<?php echo $this->totalpage_gallery;?>" />
+<input type="hidden" id="offset_gallery" title="offset_gallery" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_gallery" title="curpage_gallery" value="1" />
+<input type="hidden" id="allpage_gallery" title="allpage_gallery" value="<?php echo $this->totalpage_gallery;?>" />
+<input type="hidden" id="param_gallery" title="param_gallery" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_gallery" title="first_gallery" value="1" />
+end gallery param nav
+<br />
+<br />
+
+tourism param nav
+<input type="hidden" id="paramlast_tourism" title="last_tourism" value="<?php echo $this->totalpage_tourism;?>" />
+<input type="hidden" id="offset_tourism" title="offset_tourism" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_tourism" title="curpage_tourism" value="1" />
+<input type="hidden" id="allpage_tourism" title="allpage_tourism" value="<?php echo $this->totalpage_tourism;?>" />
+<input type="hidden" id="param_tourism" title="param_tourism" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_tourism" title="first_tourism" value="1" />
+end tourism param nav
+<br />-->
+
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $('#keyWord').text('<?php echo $this->param;?>');
+
+    var url = "<?php echo $this->baseUrl('/search/');?>";
+    var limit = "<?php echo $this->limit?>";
+    
+    //function in search.js
+    ajaxPagination(url,limit);
+    
+});
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

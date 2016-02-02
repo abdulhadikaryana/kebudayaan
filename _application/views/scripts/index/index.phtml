@@ -1,0 +1,293 @@
+<!-- PAGE-TITLE begins here -->
+<div class="row-fluid">
+    <div class="span24">
+        <h1 class="text-center" id="page-title">Welcome to <span>Kebudayaan Indonesia</span></h1>
+    </div>
+</div>
+<!-- PAGE-TITLE ends here -->
+
+<!-- HEADLINE begins here -->
+<div class="row-fluid" id="headline">
+    <div class="span24 section-content">
+        <div id="headline-carousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <?php foreach ($this->activeHeaders as $index => $header): ?>
+                    <li data-target="#headline-carousel" 
+                        data-slide-to="<?php echo $index; ?>"
+                        class="<?php echo ($index == 0) ? 'active' : '' ?>"
+                </li>
+            <?php endforeach; ?>
+        </ol>
+        <div class="carousel-inner">
+            <?php foreach ($this->activeHeaders as $index => $header): ?>
+                <div class="item <?php echo ($index == 0) ? 'active' : '' ?>">
+                    <img src="<?php
+                    echo $this->imageUrl('timthumb.php?src=upload/highlight/'
+                            . $header['img_path']
+                            . '&w=645&h=335&5=235&q=100')
+                    ?>" alt="">
+                    <div class="carousel-caption">
+                        <h4><?php echo $header['name']; ?></h4>
+                        <p><?php echo $header['description']; ?></p>
+                        <p><a class="s-btn s-btn-with-icon read-more pull-right" 
+                              href="<?php echo $header['link_path']; ?>">
+                                <span class="rulycon-plus"></span> 
+                                Read more
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <a class="left carousel-control" href="#headline-carousel" data-slide="prev"></a>
+        <a class="right carousel-control" href="#headline-carousel" data-slide="next"></a>
+    </div>
+</div>
+</div>
+<!-- HEADLINE ends here -->
+
+<!-- NEWS SECTION begins here -->
+<div class="row-fluid" id="news-section">
+    <div class="span24">
+        <!-- NEWS SECTION TITLE begins here -->
+        <h3 class="section-title">Berita</h3>
+        <!-- NEWS SECTION TITLE ends here -->
+        <!-- NEWS SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <?php foreach ($this->news as $index => $news): ?>
+                    <?php
+                    $featured_news_image = 'upload/news/' . $news['image'];
+                    if (!file_exists(IMAGE_FOLDER . $featured_news_image)) {
+                        $featured_news_image = 'default.jpg';
+                    }
+                    ?>
+                    <div class="span6">
+                        <div class="thumbnail">
+                            <a href="<?php
+                            echo $this->baseUrl('news/detail/' .
+                                    $news['id'] . '/' .
+                                    $this->makeUrlFormat($news['title']))
+                            ?>">
+                                <img src="<?php
+                                echo $this->imageUrl('timthumb.php?src='
+                                        . $featured_news_image
+                                        . '&w=255&h=175&q=100')
+                                ?>"
+                                     alt="<?php echo $news['title']; ?>" 
+                                     class="thumbnail" />
+                                <div class="caption">
+                                    <h4><?php echo $news['title']; ?></h4>
+                                </div>
+                                <span class="hidden-caption">
+                                    <p>
+                                        <?php echo $this->truncate($this->htmlDecode($news['content']), 150); ?>
+                                    </p>
+                                    <p><button class="s-btn s-btn-with-icon read-more pull-right"><span class="rulycon-plus"></span> Read more</button></p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+        <!-- NEWS SECTION CONTENT ends here -->
+
+        <!-- NEWS SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <a href="<?php echo $this->baseUrl('news') ?>" class="pull-right">Lihat semua berita &gt;&gt;</a>
+        </div>
+        <!-- NEWS SECTION TITLE ends here -->
+    </div>
+</div>
+<!-- NEWS SECTION ends here -->
+
+<!-- CULTURE SECTION begins here -->
+<div class="row-fluid" id="culture-section">
+    <div class="span24">
+        <!-- CULTURE SECTION TITLE begins here -->
+        <h3 class="section-title">Kebudayaan</h3>
+        <!-- CULTURE SECTION TITLE ends here -->
+        <!-- CULTURE SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <?php foreach ($this->featured_culture as $index => $culture): ?>
+                    <?php
+                    $featured_culture_image = 'upload/culture/' . $culture['image'];
+                    if (!file_exists(IMAGE_FOLDER . $featured_culture_image)) {
+                        $featured_culture_image = 'default.jpg';
+                    }
+                    ?>
+                    <div class="span6">
+                        <div class="thumbnail">
+                            <a href="<?php
+                            echo $this->baseUrl('culture/' .
+                                    $culture['poi_id'] . '/' .
+                                    $this->makeUrlFormat($culture['name']))
+                            ?>">
+                                <img src="<?php
+                                echo $this->imageUrl('timthumb.php?src='
+                                        . $featured_culture_image
+                                        . '&w=255&h=175&q=100')
+                                ?>" 
+                                     alt="<?php echo $culture['name']; ?>"/>
+                                <div class="caption">
+                                    <h4><?php echo $culture['name']; ?></h4>
+                                </div>
+                                <span class="hidden-caption">
+                                    <p>
+                                        <?php
+                                        echo $this->truncate($this->htmlDecode($culture['description']), 150)
+                                        ?> 
+                                    </p>
+                                    <p><button class="s-btn s-btn-with-icon read-more pull-right"><span class="rulycon-plus"></span> Read more</button></p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+        <!-- CULTURE SECTION CONTENT ends here -->
+        <!-- CULTURE SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <a class="pull-right" href="<?php echo $this->baseUrl('culture/posts') ?>"><?php echo $this->translate('See All Culture') ?> &raquo;</a>
+        </div>
+        <!-- CULTURE SECTION TITLE ends here -->
+    </div>
+</div>
+<!-- CULTURE SECTION ends here -->
+
+<!-- CRUISING CULTURE SECTION begins here -->
+<div class="row-fluid" id="cruising-culture-section">
+    <div class="span24">
+        <!-- CRUISING CULTURE SECTION TITLE begins here -->
+        <h3 class="section-title">Jelajah Budaya Indonesia</h3>
+        <!-- CRUISING CULTURE SECTION TITLE ends here -->
+        <!-- CRUISING CULTURE SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <ul id="cruising-culture-tab" class="nav nav-tabs">
+                    <?php foreach ($this->categories as $index => $category): ?>
+                        <li class="<?php echo $index == 0 ? 'active' : ''; ?>">
+                            <a href="#category_<?php echo $category['category_id']; ?>"
+                               data-toggle="tab">
+                                   <?php echo $category['name']; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div id="cruising-culture-tab-content" class="tab-content">
+                    <?php foreach ($this->categories as $index => $category): ?>
+                        <div class="tab-pane fade in <?php echo $index == 0 ? 'active' : ''; ?>" 
+                             id="category_<?php echo $category['category_id']; ?>">
+                            <div class="row-fluid">
+                                <ul class="thumbnails" id="subcategories">
+                                    <?php foreach ($category['children'] as $i => $subcategory): ?>
+                                        <?php
+                                        $imageFile = 'upload/category/' . $subcategory['image'];
+                                        if (!file_exists(IMAGE_FOLDER . $imageFile)) {
+                                            $imageFile = 'default.jpg';
+                                        }
+                                        ?>
+                                        <li class="thumbnail">
+                                            <a href="<?php echo $this->baseUrl('category/' . $category['category_id'] . '/detail/' . $subcategory['category_id']) ?>" class="cruising-culture-item thumbnail">
+                                                <img src="<?php echo $this->imageUrl('timthumb.php?src=' . $imageFile . '&w=180&h=180&q=100') ?>" alt="" class="thumbnail" />
+                                                <h6><?php echo $subcategory['name']; ?> 
+                                                    (<?php echo $subcategory['total_culture']; ?>)
+                                                </h6>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <!-- CRUISING CULTURE SECTION CONTENT ends here -->
+    </div>
+</div>
+<!-- CRUISING CULTURE SECTION ends here -->
+
+<!-- AGENDA SECTION begins here -->
+<div class="row-fluid" id="agenda-section">
+    <div class="span24">
+        <!-- AGENDA SECTION TITLE begins here -->
+        <h3 class="section-title">Agenda Kegiatan</h3>
+        <!-- AGENDA SECTION TITLE ends here -->
+        <!-- AGENDA SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <div id="kebudayaanIndonesiaEventCalendar"></div>
+            </div>
+        </div>
+        <!-- AGENDA SECTION CONTENT ends here -->
+        <!-- AGENDA SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <a href="<?php echo $this->baseUrl('event') ?>" class="pull-right">Lihat semua kegiatan &gt;&gt;</a>
+        </div>
+        <!-- AGENDA SECTION TITLE ends here -->
+    </div>
+</div>
+<!-- AGENDA SECTION ends here -->
+
+<!-- FIGURE SECTION begins here -->
+<div class="row-fluid" id="figure-section">
+    <div class="span24">
+        <!-- FIGURE SECTION TITLE begins here -->
+        <h3 class="section-title">Sosok</h3>
+        <!-- FIGURE SECTION TITLE ends here -->
+        <!-- FIGURE SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <?php foreach ($this->figures as $index => $figure): ?>
+                    <?php
+                    $tokoh_image = UPLOAD_FOLDER . 'figure/' . $figure['image'];
+                    $thumb = $this->imageUrl('timthumb.php?src=default.jpg');
+                    $url = $this->baseUrl('figure/detail/' . $figure['id'] . '/' . $this->makeUrlFormat($figure['name']));
+                    if (file_exists($tokoh_image))
+                        $thumb = $this->imageUrl('timthumb.php?src=upload/figure/' . $figure['image'] . '&w=100&h=100&q=100');
+                    ?>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" 
+                                 alt="64x64" 
+                                 src="<?php echo $thumb; ?>">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading"><?php echo $figure['name']; ?></h4>
+                            <p><?php echo $this->truncate($this->htmlDecode($figure['description']), 300); ?>
+                                <a href="<?php echo $url; ?>">Selengkapnya &gt;</a></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <!-- FIGURE SECTION CONTENT ends here -->
+        <!-- FIGURE SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <a href="<?php echo $this->baseUrl('figure'); ?>" class="pull-right">Lihat semua sosok &gt;&gt;</a>
+        </div>
+        <!-- FIGURE SECTION TITLE ends here -->
+    </div>
+</div>
+<!-- FIGURE SECTION ends here -->
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>   
+
+<script>
+    $(document).ready(function() {
+        $(".carousel").carousel();
+
+        $("#kebudayaanIndonesiaEventCalendar").eventCalendar({
+            eventsjson: 'id/api/eventdata',
+            jsonDateFormat: 'human'
+        });
+    });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

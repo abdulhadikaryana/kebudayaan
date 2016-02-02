@@ -1,0 +1,57 @@
+<form method="post" id="activityForm" action="<?php echo $this->currentUrl(); ?>" name="activityForm">
+<fieldset class="wide">
+    <legend>Activity Details</legend>
+    <table>
+        <?php if($this->langId!=2) { ?>
+        <tr>
+            <td><label>Parent Category</label></td>
+            <td>&#58;</td>
+            <td><?php echo $this->form->categoryParent;?></td>
+        </tr>
+        <?php } ?>
+        <tr>
+            <td><label>Name</label></td>
+            <td>&#58;</td>
+            <td><?php echo $this->form->categoryName;?></td>
+        </tr>
+        <?php if($this->langId!=2) { ?>
+        <tr>
+            <td><label>Picture</label></td>
+            <td>&#58;</td>
+            <td>
+                <span class="space_r"><?php echo $this->form->categoryPicture;?></span>
+            </td>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>
+                <span><input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td></td><td></td><td><span class="image-size tip">
+            <?php if($this->state_edit) : ?>
+                <?php if($this->parent == 0): ?>
+                	Recommended Size 475px*215px
+                <?php else: ?>
+                    Recommended Size 300px*260px
+                <?php endif;?>
+            <?php else: ?>
+            	Recommended Size 475px*215px
+            <?php endif; ?>
+            </span></td>
+        </tr>
+    </table>
+    <?php } ?>
+    <table>
+        <tr>
+            <td><label>Description</label></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->form->categoryDescription; ?></td>
+        </tr>
+    </table>
+</fieldset>
+<input type="submit" class="btn radius space_l" value="Save" />
+</form>
+<?php echo $this->render('partial/upload-image-dialog.phtml');?>

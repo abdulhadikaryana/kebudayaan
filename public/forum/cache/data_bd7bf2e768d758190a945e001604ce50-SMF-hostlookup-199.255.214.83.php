@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454405221 < time()) $expired = true; else{$expired = false; $value = 's:29:"199-255-214-83.anchorfree.com";';}?>

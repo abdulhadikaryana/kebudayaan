@@ -1,0 +1,23 @@
+<tr>
+	<td>
+        <table class="cleartable">
+            <tr><td><a href="<?php echo $this->rootUrl(); ?>/admin/vitoindo/edit/id/<?php echo $this->tourismoperator_id; ?>"><?php echo $this->name; ?></a></td></tr>
+            <tr>
+                <td>
+                    <table class="cleartable mini">
+                        <tr>
+                            <td><a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/vitoindo/edit/id/<?php echo $this->tourismoperator_id; ?>">Edit</a></td>
+                            <td><div class="general-remove" onclick="deleteTourism(<?php echo $this->tourismoperator_id; ?>);">Delete</div></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+    <td>
+        <?php $class_list = $this->ClassificationList($this->tourismoperator_id); ?>
+        <?php foreach($class_list as $class_name): ?>
+        <div class="classification_list"><?php echo $class_name; ?></div>
+        <?php endforeach;?>
+    </td>
+</tr>

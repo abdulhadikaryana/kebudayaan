@@ -1,0 +1,22 @@
+<div class="section">
+    <h2 class="section-title"><span><?php echo $this->translate('id_menu_register') ?></span></h2>
+    <?php echo $this->form ?>
+</div>
+
+<div class="section">
+    <h2 class="section-title"><span><?php echo $this->translate('login_with') . ' Facebook' ?><?php if($this->languageID == 1): echo " Account"; endif; ?></span></h2>
+    <fb:login-button size="large" background="white" length="long" onlogin='window.location="<?php echo $this->baseUrl('/login/facebook') ?>"'></fb:login-button>
+</div>
+
+<?php if($this->registerSuccess) : ?>
+    <div id="activation-message" title="Activation Required">
+        <p>
+            <span class="ui-icon ui-icon-circle-check icon-msg"></span>
+            You have been successfully registered in indonesia.travel
+        </p>
+        <br />
+        <p>
+            However, you need to activate your account first. An activation email has been sent to your email address.
+        </p>
+    </div>
+<?php endif; ?>

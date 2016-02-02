@@ -1,0 +1,28 @@
+<div class="filter-panel">
+  <h4 style="margin-right: 5px; margin-top: 10px;">Filter:</h4>
+  <form action="<?php echo $this->currentUrl(); ?>" method="post">
+    <select class="filter-box" name="filterPage" id="filterPage"
+            onchange="filterSwitch(this.value);">
+      <option value="0">Tampilkan Semua</option>
+      <option value="1">Nama</option>
+      <option value="2">Role</option>
+    </select>
+
+    <span  class="name-box mediumele filter-hidden" >
+      <input type="text" name="filterName"/>
+    </span>
+
+    <select class="role-box filter-hidden" name="filterRole">
+      <?php
+      $numb = $this->count;
+      for ($i = 0; $i < $numb; $i++) {
+        ?>
+        <option value="<?php echo $this->rolelist[$i]['role_id']; ?>">
+        <?php echo $this->rolelist[$i]['role_name']; ?>
+        </option>
+<?php } ?>
+    </select>
+    <input type="submit" value="Go" class="btn radius" />
+    <span class="ajax-loader"></span>
+  </form>
+</div>

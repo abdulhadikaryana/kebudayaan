@@ -1,0 +1,22 @@
+<form name="commentForm" id="commentForm"  method="post" class="form-horizontal well"
+      action="<?php $this->currentUrl(); ?>">
+
+  <fieldset>
+    <legend class="f_legend">Comment Detail</legend>
+    <label for="commentContent" class="control-label">Comment Content</label>
+    <div class="control-group">
+      <div class="controls"><?php echo $this->form->commentContent; ?></div>
+    </div>
+    </table>
+  </fieldset>
+
+  <fieldset>
+    <legend class="f_legend">Action</legend>
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" class="btn btn-success" value="Save" id="submit-btn"
+               disabled="disabled" />
+      </div>
+    </div>
+  </fieldset>
+</form>

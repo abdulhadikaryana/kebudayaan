@@ -1,0 +1,11 @@
+<data>
+<?php if(isset($this->data)):?>
+<?php $data = $this->data; ?>
+<?php foreach($data as $key => $value):?>
+    <destination>
+        <id><?php echo $key; ?></id>
+        <name><?php echo $value; ?></name>
+    </destination>
+<?php endforeach;?>
+<?php endif;?>
+</data>

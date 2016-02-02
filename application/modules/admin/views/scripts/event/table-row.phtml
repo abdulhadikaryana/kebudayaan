@@ -1,0 +1,87 @@
+<tr>
+  <td>
+    <a target="_blank" 
+       href="<?php echo $this->rootUrl(); ?>/id/event/detail/<?php echo $this->event_id; ?>">
+         <?php echo $this->HtmlDecode($this->name); ?>
+    </a>
+    - <small>
+      <?php switch ($this->status): case Model_DbTable_Event::DRAFT ?>
+          <span class="muted">Draft</span>
+          <?php break; ?>
+        <?php case Model_DbTable_Event::PENDING: ?>
+          <span class="text-error">Need approval</span>
+          <?php break; ?>
+        <?php case Model_DbTable_Event::PUBLISH: ?>
+          <span class="text-success">Publish</span>
+          <?php break; ?>
+      <?php endswitch; ?>
+    </small>
+    <div class="control">
+      <a class="btn btn-mini" href="<?php echo $this->rootUrl(); ?>/admin/event/edit/id/<?php echo $this->event_id; ?>/lang/1">Sunting</a>
+      <a class="btn btn-mini" href="<?php echo $this->rootUrl(); ?>/admin/event/report/id/<?php echo $this->event_id; ?>">Laporan</a>
+      <?php
+      if ($this->partialLoop()->view->userCanApprove
+              && $this->status == Model_DbTable_Event::PENDING) :
+        ?>
+        <a href="<?php echo $this->rootUrl(); ?>/admin/event/approve/id/<?php echo $this->event_id; ?>" class="btn btn-success btn-mini">
+          Terima
+        </a>
+      <?php endif; ?>
+      <a class="btn btn-mini btn-danger" onclick="deleteEvent(<?php echo $this->event_id; ?>, $(this));">
+        <i class="icon-trash"></i>
+        Hapus
+      </a>
+    </div>
+
+  </td>
+  <td>
+    <?php if ($this->dstart != $this->dend): ?>
+      <span class="space_r"><?php echo $this->dstart; ?></span>
+      <span class="space_r">until</span>
+      <span class="space_r"><?php echo $this->dend; ?></span>
+    <?php else: ?>
+      <span class="space_r"><?php echo $this->dstart; ?></span>
+      <span class="space_r">one day event</span>
+    <?php endif; ?>
+  </td>
+  <td>
+    <?php $destination_list = $this->EventDestinationList($this->event_id); ?>
+    <?php if (is_array($destination_list)): ?>
+      <ul class="tablelist">
+        <?php foreach ($destination_list as $dest_name): ?>
+          <li><?php echo $dest_name['name']; ?></li>
+        <?php endforeach; ?>
+      </ul>
+    <?php else: ?>
+      <span class="tip nofloat">Tidak Ada</span>
+    <?php endif; ?>
+  </td>
+  <td>
+    <?php echo $this->category_name; ?>
+  </td>
+  <td>
+    <?php
+    if ($this->CheckEventIndoTrans($this->event_id, 2)) :
+      ?>
+      <div class="text-success">Ada</div>
+    <?php else: ?>
+      <div class="text-error">Tidak Ada</div>
+    <?php endif; ?>
+    <div class = "control">
+      <a class="btn btn-mini" 
+         href="<?php echo $this->rootUrl(); ?>/admin/event/edit/id/<?php echo $this->event_id; ?>/lang/2">
+          <!--$this->CheckEventIndo($this->event_id, 2)-->
+          Sunting
+      </a>
+      <?php
+      if ($this->CheckEventIndoTrans($this->event_id, 2)) :
+        ?>
+        <a  class="btn btn-mini"
+            target="_blank"
+            href="<?php echo $this->rootUrl() . '/en/event/detail/' . $this->event_id ?>">Pratinjau</a>
+        <a class="btn btn-mini btn-danger" 
+           onclick="deleteEvent2(<?php echo $this->event_id; ?>, $(this));">Hapus</a>
+         <?php endif; ?>
+    </div>
+  </td>
+</tr>

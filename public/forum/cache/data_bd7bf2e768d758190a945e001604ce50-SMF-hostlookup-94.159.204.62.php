@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454393913 < time()) $expired = true; else{$expired = false; $value = 's:27:"94-159-204-62.orange.net.il";';}?>

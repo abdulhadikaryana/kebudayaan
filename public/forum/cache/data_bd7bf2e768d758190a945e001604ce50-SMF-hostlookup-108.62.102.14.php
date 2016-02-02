@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454377096 < time()) $expired = true; else{$expired = false; $value = 's:33:"static-108-62-102-14.nextroute.co";';}?>

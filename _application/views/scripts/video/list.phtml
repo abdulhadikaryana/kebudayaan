@@ -1,0 +1,39 @@
+    
+    <?php echo $this->partial('partials/pagination-ajax.phtml', array(
+        'itemPerPage' => $this->itemPerPage,
+        'pageRange' => 3,
+        'current' => $this->current,
+        'totalItems' => $this->totalItems,
+        'method' => 'getVideos',
+    )); ?>
+
+    <?php foreach($this->videos as $video) : ?>
+        <div class="video-box">
+            <div class="video-thumb">                
+                <iframe width="560" height="355" src="http://www.youtube.com/embed/<?php echo $video->getVideoId() ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>                
+            </div>
+            <div class="video-desc">
+                 <h3>
+                     <a class="youtube" href="<?php echo $video->getVideoWatchPageUrl() ?>">
+                         <?php echo $video->getVideoTitle(); ?>
+                     </a>
+                 </h3>
+                 <p>
+                     <strong><?php echo $this->translate('id_duration'); ?></strong>
+                     <?php echo date('H:i:s', mktime(0, 0,
+                         $video->getVideoDuration(), 0, 0, 0)); ?><br />
+                     <strong><?php echo $this->translate('id_view'); ?></strong>
+                     <?php echo $video->getVideoViewCount(); ?>
+                 </p>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <div class="clear"></div>
+
+    <?php echo $this->partial('partials/pagination-ajax.phtml', array(
+        'itemPerPage' => $this->itemPerPage,
+        'pageRange' => 3,
+        'current' => $this->current,
+        'totalItems' => $this->totalItems,
+        'method' => 'getVideos',
+    )); ?>

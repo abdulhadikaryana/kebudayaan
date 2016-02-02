@@ -1,0 +1,22 @@
+<div id="header">
+  <div id="header-top">
+    <div id="header-logo">Indonesia.travel</div>
+    <div class="header-cms-text">Content Managemen System(CMS)</div>
+    <div id="header-user-panel">
+      <ul>
+        <li class="user-panel-name">Hi, <?php echo $this->userInfo_name; ?></li>
+        <li><a href="#"><img src="<?php echo $this->imageUrl('/admin/'); ?>identity.png" width="16px" height="16px" alt="user id" /></a></li>
+        <li><a href="#">my profile</a></li>
+        <li><a href="#"><img src="<?php echo $this->imageUrl('/admin/'); ?>inbox.png" width="16px" height="16px" alt="inbox" /></a></li>
+        <li><a href="<?php echo $this->rootUrl('/admin/mail/') ?>">my inbox</a></li>
+      </ul>
+    </div>
+    <div class="clearfloat"></div>
+    <div id="header-main-link">
+      <a href="<?php echo $this->rootUrl(); ?>">(view site)</a>
+      <span style="color: #FFF; font-size: 16px; font-weight: bold;">Server Aktif &#58; <?php echo $this->currentServer; ?></span>
+    </div>
+    <div id="header-logout"><a href="<?php echo $this->rootUrl() . '/admin/index/logout'; ?>"><img src="<?php echo $this->imageUrl('/admin/'); ?>logout-btn.png" alt="logout" /></a></div>        
+    <div id="clock"></div>
+  </div>
+</div>

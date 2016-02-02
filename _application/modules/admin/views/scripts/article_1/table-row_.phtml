@@ -1,0 +1,32 @@
+<tr>
+	<td>
+        <table class="cleartable">
+            <tr>
+            <td><a href="<?php echo $this->rootUrl(); ?>/admin/article/edit/id/<?php echo $this->article_id; ?>/lang/1"><?php echo $this->HtmlDecode($this->title); ?></a></td>
+            </tr>
+            <tr>
+            <td>
+                <table class="cleartable tiny">
+                <tr>
+                    <td class="tableMiniMenu" style="width: 30px;">
+                    <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/article/edit/id/<?php echo $this->article_id; ?>/lang/1">Edit</a>
+                    </td>
+                    <td class="tableMiniMenu" style="width: 30px;">
+                    <?php if($this->poi_id == 0):?>
+                    <a class="general-remove" target="_blank" href="<?php echo $this->rootUrl(); ?>/en/article/detail/<?php echo $this->article_id; ?>">Preview</a>
+                    <?php else : ?>
+                    <a class="general-remove" target="_blank" href="<?php echo $this->rootUrl(); ?>/en/destination/<?php echo $this->poi_id.'/'.$this->poiName($this->poi_id).'/article/'.$this->article_id.'/'; ?>">Preview</a>
+                    <?php endif; ?>
+                    </td>
+                    <td class="tableMiniMenu" style="width: 30px;">
+                    <div class="general-remove" onclick="DeleteArticle(<?php echo $this->article_id;?>,$(this));">Delete</div>
+                    </td>
+                </tr>
+                </table>
+            </td>
+            </tr>
+        </table>
+    </td>
+    <td><a href="<?php echo $this->rootUrl(); ?>/admin/article/edit/id/<?php echo $this->article_id; ?>/lang/2"><?php $this->CheckArticleIndo($this->article_id, 2)?></a></td>
+    <td><div class="general-remove" onclick="changeArticleStatus(<?php echo $this->article_id ;?>,$(this),<?php echo $this->status; ?>);"><?php if($this->status==1){echo 'published';}else{echo 'draft';} ?></div></td>
+</tr>

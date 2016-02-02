@@ -1,0 +1,68 @@
+<tr>
+  <td>
+    <a href="<?php echo $this->rootUrl(); ?>/admin/article/edit/id/<?php echo $this->article_id; ?>/lang/1"><?php echo $this->HtmlDecode($this->title); ?></a>
+    - 
+    <small>
+      <?php switch ($this->status): case Model_DbTable_Article::DRAFT: ?>
+          <span class="muted">Draft</span>
+          <?php break; ?>
+        <?php case Model_DbTable_Article::PENDING: ?>
+          <span class="text-error">Need approval</span>
+          <?php break; ?>
+        <?php case Model_DbTable_Article::PUBLISH: ?>
+          <span class="text-success">Publish</span>
+          <?php break; ?>
+      <?php endswitch; ?>
+    </small>
+
+    <div class="control">
+      <a class="btn btn-mini" href="<?php echo $this->rootUrl(); ?>/admin/article/edit/id/<?php echo $this->article_id; ?>/lang/1">Edit</a>
+      <a class="btn btn-mini" target="_blank" href="<?php echo $this->rootUrl(); ?>/id/article/detail/<?php echo $this->article_id; ?>">Preview</a>
+      <?php
+      if ($this->partialLoop()->view->userCanApprove
+              && $this->status == Model_DbTable_Article::PENDING):
+        ?>
+        <a href="<?php echo $this->rootUrl(); ?>/admin/article/approve/id/<?php echo $this->article_id; ?>"
+           class="btn btn-mini btn-success">
+          Approve
+        </a>
+      <?php endif; ?>
+      <a class="btn btn-mini btn-danger" onclick="DeleteArticle(<?php echo $this->article_id; ?>,$(this));">
+        <i class="icon-trash"></i>
+        Trash
+      </a>
+    </div>
+  </td>
+  <td>
+    <?php
+    switch ($this->category) {
+      case 1:
+        echo 'Komunitas Budaya';
+        break;
+      case 2:
+        echo 'Tokoh';
+      default:
+        break;
+    }
+    ?>
+
+  </td>
+  <td>
+    <?php if ($this->CheckArticleIndoTranslation($this->article_id, 2)) : ?>
+      <span class="text-success">Available</span>
+    <?php else: ?>
+      <span class="text-error">Not available</span>
+    <?php endif; ?>
+    <div class="control">
+      <a class="btn btn-mini" href="<?php echo $this->rootUrl(); ?>/admin/article/edit/id/<?php echo $this->article_id; ?>/lang/2"><?php $this->CheckArticleIndo($this->article_id, 2) ?></a>
+      <?php if ($this->CheckArticleIndoTranslation($this->article_id, 2)) : ?>
+        <?php if ($this->category == 1): ?>
+          <a class="btn btn-mini" target="_blank" href="<?php echo $this->rootUrl(); ?>/en/komunitas-kebudayaan/<?php echo $this->article_id . '/' . $this->makeUrlFormat($this->title); ?>">Preview</a>
+        <?php else: ?>
+          <a class="btn btn-mini" target="_blank" href="<?php echo $this->rootUrl(); ?>/en/tokoh-kebudayaan/<?php echo $this->article_id . '/' . $this->makeUrlFormat($this->title); ?>">Preview</a>
+        <?php endif ?>
+        <a class="btn btn-mini btn-danger" onclick="DeleteArticle2(<?php echo $this->article_id; ?>,$(this));">Delete</a
+      <?php endif; ?>
+    </div>
+  </td>
+</tr>

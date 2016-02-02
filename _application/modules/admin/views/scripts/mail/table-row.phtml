@@ -1,0 +1,36 @@
+<tr>
+	<td>
+        <table class="cleartable">
+            <tr>
+                <td>
+                    <a href="<?php echo $this->rootUrl('/admin/mail/readreply/id/' . $this->mail_id); ?>">
+                        <?php echo $this->subject; ?>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" 
+                                   href="<?php echo $this->rootUrl('/admin/mail/readreply/id/' . $this->mail_id); ?>">
+                                    Read/Reply
+                                </a>
+                            </td>
+                            <td>
+                                <div class="general-remove" 
+                                     onclick="deleteMail(<?php echo $this->mail_id; ?>, $(this));">
+                                    Delete
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>            
+        </table>
+    </td>
+    <td><?php echo trim($this->from, '*') ?></td>
+    <td><?php echo $this->date ?></td>
+    <td><?php echo ($this->status == 1) ? 'read' : 'unread'; ?></td>
+</tr>

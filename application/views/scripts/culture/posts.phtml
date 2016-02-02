@@ -1,0 +1,86 @@
+<!-- PAGE-TITLE begins here -->
+<div class="row-fluid section-title" style="border-left-color: #33d800">
+
+    <div class="pull-left">
+        <h1 style="font-size: 28px;">
+            <?php echo ($this->langId == 1) ? "Kebudayaan" : "Culture"; ?></h1>
+    </div>
+    <div class="pull-right">
+        <?php echo $this->paginationControl($this->paginator, 'sliding', 'shared/paginator.phtml'); ?>
+    </div>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array(), ($this->langId == 1) ? "beranda" : "home"); ?>"><?php echo ($this->langId == 1) ? "Beranda" : "Home"; ?></a></li>
+    <li class="active"><?php echo ($this->langId == 1) ? "Kebudayaan" : "Culture"; ?></li>
+</ul>
+<div class="row-fluid" id="news-page">
+    <div class="span24">
+        <?php
+        $j = 0;
+        $colors = array("#ea0000", "#ffcc00", "#33d800", "#00baff", "#ff9600");
+        shuffle($colors);
+        ?>
+        <?php foreach ($this->culture_chunk as $index => $cultures): ?>
+            <div class="row-fluid">
+                <?php foreach ($cultures as $i => $culture): ?>
+                    <?php
+                    $url = $this->url(array(
+                        'destId' => $culture['poi_id'],
+                        'slug' => $this->makeUrlFormat($culture['name'])
+                            ), $this->langId == 1 ? 'detail-kebudayaan' : 'culture-detail');
+
+                    $date = "";
+                    $created = new DateTime($culture['updated_at']);
+                    if ($this->langId == 1) {
+                        $month = $this->month($created->format('m'), 2);
+                        $date = "Dipublish <strong>" . $month . ' ' . $created->format('j, Y') . "</strong>";
+                    } else {
+                        $date = "Published <strong>" . $created->format("F j, Y") . "</strong>";
+                    }
+
+                    $filename = IMAGE_FOLDER . 'upload/culture/' . $culture['image'];
+                    ?>
+                    <div class="span12 article-wrapper">
+                        <div class="row-fluid">
+                            <?php if (is_file($filename)): ?>
+                                <div class="span7">
+                                    <img src="<?php echo $this->timthumb($culture['image'], 150, 220); ?>" 
+                                         alt="<?php echo $culture['name']; ?>"/>
+                                </div>
+                            <?php endif; ?>
+                            <div class="<?php echo is_file($filename) ? 'span16 offset1' : 'span24'; ?>">
+                                <div class="limit" style="height: 200px; word-wrap: break-word;">
+                                    <h2 class="article-title" style="background: <?php echo $colors[$j % 5]; ?>;">
+                                        <a href="<?php echo $url; ?>">
+                                            <?php echo $culture['name']; ?>
+                                        </a>
+                                    </h2>
+        <!--                                    <small style='color: #999;'>
+                                        &middot;<?php echo $this->langId == 1 ? 'Oleh' : 'By'; ?>
+                                        <strong><?php echo $culture['created_by']; ?></strong>
+                                        <br />
+                                        &middot;<?php echo $date; ?>
+                                    </small>-->
+                                    <p><?php echo $this->truncate($this->htmlDecode($culture['description']), 160); ?></p>
+                                </div>
+                                <!--                                <a class="s-btn s-btn-with-icon pull-right" 
+                                                                   href="<?php echo $url; ?>" style="background: #33d800;">
+                                                                    <span class="rulycon-arrow-right-2"></span> 
+                                <?php echo ($this->langId == 1) ? "Selengkapnya" : "Read More"; ?>
+                                                                </a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <?php $j++; ?>
+                <?php endforeach; ?>
+            </div>
+        <?php endforeach; ?>    
+    </div>
+</div>
+
+<dir class="row-fluid section-title" style="padding-bottom: 15px;">
+    <div class="pull-right">
+        <?php echo $this->paginationControl($this->paginator, 'sliding', 'shared/paginator.phtml'); ?>
+    </div>
+</dir>

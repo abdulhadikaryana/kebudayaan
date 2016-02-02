@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454405692 < time()) $expired = true; else{$expired = false; $value = 's:16:"ns41.rookdns.com";';}?>

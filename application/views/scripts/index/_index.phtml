@@ -1,0 +1,255 @@
+<div class="row content-box" id="feature">
+    <div id="news-box" class="six columns">
+        <div class="widget-wrap">
+            <h2 class="widget-title orange"><?php echo strtoupper($this->translate('id_menu_culture')); ?></h2>                                
+            <div class="widget-featured row">
+                <?php
+                $featured_culture = array_shift($this->featured_culture);
+                $featured_culture_image = 'upload/culture/' . $featured_culture['image'];
+                if (!file_exists(IMAGE_FOLDER . $featured_culture_image)) {
+                    $featured_culture_image = 'default.jpg';
+                }
+                ?>
+
+                <div class="twelve columns mobile-two widget">
+                    <a href="<?php
+                echo $this->baseUrl('culture/' .
+                        $featured_culture['poi_id'] . '/' .
+                        $this->makeUrlFormat($featured_culture['name']))
+                ?>"><img width="366" src="<?php echo $this->imageUrl('timthumb.php?src=' . $featured_culture_image . '&w=273&h=146&q=100') ?>" alt="" class="thumbnail" /></a>
+
+                    </a>
+                </div>
+
+                <div class="featured-title columns mobile-two widget">
+                    <h3><a href="<?php
+                       echo $this->baseUrl('culture/' .
+                               $featured_culture['poi_id'] . '/' .
+                               $this->makeUrlFormat($featured_culture['name']))
+                ?>"><?php echo $this->truncate($featured_culture['name'], 32) ?></a></h3>
+                    <p><?php
+                           echo $this->truncate($this->htmlDecode($featured_culture['description']), 100)
+                ?> <a class="more-link" href="<?php
+                        echo $this->baseUrl('culture/' .
+                                $featured_culture['poi_id'] . '/' .
+                                $this->makeUrlFormat($featured_culture['name']))
+                ?>">[<?php echo $this->translate('Read More') ?>]</a></p>
+                </div>
+
+            </div>
+            <ul class="widget-list">
+                <?php foreach ($this->featured_culture as $index => $culture): ?>
+                    <li><a href="<?php
+                echo $this->baseUrl('culture/' .
+                        $culture['poi_id'] . '/' .
+                        $this->makeUrlFormat($culture['name']))
+                    ?>"><?php echo $this->truncate($culture['name'],32) ?></a></li>
+                    <?php endforeach ?>
+            </ul>
+            <div class="twelve columns" id="view-more">
+                <div class="view-more six columns offset-by-six" id="view-more" style="background: #FF5400">
+                <a class="right" href="<?php echo $this->baseUrl('culture/posts') ?>"><?php echo $this->translate('See All Culture') ?> &raquo;</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="news-box" class="six columns">
+        <div class="widget-wrap">
+            <h2 class="widget-title orange"><?php echo strtoupper($this->translate('News')); ?></h2>                                
+            <div class="widget-featured row">
+                <?php if (!empty($this->news)): ?>
+                    <?php
+                    $featured_news = $this->news[0];
+                    $featured_news_image = 'upload/news/' . $featured_news['image'];
+                    if (!file_exists(IMAGE_FOLDER . $featured_news_image)) {
+                        $featured_news_image = 'default.jpg';
+                    }
+                    ?>
+                    <div class="twelve columns mobile-two widget">
+                        <a href="<?php
+                echo $this->baseUrl('news/detail/' .
+                        $featured_news['id'] . '/' .
+                        $this->makeUrlFormat($featured_news['title']))
+                    ?>"><img width="366" src="<?php echo $this->imageUrl('timthumb.php?src=' . $featured_news_image . '&w=273&h=146&q=100') ?>" alt="" class="thumbnail" />
+                        </a>        
+                    </div>
+
+                    <div class="featured-title mobile-two widget columns">
+                        <h3><a href="<?php echo $this->baseUrl('news/detail/' . $featured_news['id'] . '/' . $this->makeUrlFormat($featured_news['title'])) ?>"><?php
+                       echo $this->truncate($featured_news['title'], 32)
+                    ?></a></h3>
+                        <p>
+                            <?php
+                            echo $this->truncate($this->htmlDecode($featured_news['content']), 90)
+                            ?> 
+                            <a class="more-link" href="<?php
+                        echo $this->baseUrl('news/detail/' .
+                                $featured_news['id'] . '/' .
+                                $this->makeUrlFormat($featured_news['title']))
+                            ?>"> [<?php echo $this->translate('Read More') ?>]
+                            </a>
+                        </p> 
+                    </div>
+                <?php endif; ?>
+            </div>
+            <ul class="widget-list">
+                <?php for ($i = 1; $i < 5; $i++): ?>
+                    <?php if (!empty($this->news[$i])): ?>
+                        <li>
+                            <div class="widget-list-news">
+                            <a href="<?php
+                echo $this->baseUrl('news/detail/' .
+                        $this->news[$i]['id'] . '/' .
+                        $this->makeUrlFormat($this->news[$i]['title']))
+                        ?>">
+                                   <?php
+                                   $newsDesc = $this->truncate($this->news[$i]['title'], 32);
+                                   ?>
+                                   <?php echo $this->escape($this->htmlDecode($newsDesc)) ?>
+                            </a>
+                            </div>
+                        </li>                                                               
+                    <?php endif; ?>                                        
+                <?php endfor; ?>
+            </ul>
+            <div class="twelve columns" id="view-more">
+                <div class="view-more six columns offset-by-six" id="view-more" style="background: #FF5400">
+                <a class="right" href="<?php echo $this->baseUrl('news') ?>"><?php echo $this->translate('See All News') ?> &raquo;</a>
+            </div>
+            </div>
+        </div>
+    </div>      
+</div>    
+
+
+<div class="row content-box" id="culture">
+    <div id="" class="row">
+        <div class="widget-wrap">
+            <h2 class="widget-title yellow">        
+                <?php echo strtoupper($this->translate('Browse Indonesian Cultures')) ?>
+            </h2>
+            <div class="widget-content">
+                <ul class="accordion">                    
+                    <?php foreach ($this->categories as $index => $category): ?>
+                        <li class="<?php if ($index == 4) echo 'active' ?>">
+                            <div class="title"><?php echo $category['name'] ?></div>
+                            <div class="content">
+                                <?php if (!empty($category['children'])): ?>
+                                    <?php $counter = 0; ?>
+                                    <?php foreach ($category['children'] as $catChild): ?>
+                                        <div class="child-category-list">
+                                            <?php
+                                            $imageFile = 'upload/category/' . $catChild['image'];
+                                            if (!file_exists(IMAGE_FOLDER . $imageFile)) {
+                                                $imageFile = 'default.jpg';
+                                            }
+                                            ?>
+                                            <div class="widget-full-img">
+                                            <img src="<?php echo $this->imageUrl('timthumb.php?src=' . $imageFile . '&w=100&h=100&q=100') ?>" alt="" class="thumbnail" />
+                                            </div>
+                                            <div class="widget-full-desc">
+                                            <a href="<?php echo $this->baseUrl('category/' . $category['category_id'] . '/detail/' . $catChild['category_id']) ?>"><?php echo $catChild['name'] ?> (<?php echo $catChild['total_culture'] ?>)</a>                                            
+                                            <p><?php echo $this->truncate($catChild['description'],80); ?></p>
+                                            </div>
+                                        </div>
+                                        <?php if ($counter == 3): ?>
+                                            <div class="clear"></div>
+                                        <?php endif; ?>
+                                        <?php $counter++; ?>
+                                    <?php endforeach; ?>                                                                            
+                                <?php endif; ?>
+                                <div class="clear"></div><!-- for fixing bug di firefox -->
+                            </div>
+                        </li>
+                    <?php endforeach; ?>                                        
+                </ul>                
+            </div>
+        </div>
+    </div>    
+</div>      
+
+<div class="row content-box" id="events">
+                              
+        <div class="row" id="event-box">
+            <div class="twelve columns">
+                <div class="nine columns green" style="height:40px;">
+                    <h2 class="widget-title-event green">        
+                        <?php echo strtoupper($this->translate('Event Agenda')); ?>        
+                    </h2>
+                </div>
+                <div class="three columns" id="event_date">
+                    <h3><a style="color:#fff"href="<?php echo $this->baseUrl('event/calendar') ?>"><?php echo $this->translate('See Calendar') ?> &raquo;</a></h3> 
+                </div>
+            </div>    
+            <ul>
+                <?php foreach ($this->event as $event): ?>
+                    <li>
+
+                        <!--gambar di agenda-->
+                        <!--              <div class="en-img-list">
+                        <?php if ($event['main_pics'] != '' && file_exists(UPLOAD_FOLDER . '/event/thumbnails/' . $event['main_pics'])) : ?>
+                                                                              <a class="zoom" href="<?php
+                    echo $this->baseUrl('/event/detail/'
+                            . $event['event_id'] . '/' . $this->makeUrlFormat($event['name']))
+                            ?>">
+                                                                                  <img src="<?php
+                    echo $this->imageUrl('timthumb.php?src=' . '/upload/event/thumbnails/' .
+                            $event['main_pics'] . '&w=60&h=60&q=100')
+                            ?>" alt="" />
+                                                                              </a>
+                        <?php else: ?>
+                                                                              <img src="<?php echo $this->imageUrl('/default.jpg'); ?>"
+                                                                                   alt="" title="no image for this destination" />
+                        <?php endif; ?>
+                                            
+                        
+                        </div>-->
+                        <div class="twelve columns" id="event_container" >
+                            <?php
+                            $dateStart = $this->dateConverter($event['date_start']);
+                            $dateEnd = $this->dateConverter($event['date_end']);
+                            ?>
+                            <?php if ($dateStart == $dateEnd) : ?>
+                                <div id="event_date" class="three columns">
+                                    <h3><?php echo $dateStart ?></h3>
+                                </div>
+                            <?php else: ?>
+                                <b><?php // echo $this->translate('start')   ?></b> <div id="event_date" class="three columns"><h3><?php echo $dateStart ?></h3></div>
+                                <b><?php // echo $this->translate('until')   ?></b> <?php // echo $dateEnd   ?>
+                            <?php endif; ?>
+                            <div id="event_title" class="nine columns">
+                                <h3>
+                                    <a href="<?php
+                        echo $this->baseUrl('event/detail/' .
+                                $event['event_id'] . '/' .
+                                $this->makeUrlFormat($event['name']))
+                            ?>">
+                                           <?php echo $this->escape($this->htmlDecode($event['name'])) ?>
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="twelve columns" id="view-more">
+                <div class="view-more three columns offset-by-nine" id="view-more" style="background: #228048">
+                <a class="right" href="<?php echo $this->baseUrl('event') ?>"><?php echo $this->translate('See All Events') ?> &raquo;</a>
+            </div>
+            </div>
+
+        <div class="clear"></div>
+    
+</div>
+
+<div class="row content-box" id="figure">
+    <div class="row">
+        <?php echo $this->render('index/_tokoh.phtml'); ?>
+    </div>
+    <div class="twelve columns" id="view-more">
+                <div class="view-more three columns offset-by-nine" id="view-more" style="background: #0478AF">
+                <a class="right" href="<?php echo $this->baseUrl('figure') ?>"><?php echo ($this->langId == 1)? "Selengkapnya": "Read more"; ?> &raquo;</a>
+            </div>
+            </div>
+</div>

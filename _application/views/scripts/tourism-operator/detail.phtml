@@ -1,0 +1,94 @@
+<!--main-->
+<div id="main-destdisc">
+
+    <!--main content-->
+    <div id="wrapper-content">
+        
+        <!--Breadcumb-->
+        <div id="breadcumb">
+            <?php echo $this->breadcrumb() ?>
+        </div>    
+        <!--End Breadcumb-->
+
+        <?php echo $this->render('destination/destination-title.phtml'); ?>
+
+        <!-- tab top -->
+        <?php
+            echo $this->render('destination/tab-top.phtml');
+        ?>                          
+
+        <!--content tab-->
+        <div id="content-tab-dest" class="destinasi">
+
+	    <div id="dest-content">
+		<div class="section-directory">
+		    <h3>
+			<?php echo $this->directory['langname'] ?>
+			<?php if($this->directory['star'] > 0):?>
+			    <img src="<?php echo $this->imageUrl('/bintang/bintang' . $this->directory['star'] . '.png')?>" alt="<?php echo $this->directory['star']?> star(s)" title="<?php echo $this->directory['star']?> star(s)" />
+			<?php endif; ?>
+		    </h3>
+			<p>
+			    <?php echo $this->directory['description'] ?>
+			</p>
+	    
+		    <table>
+			<tr>
+			    <td><span class="address"><?php echo $this->translate('id_list_address'); ?></span></td>
+			    <td class="double-dot">:</td>
+			    <td><?php echo $this->escapeCheckEmpty($this->directory['address']); ?></td>
+			</tr>
+			<tr>
+			    <td><span class="phone"><?php echo $this->translate('id_list_phone'); ?></span></td>
+			    <td class="double-dot">:</td>
+			    <td><?php echo $this->escapeCheckEmpty($this->directory['phone']); ?></td>
+			</tr>
+			<tr>
+			    <td><span class="fax">Fax</span></td>
+			    <td class="double-dot" >:</td>
+			    <td><?php echo $this->escapeCheckEmpty($this->directory['fax']); ?></td>
+			</tr>
+			<tr>
+			    <td><span class="email">Email</span></td>
+			    <td class="double-dot">:</td>
+			    <td>
+                    <a href="mailto:<?php echo $this->escapeCheckEmpty($this->directory['email']);?>">
+                        <?php echo $this->escapeCheckEmpty($this->directory['email']); ?>
+                    </a>
+                </td>
+			</tr>
+			<tr>
+			    <td><span class="website">Website</span></td>
+			    <td class="double-dot">:</td>
+			    <td>
+                    <a target="_blank" href="<?php echo $this->escapeCheckEmpty($this->directory['website']); ?>"><?php echo $this->escapeCheckEmpty($this->directory['website']); ?></a>
+				</td>
+			</tr>
+		    </table>
+		</div>
+	    </div>
+
+
+
+        </div>
+
+        <!-- tab bottom -->
+        <?php
+            echo $this->render('destination/tab-bottom.phtml');
+        ?>                          
+        <!-- end tab bottom -->
+    </div>
+
+
+    <!--sidebar-->
+    <?php
+        echo $this->render('destination/sidebar-new.phtml');
+    ?>                          
+    <!--end sidebar -->
+
+</div>
+
+
+
+<?php
+//echo $this->render('destination/destination-footer.phtml'); ?>

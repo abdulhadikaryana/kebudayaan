@@ -1,0 +1,10 @@
+<div class="table-container">
+<p>
+<?php if($this->type == 1): ?>
+You are not authorized to view this page.
+<?php elseif ($this->type == 2): ?>
+This page is not exist.
+<?php endif; ?>
+<a href="<?php echo $this->rootUrl('/admin/index/dashboard');?>">Back to Dashboard</a>
+</p>
+</div>

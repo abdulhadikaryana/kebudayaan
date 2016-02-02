@@ -1,0 +1,94 @@
+<form name="newsForm" id="newsForm"  method="post"
+      onsubmit="return onSubmitForm();">
+    <!-- set hidden element-->
+    <?php echo $this->form->newsStatus; ?>
+    <?php echo $this->form->PoiCounter; ?>
+    
+    <fieldset class="wide">
+        <legend>News Detail</legend>
+        <table class="resetTable">
+            <tr>
+                <td><label for="newsTitle">News Title</label></td>
+                <td>&#58;</td>
+                <td style="width: 77%;">
+                    <?php echo html_entity_decode($this->form->newsTitle); ?>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="newsContent">Content</label></td>
+                <td>&#58;</td>
+                <td style="width: 400px;"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="3">
+                    <?php echo $this->form->newsContent; ?>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <?php if($this->language_id!=2){?>
+    <fieldset class="medium">
+    <legend>News Information</legend>
+    <table>
+            <tr>
+                <td><label for="newsPoi">Add Related Destination</label></td>
+                <td>&#58;</td>
+                <td>
+                    <span class="margin_r">
+                        <?php echo $this->form->newsPoi; ?>
+                    </span>
+                    <span class="ajax-loader"></span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td><td></td>
+                <td>
+                    <span class="mini-ajaxloader"></span>
+                    <span class="tip">
+                        Type and Choose Destination from Autocomplete
+                    </span>
+                </td>
+            </tr>
+            
+            <tr valign="top">
+                <td>
+                    <label for="">Related Destination</label>
+                </td>
+                <td>&#58;</td>
+                <td>
+                    <table class="margin_r" id="poiContainer" cellpadding="0">
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="newsImage">Add News Image</label></td>
+                <td>&#58;</td>
+                <td>
+                    <?php echo $this->form->newsImage; ?>
+                    <span><input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" /></span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="newsPublishDate">Publish Date</label></td>
+                <td>&#58;</td>
+                <td><?php echo $this->form->newsPublishDate; ?></td>
+            </tr>            
+        </table>
+    </fieldset>
+    <?php } ?>
+    <fieldset class="small">
+        <legend>Action</legend>
+        <input type="submit" class="btn radius" value="Publish" id="submit-btn"
+               disabled="disabled" onclick="document.pressed=this.value"/>
+        <input type="submit" class="btn radius" value="Draft" id="draft-btn"
+               disabled="disabled" onclick="document.pressed=this.value"/>
+        <span class="tip"> preview available after publishing or save as draft 
+        </span>
+    </fieldset>
+</form>
+<?php echo $this->render('partial/upload-image-dialog.phtml');?>

@@ -1,0 +1,40 @@
+<?php
+echo $this->formHidden('action', 'sort');
+echo $this->formHidden('filter[order]', $this->filter['order']);
+echo $this->formHidden('filter[sort]', $this->filter['sort']);
+?>
+<div class="row-fluid">
+    <h3 class="page-title">
+        <span><?php echo $this->title; ?></span>
+    </h3>
+    <div class="pull-left">
+        <a href="<?php echo $this->url(array('action' => 'create')); ?>" class="btn btn-red btn-with-icon">
+            <span class="rulycon-plus"></span>
+            Tambah Baru 
+        </a>
+    </div>
+    <p class="pull-right">
+        Tampilkan      
+        <?php
+        $selects = array(5 => 5, 10 => 10, 15 => 15, 25 => 25, 50 => 50, 100 => 100);
+        echo $this->formSelect('filter[row]', $this->filter['row'], array('style' => 'width:50px'), $selects);
+        ?>
+        <button class="btn btn-cyan" name="action" value="filter">Setel</button>
+    </p>
+</div>
+<hr>
+<div class="row-fluid">
+    <div class="pull-left">
+        <button class="btn" style="visibility: hidden;position: absolute" name="action" value="filter"></button>
+        <button class="btn btn-icon-only btn-cyan" name="action" value="delete" onclick="
+                if (!confirm('Apakah anda yakin ingin menghapus item yang dipilih?'))
+                    return false">
+            <span class="rulycon-remove-2"></span>
+        </button>
+        <button class="btn btn-cyan" name="action" value="filter">Gunakan Filter </button>
+        <button class="btn btn-cyan" name="action" value="reset">Atur Ulang Filter    </button>
+    </div>
+    <div class="pull-right">
+        <?php echo $this->paginationControl($this->paginator, 'sliding', 'partial/pagination_control.phtml'); ?>
+    </div>
+</div>

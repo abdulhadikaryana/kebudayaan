@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454403132 < time()) $expired = true; else{$expired = false; $value = 's:14:"shop-slivki.tk";';}?>

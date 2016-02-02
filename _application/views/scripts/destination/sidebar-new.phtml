@@ -1,0 +1,190 @@
+            <!--sidebar-->
+         
+                
+
+<!--                <div class="sidebar-shortcut" style="float:left;">
+                    <ul>
+                    <?php if(sizeof($this->classToTourism)>0): ?>
+                        <?php if(in_array(3, $this->classToTourism)) : ?>
+                            <li>
+                                <a href="<?php echo $this->url(array('action' => 'findtravel', 'language' => $this->languageID,
+                                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="travel-menu" alt="Find Travel" style="width:200px" />
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(in_array(1, $this->classToTourism)) : ?>
+                            <li>
+                                <a href="<?php echo $this->url(array('action' => 'findhotel', 'language' => $this->languageID,
+                                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="hotel-menu" alt="Find Hotel" />
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(in_array(2, $this->classToTourism)) : ?>
+                            <li>
+                                <a href="<?php echo $this->url(array('action' => 'findrestaurant', 'language' => $this->languageID,
+                                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="restaurant-menu" alt="Find Restaurant" />
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if(in_array(4, $this->classToTourism)) : ?>
+                            <li>
+                                <a href="<?php echo $this->url(array('action' => 'findsouvenir', 'language' => $this->languageID,
+                                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="souvenir-menu" alt="Find Souvenir" />
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    </ul>
+                </div>-->
+                <br />
+
+
+            <!-- related activity -->
+<!--            <div id="discover-box" style="margin-top:10px;">
+                <div class="header">
+                    <?php echo $this->translate('id_rel_act'); ?>
+                </div>
+                <?php if(sizeof($this->relatedActivity)):?>
+                    <?php foreach($this->relatedActivity as $activity): ?>
+
+                        <div class="content">
+
+                            <div class="block-content no-border">
+                                <div class="block-content-left">
+                                    <a href="<?php echo $this->baseUrl('/activity/detail/'.$activity['category_id']); ?>">
+                                    <img src="<?php echo $this->imageUrl('/upload/category/thumbnails/'.$activity['image']) ?>" width="70" height="60" alt="" />
+                                    </a>
+                                </div>
+
+                                <div class="block-content-right">
+                                    <div class="short-desc" style="margin-top:12px;">
+                                        <a href="<?php echo $this->baseUrl('/activity/detail/'.$activity['category_id']); ?>"><?php echo $activity['name']; ?></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endforeach; ?>
+                <?php endif;?>
+            </div>-->
+            <!-- end related activity -->
+
+            <!-- related destination-->
+                <?php if($this->use_related_poi) : ?>
+                    <?php if(count($this->relatedDestination) > 0) : ?>
+                    <div id="discover-box">
+                            <div class="header">
+                                <?php echo $this->translate('id_title_relateddest'); ?>
+                            </div>
+
+                            <div class="content">
+                                <?php if(sizeof($this->relatedDestination)):?>
+                                <?php foreach($this->relatedDestination as $key => $values) : ?>
+                                    <div class="related-list">
+                                        <a href="<?php echo $this->baseUrl('/destination/' . $key .'/' . $this->makeUrlFormat($values)) ?>"><?php echo $values ?></a>
+                                    </div>
+                                <?php endforeach; ?>
+                                <?php endif;?>
+                            </div>
+                    </div>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <?php if(count($this->relatedDestination) > 0) : ?>
+                    <div id="discover-box">
+                            <div class="header">
+                                <?php echo $this->translate('id_title_relateddest'); ?>
+                            </div>
+
+                            <div class="content">
+                                <?php if(sizeof($this->relatedDestination)):?>
+                                <?php foreach($this->relatedDestination as $values) : ?>
+                                    <div class="related-list">
+                                        <a href="<?php echo $this->baseUrl('/destination/' . $values['related_poi'] .'/' . $this->makeUrlFormat($values['name'])) ?>"><?php echo $values['name'] ?></a>
+                                    </div>
+                                <?php endforeach; ?>
+                                <?php endif;?>
+                            </div>
+                    </div>
+                    <?php endif; ?>
+                <?php endif; ?>
+            <!-- end related destination-->
+
+            <!-- related event-->
+            <?php if (count($this->relatedEvent) > 0):?>
+                <div id="discover-box">
+                    <div class="header">
+                        <?php echo $this->translate('event_related'); ?>
+                    </div>
+
+                    <div class="content">
+                        <?php foreach($this->relatedEvent as $event) : ?>
+                            <div class="related-list">
+                                <a href="<?php echo $this->baseUrl('/event/detail/' . $event['event_id']) ?>"><?php echo $event['name'] ?></a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                </div>
+            <?php endif; ?>
+            <!-- end related event-->
+
+            <!-- related attractions -->
+            <?php if (count($this->relatedArticle) > 0):?>
+                <div id="discover-box">
+                    <div class="header">
+                        <?php echo $this->translate('id_title_attraction'); ?>
+                    </div>
+
+                    <div class="content">
+                        <?php foreach($this->relatedArticle as $article) : ?>
+                            <div class="related-list">
+                                <a href="<?php echo $this->url(array(
+                                'destId' => $this->destId,
+                                'destTitle' => $this->formatDestTitle,
+                                'language' => $this->languageID,
+                                'articleId' => $article['article_id'],
+                                'articleTitle' => $this->makeUrlFormat($article['title'])),
+                                'dest-article') ?>"><?php echo $article['title'] ?>
+                                </a>
+
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                </div>
+            <?php endif; ?>
+            <!-- end related attraction-->
+
+            <br />
+
+            <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style ">
+                    <a href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e292a950e7f2e43" class="addthis_button_compact">Share</a>
+                    <span class="addthis_separator">|</span>
+                    <a class="addthis_button_preferred_1"></a>
+                    <a class="addthis_button_preferred_2"></a>
+                    <a class="addthis_button_preferred_3"></a>
+                    <a class="addthis_button_preferred_4"></a>
+                    </div>
+                    <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e292a950e7f2e43"></script>
+            <!-- AddThis Button END -->
+
+            <?php
+            //echo $this->shareSave(); ?>
+
+
+            <!--  addtoAny Js -->
+            <?php $this->placeholder("jsInline")->captureStart() ?>
+                <script type="text/javascript">
+                //loadScript("http://static.addtoany.com/menu/page.js", function(){});
+                </script>
+            <?php $this->placeholder("jsInline")->captureEnd() ?>
+
+
+        <!--end sidebar -->
+       

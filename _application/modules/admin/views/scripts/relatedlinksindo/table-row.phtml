@@ -1,0 +1,58 @@
+<?php $cat = $this->jenisrelated; ?>
+<?php switch($cat)
+{
+    case "1": $cat = 'Goverment-link';
+        break;
+    case "2": $cat = 'International-tourism-ngo-links';
+        break;
+    case "3": $cat = 'Indonesia-tourism-ngo-links';
+        break;
+    case "4": $cat = 'Tourist-attraction-links';
+        break;
+    case "5": $cat = 'Mice-links';
+        break;
+    case "6": $cat = 'Travel-and-tourism-portal-in-indonesia';
+        break;
+    case "7": $cat = 'Hotel-and-resort-links';
+        break;
+    case "8": $cat = 'Tour-operator-links';
+        break;
+    case "9": $cat = 'Restaurant-cafe-lounge-and-nightclub-links';
+        break;
+    case "10": $cat = 'Other-links';
+        break;
+    case "11": $cat = 'Transportation-links';
+        break;
+
+}?>
+
+<tr>
+    <td><a href="<?php echo $this->rootUrl(); ?>/admin/relatedlinksindo/edit/id/<?php echo $this->id; ?>/lang/2"><?php echo $this->HtmlDecode($this->title); ?></a></td>
+    <td><?php echo $this->HtmlDecode($cat); ?></td>
+    <td><a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/relatedlinksindo/edit/id/<?php echo $this->id; ?>/lang/2">Edit</a></td>
+    <td><div class="general-remove" onclick="deleteRelated(<?php echo $this->id; ?>);">Delete</div></td>
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td><a>English Translation</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/relatedlinksindo/edit/id/<?php echo $this->id; ?>/lang/1"><?php $this->CheckRelatedIndo($this->id, 1)?></a>
+                            </td>
+                            <?php $entrans = $this->CheckRelatedIndoTranslation($this->id, 1);
+                            if ($entrans == true) {
+                            ?>
+                            <td>
+                                <div class="general-remove" onClick="deleteRelatedEn(<?php echo $this->id;?>,1);">Delete</div>
+                            </td><?php } ?>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>

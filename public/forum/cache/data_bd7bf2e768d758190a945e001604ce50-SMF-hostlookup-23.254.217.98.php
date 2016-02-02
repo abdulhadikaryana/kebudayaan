@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454387379 < time()) $expired = true; else{$expired = false; $value = 's:37:"client-23-254-217-98.hostwindsdns.com";';}?>

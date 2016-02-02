@@ -1,0 +1,87 @@
+
+
+<!--main-->
+<div id="main-destdisc">
+
+    <!--main content-->
+    <div id="wrapper-content">
+        
+        <!--Breadcumb-->
+        <div id="breadcumb">
+            <?php echo $this->breadcrumb() ?>
+        </div>    
+        <!--End Breadcumb-->
+
+        <?php echo $this->render('destination/destination-title.phtml'); ?>
+
+        <!-- tab top -->
+        <?php
+            echo $this->render('destination/tab-top.phtml');
+        ?>                          
+
+        <!--content tab-->
+        <div id="content-tab-dest" class="destinasi">
+            <div id="dest-content">
+                <div class="section">
+                    <a name="firstsection"></a>
+                    <h3><?php echo $this->pageTitle ?></h3>
+                    <?php if($this->main_images):?>
+                        <p style="text-align:center;">
+                            <img width="449" height="299" src="<?php echo $this->imageUrl('upload/article/'.$this->main_images);?>" alt="">
+                        </p>
+                    <?php endif;?>
+
+                    <p>
+                        <?php echo $this->HtmlDecode($this->article['content']) ?>
+                    </p>
+                </div>
+            </div>
+
+            <!-- gallery -->
+            <?php
+                echo $this->render('destination/destination-gallery-baru.phtml');
+            ?>                          
+            <!-- end gallery -->
+
+        </div>
+
+        <!-- tab bottom -->
+        <?php
+            echo $this->render('destination/tab-bottom.phtml');
+        ?>                          
+        <!-- end tab bottom -->
+
+        <!-- RELATED LINKS -->
+        <?php if(count($this->related_link) > 0) : ?>
+        <div id="wrap-box">
+            <div id="header-box"><?php echo strtoupper($this->translate('id_menu_link')); ?></div>
+
+            <div id="content-box">
+                <ul>
+                    <?php foreach($this->related_link as $data) : ?>
+                        <li>
+                            <a class="link" href="<?php echo $data->link;?>" target="_blank"><?php echo $data->label;?></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+        </div>
+        <?php endif; ?>
+        <!-- END RELATED LINKS -->
+
+
+
+    </div>
+
+
+    <!--sidebar-->
+    <?php
+        echo $this->render('destination/sidebar-new.phtml');
+    ?>                          
+    <!--end sidebar -->
+
+</div>
+
+
+

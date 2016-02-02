@@ -1,0 +1,18 @@
+ <div id="user-comment">
+     <?php if(count($this->comments)): ?>
+        <h3><?php echo count($this->comments) ?>
+            <?php echo (count($this->comments) == 1)? $this->translate('id_one_comment') : $this->translate('id_static_comment') ?></h3>
+     <?php endif; ?>
+
+     <?php foreach($this->comments as $comment) :  ?>
+        <?php echo $this->partial('partials/comment-list.phtml',
+            array('comment' => $comment, 'fb' => $this->fb)); ?>
+     <?php endforeach; ?>
+
+     <h3><?php echo $this->translate('comment-text') ?></h3>
+     <?php if ($this->sess->username OR $this->sess->fbname) : ?>
+         <p><?php echo $this->translate('id_login_as') ?> <?php echo ($this->sess->username)?
+                    $this->sess->username : $this->sess->fbname ?></p>
+     <?php endif; ?>
+     <?php echo $this->commentForm ?>
+</div>

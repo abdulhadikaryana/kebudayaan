@@ -1,0 +1,83 @@
+<!--gallery-->
+<div id="gallery">
+  <div id="header-gallery">
+    <span><?php echo strtoupper($this->translate('title_gallery')); ?></span>
+  </div>
+  <div id="content-gallery">
+    <?php if (count($this->imageGallery)): ?>
+      <?php foreach ($this->imageGallery as $counter => $image) : ?>
+        <?php if ($counter == 4) break; ?>
+        <!-- Fungsi fancybox disini dipanggil di general.js -->
+        <?php //if(file_exists(UPLOAD_FOLDER . '/poi/thumbnails/' . basename($image['url']))):?>
+
+        <?php if ($counter == 0): ?>
+          <a style="margin-left:18px;" class="zoom" href="<?php echo $this->imageUrl('/upload/culture/' . basename($image['url'])) ?>" title="<?php echo strip_tags($image['description']) ?>">
+          <?php else: ?>
+            <a class="zoom" href="<?php echo $this->imageUrl('/upload/culture/' . basename($image['url'])) ?>" title="<?php echo strip_tags($image['description']) ?>">
+            <?php endif; ?>
+            <img src="<?php echo $this->imageUrl('timthumb.php?src=upload/culture/' . basename($image['url']) . '&w=110&h=70&q=100') ?>" width="110px" height="70px" alt="" />
+          </a>
+
+          <?php //else:?>
+          <!--<a href="#">-->
+          <!--<img <?php if ($counter == 0)  ?> style="margin-left:18px;" 
+               src="<?php echo $this->imageUrl('default.png') ?>" width="110px" height="70px" alt="<?php echo $image['url']; ?>" /> -->
+          <!--</a>-->
+          <?php //endif;?>
+
+
+        <?php endforeach; ?>
+      <?php else: ?>
+        <div class="empty-gallery">
+<<<<<<< HEAD
+        <div id="imgempty">
+            <img src="<?php echo $this->imageUrl('../../media/images/oopseror.png') ?>" alt="" />
+        </div>
+        <p><?php echo $this->translate('empty_gallery'); ?></p>
+=======
+          <p><?php echo $this->translate('empty_gallery'); ?></p>
+>>>>>>> db0fff2ad53f21ec6dd212934e2e3c323c80eded
+        </div>
+      <?php endif; ?>
+  </div>
+
+  <div id="link-gallery-left"></div>
+  <div id="link-gallery-center"></div>
+  <div id="link-gallery-right"></div>
+
+  <div id="link-button-center">
+    <?php if (count($this->imageGallery)): ?>
+      <a href="<?php echo $this->baseUrl('destination/' . $this->destId . '/' . $this->makeUrlFormat($this->destTitle) . '/gallery/page/1') ?>">
+
+        <?php echo strtoupper($this->translate('more_gallery')); ?>
+
+      </a>
+    <?php else: ?>
+      <a class="disable" href="#empty">SEE MORE >></a>
+    <?php endif; ?>
+<<<<<<< HEAD
+    </div>
+    
+    <!--
+    <div id="link-gallery-left"></div>
+    <div id="link-gallery-center"></div>
+    <div id="link-gallery-right"></div>
+    -->
+
+    <div id="link-button-center">
+    
+    <?php if(count($this->imageGallery)): ?>
+         <a href="<?php echo $this->baseUrl('destination/' . $this->destId . '/' . $this->makeUrlFormat($this->destTitle) . '/gallery/page/1') ?>">
+         
+         <?php echo strtoupper($this->translate('more_gallery')); ?>
+            
+         </a>
+    <?php else:?>
+         <a class="disable" href="#empty">SEE MORE</a>
+    <?php endif;?>
+    </div>
+=======
+  </div>
+>>>>>>> db0fff2ad53f21ec6dd212934e2e3c323c80eded
+</div>
+<!--end gallery-->

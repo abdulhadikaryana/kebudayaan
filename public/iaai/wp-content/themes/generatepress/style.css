@@ -1,0 +1,26 @@
+/*
+Theme Name: GeneratePress
+Theme URI: http://generatepress.com
+Author: Thomas Usborne
+Author URI: http://edge22.com
+Description: GeneratePress is a lightweight HTML5 and CSS3 framework that allows anyone to create a completely unique website right before their eyes. Adjusting the layout and colors of your website couldn't be easier, simply use our options in the Customize section of the Dashboard and watch the changes happen. GeneratePress is mobile responsive, W3C Markup Validated, Schema.org integrated, search engine friendly, cross browser compatible and 100% translatable. GeneratePress has 7 widget areas, 5 navigation positions, 5 sidebar layouts and much more. See more at http://generatepress.com
+Version: 1.0.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: generate
+Domain Path: /languages/
+Tags: light, white, dark, two-columns, three-columns, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options
+
+GeneratePress, Copyright 2014 Thomas Usborne
+GeneratePress is distributed under the terms of the GNU GPL
+
+Generate is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+
+DO NOT ADD YOUR CSS TO THIS FILE - IT WILL BE LOST
+Real CSS found in /css/style.css
+*/

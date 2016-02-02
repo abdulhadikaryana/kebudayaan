@@ -1,0 +1,46 @@
+<!--
+ * StaticMenuViewer
+ *
+ * Viewer untuk navigation bar halaman index
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+<div id="section-navbar">
+
+        <h2 class="section-title" style="text-align: left">
+            <span><?php echo $this->translate('id_menu_visiting'); ?></span>
+        </h2>
+    
+        <ul>
+            <li class="<?php echo ($this->staticType == 'immigration')
+                ? 'current' : 'link' ?>">
+                <a href="<?php echo $this->baseUrl('travel-information') ?>">
+                <?php echo $this->translate('id_static_immigration') ?></a></li>
+
+            <li class="<?php echo ($this->staticType == 'general')
+                ? 'current' : 'link' ?>">
+                <a href="<?php echo $this->baseUrl(
+                    'travel-information/general-information') ?>">
+                <?php echo $this->translate('id_static_general') ?></a></li>
+
+            <li class="<?php echo ($this->staticType == 'foreign')
+                ? 'current' : 'link' ?>">
+                <a href="<?php echo $this->baseUrl(
+                    'travel-information/foreign-representatives') ?>">
+                <?php echo $this->translate('id_static_foreign') ?></a></li>
+
+            <li class="<?php echo ($this->staticType == 'saying')
+                ? 'current' : 'link' ?>">
+                <a href="<?php echo $this->baseUrl(
+                    'travel-information/indonesian-phrases') ?>">
+                <?php echo $this->translate('id_static_saying') ?></a></li>
+
+            <li class="<?php echo ($this->staticType == 'do')
+                ? 'current' : 'link' ?>">
+                <a href="<?php echo $this->baseUrl(
+                    'travel-information/do-dont') ?>">
+                <?php echo $this->translate('id_static_do') ?></a></li>
+
+        </ul>
+</div>

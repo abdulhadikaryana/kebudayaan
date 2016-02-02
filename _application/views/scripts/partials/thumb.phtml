@@ -1,0 +1,9 @@
+<div class="thumb">
+    <?php if( ! $this->enable): ?>
+        <span class="thumb-up"><?php echo $this->thumbUp ?></span>
+        <span class="thumb-down"><?php echo $this->thumbDown ?></span>
+    <?php else: ?>
+        <a class="pointer" title="useful" onclick="onThumbClick(1)"><span class="thumb-up"><?php echo $this->thumbUp ?></span></a>
+        <a class="pointer" title="useless" onclick="onThumbClick(2)"><span class="thumb-down"><?php echo $this->thumbDown ?></span></a>
+    <?php endif; ?>
+</div>

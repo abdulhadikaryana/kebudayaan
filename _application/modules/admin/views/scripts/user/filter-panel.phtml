@@ -1,0 +1,26 @@
+<div class="filter-panel filter-hidden">
+
+
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="well form-inline" style="margin-top: 20px">
+    <p class="f_legend">Filter:</p>
+    <select class="filter-box" name="filterPage" id="filterPage" 
+            onchange="filterSwitch(this.value);">
+      <option value="0">Tampilkan Semua</option>
+      <option value="1">Username</option>
+      <option value="2">Status</option>
+    </select>
+
+    <span class="status-box filter-hidden"><select class="" name="filterStatus">
+        <option value="verify">Periksa</option>
+        <option value="active">Aktif</option>
+        <option value="blacklist">Blokir</option>
+      </select></span>
+
+    <span class="name-box mediumele filter-hidden">
+      <input type="text" class="" 
+             name="filterName"/>
+    </span>
+
+    <input type="submit" value="Go" class="btn radius"/>
+  </form>
+</div>

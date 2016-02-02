@@ -1,0 +1,152 @@
+<?php $this->placeholder('jsInline')->captureStart() ?>
+<?php
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+
+<?php echo $this->render('partial/upload-image-script.phtml'); ?>
+
+<script type="text/javascript">
+    //tinyMCE.execCommand('mceAddControl', false, 'highlightDescription');
+function myFileBrowser (field_name, url, type, win) 
+{
+    var cmsURL = '<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/1'; ?>';
+    if (cmsURL.indexOf("?") < 0) {
+        //add the type as the only query parameter
+        cmsURL = cmsURL + "?type=" + type;
+    }
+    else {
+        //add the type as an additional query parameter
+        // (PHP session ID is now included if there is one at all)
+        cmsURL = cmsURL + "&type=" + type;
+    }
+
+    tinyMCE.activeEditor.windowManager.open({
+        file : cmsURL,
+        title : 'My File Browser',
+        width : 800,  // Your dimensions may differ - toy around with them!
+        height : 600,
+        popup_css : false,
+        resizable : "yes",
+        inline : "yes",  // This parameter only has an effect if you use the inlinepopups plugin!
+        close_previous : "no"
+    }, {
+        window : win,
+        input : field_name
+    });
+    return false;
+}
+
+function setRecommendSize()
+{
+    switch($('#highlightType').val())
+    {
+        case '6' : $('.image-size').html('Recommended size 85px*78px');
+                   $('.medium-only').fadeIn('slow');
+                   $('#highlightDescription').rules("add",{
+                        required: true,
+                        messages: {required:"Masukan Gambar!"}
+                   });
+                    $('.sortOrder').hide();
+                   break;
+        case '5' : $('.image-size').html('Ukuran Yang Direkomendasikan 210px*335px');
+                   $('.medium-only').fadeOut('slow');
+                   $('#highlightDescription').rules("remove");
+                   $('.sortOrder').show();
+                   break;
+        case '4' : $('.image-size').html('Ukuran Yang Direkomendasikan 323px*105px');
+                   $('.medium-only').fadeOut('slow');
+                   $('#highlightDescription').rules("remove");
+                   $('.sortOrder').show();
+                   break;
+        case '3' : $('.image-size').html('Ukuran Yang Direkomendasikan 970px*332px');
+                   $('.medium-only').fadeOut('slow');
+                   $('#highlightDescription').rules("remove");
+                    $('.sortOrder').show();
+                   break;
+        case '2' : $('.image-size').html('Ukuran Yang Direkomendasikan 345px*255px');
+                   $('.medium-only').fadeIn('slow');
+                   $('#highlightDescription').rules("add",{
+                        required: true,
+                        messages: {required:"Masukan Gambar!"}
+                   });
+                    $('.sortOrder').hide();
+                   break;
+        case '1' : $('.image-size').html('Lebar Yang Direkomendasikan 323px');
+                   $('.medium-only').fadeOut('slow'); 
+                   $('#highlightDescription').rules("remove");
+                   $('.sortOrder').hide();
+                   break;
+    }
+}
+    
+$(function(){
+    $('#highlightImage').keypress(function(){
+        return false;
+    });
+    
+    $('#highlightSubmit').click(function(){
+       var content = tinyMCE.get('highlightDescription').getContent();
+       $('#highlightDescription').val(content); 
+    });
+    
+    $("#highlightForm input").blur(function(){
+        $("#highlightForm").validate().element($(this));
+    });
+    
+    $("#highlightForm input").change(function(){
+        $("#highlightForm").validate().element($(this));
+    });    
+    
+    $("#highlightForm").validate({
+        rules : {
+                    highlightLink:{
+                      url:true
+                    },
+                    highlightName:{
+                      required:true
+                    },
+                    highlightImage:{
+                      required:true
+                    },
+                    highlightSortOrder:{
+                        range: [0,100],
+                        digits: true
+                    }
+                },
+        messages : {
+                     highlightImage: "Masukan Gambar!",
+                     highlightName : "Masukan Nama!",
+                     highlightSortOrder:{
+                        range: "Masukan Angka Antara 0 Sampai 100",
+                        digits: "Masukan Angka Untuk Mengurutkan"
+                     },
+                     highlightLink : {
+                                url: "Masukan Url yang Benar contoh: HTTP:// prefix"
+                               }
+        }
+    });
+    
+    <?php if($this->state_edit): ?>
+        <?php if($this->highlightType == 2 OR $this->highlightType == 6): ?>
+            $('.medium-only').show();
+            $('#highlightDescription').rules("add",{
+                required: true,
+                messages: {required:"Masukan Deskripsi Highlight!!"}
+            });            
+        <?php endif; ?>
+    <?php endif; ?>
+
+   
+    $('#submit-btn').removeAttr('disabled');
+    $('#draft-btn').removeAttr('disabled');
+	
+	/*$('#highlightSubmit').click(function(){
+		//console.log(tinyMCE.activeEditor.getContent());
+		var desc = tinyMCE.activeEditor.getContent();
+		$('#highlightDescription').val($(desc).text());
+		$('#highlightForm').submit();
+	})*/;
+          
+});
+</script>
+<?php $this->placeholder('jsInline')->captureEnd() ?>

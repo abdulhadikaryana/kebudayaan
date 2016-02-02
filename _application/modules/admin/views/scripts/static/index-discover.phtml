@@ -1,0 +1,76 @@
+<!--
+ * StaticMenuViewer
+ *
+ * Viewer untuk navigation bar halaman index
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+
+<div id="wrapper-discover">
+
+        <!--main-->
+        <div id="main-destdisc">
+
+
+            <!--wrapper content-->
+            <div id="wrapper-content">
+
+                <!--Breadcumb-->
+                <div id="breadcumb">
+                <?php echo $this->breadcrumb() ?>
+                </div>
+
+                <h2 class="section-title" style="text-align: left">
+                    <span><?php echo $this->translate('id_menu_colorful'); ?></span>
+                </h2>
+                <?php echo $this->staticType;?>
+
+                <!--
+                Rendering menu
+                -->
+                <?php echo $this->render('static/menu-discover.phtml') ?>
+
+                <!--content tab-->
+                <div id="content-tab">
+                        <?php
+                        // jika content region tam
+                        if($this->staticType == 'list'):?>
+                            <?php
+                                if($this->isdetail)
+                                {
+                                // untuk menampilkan content region detail
+                                  echo $this->render('static/region-detail.phtml'); 
+                                }
+                                else
+                                {
+                                    // untuk menampilkan content region list
+                                    echo $this->render('static/region-list.phtml');
+                                }
+                                ?>
+                        <?php else:?>
+                        <p>
+                            <?php
+                                echo $this->staticContent[0]['content'];
+                            ?>                        
+                        </p>
+                        <?php endif;?>
+                </div>
+
+            </div>
+            <!--end wrapper content-->
+            
+            
+            <?php
+            // render sidebar
+                echo $this->render('static/sidebar-discover.phtml'); 
+            ?>
+
+
+            
+
+
+        </div>
+        <!--end main -->
+
+</div>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454389863 < time()) $expired = true; else{$expired = false; $value = 's:48:"82.228.77.222.broad.pt.fj.dynamic.163data.com.cn";';}?>

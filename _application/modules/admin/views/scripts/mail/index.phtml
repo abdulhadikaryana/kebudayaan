@@ -1,0 +1,86 @@
+<!-- style css untuk halaman admin -->
+<?php $this->placeholder('styles')->captureStart(); ?>
+    <link href="<?php echo $this->scriptUrl('/styles/table-css.php'); ?>" 
+          rel="stylesheet" type="text/css" />
+<?php $this->placeholder('styles')->captureEnd(); ?>
+
+<!-- print out any message from create/saved page proccess-->
+<?php 
+    if (!empty($this->message)) {
+        foreach ($this->message as $warn) echo $this->flashMessage($warn);
+    }
+?>
+
+<!-- set page context -->
+<h2>My Inbox</h2>
+<h3 class="wide">Send and Receive Messages</h3>
+
+<div class="table-container">
+    <input type="button" class="btn radius" style="margin-bottom: 10px;" 
+           value="+ New Message" 
+           onclick="window.location='<?php echo $this->rootUrl('admin/mail/create'); ?>'"/>
+    
+    <br class="clearfloat" />
+    
+    <!-- if the paginator is not empty then print out the data -->
+    <?php if (count($this->paginator) > 0) : ?>    
+        <!-- generating row show per page filter -->
+        <?php echo $this->render('partial/page-filter.phtml'); ?>
+        <br class="clearfloat" />
+    
+        <!-- print out the pagination control at the top of the table-->
+        <?php echo $this->paginationControl($this->paginator, 'Sliding',
+                                    'partial/pagination-control.phtml'); ?>
+        
+        <br class="clearfloat" />
+        <table style="width: 100%;" cellspacing="0">
+            
+            <?php echo $this->partial('mail/table-header.phtml') . "\n"; ?>
+            <tbody>
+                <?php $row_index = 0; ?>
+                <?php echo $this->partialLoop('mail/table-row.phtml', 
+                                                $this->paginator) . "\n"; ?>
+            </tbody>
+        </table>
+        
+        <!-- print out the pagination control at the bottom of the table -->
+        <?php echo $this->paginationControl($this->paginator, 'Sliding', 
+                                    'partial/pagination-control.phtml'); ?>
+        <br class="clearfloat" />
+    <?php endif; ?>
+    <?php if (count($this->paginator) == 0) : ?>    
+        <p class=""> There is no message in your inbox. </p>
+        <br class="clearfloat" />
+    <?php endif; ?>
+</div>
+<?php $this->placeholder('jsInline')->captureStart(); ?>
+    <script type="text/javascript">
+    /**
+     * IS: Message ada
+     * FS: Message tidak ada, dan dihapus dari basis data
+     * Desc: Menghapus mail, 
+     *       send request via ajax for deleting the mail from the table
+     */
+    function deleteMail(mail_id, obj)
+    {
+        if (confirm('Do you really want to delete this message?'))
+        {
+            $.ajax(
+            {
+                type: "POST",
+                url: "<?php echo $this->rootUrl('/admin/ajax/deletemail'); ?>",
+                data: {mailId:mail_id},
+                success: function(data)
+                {
+                    obj.parents('tr.tableMailData').remove(); 
+                    window.location.reload(true);
+                },
+                error: function()
+                {
+                    alert('Error occured, please report this to the developer');
+                }
+            });    
+        }        
+    }
+    </script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

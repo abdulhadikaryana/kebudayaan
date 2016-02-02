@@ -1,0 +1,59 @@
+<?php $subj = $this->detail[0]['subject']; ?>
+<?php switch($subj){
+        case "1": $subj = 'Destination Information Inquiry';break;
+        case "2": $subj = 'Site Promotional / Marketing Cooperation Offers';break;
+        case "3": $subj = 'Affiliation Information Inquiry';break;
+        case "4": $subj = 'Feedback / Comment on this Site';break;
+        case "0": $subj = 'Others';break;
+}
+    ?>
+<form method="post" action="<?php echo $this->currentUrl();?>" id="contactForm" name="contactForm">
+    <fieldset class="medium">
+        <legend>Contact Message Detail</legend>
+        <table>
+            <tr>
+                <td><label>Date Message</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['date']); ?></td>
+            </tr>
+            <tr>
+                <td><label>Name Contact</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['name']); ?></td>
+            </tr>
+            <tr>
+                <td><label>Country</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['country']); ?></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['email']); ?></td>
+            </tr>
+            <tr>
+                <td><label>Subject</label></td><td>&#58;</td>
+                <td><?php print_r ($subj); ?></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset class="wide">
+        <legend>Message Content</legend>
+        <table>
+            <tr>
+                <td><label>Content</label>&#58;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><?php print_r ($this->detail[0]['comment']); ?></td>
+                <td></td>
+            </tr>
+            <tr><td></td><td></td></tr>
+            <tr>
+                <td><label>Draft Reply</label>&#58;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><?php echo $this->form->replyText; ?></td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="submit" id="contactSubmit" name="contactSubmit" value="Input Draft" class="btn radius space_l" />
+</form>

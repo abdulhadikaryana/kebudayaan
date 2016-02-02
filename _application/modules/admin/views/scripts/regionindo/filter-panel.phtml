@@ -1,0 +1,26 @@
+<div class="filter-panel hidden">
+    
+    <h4 style="margin-top: 10px;"><label for="filterPage">Filter:</label></h4>
+    
+    <form action="<?php echo $this->currentUrl(); ?>" method="post">
+        <select class="filter-box" name="filterPage" id="filterPage" 
+                onchange="filterSwitch(this.value);">
+            <option value="0">Show All</option>
+            <option value="1">Name</option>
+            <option value="2">Parent</option>
+        </select>
+        
+        <select class="area-box hidden" name="filterParent">
+            <?php foreach($this->area as $area) : ?>
+                <option value="<?php echo $area['area_id']; ?>">
+                    <?php echo $area['name']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        
+        <input class="title-box mediumele hidden" type="text" 
+               name="filterTitle"/>
+        
+        <input type="submit" value="Go" class="btn radius"/>
+    </form>
+</div>

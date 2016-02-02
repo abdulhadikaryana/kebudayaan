@@ -1,0 +1,11 @@
+<div class="section">
+    <h2 class="section-title">
+        <span><?php echo $this->partner['name'] ?></span>
+    </h2>
+    <center>
+    <img src="<?php echo $this->mediaUrl('images/upload/partners-logo/' . $this->partner['logo']) ?>" alt="" />
+    </center>
+    <p>
+        <?php echo $this->htmlDecode($this->partner['description']); ?>
+    </p>
+</div>

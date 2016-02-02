@@ -1,0 +1,56 @@
+<div class="one-column">
+    <h2 class="section-title"><span><?php echo $this->pageTitle ?></span></h2>
+    
+    <div class="row">
+        <div class="twelve columns">
+            <div id="map-content"></div>
+        </div>
+    </div>
+    <!-- box map -->    
+    <div class="row">
+        <div class="four columns">
+            <div class="map-filter-box">
+                <p><?php echo $this->translate('id_pick_loc'); ?></p>
+                <?php echo $this->mapLocationForm ?>
+            </div>
+        </div>
+        <div class="four columns">
+            <div class="map-filter-box">                
+                <p><?php echo $this->translate('Search Culture'); ?></p>
+                <?php echo $this->mapDestForm ?>               
+            </div>
+        </div>
+        <div class="four columns">
+            <div class="map-filter-box">                
+                <p><?php echo $this->translate('Choose Category'); ?></p>
+                <?php echo $this->mapCategoryForm ?>                
+            </div>
+        </div>
+    </div>    
+    
+</div>
+
+<!-- Javascript -->
+<?php $this->placeholder("jsInline")->captureStart() ?>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    
+    <?php 
+        if(APPLICATION_ENV == "production" || APPLICATION_ENV == "testing") {
+            $mapJs = 'javascripts/frontend/map.min.js';
+        } else {
+            $mapJs = 'javascripts/frontend/map.js';
+        }
+    ?>        
+    <script type="text/javascript" src="<?php echo $this->scriptUrl($mapJs) ?>"></script>
+
+    <script type="text/javascript">
+    /*<![CDATA[*/   
+    <!--
+        var poiId = '<?php echo $this->id; ?>';
+        var read_more = '<?php echo $this->translate('id_read_more'); ?>';
+        var nearest_dest = '<?php echo $this->translate('id_near_dest'); ?>';
+        var categoryText = '<?php echo $this->translate('Category'); ?>';        
+    //-->
+    /*]]>*/
+    </script>
+<?php $this->placeholder("jsInline")->captureEnd() ?>

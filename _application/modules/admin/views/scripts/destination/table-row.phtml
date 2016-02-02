@@ -1,0 +1,84 @@
+<tr>
+  <td>
+    <a href="<?php echo $this->rootUrl(); ?>/admin/culture/edit/id/<?php echo $this->poi_id; ?>/lang/1"><?php echo $this->HtmlDecode($this->name); ?></a>
+    - <small>
+      <?php switch ($this->status): case Model_DbTable_Destination::DRAFT: ?>
+          <span class="muted">Draft</span>
+          <?php break; ?>
+        <?php case Model_DbTable_Destination::PENDING: ?>
+          <span class="text-error">Butuh Persetujuan</span>
+          <?php break; ?>
+        <?php case Model_DbTable_Destination::PUBLISH: ?>
+          <span class="text-success">Diterbitkan</span>
+          <?php break; ?>
+      <?php endswitch; ?>
+      <?php if ($this->featured): ?>
+        - <span class="text-info">Fitur</span>
+      <?php endif; ?>
+
+      <div class="control">
+        <a class="btn btn-mini" href="<?php echo $this->rootUrl(); ?>/admin/culture/edit/id/<?php echo $this->poi_id; ?>/lang/1">Sunting</a>
+        <a class="btn btn-mini" target="_blank" href="<?php echo $this->rootUrl(); ?>/id/culture/<?php echo $this->poi_id; ?>">Pratinjau</a>
+        <?php if ($this->partialLoop()->view->userCanApprove && $this->status == Model_DbTable_Destination::PENDING): ?>
+          <a class="btn btn-mini btn-success" href="<?php echo $this->rootUrl(); ?>/admin/culture/approve/id/<?php echo $this->poi_id; ?>">Setujui</a>
+        <?php endif; ?>
+        <a class="btn btn-mini btn-danger" onclick="DeletePoi(<?php echo $this->poi_id; ?>,$(this));">
+          <i class="icon-trash"></i>          
+          Hapus
+        </a>
+      </div>
+  </td>
+  <td>
+    <?php foreach ($this->PoiArea($this->poi_id) as $area) : ?>
+      <?php echo $area['name']; ?>
+      <b>&nbsp;&#183;</b>
+    <?php endforeach; ?></td>
+  <td>
+    <table class="cleartable tablelist admindestcategorylist">
+      <?php foreach ($this->PoiCategory($this->poi_id,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          1) as $category) : ?>
+        <tr class="category-list">
+          <td>
+            <div class="category-name">
+              <input id="cat<?php echo $category['category_id']; ?>poi<?php echo $this->poi_id; ?>" class="categoryRadio<?php echo $this->poi_id; ?>" type="radio" value="<?php echo $category['category_id']; ?>" onclick = "setMainCategory(<?php echo $this->poi_id; ?>,$(this).val(),$(this));" <?php if ($category['category_id'] == $this->main_category) : ?> checked="checked" <?php endif; ?> />
+  <?php echo $category['name']; ?>
+            </div>
+            <div class="general-remove nomargin" onclick="removeCategory($(this),<?php echo $this->poi_id; ?>,<?php echo $category['category_id'] ?>);">Hapus</div>
+          </td>
+        </tr>
+<?php endforeach; ?>
+    </table>
+
+
+    <div class="control">
+      <a class="btn btn-mini" onmousedown="editCategory(<?php echo $this->poi_id; ?>,$(this));">Tambah</a>
+    </div>
+
+  </td>
+  <td>
+
+    <?php if ($this->CheckIndoTranslation($this->poi_id,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2)) : ?>
+      <span class="text-success">Ada</span>
+    <?php else: ?>
+      <span class="text-error">Tidak Ada</span>
+      <?php endif ?>
+    <div class="control">
+      <?php if ($this->CheckDestiIndo($this->poi_id,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  2)): ?>
+        <a class="btn btn-mini" href="<?php echo $this->rootUrl(); ?>/admin/culture/edittranslation/id/<?php echo $this->poi_id; ?>">Sunting</a>
+      <?php else: ?>
+        <a class="btn btn-mini" href="<?php echo $this->rootUrl(); ?>/admin/culture/translate/id/<?php echo $this->poi_id; ?>">Tambah</a>
+<?php endif; ?>
+
+<?php if ($this->CheckIndoTranslation($this->poi_id,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            2)) : ?>
+
+        <a class="btn btn-mini" target="_blank" href="<?php echo $this->rootUrl(); ?>/en/culture/<?php echo $this->poi_id; ?>">Pratinjau</a>
+
+        <div class="btn btn-mini btn-danger" onclick="DeletePoi2(<?php echo $this->poi_id; ?>,$(this));">Hapus</div>
+<?php endif; ?>
+    </div>
+
+  </td>
+</tr>

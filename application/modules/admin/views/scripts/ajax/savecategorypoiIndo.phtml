@@ -1,0 +1,11 @@
+<?php if($this->double_check == TRUE) : ?>
+    <tr class="category-list">
+        <td style="width: 175px; text-align='left';">
+			<div class="category-name">
+            <input id="cat<?php echo $this->cat_id; ?>poi<?php echo $this->poi_id;?>" class="categoryRadio<?php echo $this->poi_id; ?>" type="radio" value="<?php echo $this->cat_id; ?>" onclick = "setMainCategory(<?php echo $this->poi_id; ?>,$(this).val(),$(this));" />
+            <?php echo $this->cat_name['name']; ?>
+            </div>
+            <div class="general-remove nomargin" onclick="removeCategory($(this),<?php echo $this->poi_id; ?>,<?php echo $this->cat_id; ?>);">Remove</div>
+        </td>
+    </tr>
+<?php endif; ?>

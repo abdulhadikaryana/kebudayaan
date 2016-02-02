@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454402478 < time()) $expired = true; else{$expired = false; $value = 's:47:"CableLink-200-239-6-73.Hosts.Cablevision.com.mx";';}?>

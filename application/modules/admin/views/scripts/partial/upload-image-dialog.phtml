@@ -1,0 +1,9 @@
+<div id="imageUploadDialog">
+    <form id="uploadForm" enctype="multipart/form-data" method="POST" action="<?php echo $this->rootUrl().'/admin/ajax/imageupload/upload?type=' . $this->type; ?>">
+        <p><label>Image&#58;</label>&nbsp;<input type="file" name="imageheader"/></p>
+        <p class="upload-error" ></p>
+        <p class="upload-message" ></p>
+        <p id="image_dialog"><span class="space_r"><input type="submit" value="upload" class="btn radius" id="imageuploadbtn"/></span><span><input type="button" value="close" class="btn radius" onclick="resetUploadDialog();tb_remove();" /></span></p>
+        <p><input type="hidden" name="step" value="0" id="step"/></p>
+    </form>
+</div>

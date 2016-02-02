@@ -1,0 +1,40 @@
+<tr>
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td>
+                    <a href="<?php echo $this->rootUrl(); ?>/admin/tourpackage/edit/id/<?php echo $this->package_id; ?>/lang/1"><?php echo $this->title; ?></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/tourpackage/edit/id/<?php echo $this->package_id; ?>/lang/1">Edit</a>
+                            </td>
+                            <td>
+                                <div class="general-remove" onclick="deletePackage(<?php echo $this->package_id; ?>);">Delete</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+    <td>
+        <?php if($this->contact != ''): ?>
+            <?php echo $this->contact; ?>
+        <?php else:?>
+            not available
+        <?php endif; ?>
+    </td>
+    <td style="w">
+        <?php if($this->website != ''): ?>
+            <?php echo wordwrap($this->website,20,"<br />\n",TRUE); ?>
+        <?php else:?>
+            not available
+        <?php endif; ?>
+    </td>
+    <td><a href="<?php echo $this->rootUrl(); ?>/admin/tourpackage/edit/id/<?php echo $this->package_id; ?>/lang/2"><?php $this->CheckPackageIndo($this->package_id, 2)?></a></td>
+</tr>

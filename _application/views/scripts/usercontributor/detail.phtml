@@ -1,0 +1,317 @@
+<div class="post-inner float-left">
+
+    <div class="post-info float-left rounded">
+                 <div class="foto float-left">
+                    <?php if($this->detail['foto']):?>
+                         <!--<a rel="example_group" class="zoom-contributor" href="<?php /*echo $this->imageUrl('/upload/usercontributor/'.$this->detail['foto']);*/?>">-->
+                            <img src="<?php echo $this->imageUrl().'/upload/usercontributor/'.$this->detail['foto'];?>" class="author-photo fancyzoom" />
+                         <!--</a>-->
+                    <?php else:?>
+                        <img src="<?php echo $this->rootUrl();?>/media/images/usercon/display-pic.jpg" class="author-photo" />
+                    <?php endif;?>
+                </div>
+
+                <div class="posted float-left">
+                    <span class="bold"><?php echo $this->translate('id_usercontributor_posted_date');?> :</span>
+                    <?php
+                     $posted = $this->detail['tanggal'] .'&nbsp;'. $this->month($this->detail['bulan'],$this->lang_id).'&nbsp;'. $this->detail['tahun'];
+                    ?>
+                    <br />
+                    <span><?php echo $posted;?></span>
+
+                </div>
+
+                <div class="posted float-left">
+                    <span class="bold float-left"><?php echo $this->translate('id_usercontributor_posted_by');?> :</span>
+                    <?php
+                        $cotributor_name = $this->userContributor($this->detail['user_id']);
+                    ?>
+                    <br />
+                    <span>
+                    <a class="float-left" href="<?php echo $this->baseUrl('/travelers-stories/author/id/'.$this->detail['user_id'].'/name/'.$cotributor_name.'/sort/default');?>">
+                        <?php
+                        echo $cotributor_name;
+                        ?>
+                    </a>
+                        </span>
+
+                </div>
+
+        <div class="posted float-left">
+            <span class="bold"><?php echo $this->translate('id_usercontributor_categories');?> :</span>
+            <br />
+
+        <?php
+            $url = $this->baseUrl();
+            $url = $this->baseUrl();
+            $content_category = $this->content_type;
+            $category = $this->Category($this->detail['article_id'],$this->detail['language_id'],$url,$content_category);
+
+        ?>
+        <?php if($category == "-"):?>
+            <?php
+                echo $category;
+            ?>
+        <?php else:?>
+            <?php
+                echo $category;
+            ?>
+        <?php endif;?>
+
+        </div>
+
+        <div class="posted float-left">
+            <span class="bold"><?php echo $this->translate('id_usercontributor_rate_content');?></span>
+            <br />
+            <div class="rate rate-content float-left" id="<?php echo $this->detail['id'];?>" title="<?php echo $this->detail['rating'];?>">
+                <div class="rating" id="rate<?php echo $this->detail['id'];?>"></div>
+            </div>                    
+        </div>
+
+
+        <a href="#target" class="anchorLink total-cmnt float-left">                        
+            <span class="tc-top"></span>
+            <span class="tc-mid">
+            <?php echo $this->CountComment($this->comment_type,$this->detail['article_id'])?> <?php echo $this->translate('id_usercontributor_comments');?></span>
+            <span class="tc-right"></span>
+        </a>
+    </div><!-- post-info -->
+    <div class="post-preview float-left">
+        <h2><?php echo stripcslashes(html_entity_decode($this->detail['title']));?></h2>
+        
+        <div class="short-review">
+            <span><?php echo html_entity_decode($this->detail['short_content']);?></span>
+        </div>
+        <p>
+            <?php
+                echo stripcslashes(str_replace("&nbsp;","",$this->htmlDecode($this->detail['content'])));
+            ?>
+        </p>
+        
+        <?php
+        //jika category 2 berarti photoessay, jadi sertakan image nya
+        if($this->detail['category'] == 2):?>
+            <?php
+                $db_image = $this->Photoessay($this->detail['article_id'],$this->detail['language_id']);
+                $folder = $this->imageUrl().'/upload/photoessay/';
+            ?>
+            <?php if(sizeof($db_image)):?>
+
+                <span class="title">GALLERY</span>
+                <div class="boxgallery">
+
+                    <?php foreach($db_image as $img):?>
+                        <?php
+                        //if(file_exists(UPLOAD_FOLDER.'/photoessay/thumbnails/'.$img->file)):
+                        ?>
+                            <a rel="example_group" class="zoom-photoessay" href="<?php echo $folder.$img->file?>">
+                                <img class="img-photoessay fancyzoom" src="<?php echo $folder.'thumbnails/'.$img->file?>" alt="<?php echo $this->PhotoessayDesc($img->id,$this->detail['language_id']);?>" />
+                            </a>
+                        <?php
+
+                        //endif;
+                        ?>
+
+                    <?php endforeach;?>
+                </div>
+            <?php endif;?>
+        <?php endif;?>
+
+        <span class="tagdetail">Tag :
+             <?php
+                echo $this->tags($this->detail['article_id'],$this->detail['language_id'],$this->baseUrl());
+             ?>   
+        </span>
+
+        <?php
+            $related = $this->tagDetails($this->detail['article_id'],$this->detail['language_id'],$this->baseUrl());
+        ?>
+        <?php if($related):?>
+            <div class="relateds">
+                <span class="title"><?php echo strtoupper($this->translate('id_usercontributor_related_article'));?></span>
+                <?php echo $related;?>
+            </div>
+        <?php endif;?>
+    </div>
+
+    <div class="post-preview float-left" style="margin-top:30px;margin-left: 145px;">
+
+        <!-- share -->
+        <div id="social-network">
+            <div id="fb-like" style="margin-top: 2px;">
+                <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo $this->baseUrl('/usercontributor/detail/' . $this->id . '/' . $this->makeUrlFormat(stripcslashes(html_entity_decode($this->detail['title']))));?>&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+            </div>
+            <div id="tweetme">
+
+                <a href="#"
+                   url = '<?php echo $this->baseUrl('/travelers-stories-detail/' . $this->id . '/' . $this->makeUrlFormat(stripcslashes(html_entity_decode($this->detail['title']))));?>'
+                   class="twitter-share-button"
+                    data-count="horizontal">Tweet</a>
+                    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+            </div>
+
+            <div style="float:right;margin-top: 2px;">
+<!-- AddToAny BEGIN -->
+<a class="a2a_dd" href="http://www.addtoany.com/share_save?linkurl=http%3A%2F%2Fid.indonesia.travel%2Fen%2Ftravelers-stories-detail%2Fall%2F55%2Fthe-deep-water-paradise-of-kalasey-seas-off-manado&amp;linkname=judul"><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"/></a>
+<script type="text/javascript">
+var a2a_config = a2a_config || {};
+a2a_config.linkname = "<?php echo stripcslashes(html_entity_decode($this->detail['title']));?>";
+a2a_config.linkurl = "<?php echo $this->currentUrl();?>";
+</script>
+<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+            </div>
+        </div>
+        <!-- share -->
+        <!--<div id="share"></div>-->
+        
+        <!--comment-->
+        <div id="comments-user">
+        <a name="target" id="target"></a>
+
+        <?php if(sizeof($this->comments)) :?>
+            <?php foreach($this->comments as $parent) :?>
+                    <div class="comments">                        
+                        <a href="#" class="user-thumb">
+                            <?php if($parent->isfb) : ?>
+                                <?php $fbInfo = $this->fb->api('/' . $parent->comment_author); ?>
+                                <img class="avatar" src="https://graph.facebook.com/<?php echo $parent->comment_author; ?>/picture" alt="" />
+                                <?php $author = $fbInfo['name']; ?>
+                            <?php else: ?>
+                            <?php if($parent->comment_author_email) {
+                                $emailMd5 = md5($parent->comment_author_email);
+                            } ?>
+                                <?php $author = $parent->comment_author; ?>
+                                <img class="avatar" src="http://www.gravatar.com/avatar/<?php echo $emailMd5; ?>?default=<?php echo $this->imageUrl('gravatar.jpg')?>&size=50" alt="" />
+                            <?php endif; ?>
+                        </a>
+                        <div class="comments-detail">
+                            <h3>
+                                <?php if($parent->comment_author_url == "http://" OR $parent->comment_author_url == NULL): ?>
+                                    <?php echo $author ?>
+                                <?php else: ?>
+                                    <a href="<?php echo $parent->comment_author_url;?>"><?php echo $author ?></a>
+                                <?php endif; ?>
+                            </h3> 
+                            <span><?php echo $this->newsMeta($parent->comment_date, ''); ?></span> 
+                            <p>
+                                <?php echo $this->htmlDecode($this->truncate(stripslashes($parent->comment_content), 250)); ?>
+                            </p> 
+                        </div>
+                        
+                        <a class="link-reply" href="<?php echo $this->baseUrl("traveler-stories/replycomment/id/".$this->id."/id_par/".$parent->comment_id) ?>"">Reply</a>
+                    </div>
+
+                <!--comment child-->
+                <?php $comment_child = $this->comment($this->id,$this->contentType,$parent->comment_id);?>
+                
+                <?php if(sizeof($comment_child)):?>
+                    <?php foreach($comment_child as $child):?>
+                        <div class="comments reply">                        
+                            <a href="#" class="user-thumb">
+                                <?php if($child->isfb) : ?>
+                                    <?php $fbInfo = $this->fb->api('/' . $child->comment_author); ?>
+                                    <img class="avatar" src="https://graph.facebook.com/<?php echo $child->comment_author; ?>/picture" alt="" />
+                                    <?php $author = $fbInfo['name']; ?>
+                                <?php else: ?>
+                                <?php if($child->comment_author_email) {
+                                    $emailMd5 = md5($child->comment_author_email);
+                                } ?>
+                                    <?php $author = $child->comment_author; ?>
+                                    <img class="avatar" src="http://www.gravatar.com/avatar/<?php echo $emailMd5; ?>?default=<?php echo $this->imageUrl('gravatar.jpg')?>&size=50" alt="" />
+                                <?php endif; ?>
+                            </a>
+                            <div class="comments-detail">
+                                <h3>
+                                    <?php if($child->comment_author_url == "http://" OR $child->comment_author_url == NULL): ?>
+                                        <?php echo $author ?>
+                                    <?php else: ?>
+                                        <a href="<?php echo $child->comment_author_url;?>"><?php echo $author ?></a>
+                                    <?php endif; ?>
+                                </h3> 
+                                <span><?php echo $this->newsMeta($child->comment_date, ''); ?></span> 
+                                <p>
+                                    <?php echo $this->htmlDecode($this->truncate(stripslashes($child->comment_content), 250)); ?>
+                                </p> 
+                            </div>
+                            <a class="link-reply" href="<?php echo $this->baseUrl("traveler-stories/replycomment/id/".$this->id."/id_par/".$parent->comment_id."/id_child/".$child->comment_id) ?>"">Reply</a>
+                        </div>
+
+                        <!--comment child-->
+                        <?php $comment_level = $this->comment($this->id,$this->contentType,$parent->comment_id,$child->comment_id);?>
+                    
+                        <?php if(sizeof($comment_level)):?>
+                            <?php foreach($comment_level as $child2):?>
+                                <div class="comments reply2">                        
+                                    <a href="#" class="user-thumb">
+                                        <?php if($child2->isfb) : ?>
+                                            <?php $fbInfo = $this->fb->api('/' . $child2->comment_author); ?>
+                                            <img class="avatar" src="https://graph.facebook.com/<?php echo $child2->comment_author; ?>/picture" alt="" />
+                                            <?php $author = $fbInfo['name']; ?>
+                                        <?php else: ?>
+                                        <?php if($child2->comment_author_email) {
+                                            $emailMd5 = md5($child2->comment_author_email);
+                                        } ?>
+                                            <?php $author = $child2->comment_author; ?>
+                                            <img class="avatar" src="http://www.gravatar.com/avatar/<?php echo $emailMd5; ?>?default=<?php echo $this->imageUrl('gravatar.jpg')?>&size=50" alt="" />
+                                        <?php endif; ?>
+                                    </a>
+                                    <div class="comments-detail">
+                                        <h3>
+                                            <?php if($child2->comment_author_url == "http://" OR $child2->comment_author_url == NULL): ?>
+                                                <?php echo $author ?>
+                                            <?php else: ?>
+                                                <a href="<?php echo $child2->comment_author_url;?>"><?php echo $author ?></a>
+                                            <?php endif; ?>
+                                        </h3> 
+                                        <span><?php echo $this->newsMeta($child2->comment_date, ''); ?></span> 
+                                        <p>
+                                            <?php echo $this->htmlDecode($this->truncate(stripslashes($child2->comment_content), 250)); ?>
+                                        </p> 
+                                    </div>
+                                </div>                            
+                            <?php endforeach;?>
+                        <?php endif;?>
+
+                    <?php endforeach;?>
+                <?php endif;?>
+            
+            <?php endforeach;?>
+
+
+        <?php endif;?>
+        </div>
+
+        <span class="title">
+            <?php echo strtoupper($this->translate('id_usercontributor_post_comment'));?>
+        </span>
+        <div id="comment"></div>
+        <?php if ($this->sess->username OR $this->sess->fbname) : ?>
+            <p><?php echo $this->translate('id_login_as') ?> <?php echo ($this->sess->username)? $this->sess->username : $this->sess->fbname ?></p>
+        <?php endif; ?>        
+        <?php echo $this->commentForm;?>
+
+
+    </div><!-- post-preview -->
+
+
+
+
+</div><!-- post-inner -->
+
+
+
+<!--  addtoAny Js -->
+
+<?php $this->placeholder("jsInline")->captureStart() ?>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            
+            //alert('asasas');
+        //    $('#scroll-to-comment').localScroll({
+        //       target:'#comment'
+        //    })
+        });
+    </script>
+<?php $this->placeholder("jsInline")->captureEnd() ?>

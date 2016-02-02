@@ -1,0 +1,30 @@
+/* #404040 */
+blockquote {
+border-left:2px solid #404040;
+border-right:2px solid #404040;
+}
+
+.cat-title {
+background-color: #404040;
+}
+
+ul.accordion > li.active,.tabs dd.active {
+border-top:3px solid #404040;
+}
+
+.tabs-widget .tab-links li.active a {
+background: #404040;
+border:1px solid #404040;
+}
+
+.twitter-widget a {
+color: #404040 !important;
+}
+
+ol#comments .comment-reply-edit a.comment-reply-link,ol#comments .comment-reply-edit a.comment-edit-link,#cancel-comment-reply-link,.contact-form input[type='submit'],.wpcf7 input[type="submit"],li.widget_tag_cloud .tagcloud a:hover,li.subscribe-widget input[type='submit'],.comment-form input[type='submit'],.copyright,.pagenation li,.pagenation li span,#main-menu a:hover,#main-menu a.active,#top-menu {
+background: #404040;
+}
+
+a,.dropcap2 span.large-cap,.error-404 p b,li.widget_rss .rss-date,.tabs-widget > div h3 a,.post-title,.comment-reply-title,.flex-caption a,.other-posts .post-title {
+color: #404040;
+}

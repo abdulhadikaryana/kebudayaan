@@ -1,0 +1,38 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart(); 
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+
+<script type="text/javascript">
+tinyMCE.execCommand('mceAddControl', false, 'linkDescription');
+
+$(function(){
+        $("#relatedForm input").blur(function(){
+            $("#relatedForm").validate().element($(this));
+        });    
+
+        $("#relatedForm").validate({
+        rules : {
+                    linkType:{
+                      required:true,
+                      min: 1
+                    },
+                    linkTitle:{
+                      required:true
+                    },
+                    linkUrl:{
+                      required:true,
+                      url:true
+                    }
+                },
+        messages : {
+                     linkTitle : "Please enter a Title!",
+                     linkType : "Please select a link type!",
+                     linkUrl : "Please enter a valid URL!"
+        }
+    });
+});
+
+</script>
+    
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

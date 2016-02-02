@@ -1,0 +1,21 @@
+<div>
+<?php if(!empty($this->imageGallery)): ?>
+    <h3><?php echo $this->translate('Image Gallery') ?></h3>
+    <?php foreach ($this->imageGallery as $counter => $image) : ?>
+    <?php if ($counter == 4) break; ?>
+
+    <!--clearing image gallery-->
+        <ul class="block-grid five-up" data-clearing=""> 
+            <?php foreach ($this->imageGallery as $counter => $image) : ?>               
+          <li>
+              <a href="<?php echo $this->imageUrl('/upload/culture/' . basename($image['url']) ) ?>">
+                  <img src="<?php echo $this->imageUrl('timthumb.php?src=upload/culture/' . basename($image['url']) . '&w=110&h=70&q=100') ?>" width="110px" height="70px" alt="" />
+              </a>
+          </li>
+          <?php endforeach; ?>
+        </ul>
+    <!--end of clearing image gallery-->
+
+    <?php endforeach; ?>
+<?php endif; ?>
+</div>

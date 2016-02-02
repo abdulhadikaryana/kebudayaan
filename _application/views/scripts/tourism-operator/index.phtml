@@ -1,0 +1,121 @@
+<!--main-->
+<div id="main-destdisc">
+
+    <!--main content-->
+    <div id="wrapper-content">
+        
+        <!--Breadcumb-->
+        <div id="breadcumb">
+            <?php echo $this->breadcrumb() ?>
+        </div>    
+        <!--End Breadcumb-->
+
+        <?php echo $this->render('destination/destination-title.phtml'); ?>
+
+        <!-- tab top -->
+        <?php
+            echo $this->render('destination/tab-top.phtml');
+        ?>                          
+
+        <!--content tab-->
+        <div id="content-tab-dest" class="destinasi">
+
+            <!--content description-->
+            <div class="content-desc">
+                <!--<p>-->
+
+                <div id="dest-content">
+                    <a name="firstsection"></a>
+                    <div class="section">
+                        <h3><?php echo $this->sectionTitle ?></h3>
+                        <div class="section-directory">
+                        <?php if(count($this->sectionContent) > 0) : ?>
+                            <div class="sorting-directory">
+                                <?php echo $this->translate('id_sort_by'); ?> <?php echo $this->columnSort($this->nameSort,
+                                            array(
+                                                  'param' => $this->sortBy,
+                                                  'title' => $this->translate('name'))); ?>
+                                <?php if($this->action == 'findhotel'): ?>
+                                    <?php echo $this->columnSort($this->starSort,
+                                                array(
+                                                      'param' => $this->sortBy,
+                                                      'title' => $this->translate('id_text_star'))); ?>
+                                <?php endif; ?>
+                            </div>
+                            <div class="searching-directory">
+                                <form id="searchDirForm" action="<?php echo $this->baseUrl('/destination/' .
+                                        $this->destId . '/' . $this->formatDestTitle . '/' . $this->action) ?>" method="post" onsubmit="onSearchDirSubmit()">
+                                    <input id="searchname" name="searchname" value="<?php echo $this->searchName ?>" type="text" />
+                                    <input value="<?php echo $this->translate('id_search_text'); ?>" class="button" type="submit" />
+                                </form>
+                            </div>
+                            <div class="clear"></div>
+                            <?php endif; ?>
+                            <?php if($this->viewCoverage): ?>
+                                <?php if( ! $this->coverage): ?>
+                                    <p id="agent-coverage">
+                                        <a href="<?php echo $this->baseUrl('/destination/' .
+                                                $this->destId . '/' . $this->formatDestTitle . '/' . $this->action . '/coverage/true') ?>"><?php echo $this->translate('id_see_other_travel'); ?> &gt;&gt;</a>
+                                    </p>
+                                <?php elseif ($this->coverage): ?>
+                                    <p id="agent-coverage">
+                                        <a href="<?php echo $this->baseUrl('/destination/' .
+                                                $this->destId . '/' . $this->formatDestTitle . '/' . $this->action) ?>">See List of Travel Agent(s) in this area &gt;&gt;</a>
+                                    </p>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                            <?php if(count($this->sectionContent) > 0) : ?>
+                            <?php if( ! empty($this->searchName)) : ?>
+                                <p>
+                                    <i>Search result for "<b><?php echo $this->searchName ?></b>"</i>
+                                </p>
+                            <?php endif; ?>
+                            <?php echo $this->partial('tourism-operator/list.phtml',
+                                    array(
+                                        'directory' => $this->sectionContent,
+                                        'readMoreLink' => $this->baseUrl('/destination/' . $this->destId . '/' .
+                                            $this->formatDestTitle . '/' . $this->action . '/detail'),
+                                    )); ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                
+                <?php
+                //echo $this->render('destination/destination-footer.phtml'); ?>
+                
+                <!-- Javascript -->
+                <?php $this->placeholder("jsInline")->captureStart() ?>
+                    <script type="text/javascript">
+                    function onSearchDirSubmit()
+                    {
+                        var searchName = $('#searchname').val();
+                
+                        var currentAction = $('#searchDirForm').attr('action');
+                        $('#searchDirForm').attr('action', currentAction + '/searchname/' + searchName);
+                    }
+                    </script>
+                <?php $this->placeholder("jsInline")->captureEnd() ?>
+                    
+                <!--</p>-->
+            </div>
+            <!--end content description-->
+
+        </div>
+
+        <!-- tab bottom -->
+        <?php
+            echo $this->render('destination/tab-bottom.phtml');
+        ?>                          
+        <!-- end tab bottom -->
+    </div>
+
+
+    <!--sidebar-->
+    <?php
+        echo $this->render('destination/sidebar-new.phtml');
+    ?>                          
+    <!--end sidebar -->
+
+</div>
+

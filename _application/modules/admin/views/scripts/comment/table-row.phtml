@@ -1,0 +1,58 @@
+<?php
+    switch ($this->content_type) {
+        case 1 : $tipe = "news";
+                 $link = $this->baseUrl("/news/detail/" . $this->content_id . "/preview#comment-" . $this->comment_id);
+                 break;
+        case 2 : $tipe = "event";
+                 $link = $this->baseUrl("/event/detail/" . $this->content_id . "/preview#comment-" . $this->comment_id);
+                 break;
+        case 3 : $tipe = "review";
+                 $link = $this->baseUrl("/destination/" . $this->poi_id . "/preview/review/detail/" . $this->content_id . "#comment-" . $this->comment_id);
+                 break;
+    }
+    $check =	"<div align='center'><input type='checkbox' name='comment_item[]' value='".$this->comment_id."'></div>";
+?>
+<tr>
+    <td><?php echo $this->HtmlDecode($check); ?></td>
+	<td>
+        <table class="cleartable">
+            <tr>
+                <td>
+                    <a href="<?php echo $this->rootUrl('/admin/comment/edit/id/' . $this->comment_id); ?>">
+                        <?php echo $this->HtmlDecode($this->comment_author); ?>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" 
+                                   href="<?php echo $this->rootUrl('/admin/comment/edit/id/' . $this->comment_id); ?>">
+                                    Edit</a>
+                            </td>
+                            <td>
+                                <a class="general-remove"  style="width: 100px;"
+                                   target="_blank" 
+                                   href="<?php echo $link; ?>">
+                                    View in <?php echo $tipe; ?></a>
+                            </td>
+                            <td>
+                                <div class="general-remove" 
+                                     onclick="deleteComment(<?php echo $this->comment_id; ?>);">
+                                    Delete</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>            
+        </table>
+    </td>
+    <td>
+        <?php echo $this->comment_author_email; ?>
+    </td>
+    <td>
+        <?php echo $this->HtmlDecode($this->truncate($this->comment_content)); ?>
+    </td>
+</tr>

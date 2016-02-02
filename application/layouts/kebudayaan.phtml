@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <?php echo $this->headTitle()->setSeparator(' | '); ?>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headLink(); ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ditjenbud - Kemdikbud">
+        <meta name="google-site-verification" content="7qRevEI2UJ-XVU5ANhmT5dNiCfUKyeb0inA7aPzV8Yo" />
+        <meta name='robots' content='index,follow' />
+        <meta content='follow,all' name='Googlebot-Image'/>
+        <meta content='follow,all' name='Scooter'/>
+        <meta content='follow,all' name='msnbot'/>
+        <meta content='follow,all' name='alexabot'/>
+        <meta content='follow,all' name='Slurp'/>
+        <meta content='follow,all' name='ZyBorg'/>
+        <meta content='follow,all' name='Scooter'/>
+        <meta content='ALL' name='SPIDERS'/>
+        <meta content='ALL' name='WEBCRAWLERS'/>
+
+        <meta name="subject" content="Informasi Kebudayaan Indonesia"/>
+        <meta name="copyright" content="Kementerian Pendidikan dan Kebudayaan Indonesia"/>		
+
+        <!-- Stylesheets import here -->
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/dusk.min.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/sangkuriang-typefaces.min.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/sangkuriang-ui-starter-kit.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/sangkuriang-ui-starter-kit-doc.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/kebudayaanindonesia.css'); ?>">
+        <link type="text/css" rel="stylesheet" href="<?php echo $this->rootURL('/css/simplePagination.css'); ?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/eventCalendar.css'); ?>"/>
+        <style type="text/css">
+            .breadcrumb{
+                margin: 0;
+                background: white;
+                box-shadow: none;
+                border-radius: 0;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .section-title {
+                margin-bottom: 5px;
+            }
+        </style>
+
+        <?php echo $this->placeholder('cssInline'); ?>
+
+        <!-- Application icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-144-precomposed.png'); ?>">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-114-precomposed.png'); ?>">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-72-precomposed.png'); ?>">
+        <link rel="apple-touch-icon-precomposed" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-57-precomposed.png'); ?>">
+        <link rel="shortcut icon" href="<?php echo $this->rootUrl('/ico/favicon.png'); ?>">
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-41359346-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <?php include_once("analyticstracking.php"); ?>
+
+    </head>
+    <body>  
+        <div id="ajax-message" style="display:none;"> 
+            <?php echo $this->translate('Processing') . '.....' ?> 
+        </div> 
+        <!-- MAIN NAVIGATION begins here -->
+        <div class="navbar navbar-fixed-top">
+            <div class="top-accent"></div>
+            <div class="navbar-inner">
+                <div class="container-fluid">
+
+                    <a class="brand" href="<?php echo $this->url(array(), $this->langId == 1 ? 'beranda' : 'home'); ?>">
+                        <img src="<?php echo $this->rootUrl('/img/logo-kebudayaan-indonesia-colors.png'); ?>" alt="Kebudayaan Indonesia"/>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <?php $beranda = ($this->langId == 1) ? "Beranda" : "Home"; ?>
+                            <li><a href="<?php echo $this->url(array(), $this->langId == 1 ? 'beranda' : 'home'); ?>"><?php echo $beranda; ?></a></li>
+                            <?php $kebudayaan = ($this->langId == 1) ? "Kebudayaan" : "Culture"; ?>
+                            <li>
+                                <a href="<?php echo $this->url(array(), ($this->langId == 1) ? 'kebudayaan' : 'culture') ?>">
+                                    <?php echo $kebudayaan; ?>
+                                </a>
+                                <ul>
+                                    <?php foreach ($this->categories as $index => $category): ?>
+                                        <?php
+                                        $url = $this->url(array(
+                                            'id' => $category['category_id'],
+                                            'slug' => $this->makeUrlFormat($category['name'])
+                                                ), $this->langId == 1 ? 'kategori' : 'category');
+                                        ?>
+                                        <li>
+                                            <a href="<?php echo $url; ?>">
+                                                <span>-</span><?php echo $category['name']; ?>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </li>
+                            <li><a href="<?php echo $this->url(array(), $this->langId == 1 ? 'berita' : 'news'); ?>"><?php echo $this->translate('id_menu_news') ?></a></li>
+                            <li><a href="<?php echo $this->url(array(), $this->langId == 1 ? 'kontak' : 'contact') ?>"><?php echo $this->translate('id_menu_contact') ?></a></li>
+                            <li><a href="#"><span class="rulycon-search" style="color: #cccccc;"></span></a>
+                                <ul id="search-form-in-menu">
+                                    <li>
+                                        <div id="form-search-yuk-mari">
+                                            <form action="<?php echo $this->url(array(), $this->langId == 1 ? 'pencarian' : 'search'); ?>" method="get" name="search">				
+                                                <input placeholder="<?php echo ($this->langId == 1) ? "Masukkan kata kunci di sini..." : "Type keyword here..."; ?>" id="keyword" type="text" name="keyword" value="<?php echo $this->param ?>"/>
+                                                <input class="btn" type="submit"  value="<?php echo ($this->langId == 1) ? "Cari" : "Search"; ?>" /> 
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="colors-accent"></div>
+        </div>
+        <!-- MAIN NAVIGATION ends here -->
+
+        <!-- SOCIAL LINKS begins here -->
+        <ul id="social-links">
+            <?php if ($this->langId == 1) { ?>
+                <li>
+                    <a title="English" style="padding-right: 9px;" href="<?php echo $this->url(array(), 'home'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/england.png'); ?>" alt="Indonesia" />
+                    </a>
+                </li>
+            <?php } else { ?>
+                <li>
+                    <a title="Indonesia" style="padding-right: 6px;padding-left: 8px;" href="<?php echo $this->url(array(), 'beranda'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/Indonesia.png'); ?>" alt="Indonesia" width=""/>
+                    </a>
+                </li>
+            <?php } ?>
+            <li><a title="Facebook" href="http://facebook.com/KebudayaanIndonesia.net"><span class="rulycon-facebook"></span></a></li>
+            <li><a title="Twitter" href="http://twitter.com/budayasaya"><span class="rulycon-twitter"></span></a></li>
+            <li><a title="Google+" href="https://plus.google.com/u/0/105485413132575433204"><span class="rulycon-google-plus"></span></a></li>
+            <li><a title="RSS" href="http://kebudayaanindonesia.net/id/news/rss"><span class="rulycon-feed-2"></span></a></li>
+        </ul>
+        <!-- SOCIAL LINKS ends here -->
+
+        <!-- MAIN CONTAINER begins here -->
+        <div class="container-fluid" id="main-container">
+            <h1 style="display: none;">Kebudayaan Indonesia</h1>
+            <?php echo $this->layout()->content; ?>
+        </div>
+        <!-- MAIN CONTAINER ends here -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <img src="<?php echo $this->rootUrl('/img/logo-text-kebudayaan-indonesia.png'); ?>" alt="Kebudayaan Indonesia"/>
+                        <?php if ($this->langId == 1): ?>
+                            <p>Laman referensi kebudayaan Indonesia. Turut mewujudkan bangsa Indonesia yang cerdas dan berbudaya</p>
+                        <?php else: ?>
+                            <p>Indonesian culture reference page. Helps realize nation of Indonesia to be wise and cultured</p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="span6 offset2">
+                        <h5><?php echo ($this->langId == 1) ? "Tautan terkait" : "Related links"; ?></h5>
+                        <ul>
+                            <li><a href="http://kemdikbud.go.id/">Kemendikbud</a></li>
+                            <li><a href="http://unesco.org/">UNESCO</a></li>
+                            <li><a href="http://indonesia.go.id/">Indonesia Goverment Website</a></li>
+                            <li><a href="http://indonesia.travel/">Indonesia Travel</a></li>
+                        </ul>
+                    </div>
+                    <div class="span6 offset2">
+                        <h5><?php echo ($this->langId == 1) ? "Rekan" : "Partner"; ?></h5>
+                        <?php foreach ($this->partner as $partner): ?>
+                            <?php
+                            $image = "default.jpg";
+                            if (is_file(UPLOAD_FOLDER . 'partners-logo/' . $partner['logo'])) {
+                                $image = 'upload/partners-logo/' . $partner['logo'];
+                            }
+                            ?>
+                            <a target="_blank" href="<?php echo $partner['website']; ?>"
+                               title="<?php echo $partner['name']; ?>">
+                                <img src="<?php echo $this->imageUrl('timthumb.php?src=' . $image . '&w=50&q=50'); ?>"
+                                     alt="<?php echo $partner['name']; ?>" width='50' height="50"/>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <h4 class="text-center">© 2014 Direktorat Jenderal Kebudayaan Republik Indonesia</h4>
+                </div>
+            </div>
+        </footer>
+
+        <script src="<?php echo $this->rootUrl('/js/jquery.min.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/dusk.min.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.ddslick.min.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.eventCalendar.min.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.simplePagination.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.timeago.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.jscroll.min.js'); ?>"></script>
+
+
+
+        <script type="text/javascript">
+            /* <![CDATA[ */
+
+            // Harus selalu paling atas
+            var lamanbudaya = lamanbudaya || {};
+
+            lamanbudaya.url = {
+                baseUrl: '<?php echo $this->baseUrl() ?>',
+                rootUrl: '<?php echo $this->rootUrl() ?>',
+                restUrl: '<?php echo $this->restUrl($this->rootUrl()) ?>',
+                imageUrl: '<?php echo $this->imageUrl() ?>'
+            };
+
+            // Inisialisasi variabel yang digunakan di javascript
+<?php
+if ($this->moduleName == 'default') {
+    //handling server error - apabila zend registry tidak teregister maka gunakan bahasa inggris
+    if (Zend_Registry::isRegistered('languageId')) {
+        switch (Zend_Registry::get('languageId')) {
+            case 1 : $langID = 'id';
+                break;
+            case 2 : $langID = 'en';
+                break;
+            default : $langID = 'en';
+                break;
+        }
+    } else {
+        $langID = 'en';
+    }
+}
+?>
+            lamanbudaya.setting = {
+                lang: '<?php echo $langID ?>'
+            }
+            var urlForSlider = '<?php echo $this->rootUrl('/' . $langID . '/ajax/slideheader') ?>';
+            var fbApiKey = '<?php echo Zend_Registry::get('fb_api_key') ?>';
+            var fbAppId = '<?php echo Zend_Registry::get('fb_app_id') ?>';
+
+            /*]]>*/
+        </script>
+
+        <!--language selector-->
+        <script src="<?php echo $this->scriptUrl('javascripts/frontend/language.js'); ?>" ></script>        
+
+        <script src="<?php echo $this->scriptUrl('lib/blockui/jquery.blockUI.js'); ?>" ></script> 
+
+
+        <?php echo $this->placeholder('jsInline'); ?>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("<select />", {
+                    "id": "select-menu-helper"
+                }).appendTo(".navbar-inner .container-fluid");
+
+                $("<option />", {
+                    "selected": "selected",
+                    "value": "",
+                    "text": "Please select menu..."
+                }).appendTo(".navbar-inner .container-fluid select");
+
+                $(".navbar .nav li > a").each(function() {
+                    var listOfMenu = $(this);
+                    $("<option />", {
+                        "value": listOfMenu.attr("href"),
+                        "text": listOfMenu.text()
+                    }).appendTo(".navbar-inner .container-fluid select");
+                });
+
+                $(".navbar-inner .container-fluid select").change(function() {
+                    window.location = $(this).find("option:selected").val();
+                });
+            });
+        </script>
+
+    </body>
+</html>

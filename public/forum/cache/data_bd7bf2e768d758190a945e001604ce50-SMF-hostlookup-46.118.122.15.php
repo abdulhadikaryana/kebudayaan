@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454412397 < time()) $expired = true; else{$expired = false; $value = 's:35:"SOL-FTTB.15.122.118.46.sovam.net.ua";';}?>

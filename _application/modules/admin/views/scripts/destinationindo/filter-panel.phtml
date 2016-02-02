@@ -1,0 +1,46 @@
+<div class="filter-panel hidden">
+    
+    <h4 style="margin-top: 10px;"><label for="filterPage">Filter:</label></h4>
+    
+    <form action="<?php echo $this->currentUrl(); ?>" method="post">
+        <select class="filter-box" name="filterPage" id="filterPage"
+                onchange="filterSwitch(this.value);">
+            <option value="0">Show All</option>
+            <option value="1">Name</option>
+            <option value="2">Area</option>
+            <option value="3">Category</option>
+            <option value="4">Status</option>
+            <option value="5">Type</option>
+        </select>
+        
+        <select class="status-box hidden" name="filterStatus">
+            <option value="1">Published</option>
+            <option value="0">Draft</option>
+        </select>
+        
+        <select class="special-box hidden" name="filterSpecial">
+            <option value="1">Featured</option>
+            <option value="0">Non Featured</option>
+        </select>
+        
+        <select class="category-box hidden" name="filterCategory">
+            <?php foreach ($this->category as $category) : ?>
+                <option value="<?php echo $category['category_id']; ?>">
+                    <?php echo $category['name']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        
+        <select class="area-box hidden" name="filterArea">
+            <?php foreach ($this->area as $area) : ?>
+                <option value="<?php echo $area['area_id']; ?>">
+                    <?php echo $area['name']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        
+        <input type="text" class="name-box mediumele hidden" name="filterName"/>
+        
+        <input type="submit" value="Go" class="btn radius"/>
+    </form>
+</div>

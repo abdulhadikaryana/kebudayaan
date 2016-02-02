@@ -1,0 +1,32 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart();
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+<script type="text/javascript">
+    tinyMCE.execCommand('mceAddControl', false, 'commentContent');
+
+    $(function() {
+        $('#submit-btn').removeAttr('disabled');
+        
+        $("input[type*='text']").focus(function() {
+            $(this).css('border','2px solid #1E385D');
+        });
+        
+        $("input[type*='text']").blur(function() {
+            $(this).css('border','none');
+        });
+        
+        $('#submit-btn').click(function() {
+           var content = tinyMCE.activeEditor.getContent();
+           $('#commentContent').val(content);
+        });
+        
+        $("#commentForm").validate(
+        {
+            rules    : { commentContent: { required: true } },
+            messages : { commentContent: "Comment content cannot be empty!" }
+        });
+    });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

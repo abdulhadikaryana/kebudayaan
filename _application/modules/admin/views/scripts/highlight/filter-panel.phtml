@@ -1,0 +1,38 @@
+<div class="filter-panel">
+
+
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="form-inline well">
+    <label for="filterPage" class="control-label">Filter</label>
+    <select class="filter-box" name="filterPage" id="filterPage"
+            onchange="filterSwitch(this.value);">
+      <option value="0">Tampilkan Semua</option>
+      <option value="2">Nama</option>
+      <option value="1">Tipe</option>
+      <option value="3">Status</option>
+    </select>
+
+    <span class="name-box mediumele filter-hidden"><input type="text" class="" name="filterName"/></span>
+
+    <select class="status-box filter-hidden" name="filterStatus">
+      <option value="0">tidak Ditampilkan</option>
+      <option value="1">Ditampilkan</option>
+    </select>
+
+    <select class="type-box filter-hidden" name="filterType">
+      <option value="3">Header</option>
+      <!--<option value="2">Cluster</option>-->
+      <option value="1">Medium - Sidebar</option>
+      <option value="4">Small - Sidebar</option>
+      <!--<option value="5">Gallery Image</option>-->
+      <!--<option value="6">User Review</option>-->
+    </select>
+
+    <input type="submit" value="Go" class="btn radius" />
+
+    <hr />
+    <?php if (!empty($this->alert)) : ?>
+      <div class="tip"> Filter yang sedang digunakan: <?php echo $this->alert; ?>
+      </div>
+    <?php endif; ?> 
+  </form>                    
+</div>

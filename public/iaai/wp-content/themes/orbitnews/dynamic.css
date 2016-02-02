@@ -1,0 +1,87 @@
+/* BEGIN orn_css_printer */
+/* Body Background */
+body {
+	background: url("http://www.nextwpthemes.com/themes/orbitnews-wp/wp-content/uploads/2013/12/bg_wp.jpg") no-repeat fixed center center;
+}
+
+/* Navigation Background Color */
+.container header, .sf-menu .sub-menu li {
+	background: 
+}
+
+/* Custom Colors Scheme */
+blockquote {
+	border-left-color: ;
+	border-right-color: ;
+}	
+.cat-title {
+	background-color: 
+}	
+ul.accordion > li.active,.tabs dd.active {
+	border-top-color: 
+}
+.tabs-widget .tab-links li.active a {
+	background: ;
+	border-color: ;
+}
+.twitter-widget a {
+	color:  !important
+}
+ol#comments .comment-reply-edit a.comment-reply-link,
+ol#comments .comment-reply-edit a.comment-edit-link,
+#cancel-comment-reply-link,
+.contact-form input[type="submit"],
+.wpcf7 input[type="submit"],
+li.widget_tag_cloud .tagcloud a:hover,
+li.subscribe-widget input[type="submit"],
+.comment-form input[type="submit"],
+.copyright,
+.pagenation li,
+.pagenation li span,
+#main-menu a:hover,
+#main-menu a.active,
+#top-menu {
+	background: 
+}
+a,
+.dropcap2 span.large-cap,
+.error-404 p b,
+li.widget_rss .rss-date,
+.tabs-widget > div h3 a,
+.post-title,
+.comment-reply-title,
+.flex-caption a,
+.other-posts .post-title {
+	color: 
+}
+/* Custom Google Fonts Title */
+.post-title, 
+.comment-reply-title, 
+.post-container .post-title, 
+.other-posts .post-title, 
+footer p, 
+.copyright, 
+#sidebar .widget-title, 
+.tabs-widget .tab-links li a, 
+.tabs-widget > div h3, 
+.contact-form input[type="text"],
+.contact-form textarea,
+.comment-form input[type="text"],
+.comment-form textarea {
+	font-family: "PT Sans";
+}
+
+/* Custom Google Fonts Navigation */
+#main-menu a,
+.cat-title,
+.post-navigation, 
+.image-navigation,
+footer .widget-title {
+	font-family: "Oswald";
+}
+
+/* Custom Google Fonts Body */
+body {
+	font-family: "Open Sans";
+}	
+/* END orn_css_printer */

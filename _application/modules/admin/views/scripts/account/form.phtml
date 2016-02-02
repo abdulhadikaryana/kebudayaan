@@ -1,0 +1,46 @@
+<form method="post" action="<?php echo $this->currentUrl(); ?>" name="adminForm" id="adminForm" class="form-horizontal well">
+  <fieldset>
+    <legend class="f_legend">Pengaturan Keamanan</legend>
+
+    <div class="control-group">
+      <label for="adminUser" class="control-label">Username</label>
+      <div class="controls">
+        <?php echo $this->form->adminUser; ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="adminEmail" class="control-label">Email</label>
+      <div class="controls">
+        <?php echo $this->form->adminEmail; ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="adminRole" class="control-label">Role</label>
+      <div class="controls">
+        <?php echo $this->form->adminRole; ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="adminPassword" class="control-label">Kata Sandi</label>
+      <div class="controls">
+        <?php echo $this->form->adminPassword ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="adminPasswordConfirm" class="control-label">Ketik Ulang Kata Sandi</label>
+      <div class="controls">
+        <?php echo $this->form->adminPasswordConfirm ?>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="control-group">
+    <div class="controls">
+      <input type="submit" class="btn radius space_l" value="Simpan" />
+    </div>
+  </div>
+</form>

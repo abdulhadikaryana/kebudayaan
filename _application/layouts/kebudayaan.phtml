@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kebudayaan Indonesia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Laman Kebudayaan Indonesia">
+        <meta name="author" content="Sangkuriang Internasional - www.sangkuriang.co.id">
+
+        <!-- Stylesheets import here -->
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/dusk.min.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/sangkuriang-typefaces.min.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/sangkuriang-ui-starter-kit.css');?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/sangkuriang-ui-starter-kit-doc.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/kebudayaanindonesia.css'); ?>">
+        <link type="text/css" rel="stylesheet" href="<?php echo $this->rootURL('/css/simplePagination.css');?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->rootUrl('/css/eventCalendar.css'); ?>"/>
+        <style type="text/css"></style>
+
+        <?php echo $this->placeholder('cssInline'); ?>
+
+        <!-- Application icons -->
+       <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-144-precomposed.png'); ?>">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-114-precomposed.png'); ?>">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-72-precomposed.png');?>">
+        <link rel="apple-touch-icon-precomposed" href="<?php echo $this->rootUrl('/ico/apple-touch-icon-57-precomposed.png'); ?>">
+        <link rel="shortcut icon" href="<?php echo $this->rootUrl('/ico/favicon.png'); ?>">
+    </head>
+    <body>
+        <!-- MAIN NAVIGATION begins here -->
+        <div class="navbar navbar-fixed-top">
+            <div class="top-accent"></div>
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <!--                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>-->
+                    <a class="brand" href="#"><img src="<?php echo $this->rootUrl('/img/logo-kebudayaan-indonesia-colors.png'); ?>" alt="Kebudayaan Indonesia"/></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <li><a href="<?php echo $this->baseUrl() ?>">Beranda</a></li>
+                            <li class="dropdown">
+                                <a href="#" 
+                                   class="dropdown-toggle" 
+                                   data-toggle="dropdown">Kebudayaan</a>
+                                <ul id="category-dropdown">
+                                    <?php foreach ($this->categories as $index => $category): ?>
+                                        <li>
+                                            <a href="<?php echo $this->baseUrl('/category/see-category/' . $category['category_id']) ?>">
+                                                <span>-</span><?php echo $category['name']; ?>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </li>
+                            <li><a href="<?php echo $this->baseUrl('news') ?>"><?php echo $this->translate('id_menu_news') ?></a></li>
+                            <li><a href="<?php echo $this->rootUrl('forum') ?>" target="_blank"><?php echo $this->translate('Forum') ?></a></li>
+                            <li><a href="<?php echo $this->baseUrl('partner') ?>"><?php echo $this->translate('Partner') ?></a></li>
+                            <li><a href="<?php echo $this->baseUrl('contact-us') ?>"><?php echo $this->translate('id_menu_contact') ?></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="colors-accent"></div>
+        </div>
+        <!-- MAIN NAVIGATION ends here -->
+
+        <!-- SOCIAL LINKS begins here -->
+        <ul id="social-links">
+            <li><a href="#"><span class="rulycon-facebook"></span></a></li>
+            <li><a href="#"><span class="rulycon-twitter"></span></a></li>
+            <li><a href="#"><span class="rulycon-google-plus"></span></a></li>
+            <li><a href="#"><span class="rulycon-feed-2"></span></a></li>
+        </ul>
+        <!-- SOCIAL LINKS ends here -->
+
+        <!-- MAIN CONTAINER begins here -->
+        <div class="container-fluid" id="main-container">
+            <?php echo $this->layout()->content; ?>
+        </div>
+        <!-- MAIN CONTAINER ends here -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <img src="<?php echo $this->rootUrl('/img/logo-text-kebudayaan-indonesia.png'); ?>" alt=""/>
+                        <p>Laman referensi kebudayaan Indonesia. Turut mewujudkan bangsa Indonesia yang cerdas dan berbudaya</p>
+                    </div>
+                    <div class="span6 offset2">
+                        <h5>Tautan terkait</h5>
+                        <ul>
+                            <li><a href="#">Kemendikbud</a></li>
+                            <li><a href="#">UNESCO</a></li>
+                            <li><a href="#">Indonesia Goverment Website</a></li>
+                            <li><a href="#">Indonesia Travel</a></li>
+                        </ul>
+                    </div>
+                    <div class="span6 offset2">
+                        <h5>Media sosial</h5>
+                        <a href="#"><img src="<?php echo $this->rootUrl('/img/social-icon-twitter.png'); ?>" alt=""/></a>
+                        <a href="#"><img src="<?php echo $this->rootUrl('/img/social-icon-vimeo.png'); ?>" alt=""/></a>
+                        <a href="#"><img src="<?php echo $this->rootUrl('/img/social-icon-googleplus.png'); ?>" alt=""/></a>
+                        <a href="#"><img src="<?php echo $this->rootUrl('/img/social-icon-foursquare.png'); ?>" alt=""/></a>
+                        <a href="#"><img src="<?php echo $this->rootUrl('/img/social-icon-facebook.png'); ?>" alt=""/></a>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <h4 class="text-center">© 2013 Direktorat Jenderal Kebudayaan Republik Indonesia</h4>
+                </div>
+            </div>
+        </footer>
+
+        <!--<script src="/js/jquery.min.js"></script>-->
+       <script src="<?php echo $this->rootUrl('/js/jquery.min.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/dusk.min.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.ddslick.min.js') ; ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.eventCalendar.min.js'); ?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.simplePagination.js');?>"></script>
+        <script src="<?php echo $this->rootUrl('/js/jquery.timeago.js'); ?>"></script>
+
+        <?php echo $this->placeholder('jsInline'); ?>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("<select />", {
+                    "id": "select-menu-helper"
+                }).appendTo(".navbar-inner .container-fluid");
+
+                $("<option />", {
+                    "selected": "selected",
+                    "value": "",
+                    "text": "Please select menu..."
+                }).appendTo(".navbar-inner .container-fluid select");
+
+                $(".navbar .nav li > a").each(function() {
+                    var listOfMenu = $(this);
+                    $("<option />", {
+                        "value": listOfMenu.attr("href"),
+                        "text": listOfMenu.text()
+                    }).appendTo(".navbar-inner .container-fluid select");
+                });
+
+                $(".navbar-inner .container-fluid select").change(function() {
+                    window.location = $(this).find("option:selected").val();
+                });
+            });
+        </script>
+    </body>
+</html>

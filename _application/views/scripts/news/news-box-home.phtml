@@ -1,0 +1,75 @@
+<div id="home-news">
+  <div id="home-news-box">
+    <h2 id="news-title"><span>News</span></h2>
+    <div class="home-en">
+
+      <?php for ($i = 0; $i < 5; $i++): ?>
+        <?php if (sizeof($this->news[$i]) > 0): ?>
+          <div class="news-wrapper">
+            <div class="home-en-img">
+              <?php if (file_exists(UPLOAD_FOLDER . '/news/thumbnails/' . $this->news[$i]['picture']) && !empty($this->news[$i]['picture'])) : ?>
+                <img src="<?php echo $this->imageUrl('/upload/news/thumbnails/' . $this->news[$i]['picture']); ?>"
+                     alt="<?php echo $this->escape($this->news[$i]['title']); ?>"
+                     style="max-width:90px; border: 3px solid #F2D919;"/>
+                   <?php else : ?>
+                <img src="<?php echo $this->imageUrl('timthumb.php?src=' . 'upload/news/' . $this->news[$i]['picture'] . '&w=90px&h=90px&q=100') ?>"
+                     alt="<?php echo $this->escape($this->news[$i]['title']); ?>"
+                     style="max-width:90px; border: 3px solid #F2D919;"/>
+                   <?php endif; ?>
+            </div>
+            <div class="home-en-desc">
+              <h3>
+                <a href="<?php
+               echo $this->baseUrl('news/detail/' .
+                       $this->news[$i]['news_id'] . '/' .
+                       $this->makeUrlFormat($this->news[$i]['title']))
+                   ?>">
+                     <?php echo $this->escape($this->htmlDecode($this->news[$i]['title'])) ?>
+                </a>
+              </h3>
+              <p class="en-meta">
+                <?php echo $this->translate('posted_on') ?>
+                <?php echo $this->dateConverter($this->news[$i]['publish_date'], 'tanggal-waktu');
+                ?>
+              </p>
+              <p><?php echo $this->truncate($this->htmlDecode($this->news[$i]['content']), 300) ?></p>
+            </div>
+          </div>            
+          <br />
+        <?php endif; ?>
+      <?php endfor; ?>
+
+
+      <?php if (sizeof($this->news->toArray()) > 1): ?>
+        <div class="home-en-desc">
+          <h2 style="margin-bottom: 0"><?php echo $this->translate('id_list_news') ?></h2>
+          <?php foreach ($this->news as $counter => $news) : ?>
+            <?php if ($counter > 4) : ?>
+              <p class="list-news">
+                <a href="<?php
+        echo $this->baseUrl('news/detail/' .
+                $news['news_id'] . '/' .
+                $this->makeUrlFormat($news['title']))
+              ?>">
+                     <?php echo $this->HtmlDecode($this->escape($news['title'])) ?>
+                </a>
+              </p>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="view-all">
+    <a href="<?php echo $this->baseUrl('news/index') ?>">
+      <img src="<?php echo $this->imageUrl('transparent.gif') ?>"
+           class="view-all-img" alt="view all" />
+    </a>
+  </div>
+</div>
+
+
+<div class="line"></div>
+
+

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454411568 < time()) $expired = true; else{$expired = false; $value = 's:28:"hosted-by.slaskdatacenter.pl";';}?>

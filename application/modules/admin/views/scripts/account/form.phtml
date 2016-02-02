@@ -1,0 +1,46 @@
+<div class="row-fluid">
+    <form method="post" action="<?php echo $this->currentUrl(); ?>" name="adminForm" id="adminForm" class="form-horizontal">
+        <div class="control-group">
+            <label for="adminUser" class="control-label">Username</label>
+            <div class="controls">
+                <?php echo $this->form->adminUser; ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="adminEmail" class="control-label">Email</label>
+            <div class="controls">
+                <?php echo $this->form->adminEmail; ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="adminRole" class="control-label">Role</label>
+            <div class="controls">
+                <?php echo $this->form->adminRole; ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="adminPassword" class="control-label">Kata Sandi</label>
+            <div class="controls">
+                <?php echo $this->form->adminPassword ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="adminPasswordConfirm" class="control-label">Ketik Ulang Kata Sandi</label>
+            <div class="controls">
+                <?php echo $this->form->adminPasswordConfirm ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn">Simpan</button>
+                <a href="<?php echo $this->url(array("controller" => "account", "action" => "index"), null, true); ?>"
+                   class="btn">Batal</a>
+            </div>
+        </div>
+    </form>
+</div>

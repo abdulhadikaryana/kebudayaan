@@ -1,0 +1,49 @@
+Changelog Legend:
+----
+
+[+] = Added
+[*] = Changed
+[^] = Moved
+[=] = No Changes
+[x] = Deleted
+[!] = Bugs
+
+----
+
+(5/23/2014) - 1.0.5
+[*] Theme defaults changed from global variable to function: generate_get_defaults()
+[+] Addons file added to add default styles and fonts when addons aren't installed
+[+] Added instruction on how to save and activate addon license keys
+[x] Featured image removed from attachment template
+[!] Remove page header container if no page header is set (removes unnecessary gap)
+
+----
+
+(5/20/2014) - 1.0.4
+[*] Readme.txt updated
+[*] Screenshot updated
+
+----
+
+(5/19/2014) - 1.0.3
+[x] Script options
+
+----
+
+(5/19/2014) - 1.0.2
+[+] Page header can be added using the Featured Image option
+[x] Activated message deleted
+[!] Fixed broken caption background URL in CSS
+[*] Bottom padding removed from last header widget
+[*] Screenshot updated
+
+----
+
+(5/16/2014) - 1.0.1
+[!] Fixed mobile menu when centered
+[*] Screenshot updated
+
+----
+
+(04/26/2014) - 1.0
+Initial Release

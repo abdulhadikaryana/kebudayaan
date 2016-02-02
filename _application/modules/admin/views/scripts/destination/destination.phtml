@@ -1,0 +1,23 @@
+<?php echo $this->render('destination/destination-title.phtml'); ?>
+
+<div id="dest-content">
+    <div class="section">
+        <h3><?php echo $this->sectionTitle ?></h3>
+        <p><?php echo $this->sectionContent ?></p>
+        <p><?php echo $this->textdescIndo ?></p>
+        <div class="clear-left"></div>
+    </div>
+</div>
+
+<div id="dest-gallery">
+    <div class="section">
+        <h3><?php echo $this->translate('id_menu_image'); ?></h3>
+        <?php echo $this->render('destination/destination-gallery-baru.phtml'); ?>
+    </div>
+</div>
+
+<div id="dest-location">
+    <?php echo $this->poiLocation($this->areaDb, $this->destination['poi_id']) ?>
+</div>
+
+<?php echo $this->render('destination/destination-footer.phtml') ?>

@@ -1,0 +1,20 @@
+<div id="home-event">
+    
+	<div id="home-event-search">
+    	<div id="mini-calendar"></div>
+	</div>
+	
+    <div id="home-event-list-placeholder">
+    	<div id="home-event-list"></div>
+    </div>
+    
+    <div id="view-all-event">
+		<input type="button" value="<?php echo $this->translate('click_here'); ?>" class="links more-event" onclick="window.location = '<?php echo $this->baseUrl('/event/calendar'); ?>'"/>
+        <a href="<?php echo $this->baseUrl('event/calendar') ?>">
+            <img src="<?php echo $this->imageUrl('transparent.gif') ?>"
+                 class="view-all-event-sprite" alt="view all" />
+        </a>
+    </div>
+    
+</div>
+<div class="clear-left"></div>

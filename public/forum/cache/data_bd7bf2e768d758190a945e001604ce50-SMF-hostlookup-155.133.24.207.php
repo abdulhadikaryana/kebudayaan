@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454378038 < time()) $expired = true; else{$expired = false; $value = 's:27:"155a133b24c207.greendata.pl";';}?>

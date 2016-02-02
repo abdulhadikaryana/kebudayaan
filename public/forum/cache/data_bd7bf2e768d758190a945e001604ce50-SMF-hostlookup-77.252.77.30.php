@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454411236 < time()) $expired = true; else{$expired = false; $value = 's:35:"77-252-77-30.static.ip.netia.com.pl";';}?>

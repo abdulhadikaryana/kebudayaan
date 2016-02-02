@@ -1,0 +1,33 @@
+<?php echo $this->layout()->render('html-header') ?>
+
+<div class="row">
+  <div class="twelve columns">
+    <div id="wrapper-content-index">
+
+      <div id="content">
+        <div class="row">
+          <div class="eight columns" id="leftcolumn">
+
+            <?php if (!$this->disableHeader == TRUE): ?>
+              <?php echo $this->layout()->render('header-image'); ?>
+            <?php endif; ?>
+
+            <?php echo $this->layout()->content ?>
+          </div>
+          <div class="four columns" id="sidebar">   
+            <?php
+                if($this->useSidebar) {
+                    echo $this->render('index/' . $this->useSidebar . '.phtml');
+                } elseif($this->getScriptPath($this->controller . '/sidebar.phtml')) {
+                    echo $this->render($this->controller . '/sidebar.phtml');
+                } else {
+                    echo $this->render('index/first-sidebar.phtml');
+                }
+            ?>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    
+<?php echo $this->layout()->render('html-footer') ?>

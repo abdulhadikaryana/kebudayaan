@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454413320 < time()) $expired = true; else{$expired = false; $value = 's:23:"25.233-pool.nikopol.net";';}?>

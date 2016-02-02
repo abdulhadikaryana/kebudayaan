@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454408636 < time()) $expired = true; else{$expired = false; $value = 's:15:"wanghu421-2.com";';}?>

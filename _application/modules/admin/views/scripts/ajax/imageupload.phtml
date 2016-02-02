@@ -1,0 +1,12 @@
+<data>
+    <step><?php echo $this->step;?></step>
+    <?php if($this->error != ''): ?>
+    <error><?php echo $this->error; ?></error>
+    <?php endif; ?>
+    <?php if($this->message != ''): ?>
+    <message><?php echo $this->message; ?></message>
+    <?php endif; ?>
+    <?php if($this->image_dir != ''): ?>
+    <image_dir><?php echo $this->image_dir ?></image_dir>
+    <?php endif; ?>
+</data>

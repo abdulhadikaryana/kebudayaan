@@ -1,0 +1,46 @@
+<form method="post" id="tourismop" action="<?php echo $this->currentUrl(); ?>" name="tourismop">
+<fieldset class="wide">
+<legend>Vito Detail</legend>
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="TourismOperatorLangName">Name</label></td>
+                <td>&#58;</td>
+                <td><?php echo html_entity_decode($this->form->TourismOperatorLangName); ?></td>
+            </tr>
+            <tr>
+                <td><label for="TourismOperatorLangName">Country</label></td>
+                <td>&#58;</td>
+                <td><?php echo html_entity_decode($this->form->TourismOperatorRegion); ?></td>
+            </tr>
+            <tr>
+                <td><label for="TourismOperatorPhone">Telephone</label></td>
+                <td>&#58;</td>
+                <td><?php echo html_entity_decode($this->form->TourismOperatorPhone); ?></td>
+            </tr>
+            <tr>
+                <td><label for="TourismOperatorFax">Fax</label></td>
+                <td>&#58;</td>
+                <td><?php echo html_entity_decode($this->form->TourismOperatorFax); ?></td>
+            </tr>
+            <tr>
+                <td><label for="TourismOperatorEmail">Email</label></td>
+                <td>&#58;</td>
+                <td><?php echo html_entity_decode($this->form->TourismOperatorEmail); ?></td>
+            </tr>
+            <tr>
+                <td><label for="TourismOperatorWebsite">Website</label></td>
+                <td>&#58;</td>
+                <td><?php echo html_entity_decode($this->form->TourismOperatorWebsite); ?></td>
+            </tr>
+            <tr>
+                <td><label for="TourismOperatorAddress">Address</label></td>
+                <td>&#58;</td>
+                <td><?php echo html_entity_decode($this->form->TourismOperatorAddress); ?></td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>
+
+<input class="btn radius space_l" type="submit" value="Save"/>
+</form>  

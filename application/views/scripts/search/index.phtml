@@ -1,0 +1,112 @@
+<div class="row-fluid section-title">
+    <div class="pull-left">
+        <h3><span><?php echo (($this->langId == 1) ? "Hasil pencarian untuk: " : "Search result for: ") . '"' . $this->param . '"' ?></span></h3>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span24">
+        <ul class="nav nav-tabs" id="cruising-culture-tab">
+            <li class="active"><a href="#tab1" id="dest" data-toggle="tab"><?php echo $this->translate('Culture') ?></a></li>
+            <li><a href="#tab2" id="news" data-toggle="tab"><?php echo $this->translate('News') ?></a></li>
+            <li><a href="#tab3" id="event" data-toggle="tab"><?php echo $this->translate('Event') ?></a></li>
+            <li><a href="#tab4" id="article" data-toggle="tab"><?php echo $this->translate('Figure') ?></a></li>
+            <li><a href="#tab5" id="gallery" data-toggle="tab"><?php echo $this->langId == 1 ? 'Galeri' : 'Gallery'; ?></a></li>
+        </ul>
+        <?php if ($this->emptyResult) : ?>
+            <div class="contentEmpty">
+                <?php echo $this->emptyResult; ?>
+            </div>
+        <?php else : ?>
+            <div class="tab-content" id="cruising-culture-tab-content"> 
+                <div id="tab1" class="tab-pane active">
+                    <?php if (!empty($this->destination)): ?>
+                        <ul id="dest_content">
+                            <?php echo $this->destination; ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>  
+
+                <div id="tab2" class="tab-pane" >
+                    <?php if (!empty($this->news)): ?>
+                        <ul id="news_content">
+                            <?php echo $this->news; ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>
+
+                <div id="tab3" class="tab-pane" >
+                    <?php if (!empty($this->event)): ?>
+                        <ul id="event_content">
+                            <?php echo $this->event; ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>  
+
+                <div id="tab4" class="tab-pane">
+                    <?php if (!empty($this->article)): ?>
+                        <ul id="article_content">
+                            <?php echo $this->article; ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>
+
+                <div id="tab5" class="tab-pane">
+                    <?php foreach ($this->imgChunks as $chunk): ?>
+                        <div class="row-fluid" style="margin-bottom: 10px">
+                            <?php foreach ($chunk as $record): ?>
+                                <?php
+                                $src = 'upload/gallery/' . $record['image'];
+                                if (!is_file(IMAGE_FOLDER . $src)) {
+                                    $src = 'default.jpg';
+                                }
+
+                                $title = $this->langId == 1 ? $record['caption'] : $record['caption_en'];
+                                $title .= " (" . ($this->langId == 1 ? 'Sumber' : 'Source') . ": " . $record['source'] . ')';
+                                ?>
+                                <div class="span6">
+                                    <div class="thumbnail">
+                                        <a href="/media/images/<?php echo $src; ?>" rel="prettyPhoto" 
+                                           title="<?php echo htmlspecialchars($title); ?>">
+                                            <img src="<?php
+                                            echo $this->imageUrl('timthumb.php?src='
+                                                    . $src
+                                                    . '&w=255&h=175&q=100')
+                                            ?>" 
+                                                 alt="<?php echo $record['image']; ?>"/>
+                                            <div class="caption">
+                                                <h4><?php echo $this->langId == 1 ? $record['caption'] : $record['caption_en']; ?></h4>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>          
+</div>
+
+
+<?php $this->placeholder('cssInline')->captureStart(); ?> 
+<link rel='stylesheet' href='<?php echo $this->scriptUrl('lib/prettyphoto/css/prettyPhoto.css') ?>' type='text/css' media='all'> 
+<?php $this->placeholder('cssInline')->captureEnd(); ?>
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>   
+<script type="text/javascript" src="<?php echo $this->scriptUrl('lib/prettyphoto/js/jquery.prettyPhoto.js') ?>"></script>            
+<script type="text/javascript">
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        animation_speed: 'normal',
+        theme: 'dark_square',
+        slideshow: false,
+        autoplay_slideshow: false,
+        social_tools: false,
+        overlay_gallery: true,
+        default_width: 500,
+        default_height: 344
+    });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>    

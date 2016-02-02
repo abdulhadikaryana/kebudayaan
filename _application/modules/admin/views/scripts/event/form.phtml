@@ -1,0 +1,91 @@
+<div class="row-fluid">
+  <form method="post" id="eventForm" 
+        action="<?php $this->currentUrl(); ?>" 
+        name="eventForm" >
+    <div class="control-group">
+      <label for="eventName" class="control-label">Nama Kegiatan</label>
+      <div class="controls">
+        <?php echo $this->form->eventName; ?>
+      </div>
+    </div>
+    <?php if ($this->langId != 2) { ?>
+      <div class="control-group">
+        <label for="dateStart" class="control-label">Tanggal</label>
+        <div class="controls">
+          <div id="widgetField">
+            <span><?php
+    if ($this->state_edit) {
+      echo $this->date_view;
+    }
+      ?></span><a href="#">Pilih Jangka Waktu</a></div>
+          <span class="tip">Klik Icon Kalender Membuka/Menutup Kalender;</span>
+          <div id="widgetCalendar"></div>
+          <?php echo $this->form->dateStart; ?><br />
+          <?php echo $this->form->dateEnd; ?>
+        </div>
+      </div>
+
+      <div class="timepick control-group filter-hidden">
+        <div class="controls">
+          <label class="control-label">Mulai</label>
+          <div class="controls">
+            <?php echo $this->form->timeStart; ?>
+          </div>
+          <label class="control-label">Selesai</label>
+          <div class="controls">
+
+            <?php echo $this->form->timeEnd; ?>
+          </div>
+          <span class="help-block">Klik Pada Kotak Untuk Memilih Waktu</span>
+        </div>
+      </div>
+    <?php } ?>
+    <div class="row-fluid">
+      <div class="span8">
+        <div class="control-group">
+          <div class="controls">
+            <?php echo $this->form->eventDescription; ?>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <?php if ($this->langId != 2) { ?>
+          <div class="control-group well">
+            <label for="mainCategory" class="control-label">Kategori</label>
+            <div class="controls">
+              <?php echo $this->form->mainCategory; ?>
+            </div>
+          </div>
+
+          <div class="control-group well">
+            <label for="eventImage" class="control-label">Gambar</label>
+            <div class="controls">
+              <?php echo $this->form->eventImage; ?>
+              <input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" />
+            </div>
+          </div>
+
+          <div class="control-group well">
+            <label for="relatedPoi" class="control-label">Kebudayaan Terkait</label>
+            <div class="controls">
+              <?php echo $this->form->relatedPoi; ?>
+              <span class="help-inline">Ketik Nama Kebudayaan(Autocomplete)</span>
+              <span class="ajax-loader"></span>
+              <table class="poicontainer cleartable"></table>
+            </div>
+          </div>
+
+        <?php } ?>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <?php echo $this->form->draft; ?>
+      <?php echo $this->form->submit; ?>
+    </div>
+
+
+  </form>
+</div>
+
+<?php echo $this->render('partial/upload-image-dialog.phtml'); ?>
+<?php echo $this->render('partial/tinyMCE.phtml'); ?>

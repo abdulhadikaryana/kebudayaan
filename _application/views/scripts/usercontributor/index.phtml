@@ -1,0 +1,157 @@
+<?php if(sizeof($this->content)) :?>
+<?php
+    $url = $this->baseUrl();
+    $content_category = $this->category;
+?>
+
+    <?php foreach($this->content as $content) :?>
+        
+        
+        <div class="post-inner float-left">
+
+            <div class="post-info float-left rounded">
+
+                <div class="foto float-left">
+                    <?php if($content['foto']):?>
+                        <img src="<?php echo $this->imageUrl().'/upload/usercontributor/'.$content['foto'];?>" class="author-photo" />
+                    <?php else:?>
+                        <img src="<?php echo $this->rootUrl();?>/media/images/usercon/display-pic.jpg" class="author-photo" />
+                    <?php endif;?>
+                </div>
+
+                <div class="posted float-left">
+                    <span class="bold float-left"><?php echo $this->translate('id_usercontributor_posted_by');?> :</span>
+                    <?php
+                        $cotributor_name = $this->userContributor($content['user_id']);
+                    ?>
+                    <a class="float-left clear-left" href="<?php echo $this->baseUrl('/travelers-stories/author/id/'.$content['user_id'].'/name/'.$cotributor_name.'/sort/default')?>">
+                        <?php
+                            echo $content['nama'];
+                        ?>
+                    </a>
+
+
+                </div>
+
+                
+
+                <div class="posted float-left">
+                    <span class="bold"><?php echo $this->translate('id_usercontributor_rate_content');?></span>
+                    <br />
+                    <div class="rate rate-content float-left" id="<?php echo $content['id'];?>" title="<?php echo $content['rating'];?>">
+                        <div class="rating" id="rate<?php echo $content['id'];?>"></div>
+                    </div>
+                </div>
+
+
+                <a href="<?php echo $this->baseUrl('/travelers-stories-detail/'.$content_category.'/'.$content['id'].'/'.$this->makeUrlFormat($content['title'])).'/#target'?>" class="total-cmnt float-left">
+                    <span class="tc-top"></span>
+                    <span class="tc-mid">
+                        <?php echo $this->CountComment($this->comment_type,$content['id'])?>
+                        <?php echo $this->translate('id_usercontributor_comments');?>
+                    </span>
+                    <span class="tc-right"></span>
+                </a>
+
+            </div><!-- post-info -->
+            
+            <!-- post-preview -->
+            <div class="post-preview float-left">
+                <h2>
+                <a href="<?php echo $this->baseUrl('/travelers-stories-detail/'.$content_category.'/'.$content['id'].'/'.$this->makeUrlFormat($content['title']))?>">                        
+                    <?php echo stripcslashes(html_entity_decode($content['title']));?>
+                </a>
+                </h2>
+
+                <div class="post-cat float-left">
+                    <div class="post-cat-left float-left">
+                        <span class="captions"><?php echo $this->translate('id_usercontributor_posted_date');?> : </span>
+                            <?php
+                             $posted = $content['tanggal'] .'&nbsp;'. $this->month($content['bulan'],$this->lang_id).'&nbsp;'.$content['tahun'];
+                            ?>
+                        <span class="bold grey"><?php echo $posted;?></span>
+                     </div>
+                    <div class="post-cat-right float-left"><span class="captions float-left"><?php echo $this->translate('id_usercontributor_categories');?> : </span>
+                    <div class="float-left list-category">
+                        <?php
+                            $category = $this->Category($content['id'], $content['language_id'], $url, $content_category);
+                            ?>
+                            <?php if($category == "-"):?>
+                            <?php
+                                echo $category;
+                            ?>
+                            <?php else:?>
+                            <?php
+                                echo $category;
+                            ?>
+                            <?php endif;?>
+                    </div>
+
+                </div>
+
+                </div>
+
+
+                <p>
+                    <?php
+                    //article
+                    if($content['category'] == 1):?>
+
+                        <div class="post-thumbnails">
+                            <img src="<?php echo (!empty($content['post_thumbnail']) ? $this->imageUrl('/upload/usercontributor_article/thumbnails/'.$content['post_thumbnail']) : $this->imageUrl('usercon/not-available.png'))?>" alt="img">
+                        </div>
+                        <div class="post-shortdesc">
+                            <p>
+                                <?php echo stripcslashes($this->truncate(html_entity_decode($content['content'], ENT_QUOTES),470));?>
+                            </p>
+                        </div>
+
+                    <?php else:?>
+                    <?php echo stripcslashes($this->truncate(html_entity_decode($content['content'], ENT_QUOTES),300));?>
+                        <br />
+                        <?php
+                            $db_image = $this->Photoessay($content['id'],$content['language_id']);
+                            $folder = $this->imageUrl('/upload/photoessay/');
+                            $iter = 0;
+                        ?>
+                        <?php if(sizeof($db_image)):?>
+                            <?php foreach($db_image as $img):?>
+                                <?php if($iter == 4) break; $iter++;?>
+                                <a rel="example_group" class="zoom-photoessay" href="<?php echo $folder.$img->file?>">
+                                    <img class="images-thumb fancyzoom" src="<?php echo $folder.'thumbnails/'.$img->file?>" alt="<?php echo $this->PhotoessayDesc($img->id,$content['language_id']);?>">
+                                </a>
+                            <?php endforeach;?>
+                        <?php endif;?>
+                    <?php endif;?>
+                </p>
+                <div class="float-right">
+                <a href="<?php echo $this->baseUrl('/travelers-stories-detail/'.$content_category.'/'.$content['id'].'/'.$this->makeUrlFormat($content['title']))?>">
+                    <span class="more"><?php echo $this->translate('id_usercontributor_readmore');?></span>
+                </a>
+                </div>
+                <div class="tag">Tag :
+                     <?php
+                        echo $this->tags($content['id'],$content['language_id'],$url);
+                     ?>   
+                </div>
+            </div><!-- post-preview -->
+
+        </div><!-- post-inner -->
+
+
+    <?php endforeach;?>
+<?php echo $this->paginationControl($this->content,'Elastic','partials/pagination-usercontributor.phtml'); ?>
+<?php else:?>
+
+<div class="emptycontent">
+    <span>
+        <?php if($this->lang_id == 2):?>
+        Artikel dalam kategori ini belum tersedia. Anda juga dapat menjadi kontributor dan mengirimkan artikel untuk kategori ini. Untuk keterangan lebih lanjut 
+        <a href="http://www.facebook.com/note.php?note_id=10150259975727356" target="_blank">klik disini</a>.
+        <?php else:?>
+        The articles in this language are not available yet. You may also be a contributor and submit your articles to us. For more details <a href="http://www.facebook.com/note.php?note_id=10150259975727356" target="_blank">click here</a>.
+        <?php endif;?>
+    </span>
+
+</div>
+<?php endif?>

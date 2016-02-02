@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454410348 < time()) $expired = true; else{$expired = false; $value = 's:29:"h-198-62.a137.corp.bahnhof.se";';}?>

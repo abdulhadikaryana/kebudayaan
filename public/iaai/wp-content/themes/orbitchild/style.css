@@ -1,0 +1,14 @@
+/*
+Theme Name: Orbit News Child Theme 
+Theme URI: http://www.nextwpthemes.com/themes/orbitnews-wp/
+Description: Orbit child theme for Orbit News
+Version: 1.0
+Author: nextWPthemes
+Author URI: http://themeforest.net/user/nextWPthemes
+Tags: custom-colors, one-column, two-columns, right-sidebar, left-sidebar, fixed-layout, responsive-layout, custom-background, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, translation-ready, threaded-comments
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: orbitnews
+*/
+/* Add your custom CSS styles here */
+@import url( '../orbitnews/style.css' );

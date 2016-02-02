@@ -1,0 +1,29 @@
+<form name="reviewForm" id="reviewForm"  method="post"
+      action="<?php $this->currentUrl(); ?>">
+    
+    <fieldset class="wide">
+        <legend>Review Detail</legend>
+        <table class="resetTable">
+            <tr>
+                <td><label for="reviewTitle">Review Title</label></td>
+                <td>&#58;</td>
+                <td style="width: 77%;"><?php echo $this->form->reviewTitle; ?>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="reviewContent">Review Content</label></td>
+                <td>&#58;</td><td></td>
+            </tr>
+            
+            <tr>
+                <td colspan="3"><?php echo $this->form->reviewContent; ?></td>
+            </tr>
+        </table>
+    </fieldset>
+    
+        
+        <input type="submit" class="btn radius space_l" value="Save" id="submit-btn"
+               disabled="disabled" onclick="document.pressed=this.value"/>
+   
+</form>

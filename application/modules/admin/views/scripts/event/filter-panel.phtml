@@ -1,0 +1,55 @@
+<div class="filter-panel">
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="form-inline well">
+    <label for="filterPage" class="control-label"></label>
+    <select class="filter-box" name="filterPage" id="filterPage"
+            onchange="filterSwitch(this.value);">
+      <option value="0">Tampilkan Semua</option>
+      <option value="1">Nama</option>
+      <option value="2">Kebudayaan terkait</option>
+      <option value="3">Kategori</option>
+      <option value="4">Tanggal</option>
+    </select>
+
+    <span  class="name-box mediumele filter-hidden">
+      <input type="text" name="filterName"/>
+    </span>
+
+
+    <span  class="poi-box mediumele filter-hidden" >
+      <input type="text"
+             name="filterDestination"/>
+    </span>
+
+<!--    select box category-->
+    <select class="category-box nomargin filter-hidden" name="filterCategory">
+      <?php foreach ($this->category as $category) : ?>
+        <option value="<?php echo $category['category_id']; ?>">
+          <?php echo $category['name']; ?>
+        </option>
+      <?php endforeach; ?>
+    </select>
+
+    <span class="smallele filter-hidden">
+      <input type="text" name="filterDate1" id="startDate" class="span1" size="10" 
+             />
+    </span>
+
+    <span class="smallele filter-hidden">
+      <b>Sampai dengan</b>
+    </span>
+
+    <span class="smallele filter-hidden">
+      <input type="text" name="filterDate2" class="span1" id="endDate" 
+             />
+    </span>
+
+    <input type="submit" value="Go" class="btn radius"/>
+
+    <span class="ajax-loader"></span>
+    <hr />
+    <?php if (!empty($this->alert)) : ?>
+      <div class="tip"> Filter yang sedang digunakan: <?php echo $this->alert; ?>
+      </div>
+    <?php endif; ?> 
+  </form>
+</div>

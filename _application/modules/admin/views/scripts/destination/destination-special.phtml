@@ -1,0 +1,18 @@
+<?php echo $this->render('destination/destination-title.phtml'); ?>
+
+<div id="ajax-content">
+    <div id="dest-content">
+        <div class="dest-section">
+            <p>
+                <?php echo $this->destination['description'] ?>
+            </p>
+    
+        </div>
+    <?php echo $this->layout()->render('destination/image-gallery'); ?>
+    </div>
+</div>
+<div id="dest-location">
+    <?php echo $this->poiLocation($this->areaDb, $this->destination['poi_id']) ?>
+</div>
+
+<?php echo $this->layout()->render('destination/destination-footer') ?>

@@ -1,0 +1,817 @@
+
+/*
+
+	1 - PANEL
+
+		1.1 - Header
+		1.2 - Save Changes button
+		1.3 - Message
+		1.4 - Navigation
+		1.5 - Tabs
+		1.6 - Fieldset: Theme Panel
+		1.7 - DL: Theme Panel
+		1.8 - Input
+			- Select
+			- Textarea
+			- Checkbox
+			- Slider
+		1.9 - Color Preview
+		1.10 - Logo Preview
+		1.11 - Tooltip
+		1.12 - Toggle on checkbox
+		1.13 - Template Scheme
+		1.14 - Update message
+
+	2 - WIDGETS & METABOXES
+
+		2.1 - Fieldset: Metabox, Widget
+		2.2 - DL: Metabox, Widget
+		2.3 - Post Format metabox
+			- Gallery
+
+	3 - SPECIAL
+
+	4 - SHORTCODES MCE
+
+*/
+
+/*= 01. =========================================
+
+	P A N E L
+	General styles of the theme panel
+
+===============================================*/
+
+#themePanel {
+	width: 750px;
+	padding: 20px 0;
+	}
+
+#themePanel * {
+	outline: none !important;
+	}
+
+
+	/*-------------------------------------------
+		1.1 - Header
+	-------------------------------------------*/
+	
+	#panelHeader  {
+		margin-bottom: 15px;
+		padding: 25px 25px 0 25px;
+		background: #6D6D6D;
+		border-radius: 2px;
+	}
+	
+		#panelTitle {
+			float: left;
+			color: #FFF;
+			font-size: 2em;
+			padding: 10px 0 30px;
+		}
+	
+			#panelTitle span {
+				font-size: 11px;
+				margin-left: 5px;
+				opacity: 0.6;
+			}
+
+
+	/*-------------------------------------------
+		1.2 - Save Changes button
+	-------------------------------------------*/
+
+	#panelSaveButton {
+		float: right;
+		color: #FFF;
+		font-weight: bold;
+		line-height: 1em;
+		padding: 1em 20px;
+		background: #62aad9;
+		border: 0;
+		border-radius: 2px;
+		cursor: pointer;
+	}
+
+		#panelSaveButton:hover {
+			background-image: url('../images/bg-white-15.png');
+		}
+
+
+	/*-------------------------------------------
+		1.3 - Message
+	-------------------------------------------*/
+
+	#messageUpdated {
+		float: right;
+		color: #FFF;
+		padding: 10px 10px 0 0;
+	}
+
+
+	/*-------------------------------------------
+		1.4 - Navigation
+	-------------------------------------------*/
+
+	#panelTabsNav { 
+		margin:0;
+	}
+
+		#panelTabsNav li {
+			float: left;	
+			margin:0 2px 0 0; 
+		}
+
+			#panelTabsNav li a {
+				display: block;
+				padding: 12px 20px;
+				text-decoration: none !important;
+				color: #FFF;
+				font-size: 1.3em;
+				background: url('../images/bg-white-25.png');
+				border-radius: 2px 2px 0 0;
+			}
+
+				#panelTabsNav li a:hover { 
+					background: url('../images/bg-white-40.png');
+				}
+				
+				#panelTabsNav li a.current,
+				#panelTabsNav li a.current:hover { 
+					background: #F9F9F9;
+					color: #56646F;
+				}
+	
+
+	/*-------------------------------------------
+		1.5 - Tabs
+	-------------------------------------------*/
+
+	.panelTab {
+		display: none;
+	}
+
+		#font-system {
+			display: none;
+		}
+	
+		#font-custom {
+			display: none;
+		}
+
+
+	/*-------------------------------------------
+		1.6 - Fieldset: Theme Panel
+	-------------------------------------------*/
+
+	.panel-fieldset {
+		color: #56646F;
+		margin: 20px 0;
+		padding: 50px 25px 25px;
+		background: #FFF;
+		border-bottom: 1px solid #EEE;
+	}
+	
+		.panel-fieldset legend {
+			position: absolute;
+			font-size: 16px;
+			color: #464646;
+			margin: -25px 0 0;
+			padding: 0;
+		}
+
+		.panel-fieldset label {
+			margin-right: 15px;
+		}
+
+		.panel-fieldset small {
+			display: block;
+			clear: both;
+			font-size: 11px;
+			color: #AAA;
+		}
+
+		.panel-fieldset code {
+			background: none;
+			margin: 0;
+			padding: 0;
+			color: #56646F;
+		}
+
+		.panel-fieldset p {
+			margin: 0 0 1.5em;
+		}
+
+
+	/*-------------------------------------------
+		1.7 - DL: Theme Panel
+	-------------------------------------------*/
+
+	.panel-fieldset dl {
+		display: table;
+		width: 100%;
+		margin: 0;
+		padding: 15px 0;
+	}
+
+		.panel-fieldset dl.last {
+			margin: 0;
+		}
+
+			.panel-fieldset dt {
+				float: left;
+				width: 120px;
+			}
+
+				.panel-fieldset dt span {
+					display: block;
+					padding: 7px 0 0;
+				}
+
+			.panel-fieldset dd {
+				float: left;
+				width: 578px;
+				margin: 0;
+			}
+
+				.panel-fieldset dd small {
+					padding: 3px 0 0 1px;
+				}
+
+
+	/*-------------------------------------------
+		1.8 - Input
+	-------------------------------------------*/
+
+	.panel-fieldset input {
+		color: #888;
+	}
+
+		.panel-fieldset input:focus {
+			color: inherit;
+		}
+
+	.panel-fieldset input[type="text"] {
+		width: 100%;
+		margin: 0;
+		padding: 6px;
+	}
+
+		input[type="text"].input-short {
+			font-size: 14px;
+			width: 65px;
+		}
+
+		input[type="text"].input-shorter {
+			width: 150px;
+		}
+
+		/* Theme Panel > Layout > Social */
+		.panel-fieldset input[type="text"].input-social-icon {
+			padding-left: 30px;
+			background-repeat: no-repeat;
+			background-position: 5px 50%;
+			border-color: #FFF;
+		}
+
+			.panel-fieldset input[type="text"].input-social-icon:hover {
+				background-color: #F9F9F9;
+			}
+
+			.panel-fieldset input[type="text"].input-social-icon:focus {
+				border-color: #DDD;
+				box-shadow: none;
+			}
+
+		/* Subtitle for Post, Page, Project */
+		div.st_input_title {
+			font-size: 1.7em;
+		}
+
+		.panel-fieldset dt span.st_input_title {
+			padding: 14px 0 0;
+		}
+
+
+		/*--- Select -----------------------------*/
+	
+		.panel-fieldset select {
+			color: #888;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 6px;
+		}
+	
+			.panel-fieldset select:focus {
+				color: inherit;
+			}
+	
+	
+		/*--- Textarea -----------------------------*/
+	
+		.panel-fieldset textarea {
+			color: #888;
+			width: 100%;
+			max-width: 100%;
+			height: 50px;
+			margin: 0;
+			padding: 6px;
+		}
+	
+			/* Theme Panel > Style > Custom */
+			.panel-fieldset textarea#custom_css {
+				font-family: "Courier New", Courier, monospace;
+				color: inherit;
+				height: 400px;
+			}
+
+			/* Theme Panel > Import-Export */
+			.panel-fieldset textarea#import_data {
+				font-family: "Courier New", Courier, monospace;
+				color: inherit;
+				height: 400px;
+			}
+	
+	
+		/*--- Checkbox -----------------------------*/
+	
+		.panel-fieldset input[type="checkbox"] {
+			margin-right: 3px;
+		}
+	
+	
+		/*--- Slider -----------------------------*/
+	
+		.slider-box {
+			display: inline-block;
+			width: 200px;
+			margin: 0 15px;
+		}
+	
+			.slider-box > div {
+				margin-top: -6px;
+			}
+
+
+	/*-------------------------------------------
+		1.9 - Color Preview
+	-------------------------------------------*/
+
+	.color-preview {
+		display: inline-block;
+		line-height: 20px;
+		padding: 7px 16px 7px 15px;
+		border-radius: 3px;
+		box-shadow: 0 0 2px rgba(0,0,0,0.4) inset;
+	}
+
+
+	/*-------------------------------------------
+		1.10 - Logo Preview
+	-------------------------------------------*/
+
+	#logo-image-preview {
+		text-align: center;
+		margin: 20px -25px -25px;
+		padding: 50px;
+	}
+
+		#logo-image-preview img {
+			max-width: 100%;
+		}
+
+
+	/*-------------------------------------------
+		1.11 - Tooltip
+	-------------------------------------------*/
+
+	#tooltip-holder {
+		position: absolute;
+		z-index: 1000;
+	}
+	
+		.tooltip-holder {
+			color: #FFF;
+			line-height: 1.54em;
+			max-width: 150px;
+			padding: 5px 10px;
+			background: #999;
+			border-radius: 1px;
+		}
+
+			.tooltip-holder:before {
+				position: absolute;
+				content: "";
+				top: -7px;
+				left: 7px;
+				border-style: solid;
+				border-width: 7px 0 0 7px;
+				border-color: transparent transparent transparent #999;
+			}
+
+	span.tooltip {
+		border-bottom: 1px dashed;
+		cursor: help;
+	}
+
+
+	/*-------------------------------------------
+		1.12 - Toggle on checkbox
+	-------------------------------------------*/
+
+	.checkbox-toggle-box {
+		display: none;
+		margin: 1.5em 0 0 2px;
+		padding-left: 18px;
+		border-left: 1px solid #E9E9E9;
+	}
+
+		.checkbox-toggle-box > p {
+			margin: 1.5em 0 0;
+		}
+
+
+	/*-------------------------------------------
+		1.13 - Template Scheme
+	-------------------------------------------*/
+
+	.tmpl_radio {
+		float: left;
+		margin: 0 10px 10px 0;
+		padding: 5px;
+		background: #FFF;
+		border: 2px solid #DFDFDF;
+		border-radius: 3px;
+	}
+	
+		.tmpl_radio.last {
+			margin-right: 0;
+		}
+	
+		.tmpl_radio.tmpl_selected {
+			border-color: #AAA;
+		}
+	
+		.tmpl_radio label {
+			margin: 0;
+		}
+		
+			.tmpl_radio label img {
+				display: block;
+				margin: 0 0 5px 0;
+			}
+
+
+	/*-------------------------------------------
+		1.14 - Update message
+	-------------------------------------------*/
+
+	div.st-updated {
+		text-align: center;
+		margin: 20px 0 12px;
+	}
+
+
+
+
+/*= 02. =========================================
+
+	W I D G E T S  &  M E T A B O X E S
+	Additional styles of panel controls
+
+===============================================*/
+
+	/*-------------------------------------------
+		2.1 - Fieldset: Metabox, Widget
+	-------------------------------------------*/
+	
+	.metabox-fieldset {
+		padding: 14px 20px 0;
+		border: none;
+		border-top: 1px solid #DFDFDF;
+		background: none;
+	}
+
+		.metabox-fieldset legend {
+			position: relative;
+			font-size: inherit;
+			font-weight: bold;
+			margin: 0 0 0 -7px;
+			padding: 0 7px;
+		}
+
+
+	/*-------------------------------------------
+		2.2 - DL: Metabox, Widget
+	-------------------------------------------*/
+
+	.metabox-fieldset dl {
+		padding: 5px 0;
+	}
+
+		.metabox-fieldset dt {
+			width: 25%;
+		}
+
+			.metabox-fieldset dt > div {
+				padding-right: 25px;
+			}
+
+		.metabox-fieldset dd {
+			width: 75%;
+		}
+	
+	.metabox-fieldset small {
+		color: #888;
+		padding: 3px 0 0 1px;
+	}
+
+
+	/*-------------------------------------------
+		2.3 - Post Format metabox
+	-------------------------------------------*/
+
+	#st-metabox-format .metabox-fieldset label {
+		display: table;
+	}
+
+		/*--- Gallery -------------------------*/
+
+		.st_metabox_thumbs {
+			margin: 0;
+			padding: 10px 0 0;
+		}
+
+			.st_metabox_thumbs li {
+				display: inline-block;
+				margin: 5px 5px 0 0;
+				padding: 5px;
+				background: #FFF;
+				border: 1px solid #DDD;
+				border-radius: 2px;
+			}
+
+				.st_metabox_thumbs li img {
+					display: block;
+				}
+
+
+
+
+/*= 03. =========================================
+
+	S P E C I A L
+	Special styles
+
+===============================================*/
+
+	.block {
+		display: block;
+	}
+
+	.none {
+		display: none !important;
+	}
+
+
+
+
+/*= 04. =========================================
+
+	S H O R T C O D E S   M C E 
+	Styles for shortcode composer
+
+===============================================*/
+
+	i.st-shortcodes-icon {
+		background-image: url('../../components/shortcodes/assets/images/shortcode.png');
+	}
+
+	@font-face {
+		font-family: 'StrictThemes';
+		src: url('../fonts/StrictThemes.eot?er2sl6');
+		src: url('../fonts/StrictThemes.eot?#iefixer2sl6') format('embedded-opentype'),
+			 url('../fonts/StrictThemes.woff?er2sl6') format('woff'),
+			 url('../fonts/StrictThemes.ttf?er2sl6') format('truetype'),
+			 url('../fonts/StrictThemes.svg?er2sl6#StrictThemes') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	.mce-container .mce-st-icon-select {
+		float: left;
+		clear: none;
+		display: block;
+		width: 42px;
+		height: 42px;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		background: none !important;
+		-webkit-transition: all 125ms linear;
+		transition: all 125ms linear;
+	}
+
+		.mce-container .mce-st-icon-select:nth-child(9n+10) {
+			clear: left;
+		}
+
+		.mce-container .mce-st-icon-select * {
+			display: none;
+		}
+	
+		.mce-container .mce-st-icon-select:before {
+			display: block;
+			font-size: 16px;
+			font-family: 'StrictThemes';
+			width: 52px;
+			height: 42px;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			padding-top: 10px;
+			-webkit-transition: all 125ms linear;
+			transition: all 125ms linear;
+			outline: 0 solid #FFF;
+		}
+
+			.mce-container.mce-menu .mce-menu-item.mce-selected:before,
+			.mce-container.mce-menu .mce-menu-item:focus:before,
+			.mce-container.mce-menu .mce-menu-item:hover:before {
+				font-size: 32px;
+				margin-top: -8px;
+				box-shadow: 0 0 10px #CCC;
+			}
+
+			.mce-menu .mce-menu-item-normal.mce-active:before {
+				color: #0074A2;
+				font-size: 32px;
+				margin-top: -8px;
+			}
+
+
+	.mce-st-e600:before { content: '\e600'; }
+	.mce-st-e601:before { content: '\e601'; }
+	.mce-st-e602:before { content: '\e602'; }
+	.mce-st-e603:before { content: '\e603'; }
+	.mce-st-e604:before { content: '\e604'; }
+	.mce-st-e605:before { content: '\e605'; }
+	.mce-st-e606:before { content: '\e606'; }
+	.mce-st-e607:before { content: '\e607'; }
+	.mce-st-e608:before { content: '\e608'; }
+	.mce-st-e609:before { content: '\e609'; }
+	.mce-st-e60a:before { content: '\e60a'; }
+	.mce-st-e60b:before { content: '\e60b'; }
+	.mce-st-e60c:before { content: '\e60c'; }
+	.mce-st-e60d:before { content: '\e60d'; }
+	.mce-st-e60e:before { content: '\e60e'; }
+	.mce-st-e60f:before { content: '\e60f'; }
+
+	.mce-st-e610:before { content: '\e610'; }
+	.mce-st-e611:before { content: '\e611'; }
+	.mce-st-e612:before { content: '\e612'; }
+	.mce-st-e613:before { content: '\e613'; }
+	.mce-st-e614:before { content: '\e614'; }
+	.mce-st-e615:before { content: '\e615'; }
+	.mce-st-e616:before { content: '\e616'; }
+	.mce-st-e617:before { content: '\e617'; }
+	.mce-st-e618:before { content: '\e618'; }
+	.mce-st-e619:before { content: '\e619'; }
+	.mce-st-e61a:before { content: '\e61a'; }
+	.mce-st-e61b:before { content: '\e61b'; }
+	.mce-st-e61c:before { content: '\e61c'; }
+	.mce-st-e61d:before { content: '\e61d'; }
+	.mce-st-e61e:before { content: '\e61e'; }
+	.mce-st-e61f:before { content: '\e61f'; }
+
+	.mce-st-e620:before { content: '\e620'; }
+	.mce-st-e621:before { content: '\e621'; }
+	.mce-st-e622:before { content: '\e622'; }
+	.mce-st-e623:before { content: '\e623'; }
+	.mce-st-e624:before { content: '\e624'; }
+	.mce-st-e625:before { content: '\e625'; }
+	.mce-st-e626:before { content: '\e626'; }
+	.mce-st-e627:before { content: '\e627'; }
+	.mce-st-e628:before { content: '\e628'; }
+	.mce-st-e629:before { content: '\e629'; }
+	.mce-st-e62a:before { content: '\e62a'; }
+	.mce-st-e62b:before { content: '\e62b'; }
+	.mce-st-e62c:before { content: '\e62c'; }
+	.mce-st-e62d:before { content: '\e62d'; }
+	.mce-st-e62e:before { content: '\e62e'; }
+	.mce-st-e62f:before { content: '\e62f'; }
+
+	.mce-st-e630:before { content: '\e630'; }
+	.mce-st-e631:before { content: '\e631'; }
+	.mce-st-e632:before { content: '\e632'; }
+	.mce-st-e633:before { content: '\e633'; }
+	.mce-st-e634:before { content: '\e634'; }
+	.mce-st-e635:before { content: '\e635'; }
+	.mce-st-e636:before { content: '\e636'; }
+	.mce-st-e637:before { content: '\e637'; }
+	.mce-st-e638:before { content: '\e638'; }
+	.mce-st-e639:before { content: '\e639'; }
+	.mce-st-e63a:before { content: '\e63a'; }
+	.mce-st-e63b:before { content: '\e63b'; }
+	.mce-st-e63c:before { content: '\e63c'; }
+	.mce-st-e63d:before { content: '\e63d'; }
+	.mce-st-e63e:before { content: '\e63e'; }
+	.mce-st-e63f:before { content: '\e63f'; }
+
+	.mce-st-e640:before { content: '\e640'; }
+	.mce-st-e641:before { content: '\e641'; }
+	.mce-st-e642:before { content: '\e642'; }
+	.mce-st-e643:before { content: '\e643'; }
+	.mce-st-e644:before { content: '\e644'; }
+	.mce-st-e645:before { content: '\e645'; }
+	.mce-st-e646:before { content: '\e646'; }
+	.mce-st-e647:before { content: '\e647'; }
+	.mce-st-e648:before { content: '\e648'; }
+	.mce-st-e649:before { content: '\e649'; }
+	.mce-st-e64a:before { content: '\e64a'; }
+	.mce-st-e64b:before { content: '\e64b'; }
+	.mce-st-e64c:before { content: '\e64c'; }
+	.mce-st-e64d:before { content: '\e64d'; }
+	.mce-st-e64e:before { content: '\e64e'; }
+	.mce-st-e64f:before { content: '\e64f'; }
+
+	.mce-st-e650:before { content: '\e650'; }
+	.mce-st-e651:before { content: '\e651'; }
+	.mce-st-e652:before { content: '\e652'; }
+	.mce-st-e653:before { content: '\e653'; }
+	.mce-st-e654:before { content: '\e654'; }
+	.mce-st-e655:before { content: '\e655'; }
+	.mce-st-e656:before { content: '\e656'; }
+	.mce-st-e657:before { content: '\e657'; }
+	.mce-st-e658:before { content: '\e658'; }
+	.mce-st-e659:before { content: '\e659'; }
+	.mce-st-e65a:before { content: '\e65a'; }
+	.mce-st-e65b:before { content: '\e65b'; }
+	.mce-st-e65c:before { content: '\e65c'; }
+	.mce-st-e65d:before { content: '\e65d'; }
+	.mce-st-e65e:before { content: '\e65e'; }
+	.mce-st-e65f:before { content: '\e65f'; }
+
+	.mce-st-e660:before { content: '\e660'; }
+	.mce-st-e661:before { content: '\e661'; }
+	.mce-st-e662:before { content: '\e662'; }
+	.mce-st-e663:before { content: '\e663'; }
+	.mce-st-e664:before { content: '\e664'; }
+	.mce-st-e665:before { content: '\e665'; }
+	.mce-st-e666:before { content: '\e666'; }
+	.mce-st-e667:before { content: '\e667'; }
+	.mce-st-e668:before { content: '\e668'; }
+	.mce-st-e669:before { content: '\e669'; }
+	.mce-st-e66a:before { content: '\e66a'; }
+	.mce-st-e66b:before { content: '\e66b'; }
+	.mce-st-e66c:before { content: '\e66c'; }
+	.mce-st-e66d:before { content: '\e66d'; }
+	.mce-st-e66e:before { content: '\e66e'; }
+	.mce-st-e66f:before { content: '\e66f'; }
+
+	.mce-st-e670:before { content: '\e670'; }
+	.mce-st-e671:before { content: '\e671'; }
+	.mce-st-e672:before { content: '\e672'; }
+	.mce-st-e673:before { content: '\e673'; }
+	.mce-st-e674:before { content: '\e674'; }
+	.mce-st-e675:before { content: '\e675'; }
+	.mce-st-e676:before { content: '\e676'; }
+	.mce-st-e677:before { content: '\e677'; }
+	.mce-st-e678:before { content: '\e678'; }
+	.mce-st-e679:before { content: '\e679'; }
+	.mce-st-e67a:before { content: '\e67a'; }
+	.mce-st-e67b:before { content: '\e67b'; }
+	.mce-st-e67c:before { content: '\e67c'; }
+	.mce-st-e67d:before { content: '\e67d'; }
+	.mce-st-e67e:before { content: '\e67e'; }
+	.mce-st-e67f:before { content: '\e67f'; }
+
+	.mce-st-e680:before { content: '\e680'; }
+	.mce-st-e681:before { content: '\e681'; }
+	.mce-st-e682:before { content: '\e682'; }
+	.mce-st-e683:before { content: '\e683'; }
+	.mce-st-e684:before { content: '\e684'; }
+	.mce-st-e685:before { content: '\e685'; }
+	.mce-st-e686:before { content: '\e686'; }
+	.mce-st-e687:before { content: '\e687'; }
+	.mce-st-e688:before { content: '\e688'; }
+	.mce-st-e689:before { content: '\e689'; }
+	.mce-st-e68a:before { content: '\e68a'; }
+	.mce-st-e68b:before { content: '\e68b'; }
+	.mce-st-e68c:before { content: '\e68c'; }
+	.mce-st-e68d:before { content: '\e68d'; }
+	.mce-st-e68e:before { content: '\e68e'; }
+	.mce-st-e68f:before { content: '\e68f'; }
+
+
+
+
+
+
+

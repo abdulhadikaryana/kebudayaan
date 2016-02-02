@@ -1,0 +1,61 @@
+<div class="review-list">
+    <?php if($this->review['isfb']) : ?>
+            <?php $fbInfo = $this->fb->api('/' . $this->review['username']);//$fbInfo = $this->fb->api_client->users_getInfo($this->review['username'],
+                    //array('name', 'pic_square')); ?>
+            <img class="avatar" src="https://graph.facebook.com/<?php echo $this->review['username']; ?>/picture" alt="" />
+            <?php $author = $fbInfo['name']; //print_r($fbInfo);//$fbInfo[0]['name']; ?>
+    <?php else: ?>
+           <?php if($this->review['email']) {
+               $emailMd5 = md5($this->review['email']);
+           } ?>
+           <?php $author = $this->review['username']; ?>
+           <img class="avatar" src="http://www.gravatar.com/avatar/<?php echo $emailMd5; ?>?default=<?php echo $this->imageUrl('gravatar.jpg')?>&size=50" alt="" />
+    <?php endif; ?>
+
+    <div class="review-desc">
+        <h4 class="title"><?php echo $this->review['review_title'] ?></h4>
+        <p class="author"><?php echo $this->translate('id_by_oleh');?> <?php echo $author ?></p>
+        <p>
+            <?php echo $this->htmlDecode($this->truncate(
+                stripslashes($this->review['review_content']), 250)); ?>
+        </p>
+
+        <?php if( ! empty($this->review['review_content'])): ?>
+            <span class="read-more-lb">
+                <a href="<?php echo $this->url(array(
+                            'action' => 'detail',
+                            'reviewId' => $this->review['review_id']
+                        ), 'dest-review') ?>">
+                        <?php echo $this->translate('id_read_more_new');?> &gt;&gt;
+                </a>
+            </span>
+        <?php endif; ?>
+    </div>
+
+    <div class="review-footer">
+        <div class="review-rating">
+            <p>Rating:</p>
+            <p><?php
+                echo $this->partial('partials/rating.phtml',
+                    array(
+                          'rating' => $this->review['rate'],
+                          'disable' => true,
+                    ));
+            ?></p>
+        </div>
+        <div class="thumb-useful" style="float: left">
+            <p class="thumb-desc"><?php echo $this->review['thumb_up'] ?> <?php echo $this->translate('id_out_of_dari');?>
+                    <?php echo ($this->review['thumb_up'] + $this->review['thumb_down']) ?> <?php echo $this->translate('id_usefull');?></p>
+            <?php
+                echo $this->partial('partials/thumb.phtml',
+                    array(
+                          'thumbUp' => $this->review['thumb_up'],
+                          'thumbDown' => $this->review['thumb_down'],
+                    ));
+            ?>
+        </div>
+    </div>
+
+    <div class="clear-left"></div>
+
+</div>

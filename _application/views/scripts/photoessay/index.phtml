@@ -1,0 +1,115 @@
+<?php echo $this->render('photoessay/header.phtml'); ?>
+<div class="photoessay-paginator">
+	<?php
+		echo $this->paginationControl($this->essayList, 'Sliding',
+		'partials/pagination.phtml',
+		array('message' => 'pages', 'upMessages' => true)); 
+	?>
+</div>
+
+<div id="essay-content">
+	
+	<div id="translate-panel">
+		Translate into&#58;
+		<select id="language-translate">
+			<option value="en">English</option>
+			<option value="id">Indonesia</option>
+		</select>
+		&nbsp;
+		powered by Google Translate
+	</div>
+
+<?php if(sizeof($this->essayList) > 0): ?>
+	<?php foreach($this->essayList as $essay): ?>
+	<div class="essay-post">
+	
+		<div class="content">
+	
+			<div class="info">
+	
+				<div class="essay-date"><?php echo date('j F Y', strtotime($essay['publishdate'])); ?></div>
+	
+				<!-- <div class="essay-title"><?php // echo html_entity_decode($essay['title'], ENT_QUOTES) ?></div> -->
+                <div class="essay-title">
+                    <a href="<?php echo $this->baseUrl('/photoessay/details/post/'.$essay['photoessay_id'].'/'.$this->makeUrlFormat($essay['title'])) ?>">
+                    <?php echo html_entity_decode($essay['title'], ENT_QUOTES) ?></a> 
+                </div>
+	
+			</div>
+	
+			<div class="essay-text">
+				<?php echo html_entity_decode($essay['description'], ENT_QUOTES); ?>....<br />
+				<a href="<?php echo $this->baseUrl('/photoessay/details/post/'.$essay['photoessay_id'].'/'.$this->makeUrlFormat($essay['title'])); ?>">read more at web &#45;&#45;&#45;</a>
+				<span style="font-weight:bold;">&#40;<?php echo $essay['jumlah']; ?> photos total&#41;</span>
+			</div>
+			
+		</div>
+		
+		<?php 
+		?>
+		
+		<div class="share-box">
+			<div class="top-part">
+				<img src="<?php echo $this->imageUrl('/photoessay/chatbox.png'); ?>" />
+				<span class="comment-amount">
+				<?php 
+					$xid = 'photoessay_'.$essay['photoessay_id'];
+					$comments = $this->fb->api(array('method' => 'comments_get', 'xid' => $xid));
+					echo sizeof($comments);
+				?>
+				Comments</span>
+			</div>
+			<div class="bottom-part">
+
+                <div class="essay-network">
+                    <div id="fb-root"></div>
+                    <script src="http://connect.facebook.net/en_US/all.js#appId=<?php echo Zend_Registry::get('fb_app_id'); ?>&amp;xfbml=1"></script>
+                    <fb:like href="<?php echo $this->baseUrl('/photoessay/details/post/'.$essay['photoessay_id'].'/'.$this->makeUrlFormat($essay['title']));?>" send="false" layout="button_count" width="60" show_faces="true" font="arial">
+                    </fb:like>
+                </div>
+
+				<div class="essay-network">
+					<a href="http://twitter.com/share" class="twitter-share-button"
+					data-url="<?php echo $this->baseUrl('/photoessay/details/post/'.
+					$essay['photoessay_id'].'/'.$this->makeUrlFormat($essay['title']));?>" 
+					data-count="horizontal" data-via="indtravel">
+					Tweet
+					</a>
+				</div>
+
+			</div>
+		</div>
+	
+		
+		<div class="essay-image">
+			<img src="<?php echo $this->imageUrl('/upload/photoessay/'.$essay['file']); ?>" />
+			<div class="essay-description">
+				<div class="essay-number">1</div>
+			    <div class="essay-caption">
+					<?php echo html_entity_decode($essay['caption'], ENT_QUOTES);?>
+				</div>
+			</div>
+			<div class="view-more-photos">
+				<a href="<?php echo $this->baseUrl('/photoessay/details/post/'.$essay['photoessay_id']); ?>">&nbsp;&lt;&lt; See More Photos</a>
+			</div>
+		</div>
+	</div>
+	<?php endforeach;?>
+<?php else: ?>
+	<span style="font-weight: bolder;font-size: 20px; color:#3b3b3b;">
+	Sorry, no results found for this(these) filter.
+	</span>
+<?php endif; ?>
+
+</div>
+
+<div class="photoessay-paginator">
+	<?php
+		echo $this->paginationControl($this->essayList, 'Sliding',
+		'partials/pagination.phtml',
+		array('message' => 'pages', 'downMessages' => true)); 
+	?>
+</div>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+

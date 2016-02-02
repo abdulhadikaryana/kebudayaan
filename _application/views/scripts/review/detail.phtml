@@ -1,0 +1,94 @@
+<!--main-->
+<div id="main-destdisc">
+
+    <!--main content-->
+    <div id="wrapper-content">
+        
+        <!--Breadcumb-->
+        <div id="breadcumb">
+            <?php echo $this->breadcrumb() ?>
+        </div>    
+        <!--End Breadcumb-->
+
+        <?php echo $this->render('destination/destination-title.phtml'); ?>
+
+        <!--content tab-->
+        <div id="content-tab-dest" class="destinasi">
+
+            <div id="dest-content">
+                <div class="section">
+                    <a name="firstsection"></a>
+                    <h3><?php echo $this->pageTitle ?></h3>
+                    <p class="author"><?php echo $this->translate('id_by_oleh');?> <?php echo $this->author; ?></p>
+                    <?php if($this->review['isfb']) : ?>
+                            <img class="avatar-detail" src="https://graph.facebook.com/<?php echo $this->review['username']; ?>/picture" alt="" />
+                    <?php else: ?>
+                           <?php if($this->review['email']) {
+                               $emailMd5 = md5($this->review['email']);
+                           } ?>
+                           <img class="avatar-detail" src="http://www.gravatar.com/avatar/<?php echo $emailMd5; ?>?d=<?php echo $this->imageUrl('gravatar.jpg')?>&size=50" alt="" />
+                    <?php endif; ?>
+            
+                    <p>
+                        <?php echo $this->htmlDecode($this->review['review_content']); ?>
+                    </p>
+            
+                    <div class="review-footer">
+                        <div class="review-rating">
+                            <p>Rating:</p>
+                            <p><?php
+                                echo $this->partial('partials/rating.phtml',
+                                    array(
+                                          'rating' => $this->review['rate'],
+                                          'disable' => true
+                                    ));
+                            ?></p>
+                        </div>
+                        <div class="thumb-useful">
+                            <p class="thumb-desc"><?php echo $this->translate('id_was_usefull');?></p>
+                            <?php
+                                echo $this->partial('partials/thumb.phtml',
+                                    array(
+                                          'thumbUp' => $this->review['thumb_up'],
+                                          'thumbDown' => $this->review['thumb_down'],
+                                          'enable' => $this->enable,
+                                    ));
+                            ?>
+                        </div>
+                        <div class="review-link">
+                            <p>
+                            <?php if($this->sess->userId == $this->review['user_id']): ?><a href="<?php echo $this->url(array(
+                                        'language' => $this->languageID,
+                                        'action' => 'edit',
+                                        'reviewId' => $this->review['review_id']
+                                    ), 'dest-review') ?>">(Edit your Review)</a><?php endif; ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="dest-comment">
+                <?php echo $this->render('partials/comment.phtml'); ?>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!--sidebar-->
+    <?php
+        echo $this->render('destination/sidebar-new.phtml');
+    ?>                          
+    <!--end sidebar -->
+
+</div>
+
+<?php $this->placeholder('jsInline')->captureStart() ?>
+<script type="text/javascript">
+    var reviewId = '<?php echo $this->review['review_id'] ?>';
+    var sessUserId = '<?php echo $this->sessUserId ?>';
+</script>
+<?php $this->placeholder('jsInline')->captureEnd() ?>

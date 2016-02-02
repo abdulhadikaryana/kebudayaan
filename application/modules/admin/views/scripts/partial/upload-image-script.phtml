@@ -1,0 +1,66 @@
+<script type="text/javascript">
+    
+    function parseImageXml(data)
+    {
+        step = $(data).find("step").text();
+        error = $(data).find("error").text();
+        message = $(data).find("message").text();
+        image_dir = $(data).find("image_dir").text();
+        $('.upload-error').html(error);
+        $('.upload-message').html(message);
+        $('#imageuploadbtn').removeAttr('disabled');
+        if(step == 1){showOverwriteDialog();}
+        else if(step == 2){resetUploadDialog();}
+        
+        <?php if($this->image_dir_type == 1): ?>
+        $('#HeaderImage').val(image_dir);
+        <?php elseif($this->image_dir_type == 2): ?>
+        $('#ArticleMainImage').val(image_dir);
+        <?php elseif($this->image_dir_type == 3): ?>
+        $('#eventImage').val(image_dir);
+        <?php elseif($this->image_dir_type == 4): ?>
+        $('#highlightImage').val(image_dir);
+        <?php elseif($this->image_dir_type == 5): ?>
+        $('#categoryPicture').val(image_dir);
+        <?php elseif($this->image_dir_type == 6): ?>
+        $('#newsImage').val(image_dir);
+        <?php elseif($this->image_dir_type == 7): ?>
+        $('#airlineImage').val(image_dir);
+        <?php elseif($this->image_dir_type == 8): ?>
+        $('#imageFile').val(image_dir);
+        <?php endif; ?>
+    }
+    
+    function showOverwriteDialog()
+    {
+        $('#step').val(1);
+        yes_btn_html = "<span class='space_r'><input type='submit' id='step_two_ok' value='ok' class='btn radius'/></span>";
+        no_btn_html = "<span><input type='button' id='step_two_no' value='no' onclick='resetUploadDialog();' class='btn radius'/></span>";
+        $('p#image_dialog').html(yes_btn_html+no_btn_html);
+    }
+    
+    function resetUploadDialog()
+    {
+        tb_remove();
+        $('#step').val(0);
+        upload_btn_html = "<span class='space_r'><input type='submit' value='upload' class='btn radius' id='imageuploadbtn'/></span>";
+        cancel_btn_html = "<span><input type='button' value='close' class='btn radius' onclick='tb_remove();' /></span>";
+        $('p#image_dialog').html(upload_btn_html+cancel_btn_html);
+        $('p.upload-error').empty();
+        $('p.upload-message').empty();        
+    }
+    
+    $(function(){
+        $('#uploadForm').ajaxForm({
+            beforeSubmit: function(a,f,o) {
+                o.dataType = 'html';
+                $('#uploadOutput').html('Submitting...');
+                $('.upload-error').empty();
+                $('.upload-message').empty();
+                $('#imageuploadbtn').attr('disabled','true');
+            },
+//            data:{type:<?php echo $this->image_dir_type; ?>},
+            success: parseImageXml
+        });    
+    });    
+</script>

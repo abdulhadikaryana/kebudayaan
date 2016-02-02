@@ -1,0 +1,49 @@
+<thead>
+    <tr>
+        <th>
+        <input type="checkbox" name="" id="" 
+               onclick="
+                 var checkboxes = 
+                   ('#tabel-highlight tbody input:checkbox');
+                 if($(this).attr('checked'))
+                   $(checkboxes).attr('checked', true);
+                 else
+                   $(checkboxes).removeAttr('checked');
+               "/>
+        </th>        
+        <th style="width: 300px;">Nama</th>
+        <th style="text-align: center; width: 150px;">Pratinjau</th>
+        <th style="text-align: center;">Tipe</th>
+        <th>Status</th>
+        <th></th>        
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>
+              <?php
+              echo $this->formSelect('filter[type]',
+                      $this->filter['type'],
+                      array('class' => 'span12'),
+                      array(
+                  null => 'Tampilkan semua',                  
+                  4    => "Small Sidebar",
+                  1    => "Medium Sidebar",                  
+                  3    => "Header"                         
+              ));
+              ?>
+       </th>
+       <th><?php
+              echo $this->formSelect('filter[flag]',
+                      $this->filter['flag'],
+                      array('class' => 'span12'),
+                      array(
+                  null => 'Tampilkan semua',                  
+                  0    => "tidak Ditampilkan",
+                  1    => "Ditampilkan",                                                          
+              ));
+              ?></th>
+       <th></th>
+    </tr>
+</thead>

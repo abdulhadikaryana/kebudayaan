@@ -1,0 +1,50 @@
+<?php if ($this->useHeaderImage) : ?>
+  <?php if ($this->specialDestination) : ?>
+    <div id="header-image-special">
+      <img src="<?php echo $this->imageUrl('timthumb.php?src=upload/poi/header/' . $this->destination['header_image']) . '&a=t&h=400&w=980&q=100' ?>" alt="" />
+    </div>
+  <?php else : ?>
+    <div id="header-image-small">
+      <img src="<?php
+    echo $this->imageUrl('destination/header/' .
+            $this->destHeaderImage)
+    ?>" alt="" />
+    </div>
+  <?php endif; ?>
+<?php elseif ($this->useFeaturedSlideshow): ?>
+
+  <?php if (isset($this->imageData[0])): ?>
+    <div id="slideshow">
+      <?php foreach ($this->imageData as $key => $data) : ?>
+        <img data-caption="#caption<?php echo $key ?>" 
+             src="<?php echo $this->imageUrl('timthumb.php?src=upload/highlight/' . $data['img_path'] . '&w=577&h=300&5=235&q=100') ?>" 
+             width="700" 
+             alt="<?php echo basename($data['img_path']); ?>" />
+           <?php endforeach; ?>
+    </div>
+    <?php foreach ($this->imageData as $key => $data) : ?>
+      <div class="orbit-caption" id="caption<?php echo $key ?>">
+        <span style="font-size: 18px;">
+          <?php
+          echo $data['link'] == '' ? $data['name'] : "<a href=" . $data['link'] . ">{$data['name']}</a>";
+          ?>
+        </span>
+      </div>
+    <?php endforeach; ?>
+
+  <?php endif ?>
+
+
+  <?php $this->placeholder("jsInline")->captureStart() ?>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $("#slideshow").orbit({
+                directionalNav: false,
+                caption: true,
+                fluid:true
+            });
+        });
+    </script>
+  <?php $this->placeholder("jsInline")->captureEnd() ?>    
+
+<?php endif; ?>

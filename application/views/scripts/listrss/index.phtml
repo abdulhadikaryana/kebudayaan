@@ -1,0 +1,21 @@
+    <p style="padding-left: 5px;">Stay updated with news, events and destinations at <a href="<?php echo $this->rootUrl(); ?>">indonesia.travel</a></p>
+    <br />
+    <ul>
+        <li style="margin: 5px 0; border-bottom:2px dotted #000; border-top:2px dotted #000;border-bottom:2px dotted #000;">
+		<a href="<?php echo ($this->langId == 1) ? 'http://feeds.feedburner.com/IndonesiaTravelEvents' : 'http://feeds.feedburner.com/indonesia-travel/event/id';?>">
+			<img src="<?php echo $this->imageUrl('/rss/events-rss.jpg'); ?>"/>
+		</a>
+	</li>
+        <li style="margin: 5px 0; border-bottom:2px dotted #000;">
+		<a href="<?php echo ($this->langId == 1) ? 'http://feeds.feedburner.com/IndonesiaTravelNews' : 'http://feeds.feedburner.com/indonesia-travel/news/id';?>">
+		<img src="<?php echo $this->imageUrl('/rss/news-rss.jpg'); ?>"/>
+		</a>
+	</li>
+        <li style="margin: 5px 0; border-bottom:2px dotted #000;">
+		<a href="<?php echo ($this->langId == 1) ? 'http://feeds.feedburner.com/IndonesiaTravelDestinations' : 'http://feeds.feedburner.com/indonesia-travel/destination/id';?>">
+		<img src="<?php echo $this->imageUrl('/rss/dest-rss.jpg'); ?>"/>
+		</a>
+	</li>
+    </ul>
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>

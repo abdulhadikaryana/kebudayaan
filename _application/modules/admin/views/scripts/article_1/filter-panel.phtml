@@ -1,0 +1,28 @@
+<div class="filter-panel">
+
+  <h4 style="margin-top: 10px;"><label for="filterPage">Filter:</label></h4>
+
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="form-inline well">
+    <select class="filter-box" name="filterPage" id="filterPage"
+            onchange="filterSwitch(this.value);">
+      <option value="0">Show All</option>
+      <option value="1">Title</option>
+    </select>
+
+
+    <span class="title-box mediumele filter-hidden"><input type="text" class="" 
+                                                           name="filterTitle"/></span>
+
+    <span class="poi-box mediumele filter-hidden"><input type="text" class="" name="filterPoi"/></span>
+
+    <input type="submit" value="Go" class="btn radius"/>
+
+    <span class="ajax-loader"></span>
+
+    <hr />
+    <?php if (!empty($this->alert)) : ?>
+      <div class="tip"> Current filter selected: <?php echo $this->alert; ?>
+      </div>
+    <?php endif; ?> 
+  </form>                    
+</div>

@@ -1,0 +1,18 @@
+<!-- full calendar css on header -->
+
+<h2 class="section-title"><span><?php echo $this->translate('id_menu_calendarevents') ?></span></h2>
+<div id="calendar"></div>    
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>
+    <script type="text/javascript" src="<?php echo $this->scriptUrl('javascripts/frontend/lib/fullcalendar/fullcalendar.min.js') ?>"></script>    
+    
+    <?php 
+        if(APPLICATION_ENV == "production" || APPLICATION_ENV == "testing") {
+            $calendarJs = 'javascripts/frontend/calendar.min.js';
+        } else {
+            $calendarJs = 'javascripts/frontend/calendar.js';
+        }
+    ?>        
+    <script type="text/javascript" src="<?php echo $this->scriptUrl($calendarJs) ?>"></script>
+    
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

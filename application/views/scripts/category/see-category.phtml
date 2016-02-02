@@ -1,0 +1,42 @@
+<div class="row-fluid section-title" style="border-left-color: #ffcc00">
+    <div class="span24">
+        <h1 style="font-size: 28px;">
+            <?php echo $this->category['name']; ?>
+        </h1>
+    </div>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array(), ($this->langId == 1) ? "beranda" : "home"); ?>"><?php echo ($this->langId == 1) ? "Beranda" : "Home"; ?></a></li>
+    <li><a href="<?php echo $this->url(array(), ($this->langId == 1) ? 'kebudayaan' : 'culture'); ?>"><?php echo $this->langId == 1 ? "Kebudayaan" : "Culture" ?></a></li>
+    <li class="active"><?php echo $this->category['name']; ?></li>
+</ul>
+
+<div class="row-fluid section-content">
+    <div class="span28">
+        <ul class="thumbnails" id="see-category-list">
+            <?php foreach ($this->subCategories as $category): ?>            
+                <?php
+                $categoryImage = $category['image'];
+                $categoryImageUrl = 'upload/category/' . $categoryImage;
+                if (!file_exists(IMAGE_FOLDER . $categoryImageUrl)) {
+                    $categoryImageUrl = 'default.jpg';
+                }
+
+                $linkUrl = $this->url(array(
+                    'id' => $category['category_id'],
+                    'slug' => $this->makeUrlFormat($category['name'])
+                        ), $this->langId == 1 ? 'subkategori' : 'subcategory');
+                ?>
+                <li class="thumbnail">
+                    <a href="<?php echo $linkUrl; ?>">
+                        <img src="<?php echo $this->imageUrl('timthumb.php?src=' . $categoryImageUrl . '&w=205&h=150&q=100') ?>"  class="thumbnail" alt="<?php echo $category['name']; ?>">
+                        <div class="caption">
+                            <h4><?php echo $category['name']; ?></h4>
+                        </div>
+                    </a>
+                </li>
+            <?php endforeach; ?>  
+        </ul>
+    </div>
+</div>

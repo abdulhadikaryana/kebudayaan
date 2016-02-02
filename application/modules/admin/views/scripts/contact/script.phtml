@@ -1,0 +1,89 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart(); 
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+
+<script type="text/javascript">
+tinyMCE.execCommand('mceAddControl', false, 'replyText');
+var numbCtr = 0;
+
+function removeSpaces(string) {
+ return string.split(' ').join('');
+}
+
+function addLink()
+{
+    nospace_linkUrl = removeSpaces($('#linkUrl'+numbCtr).val());
+    nospace_linkName = removeSpaces($('#linkName'+numbCtr).val());
+    if((nospace_linkUrl.length > 0)&&(nospace_linkName.length > 0))
+    {
+        numbCtr++;
+        html = "<tr><td></td><td></td><td><input type='text' id='linkName"+ numbCtr +"' name='linkName"+ numbCtr +"' class='mediumele'/></td>";
+        html = html+ "<td></td><td></td><td><input type='text' id='linkUrl"+ numbCtr +"' name='linkUrl"+ numbCtr +"' class='mediumele'/></td></tr>";
+        $('#link-container tbody').append(html);
+        $('#linkCtr').val(numbCtr);
+        $('#linkUrl'+numbCtr).rules("add", {
+              required: true,
+              url: true,
+              messages: {
+                  required:"Please enter a Url!",
+                  url:"Please enter a valid Url"
+              }
+        });
+        $('#linkName'+numbCtr).rules("add", {
+              required: true,
+              messages: {
+                  required:"Please enter a link name!",
+              }
+        });
+    }
+    else
+    {
+        alert('There are still empty fields!!');
+    }
+}
+
+$(function(){
+
+        <?php if($this->state_edit):?>
+                $('#linkCtr').val(<?php echo $this->numbCtr2; ?>);
+                numbCtr = <?php echo $this->numbCtr2; ?>;
+        <?php endif; ?>
+            
+$("#materialPromotionForm input").blur(function(){
+            $("#materialPromotionForm").validate().element($(this));
+        });    
+
+        $("#materialPromotionForm").validate({
+        rules : {
+                    linkType:{
+                      required:true,
+                      min: 1
+                    },
+                    linkTitle:{
+                      required:true
+                    },
+                    linkName0:{
+                      required:true
+                    },
+                    linkUrl0:{
+                      required:true,
+                      url:true
+                    }
+                },
+        messages : {
+                     linkTitle : "Please enter a Title!",
+                     linkType : "Please select a link type!",
+                     linkUrl0 : "Please enter a valid URL!",
+                     linkName0 : "Please enter a Link Name!"
+        }
+    });
+    
+    
+    
+   
+});
+
+</script>
+    
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

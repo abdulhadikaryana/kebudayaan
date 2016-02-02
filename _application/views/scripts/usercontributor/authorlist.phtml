@@ -1,0 +1,41 @@
+
+<div class="post-inner">
+ <h2 class="title-list"><?php echo $this->translate('usercontributor_travelers_list');?></h2>
+<?php if (sizeof($this->contributor)):?>
+    <?php foreach($this->contributor as $contributor): ?>
+        <div class="authorlist">
+            <?php if($contributor->foto != NULL OR $contributor->foto !=''):?>
+                <img src="<?php echo $this->imageUrl().'/upload/usercontributor/'.$contributor->foto;?>" alt="<?php echo $contributor->nama?>" />
+            <?php else:?>
+                <img src="<?php echo $this->rootUrl();?>/media/images/usercon/display-pic.jpg" alt="default" />
+            <?php endif;?>
+            
+            <div class="description">
+                <a class="link_author float-left" href="<?php echo $this->baseUrl('/travelers-stories/author/id/'.$contributor->id.'/name/'.$contributor->nama.'/sort/default')?>">
+                    <?php echo $contributor->nama;?>
+                </a>
+                <div class="clear-left label_author float-left" style="width:60px;"><?php if($this->lang_id == 2):?>Telepon<?php else:?>Phone<?php endif;?></div>
+                <div class="float-left">:</div>
+                <div class="label_data_auhtor float-left"><?php echo $this->escapeCheckEmpty($contributor->contact);?></div>
+                
+                <div class="clear-left label_author float-left" style="width:60px;">Website</div>
+                <div class="float-left">:</div>
+                <div class="label_data_auhtor float-left"><?php echo $this->escapeCheckEmpty($contributor->website);?></div>
+
+                <div class="clear-left label_author float-left" style="width:60px;">Email</div>
+                <div class="float-left">:</div>
+                <div class="label_data_auhtor float-left"><?php echo $this->escapeCheckEmpty($contributor->email);?></div>
+
+
+            </div>
+            
+
+        </div>
+    <?php endforeach;?>
+
+<div style="margin-right:70px;">
+    <?php echo $this->paginationControl($this->contributor,'Elastic','partials/pagination-usercontributor.phtml',array("category"=>$this->category)); ?>
+</div>
+<?php endif;?>
+
+</div>

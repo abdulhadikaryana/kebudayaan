@@ -1,0 +1,17 @@
+<div class="section">
+    <a name="firstsection"></a>
+    <h2 class="section-title"><span><?php echo $this->category['name'] ?></span></h2>
+    <div class="child-detail-img">
+        <img src="<?php echo $this->imageUrl('timthumb.php?src=' . '/upload/category/' . 
+            $this->category['image'])  .  '&w=577&h=200&q=100' ?>" alt="" title="<?php echo $this->category['name']?>" />
+    </div>
+</div>
+<div class="clear-left"></div>
+<br />
+<div class="section">
+    <?php echo $this->translate('id_sort_by');?> <?php echo $this->columnSort($this->nameSort,
+                            array(
+                                  'param' => $this->sortBy,
+                                  'title' => $this->translate('name2'))); ?>    
+    <?php echo $this->render('destination/search-list.phtml'); ?>
+</div>

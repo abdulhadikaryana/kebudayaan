@@ -1,0 +1,69 @@
+<div class="row-fluid">
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="row-fluid">
+
+            <div class="control-group">
+                <div class="controls">
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <div class="fileupload-new thumbnail" style="width:255;height:175">
+                            <?php if (isset($this->image)): ?>
+                                <img src="<?php echo $this->imageUrl("upload/gallery/{$this->image}"); ?>" alt="" />
+                            <?php else: ?>
+                                <img src="http://www.placehold.it/255x175/EFEFEF/AAAAAA&text=255+x+175" alt="" />
+                            <?php endif; ?>
+                        </div>
+                        <div class="fileupload-preview fileupload-exists thumbnail" 
+                             style="width: 255;height: 175;">
+                        </div>
+                        <div>
+                            <?php
+                            $disabled = '';
+                            if ($this->form->image->getAttrib('disabled') == true)
+                                $disabled = 'disabled';
+                            ?>
+                            <div class="btn btn-file <?php echo $disabled ?>">
+                                <span class="fileupload-new">Pilih Gambar</span>
+                                <span class="fileupload-exists">Ganti</span>
+                                <?php echo $this->form->image; ?>
+                            </div>
+                            <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Hapus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br />
+
+            <div class="control-group">
+                <label for="source" class="control-label">Sumber</label>
+                <div class="controls">
+                    <?php echo $this->form->source; ?>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="name" class="control-label">Keterangan Gambar</label>
+                <div class="controls">
+                    <?php echo $this->form->caption; ?>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="name" class="control-label">Translasi (EN)</label>
+                <div class="controls">
+                    <?php echo $this->form->caption_en; ?>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <hr />
+            <?php echo $this->form->submit; ?>
+            <a class="btn" href="<?php echo $this->url(array('controller' => 'gallery', 'action' => 'index'), null, true); ?>">
+                Batal
+            </a>
+        </div>
+
+    </form>
+</div>

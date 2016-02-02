@@ -1,0 +1,232 @@
+<?php
+$this->placeholder('jsInline')->captureStart();
+$js_timepick = array('jquery/datepicker', 'jquery/jquery.utils', 'jquery/jquery.strings', 'jquery/jquery.ui.all', 'jquery/ui.timepickr');
+echo $this->jsView(2, $js_timepick);
+?>
+<script type="text/javascript">
+  var poictr = 0;
+  var poi_stack = [];
+  function checkpoi(poi_name)
+  {
+    $('.ajaxloader').html("<img src='<?php echo $this->rootUrl('/media/images/mini-loader.gif') ?>'/>");
+    $('#relatedPoi').attr('disabled',true);
+    $('.general-button').attr('disabled',true);
+    $.ajax({
+      type: "POST",
+      url: "<?php echo $this->rootUrl() . '/admin/ajax/checkpoiname'; ?>",
+      data: {poiname:poi_name},
+      success: function(data){
+        if(data!='error'){
+          registerPoi(poi_name,data);
+          $('.ajaxloader').empty();
+        }
+        else{
+          alert('No Destination with name "'+poi_name+'" found! Please Check Your Entry!');
+          $('#relatedPoi').val('');
+          $('#relatedPoi').removeAttr('disabled');
+          $('.ajaxloader').empty();
+        }
+      }
+    });
+  }
+
+  function registerPoi(poi_name,data)
+  {
+    flag = jQuery.inArray(data,poi_stack);
+    if(flag < 0)
+    {
+      html = "<tr class='poicontainer'><td><span class='space_r'>"+poi_name+"</span><span class='general-remove nomargin nofloat' onclick='removePoi("+poictr+",$(this));'>remove</span><input type='hidden' name='poiValue"+poictr+"' value='"+data+"'></td></tr>";
+      $('table.poicontainer').append(html);
+      $('#poiMax').val(poictr);
+      $('#relatedPoi').val('');
+      $('#relatedPoi').removeAttr('disabled');
+      poi_stack.push(data); 
+      poictr++;
+    }
+    else
+    {
+      alert('Sorry, but this destination is already registered!');
+      $('#relatedPoi').val('');
+      $('#relatedPoi').removeAttr('disabled');
+    }
+  }
+    
+  function removePoi(index,obj)
+  {
+    delete poi_stack[index];
+    obj.parents('tr.poicontainer').remove();
+  }
+    
+  function getAllRelatedDestination(event_id)
+  {
+    $('#relatedPoi').attr('disabled','true');
+    $.ajax({
+      type: "POST",
+      url: "<?php echo $this->rootUrl() . '/admin/ajax/poirelatedevent'; ?>",
+      data: {eventid:event_id},
+      dataType: "xml",
+      success: parseDestinationXml
+    });        
+  }
+    
+  function parseDestinationXml(xml)
+  {
+    $(xml).find("destination").each(function(){
+      destination_id = $(this).find("poi_id").text();
+      destination_name = $(this).find("name").text();
+      registerPoi(destination_name,destination_id);
+    });
+    $('#relatedPoi').removeAttr('disabled');
+  }
+</script>
+
+<?php echo $this->render('partial/upload-image-script.phtml'); ?>
+
+<script type="text/javascript">
+  $(function(){
+    jQuery.validator.addMethod("equaltime", function(value, element) { 
+      return this.optional(element) || ($('#timeEnd').val() > $('#timeStart').val());
+    }, jQuery.format("Masukan Waktu Mulai dan Selesai Kegiatan Dengan Benar!"));
+    
+    $('#eventSubmit').click(function(){
+      var content = tinyMCE.get('eventDescription').getContent();
+      $('#eventDescription').val(content); 
+    });
+    
+    $("#eventForm input").blur(function(){
+      $("#eventForm").validate().element($(this));
+    });
+    
+    $("#eventForm").validate({
+      rules : {
+        eventName:{
+          required:true
+        },
+        dateStart:{
+          required:true,    
+        },
+        dateEnd:{
+          required:true,    
+        }
+      },
+      messages : {
+        eventName : "Masukan Nama Kegiatan!",
+        dateStart : "Masukan Tanggal Mulai Kegiatan!",
+        dateEnd : "Masukan Tanggal Selesai Kegiatan!"
+      }
+    });
+    
+               
+    
+<?php if ($this->state_edit): ?>
+      getAllRelatedDestination(<?php echo $this->event_id; ?>);
+      if(mice_event == 1){
+        $('#mice_event').attr('checked','checked');
+        $('#mice_event').attr('value', 1)
+      }
+<?php endif; ?>
+    $('#mice_event').click(function(){
+      if($(this).attr('checked')){
+        $(this).attr('value', 1);
+      }else{
+        $(this).attr('value', 0);
+      }
+    });
+    
+    $('#timeStart').keypress(function(){return false});
+    $('#timeEnd').keypress(function(){return false});
+    
+    $('#timeStart').timepickr({
+      convention: 24,
+      trigger: 'click'
+    });
+        
+    $('#timeEnd').timepickr({
+      convention: 24,
+      trigger: 'click'
+    });
+    
+    $('#relatedPoi').autocomplete("<?php echo $this->rootUrl() . '/admin/ajax/poiautocomplete'; ?>",
+    {
+      minChars: 2,
+      width: 275,
+      selectFirst: false,
+      loaderImage: "<?php echo $this->imageUrl('/media/images/ajax-loader-big.gif') ?>"
+    });
+    
+    $("#relatedPoi").result(function(event, data, formatted) {
+      if (data){checkpoi(data);}
+    });
+    
+    var start = new Date();
+    var end = new Date();
+    $('#widgetCalendar').DatePicker({
+      flat: true,
+      format: 'y-m-d',
+      date: [new Date(start), new Date(end)],
+      calendars: 3,
+      mode: 'range',
+      starts: 1,
+      onChange: function(formated) {
+        if(formated[0]==formated[1])
+        {
+          $('#widgetField span').html(formated[0]+' Kegiatan Satu Hari');
+          $('#dateStart').val(formated[0]);
+          $('#dateEnd').val(formated[0]);
+          $('.timepick').show();
+          $('#dateEnd').rules('remove');
+          $('#timeStart').rules('add',{
+            required: true,
+            equaltime : true,
+            messages: {
+              required:"Pilih Waktu Untuk Kegiatan!"
+            }
+          });
+          $('#timeEnd').rules('add',{
+            required: true,
+            equaltime : true,
+            messages: {
+              required:"Pilih Waktu Untuk Kegiatan!"
+            }
+          });
+        }
+        else
+        {
+          $('#widgetField span').get(0).innerHTML = formated.join(' Sampai ');
+          $('#dateStart').val(formated[0]);
+          $('#dateEnd').val(formated[1]);
+          $('.timepick').hide();
+          $('#dateEnd').rules('add',{
+            required: true,
+            messages: {
+              required:"Pilih Tanggal Berakhirnya Kegiatan!"
+            }
+          });
+          $('#timeStart').rules('remove');
+          $('#timeEnd').rules('remove');
+        }
+        $('#dateEnd').validate();  
+        $('#dateStart').validate();  
+      }
+    });
+    
+    var state = false;
+    $('#widgetField>a').bind('click', function(){
+      $('#widgetCalendar').stop().animate({height: state ? 0 : $('#widgetCalendar div.datepicker').get(0).offsetHeight}, 500);
+      state = !state;
+      return false;
+    });
+    
+    $('#widgetCalendar div.datepicker').css('position', 'absolute');
+    
+<?php if (!$this->state_edit): ?>
+      $('#dateStart').val('');
+      $('#dateEnd').val('');
+<?php endif; ?>
+    
+<?php if ($this->show_clock): ?>
+      $('tr.timepick').show();
+<?php endif; ?>
+  });
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

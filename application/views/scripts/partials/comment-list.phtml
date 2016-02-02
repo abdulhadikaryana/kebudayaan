@@ -1,0 +1,35 @@
+<div class="comment-list">
+    <div id="comment-<?php echo $this->comment['comment_id'] ?>">
+        <?php if($this->comment['isfb']) : ?>
+                <?php $fbInfo = $this->fb->api('/' . $this->comment['comment_author']); ?>
+                <img class="avatar" src="https://graph.facebook.com/<?php echo $this->comment['comment_author']; ?>/picture" alt="" />
+                <?php $author = $fbInfo['name']; ?>
+        <?php else: ?>
+               <?php if($this->comment['comment_author_email']) {
+                   $emailMd5 = md5($this->comment['comment_author_email']);
+               } ?>
+               <?php $author = $this->comment['comment_author']; ?>
+               <img class="avatar" src="http://www.gravatar.com/avatar/<?php echo $emailMd5; ?>?default=<?php echo $this->imageUrl('gravatar.jpg')?>&size=50" alt="" />
+        <?php endif; ?>
+
+        <div class="comment-desc">
+            <p class="author">
+                <?php if( ! $this->comment['comment_author_url'] OR $this->comment['comment_author_url'] == 'http://'): ?>
+                    <?php echo $author ?>
+                <?php else: ?>
+                    <a href="<?php echo $this->comment['comment_author_url'] ?>"><?php echo $author ?></a>
+                <?php endif; ?>
+            </p>
+            <p class="en-meta">
+                <?php echo $this->newsMeta($this->comment['comment_date'], ''); ?>
+            </p>
+            <br />
+            <p>
+                <?php echo $this->htmlDecode($this->truncate(
+                    stripslashes($this->comment['comment_content']), 250)); ?>
+            </p>
+        </div>
+
+        <div class="clear-left"></div>
+    </div>
+</div>

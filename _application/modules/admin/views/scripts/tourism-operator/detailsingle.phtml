@@ -1,0 +1,72 @@
+<div class="section">
+    <div class="section-directory">
+    <h2 class="section-title">
+        <span><?php echo $this->escape($this->htmlDecode($this->tourismDetail['langname'])); ?></span>
+    </h2>	
+
+    <p>
+	<?php echo $this->tourismDetail['description'];?>
+    </p>
+
+    <br />
+    <table>
+	<tr>
+	    <td><span class="address"><?php echo $this->translate('id_list_address'); ?></span></td>
+	    <td class="double-dot">:</td>
+	    <td><?php echo $this->escapeCheckEmpty($this->tourismDetail['address']); ?></td>
+	</tr>
+	<tr>
+	    <td><span class="phone"><?php echo $this->translate('id_list_phone'); ?></span></td>
+	    <td class="double-dot">:</td>
+	    <td><?php echo $this->escapeCheckEmpty($this->tourismDetail['phone']); ?></td>
+	</tr>
+	<tr>
+	    <td><span class="fax">Fax</span></td>
+	    <td class="double-dot" >:</td>
+	    <td><?php echo $this->escapeCheckEmpty($this->tourismDetail['fax']); ?></td>
+	</tr>
+	<tr>
+	    <td><span class="email">Email</span></td>
+	    <td class="double-dot">:</td>
+	    <td><?php echo $this->escapeCheckEmpty($this->tourismDetail['email']); ?></td>
+	</tr>
+	<tr>
+	    <td><span class="website">Website</span></td>
+	    <td class="double-dot">:</td>
+	    <td><?php echo $this->escapeCheckEmpty($this->tourismDetail['website']); ?></td>
+	</tr>
+    </table>
+    </div>    
+    
+</div>
+
+<div id="social-network" style="border-top: 1px dashed #000; padding: 15px 0;">
+    <div id="fb-like" style="width: 90px;">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo $this->currentUrl();?>&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+    <div id="tweetme">
+        <script type="text/javascript">
+            tweetmeme_style = 'compact';
+            tweetmeme_url = '<?php echo $this->currentUrl(); ?>';
+        </script>
+        <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+    </div>
+	<?php echo $this->shareSave(); ?>
+</div>
+
+
+<!--  addtoAny Js -->
+<?php $this->placeholder("jsInline")->captureStart() ?>
+    <script type="text/javascript">
+        loadScript("http://static.addtoany.com/menu/page.js", function(){});
+        $(document).ready(function() {
+            $('.reply').fancybox({
+                'transitionIn'		: 'elastic',
+                'transitionOut'		: 'elastic',
+                'autoScale'             : false,
+                'type'                  : 'iframe'
+
+            });
+        });
+    </script>
+<?php $this->placeholder("jsInline")->captureEnd() ?>

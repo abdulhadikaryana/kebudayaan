@@ -1,0 +1,39 @@
+<tr>
+    <td>
+        <a href="<?php echo $this->rootUrl('/admin/materialpromotionindo/edit/id/' . $this->material_id); ?>/lang/2">
+            <?php echo $this->HtmlDecode($this->title); ?></a></td>
+    <td>
+        <a class="general-remove" 
+           href="<?php echo $this->rootUrl('/admin/materialpromotionindo/edit/id/' . $this->material_id); ?>/lang/2">
+            Edit</a></td>
+
+   <td>
+        <table class="cleartable">
+            <tr><td><a>English Translation</a></td></tr>
+            <tr>
+                <td>
+                    <table class="cleartable mini">
+                        <tr>
+                            <td><a class="general-remove" href="<?php echo $this->rootUrl('/admin/materialpromotionindo/edit/id/' . $this->material_id); ?>/lang/1">
+            <?php $this->CheckMaterialIndo($this->material_id, 1)?></a></td>
+
+                            <?php $indtrans = $this->CheckMaterialIndoTrans($this->material_id, 1);
+                                  if($indtrans == true){?>
+                            <td>
+        <div class="general-remove"
+             onclick="deleteMaterialEnglish(<?php echo $this->material_id; ?>);">
+            Delete</div></td>
+                            <?php } ?>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+
+ 
+    <td>
+        <div class="general-remove" 
+             onclick="deleteMaterial(<?php echo $this->material_id; ?>);">
+            Delete</div></td>
+</tr>

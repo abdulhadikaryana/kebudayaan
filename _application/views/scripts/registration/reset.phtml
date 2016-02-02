@@ -1,0 +1,20 @@
+<div class="section">
+    <h2 class="section-title"><span><?php echo $this->pageTitle ?></span></h2>
+
+    <?php if($this->changeSuccess): ?>
+        <div id="change-password-message">
+            <p>
+                <span class="ui-icon ui-icon-circle-check icon-msg"></span>
+                You have been successfully changed your password
+            </p>
+        </div>
+    <?php else: ?>
+        <div id="change-password-box">
+            <div class="error-box hidden"></div>
+            <div class="success hidden">
+
+            </div>
+            <?php echo $this->form ?>
+        </div>
+    <?php endif; ?>
+</div>

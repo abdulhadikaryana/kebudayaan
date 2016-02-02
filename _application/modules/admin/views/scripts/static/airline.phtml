@@ -1,0 +1,113 @@
+<!--
+ * AirlineViewer
+ *
+ * Viewer untuk halaman airline / flight to indonesia
+ *
+ * Code blame to: BEM
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+<div class="section">
+    <h2 class="section-title">
+        <span><?php echo $this->staticContent[0]['title'] ?></span>
+    </h2>
+
+    <?php echo $this->staticContent[0]['content'] ?>
+
+    <?php echo $this->paginationControl(
+            $this->airline,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'upMessage' => true)); ?>
+    
+    <?php foreach($this->airline as $airline) : ?>
+        <div class="en-list" id="<?php echo $airline['airline_id'] ?>"
+             style="padding-top: 20px">
+
+            <div style="float: left; width: 200px">
+                <img style="max-width: 120px;" src="<?php echo $this->imageUrl(
+                        '/upload/airlines/' . $airline['image'])?>"
+                        alt="<?php echo $airline['name'] ?>"/>
+            </div>
+            
+            <div style="float: left; width: 500px">
+
+                <h3><?php echo $airline['name'] ?></h3>
+
+                <p style="text-align: justify">
+                    <?php echo $airline['description'] ?>
+                </p>
+                <br style="clear: both;" />
+
+                <?php if (!empty ($airline['website'])) : ?>
+                    <div>
+                        <div class="website" style="float: left; width: 80px">
+                            <!-- id_list_website = 'Website' -->
+                            <?php echo $this->translate('id_list_website'); ?>
+                        </div>
+                        <div style="float: left; width: 10px">:</div>
+                        <div style="float: left; width: 300px">
+                            <a href="<?php echo $airline['website'] ?>">
+                                <?php echo $airline['website'] ?>
+                            </a>
+                        </div>
+                    </div>
+                    <br style="clear: both;" />
+                <?php endif; ?>
+
+                <?php if (!empty ($airline['email'])) : ?>
+                    <div>
+                        <div class="email" style="float: left; width: 80px">
+                            <!-- id_list_email = 'Email' -->
+                            <?php echo $this->translate('id_list_email'); ?>
+                        </div>
+                        <div style="float: left; width: 10px">:</div>
+                        <div style="float: left; width: 300px">
+                            <a href="mailto: <?php echo $airline['email'] ?>">
+                                <?php echo $airline['email'] ?>
+                            </a>
+                        </div>
+                    </div>
+                    <br style="clear: both;" />
+                <?php endif; ?>
+
+                <?php if (!empty ($airline['fax'])) : ?>
+                    <div>
+                        <div class="fax" style="float: left; width: 80px">
+                            <!-- id_list_fax = 'Fax' -->
+                            <?php echo $this->translate('id_list_fax'); ?>
+                        </div>
+                        <div style="float: left; width: 10px">:</div>
+                        <div style="float: left; width: 300px">
+                            <?php echo $airline['fax'] ?>
+                        </div>
+                    </div>
+                    <br style="clear: both;" />
+                <?php endif; ?>
+
+                <?php if (!empty ($this->telp[$airline['airline_id']])) : ?>
+                    <div>
+                        <div class="phone" style="float: left; width: 80px">
+                            <!-- id_list_contact = 'Contact' -->
+                            <?php echo $this->translate('id_list_contact'); ?>
+                        </div>
+                        <div style="float: left; width: 10px">:</div>
+                        <div style="float: left; width: 300px">
+                            <?php echo $this->telp[$airline['airline_id']] ?>
+                        </div>
+                    </div>
+                    <br style="clear: both;" />
+                <?php endif; ?>
+
+            </div>
+            <br style="clear: both;" />
+        </div>
+    <?php endforeach; ?>
+
+    <?php echo $this->paginationControl(
+            $this->airline,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'downMessage' => true)); ?>
+</div>

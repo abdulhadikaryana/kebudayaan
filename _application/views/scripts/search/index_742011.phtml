@@ -1,0 +1,690 @@
+<div id="boxLoading">Loading...</div>
+
+    <table width="100%" style="margin-bottom:6px;">    
+      <tr><td><div id="searchcontrol">Searching by keyword : <label id="keyWord" style="font-weight:bold"></label></div></td></tr>
+      <tr><td><span id="searchresult"><a name="top"></a></span></td></tr>
+    </table>
+    <div id="tabbed_box_1" class="tabbed_box">        
+        <div class="tabbed_area">
+            <ul class="tabs" id="tabs">
+                <li><a href="#top" id="news" class="tabsearch active">News</a></li>
+                <li><a href="#top" id="event" class="tabsearch">Events</a></li>
+                <li><a href="#top" id="dest" class="tabsearch">Destinations</a></li>
+                <li><a href="#top" id="article" class="tabsearch">Article</a></li>
+                <li><a href="#top" id="gallery" class="tabsearch">Gallery</a></li>
+            </ul>            
+            <div id="content_news" class="content">
+            	<ul id="news_content">
+                    <?php echo $this->news;?>
+    			</ul>
+
+            </div>
+
+            <div id="content_event" class="content">
+            	<ul id="event_content">
+                    <?php echo $this->event;?>
+    			</ul>
+
+            </div>
+
+            <div id="content_dest" class="content">
+            	<ul id="dest_content">
+                    <?php echo $this->destination;?>
+    			</ul>
+
+                
+            </div>  
+
+
+            <div id="content_article" class="content" style="display:none">
+            	<ul id="article_content">
+                    <?php echo $this->article;?>
+    			</ul>
+
+
+            </div>  
+
+            <div id="content_gallery" class="content" style="display:none">
+
+            	<ul id="gallery_content">
+                    <?php echo $this->gallery;?>
+    			</ul>
+
+            </div>
+            
+            <div class="paging">
+                <div class="navigation" id="nav_news">
+                   <input disabled="disabled" class="first passive" id="first_news" type="button" value="first"/>
+                   <input disabled="disabled" class="prev passive" id="prev_news" type="button" value="prev"/>
+                        <div class="linkpages" id="linkpage_news" style="float:left" title="news">
+                            <?php echo $this->linkpage_news;?>
+                        </div>
+                   <input class="next" id="next_news" type="button" value="next"/>
+                   <input class="last" id="last_news" type="button" value="last"/>
+
+                </div>
+                
+                <div class="navigation" id="nav_event" style="display:none">
+                   <input disabled="disabled" class="first passive" id="first_event" type="button" value="first"/>
+                   <input disabled="disabled" class="prev passive" id="prev_event" type="button" value="prev"/>
+
+                        <div class="linkpages" id="linkpage_event" style="float:left;display:none;" title="event">
+                            <?php echo $this->linkpage_event;?>
+                        </div>
+
+                   <input class="next" id="next_event" type="button" value="next"/>
+                   <input class="last" id="last_event" type="button" value="last"/>
+                </div>
+                
+                <div class="navigation" id="nav_dest" style="display:none">
+                   <input disabled="disabled" class="first passive" id="first_dest" type="button" value="first"/>
+                   <input disabled="disabled" class="prev passive" id="prev_dest" type="button" value="prev"/>
+                        <div class="linkpages" id="linkpage_dest" style="float:left;display:none;" title="dest">
+                           <?php echo $this->linkpage_dest;?>
+                       </div>
+                   <input class="next" id="next_dest" type="button" value="next"/>
+                   <input class="last" id="last_dest" type="button" value="last"/>
+                </div>
+
+                <div class="navigation" id="nav_article" style="display:none">
+                   <input disabled="disabled" class="first passive" id="first_article" type="button" value="first"/>
+                   <input disabled="disabled" class="prev passive" id="prev_article" type="button" value="prev"/>
+                        <div class="linkpages" id="linkpage_article" style="float:left;display:none;" title="article">
+                            <?php echo $this->linkpage_article;?>
+                        </div>
+                   <input class="next" id="next_article" type="button" value="next"/>
+                   <input class="last" id="last_article" type="button" value="last"/>
+                </div>
+
+                <div class="navigation" id="nav_gallery" style="display:none">
+                   <input disabled="disabled" class="first passive" id="first_gallery" type="button" value="first"/>
+                   <input disabled="disabled" class="prev passive" id="prev_gallery" type="button" value="prev"/>
+                        <div class="linkpages" id="linkpage_gallery" style="float:left;display:none;" title="gallery">
+                            <?php echo $this->linkpage_gallery;?>
+                        </div>
+                   <input class="next" id="next_gallery" type="button" value="next"/>
+                   <input class="last" id="last_gallery" type="button" value="last"/>
+                </div>
+
+           </div>              
+        </div>                
+    </div>
+
+<!--news param nav-->
+<input type="hidden" id="paramlast_news" size=1 title="last_news" value="<?php echo $this->totalpage_news;?>" />
+<input type="hidden" id="offset_news" size=1 title="offset_news" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_news" size=1 title="curpage_news" value="1" />
+<input type="hidden" id="allpage_news" size=1 title="allpage_news" value="<?php echo $this->totalpage_news;?>" />
+<input type="hidden" id="param_news" size=10 title="param_news" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_news" size=1 title="first_news" value="1" />
+<!--end news param nav-->
+<br />
+
+<!--event param nav-->
+<input type="hidden" id="paramlast_event" size=1 title="last_event" value="<?php echo $this->totalpage_event;?>" />
+<input type="hidden" id="offset_event" size=1 title="offset_event" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_event" size=1 title="curpage_event" value="1" />
+<input type="hidden" id="allpage_event" size=1 title="allpage_event" value="<?php echo $this->totalpage_event;?>" />
+<input type="hidden" id="param_event" size=10 title="param_event" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_event" size=1 title="first_event" value="1" />
+<!--end event param nav-->
+<br />
+
+<!--dest param nav-->
+
+<input type="hidden" id="paramlast_dest" size=1 title="last_dest" value="<?php echo $this->totalpage_dest;?>" />
+<input type="hidden" id="offset_dest" size=1 title="offset_dest" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_dest" size=1 title="curpage_dest" value="1" />
+<input type="hidden" id="allpage_dest" size=1 title="allpage_dest" value="<?php echo $this->totalpage_dest;?>" />
+<input type="hidden" id="param_dest" size=10 title="param_dest" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_dest" size=1 title="first_dest" value="1" />
+<!--enddest param nav-->
+<br />
+
+<!--article param nav-->
+<input type="hidden" id="paramlast_article" size=1 title="last_article" value="<?php echo $this->totalpage_article;?>" />
+<input type="hidden" id="offset_article" size=1 title="offset_article" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_article" size=1 title="curpage_article" value="1" />
+<input type="hidden" id="allpage_article" size=1 title="allpage_article" value="<?php echo $this->totalpage_article;?>" />
+<input type="hidden" id="param_article" size=10 title="param_article" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_article" size=1 title="first_article" value="1" />
+<!--end article param nav-->
+<br />
+
+<!--galley param nav-->
+<input type="hidden" id="paramlast_gallery" size=1 title="last_gallery" value="<?php echo $this->totalpage_gallery;?>" />
+<input type="hidden" id="offset_gallery" size=1 title="offset_gallery" value="<?php echo $this->offset;?>" />
+<input type="hidden" id="curpage_gallery" size=1 title="curpage_gallery" value="1" />
+<input type="hidden" id="allpage_gallery" size=1 title="allpage_gallery" value="<?php echo $this->totalpage_gallery;?>" />
+<input type="hidden" id="param_gallery" size=10 title="param_gallery" value="<?php echo $this->param;?>" />
+<input type="hidden" id="first_gallery" size=1 title="first_gallery" value="1" />
+<!--end gallery param nav-->
+
+
+
+<?php
+//echo $this->imageUrl();
+?>
+
+<?php
+  //$this->headScript()->appendFile($this->scriptUrl('/javascripts/jquery/jquery.shadow.js'));
+  //$this->headScript()->appendFile($this->scriptUrl('/javascripts/jquery/jquery.ifixpng.js'));
+  //$this->headScript()->appendFile($this->scriptUrl('/javascripts/jquery/jquery.fancyzoom.js'));
+?>
+
+<!--<script type="text/javascript" src="<?php echo $this->assets;?>/scripts/javascripts/jquery/jquery.shadow.js"></script>
+<script type="text/javascript" src="<?php echo $this->assets;?>/scripts/javascripts/jquery/jquery.ifixpng.js"></script>
+<script type="text/javascript" src="<?php echo $this->assets;?>/scripts/javascripts/jquery/jquery.fancyzoom.js"></script>-->
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>
+
+<script type="text/javascript">
+function hideNav()
+{
+	if(($('#allpage_news').val()) > 1){
+        $('#nav_news').show();
+        $('#linkpage_news').show();
+	}
+    
+    
+}
+
+function funcyAction(){
+    //objek kumabang
+	//console.log($('#gallery_content li a'));
+	$('#gallery_content li a').each(function(){
+		$(this).fancybox();
+	});
+}
+
+$(document).ready(function(){
+    $('.next').removeAttr('disabled');
+    $('.last').removeAttr('disabled');
+    $('#curpage_news').val(1);
+    $('#curpage_event').val(1);
+    $('#curpage_dest').val(1);
+    $('#curpage_article').val(1);
+    $('#curpage_gallery').val(1);
+    
+    $('#keyWord').text('<?php echo $this->param;?>');
+
+	funcyAction();
+
+    hideNav();
+
+    $('#boxLoading').ajaxStart(function() {
+        $(this).show();
+    });
+    
+    $('#boxLoading').ajaxStop(function() {
+        $(this).hide();
+    });
+
+	//default active tab
+	$('.content').hide();
+	$('#content_news').show();
+    
+    $('.tabsearch').click(function(){
+        var id = $(this).attr('id');
+
+        var content_id = ($(this).attr('id')).substr(4);
+		$('.content').hide();
+        $('.navigation').hide();
+        $('.linkpages').hide();
+
+
+        $('#content_'+id).show();
+        
+        
+        $('#tabs li a').removeClass('active');
+        $(this).addClass('active');
+		
+		var allpage = $('#allpage_'+id).val();
+
+		if(allpage > 1)
+		{
+			if(allpage > 5){
+				$('#first_'+id).show();
+				$('#last_'+id).show();
+			}else{
+				$('#first_'+id).hide();
+				$('#last_'+id).hide();
+			}
+			
+			
+			//$('.navigation').hide();
+			$('#nav_'+id).show();
+	
+			//$('.navigation').hide();
+			//$('.linkpages').hide();
+			$('#linkpage_'+id).show();
+		}        
+    });
+    
+    $('.last').click(function(){
+        var id = ($(this).attr('id')).substr(5);
+        
+        var tmp_offset = "<?php echo $this->limit?>";
+        var lastpage = $('#paramlast_'+id).val();
+        var offset = (tmp_offset * lastpage)-tmp_offset;
+        //alert(offset);
+
+
+        $.post("<?php echo $this->baseUrl('/search/');?>"+id+'paging',
+        {
+        
+          paramOffset: offset,
+          paramKey: $('#param_'+id).val(),
+          paramPage : ($('#paramlast_'+id).val())-1,
+          paramLimit : "<?php echo $this->limit;?>",
+          actionQuery: "next"
+        },
+        function(data){
+          
+          $('#'+id+'_content').html(data.result);
+		  funcyAction();
+        
+            var awal		= data.start;
+            var akhir		= data.end;
+            var per_page	= data.per_pages;
+            var cur_page	= data.cur_pages;
+            var link_page	= '';
+            
+            //GENERATE LINK PAGES
+            for (var loop = awal -1; loop <= akhir; loop++)
+            {
+                var link_offset = (loop * per_page) - per_page;
+                var get_curpage = loop;
+                //var get_curpage = loop - 1;
+            
+                if (link_offset >= 0)
+                {
+                    if (cur_page == loop)
+                    {
+                        link_page += '<div class="cur_page">'+loop+'</div>';
+                    }
+                    else
+                    {
+                        var n = (link_offset == 0) ? '' : link_offset;
+                        
+                        link_page += '<div class="pages '+id+'" id="'+loop+'" title="'+get_curpage+'">'+loop+'</div>';
+        
+                    }
+                }
+            }
+          
+          $('#linkpage_'+id).html(link_page);
+          
+          $('#offset_'+id).attr('value',data.offset);
+          $('#curpage_'+id).attr('value',data.curpages);
+          
+          $('#prev_'+id).removeAttr('disabled','disabled');
+          $('#prev_'+id).removeClass('passive');
+
+          $('#first_'+id).removeAttr('disabled','disabled');
+          $('#first_'+id).removeClass('passive');
+          
+          if(($('#allpage_'+id).val()) == data.curpages)
+          {
+            $('#next_'+id).attr('disabled','disabled');
+            $('#next_'+id).addClass('passive');
+
+            $('#last_'+id).attr('disabled','disabled');
+            $('#last_'+id).addClass('passive');
+          }
+        
+            linkPage();
+        
+        }, "json");
+
+    })
+    
+    $('.first').click(function(){
+        var id = ($(this).attr('id')).substr(6);
+        //alert(id);
+    
+        $.post("<?php echo $this->baseUrl('/search/');?>"+id+'paging',
+        {
+          paramOffset: 0,
+          paramKey: $('#param_'+id).val(),
+          paramPage : 0,
+          paramLimit : "<?php echo $this->limit;?>",
+          actionQuery: ""
+        },
+        function(data){
+          
+          $('#'+id+'_content').html(data.result);
+		  funcyAction();
+    
+            var awal		= data.start;
+            var akhir		= data.end;
+            var per_page	= data.per_pages;
+            var cur_page	= data.cur_pages;
+            var link_page	= '';
+            
+            //GENERATE LINK PAGES
+            for (var loop = awal -1; loop <= akhir; loop++)
+            {
+                var link_offset = (loop * per_page) - per_page;
+                var get_curpage = loop;
+                //var get_curpage = loop - 1;
+            
+                if (link_offset >= 0)
+                {
+                    if (cur_page == loop)
+                    {
+                        link_page += '<div class="cur_page">'+loop+'</div>';
+                    }
+                    else
+                    {
+                        var n = (link_offset == 0) ? '' : link_offset;
+                        
+                        link_page += '<div class="pages '+id+'" id="'+loop+'" title="'+get_curpage+'">'+loop+'</div>';
+    
+                    }
+                }
+            }
+          
+          //alert(link_page);
+          $('#linkpage_'+id).html(link_page);
+          
+          $('#offset_'+id).attr('value',data.offset);
+          $('#curpage_'+id).attr('value',data.curpages);
+          
+          $('#next_'+id).removeAttr('disabled','disabled');
+          $('#next_'+id).removeClass('passive');
+
+          $('#last_'+id).removeAttr('disabled','disabled');
+          $('#last_'+id).removeClass('passive');
+          
+          if(data.curpages == 1)
+          {
+            $('#prev_'+id).attr('disabled','disabled');
+            $('#prev_'+id).addClass('passive');
+
+            $('#first_'+id).attr('disabled','disabled');
+            $('#first_'+id).addClass('passive');
+
+          }
+    
+            linkPage();
+    
+        }, "json");
+
+    })
+    
+  $('.next').click(function(){
+    
+    var methodAction = ($(this).attr('id')).substr(5);
+    var id = methodAction;
+
+    $.post("<?php echo $this->baseUrl('/search/');?>"+methodAction+'paging',
+    {
+
+      paramOffset: $('#offset_'+id).val(),
+      paramKey: $('#param_'+id).val(),
+      paramPage : $('#curpage_'+id).val(),
+      paramLimit : "<?php echo $this->limit;?>",
+      actionQuery: "next"
+    },
+    function(data){
+      
+      //alert(data.result);
+      $('#'+id+'_content').html(data.result);
+	  funcyAction();
+      
+
+		var awal		= data.start;
+		var akhir		= data.end;
+		var per_page	= data.per_pages;
+		var cur_page	= data.cur_pages;
+		var link_page	= '';
+        
+        //alert(cur_page);
+ 
+ 		//GENERATE LINK PAGES
+		for (var loop = awal -1; loop <= akhir; loop++)
+		{
+			var link_offset = (loop * per_page) - per_page;
+			var get_curpage = loop;
+			//var get_curpage = loop - 1;
+		
+			if (link_offset >= 0)
+			{
+				if (cur_page == loop)
+				{
+					link_page += '<div class="cur_page">'+loop+'</div>';
+				}
+				else
+				{
+					var n = (link_offset == 0) ? '' : link_offset;
+					
+					link_page += '<div class="pages '+id+'" id="'+loop+'" title="'+get_curpage+'">'+loop+'</div>';
+
+				}
+			}
+		}
+      
+      $('#linkpage_'+id).html(link_page);
+      
+      $('#offset_'+id).attr('value',data.offset);
+      $('#curpage_'+id).attr('value',data.curpages);
+      
+		$('#prev_'+id).removeAttr('disabled','disabled');
+		$('#prev_'+id).removeClass('passive');
+	
+		$('#first_'+id).removeAttr('disabled','disabled');
+		$('#first_'+id).removeClass('passive');
+		
+		if(($('#allpage_'+id).val()) == data.curpages)
+		{
+		  $('#next_'+id).attr('disabled','disabled');
+		  $('#next_'+id).addClass('passive');
+	
+		  $('#last_'+id).attr('disabled','disabled');
+		  $('#last_'+id).addClass('passive');
+		}
+	  
+		  linkPage();
+
+    }, "json");
+  
+  
+  })  
+
+  $('.prev').click(function(){
+    
+    var methodAction = ($(this).attr('id')).substr(5);
+    var id = methodAction;
+
+    $.post("<?php echo $this->baseUrl('/search/');?>"+methodAction+'paging',
+    {
+      paramOffset: ($('#offset_'+id).val())-(parseInt("<?php echo $this->limit?>"))*2,
+      paramKey: $('#param_'+id).val(),
+      paramPage : $('#curpage_'+id).val(),
+      paramLimit : "<?php echo $this->limit;?>",
+      actionQuery: "prev"
+    },
+    function(data){
+      
+      $('#'+id+'_content').html(data.result);
+	  funcyAction();
+
+		var awal		= data.start;
+		var akhir		= data.end;
+		var per_page	= data.per_pages;
+		var cur_page	= data.cur_pages;
+		var link_page	= '';
+        
+ 		//GENERATE LINK PAGES
+		for (var loop = awal -1; loop <= akhir; loop++)
+		{
+			var link_offset = (loop * per_page) - per_page;
+			var get_curpage = loop;
+			//var get_curpage = loop - 1;
+		
+			if (link_offset >= 0)
+			{
+				if (cur_page == loop)
+				{
+					link_page += '<div class="cur_page">'+loop+'</div>';
+				}
+				else
+				{
+					var n = (link_offset == 0) ? '' : link_offset;
+					
+					link_page += '<div class="pages '+id+'" id="'+loop+'" title="'+get_curpage+'">'+loop+'</div>';
+
+				}
+			}
+		}
+      
+      //alert(link_page);
+      $('#linkpage_'+id).html(link_page);
+      
+      $('#offset_'+id).attr('value',data.offset);
+      $('#curpage_'+id).attr('value',data.curpages);
+      
+		$('#next_'+id).removeAttr('disabled','disabled');
+		$('#next_'+id).removeClass('passive');
+	
+		$('#last_'+id).removeAttr('disabled','disabled');
+		$('#last_'+id).removeClass('passive');
+		
+		if(data.curpages == 1)
+		{
+		  $('#prev_'+id).attr('disabled','disabled');
+		  $('#prev_'+id).addClass('passive');
+	
+		  $('#first_'+id).attr('disabled','disabled');
+		  $('#first_'+id).addClass('passive');
+	
+		}
+	
+		  linkPage();
+    }, "json");
+  
+  
+  })
+  
+  
+    linkPage();
+  
+
+});
+
+function linkPage(param_id){
+$('.pages').click(function(){
+    
+    if(param_id)
+    {
+        var id = param_id;
+    }else{
+        var id = ($(this).attr('class')).substr(6);
+    }
+    
+    
+    var page = $(this).attr('title');
+
+    var key = $('#param_'+id).val();
+    var limit = "<?php echo $this->limit;?>";
+    var offset = (page-1)*limit;
+    //var offset = $('#offset_'+id).val();
+
+    //alert(offset);
+
+    $.post("<?php echo $this->baseUrl('/search/');?>"+id+'paging',
+    {
+      paramOffset: offset,
+      paramKey: key,
+      paramPage : page-1,
+      paramLimit : limit,
+      actionQuery: ""
+    },
+    function(data){
+      
+      $('#'+id+'_content').html(data.result);
+	  funcyAction();
+
+		var awal		= data.start;
+		var akhir		= data.end;
+		var per_page	= data.per_pages;
+		var cur_page	= data.cur_pages;
+		var link_page	= '';
+        
+ 		//GENERATE LINK PAGES
+		for (var loop = awal -1; loop <= akhir; loop++)
+		{
+			var link_offset = (loop * per_page) - per_page;
+			var get_curpage = loop;
+			//var get_curpage = loop - 1;
+		
+			if (link_offset >= 0)
+			{
+				if (cur_page == loop)
+				{
+					link_page += '<div class="cur_page">'+loop+'</div>';
+				}
+				else
+				{
+					var n = (link_offset == 0) ? '' : link_offset;
+					
+					link_page += '<div class="pages '+id+'" id="'+loop+'" title="'+get_curpage+'">'+loop+'</div>';
+
+				}
+			}
+		}
+      
+      //alert(link_page);
+      $('#linkpage_'+id).html(link_page);
+      
+      $('#offset_'+id).attr('value',data.offset);
+      $('#curpage_'+id).attr('value',data.curpages);
+      
+
+        linkPage(); //memanggil fungsi dirinya sendiri
+    
+    //alert(data.curpages);
+
+    //jika current page lebih besar dari 1    
+    if(data.cur_pages == 1)
+    {
+      $('#prev_'+id).attr('disabled','disabled');
+      $('#prev_'+id).addClass('passive');
+    
+      $('#first_'+id).attr('disabled','disabled');
+      $('#first_'+id).addClass('passive');
+    
+    }else{
+        $('#prev_'+id).removeAttr('disabled','disabled');
+        $('#prev_'+id).removeClass('passive');
+        
+        $('#first_'+id).removeAttr('disabled','disabled');
+        $('#first_'+id).removeClass('passive');
+    }
+
+    //jika current page sama dgn total page    
+    if(data.cur_pages == ($('#allpage_'+id).val()))
+    {
+        $('#next_'+id).attr('disabled','disabled');
+        $('#next_'+id).addClass('passive');
+    
+        $('#last_'+id).attr('disabled','disabled');
+        $('#last_'+id).addClass('passive');
+    
+    }else{
+        $('#next_'+id).removeAttr('disabled','disabled');
+        $('#next_'+id).removeClass('passive');
+    
+        $('#last_'+id).removeAttr('disabled','disabled');
+        $('#last_'+id).removeClass('passive');
+    }
+
+    }, "json");
+
+})
+
+}
+
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

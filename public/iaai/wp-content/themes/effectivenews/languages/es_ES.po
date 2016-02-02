@@ -1,0 +1,1441 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Efective News v1.0\n"
+"POT-Creation-Date: 2013-03-28 23:29+0200\n"
+"PO-Revision-Date: 2013-09-02 22:49-0600\n"
+"Last-Translator: Oscar Gonzalez <eldn87@ymail.com>\n"
+"Language-Team: Oscar Gonzalez <eldn87@outlook.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\wordpress\\wp-content\\themes\\effective-"
+"news\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: Español\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "404"
+msgstr "Error 404"
+
+#: 404.php:11
+msgid "The page you are looking for doesn't seem to exist."
+msgstr "La página que está buscando no parece existir."
+
+#: 404.php:13
+msgid "Why don't you try Search or back to "
+msgstr "Trata usando el buscador o regresando a "
+
+#: 404.php:17 searchform.php:4
+msgid "Search here ..."
+msgstr "Busque aquí ..."
+
+#: 404.php:18 searchform.php:5
+msgid "Search"
+msgstr "Buscar"
+
+#: archives.php:7
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Archivos diarios: <span>%s</span>"
+
+#: archives.php:9
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Archivos mensuales: <span>%s</span>"
+
+#: archives.php:11
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Archivos anuales: <span>%s</span>"
+
+#: archives.php:13
+msgid "Blog Archives"
+msgstr "Archivos de blog"
+
+#: archives.php:49 author.php:91 category.php:134 search.php:45
+#: lib/functions/eff_loop.php:103 lib/functions/eff_loop.php:207
+#: lib/functions/eff_loop.php:313 lib/functions/eff_loop.php:381
+#: lib/functions/eff_loop.php:447 lib/functions/eff_loop.php:789
+#: lib/functions/eff_loop.php:1432 lib/functions/eff_loop.php:1501
+#: lib/functions/eff_loop.php:1654
+msgid "Read More &raquo;"
+msgstr "Leer más"
+
+#: archives.php:59 attachment.php:16 search.php:55
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"Disculpa, pero no encontramos nada de acuerdo al criterio de búsqueda. Por "
+"favor intenta con palabras clave diferentes."
+
+#: author.php:13
+msgid "About "
+msgstr "Acerca de "
+
+#: author.php:31 page-authors.php:44 single.php:190
+#: lib/functions/eff_function.php:481
+msgid " 's site"
+msgstr " 's site"
+
+#: author.php:34 page-authors.php:47 single.php:193
+#: lib/functions/eff_function.php:487
+msgid "  on Facebook"
+msgstr "  en Facebook"
+
+#: author.php:37 page-authors.php:50 single.php:196
+#: lib/functions/eff_function.php:484
+msgid "  on Twitter"
+msgstr "  en Twitter"
+
+#: author.php:40 page-authors.php:53 single.php:199
+#: lib/functions/eff_function.php:490
+msgid "  on Google+"
+msgstr "  en Google+"
+
+#: author.php:43 page-authors.php:56 single.php:202
+#: lib/functions/eff_function.php:493
+msgid "  on Linkedin"
+msgstr "  en Linkedin"
+
+#: author.php:46 page-authors.php:59 single.php:205
+#: lib/functions/eff_function.php:496
+msgid "  on Flickr"
+msgstr "  en Flickr"
+
+#: author.php:49 page-authors.php:62 single.php:208
+#: lib/functions/eff_function.php:499
+msgid "  on YouTube"
+msgstr "  en YouTube"
+
+#: author.php:52 page-authors.php:65 single.php:211
+#: lib/functions/eff_function.php:502
+msgid "  on Pinterest"
+msgstr "  en Pinterest"
+
+#: author.php:55 page-authors.php:68 single.php:214
+msgid "  on Dribbble"
+msgstr "  en Dribbble"
+
+#: category.php:10
+#, php-format
+msgid "Category: %s"
+msgstr "Categoría: %s"
+
+#: category.php:13
+msgid "Feed Subscription"
+msgstr "Suscripción de Feed"
+
+#: comments.php:12
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Esta entrada esta protegida por contraseña. Por favor ingresa la contraseña "
+"para ver los comentarios."
+
+#: comments.php:24 lib/widgets/comments-widget.php:77
+#: lib/widgets/tabbed-widget.php:58
+msgid "Comments"
+msgstr "Comentarios"
+
+#: comments.php:34
+msgid "Older Comments"
+msgstr "Comentarios antiguos"
+
+#: comments.php:35
+msgid "Newer Comments"
+msgstr "Comentarios recientes"
+
+#: comments.php:49
+msgid "Leave a Comment"
+msgstr "Deja tu comentario"
+
+#: comments.php:49
+#, php-format
+msgid "Leave a Comment to %s"
+msgstr "Deja un comentario a %s"
+
+#: comments.php:54
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Usted debe estador %1$slogged in%2$s para escribir un comentario."
+
+#: comments.php:65
+#, php-format
+msgid "Logged in as %1$s. %2$sLog out &raquo;%3$s"
+msgstr "Conectado como %1$s. %2$sLog out &raquo;%3$s"
+
+#: comments.php:65
+msgid "Log out of this account"
+msgstr "Desconectarse de esta cuenta"
+
+#: comments.php:89
+msgid "Post Comment"
+msgstr "Publicar comentario"
+
+#: page-authors.php:92 page-authors.php:96 page-authors.php:101
+#: page-contact.php:138 page-contact.php:142 page-contact.php:147
+#: page-sitemap.php:98 page-sitemap.php:102 page-sitemap.php:107 page.php:39
+#: page.php:43 page.php:48 sidebar.php:4 single.php:259 single.php:263
+#: single.php:268
+msgid "There Is No Sidebar Widgets Yet"
+msgstr "No hay widgets en esta sidebar."
+
+#: page-contact.php:12
+msgid "Please enter your name."
+msgstr "Por favor ingresa tu nombre."
+
+#: page-contact.php:19
+msgid "Please enter your email address."
+msgstr "Por favor ingresa tu correo electronico."
+
+#: page-contact.php:29
+msgid "Please enter a message."
+msgstr "Por favor ingresa tu mensaje."
+
+#: page-contact.php:75
+msgid "Thanks, your email was sent successfully."
+msgstr "Gracias, su correo electrónico ha sido enviado con éxito."
+
+#: page-contact.php:86
+msgid "Sorry, an error occurred."
+msgstr "Disculpa, ocurrió un error."
+
+#: page-contact.php:92
+msgid "Name:"
+msgstr "Nombre:"
+
+#: page-contact.php:100
+msgid "Email:"
+msgstr "Correo:"
+
+#: page-contact.php:107
+msgid "Message:"
+msgstr "Mensaje:"
+
+#: page-contact.php:116
+msgid "Send Email"
+msgstr "Enviar correo"
+
+#: page-sitemap.php:31
+msgid "Posts"
+msgstr ""
+
+#: page-sitemap.php:45
+msgid "Pages"
+msgstr "Páginas"
+
+#: page-sitemap.php:53 lib/admin/functions/functions.options.php:1651
+msgid "Category"
+msgstr "Categoría"
+
+#: page-sitemap.php:61 lib/admin/functions/functions.options.php:1652
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: page-sitemap.php:74
+msgid "Authors"
+msgstr "Autores"
+
+#: search.php:7
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de la búsqueda para: %s"
+
+#: search.php:9
+msgid "Nothing Found"
+msgstr "No se encontró nada"
+
+#: single.php:173
+msgid "About"
+msgstr "Acerca de"
+
+#: single.php:231
+msgid "Related Posts"
+msgstr "Artículos de interes"
+
+#: lib/main.php:61
+msgid "Main"
+msgstr "Principal"
+
+#: lib/main.php:62
+msgid "Top Nav"
+msgstr "Top nav"
+
+#: lib/main.php:87
+msgid "Main sidebar"
+msgstr "Sidebar principal"
+
+#: lib/main.php:99
+msgid "Footer 1"
+msgstr "Footer 1"
+
+#: lib/main.php:109
+msgid "Footer 2"
+msgstr "Footer 2"
+
+#: lib/main.php:119
+msgid "Footer 3"
+msgstr "Footer 3"
+
+#: lib/main.php:129
+msgid "Footer 4"
+msgstr "Footer 4"
+
+#: lib/admin/classes/class.options_machine.php:581
+msgid "Last Backup : "
+msgstr "Última copia de seguridad:"
+
+#: lib/admin/classes/class.options_machine.php:716 lib/social/settings.php:46
+msgid "Upload"
+msgstr "Subir"
+
+#: lib/admin/front-end/options.php:43 lib/admin/front-end/options.php:67
+msgid "Save All Changes"
+msgstr "Guardar todos los cambios"
+
+#: lib/admin/front-end/options.php:68
+msgid "Options Reset"
+msgstr "Opciones de Restablecer"
+
+#: lib/admin/functions/functions.mediauploader.php:20
+msgid "Options"
+msgstr "Opciones"
+
+#: lib/admin/functions/functions.mediauploader.php:210
+msgid "Gallery"
+msgstr "Galería"
+
+#: lib/admin/functions/functions.mediauploader.php:210
+msgid "Previously Uploaded"
+msgstr "Subida anterior"
+
+#: lib/admin/functions/functions.options.php:134
+msgid "Select main layout. Choose between Boxed / Wide layout."
+msgstr "Seleccione el diseño principal. Elija entre el diseño en caja/amplio."
+
+#: lib/admin/functions/functions.options.php:144
+msgid "Select sidebar alignment."
+msgstr "Seleccione la alineación de la sidebar."
+
+#: lib/admin/functions/functions.options.php:154
+msgid ""
+"Upload a 16px x 16px Png/Gif image that will represent your website's "
+"favicon."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:160
+msgid "Upload a Custom Gravatar."
+msgstr "Subir Gravatar personalizado."
+
+#: lib/admin/functions/functions.options.php:166
+msgid "Upload Wordpress admin Login page Logo."
+msgstr "Subir el logo de la página de acceso de Wordpress."
+
+#: lib/admin/functions/functions.options.php:172
+msgid "Enable / Disable Responsive."
+msgstr "Activar/Desactivar - Responsible (Sensible)"
+
+#: lib/admin/functions/functions.options.php:178
+msgid "Enable / Disable breadcrumb in Pages."
+msgstr "Activar/Desactivar - Breadcrumb en páginas"
+
+#: lib/admin/functions/functions.options.php:185
+msgid "Contact us Recipient Email."
+msgstr "Correo del destionario para formulario de contacto"
+
+#: lib/admin/functions/functions.options.php:192
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. This will be "
+"added into the footer template of your theme."
+msgstr ""
+"Pegue su código de Google Analytics (u otro) código de seguimiento. Esto se "
+"añade a la plantilla de pie de página de su tema."
+
+#: lib/admin/functions/functions.options.php:204
+msgid "Enable / Disable Today Date in Topbar."
+msgstr "Activar/Desactivar - Fecha de hoy en la barra superior."
+
+#: lib/admin/functions/functions.options.php:211
+msgid ""
+"Date Format for more information <a href=\"http://codex.wordpress.org/"
+"Formatting_Date_and_Time\" target=\"_new\">here</a>."
+msgstr ""
+"Formato de fecha. Para más información<a href=\"http://codex.wordpress.org/"
+"Formatting_Date_and_Time\" target=\"_new\">aquí</a>."
+
+#: lib/admin/functions/functions.options.php:257
+msgid "Enable / Disable Sticky Navigation menu."
+msgstr "Activar/Desactivar - Menú de navegación adherido."
+
+#: lib/admin/functions/functions.options.php:268
+msgid "Enable / Disable main bar after Header."
+msgstr "Activar/Desactivar - Barra principal después de la cabecera."
+
+#: lib/admin/functions/functions.options.php:274
+msgid "Enable / Disable Search Form in main bar."
+msgstr "Activar/Desactivar - Formulario de búsqueda en la barra principal."
+
+#: lib/admin/functions/functions.options.php:284
+msgid "Enable / Disable Breaking News."
+msgstr "Activar/Desactivar - Noticias de última hora."
+
+#: lib/admin/functions/functions.options.php:314
+msgid "Insert Custom Text, One Sentence Per Line."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:342
+msgid "Organize how you want the layout to appear on the homepage"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:348
+msgid "Select Blog Style, Choose between Small , Big , Masonry Style"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:359
+msgid "Enable Feature Slider in homepage If used blog Style."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:366
+msgid "Enable Carousel in homepage If used blog Style."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:377
+msgid "Select your Slider, Choose between Cycle , Filex , CarouFredSel"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:540
+msgid "Latest"
+msgstr "último"
+
+#: lib/admin/functions/functions.options.php:541
+msgid "Random"
+msgstr "Random"
+
+#: lib/admin/functions/functions.options.php:542
+#: lib/widgets/tabbed-widget.php:56
+msgid "Popular"
+msgstr "Popular"
+
+#: lib/admin/functions/functions.options.php:607
+#: lib/admin/functions/functions.options.php:649
+#: lib/admin/functions/functions.options.php:691
+#: lib/admin/functions/functions.options.php:733
+#: lib/admin/functions/functions.options.php:775
+#: lib/admin/functions/functions.options.php:817
+#: lib/admin/functions/functions.options.php:859
+#: lib/admin/functions/functions.options.php:901
+#: lib/admin/functions/functions.options.php:943
+#: lib/admin/functions/functions.options.php:985
+msgid "Select News Box Style. Choose between 1,2,3,4,5 Styles."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1004
+msgid "Select Tabs Style. Choose between Horizontal / Vertical."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1013
+#: lib/admin/functions/functions.options.php:1638
+msgid "Number Of Posts"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1028
+#: lib/admin/functions/functions.options.php:1062
+#: lib/admin/functions/functions.options.php:1096
+#: lib/admin/functions/functions.options.php:1130
+#: lib/admin/functions/functions.options.php:1163
+#: lib/admin/functions/functions.options.php:1196
+msgid "If empty there is no tab"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1227
+msgid "Select News in picture Box Style. Choose between 1,2 Styles."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1258
+msgid "You can specify the number of pictures if you choose style 2."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1275
+#: lib/admin/functions/functions.options.php:1318
+msgid "Enable / Disable Header banner."
+msgstr "Activar/Desactivar - Banner en cabecera"
+
+#: lib/admin/functions/functions.options.php:1471
+msgid ""
+"Enable / Disable Social Icons In Top Header <a href=\"../wp-admin/themes.php?"
+"page=sh_sb_settings_page.php\">To custom it from here</a>.."
+msgstr ""
+"Activar/Desactivar - Iconos sociales en la parte superior de la cabecera <a "
+"href=\"../wp-admin/themes.php?page=sh_sb_settings_page.php\">Personaliza "
+"aquí.</a>"
+
+#: lib/admin/functions/functions.options.php:1483
+msgid "Enable / Disable Social Icons In footer."
+msgstr "Activar/Desactivar - Iconos sociales en footer."
+
+#: lib/admin/functions/functions.options.php:1561
+msgid "Enable / Disable Post Meta bar in Posts."
+msgstr "Activar/Desactivar - Metadatos en las entradas."
+
+#: lib/admin/functions/functions.options.php:1568
+msgid "Enable / Disable Date in Post Meta."
+msgstr "Activar/Desactivar - Fecha en los metadatos."
+
+#: lib/admin/functions/functions.options.php:1575
+msgid "Enable / Disable Author in Post Meta."
+msgstr "Activar/Desactivar - Autor en los metadatos."
+
+#: lib/admin/functions/functions.options.php:1582
+msgid "Enable / Disable Category in Post Meta."
+msgstr "Activar/Desactivar - Categoria en los metadatos."
+
+#: lib/admin/functions/functions.options.php:1589
+msgid "Enable / Disable Comment in Post Meta."
+msgstr "Activar/Desactivar - Comentarios en los metadatos."
+
+#: lib/admin/functions/functions.options.php:1596
+msgid "Enable / Disable Font Resize in Post Meta."
+msgstr "Activar/Desactivar - Aumentar fuente en los metadatos."
+
+#: lib/admin/functions/functions.options.php:1608
+msgid "Enable / Disable Next/Prev Article."
+msgstr "Activar/Desactivar - Siguiente/Anterior en los articulos."
+
+#: lib/admin/functions/functions.options.php:1615
+msgid "Enable / Disable Post Tags."
+msgstr "Activar/Desactivar - Etiquetas"
+
+#: lib/admin/functions/functions.options.php:1622
+msgid "Enable / Disable Author Box."
+msgstr "Activar/Desactivar - Caja del autor"
+
+#: lib/admin/functions/functions.options.php:1635
+msgid "Enable / Disable Related Posts."
+msgstr "Activar/Desactivar - Entradas relacionadas."
+
+#: lib/admin/functions/functions.options.php:1645
+msgid "Related Posts By"
+msgstr "Entradas relacionadas por"
+
+#: lib/admin/functions/functions.options.php:1656
+msgid "Related Posts Style"
+msgstr "Estilo de entradas relacionadas"
+
+#: lib/admin/functions/functions.options.php:1675
+msgid "Enable / Disable Share Posts ."
+msgstr "Activar/Desactivar -Compartir entrada"
+
+#: lib/admin/functions/functions.options.php:1778
+msgid "Enable / Disable Rss Feed Subscription in category."
+msgstr "Activar/Desactivar - Suscripcion del Feed en categoria"
+
+#: lib/admin/functions/functions.options.php:1785
+msgid "Enable / Disable Category description."
+msgstr "Activar/Desactivar - Descripción de categoria"
+
+#: lib/admin/functions/functions.options.php:1792
+msgid "Enable / Disable Slidshow in Category page."
+msgstr "Activar/Desactivar - Slidshow en la página de la categoría."
+
+#: lib/admin/functions/functions.options.php:2167
+msgid "Custom CSS For device with 768px width like ipad"
+msgstr "CSS personalizado para dispositivo con un ancho de 768px."
+
+#: lib/admin/functions/functions.options.php:2173
+msgid "Custom CSS For device with 480px width like Landscape phones"
+msgstr "CSS personalizado para dispositivo con un ancho de 480px."
+
+#: lib/admin/functions/functions.options.php:2179
+msgid "Custom CSS For device with 320px width like iPhones"
+msgstr "CSS personalizado para dispositivo con un ancho de 320px."
+
+#: lib/admin/functions/functions.options.php:2190
+msgid "Enable / Disable Meta Description Tag in pages."
+msgstr "Activar/Desactivar - Meta descripción de la etiqueta en las páginas."
+
+#: lib/admin/functions/functions.options.php:2196
+msgid "Add you keywords saperate each keyword with comma"
+msgstr "Agrega sus palabras clave, separando con una coma."
+
+#: lib/admin/functions/functions.options.php:2205
+msgid "Enable / Disable To Top."
+msgstr "Activar/Desactivar - Ir arriba."
+
+#: lib/functions/eff_function.php:42
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: lib/functions/eff_function.php:255
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentarios esta pendiente de moderación."
+
+#: lib/functions/eff_function.php:258
+#, php-format
+msgid "%s "
+msgstr "%s "
+
+#: lib/functions/eff_function.php:259
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s de %2$s"
+
+#: lib/functions/eff_function.php:259
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: lib/functions/eff_function.php:277
+msgid "Theme Option"
+msgstr "Opciones del theme"
+
+#: lib/functions/eff_function.php:302
+msgid "Move to Trash"
+msgstr "Mover a la papelera"
+
+#: lib/functions/eff_function.php:342
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:50
+msgid "Home"
+msgstr ""
+
+#: lib/functions/eff_function.php:414
+msgid "Search results for "
+msgstr "Resultados de busqueda para "
+
+#: lib/functions/eff_function.php:417
+msgid "Posts tagged "
+msgstr "Entradas etiquetadas "
+
+#: lib/functions/eff_function.php:422
+msgid "Articles posted by "
+msgstr "Artículos escritos por "
+
+#: lib/functions/eff_function.php:425
+msgid "Error 404 "
+msgstr "Error 404 "
+
+#: lib/functions/eff_function.php:430
+msgid "Page"
+msgstr "Página"
+
+#: lib/functions/eff_function.php:449 lib/functions/eff_loop.php:1419
+msgid "Posted by: "
+msgstr "Publicado por: "
+
+#: lib/functions/eff_function.php:452 lib/functions/eff_loop.php:1419
+msgid "Category: "
+msgstr "Categoría: "
+
+#: lib/functions/eff_function.php:455
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#: lib/functions/eff_function.php:455
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: lib/functions/eff_function.php:455
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: lib/functions/eff_function.php:472
+msgid "Welcome"
+msgstr "Bienvenido"
+
+#: lib/functions/eff_function.php:475
+msgid "Dashboard"
+msgstr "Escritorio"
+
+#: lib/functions/eff_function.php:476
+msgid "Your Profile"
+msgstr "Su perfil"
+
+#: lib/functions/eff_function.php:477
+msgid "Logout"
+msgstr "Salir"
+
+#: lib/functions/eff_function.php:511
+msgid "Username"
+msgstr "Username"
+
+#: lib/functions/eff_function.php:512
+msgid "Password"
+msgstr "Contraseña"
+
+#: lib/functions/eff_function.php:513
+msgid "Log in"
+msgstr "Entrar"
+
+#: lib/functions/eff_function.php:514
+msgid "Remember Me"
+msgstr "Recordarme"
+
+#: lib/functions/eff_function.php:518
+msgid "Register"
+msgstr "Registro"
+
+#: lib/functions/eff_function.php:519
+msgid "Lost your password?"
+msgstr "¿Olvidaste tu contraseña?"
+
+#: lib/functions/eff_function.php:618 lib/functions/eff_function.php:668
+msgid "&raquo; "
+msgstr "&raquo; "
+
+#: lib/functions/eff_loop.php:530 lib/functions/eff_loop.php:573
+msgid "News In Picture"
+msgstr "Nuevas imagenes"
+
+#: lib/functions/sidebar_generator.php:175
+#: lib/functions/sidebar_generator.php:197
+msgid "Custom Sidebars"
+msgstr "Sidebars personalizadas"
+
+#: lib/functions/sidebar_generator.php:228
+msgid "No Sidebars defined"
+msgstr "Sidebars no definidas"
+
+#: lib/functions/sidebar_generator.php:279
+msgid "Select the custom sidebar, leave unselected to use the default sidebar"
+msgstr ""
+
+#: lib/metaboxes/inc/classes/meta-box.php:297
+msgid "Please correct the errors highlighted below and try again."
+msgstr ""
+"Por favor, corrija los errores destacan a continuación y vuelva a intentarlo."
+
+#: lib/metaboxes/inc/classes/meta-box.php:358
+msgid "+"
+msgstr "+"
+
+#: lib/metaboxes/inc/classes/meta-box.php:380
+msgid "&#8211;"
+msgstr "&#8211;"
+
+#: lib/metaboxes/inc/fields/file.php:66
+msgid "Error: Cannot delete file"
+msgstr "Error: No se puede eliminar el archivo"
+
+#: lib/metaboxes/inc/fields/image.php:64
+msgid "Order saved"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/map.php:46
+msgid "Find Address"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/posts.php:54
+msgid "Post"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/posts.php:64
+#: lib/metaboxes/inc/fields/taxonomy.php:42
+#, php-format
+msgid "Select a %s"
+msgstr "Seleccione un %s"
+
+#: lib/metaboxes/inc/fields/select-advanced.php:69
+msgid "Select a value"
+msgstr "Seleccionar un valor"
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:49
+msgid "You are here: "
+msgstr "Usted está aquí: "
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:177
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:180
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:183
+msgid "Archives for "
+msgstr "Archivos de "
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:187
+msgid "Archives by: "
+msgstr "Archivos por: "
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:192
+msgid "Search results for \""
+msgstr "Resultados de la búsqueda para \""
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:196
+msgid "Page Not Found"
+msgstr "Página no encontrada"
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:239
+msgid "Split"
+msgstr ""
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:242
+msgid "Merge"
+msgstr ""
+
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:245
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:259
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:279
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/shortcodes/widgets.php:24 lib/widgets/twitter-widget.php:50
+#, php-format
+msgid "about %d seconds ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:25 lib/widgets/twitter-widget.php:51
+msgid "about a minute ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:26 lib/widgets/twitter-widget.php:52
+#, php-format
+msgid "about %d minutes ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:27 lib/widgets/twitter-widget.php:53
+msgid "about an hour ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:28 lib/widgets/twitter-widget.php:54
+#, php-format
+msgid "about %d hours ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:29 lib/widgets/twitter-widget.php:55
+msgid "about a day ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:30 lib/widgets/twitter-widget.php:56
+#, php-format
+msgid "about %d days ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:31 lib/widgets/twitter-widget.php:57
+msgid "view tweet on twitter"
+msgstr "ver tweet en twitter"
+
+#: lib/social/help.php:15 lib/social/help.php:99
+msgid "Help"
+msgstr "Ayuda"
+
+#: lib/social/help.php:17 lib/social/help.php:101
+msgid "Including the list of links in your theme"
+msgstr ""
+
+#: lib/social/help.php:19 lib/social/help.php:103
+msgid ""
+"To include the list of links in your theme, you need to place the following "
+"PHP function in the location where you want the links to appear:"
+msgstr ""
+
+#: lib/social/help.php:23 lib/social/help.php:133
+msgid "Theme Developers"
+msgstr ""
+
+#: lib/social/help.php:25 lib/social/help.php:135
+msgid ""
+"If you would like to make your own icon set available to users in the Icon "
+"Box, just place the images inside of an \"images/sb-icons\" folder of your "
+"theme."
+msgstr ""
+
+#: lib/social/help.php:27
+msgid "Credits"
+msgstr "Créditos"
+
+#: lib/social/help.php:29 lib/social/help.php:141
+msgid "Contributors:"
+msgstr "Colaboradores:"
+
+#: lib/social/help.php:33
+msgid "Overview"
+msgstr ""
+
+#: lib/social/help.php:39 lib/social/help.php:51 lib/social/help.php:109
+msgid "Parameters"
+msgstr "Parámetros"
+
+#: lib/social/help.php:41 lib/social/help.php:111
+msgid ""
+"(string) Sets the text or html that precedes the &lt;a&gt; tag. Default = ' '"
+msgstr ""
+
+#: lib/social/help.php:43 lib/social/help.php:113
+msgid ""
+"(string) Sets the text or html that follows the &lt;a&gt; tag. Default = ' '"
+msgstr ""
+
+#: lib/social/help.php:45 lib/social/help.php:115
+msgid ""
+"(boolean) Toggles the display of the generated list of links or return the "
+"list as an HTML text string to be used in PHP. Default = 1"
+msgstr ""
+
+#: lib/social/help.php:57 lib/social/help.php:71 lib/social/help.php:119
+msgid "Example Output"
+msgstr ""
+
+#: lib/social/help.php:59 lib/social/help.php:121
+msgid ""
+"Using the default settings, the <code>social_bartender()</code> function "
+"would output the following:"
+msgstr ""
+
+#: lib/social/help.php:76
+msgid "For more information:"
+msgstr ""
+
+#: lib/social/help.php:77
+msgid ""
+"<a href=\"https://github.com/sawyerh/social-bartender\" target=\"_blank"
+"\">Contribute on Github</a>"
+msgstr ""
+"<a href=\"https://github.com/sawyerh/social-bartender\" target=\"_blank"
+"\">Contribuir en Github</a>"
+
+#: lib/social/help.php:78
+msgid "<a href=\"http://themeandstirredweb.com\">Shaken and Stirred Web</a>"
+msgstr "<a href=\"http://themeandstirredweb.com\">Shaken and Stirred Web</a>"
+
+#: lib/social/help.php:79
+msgid ""
+"<a href=\"http://onlythefunctions.com\" target=\"_blank\">Only the "
+"Functions</a>"
+msgstr ""
+"<a href=\"http://onlythefunctions.com\" target=\"_blank\">Only the "
+"Functions</a>"
+
+#: lib/social/help.php:83
+msgid "Plugin Info"
+msgstr "Información del plugin"
+
+#: lib/social/help.php:137
+msgid "Credits / Support"
+msgstr "Creditos/Soporte"
+
+#: lib/social/help.php:139
+msgid "The Social Bartender plugin was created by"
+msgstr ""
+
+#: lib/social/help.php:139
+msgid ""
+"If you find any bugs, have feature requests, or would like to contribute, "
+"please visit the plugin's <a href=\"https://github.com/sawyerh/social-"
+"bartender\">GitHub page</a>."
+msgstr ""
+
+#: lib/social/settings.php:7
+msgid "Insufficient permissions"
+msgstr "Permisos insuficientes"
+
+#: lib/social/settings.php:27
+msgid "Create New Item"
+msgstr "Crear nuevo objeto"
+
+#: lib/social/settings.php:33 lib/social/settings.php:107
+msgid "Link"
+msgstr "Link"
+
+#: lib/social/settings.php:38 lib/social/settings.php:108
+msgid "Title"
+msgstr "Titulo"
+
+#: lib/social/settings.php:43 lib/social/settings.php:106
+msgid "Icon"
+msgstr "Icono"
+
+#: lib/social/settings.php:51
+msgid "Create Item"
+msgstr "Crear objeto"
+
+#: lib/social/settings.php:61
+msgid "Icon Bucket"
+msgstr ""
+
+#: lib/social/settings.php:86
+msgid "Select an icon above and its URL will be automatically entered for you."
+msgstr ""
+
+#: lib/social/settings.php:145
+msgid "Display the titles instead of images"
+msgstr "Mostrar los títulos en lugar de imágenes"
+
+#: lib/social/settings.php:157
+msgid "You don't have any items in your bar, why not create some?"
+msgstr "Usted no tiene ningún artículo en su bar, ¿por qué no crear un poco?"
+
+#: lib/social/settings.php:201
+msgid "Item added"
+msgstr "Objeto agregado"
+
+#: lib/social/settings.php:250
+msgid "Items updated"
+msgstr "Objeto actualizado"
+
+#: lib/social/social-bartender.php:45
+msgid "Social Icons"
+msgstr "Iconos sociales"
+
+#: lib/social/widget.php:25
+msgid "Set up Social Bartender"
+msgstr ""
+
+#: lib/social/widget.php:25
+msgid "here."
+msgstr "aquí."
+
+#: lib/social/widget.php:28
+msgid "Title (optional):"
+msgstr "Titulo (opcional):"
+
+#: lib/widgets/ads120.php:13
+msgid "Widget display 120*140 Ads"
+msgstr "Widget para mostrar anuncios de 120x140 píxeles"
+
+#: lib/widgets/ads120.php:14
+msgid "Widget - Ads 120*140"
+msgstr "Widget - Anuncio (120x140 px)"
+
+#: lib/widgets/ads120.php:81 lib/widgets/ads120b.php:112
+#: lib/widgets/ads120x.php:81 lib/widgets/ads125.php:112
+#: lib/widgets/ads160.php:68 lib/widgets/ads250.php:70
+#: lib/widgets/ads300.php:70 lib/widgets/ads300x.php:82
+msgid "advertisement"
+msgstr "Anuncio"
+
+#: lib/widgets/ads120.php:92 lib/widgets/ads120b.php:127
+#: lib/widgets/ads120x.php:92 lib/widgets/ads125.php:127
+#: lib/widgets/ads160.php:77 lib/widgets/ads250.php:78
+#: lib/widgets/ads300.php:78 lib/widgets/ads300x.php:93
+#: lib/widgets/custom_html.php:69 lib/widgets/fb_likebox.php:86
+#: lib/widgets/flickr.php:72 lib/widgets/posts-widget.php:175
+#: lib/widgets/postsImages-widget.php:145 lib/widgets/postsList-widget.php:97
+#: lib/widgets/twitter-widget.php:90 lib/widgets/video-widget.php:64
+msgid "Title:"
+msgstr "Titulo:"
+
+#: lib/widgets/ads120.php:98 lib/widgets/ads120b.php:133
+#: lib/widgets/ads120x.php:98 lib/widgets/ads160.php:83
+#: lib/widgets/ads250.php:84 lib/widgets/ads300.php:84
+#: lib/widgets/ads300x.php:99 lib/widgets/custom_html.php:75
+msgid "transparent background"
+msgstr "Fondo transparente"
+
+#: lib/widgets/ads120.php:101 lib/widgets/ads120b.php:136
+#: lib/widgets/ads120x.php:101 lib/widgets/ads300x.php:102
+msgid "First Ad"
+msgstr "1er anuncio"
+
+#: lib/widgets/ads120.php:103 lib/widgets/ads120.php:119
+#: lib/widgets/ads120b.php:138 lib/widgets/ads120b.php:154
+#: lib/widgets/ads120b.php:171 lib/widgets/ads120b.php:187
+#: lib/widgets/ads120x.php:103 lib/widgets/ads120x.php:119
+#: lib/widgets/ads125.php:133 lib/widgets/ads125.php:149
+#: lib/widgets/ads125.php:166 lib/widgets/ads125.php:182
+#: lib/widgets/ads160.php:87 lib/widgets/ads250.php:88
+#: lib/widgets/ads300.php:88 lib/widgets/ads300x.php:104
+#: lib/widgets/ads300x.php:120
+msgid "image:"
+msgstr "Imagen:"
+
+#: lib/widgets/ads120.php:108 lib/widgets/ads120b.php:143
+#: lib/widgets/ads120x.php:108 lib/widgets/ads125.php:138
+#: lib/widgets/ads160.php:92 lib/widgets/ads250.php:93
+#: lib/widgets/ads300.php:93 lib/widgets/ads300x.php:109
+msgid "Link :"
+msgstr "Link:"
+
+#: lib/widgets/ads120.php:113 lib/widgets/ads120.php:129
+#: lib/widgets/ads120b.php:148 lib/widgets/ads120b.php:164
+#: lib/widgets/ads120b.php:181 lib/widgets/ads120b.php:197
+#: lib/widgets/ads120x.php:113 lib/widgets/ads120x.php:129
+#: lib/widgets/ads125.php:143 lib/widgets/ads125.php:159
+#: lib/widgets/ads125.php:176 lib/widgets/ads125.php:192
+#: lib/widgets/ads160.php:97 lib/widgets/ads250.php:98
+#: lib/widgets/ads300.php:98 lib/widgets/ads300x.php:114
+#: lib/widgets/ads300x.php:130
+msgid "ad code :"
+msgstr "Código:"
+
+#: lib/widgets/ads120.php:117 lib/widgets/ads120b.php:152
+#: lib/widgets/ads120x.php:117 lib/widgets/ads300x.php:118
+msgid "Second Ad"
+msgstr "2do anuncio"
+
+#: lib/widgets/ads120.php:124 lib/widgets/ads120b.php:159
+#: lib/widgets/ads120x.php:124 lib/widgets/ads125.php:154
+#: lib/widgets/ads300x.php:125
+msgid "link2 :"
+msgstr "Link 2:"
+
+#: lib/widgets/ads120b.php:13
+msgid "Widget display 120*90 Ads"
+msgstr "Widget para mostrar anuncios de 120x90 píxeles"
+
+#: lib/widgets/ads120b.php:14
+msgid "Widget - Ads 120*90"
+msgstr "Widget - Anuncio (120x90 px)"
+
+#: lib/widgets/ads120b.php:169
+msgid "Third Ad"
+msgstr "3er anuncio"
+
+#: lib/widgets/ads120b.php:176 lib/widgets/ads125.php:171
+msgid "link3 :"
+msgstr "Link 3:"
+
+#: lib/widgets/ads120b.php:185
+msgid "fourth Ad"
+msgstr "4to anuncio"
+
+#: lib/widgets/ads120b.php:192 lib/widgets/ads125.php:187
+msgid "link4 :"
+msgstr "Link 4:"
+
+#: lib/widgets/ads120x.php:13
+msgid "Widget display 120*600 Ads"
+msgstr "Widget para mostrar anuncios de 120x600 píxeles"
+
+#: lib/widgets/ads120x.php:14
+msgid "Widget - Ads 120*600"
+msgstr "Widget - Anuncio (120x600 px)"
+
+#: lib/widgets/ads125.php:13
+msgid "Widget display 125*125 Ads"
+msgstr "Widget para mostrar anuncios de 125x125 píxeles"
+
+#: lib/widgets/ads125.php:14
+msgid "Widget - Ads 125*125"
+msgstr "Widget - Anuncio (125x125 px)"
+
+#: lib/widgets/ads125.php:131
+msgid "Ads #1"
+msgstr "Anuncio #1"
+
+#: lib/widgets/ads125.php:147
+msgid "Ads #2"
+msgstr "Anuncio #2"
+
+#: lib/widgets/ads125.php:164
+msgid "Ads #3"
+msgstr "Anuncio #3"
+
+#: lib/widgets/ads125.php:180
+msgid "Ads #4"
+msgstr "Anuncio #4"
+
+#: lib/widgets/ads160.php:13
+msgid "Widget display 160*600 Ads"
+msgstr "Widget para mostrar anuncios de 160x600 píxeles"
+
+#: lib/widgets/ads160.php:14
+msgid "Widget - Ads 160*600"
+msgstr "Widget - Anuncio (160x600 px)"
+
+#: lib/widgets/ads250.php:13
+msgid "Widget display 250*250 Ads"
+msgstr "Widget para mostrar anuncios de 250x250 píxeles"
+
+#: lib/widgets/ads250.php:14
+msgid "Widget - Ads 250*250"
+msgstr "Widget - Anuncio (250x250 px)"
+
+#: lib/widgets/ads300.php:13
+msgid "Widget display 300*250 Ads"
+msgstr "Widget para mostrar anuncios de 300x250 píxeles"
+
+#: lib/widgets/ads300.php:14
+msgid "Widget - Ads 300*250"
+msgstr "Widget - Anuncio (300x250 px)"
+
+#: lib/widgets/ads300x.php:13
+msgid "Widget display 300*100 Ads"
+msgstr "Widget para mostrar anuncios de 300x100 píxeles"
+
+#: lib/widgets/ads300x.php:14
+msgid "Widget - Ads 300*100"
+msgstr "Widget - Anuncio (300x100 px)"
+
+#: lib/widgets/comments-widget.php:12
+msgid "Widget display Recent Comments with avatar"
+msgstr "Widget para mostrar los comentarios recientes con avatar."
+
+#: lib/widgets/comments-widget.php:14
+msgid "Widget - Recent Comments"
+msgstr "Widget - Comentarios recientes"
+
+#: lib/widgets/comments-widget.php:42 lib/widgets/comments-widget.php:44
+#: lib/widgets/tabbed-widget.php:149 lib/widgets/tabbed-widget.php:153
+msgid "on "
+msgstr "en "
+
+#: lib/widgets/comments-widget.php:83 lib/widgets/newsletter.php:58
+msgid "title:"
+msgstr "título:"
+
+#: lib/widgets/comments-widget.php:88
+msgid "Number of comments"
+msgstr "Número de comentarios"
+
+#: lib/widgets/custom_html.php:13
+msgid "Arbitrary text or HTML with transparent background Ability"
+msgstr "Texto o HTML con capacidad de fondo transparente."
+
+#: lib/widgets/custom_html.php:14
+msgid "widget - Custom Text Widget"
+msgstr "Widget - Widget de texto personalizado"
+
+#: lib/widgets/fb_likebox.php:13
+msgid "Facebook Like Box"
+msgstr "Facebook Like Box"
+
+#: lib/widgets/fb_likebox.php:15
+msgid "Widget - Facebook Likebox"
+msgstr "Widget - Facebook Likebox"
+
+#: lib/widgets/fb_likebox.php:75
+msgid "Facebook"
+msgstr "Facebook"
+
+#: lib/widgets/fb_likebox.php:91
+msgid "Facebook Page URL:"
+msgstr "URL página de Faceboook:"
+
+#: lib/widgets/fb_likebox.php:97
+msgid "Width:"
+msgstr "Ancho:"
+
+#: lib/widgets/fb_likebox.php:102
+msgid "Height:"
+msgstr "Alto:"
+
+#: lib/widgets/fb_likebox.php:107
+msgid "Color Scheme"
+msgstr "Color Scheme"
+
+#: lib/widgets/fb_likebox.php:116
+msgid "Background Color: (color code without #)"
+msgstr "Color de fondo: (código sin el #)"
+
+#: lib/widgets/fb_likebox.php:120
+msgid "Box border Color: (color code without #)"
+msgstr "Color del borde de caja: (código sin el #)"
+
+#: lib/widgets/fb_likebox.php:126
+msgid "Show faces"
+msgstr "Mostrar caras"
+
+#: lib/widgets/fb_likebox.php:131
+msgid "Show stream"
+msgstr "Mostrar flujo"
+
+#: lib/widgets/fb_likebox.php:136
+msgid "Show header"
+msgstr "Mostrar encabezado"
+
+#: lib/widgets/flickr.php:13
+msgid "Widget display Flickr Photo"
+msgstr "Widget para mostrar las fotos de Flickr."
+
+#: lib/widgets/flickr.php:14
+msgid "Widget - Flickr"
+msgstr "Widget - Flickr"
+
+#: lib/widgets/flickr.php:63
+msgid "Flickr"
+msgstr "Flickr"
+
+#: lib/widgets/flickr.php:77
+msgid "Flickr ID:"
+msgstr "Flickr ID:"
+
+#: lib/widgets/flickr.php:82
+msgid "Number of Photos:"
+msgstr "Número de fotos:"
+
+#: lib/widgets/flickr.php:87
+msgid "Type (user or group):"
+msgstr "Tipo (usuario o grupo):"
+
+#: lib/widgets/flickr.php:95
+msgid "Display (random or latest):"
+msgstr "Mostrar (Al azar o ultimos):"
+
+#: lib/widgets/gpluse.php:12
+msgid "widget - Google+ Box"
+msgstr "Widget - Caja de Google+"
+
+#: lib/widgets/gpluse.php:52
+msgid "Find us on Google+"
+msgstr "Síganos en Google+"
+
+#: lib/widgets/gpluse.php:60 lib/widgets/widget-login.php:56
+msgid "Title : "
+msgstr "Titulo: "
+
+#: lib/widgets/gpluse.php:64
+msgid "Page Url : "
+msgstr "Url de la página: "
+
+#: lib/widgets/newsletter.php:12
+msgid "Widget display the Subscribe box"
+msgstr "Widget para mostrar la caja de suscripción."
+
+#: lib/widgets/newsletter.php:14
+msgid "Widget - Newsletter"
+msgstr "Widget - Boletín"
+
+#: lib/widgets/newsletter.php:27
+msgid "Your Email"
+msgstr "Su correo"
+
+#: lib/widgets/newsletter.php:52
+msgid "Subscribe to our newsletter"
+msgstr "Suscríbete a nuestro boletín"
+
+#: lib/widgets/newsletter.php:63
+msgid "feedburner name: (your name without http://feeds.feedburner.com/) "
+msgstr "Nombre de Feedburner: (Su nombre sin http://feeds.feedburner.com/) "
+
+#: lib/widgets/posts-widget.php:13 lib/widgets/postsImages-widget.php:13
+#: lib/widgets/postsList-widget.php:13
+msgid "Widget display Posts order by : Popular, Random, Recent"
+msgstr "Widget para mostrar las entradas por: Popularidad, Al azar, Recientes."
+
+#: lib/widgets/posts-widget.php:14
+msgid "Widget - Posts"
+msgstr "Widget - Posts"
+
+#: lib/widgets/posts-widget.php:169 lib/widgets/postsImages-widget.php:139
+#: lib/widgets/postsList-widget.php:91
+msgid "Most Popular"
+msgstr "Los más populares"
+
+#: lib/widgets/posts-widget.php:180 lib/widgets/postsImages-widget.php:150
+#: lib/widgets/postsList-widget.php:102
+msgid "orderby"
+msgstr "ordenar por"
+
+#: lib/widgets/posts-widget.php:190 lib/widgets/postsImages-widget.php:160
+#: lib/widgets/postsList-widget.php:112
+msgid "Number Of Posts:"
+msgstr "Cantidad de entradas:"
+
+#: lib/widgets/postsImages-widget.php:14
+msgid "Widget - Posts in images"
+msgstr "Widget - Entradas en imagenes"
+
+#: lib/widgets/postsList-widget.php:14
+msgid "Widget - Posts List"
+msgstr "Widget - Lista de entradas"
+
+#: lib/widgets/social-counter.php:12
+msgid ""
+"Widget display a count of your rss subscribers, Twitter followers, facebook "
+"fans"
+msgstr ""
+"Widget mostrar un recuento de sus suscriptores de RSS, los seguidores de "
+"Twitter, los fans de Facebook."
+
+#: lib/widgets/social-counter.php:14
+msgid "Widget - Social Counter"
+msgstr "Widget - Contador social"
+
+#: lib/widgets/social-counter.php:95
+msgid "Fans"
+msgstr "Fans"
+
+#: lib/widgets/social-counter.php:104
+msgid "Followers"
+msgstr "Seguidores"
+
+#: lib/widgets/social-counter.php:118
+msgid "Subscribers"
+msgstr "Suscriptores"
+
+#: lib/widgets/social-counter.php:153
+msgid "rss number (if not use feedburner, or want static number)"
+msgstr ""
+"Número RSS (En caso de no utilizar feedburner, o quieras un número estático)."
+
+#: lib/widgets/social-counter.php:158
+msgid "RSS Link (leave empty to use default rss link)"
+msgstr "Link RSS (Dejar en blanco para usar el enlace RSS defecto)"
+
+#: lib/widgets/social-counter.php:164
+msgid "Twitter Name"
+msgstr "Usuario de Twitter"
+
+#: lib/widgets/social-counter.php:169
+msgid ""
+"facebook page ID (<a target=\"_blank\" href=\"http://hellboundbloggers."
+"com/2010/07/10/find-facebook-profile-and-page-id/\">more Info</a>)"
+msgstr ""
+"ID Página de Facebook (<a target=\"_blank\" href=\"http://hellboundbloggers."
+"com/2010/07/10/find-facebook-profile-and-page-id/\">más información</a>)"
+
+#: lib/widgets/tabbed-widget.php:16
+msgid ""
+"A tabbed widget that display popular posts, recent posts, comments and tags."
+msgstr ""
+"Un widget de pestañas que muestran mensajes populares, entradas recientes, "
+"comentarios y etiquetas."
+
+#: lib/widgets/tabbed-widget.php:22
+msgid "Widget - Tabbed"
+msgstr "Widget - Tabbed"
+
+#: lib/widgets/tabbed-widget.php:57
+msgid "Recent"
+msgstr "Reciente"
+
+#: lib/widgets/tabbed-widget.php:216
+msgid "No Setting"
+msgstr "Sin ajustes"
+
+#: lib/widgets/twitter-widget.php:13
+msgid "Widget display Latest Tweets"
+msgstr "Widget para mostrar los ultimos tweets."
+
+#: lib/widgets/twitter-widget.php:15
+msgid "Widget - Twitter"
+msgstr "Widget - Twitter"
+
+#: lib/widgets/twitter-widget.php:83
+msgid "Twitter"
+msgstr "Twitter"
+
+#: lib/widgets/twitter-widget.php:95
+msgid "Twitter username:"
+msgstr "Usuario de twitter:"
+
+#: lib/widgets/twitter-widget.php:100
+msgid "Number of tweets:"
+msgstr "Numeros de tweets:"
+
+#: lib/widgets/video-widget.php:13
+msgid "Widget display video support Youtube, vimeo, dailymotion"
+msgstr "Widget para visualizar videos. Soporte Youtube, vimeo, dailymotion."
+
+#: lib/widgets/video-widget.php:15
+msgid "Widget - Videos"
+msgstr "Widget - Vídeos"
+
+#: lib/widgets/video-widget.php:59
+msgid "Video"
+msgstr "Vídeo"
+
+#: lib/widgets/video-widget.php:69
+msgid "type"
+msgstr "tipo"
+
+#: lib/widgets/video-widget.php:78
+msgid "Video ID:"
+msgstr "Vídeo ID:"
+
+#: lib/widgets/widget-login.php:11
+msgid "Widget - Login"
+msgstr "Widget - Acceso"
+
+#: lib/widgets/widget-login.php:52
+msgid "Login"
+msgstr "Acceso"

@@ -1,0 +1,14 @@
+<div class="row-fluid">
+  <h3>Menu Kebudayaan</h3>
+  <h5>Sunting Kebudayaan</h5>
+</div>
+<?php echo $this->render('destination/form.phtml'); ?>
+<?php echo $this->render('destination/script.phtml'); ?>
+<?php $this->placeholder('JsDocumentReady')->captureStart(); ?>
+$('#addCategoryBtn').attr('disabled','true');
+$('#addAreaBtn').attr('disabled','true');
+pushAreaData();
+pushCategoryData();
+generateCategory();
+generateArea();
+<?php $this->placeholder('JsDocumentReady')->captureEnd(); ?>

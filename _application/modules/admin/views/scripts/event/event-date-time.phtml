@@ -1,0 +1,27 @@
+<?php
+   $dateStart = $this->dateConverter($this->dateStart);
+   $dateEnd = $this->dateConverter($this->dateEnd);
+?>
+
+
+    <span class="date">
+        <?php if($dateStart == $dateEnd) : ?>
+            <span class="event-date">
+                <b><?php echo $this->translate('date') ?></b>: <?php echo $dateStart ?>
+            </span>
+            <span class="event-time">
+                <b><?php echo $this->translate('id_start_at_event') ?></b>: <?php echo $this->dateConverter($this->dateStart, 'waktu'); ?>
+            </span>
+            <span class="event-time">
+                <b><?php echo $this->translate('until2') ?></b>: <?php echo $this->dateConverter($this->dateEnd,'waktu'); ?>
+            </span>
+        <?php else: ?>
+            <span class="event-date">
+                <b><?php echo $this->translate('start') ?></b>: <?php echo $dateStart ?>
+            </span>
+
+            <span class="event-date">
+                <b><?php echo $this->translate('until2') ?></b>: <?php echo $dateEnd ?>
+            </span>
+        <?php endif; ?>    
+    </span>

@@ -1,0 +1,37 @@
+<style type="text/css">
+    .button-search{
+        background-image: url(<?php echo $this->imageUrl('icons/search.png'); ?>);
+        background-repeat: no-repeat;
+        background-position:  center;
+        background-color: #FF0000;
+        width: 100%;
+        height: 32px;
+        border: 0px;
+    }
+</style>
+
+<div class="row collapse" id="search-form">
+    <form action="<?php echo $this->baseUrl(); ?>/search/index/" method="get" name="search">
+        <div class="nine mobile-three columns" id="search-left">
+            <input placeholder="Pencarian" id="keyword" type="text" name="keyword" value="<?php echo $this->param ?>"/>
+        </div>
+        <div class="three mobile-one columns" id="search-right">
+            <input class="button-search"style="cursor:pointer;border:2px solid red" type="submit"  value="" /> 
+        </div>
+    </form>
+</div>
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#search-form').submit(function(event) {
+            event.preventDefault();
+            var keyword = $('#keyword').val();
+            console.log(keyword);
+            window.location.href = lamanbudaya.url.baseUrl + '/search/index/keyword/' + keyword;
+            return false;
+        });
+    });        
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>
+

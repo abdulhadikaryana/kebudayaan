@@ -1,0 +1,86 @@
+<!-- PAGE-TITLE begins here -->
+<div class="row-fluid section-title" style="border-left-color: #ff9600;">
+    <div class="pull-left">
+        <h1 style="font-size: 28px;"><?php echo $this->translate('News'); ?></h1>
+    </div>
+    <div class="pull-right">
+        <?php echo $this->paginationControl($this->paginator, 'sliding', 'shared/paginator.phtml'); ?>
+    </div>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->baseUrl(); ?>"><?php echo ($this->langId == 1) ? "Beranda" : "Home"; ?></a></li>
+    <li class="active"><?php echo ($this->langId == 1) ? "berita" : "news"; ?></li>
+</ul>
+
+<div class="row-fluid" id="news-page">
+    <div class="span24">
+        <?php foreach ($this->news_chunk as $index => $news_part): ?>
+            <div class="row-fluid">
+                <?php foreach ($news_part as $i => $news): ?>
+                    <?php if (!empty($news->created_by)): ?>
+                        <?php
+                        $url = $this->url(array(
+                            'id' => $news['news_id'],
+                            'slug' => $this->makeUrlFormat($news['title'])
+                                ), $this->langId == 1 ? 'detail-berita' : 'news-detail');
+
+                        $featured_news_image = 'upload/news/' . $news['image'];
+                        if (!file_exists(IMAGE_FOLDER . $featured_news_image)) {
+                            $featured_news_image = 'default.jpg';
+                        }
+                        $imgurl = $this->imageUrl('timthumb.php?src='
+                                . $featured_news_image . '&w=150&h=220&q=100');
+
+
+                        $date = "";
+                        $created = new DateTime($news['publish_date']);
+                        if ($this->langId == 1) {
+                            $month = $this->month($created->format('m'), 2);
+                            $date = "Dipublish <strong>" . $month . ' ' . $created->format('j, Y') . "</strong>";
+                        } else {
+                            $date = "Published <strong>" . $created->format("F j, Y") . "</strong>";
+                        }
+                        ?>
+                    <?php endif; ?>
+                    <div class="span12 article-wrapper">
+                        <div class="row-fluid">
+                            <div class="span7">
+                                <img src="<?php echo $imgurl ?>" 
+                                     alt="<?php echo $news->title; ?>"/>
+                            </div>
+                            <div class="span16 offset1">
+                                <div class="limit"><h2 class="article-title">
+                                        <a href="<?php echo $url; ?>">
+                                            <?php echo $news->title; ?>
+                                        </a>
+                                    </h2>
+
+                                    <small style='color: #999;'>
+                                        &middot;<?php echo $this->langId == 1 ? 'Oleh' : 'By'; ?>
+                                        <strong><?php echo $news->created_by; ?></strong>
+                                        <br />
+                                        &middot;<?php echo $date; ?>
+                                    </small>
+
+                                    <p><?php echo $this->truncate($this->htmlDecode($news['content']), 150); ?></p>
+                                </div>
+                                <a class="s-btn s-btn-with-icon pull-right" 
+                                   href="<?php echo $url; ?>">
+                                    <span class="rulycon-arrow-right-2"></span> 
+                                    <?php echo ($this->langId == 1) ? "Selengkapnya" : "Read More"; ?>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<dir class="row-fluid section-title" style="padding-bottom: 15px;">
+    <div class="pull-right">
+        <?php echo $this->paginationControl($this->paginator, 'sliding', 'shared/paginator.phtml'); ?>
+    </div>
+</dir>

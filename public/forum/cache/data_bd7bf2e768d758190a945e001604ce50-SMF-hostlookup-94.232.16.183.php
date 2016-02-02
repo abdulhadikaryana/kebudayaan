@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454413999 < time()) $expired = true; else{$expired = false; $value = 's:32:"nat-94-232-16-183.armelektron.ru";';}?>

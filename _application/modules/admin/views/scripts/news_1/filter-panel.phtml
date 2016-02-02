@@ -1,0 +1,63 @@
+<div class="filter-panel">
+
+
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="form-inline well">
+    <label for="filterPage" class="control-label"></label>
+    <select class="filter-box" name="filterPage" id="filterPage" 
+            onchange="filterSwitch(this.value);">
+      <option value="0">Show All</option>
+      <option value="1">Title</option>
+      <option value="2">Related Culture</option>
+      <option value="3">Date</option>
+      <option value="4">Status</option>
+    </select>
+
+    <select class="status-box filter-hidden" name="filterStatus">
+      <option value="DRAFT">Draft</option>
+      <option value="PENDING">Need approval</option>
+      <option value="PUBLISH">Publish</option>
+    </select>
+
+    <select class="year-box filter-hidden" name="filterYear">
+      <?php foreach ($this->year as $year) : ?>
+        <?php if ($year['year'] != 0) : ?>
+          <option value="<?php echo $year['year']; ?>">
+            <?php echo $year['year']; ?>
+          </option>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    </select>
+
+    <select class="month-box filter-hidden" name="filterMonth">
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">Novemer</option>
+      <option value="12">December</option>
+    </select>
+
+    <span class="poi-box mediumele filter-hidden">
+      <input type="text"  name="filterPoi"/>
+    </span>
+    <span class="title-box mediumele filter-hidden">
+      <input type="text" name="filterTitle"/>
+    </span>
+
+
+    <input type="submit" value="Go" class="btn radius"/>
+
+    <span class="ajax-loader"></span>
+    <hr />
+    <?php if (!empty($this->alert)) : ?>
+      <div class="tip"> Current filter selected: <?php echo $this->alert; ?>
+      </div>
+    <?php endif; ?> 
+  </form>
+</div>

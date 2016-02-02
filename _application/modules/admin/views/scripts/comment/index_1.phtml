@@ -1,0 +1,89 @@
+<!-- style css untuk halaman admin -->
+<?php $this->placeholder('styles')->captureStart(); ?>
+    <link href="<?php echo $this->scriptUrl('/styles/table-css.php'); ?>" 
+          rel="stylesheet" type="text/css" />
+<?php $this->placeholder('styles')->captureEnd(); ?>
+
+<!-- print out any message from create/saved page proccess -->
+<?php 
+    if (!empty($this->message)) {
+        foreach ($this->message as $warn) echo $this->flashMessage($warn);
+    }
+?>
+
+<!-- set page context -->
+<h2>Comment Menu</h2>
+<h3 class="wide">Update or Delete from the list</h3>
+
+<div class="table-container">
+    <!-- generating the filter panel and row show per page filter -->
+    <?php echo $this->partial('comment/filter-panel.phtml', $this->filter); ?>
+    <?php echo $this->render('partial/page-filter.phtml'); ?>
+    
+    <!-- if the paginator is not empty then print out the data -->
+    <br class="clearfloat" />
+    <?php if (count($this->paginator) > 0) : ?>
+    
+        <!-- print out the pagination control at the top of the table-->
+        <?php echo $this->paginationControl($this->paginator, 'Sliding',
+                                    'partial/pagination-control.phtml'); ?>
+        
+        <br class="clearfloat" />
+        <table style="width: 100%;" cellspacing="0">
+            
+            <?php echo $this->partial('comment/table-header.phtml') . "\n"; ?>
+            <tbody>
+                <?php $row_index = 0; ?>
+                <?php echo $this->partialLoop('comment/table-row.phtml', 
+                                                $this->paginator) . "\n"; ?>
+            </tbody>
+        </table>
+        
+        <!-- print out the pagination control at the bottom of the table -->
+        <?php echo $this->paginationControl($this->paginator, 'Sliding', 
+                                    'partial/pagination-control.phtml'); ?>
+        
+        <br class="clearfloat" />
+    <?php endif; ?>	
+</div>
+
+<div id="processLoader" class="hidden">
+   <img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>
+</div>
+
+<!-- start capturing the javascript -->
+<?php 
+    $this->placeholder('jsInline')->captureStart();
+    $js_link = array('jquery/thickbox-compressed');
+    echo $this->jsView(2, $js_link);
+?>
+<script type="text/javascript">   
+    /**
+     * IS: Comment ada
+     * FS: Comment tidak ada, dan dihapus dari basis data
+     * Desc: Menghapus comment, 
+     *       send request via ajax for deleting the comment from the table
+     */
+    function deleteComment(comment_id)
+    {
+        if (confirm('Do you really want to delete this comment?')) {
+            tb_show("", "#TB_inline?height=25&width=210&inlineId=processLoader&modal=true", "");
+            $.ajax(
+            {
+                type: "POST",
+                url: "<?php echo $this->rootUrl('/admin/ajax/deletecomment'); ?>",
+                data: {commentId:comment_id}, 
+                success: function(data) {
+                    window.location.reload(true); },
+                error: function() {
+                    alert('Error occured, please report this to the developer'); }
+            });    
+        }        
+    }
+    
+    $(function()
+    {
+        $('.filter-panel').show();
+    });
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454401506 < time()) $expired = true; else{$expired = false; $value = 's:24:"unassigned.quadranet.com";';}?>

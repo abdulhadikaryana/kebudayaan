@@ -1,0 +1,76 @@
+
+<?php if(count($this->event)) : ?>
+    <?php echo $this->paginationControl($this->event, 'Sliding',
+                    'partials/pagination.phtml',
+                    array('message' => 'event(s)', 'upMessage' => true)); ?>
+    <?php foreach($this->event as $event) : ?>
+        <div class="en-list">
+            <div class="en-img-list four column">
+                <?php if ($event['main_pics']!='' && file_exists(UPLOAD_FOLDER . '/event/thumbnails/' . $event['main_pics'])) : ?>
+                    <a class="zoom" href="<?php echo $this->imageUrl('/upload/event/' .
+                            $event['main_pics']) ?>">
+                        <img src="<?php echo $this->imageUrl('/upload/event/thumbnails/' .
+                            $event['main_pics']) ?>" alt="" />
+                    </a>
+                <?php else: ?>
+                    <img src="<?php echo $this->imageUrl('/default.jpg'); ?>"
+                         alt="" title="no image for this destination" />
+                <?php endif; ?>
+                    
+            </div>
+            <div class="en-desc-list eight column">
+                <h3>
+                    <?php if($this->formattedDateStart): ?>
+                        <a href="<?php echo $this->url(array(
+                            'id' => $event['event_id'],
+                            'title' => $this->makeUrlFormat($event['name']),
+                            'dateStart' => $this->formattedDateStart,
+                            'dateEnd' => $this->formattedDateEnd), 'detail-event-with-search')?>">
+                            <?php echo $event['name']?>
+                        </a>
+                    <?php else: ?>
+                        <a href="<?php echo $this->baseUrl('/event/detail/'
+                            . $event['event_id'] . '/' . $this->makeUrlFormat($event['name'])) ?>">
+                            <?php echo $event['name']?>
+                        </a>
+                    <?php endif; ?>
+                </h3>
+                <p>
+                    <?php echo $this->truncate(strip_tags($this->htmlDecode($event['description'])), 250) ?>
+                </p>
+                <p class="section-metadata">
+                    <?php echo $this->partial('event/event-date-time.phtml',
+                                array(
+                                      'dateStart' => $event['date_start'],
+                                      'dateEnd' => $event['date_end'],
+                                )); ?>
+                </p>
+                <?php if($this->formattedDateStart): ?>
+                    <span class="read-more-lb">
+                        <a class="small button button-grey" href="<?php echo $this->url(array(
+                                'id' => $event['event_id'],
+                                'title' => $this->makeUrlFormat($event['name']),
+                                'dateStart' => $this->formattedDateStart,
+                                'dateEnd' => $this->formattedDateEnd), 'detail-event-with-search')?>">
+                                <?php echo $this->translate('Read More') ?>
+                        </a>
+                    </span>
+                <?php else: ?>
+                    <span class="read-more-lb">
+                        <a class="small button button-grey" href="<?php echo $this->baseUrl('/event/detail/'
+                            . $event['event_id'] . '/' . $this->makeUrlFormat($event['name'])) ?>">
+                            <?php echo $this->translate('Read More') ?>
+                        </a>
+                    </span>
+                <?php endif; ?>
+            </div>
+            <div class="clear-left"></div>
+        </div>
+    <?php endforeach; ?>
+
+    <?php echo $this->paginationControl($this->event, 'Sliding',
+                    'partials/pagination.phtml',
+                    array('message' => 'event(s)', 'downMessage' => true)); ?>
+    <?php else: ?>
+        <?php echo $this->translate('event_not_exist'); ?>
+    <?php endif; ?>

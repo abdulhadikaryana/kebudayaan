@@ -1,0 +1,8 @@
+<tr>
+    <td><?php echo $this->HtmlDecode($this->admin_id); ?></td>
+    <td><?php echo $this->HtmlDecode($this->username); ?></td>
+    <td><?php echo $this->HtmlDecode($this->email); ?></td>
+    <td><?php echo $this->HtmlDecode($this->role_name); ?></td>
+    <td><a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/account/edit/id/<?php echo $this->admin_id; ?>">Sunting</a></td>
+    <td><div id ="removeAirlines" class="general-remove" onclick="deleteAccount(<?php echo $this->admin_id; ?>);">Hapus</div></td>
+</tr>

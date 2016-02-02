@@ -1,0 +1,76 @@
+<?php //if the incoming request type is category ?>
+<?php $ctr = 0; ?>
+<?php if($this->type == 'category'):?>
+<tbody>
+<?php foreach($this->category_data as $category_data): ?>
+<tr>
+    <td>
+        <input class="categoryRadio" type="radio" onclick="setMainCategory($(this).val(),$(this));" value="<?php echo $category_data['category_id']; ?>" <?php if($category_data['category_id'] == $this->main_category['main_category']){echo "checked='checked'";} ?>  />
+        <span class='cat_label'><?php echo $category_data['name']; ?></span>
+        <span class='general-remove nofloat' onclick="removeCategory($(this),<?php echo $ctr; ?>)">remove</span>
+    </td>
+    <td>
+    <input id="catValue<?php echo $ctr; ?>" type="hidden" value="<?php echo $category_data['category_id']; ?>" name="catValue<?php echo $ctr?>"/>
+    </td>
+</tr>
+<?php $ctr++; ?>
+<?php endforeach; ?>
+</tbody>
+<?php //if the incoming request type is area?>
+<?php elseif($this->type == 'area'): ?>
+    <?php $area_ctr = 0; $province_ctr = 0; $island_ctr = 0; $ctr = 0;?>
+    <?php foreach($this->area_data as $area_id): ?>
+        <?php $area_type = $this->areaType($area_id['area_id']);?>
+            <?php if ($area_type == 0): ?>
+                    <div id="island<?php echo $area_id['area_id']?>" class="islandbox">
+                    <div class="areaname"><?php echo $this->areaName($area_id['area_id']); ?></div>
+                    <div class="general-remove" onclick="removeArea(<?php echo $island_ctr; ?>,$(this),<?php echo $area_type; ?>);">Remove</div>
+                    <?php $island_ctr++ ;?>
+            <?php elseif($area_type == 1): ?>
+                    <div id="province<?php echo $area_id['area_id']?>" class="provbox">
+                    <div class="areaname"><?php echo $this->areaName($area_id['area_id']); ?></div>
+                    <div class="general-remove" onclick="removeArea(<?php echo $province_ctr; ?>,$(this),<?php echo $area_type; ?>);">Remove</div>
+                    <?php $province_ctr++ ;?>
+            <?php elseif($area_type == 2): ?>
+                    <div id="area<?php echo $area_id['area_id']?>" class="areabox">
+                    <div class="areaname"><?php echo $this->areaName($area_id['area_id']); ?></div>
+                    <div class="general-remove" onclick="removeArea(<?php echo $area_ctr; ?>,$(this),<?php echo $area_type; ?>);">Remove</div>
+                    <?php $area_ctr++ ;?>
+            <?php endif; ?>
+                    <input type="hidden" name="areaValue<?php echo $ctr; ?>" value="<?php echo $area_id['area_id'] ?>" />
+                	</div>
+        <?php $ctr++; ?>
+    <?php endforeach; ?>
+<?php elseif($this->type == 'pusharea'): ?>
+    <data>
+    <?php foreach($this->area_data as $area_id): ?>
+        <?php $area_type = $this->areaType($area_id['area_id']);?>
+            <?php if ($area_type == 0): ?>
+            <island>
+                <value><?php echo $area_id['area_id']; ?></value>
+            </island>
+            <?php elseif($area_type == 1): ?>
+            <province>
+                <island_id><?php echo $this->ParentArea($area_id['area_id']); ?></island_id>
+                <value><?php echo $area_id['area_id']; ?></value>
+            </province>
+            <?php elseif($area_type == 2): ?>
+            <?php $province_id = $this->ParentArea($area_id['area_id']);?>
+            <area>
+                <island_id><?php echo $this->ParentArea($province_id); ?></island_id>
+                <province_id><?php echo $province_id; ?></province_id>
+                <value><?php echo $area_id['area_id']; ?></value>
+            </area>
+            <?php endif; ?>
+    <?php endforeach; ?>
+    </data>
+<?php $ctr++; ?>
+<?php elseif($this->type == 'pushcategory'): ?>
+<data>
+    <?php foreach($this->category_data as $category_id): ?>
+        <category>
+            <id><?php echo $category_id['category_id']; ?></id>
+        </category>
+    <?php endforeach; ?>
+</data>
+<?php endif; ?>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454410848 < time()) $expired = true; else{$expired = false; $value = 's:18:"luhpc.host1dns.com";';}?>

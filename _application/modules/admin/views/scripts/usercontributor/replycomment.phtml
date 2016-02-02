@@ -1,0 +1,6 @@
+<?php if ($this->sess->username OR $this->sess->fbname) : ?>
+    <p><?php echo $this->translate('id_login_as') ?> <?php echo ($this->sess->username)?
+            $this->sess->username : $this->sess->fbname ?></p>
+<?php endif; ?>
+
+<?php echo $this->commentForm ?>

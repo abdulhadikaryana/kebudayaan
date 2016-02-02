@@ -1,0 +1,109 @@
+<form method="post" id="regionForm" action="<?php echo $this->currentUrl(); ?>" name="poiForm">
+    <fieldset class="medium">
+        <legend>General Information</legend>
+        <table>
+            <?php if($this->language_id!= 1){?>
+            <tr>
+                <td><label for="parentArea">Parent Area</label></td><td>&#58;</td>
+                <td>
+                    <?php $parent_id = $this->parent_id;?>
+                    <select id="parentArea" name="parentArea">
+                    <option value="0" <?php if($parent_id == 0){echo " selected = 'selected'";} ?> >Indonesia</option>
+                    <?php foreach ($this->parent_data as $parent): ?>
+                        <option value="<?php echo $parent['area_id']; ?>" <?php if($parent_id == $parent['area_id']){echo " selected = 'selected'";} ?>>&ndash;<?php echo $parent['name']; ?></option>
+                        <?php $child_list = $this->AreaChild($parent['area_id'],$this->language_id,'--');?>
+                        <?php foreach ($child_list as $child) : ?>
+                            <option value="<?php echo $child['area_id']; ?>" <?php if($parent_id == $child['area_id']){echo " selected = 'selected'";} ?>><?php echo $child['name']; ?></option>
+                        <?php endforeach;?>
+                    <?php endforeach; ?>
+                    </select>
+                </td>
+            </tr>
+            <?php } ?>
+            <tr>
+                <td><label for="areaNameLang">Area Name</label></td><td>&#58;</td>
+                <td><?php echo $this->form->areaNameLang; ?></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset class="wide" style="<?php if($this->language_id==1):?>display:none;<?php endif;?>">
+        <legend>Map</legend>
+        <div class="detailsBox">
+            <div class="slideHeader" onclick="$('.slideContent:eq(0)').slideToggle(); changeState($(this)); BuildMap(); ">
+                <div class="slideHeader-label">Map</div>
+                <div class="slideHeader-state">&#43;</div>
+            </div>
+            <div class="slideContent">
+                <div id="mapCMS"></div>
+            </div>
+        </div>
+        <div id="cord-box" style="margin-left: 25px">
+        <span class="space_r">
+            <label for="pointy">axis Y : </label> <?php echo $this->form->Poi_x; ?>
+        </span>
+            <div>&nbsp;</div>
+        <span>
+            <label for="pointx">axis X : </label> <?php echo $this->form->Poi_y; ?>
+        </span>
+        </div>
+    </fieldset>
+    <fieldset class="wide">
+        <legend>Information</legend>
+        <div class="detailsBox">
+            <div class="slideHeader" onclick="$('.slideContent:eq(1)').slideToggle(); changeState($(this)); convertTinyMCE('areaDescription');">
+                <div class="slideHeader-label">Description</div>
+                <div class="slideHeader-state">&#43;</div>
+            </div>
+            <div class="slideContent">
+                <?php echo $this->form->areaDescription; ?>
+            </div>
+        </div>
+        <div class="detailsBox">
+            <div class="slideHeader" onclick="$('.slideContent:eq(2)').slideToggle(); changeState($(this)); convertTinyMCE('areaHistory');">
+                <div class="slideHeader-label">History</div>
+                <div class="slideHeader-state">&#43;</div>
+            </div>
+            <div class="slideContent">
+                <?php echo $this->form->areaHistory; ?>
+            </div>
+        </div>
+        <div class="detailsBox">
+            <div class="slideHeader" onclick="$('.slideContent:eq(3)').slideToggle(); changeState($(this)); convertTinyMCE('areaPeople');">
+                <div class="slideHeader-label">People</div>
+                <div class="slideHeader-state">&#43;</div>
+            </div>
+            <div class="slideContent">
+                <?php echo $this->form->areaPeople; ?>
+            </div>
+        </div>
+        <div class="detailsBox">
+            <div class="slideHeader" onclick="$('.slideContent:eq(4)').slideToggle(); changeState($(this)); convertTinyMCE('areaEntry');">
+                <div class="slideHeader-label">Entry</div>
+                <div class="slideHeader-state">&#43;</div>
+            </div>
+            <div class="slideContent">
+                <?php echo $this->form->areaEntry; ?>
+            </div>
+        </div>
+        <div class="detailsBox">
+            <div class="slideHeader" onclick="$('.slideContent:eq(5)').slideToggle(); changeState($(this)); convertTinyMCE('areaCuisine');">
+                <div class="slideHeader-label">Cuisine</div>
+                <div class="slideHeader-state">&#43;</div>
+            </div>
+            <div class="slideContent">
+                <?php echo $this->form->areaCuisine; ?>
+            </div>
+        </div>
+        <div class="detailsBox">
+            <div class="slideHeader" onclick="$('.slideContent:eq(6)').slideToggle(); changeState($(this)); convertTinyMCE('areaTourismOffice');">
+                <div class="slideHeader-label">Tourism Office</div>
+                <div class="slideHeader-state">&#43;</div>
+            </div>
+            <div class="slideContent">
+                <?php echo $this->form->areaTourismOffice; ?>
+            </div>
+        </div>
+    </fieldset>
+
+    <input type="submit" class="btn radius" value="Save"/>
+</form>

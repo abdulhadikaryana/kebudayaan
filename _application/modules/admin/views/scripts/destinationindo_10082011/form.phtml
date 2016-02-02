@@ -1,0 +1,227 @@
+<form method="post" id="poiForm" onSubmit="return OnSubmitForm();" name="poiForm">
+    <!-- set hidden element-->
+    <?php echo $this->form->SaveStatus; ?>
+    <?php echo $this->form->Count_area; ?>
+    <?php echo $this->form->Count_category; ?>
+
+<fieldset class="medium">
+    <legend>General Information</legend>
+    <table>
+        <tr>
+            <td><label for="PoiName">Name</label></td><td>&#58;</td>
+            <td style="width:550px;"><?php echo html_entity_decode($this->form->Poi_Name); ?></td></tr>
+        <?php if($this->language_id!=1){?>
+        <tr>
+            <td><label for="PopularSelect">Popular</label></td><td>&#58;</td>
+            <td><?php echo $this->form->Popular_Select; ?></td>
+        </tr>
+        <?php } ?>
+        
+        <tr>
+            <td><label for="PoiTagline">Tagline </label></td><td>&#58;</td>
+            <td><?php echo html_entity_decode($this->form->Poi_TagLine); ?></td></tr>
+       <?php if($this->language_id!=1){?>
+        <tr>
+            <td><label for="PoiAddress">Address </label></td><td>&#58;</td>
+            <td><?php echo html_entity_decode($this->form->Poi_Address); ?></td>
+        </tr>
+        <tr>
+            <td><label for="PoiPhone">Phone </label></td><td>&#58;</td>
+            <td><?php echo html_entity_decode($this->form->Poi_Phone); ?></td>
+        </tr>
+        <tr>
+            <td><label for="PoiWebsite">Website </label></td><td>&#58;</td>
+            <td><?php echo html_entity_decode($this->form->Poi_Website); ?></td>
+        </tr>
+        <tr>
+            <td><label for="SpecialDestination">Featured Destination</label></td><td>&#58;</td>
+            <td><?php echo $this->form->SpecialDestination; ?><span class="tip">check for upload image</span></td>
+        </tr>
+        <tr id="HeaderImageContainer" <?php if($this->state_special==FALSE):?>style="display: none;"<?php endif; ?>>
+            <td></td>
+            <td></td>
+            <td style="width: 400px;">
+                <span class="space_r"><?php echo $this->form->HeaderImage; ?></span>
+                <span><input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" /></span>
+                <br/><span class="tip">(970px * 332px recommended)</span>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+</fieldset>
+<?php if($this->language_id!=1){?>
+<fieldset id="categorygroup" class="medium">
+    <legend>Category</legend>
+    <table>
+        <tr>
+            <td><label for="CategorySelect">Category</label></td><td>&#58;</td>
+            <td>
+                <span class="margin_r"><?php echo $this->form->Category_Select; ?></span>
+                <span><input type="button" class="btn radius" value="add Category" onclick="addCategory();" id="addCategoryBtn"/></span>
+            </td>
+        </tr>
+        <tr><td><label for="CategoryChild">Sub Category</label></td><td>&#58;</td><td class="child-category"><?php echo $this->form->Category_Child; ?></td></tr>
+        <tr>
+            <td></td><td></td><td><table id="categorycontainer"></table></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td><?php echo $this->form->Category_counter; ?></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td><?php echo $this->form->Main_category; ?></td>
+        </tr>
+    </table>
+</fieldset>
+
+<fieldset class="small">
+    <legend>Area</legend>
+    <table>
+        <tr>
+            <td><label for="IslandListOptions">Choose Area</label></td><td>&#58;</td>
+            <td><?php echo $this->form->Island_Select; ?></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td class="province-list"></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td class="area-list"></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td><div id="areacontainer"></div>
+        </tr>
+        <tr>
+            <td></td><td></td>
+            <td>
+                <span class="space_r"><input id="addAreaBtn" class="btn radius" style="display: none;" type="button" value="add Area" onclick="addArea(<?php if($this->state_edit){echo $this->poi_id;} ?>);" /></span>
+                <span class="rel-loader"></span>
+            </td>
+        </tr>
+        <tr>
+            <td></td><td></td><td><?php echo $this->form->Area_counter; ?></td>
+        </tr>
+    </table>
+</fieldset>
+
+<fieldset class="small">
+    <legend>Related Destination</legend>
+    <table id="relatedPoiContainer">
+    </table>
+    <?php echo $this->form->relPoi_counter; ?>
+</fieldset>
+<?php } ?>
+<fieldset class="wide">
+    <legend>Information</legend>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(0)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiInformation'); changeState($(this));">
+            <div class="slideHeader-label">Description</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            
+            <?php echo $this->form->Poi_Information; ?>
+        </div>
+    </div>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(1)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiHowToGetThere'); changeState($(this));">
+            <div class="slideHeader-label">How to Get There</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <?php echo $this->form->Poi_HowToGetThere; ?>
+        </div>
+    </div>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(2)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiHowToGetAround'); changeState($(this));">
+            <div class="slideHeader-label">How to Get Around</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <?php echo $this->form->Poi_HowToGetAround; ?>
+        </div>
+    </div>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(3)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiWhatToDo'); changeState($(this));">
+            <div class="slideHeader-label">What to do</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <?php echo $this->form->Poi_WhatToDo; ?>
+        </div>
+    </div>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(4)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiWhereToEat'); changeState($(this));">
+            <div class="slideHeader-label">Where to eat</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <?php echo $this->form->Poi_WhereToEat; ?>
+        </div>
+    </div>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(5)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiWhereToStay'); changeState($(this));">
+            <div class="slideHeader-label">Where to stay</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <?php echo $this->form->Poi_WhereToStay; ?>
+        </div>
+    </div>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(6)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiWhatToBuy'); changeState($(this));">
+            <div class="slideHeader-label">What to buy</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <?php echo $this->form->Poi_WhatToBuy; ?>
+        </div>
+    </div>
+
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(7)').slideToggle(); tinyMCE.execCommand('mceAddControl', false, 'PoiTips');changeState($(this));">
+            <div class="slideHeader-label">Tips</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <?php echo $this->form->Poi_Tips; ?>
+        </div>
+    </div>
+</fieldset>
+<?php if($this->language_id!=1){?>
+<fieldset class="wide">
+    <legend>Map</legend>
+    <div class="detailsBox">
+        <div class="slideHeader" onclick="$('.slideContent:eq(8)').slideToggle(); changeState($(this)); BuildMap(); ">
+            <div class="slideHeader-label">Map</div>
+            <div class="slideHeader-state">&#43;</div>
+        </div>
+        <div class="slideContent">
+            <div id="mapCMS"></div>
+        </div>
+    </div>
+    <div id="cord-box" style="margin-left: 25px">
+    <span class="space_r">
+        <label for="pointy">axis Y : </label> <?php echo $this->form->Poi_x; ?>
+    </span>
+        <div>&nbsp;</div>
+    <span>
+        <label for="pointx">axis X : </label> <?php echo $this->form->Poi_y; ?>
+    </span>
+    </div>
+</fieldset>
+<?php } ?>
+<fieldset class="small">
+    <legend>Action</legend>
+    <input type="submit" class="btn radius" value="Publish" id="submit-btn" disabled="disabled" onclick="document.pressed=this.value"/>
+    <input type="submit" class="btn radius" value="Draft" id="draft-btn" disabled="disabled" onclick="document.pressed=this.value"/>
+    <span class="tip">preview available after publishing or save as draft</span>
+</fieldset>
+</form>
+
+<?php echo $this->render('partial/upload-image-dialog.phtml');?>

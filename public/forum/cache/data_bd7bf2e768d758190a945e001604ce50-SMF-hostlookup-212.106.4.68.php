@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454394343 < time()) $expired = true; else{$expired = false; $value = 's:14:"proxy.abi24.pl";';}?>

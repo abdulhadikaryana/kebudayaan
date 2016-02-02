@@ -1,0 +1,17 @@
+<div class="section">
+<h2 class="section-title"><span>Forgot Password</span></h2>
+<?php if($this->forgotSuccess) : ?>
+        <p>
+            <span class="ui-icon ui-icon-circle-check icon-msg"></span>
+            Reset password instructions has been sent to your email
+        </p>
+<?php else: ?>
+
+        <p>We'll send you instructions to reset your password by email. Please type your email address</p>
+        <br />
+        <?php echo $this->form ?>
+
+<?php endif; ?>
+</div>
+
+

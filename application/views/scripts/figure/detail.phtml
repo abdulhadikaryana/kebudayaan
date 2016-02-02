@@ -1,0 +1,55 @@
+<div class="row-fluid section-title" style="border-left-color: #ea0000">
+    <div class="pull-left">
+        <h1 style="font-size: 28px;"><?php echo $this->escape($this->htmlDecode($this->figure['name'])); ?></h1>
+    </div>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array(), ($this->langId == 1) ? 'beranda' : 'home'); ?>"><?php echo ($this->langId == 1) ? "Beranda" : "Home"; ?></a></li>
+    <li><a href="<?php echo $this->url(array(), ($this->langId == 1) ? 'sosok' : 'figure'); ?>"><?php echo ($this->langId == 1) ? "Sosok" : "Figure"; ?></a></li>
+    <li  class="active"><?php echo $this->escape($this->htmlDecode($this->figure['name'])); ?></li>
+</ul>
+
+
+<div class="row-fluid" id="culture-section">
+    <div class="span24">
+        <div class="row-fluid section-content">
+            <div class="cont span22">
+                <div class="content">
+                    <p class="section-metadata">
+
+                    </p>
+                    <?php echo $this->figure['description']; ?>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  addtoAny Js -->
+
+<?php $this->placeholder("jsInline")->captureStart() ?>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $('.reply').fancybox({
+            'transitionIn': 'elastic',
+            'transitionOut': 'elastic',
+            'autoScale': false,
+            'type': 'iframe'
+
+
+
+        });
+
+    });
+
+</script>
+
+<?php $this->placeholder("jsInline")->captureEnd() ?>
+
+
+

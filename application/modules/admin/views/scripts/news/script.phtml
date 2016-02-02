@@ -1,0 +1,54 @@
+<?php $this->placeholder('styles')->captureStart(); ?>
+    <link href="<?php echo $this->scriptUrl('/styles/jqueryui/base/ui.all.css'); ?>" 
+          rel="stylesheet" type="text/css" />    
+    <link href="<?php echo $this->scriptUrl('/styles/vader/jquery-ui-1.7.2.custom.css'); ?>" 
+          rel="stylesheet" type="text/css" />    
+<?php $this->placeholder('styles')->captureEnd(); ?>
+
+<?php 
+    $this->placeholder('jsInline')->captureStart();
+    echo $this->render('partial/tinyMCE.phtml');
+    echo $this->render('partial/upload-image-script.phtml');
+?>
+<script type="text/javascript">
+    
+    tinyMCE.execCommand('mceAddControl', false, 'content');
+    
+    /**
+     * IS: 
+     * FS: 
+     * Desc: Mengatur file browser di dalam active manager
+     */
+    function myFileBrowser (field_name, url, type, win)
+    {
+        var cmsURL = '<?php echo $this->rootUrl('/admin/ajax/imagebrowser'); ?>';
+        if (cmsURL.indexOf("?") < 0) {
+            cmsURL = cmsURL + "?type=" + type;
+        } else {
+            cmsURL = cmsURL + "&type=" + type;
+        }
+
+        tinyMCE.activeEditor.windowManager.open(
+        {
+            file : cmsURL,
+            title : 'My File Browser',
+            width : 800,
+            height : 500,
+            popup_css : false,
+            resizable : "yes",
+            inline : "yes",
+            close_previous : "no"
+        }, 
+        {
+            window : win,
+            input : field_name
+        });
+        return false;
+    } 
+
+    $(function() {
+        
+    });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

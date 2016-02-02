@@ -1,0 +1,544 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart();
+    echo $this->render('partial/tinyMCE.phtml');    
+?>  
+
+<?php if($this->language_id!=1): ?>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&key=<?php echo $this->gkey; ?>" type="text/javascript"></script>
+<?php endif;?>
+
+    <script type="text/javascript">
+    
+    function myFileBrowser (field_name, url, type, win) 
+    {
+        var cmsURL = '<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/3'; ?>';
+        if (cmsURL.indexOf("?") < 0) {
+            //add the type as the only query parameter
+            cmsURL = cmsURL + "?type=" + type;
+        }
+        else {
+            //add the type as an additional query parameter
+            // (PHP session ID is now included if there is one at all)
+            cmsURL = cmsURL + "&type=" + type;
+        }
+    
+        tinyMCE.activeEditor.windowManager.open({
+            file : cmsURL,
+            title : 'My File Browser',
+            width : 800,  // Your dimensions may differ - toy around with them!
+            height : 600,
+            popup_css : false,
+            resizable : "yes",
+            inline : "yes",  // This parameter only has an effect if you use the inlinepopups plugin!
+            close_previous : "no"
+        }, {
+            window : win,
+            input : field_name
+        });
+        return false;
+    }
+    
+    //Google Map object
+    var map; 
+    var position_marker = null; 
+    var map_toggle = 0;
+    //classification array and counter
+    var class_stack = new Array();
+    var class_ctr = 0;
+    var class_count = 0;
+    //form validation container
+    var container = $('#errorContainer');
+    //coverage area
+    var area_arr = new Array();
+    var max_area = 0;
+ 
+     
+    function OnSubmitForm()
+    {
+      if(document.pressed == 'Save')
+      {
+       document.poiForm.action = "<?php echo $this->currentUrl(); ?>";
+      }
+      else 
+      if(document.pressed == 'Preview')
+      {
+        document.poiForm.action = "#";
+        document.poiForm.target = "_blank";
+      }
+      else
+      if(document.pressed == 'Draft')
+      {
+        document.poiForm.action = "#";
+        document.poiForm.target = "_blank";
+      }
+      return true;
+    }
+    
+    //Google Map Functionality
+    function BuildMap() 
+    {
+        if(map_toggle==0)
+        {
+            $('#mapCMS').show();
+            map_toggle = 1;
+            document.getElementById("mapCMS").style.display = "block";
+            if(GBrowserIsCompatible()) {
+                map = new GMap2(document.getElementById("mapCMS"));
+                map.setCenter(new GLatLng(-2.0, 118.0), 4);
+                map.addControl(new GSmallMapControl());
+                map.addControl(new GMapTypeControl());
+                map.addControl(new GScaleControl());
+                map.disableDoubleClickZoom();
+            }
+            UpdatePosition();
+            GEvent.addListener(map, "click", ShowPosition);
+        }
+        else
+        {
+            $('#mapCMS').hide();
+            map_toggle = 0;
+        }
+    }
+
+    function ShowPosition(marker, point) 
+    {
+        if (typeof(point) == "undefined" || point == null) {
+            // Catch if point is undefined when showPosition is called.
+            // Even though we don't expect this to happen, it does.
+            return;
+        }
+        if (position_marker != null) {
+            map.removeOverlay(position_marker);
+        }
+        position_marker = new GMarker(point);
+        map.addOverlay(position_marker);
+        document.getElementById('Pointx').value=point.lng().toFixed(5).toString();
+        document.getElementById('Pointy').value=point.lat().toFixed(5).toString();
+        map.panTo(point);
+    }
+
+    function UpdatePosition() 
+    {
+        if (map != null) {
+            if ((document.getElementById("Pointy").value != "") && ((document.getElementById("Pointx").value != ""))) {
+                point = new GLatLng(document.getElementById('Pointy').value,document.getElementById('Pointx').value);
+                if (position_marker != null) {
+                    map.removeOverlay(position_marker);
+                }
+                position_marker = new GMarker(point);
+                position_marker = new GMarker(point);
+                map.addOverlay(position_marker);
+                map.panTo(point);
+            }
+        }
+    }
+    
+    function setArea()
+    {
+        if($('#IslandListOptions :selected').val()!=0)
+        {
+            if($('#ProvinceListOptions :selected').val()!=0)
+            {
+                if($('#AreaListOptions :selected').val()!=0)
+                {
+                    area_id = $('#AreaListOptions :selected').val();
+                    $('#TourismArea').val(area_id);
+                    $('#arealabel').html($('#AreaListOptions :selected').text());
+                }
+                else
+                {
+                    //area_id = $('#ProvinceListOptions :selected').val();
+                    //$('#TourismArea').val(area_id);
+                    //$('#toareacontainer').html($('#ProvinceListOptions :selected').text());
+                    alert('Tourismoperator area must be a region(kabupaten)');
+                }
+            }
+            else
+            {
+                //area_id = $('#IslandListOptions :selected').val();
+                //$('#TourismArea').val(area_id);
+                //$('#toareacontainer').html($('#IslandListOptions :selected').text());
+                alert('Tourismoperator area must be a region(kabupaten)');
+            }
+        }
+        else{
+            alert('Please Select a Region First');
+        }        
+    }    
+    
+    function getPoiCord(poi_id)
+    {
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->rootUrl().'/admin/ajax/poicoordinate'; ?>",
+            data: {poiid:poi_id},
+            dataType: "xml",
+            success: setCord
+        });
+    }
+    
+    function setCord(xml)
+    {
+        $(xml).find("data").each(function(){
+            cordx = $(this).find("x").text();
+            cordy = $(this).find("y").text();
+            $('#Pointx').val(cordx);
+            $('#Pointy').val(cordy);
+        });
+        UpdatePosition();
+    }
+    
+    function addClassification()
+    {
+        flag = jQuery.inArray($('#ClassSelect :selected').val(),class_stack);
+        if(flag < 0)
+        {
+            html = "<tr id='class"+$('#ClassSelect :selected').val()+"'><td>"+$('#ClassSelect :selected').text()+"</td><td><input id='classValue"+class_ctr+"' name='classValue"+class_ctr+"' type='hidden' value='"+$('#ClassSelect :selected').val()+"'></td><td class='general-remove' onclick=removeClass($(this),"+class_ctr+");>Remove</td></tr>";
+            $('table#classificationContainer tbody').append(html)
+            class_stack.push($('#ClassSelect :selected').val());
+            class_ctr++;
+            class_count++;
+            $('#MaxClass').val(class_ctr);
+            $('#ClassCounter').val(class_count);            
+        }
+        else
+        {alert('This classification already added')}
+    }
+    
+    function removeClass(obj,index)
+    {
+        delete class_stack[index];
+        obj.parent().remove();
+        class_count--;
+        $('#ClassCounter').val(class_count);            
+    }
+    
+    function getAreaList(area_id,level)
+    {
+        if(area_id == 0)
+        {
+            $('.poi-list').empty();
+            $('.selectPoiRow').hide();
+        }
+        
+        //level = 0  -> get province list, 1 -> get area list
+        if(level == 0)
+        {
+            container = 'td.province-list';
+            $('td.area-list').empty();
+        }else 
+        if(level == 1)
+        {
+            container = 'td.area-list';
+        }
+
+        if(area_id != 0){        
+            $(container).empty();
+            $(container).html("<img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>");
+            $.ajax({
+               type: "POST",
+               url: "<?php echo $this->rootUrl().'/admin/ajax/childareaselect'; ?>",
+               data: {areaid:area_id,arealevel:level},
+               success: loadArea
+            });
+        }
+        else
+        {
+            if(level == 0)
+            {
+                $('td.province-list').empty();
+            }
+            $('td.area-list').empty();
+        }
+    }
+    
+    function getAreaCover(area_id,level)
+    {
+        if(area_id == 0)
+        {
+            $('.poi-coverlist').empty();
+            $('.selectPoiRow').hide();
+        }
+        
+        //level = 0  -> get province list, 1 -> get area list
+        if(level == 0)
+        {
+            container = 'td.province-coverlist';
+            $('td.area-coverlist').empty();
+            $('#addAreaBtn').hide();
+        }else 
+        if(level == 1)
+        {
+            container = 'td.area-coverlist';
+            $('#addAreaBtn').show();
+        }
+
+        if(area_id != 0){        
+            $(container).empty();
+            $(container).html("<img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>");
+            $.ajax({
+               type: "POST",
+               url: "<?php echo $this->rootUrl().'/admin/ajax/childareaselect'; ?>",
+               data: {areaid:area_id,arealevel:level,coveragearea:1},
+               success: loadArea
+            });
+        }
+        else
+        {
+            if(level == 0)
+            {
+                $('td.province-list').empty();
+            }
+            $('td.area-list').empty();
+        }
+    }    
+    
+    function loadArea(data,level)
+    {
+        $(container).empty();        
+        $(container).html(data);
+    }
+    
+    function showRelatedPoi()
+    {
+        $('.selectPoiRow').show();
+        $('.poi-list').html("<img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>");
+        if($('#IslandListOptions :selected').val()!=0)
+        {
+            if($('#ProvinceListOptions :selected').val()!=0)
+            {
+                if($('#AreaListOptions :selected').val()!=0)
+                {
+                    area_id = $('#AreaListOptions :selected').val();
+                    createPoiSelect(area_id);
+                }
+                else
+                {
+                    area_id = $('#ProvinceListOptions :selected').val();
+                    createPoiSelect(area_id);
+                }
+            }
+            else
+            {
+                area_id = $('#IslandListOptions :selected').val();
+                createPoiSelect(area_id);
+            }
+        }
+        else{
+            alert('Please Select a Region First');
+        }
+    }
+    
+    function createPoiSelect(area_id)
+    {
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->rootUrl().'/admin/ajax/arearelatedpoi'; ?>",
+            data: {areaid:area_id},
+            success: showPoi
+        });
+
+    }    
+    
+    function showPoi(data)
+    {
+        $('td.poi-list').html(data);
+    }
+
+    <?php if($this->state_edit): ?>
+    function loadClassification()
+    {
+        $('#addClass').attr('disabled','true');
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->rootUrl().'/admin/ajax/tourismdata'; ?>",
+            data: {tourismid:<?php echo $this->tourismid; ?>},
+            dataType: "xml",
+            success: generateClass
+        });
+    }
+    
+    function generateClass(xml)
+    {
+        $(xml).find("class").each(function(){
+            class_id = $(this).find("id").text();
+            class_name = $(this).find("name").text();
+            html = "<tr id='class"+class_id+"'><td>"+class_name+"</td><td><input id='classValue"+class_ctr+"' name='classValue"+class_ctr+"' type='hidden' value='"+class_id+"'></td><td class='general-remove' onclick=removeClass($(this),"+class_ctr+");>Remove</td></tr>";
+            $('table#classificationContainer tbody').append(html)
+            class_stack.push(class_id);
+            class_ctr++;
+            class_count++;
+            $('#MaxClass').val(class_ctr);
+            $('#ClassCounter').val(class_count);             
+        });
+        $('table#classificationContainer').show();
+        $('#addClass').removeAttr('disabled');
+    }
+    <?php endif; ?>
+
+tinyMCE.execCommand('mceAddControl', false, 'TourismOperatorDescription');
+
+function addArea()
+{
+   if($('#AreaCoverOptions').val()>0)
+    {
+       addCoverageArea(1);        
+    }
+    else
+    {
+       getProvinceList($('#ProvinceCoverOptions').val());
+    }
+}
+
+function addCoverageArea()
+{
+       flag = jQuery.inArray($('#AreaCoverOptions :selected').val(),area_arr);
+       if(flag < 0)
+       {
+           area_arr.push($('#AreaCoverOptions :selected').val());
+           hidden_container = "<input type='hidden' value='"+$('#AreaCoverOptions :selected').val()+"' name='areaCoverValue"+max_area+" />";
+           areahtml = "<div id='areaCoverId"+$('#AreaCoverOptions :selected').val()+"' class='areabox'><div class='areaname'>"+$('#AreaCoverOptions :selected').text()+"</div><div class='general-remove' onclick='$(this).parent().remove();'>Remove</div>"+hidden_container+"</div>";
+           $('#areacontainer').append(areahtml);
+           max_area++;
+           $('#MaxArea').val(max_area);
+       }
+       else
+       {
+           alert('area already exist!');
+       }
+}
+
+function getProvinceList(id)
+{
+    $('#addAreaBtn').attr('disabled','true');
+    $('.ajax-loader').html('<img src="<?php echo $this->imageUrl('mini-loader.gif'); ?>" />');
+    $.ajax({
+        type: "POST",
+        url: "<?php echo $this->rootUrl().'/admin/ajax/getprovincechild'; ?>",
+        data: {areaid:id},
+        dataType: "xml",
+        success: function(xml){
+            $(xml).find("area").each(function(){
+                area_id = $(this).find("id").text();
+                area_name = $(this).find("name").text();
+                flag = jQuery.inArray(area_id,area_arr);
+                if(flag < 0)
+                {
+                    area_arr.push(area_id);
+                    hidden_container = "<input type='hidden' value='"+area_id+"' name='areaCoverValue"+max_area+" />";
+                    areahtml = "<div id='areaCoverId"+area_id+"' class='areabox'><div class='areaname'>"+area_name+"</div><div class='general-remove' onclick='$(this).parent().remove();'>Remove</div>"+hidden_container+"</div>";
+                    $('#areacontainer').append(areahtml);
+                    max_area++;
+                }
+            });
+            $('#MaxArea').val(max_area);
+            $('#addAreaBtn').removeAttr('disabled');
+            $('.ajax-loader').empty();
+        },
+        error: function(){
+            alert('Error occured please report to the developer!');
+            $('#addAreaBtn').removeAttr('disabled');
+            $('.ajax-loader').empty();
+        }
+    });
+}
+
+<?php if($this->state_edit): ?>
+function loadSavedCoverage()
+{
+    $('.ajax-loader').html('<img src="<?php echo $this->imageUrl('mini-loader.gif'); ?>" />');
+    $('#addAreaBtn').attr('disabled','true');
+    $.ajax({
+        type: "POST",
+        url: "<?php echo $this->rootUrl().'/admin/ajax/coveragearealist'; ?>",
+        data: {tourismid:<?php echo $this->tourismid; ?>},
+        dataType: "xml",
+        success: function(xml){
+            $(xml).find("area").each(function(){
+                area_id = $(this).find("id").text();
+                area_name = $(this).find("name").text();
+                flag = jQuery.inArray(area_id,area_arr);
+                if(flag < 0)
+                {
+                    area_arr.push(area_id);
+                    hidden_container = "<input type='hidden' value='"+area_id+"' name='areaCoverValue"+max_area+" />";
+                    areahtml = "<div id='areaCoverId"+area_id+"' class='areabox'><div class='areaname'>"+area_name+"</div><div class='general-remove' onclick='$(this).parent().remove();'>Remove</div>"+hidden_container+"</div>";
+                    $('#areacontainer').append(areahtml);
+                    max_area++;
+                }
+            });
+            $('#MaxArea').val(max_area);
+            $('#addAreaBtn').removeAttr('disabled');
+            $('.ajax-loader').empty();
+        },
+        error: function(){
+            alert('Error occured please report to the developer!');
+            $('#addAreaBtn').removeAttr('disabled');
+            $('.ajax-loader').empty();
+        }
+    });    
+}
+<?php endif;?>
+
+$(function(){
+        <?php if($this->state_edit): ?>
+        loadClassification();
+        loadSavedCoverage();
+        <?php endif; ?>
+        
+        $("input[type*='text']").focus(function(){
+            $(this).css('border','2px solid #1E385D');
+        });
+
+        $("input[type*='text']").blur(function(){
+            $(this).css('border','none');
+        });
+
+        $("#tourismop input").blur(function(){
+            $("#tourismop").validate().element($(this));
+        });
+        
+        $("#tourismop").validate({
+            meta: "validate",
+            rules : {
+                        TourismOperatorEmail:{
+                            email: true
+                        },
+                        TourismOperatorWebsite:{
+                            url: true
+                        },
+                        TourismOperatorStar:{
+                            range: [0,5],
+                            digits: true
+                        },
+                        ClassCounter:{
+                          required:true,
+                          min:1  
+                        },
+                        TourismArea:{
+                          required:true,
+                          min:1  
+                        },                        
+                        TourismOperatorName: "required",
+                        TourismOperatorLangName: "required",
+                        Pointy: "required",
+                        Pointx: "required"
+                    },
+            messages : {
+                         TourismArea : "Please choose at least one tourism area",
+                         ClassCounter : "Please choose at least one classification",
+                         TourismOperatorStar:{
+                            range: "Please input only 0 to 5 Star value",
+                            digits: "Please input only digits for Star Value"
+                         },
+                         TourismOperatorWebsite:{
+                            url: "Please enter a valid URL, make sure theres 'http://' in front of your URL"
+                         },
+                         TourismOperatorEmail:{
+                            email: "Please enter a valid email address"
+                         }
+                      } 
+        });
+});
+</script>
+<?php $this->placeholder('jsInline')->captureEnd();?>  

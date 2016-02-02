@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454403266 < time()) $expired = true; else{$expired = false; $value = 's:45:"CableLink-189-218-223-27.Hosts.InterCable.net";';}?>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454392977 < time()) $expired = true; else{$expired = false; $value = 's:40:"5x164x163x20.dynamic.samara.ertelecom.ru";';}?>

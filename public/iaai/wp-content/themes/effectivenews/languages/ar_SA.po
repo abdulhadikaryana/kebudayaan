@@ -1,0 +1,1849 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Effective News v1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-03-29 01:32+0200\n"
+"Last-Translator: admin <admin@localhost.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../../../\n"
+"X-Textdomain-Support: yes\n"
+"Language: ar_SA\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ framework
+#: 404.php:10
+msgid "404"
+msgstr ""
+
+# @ framework
+#: 404.php:11
+msgid "The page you are looking for doesn't seem to exist."
+msgstr "الصفحة كنت تبحث عن لا يبدو في الوجود."
+
+# @ framework
+#: 404.php:13
+msgid "Why don't you try Search or back to "
+msgstr "لماذا لا تحاول البحث أو العودة إلى\n"
+
+# @ framework
+#: 404.php:17 searchform.php:4
+msgid "Search here ..."
+msgstr "البحث هنا ...\n"
+
+# @ framework
+#: 404.php:18 searchform.php:5
+msgid "Search"
+msgstr "البحث"
+
+# @ framework
+#: archives.php:7
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "الأرشيف اليومي: <span>%s</span>\n"
+
+# @ framework
+#: archives.php:9
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "الأرشيف الشهري: <SPAN>٪ S </ SPAN>"
+
+# @ framework
+#: archives.php:11
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "سنويا المحفوظات: <SPAN>٪ S </ SPAN>\n"
+
+# @ framework
+#: archives.php:13
+msgid "Blog Archives"
+msgstr "بلوق المحفوظات"
+
+# @ framework
+#: archives.php:49 author.php:91 category.php:134
+#: lib/functions/eff_loop.php:103 lib/functions/eff_loop.php:207
+#: lib/functions/eff_loop.php:313 lib/functions/eff_loop.php:381
+#: lib/functions/eff_loop.php:447 lib/functions/eff_loop.php:789
+#: lib/functions/eff_loop.php:1432 lib/functions/eff_loop.php:1501
+#: lib/functions/eff_loop.php:1654 search.php:45
+msgid "Read More &raquo;"
+msgstr "اقرأ المزيد &raquo;"
+
+# @ framework
+#: archives.php:59 attachment.php:16 search.php:55
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords."
+msgstr ""
+"آسف، ولكن لا شيء يقابل معايير البحث الخاصة بك. يرجى المحاولة مرة أخرى مع بعض "
+"كلمات مختلفة.\n"
+
+# @ framework
+#: author.php:13
+msgid "About "
+msgstr "حول\n"
+
+# @ framework
+#: author.php:31 lib/functions/eff_function.php:481 page-authors.php:44
+#: single.php:190
+msgid " 's site"
+msgstr " 's موقع"
+
+# @ framework
+#: author.php:34 lib/functions/eff_function.php:487 page-authors.php:47
+#: single.php:193
+msgid "  on Facebook"
+msgstr "في الفيسبوك\n"
+
+# @ framework
+#: author.php:37 lib/functions/eff_function.php:484 page-authors.php:50
+#: single.php:196
+msgid "  on Twitter"
+msgstr "على تويتر\n"
+
+# @ framework
+#: author.php:40 lib/functions/eff_function.php:490 page-authors.php:53
+#: single.php:199
+msgid "  on Google+"
+msgstr "في + Google\n"
+
+# @ framework
+#: author.php:43 lib/functions/eff_function.php:493 page-authors.php:56
+#: single.php:202
+msgid "  on Linkedin"
+msgstr "Linkedin على"
+
+# @ framework
+#: author.php:46 lib/functions/eff_function.php:496 page-authors.php:59
+#: single.php:205
+msgid "  on Flickr"
+msgstr "على Flickr"
+
+# @ framework
+#: author.php:49 lib/functions/eff_function.php:499 page-authors.php:62
+#: single.php:208
+msgid "  on YouTube"
+msgstr "على يوتيوب\n"
+
+# @ framework
+#: author.php:52 lib/functions/eff_function.php:502 page-authors.php:65
+#: single.php:211
+msgid "  on Pinterest"
+msgstr "على Pinterest\n"
+
+# @ framework
+#: author.php:55 page-authors.php:68 single.php:214
+msgid "  on Dribbble"
+msgstr "على Dribbble\n"
+
+# @ framework
+#: category.php:10
+#, php-format
+msgid "Category: %s"
+msgstr "الفئة:٪ S"
+
+# @ framework
+#: category.php:13
+msgid "Feed Subscription"
+msgstr "تغذية الاشتراك\n"
+
+# @ framework
+#: comments.php:12
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"هذه الوظيفة هي كلمة السر المحمية. أدخل كلمة المرور لمشاهدة التعليقات.\n"
+
+# @ framework
+#: comments.php:24 lib/widgets/comments-widget.php:77
+#: lib/widgets/tabbed-widget.php:58
+msgid "Comments"
+msgstr "تعليقات\n"
+
+# @ framework
+#: comments.php:34
+msgid "Older Comments"
+msgstr "أقدم تعليقات\n"
+
+# @ framework
+#: comments.php:35
+msgid "Newer Comments"
+msgstr "أحدث التعليقات\n"
+
+# @ framework
+#: comments.php:49
+msgid "Leave a Comment"
+msgstr "اترك التعليق\n"
+
+# @ framework
+#: comments.php:49
+#, php-format
+msgid "Leave a Comment to %s"
+msgstr "اترك التعليق إلى٪ s\n"
+
+# @ framework
+#: comments.php:54
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "يجب أن%1$sتسجل الدخول%2$s للتعليق."
+
+# @ framework
+#: comments.php:65
+#, php-format
+msgid "Logged in as %1$s. %2$sLog out &raquo;%3$s"
+msgstr "تسجيل دخول ب %1$s. %2$sخروج &raquo;%3$s"
+
+# @ framework
+#: comments.php:65
+msgid "Log out of this account"
+msgstr "تسجيل الخروج من هذا الحساب\n"
+
+# @ framework
+#: comments.php:89
+msgid "Post Comment"
+msgstr "أكتب تعليق\n"
+
+# @ default
+#: lib/admin/classes/class.options_machine.php:581
+msgid "Last Backup : "
+msgstr "مشاركة النسخ الاحتياطي:"
+
+# @ default
+#: lib/admin/front-end/options.php:43 lib/admin/front-end/options.php:67
+msgid "Save All Changes"
+msgstr "حفظ كل التغييرات"
+
+# @ default
+#: lib/admin/front-end/options.php:68
+msgid "Options Reset"
+msgstr ""
+
+# @ default
+#: lib/admin/functions/functions.mediauploader.php:20
+msgid "Options"
+msgstr ""
+
+# @ optionsframework
+#: lib/admin/functions/functions.mediauploader.php:210
+msgid "Gallery"
+msgstr ""
+
+# @ optionsframework
+#: lib/admin/functions/functions.mediauploader.php:210
+msgid "Previously Uploaded"
+msgstr ""
+
+# @ framework
+#: lib/admin/functions/functions.options.php:134
+msgid "Select main layout. Choose between Boxed / Wide layout."
+msgstr "حدد تخطيط الرئيسي. الاختيار بين تخطيط محاصر / على نطاق واسع.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:144
+msgid "Select sidebar alignment."
+msgstr "حدد محاذاة الشريط الجانبي.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:154
+msgid ""
+"Upload a 16px x 16px Png/Gif image that will represent your website's "
+"favicon."
+msgstr ""
+"تحميل X 16px 16px Png/Gif  الصورة التي ستمثل فافيكون موقع الويب الخاص بك.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:160
+msgid "Upload a Custom Gravatar."
+msgstr "تحميل غرفتر مخصص."
+
+# @ framework
+#: lib/admin/functions/functions.options.php:166
+msgid "Upload Wordpress admin Login page Logo."
+msgstr "تحميل صورة صفحه دخول الادمن"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:172
+msgid "Enable / Disable Responsive."
+msgstr "تمكين / تعطيل المستجيبة.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:178
+msgid "Enable / Disable breadcrumb in Pages."
+msgstr "تمكين / تعطيل مسار التنقل في الصفحات.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:185
+msgid "Contact us Recipient Email."
+msgstr "البريد الالكترونى لصفحه اتصل بنا"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:192
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. This will be "
+"added into the footer template of your theme."
+msgstr ""
+"لصق الخاص جوجل تحليلات (أو غيرها) شفرة تتبع هنا. سيتم إضافة هذا القالب إلى "
+"تذييل الموضوع الخاص بك.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:204
+msgid "Enable / Disable Today Date in Topbar."
+msgstr "تمكين / تعطيل تاريخ اليوم في Topbar.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:211
+msgid ""
+"Date Format for more information <a href=\"http://codex.wordpress.org/"
+"Formatting_Date_and_Time\" target=\"_new\">here</a>."
+msgstr ""
+"تنسيق التاريخ لمزيد من المعلومات <a href=\"http://codex.wordpress.org/"
+"Formatting_Date_and_Time\" target=\"_new\"> هنا </ a>."
+
+# @ framework
+#: lib/admin/functions/functions.options.php:257
+msgid "Enable / Disable Sticky Navigation menu."
+msgstr "تمكين / تعطيل مثبت القائمة"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:268
+msgid "Enable / Disable main bar after Header."
+msgstr "تمكين / تعطيل شريط الرئيسية بعد رأس.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:274
+msgid "Enable / Disable Search Form in main bar."
+msgstr "تمكين / تعطيل نموذج البحث في شريط الرئيسية.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:284
+msgid "Enable / Disable Breaking News."
+msgstr "تمكين / تعطيل الأخبار العاجلة.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:314
+msgid "Insert Custom Text, One Sentence Per Line."
+msgstr "إدراج نص مخصص، جملة واحدة في كل سطر.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:342
+msgid "Organize how you want the layout to appear on the homepage"
+msgstr "كيف تريد تنظيم تخطيط لتظهر على الصفحة الرئيسية\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:348
+msgid "Select Blog Style, Choose between Small , Big , Masonry Style"
+msgstr "اختر الشكل المدونة، يمكنك الاختيار بين Small , Big , Masonry Style"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:359
+msgid "Enable Feature Slider in homepage If used blog Style."
+msgstr "تمكين المتزلج ميزة في موقع إذا ما استخدمت نمط بلوق.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:366
+msgid "Enable Carousel in homepage If used blog Style."
+msgstr "تمكين Carousel في موقع إذا ما استخدمت نمط بلوق.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:377
+msgid "Select your Slider, Choose between Cycle , Filex , CarouFredSel"
+msgstr ""
+"حدد شريط التمرير الخاص بك، يمكنك الاختيار بين دورة، Filex، CarouFredSel\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:540
+msgid "Latest"
+msgstr "آخر\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:541
+msgid "Random"
+msgstr "عشوائي"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:542
+#: lib/widgets/tabbed-widget.php:56
+msgid "Popular"
+msgstr "شعبي"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:607
+#: lib/admin/functions/functions.options.php:649
+#: lib/admin/functions/functions.options.php:691
+#: lib/admin/functions/functions.options.php:733
+#: lib/admin/functions/functions.options.php:775
+#: lib/admin/functions/functions.options.php:817
+#: lib/admin/functions/functions.options.php:859
+#: lib/admin/functions/functions.options.php:901
+#: lib/admin/functions/functions.options.php:943
+#: lib/admin/functions/functions.options.php:985
+msgid "Select News Box Style. Choose between 1,2,3,4,5 Styles."
+msgstr "حدد أخبار نمط مربع. الاختيار بين أنماط 1،2،3،4،5.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1004
+msgid "Select Tabs Style. Choose between Horizontal / Vertical."
+msgstr "حدد علامات التبويب نمط. الاختيار بين أفقي / عمودي.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1013
+#: lib/admin/functions/functions.options.php:1638
+msgid "Number Of Posts"
+msgstr "عدد المشاركات\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1028
+#: lib/admin/functions/functions.options.php:1062
+#: lib/admin/functions/functions.options.php:1096
+#: lib/admin/functions/functions.options.php:1130
+#: lib/admin/functions/functions.options.php:1163
+#: lib/admin/functions/functions.options.php:1196
+msgid "If empty there is no tab"
+msgstr "إذا فارغة لا يوجد علامة التبويب\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1227
+msgid "Select News in picture Box Style. Choose between 1,2 Styles."
+msgstr "حدد نمط مربع الاخبار في الصورة. الاختيار بين 1،2 الأنماط.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1258
+msgid "You can specify the number of pictures if you choose style 2."
+msgstr "يمكنك تحديد عدد من الصور إذا اخترت نمط 2.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1275
+#: lib/admin/functions/functions.options.php:1318
+msgid "Enable / Disable Header banner."
+msgstr "تمكين / تعطيل راية رأس.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1471
+msgid ""
+"Enable / Disable Social Icons In Top Header <a href=\"../wp-admin/themes.php?"
+"page=sh_sb_settings_page.php\">To custom it from here</a>.."
+msgstr ""
+"تمكين / تعطيل الرموز الاجتماعية في أبرز رأس href=\"../wp-admin/themes.php؟"
+"page=sh_sb_settings_page.php\"> <a إلى مخصص من هنا </ A> ..\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1483
+msgid "Enable / Disable Social Icons In footer."
+msgstr "تمكين / تعطيل الرموز الاجتماعية في تذييل الصفحة.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1561
+msgid "Enable / Disable Post Meta bar in Posts."
+msgstr "تمكين / تعطيل شريط آخر ميتا في المشاركات.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1568
+msgid "Enable / Disable Date in Post Meta."
+msgstr "تمكين / تعطيل تاريخ آخر ميتا في.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1575
+msgid "Enable / Disable Author in Post Meta."
+msgstr "تمكين / تعطيل الكاتب في آخر ميتا.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1582
+msgid "Enable / Disable Category in Post Meta."
+msgstr "تمكين / تعطيل الفئة في ميتا آخر.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1589
+msgid "Enable / Disable Comment in Post Meta."
+msgstr "تمكين / تعطيل التعليق في آخر ميتا.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1596
+msgid "Enable / Disable Font Resize in Post Meta."
+msgstr "تمكين / تعطيل تغيير حجم الخط في آخر ميتا.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1608
+msgid "Enable / Disable Next/Prev Article."
+msgstr "تمكين / تعطيل المادة التالية السابق /.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1615
+msgid "Enable / Disable Post Tags."
+msgstr "تمكين / تعطيل وظيفة العلامات.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1622
+msgid "Enable / Disable Author Box."
+msgstr "تمكين / تعطيل المربع الكاتب.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1635
+msgid "Enable / Disable Related Posts."
+msgstr "تمكين / تعطيل الوظائف ذات الصلة.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1645
+msgid "Related Posts By"
+msgstr "ذات الصلة المشاركات التي كتبها\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1651 page-sitemap.php:53
+msgid "Category"
+msgstr "فئة\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1652 page-sitemap.php:61
+msgid "Tags"
+msgstr "الكلمات\n"
+
+# @ theme
+#: lib/admin/functions/functions.options.php:1656
+msgid "Related Posts Style"
+msgstr ""
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1675
+msgid "Enable / Disable Share Posts ."
+msgstr "تمكين / تعطيل مشاركة المشاركات.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1778
+msgid "Enable / Disable Rss Feed Subscription in category."
+msgstr "تمكين / تعطيل تغذية آر إس إس الاشتراك في الفئة.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1785
+msgid "Enable / Disable Category description."
+msgstr "تمكين / تعطيل التصنيف الوصف.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:1792
+msgid "Enable / Disable Slidshow in Category page."
+msgstr "تمكين / تعطيل Slidshow في صفحة الفئة.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:2167
+msgid "Custom CSS For device with 768px width like ipad"
+msgstr "مخصص للجهاز مع CSS عرض 768px مثل آي باد\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:2173
+msgid "Custom CSS For device with 480px width like Landscape phones"
+msgstr "مخصص للجهاز مع CSS عرض 768px مثل آي باد\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:2179
+msgid "Custom CSS For device with 320px width like iPhones"
+msgstr "مخصص للجهاز مع CSS عرض 320px مثل أجهزة iPhone\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:2190
+msgid "Enable / Disable Meta Description Tag in pages."
+msgstr "رتمكين / تعطيل ميتا وصف الرقم في الصفحات.\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:2196
+msgid "Add you keywords saperate each keyword with comma"
+msgstr "رإضافة كلمات رئيسية saperate لك كل كلمة رئيسية مع فاصلة\n"
+
+# @ framework
+#: lib/admin/functions/functions.options.php:2205
+msgid "Enable / Disable To Top."
+msgstr "تمكين / تعطيل إلى أعلى.\n"
+
+# @ framework
+#: lib/functions/eff_function.php:42
+#, php-format
+msgid "Page %s"
+msgstr "صفحة٪ S\n"
+
+# @ default
+#: lib/functions/eff_function.php:255
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+# @ default
+#: lib/functions/eff_function.php:258
+#, php-format
+msgid "%s "
+msgstr ""
+
+# @ default
+#: lib/functions/eff_function.php:259
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+# @ default
+#: lib/functions/eff_function.php:259
+msgid "(Edit)"
+msgstr ""
+
+# @ default
+#: lib/functions/eff_function.php:277
+msgid "Theme Option"
+msgstr ""
+
+# @ default
+#: lib/functions/eff_function.php:302
+msgid "Move to Trash"
+msgstr ""
+
+# @ framework
+# @ breadcrumbs-plus
+#: lib/functions/eff_function.php:342
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:50
+msgid "Home"
+msgstr "منزل"
+
+# @ framework
+#: lib/functions/eff_function.php:414
+msgid "Search results for "
+msgstr "نتائج البحث عن\n"
+
+# @ framework
+#: lib/functions/eff_function.php:417
+msgid "Posts tagged "
+msgstr "resultsPosts ذات الكلمات الدلالية ل\n"
+
+# @ framework
+#: lib/functions/eff_function.php:422
+msgid "Articles posted by "
+msgstr "SearchArticles أرفق resultsPosts المفتاحية لل\n"
+
+# @ framework
+#: lib/functions/eff_function.php:425
+msgid "Error 404 "
+msgstr "404 خطأ أرفق resultsPosts المفتاحية لل\n"
+
+# @ framework
+#: lib/functions/eff_function.php:430
+msgid "Page"
+msgstr "صفحة"
+
+# @ framework
+#: lib/functions/eff_function.php:449 lib/functions/eff_loop.php:1419
+msgid "Posted by: "
+msgstr "نشرت من قبل:\n"
+
+# @ framework
+#: lib/functions/eff_function.php:449 lib/functions/eff_loop.php:1419
+#, php-format
+msgid "View all posts by %s"
+msgstr "عرض جميع المشاركات التي كتبها٪ ليالي\n"
+
+# @ framework
+#: lib/functions/eff_function.php:452 lib/functions/eff_loop.php:1419
+msgid "Category: "
+msgstr "الفئة:\n"
+
+# @ framework
+#: lib/functions/eff_function.php:455
+msgid "Leave a comment"
+msgstr "ترك تعليق\n"
+
+# @ framework
+#: lib/functions/eff_function.php:455
+msgid "1 Comment"
+msgstr "1 تعليق\n"
+
+# @ framework
+#: lib/functions/eff_function.php:455
+msgid "% Comments"
+msgstr "٪ تعليقات\n"
+
+# @ framework
+#: lib/functions/eff_function.php:472
+msgid "Welcome"
+msgstr "ترحيب\n"
+
+# @ framework
+#: lib/functions/eff_function.php:475
+msgid "Dashboard"
+msgstr "لوحة أجهزة القياس\n"
+
+# @ framework
+#: lib/functions/eff_function.php:476
+msgid "Your Profile"
+msgstr "الملف الشخصي الخاص بك\n"
+
+# @ framework
+#: lib/functions/eff_function.php:477
+msgid "Logout"
+msgstr "خروج\n"
+
+# @ framework
+#: lib/functions/eff_function.php:511
+msgid "Username"
+msgstr "اسم المستخدم\n"
+
+# @ framework
+#: lib/functions/eff_function.php:512
+msgid "Password"
+msgstr "كلمة السر\n"
+
+# @ framework
+#: lib/functions/eff_function.php:513
+msgid "Log in"
+msgstr "تسجيل الدخول\n"
+
+# @ framework
+#: lib/functions/eff_function.php:514
+msgid "Remember Me"
+msgstr "تسجيل الدخول حفظ البيانات\n"
+
+# @ framework
+#: lib/functions/eff_function.php:518
+msgid "Register"
+msgstr "تسجيل\n"
+
+# @ framework
+#: lib/functions/eff_function.php:519
+msgid "Lost your password?"
+msgstr "فقدت كلمة السر؟\n"
+
+# @ framework
+#: lib/functions/eff_function.php:618 lib/functions/eff_function.php:668
+msgid "&raquo; "
+msgstr "&raquo; "
+
+# @ framework
+#: lib/functions/eff_loop.php:530 lib/functions/eff_loop.php:573
+msgid "News In Picture"
+msgstr "الأخبار داخل صورة\n"
+
+# @ theme
+#: lib/functions/sidebar_generator.php:175
+#: lib/functions/sidebar_generator.php:197
+msgid "Custom Sidebars"
+msgstr ""
+
+# @ theme
+#: lib/functions/sidebar_generator.php:228
+msgid "No Sidebars defined"
+msgstr ""
+
+# @ theme
+#: lib/functions/sidebar_generator.php:279
+msgid "Select the custom sidebar, leave unselected to use the default sidebar"
+msgstr ""
+
+# @ framework
+#: lib/main.php:61
+msgid "Main"
+msgstr "رئيسي\n"
+
+# @ framework
+#: lib/main.php:62
+msgid "Top Nav"
+msgstr "التنقل الأعلى\n"
+
+# @ framewrok
+#: lib/main.php:87
+msgid "Main sidebar"
+msgstr ""
+
+# @ framewrok
+#: lib/main.php:99
+msgid "Footer 1"
+msgstr ""
+
+# @ framewrok
+#: lib/main.php:109
+msgid "Footer 2"
+msgstr ""
+
+# @ framewrok
+#: lib/main.php:119
+msgid "Footer 3"
+msgstr ""
+
+# @ framewrok
+#: lib/main.php:129
+msgid "Footer 4"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/classes/meta-box.php:297
+msgid "Please correct the errors highlighted below and try again."
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/classes/meta-box.php:358
+msgid "+"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/classes/meta-box.php:380
+msgid "&#8211;"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/file-advanced.php:59
+msgctxt "file upload"
+msgid "Select Files"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/file.php:66
+msgid "Error: Cannot delete file"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/file.php:80
+msgctxt "file upload"
+msgid "Upload Files"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/file.php:81
+msgctxt "file upload"
+msgid "+ Add new file"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/file.php:133
+msgctxt "file upload"
+msgid "Delete"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/file.php:134
+msgctxt "file upload"
+msgid "Edit"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/image-advanced.php:63
+msgctxt "image upload"
+msgid "Select or Upload Images"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/image.php:64
+msgid "Order saved"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/image.php:78
+#: lib/metaboxes/inc/fields/thickbox-image.php:35
+msgctxt "image upload"
+msgid "Upload Images"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/image.php:79
+msgctxt "image upload"
+msgid "+ Add new image"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/image.php:144
+msgctxt "image upload"
+msgid "Delete"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/image.php:145
+msgctxt "image upload"
+msgid "Edit"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/map.php:46
+msgid "Find Address"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/plupload-image.php:104
+msgctxt "image upload"
+msgid "Drop images here"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/plupload-image.php:105
+msgctxt "image upload"
+msgid "or"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/plupload-image.php:106
+msgctxt "image upload"
+msgid "Select Files"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/plupload-image.php:181
+msgctxt "image upload"
+msgid "Allowed Image Files"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/posts.php:54
+msgid "Post"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/posts.php:64
+#: lib/metaboxes/inc/fields/taxonomy.php:42
+#, php-format
+msgid "Select a %s"
+msgstr ""
+
+# @ rwmb
+#: lib/metaboxes/inc/fields/select-advanced.php:69
+msgid "Select a value"
+msgstr ""
+
+# @ breadcrumbs-plus
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:49
+msgid "You are here: "
+msgstr ""
+
+# @ breadcrumbs-plus
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:177
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:180
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:183
+msgid "Archives for "
+msgstr ""
+
+# @ breadcrumbs-plus
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:187
+msgid "Archives by: "
+msgstr ""
+
+# @ breadcrumbs-plus
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:192
+msgid "Search results for \""
+msgstr ""
+
+# @ breadcrumbs-plus
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:196
+msgid "Page Not Found"
+msgstr ""
+
+# @ breadcrumbs-plus
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:239
+msgid "Split"
+msgstr ""
+
+# @ breadcrumbs-plus
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:242
+msgid "Merge"
+msgstr ""
+
+# @ breadcrumbs-plus
+# @ default
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:245
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:259
+#: lib/plugins/breadcrumbs-plus/breadcrumbs-plus.php:279
+msgid "Edit"
+msgstr ""
+
+# @ framework
+#: lib/shortcodes/widgets.php:24 lib/widgets/twitter-widget.php:50
+#, php-format
+msgid "about %d seconds ago"
+msgstr "ثواني٪ عن د مضت\n"
+
+# @ framework
+#: lib/shortcodes/widgets.php:25 lib/widgets/twitter-widget.php:51
+msgid "about a minute ago"
+msgstr "حوالي دقيقة واحدة منذ\n"
+
+# @ framework
+#: lib/shortcodes/widgets.php:26 lib/widgets/twitter-widget.php:52
+#, php-format
+msgid "about %d minutes ago"
+msgstr "دقيقة٪ عن د منذ\n"
+
+# @ framework
+#: lib/shortcodes/widgets.php:27 lib/widgets/twitter-widget.php:53
+msgid "about an hour ago"
+msgstr "منذ حوالي ساعة\n"
+
+# @ framework
+#: lib/shortcodes/widgets.php:28 lib/widgets/twitter-widget.php:54
+#, php-format
+msgid "about %d hours ago"
+msgstr "ساعات٪ عن د مضت\n"
+
+# @ framework
+#: lib/shortcodes/widgets.php:29 lib/widgets/twitter-widget.php:55
+msgid "about a day ago"
+msgstr "قبل يوم واحد حول\n"
+
+# @ framework
+#: lib/shortcodes/widgets.php:30 lib/widgets/twitter-widget.php:56
+#, php-format
+msgid "about %d days ago"
+msgstr "أيام مضت٪ عن د\n"
+
+# @ framework
+#: lib/shortcodes/widgets.php:31 lib/widgets/twitter-widget.php:57
+msgid "view tweet on twitter"
+msgstr "عرض سقسقة على التغريد\n"
+
+# @ theme
+#: lib/social/help.php:15 lib/social/help.php:99
+msgid "Help"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:17 lib/social/help.php:101
+msgid "Including the list of links in your theme"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:19 lib/social/help.php:103
+msgid ""
+"To include the list of links in your theme, you need to place the following "
+"PHP function in the location where you want the links to appear:"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:23 lib/social/help.php:133
+msgid "Theme Developers"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:25 lib/social/help.php:135
+msgid ""
+"If you would like to make your own icon set available to users in the Icon "
+"Box, just place the images inside of an \"images/sb-icons\" folder of your "
+"theme."
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:27
+msgid "Credits"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:29 lib/social/help.php:141
+msgid "Contributors:"
+msgstr ""
+
+# @ default
+#: lib/social/help.php:33
+msgid "Overview"
+msgstr ""
+
+# @ theme
+# @ default
+#: lib/social/help.php:39 lib/social/help.php:51 lib/social/help.php:109
+msgid "Parameters"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:41 lib/social/help.php:111
+msgid ""
+"(string) Sets the text or html that precedes the &lt;a&gt; tag. Default = ' '"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:43 lib/social/help.php:113
+msgid ""
+"(string) Sets the text or html that follows the &lt;a&gt; tag. Default = ' '"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:45 lib/social/help.php:115
+msgid ""
+"(boolean) Toggles the display of the generated list of links or return the "
+"list as an HTML text string to be used in PHP. Default = 1"
+msgstr ""
+
+# @ theme
+# @ default
+#: lib/social/help.php:57 lib/social/help.php:71 lib/social/help.php:119
+msgid "Example Output"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:59 lib/social/help.php:121
+msgid ""
+"Using the default settings, the <code>social_bartender()</code> function "
+"would output the following:"
+msgstr ""
+
+# @ default
+#: lib/social/help.php:76
+msgid "For more information:"
+msgstr ""
+
+# @ default
+#: lib/social/help.php:77
+msgid ""
+"<a href=\"https://github.com/sawyerh/social-bartender\" target=\"_blank"
+"\">Contribute on Github</a>"
+msgstr ""
+
+# @ default
+#: lib/social/help.php:78
+msgid "<a href=\"http://themeandstirredweb.com\">Shaken and Stirred Web</a>"
+msgstr ""
+
+# @ default
+#: lib/social/help.php:79
+msgid ""
+"<a href=\"http://onlythefunctions.com\" target=\"_blank\">Only the "
+"Functions</a>"
+msgstr ""
+
+# @ default
+#: lib/social/help.php:83
+msgid "Plugin Info"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:137
+msgid "Credits / Support"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:139
+msgid "The Social Bartender plugin was created by"
+msgstr ""
+
+# @ theme
+#: lib/social/help.php:139
+msgid ""
+"If you find any bugs, have feature requests, or would like to contribute, "
+"please visit the plugin's <a href=\"https://github.com/sawyerh/social-"
+"bartender\">GitHub page</a>."
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:7
+msgid "Insufficient permissions"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:27
+msgid "Create New Item"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:33 lib/social/settings.php:107
+msgid "Link"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:38 lib/social/settings.php:108
+msgid "Title"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:43 lib/social/settings.php:106
+msgid "Icon"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:46
+msgid "Upload"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:51
+msgid "Create Item"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:61
+msgid "Icon Bucket"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:86
+msgid "Select an icon above and its URL will be automatically entered for you."
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:145
+msgid "Display the titles instead of images"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:157
+msgid "You don't have any items in your bar, why not create some?"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:201
+msgid "Item added"
+msgstr ""
+
+# @ theme
+#: lib/social/settings.php:250
+msgid "Items updated"
+msgstr ""
+
+# @ framework
+#: lib/social/social-bartender.php:45
+msgid "Social Icons"
+msgstr "الرموز الاجتماعية\n"
+
+# @ theme
+#: lib/social/widget.php:25
+msgid "Set up Social Bartender"
+msgstr ""
+
+# @ theme
+#: lib/social/widget.php:25
+msgid "here."
+msgstr ""
+
+# @ theme
+#: lib/social/widget.php:28
+msgid "Title (optional):"
+msgstr ""
+
+# @ framework
+#: lib/widgets/ads120.php:13
+msgid "Widget display 120*140 Ads"
+msgstr "قطعة شاشة 120 * 140 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads120.php:14
+msgid "Widget - Ads 120*140"
+msgstr "القطعة - إعلانات 120 * 140\n"
+
+# @ framework
+#: lib/widgets/ads120.php:81 lib/widgets/ads120b.php:112
+#: lib/widgets/ads120x.php:81 lib/widgets/ads125.php:112
+#: lib/widgets/ads160.php:68 lib/widgets/ads250.php:70
+#: lib/widgets/ads300.php:70 lib/widgets/ads300x.php:82
+msgid "advertisement"
+msgstr "إعلان\n"
+
+# @ framework
+#: lib/widgets/ads120.php:92 lib/widgets/ads120b.php:127
+#: lib/widgets/ads120x.php:92 lib/widgets/ads125.php:127
+#: lib/widgets/ads160.php:77 lib/widgets/ads250.php:78
+#: lib/widgets/ads300.php:78 lib/widgets/ads300x.php:93
+#: lib/widgets/custom_html.php:69 lib/widgets/fb_likebox.php:86
+#: lib/widgets/flickr.php:72 lib/widgets/posts-widget.php:175
+#: lib/widgets/postsImages-widget.php:145 lib/widgets/postsList-widget.php:97
+#: lib/widgets/twitter-widget.php:90 lib/widgets/video-widget.php:64
+msgid "Title:"
+msgstr "العنوان:\n"
+
+# @ framework
+#: lib/widgets/ads120.php:98 lib/widgets/ads120b.php:133
+#: lib/widgets/ads120x.php:98 lib/widgets/ads160.php:83
+#: lib/widgets/ads250.php:84 lib/widgets/ads300.php:84
+#: lib/widgets/ads300x.php:99 lib/widgets/custom_html.php:75
+msgid "transparent background"
+msgstr "خلفية شفافة\n"
+
+# @ framework
+#: lib/widgets/ads120.php:101 lib/widgets/ads120b.php:136
+#: lib/widgets/ads120x.php:101 lib/widgets/ads300x.php:102
+msgid "First Ad"
+msgstr "أول إعلان\n"
+
+# @ framework
+#: lib/widgets/ads120.php:103 lib/widgets/ads120.php:119
+#: lib/widgets/ads120b.php:138 lib/widgets/ads120b.php:154
+#: lib/widgets/ads120b.php:171 lib/widgets/ads120b.php:187
+#: lib/widgets/ads120x.php:103 lib/widgets/ads120x.php:119
+#: lib/widgets/ads125.php:133 lib/widgets/ads125.php:149
+#: lib/widgets/ads125.php:166 lib/widgets/ads125.php:182
+#: lib/widgets/ads160.php:87 lib/widgets/ads250.php:88
+#: lib/widgets/ads300.php:88 lib/widgets/ads300x.php:104
+#: lib/widgets/ads300x.php:120
+msgid "image:"
+msgstr "الصورة:\n"
+
+# @ framework
+#: lib/widgets/ads120.php:108 lib/widgets/ads120b.php:143
+#: lib/widgets/ads120x.php:108 lib/widgets/ads125.php:138
+#: lib/widgets/ads160.php:92 lib/widgets/ads250.php:93
+#: lib/widgets/ads300.php:93 lib/widgets/ads300x.php:109
+msgid "Link :"
+msgstr "الرابط:\n"
+
+# @ framework
+#: lib/widgets/ads120.php:113 lib/widgets/ads120.php:129
+#: lib/widgets/ads120b.php:148 lib/widgets/ads120b.php:164
+#: lib/widgets/ads120b.php:181 lib/widgets/ads120b.php:197
+#: lib/widgets/ads120x.php:113 lib/widgets/ads120x.php:129
+#: lib/widgets/ads125.php:143 lib/widgets/ads125.php:159
+#: lib/widgets/ads125.php:176 lib/widgets/ads125.php:192
+#: lib/widgets/ads160.php:97 lib/widgets/ads250.php:98
+#: lib/widgets/ads300.php:98 lib/widgets/ads300x.php:114
+#: lib/widgets/ads300x.php:130
+msgid "ad code :"
+msgstr "الإعلان البريدي:\n"
+
+# @ framework
+#: lib/widgets/ads120.php:117 lib/widgets/ads120b.php:152
+#: lib/widgets/ads120x.php:117 lib/widgets/ads300x.php:118
+msgid "Second Ad"
+msgstr "الإعلان الثاني\n"
+
+# @ framework
+#: lib/widgets/ads120.php:124 lib/widgets/ads120b.php:159
+#: lib/widgets/ads120x.php:124 lib/widgets/ads125.php:154
+#: lib/widgets/ads300x.php:125
+msgid "link2 :"
+msgstr "link2:\n"
+
+# @ framework
+#: lib/widgets/ads120b.php:13
+msgid "Widget display 120*90 Ads"
+msgstr "قطعة شاشة 120 * 90 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads120b.php:14
+msgid "Widget - Ads 120*90"
+msgstr "قطعة شاشة 120 * 90 إعلان...\n"
+
+# @ framework
+#: lib/widgets/ads120b.php:169
+msgid "Third Ad"
+msgstr "الإعلان الثالث\n"
+
+# @ framework
+#: lib/widgets/ads120b.php:176 lib/widgets/ads125.php:171
+msgid "link3 :"
+msgstr "link3"
+
+# @ framework
+#: lib/widgets/ads120b.php:185
+msgid "fourth Ad"
+msgstr "4 الإعلان\n"
+
+# @ framework
+#: lib/widgets/ads120b.php:192 lib/widgets/ads125.php:187
+msgid "link4 :"
+msgstr "link4:\n"
+
+# @ framework
+#: lib/widgets/ads120x.php:13
+msgid "Widget display 120*600 Ads"
+msgstr "قطعة شاشة 120 * 600 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads120x.php:14
+msgid "Widget - Ads 120*600"
+msgstr "القطعة - إعلانات 120 * 600\n"
+
+# @ framework
+#: lib/widgets/ads125.php:13
+msgid "Widget display 125*125 Ads"
+msgstr "قطعة شاشة 125 * 125 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads125.php:14
+msgid "Widget - Ads 125*125"
+msgstr "القطعة - إعلانات 125 * 125\n"
+
+# @ framework
+#: lib/widgets/ads125.php:131
+msgid "Ads #1"
+msgstr "الإعلانات # 1\n"
+
+# @ framework
+#: lib/widgets/ads125.php:147
+msgid "Ads #2"
+msgstr "إعلانات رقم 2\n"
+
+# @ framework
+#: lib/widgets/ads125.php:164
+msgid "Ads #3"
+msgstr "إعلانات رقم 3\n"
+
+# @ framework
+#: lib/widgets/ads125.php:180
+msgid "Ads #4"
+msgstr "إعلانات رقم 4\n"
+
+# @ framework
+#: lib/widgets/ads160.php:13
+msgid "Widget display 160*600 Ads"
+msgstr "عرض القطعة 160 * 600 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads160.php:14
+msgid "Widget - Ads 160*600"
+msgstr "القطعة - إعلانات 160 * 600\n"
+
+# @ framework
+#: lib/widgets/ads250.php:13
+msgid "Widget display 250*250 Ads"
+msgstr "قطعة شاشة 250 * 250 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads250.php:14
+msgid "Widget - Ads 250*250"
+msgstr "القطعة - إعلانات 250 * 250\n"
+
+# @ framework
+#: lib/widgets/ads300.php:13
+msgid "Widget display 300*250 Ads"
+msgstr "قطعة شاشة 300 * 250 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads300.php:14
+msgid "Widget - Ads 300*250"
+msgstr "القطعة - إعلانات 300 * 250\n"
+
+# @ framework
+#: lib/widgets/ads300x.php:13
+msgid "Widget display 300*100 Ads"
+msgstr "قطعة شاشة 300 * 100 إعلان\n"
+
+# @ framework
+#: lib/widgets/ads300x.php:14
+msgid "Widget - Ads 300*100"
+msgstr "القطعة - إعلانات 300 * 100\n"
+
+# @ framework
+#: lib/widgets/comments-widget.php:12
+msgid "Widget display Recent Comments with avatar"
+msgstr "تعليقات عرض القطعة الأخيرة مع الصورة الرمزية\n"
+
+# @ framework
+#: lib/widgets/comments-widget.php:14
+msgid "Widget - Recent Comments"
+msgstr "القطعة - التعليقات الأخيرة\n"
+
+# @ framework
+#: lib/widgets/comments-widget.php:42 lib/widgets/comments-widget.php:44
+#: lib/widgets/tabbed-widget.php:149 lib/widgets/tabbed-widget.php:153
+msgid "on "
+msgstr "في\n"
+
+# @ framework
+#: lib/widgets/comments-widget.php:83 lib/widgets/newsletter.php:58
+msgid "title:"
+msgstr "العنوان:\n"
+
+# @ framework
+#: lib/widgets/comments-widget.php:88
+msgid "Number of comments"
+msgstr "عدد التعليقات\n"
+
+# @ framework
+#: lib/widgets/custom_html.php:13
+msgid "Arbitrary text or HTML with transparent background Ability"
+msgstr "النص التعسفي أو HTML مع القدرة خلفية شفافة\n"
+
+# @ framework
+#: lib/widgets/custom_html.php:14
+msgid "widget - Custom Text Widget"
+msgstr "القطعة - مخصص القطعة نص\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:13
+msgid "Facebook Like Box"
+msgstr "الفيسبوك مثل صندوق\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:15
+msgid "Widget - Facebook Likebox"
+msgstr "القطعة - Likebox الفيسبوك\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:75
+msgid "Facebook"
+msgstr "الفيسبوك"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:91
+msgid "Facebook Page URL:"
+msgstr "صفحة الفيسبوك URL:\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:97
+msgid "Width:"
+msgstr "العرض:\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:102
+msgid "Height:"
+msgstr "الطول:\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:107
+msgid "Color Scheme"
+msgstr "نظام الألوان\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:116
+msgid "Background Color: (color code without #)"
+msgstr "لون الخلفية: (رمز اللون من دون #)\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:120
+msgid "Box border Color: (color code without #)"
+msgstr "لون مربع الحدود: (رمز اللون من دون #)\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:126
+msgid "Show faces"
+msgstr "عرض الوجوه\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:131
+msgid "Show stream"
+msgstr "تظهر تيار\n"
+
+# @ framework
+#: lib/widgets/fb_likebox.php:136
+msgid "Show header"
+msgstr "تظهر رأس\n"
+
+# @ framework
+#: lib/widgets/flickr.php:13
+msgid "Widget display Flickr Photo"
+msgstr "عرض الصور فليكر القطعة\n"
+
+# @ framework
+#: lib/widgets/flickr.php:14
+msgid "Widget - Flickr"
+msgstr "القطعة - فليكر\n"
+
+# @ framework
+#: lib/widgets/flickr.php:63
+msgid "Flickr"
+msgstr "فليكر"
+
+# @ framework
+#: lib/widgets/flickr.php:77
+msgid "Flickr ID:"
+msgstr "فليكر ID:\n"
+
+# @ framework
+#: lib/widgets/flickr.php:82
+msgid "Number of Photos:"
+msgstr "عدد من الصور:\n"
+
+# @ framework
+#: lib/widgets/flickr.php:87
+msgid "Type (user or group):"
+msgstr "نوع (مستخدم أو مجموعة):\n"
+
+# @ framework
+#: lib/widgets/flickr.php:95
+msgid "Display (random or latest):"
+msgstr "عرض (عشوائي أو أحدث):\n"
+
+# @ framework
+#: lib/widgets/gpluse.php:12
+msgid "widget - Google+ Box"
+msgstr "القطعة - في + Google صندوق\n"
+
+# @ framework
+#: lib/widgets/gpluse.php:52
+msgid "Find us on Google+"
+msgstr "تجدنا على + Google\n"
+
+# @ framework
+#: lib/widgets/gpluse.php:60 lib/widgets/widget-login.php:56
+msgid "Title : "
+msgstr "العنوان:\n"
+
+# @ framework
+#: lib/widgets/gpluse.php:64
+msgid "Page Url : "
+msgstr "عنوان URL للصفحة:\n"
+
+# @ framework
+#: lib/widgets/newsletter.php:12
+msgid "Widget display the Subscribe box"
+msgstr "القطعة عرض مربع اكتتاب\n"
+
+# @ framework
+#: lib/widgets/newsletter.php:14
+msgid "Widget - Newsletter"
+msgstr "القطعة - النشرة الإخبارية\n"
+
+# @ framework
+#: lib/widgets/newsletter.php:27
+msgid "Your Email"
+msgstr "البريد الإلكتروني الخاص بك\n"
+
+# @ framework
+#: lib/widgets/newsletter.php:52
+msgid "Subscribe to our newsletter"
+msgstr "الاشتراك في النشرة الإخبارية\n"
+
+# @ framework
+#: lib/widgets/newsletter.php:63
+msgid "feedburner name: (your name without http://feeds.feedburner.com/) "
+msgstr "فيدبورنر الاسم: (اسمك دون http://feeds.feedburner.com/)\n"
+
+# @ framework
+#: lib/widgets/posts-widget.php:13 lib/widgets/postsImages-widget.php:13
+#: lib/widgets/postsList-widget.php:13
+msgid "Widget display Posts order by : Popular, Random, Recent"
+msgstr "عرض مشاركات القطعة ترتيب حسب: شعبية، عشوائية، الأخيرة\n"
+
+# @ framework
+#: lib/widgets/posts-widget.php:14
+msgid "Widget - Posts"
+msgstr "القطعة - عدد المساهمات\n"
+
+# @ framework
+#: lib/widgets/posts-widget.php:169 lib/widgets/postsImages-widget.php:139
+#: lib/widgets/postsList-widget.php:91
+msgid "Most Popular"
+msgstr "الأكثر شعبية\n"
+
+# @ framework
+#: lib/widgets/posts-widget.php:180 lib/widgets/postsImages-widget.php:150
+#: lib/widgets/postsList-widget.php:102
+msgid "orderby"
+msgstr "orderby\n"
+
+# @ framework
+#: lib/widgets/posts-widget.php:190 lib/widgets/postsImages-widget.php:160
+#: lib/widgets/postsList-widget.php:112
+msgid "Number Of Posts:"
+msgstr "عدد المشاركات:\n"
+
+# @ framework
+#: lib/widgets/postsImages-widget.php:14
+msgid "Widget - Posts in images"
+msgstr "القطعة - المشاركات في الصور\n"
+
+# @ framework
+#: lib/widgets/postsList-widget.php:14
+msgid "Widget - Posts List"
+msgstr "القطعة - قائمة المشاركات\n"
+
+# @ framework
+#: lib/widgets/social-counter.php:12
+msgid ""
+"Widget display a count of your rss subscribers, Twitter followers, facebook "
+"fans"
+msgstr ""
+"عرض القطعة العد من المشتركين RSS الخاص بك، أتباع التغريد، الفيسبوك المشجعين\n"
+
+# @ framework
+#: lib/widgets/social-counter.php:14
+msgid "Widget - Social Counter"
+msgstr "القطعة - مكافحة الاجتماعية\n"
+
+# @ framework
+#: lib/widgets/social-counter.php:95
+msgid "Fans"
+msgstr "المشجعين"
+
+# @ framework
+#: lib/widgets/social-counter.php:104
+msgid "Followers"
+msgstr "أتباع"
+
+# @ framework
+#: lib/widgets/social-counter.php:118
+msgid "Subscribers"
+msgstr "عدد المشتركين\n"
+
+# @ framework
+#: lib/widgets/social-counter.php:153
+msgid "rss number (if not use feedburner, or want static number)"
+msgstr "RSS عدد (إذا لم تستخدم فيدبورنر، أو تريد عدد ثابت)\n"
+
+# @ framework
+#: lib/widgets/social-counter.php:158
+msgid "RSS Link (leave empty to use default rss link)"
+msgstr "RSS ينك (اترك فارغة لاستخدام الافتراضي RSS الرابط)\n"
+
+# @ framework
+#: lib/widgets/social-counter.php:164
+msgid "Twitter Name"
+msgstr "تويتر اسم\n"
+
+# @ framework
+#: lib/widgets/social-counter.php:169
+msgid ""
+"facebook page ID (<a target=\"_blank\" href=\"http://hellboundbloggers."
+"com/2010/07/10/find-facebook-profile-and-page-id/\">more Info</a>)"
+msgstr ""
+"صفحة الفيسبوك ID (معلومات <a href=\"http://hellboundbloggers.com/2010/07/10/"
+"find-facebook-profile-and-page-id/\"> أكثر target=\"_blank\" </ A>)\n"
+
+# @ framework
+#: lib/widgets/tabbed-widget.php:16
+msgid ""
+"A tabbed widget that display popular posts, recent posts, comments and tags."
+msgstr ""
+"A القطعة تفاعلية عرض المشاركات الشعبية، وآخر المشاركات والتعليقات "
+"والعلامات.\n"
+
+# @ framework
+#: lib/widgets/tabbed-widget.php:22
+msgid "Widget - Tabbed"
+msgstr "القطعة - كلفه\n"
+
+# @ framework
+#: lib/widgets/tabbed-widget.php:57
+msgid "Recent"
+msgstr "الأخيرة\n"
+
+# @ framework
+#: lib/widgets/tabbed-widget.php:216
+msgid "No Setting"
+msgstr "لا تحديد\n"
+
+# @ framework
+#: lib/widgets/twitter-widget.php:13
+msgid "Widget display Latest Tweets"
+msgstr "تويت عرض أحدث القطعة\n"
+
+# @ framework
+#: lib/widgets/twitter-widget.php:15
+msgid "Widget - Twitter"
+msgstr "القطعة - تويتر\n"
+
+# @ framework
+#: lib/widgets/twitter-widget.php:83
+msgid "Twitter"
+msgstr "تغريد\n"
+
+# @ framework
+#: lib/widgets/twitter-widget.php:95
+msgid "Twitter username:"
+msgstr "تويتر اسم المستخدم:\n"
+
+# @ framework
+#: lib/widgets/twitter-widget.php:100
+msgid "Number of tweets:"
+msgstr "عدد تويت:\n"
+
+# @ framework
+#: lib/widgets/video-widget.php:13
+msgid "Widget display video support Youtube, vimeo, dailymotion"
+msgstr "القطعة دعم عرض الفيديو يوتيوب، فيميو، ديلي موشن\n"
+
+# @ framework
+#: lib/widgets/video-widget.php:15
+msgid "Widget - Videos"
+msgstr "القطعة - فيديو\n"
+
+# @ framework
+#: lib/widgets/video-widget.php:59
+msgid "Video"
+msgstr "فيديو\n"
+
+# @ framework
+#: lib/widgets/video-widget.php:69
+msgid "type"
+msgstr "نوع"
+
+# @ framework
+#: lib/widgets/video-widget.php:78
+msgid "Video ID:"
+msgstr "فيديو ID:\n"
+
+# @ framework
+#: lib/widgets/widget-login.php:11
+msgid "Widget - Login"
+msgstr "القطعة - تسجيل الدخول\n"
+
+# @ framework
+#: lib/widgets/widget-login.php:52
+msgid "Login"
+msgstr "دخول"
+
+# @ framework
+#: page-authors.php:92 page-authors.php:96 page-authors.php:101
+#: page-contact.php:138 page-contact.php:142 page-contact.php:147
+#: page-sitemap.php:98 page-sitemap.php:102 page-sitemap.php:107 page.php:39
+#: page.php:43 page.php:48 sidebar.php:4 single.php:259 single.php:263
+#: single.php:268
+msgid "There Is No Sidebar Widgets Yet"
+msgstr "لا يوجد الشريط الجانبي القطع غير\n"
+
+# @ framework
+#: page-contact.php:12
+msgid "Please enter your name."
+msgstr "من فضلك ادخل اسمك.\n"
+
+# @ framework
+#: page-contact.php:19
+msgid "Please enter your email address."
+msgstr "يرجى إدخال عنوان البريد الإلكتروني الخاص بك.\n"
+
+# @ framework
+#: page-contact.php:29
+msgid "Please enter a message."
+msgstr "الرجاء إدخال رسالة.\n"
+
+# @ framework
+#: page-contact.php:75
+msgid "Thanks, your email was sent successfully."
+msgstr "شكرا، تم إرسال البريد الإلكتروني الخاص بك بنجاح.\n"
+
+# @ framework
+#: page-contact.php:86
+msgid "Sorry, an error occurred."
+msgstr "عذرا، حدث خطأ.\n"
+
+# @ framework
+#: page-contact.php:92
+msgid "Name:"
+msgstr "الاسم:\n"
+
+# @ framework
+#: page-contact.php:100
+msgid "Email:"
+msgstr "البريد الإلكتروني:\n"
+
+# @ framework
+#: page-contact.php:107
+msgid "Message:"
+msgstr "الرسالة:\n"
+
+# @ framework
+#: page-contact.php:116
+msgid "Send Email"
+msgstr "إرسال البريد الإلكتروني\n"
+
+# @ framework
+#: page-sitemap.php:31
+msgid "Posts"
+msgstr "المشاركات\n"
+
+# @ framework
+#: page-sitemap.php:45
+msgid "Pages"
+msgstr "صفحات"
+
+# @ framework
+#: page-sitemap.php:74
+msgid "Authors"
+msgstr "الكتاب"
+
+# @ framework
+#: search.php:7
+#, php-format
+msgid "Search Results for: %s"
+msgstr "نتائج البحث عن: S٪\n"
+
+# @ framework
+#: search.php:9
+msgid "Nothing Found"
+msgstr "العثور على أي شيء\n"
+
+# @ framework
+#: single.php:173
+msgid "About"
+msgstr "حول"
+
+# @ framework
+#: single.php:231
+msgid "Related Posts"
+msgstr "الوظائف ذات الصلة\n"

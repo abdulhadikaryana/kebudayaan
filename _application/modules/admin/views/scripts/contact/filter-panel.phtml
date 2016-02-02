@@ -1,0 +1,49 @@
+<div class="filter-panel hidden">
+    
+    <h4 style="margin-top: 10px;"><label for="filterPage">Filter:</label></h4>
+    
+    <form action="<?php echo $this->currentUrl(); ?>" method="post">
+        <select class="filter-box" name="filterPage" id="filterPage"
+                onchange="filterSwitch(this.value);">
+            <option value="0">Tampilkan Semua</option>
+            <option value="1">Nama</option>
+            <option value="2">Status</option>
+            <option value="3">Subjek</option>
+            <option value="4">Flag</option>
+            <option value="5">Negara</option>
+        </select>
+        
+        <input type="text" class="name-box mediumele hidden" name="filterName"/>
+        <select class="country hidden" name="filterCountry">
+            <?php foreach($this->countryList as $code => $country): ?>
+                <?php if($code): ?>
+                <option value="<?php echo $code; ?>"><?php echo $country; ?></option>
+                <?php endif;?>
+            <?php endforeach; ?>
+        </select>
+
+        <select class="status-box hidden" name="filterStatus">
+            <option value="0">Not yet replied</option>
+            <option value="1">A reply draft awaiting approval</option>
+            <option value="2">Replied</option>
+        </select>
+        
+        <select class="subject-box hidden" name="filterSubject">
+            <option value="1">Destination Information Inquiry</option>
+            <option value="2">Site Promotional / Marketing Cooperation Offers</option>
+            <option value="3">Affiliation Information Inquiry</option>
+            <option value="4">Feedback / Comment on this Site</option>
+            <option value="0">Others</option>
+        </select>
+        
+        <select class="flag-box hidden" name="filterFlag">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+    
+        
+        <input type="submit" value="Go" class="btn radius" />
+        
+        <span class="ajax-loader"></span>
+    </form>
+</div>

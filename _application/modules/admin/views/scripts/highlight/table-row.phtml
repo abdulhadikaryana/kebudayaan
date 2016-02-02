@@ -1,0 +1,58 @@
+<tr>
+  <td><input type="checkbox" name="highlights[]" 
+                         value="<?php echo $this->highlight_id; ?>"/>
+  </td>
+  <td>
+    <a href="<?php echo $this->rootUrl(); ?>/admin/highlight/edit/id/<?php echo $this->highlight_id; ?>/lang/1"><?php echo $this->HtmlDecode($this->name); ?></a>    
+  </td>
+  <td><img src="<?php echo $this->imageUrl('timthumb.php?src=upload/highlight/' . $this->img_path . '&w=250&h=150&q=75'); ?>" /></td>
+  <td style="text-align: center;">
+    <?php if ($this->type == 3) : ?>
+      Header
+    <?php elseif ($this->type == 2) : ?>
+      Cluster
+    <?php elseif ($this->type == 1) : ?>
+      Medium-Sidebar
+    <?php elseif ($this->type == 4) : ?>
+      Small-Sidebar
+    <?php elseif ($this->type == 5) : ?>
+      Image Gallery
+    <?php elseif ($this->type == 6) : ?>
+      User Review
+    <?php endif; ?>
+  </td>
+  <td>    
+
+    <?php if ($this->flag == 1): ?>
+      <a class = "btn btn-mini btn-success" onclick = "changeStatus(<?php echo $this->highlight_id; ?>, $(this));">Tampilkan</a>
+    <?php elseif ($this->flag == 0) : ?>
+      <a class = "btn btn-mini btn-warning" onclick= "changeStatus(<?php echo $this->highlight_id; ?>, $(this));">Tidak Ditampilkan</a>
+    <?php endif; ?>
+     </a>
+  </td>
+  
+  <td>
+      <a href="<?php
+        echo $this->url(array(
+            'action' => 'edit',
+            'id'     => $this->highlight_id,
+            'lang'   => 1
+        ));
+            ?>"
+               title="Sunting">
+        <i class="icon-edit"></i>
+      </a>
+      <a onclick="if(!confirm('Apakah anda yakin ingin '+
+                'menghapus kegiatan ini?')) return false"
+          href="<?php
+            echo $this->url(array(
+                'action' => 'delete',
+                'id'     => $this->highlight_id
+            ));
+           ?>"
+          title="Hapus">
+         <i class="icon-trash"></i>
+      </a>
+  </td>
+
+</tr>

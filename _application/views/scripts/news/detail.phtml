@@ -1,0 +1,100 @@
+
+<div class="row-fluid">
+    <div class="span24">
+        <h1 id="page-title" class="text-center"><span>Kebudayaan Indonesia</span></h1>
+    </div>
+
+        <div class="section span24">
+
+            <div class="cont span22">
+
+                <h2>
+
+                    <span><?php echo $this->escape($this->htmlDecode($this->news['title'])); ?></span>
+
+                </h2>
+
+                <p class="section-metadata">
+
+                    <span class="date"><?php echo $this->newsMeta($this->news['publish_date']); ?></span>
+
+                    <?php if(!empty($this->author['name'])): ?>
+
+                        <span class="author"><?php echo $this->translate('by') .' ' . $this->author['name'] ?></span>
+
+                    <?php endif; ?>
+
+                </p>
+
+                <div id="news-content">
+
+                   <?php if (file_exists(UPLOAD_FOLDER . '/news/' . $this->news['image']) && !empty($this->news['image'])) : ?>
+
+                        <div id="news-img" class="center">
+
+                        <img class="center" src="<?php echo $this->imageUrl(
+
+                                    'upload/news/' . $this->news['image']); ?>"
+
+                                     alt="" />
+                        </div>
+
+                    <?php endif; ?>
+
+                    <?php echo $this->htmlDecode($this->news['content']); ?>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section span24" style="margin-top:15px;">
+            
+            <div class="row-fluid">
+                <div class="cont span22">
+                    <div>
+                        <?php echo $this->render('partials/socialnetwork.phtml') ?>
+                    </div>
+                    <div class="com">
+                        <?php echo $this->render('partials/fb-comments.phtml') ?>
+                    </div>
+                </div>
+            </div>
+        </div> 
+</div>
+
+
+
+
+
+<!--  addtoAny Js -->
+
+<?php $this->placeholder("jsInline")->captureStart() ?>
+
+    <script type="text/javascript">
+
+        loadScript("http://static.addtoany.com/menu/page.js", function(){});
+
+        $(document).ready(function() {
+
+            $('.reply').fancybox({
+
+                'transitionIn'		: 'elastic',
+
+                'transitionOut'		: 'elastic',
+
+                'autoScale'             : false,
+
+                'type'                  : 'iframe'
+
+
+
+            });
+
+        });
+
+    </script>
+
+<?php $this->placeholder("jsInline")->captureEnd() ?>
+
+
+

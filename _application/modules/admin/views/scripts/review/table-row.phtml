@@ -1,0 +1,39 @@
+<tr>
+	<td>
+        <table class="cleartable">
+            <tr>
+                <td>
+                    <a href="<?php echo $this->rootUrl(); ?>/admin/review/edit/id/<?php echo $this->review_id; ?>">
+                        <?php echo $this->HtmlDecode($this->review_title); ?>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/review/edit/id/<?php echo $this->review_id; ?>">
+                                    Edit
+                                </a>
+                            </td>
+                            <td>
+                                <div class="general-remove" onclick="deleteReview(<?php echo $this->review_id; ?>, $(this));">
+                                    Delete
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>            
+        </table>
+    </td>
+    <td>
+        <?php echo $this->HtmlDecode($this->truncate($this->review_content)); ?>
+    </td>
+    <td>
+        <div class = "general-remove" onclick = "changeReviewStatus(<?php echo $this->review_id; ?>, $(this));">
+            <?php echo ($this->status == 1) ? "shown" : "not shown"; ?>
+        </div>
+    </td>
+</tr>

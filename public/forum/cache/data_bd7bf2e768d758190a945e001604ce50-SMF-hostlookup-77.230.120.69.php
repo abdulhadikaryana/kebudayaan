@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454405255 < time()) $expired = true; else{$expired = false; $value = 's:40:"static-69-120-230-77.ipcom.comunitel.net";';}?>

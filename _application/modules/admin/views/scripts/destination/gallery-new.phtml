@@ -1,0 +1,62 @@
+<!--main-->
+<div id="main-destdisc">
+
+    <!--main content-->
+    <div id="wrapper-content">
+	<div id="box-gallery">
+	    <div id="header-gallery">
+		<h2><?php echo strtoupper($this->translate('title_gallery'));?></h2>
+	    </div>
+	    
+	    <?php if(sizeof($this->imageGallery)):?>
+			
+			<?php foreach($this->imageGallery as $imageGallery):?>
+	
+
+			<div id="box-image">
+	
+					<img src="<?php echo $this->imageUrl('/upload/poi/' . basename($imageGallery->url)) ?>" />
+					<?php if(!empty($imageGallery->description)):?>
+						<div id="image-desc">
+							<h2>
+								<?php echo $imageGallery->name;?>
+							</h2>
+							<p>
+								<?php echo $imageGallery->description;?>
+							</p>
+						</div>
+					<?php endif;?>
+			</div>
+			
+			<?php endforeach;?>
+
+
+
+			<div id="nav-gallery">
+
+				<?php
+				echo $this->paginationControl($this->imageGallery,'Elastic','partials/paginator-poi.phtml'); ?>
+	
+			</div>
+
+	    </div>
+
+	    <?php endif;?>
+	    
+	    <div id="footer-gallery">
+		<a href="<?php echo $this->prevUrl;?>">
+			<< <?php echo strtoupper($this->translate('back_to_destination')); ?>
+		</a>
+	    </div>
+
+	</div>
+	
+    </div>
+    <!--end main content-->
+
+	<!--sidebar-->
+    <?php echo $this->render('destination/sidebar-new.phtml');?>                          
+    <!--end sidebar -->
+
+</div>
+<!--end main -->

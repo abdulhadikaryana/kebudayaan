@@ -1,0 +1,153 @@
+
+<div class="pagenavi">
+
+<?php if ($this->pageCount > 1): ?>
+        
+        <!-- navigasi searching -->
+        <?php if(isset($this->keyword) AND isset($this->category)):?>
+            <!-- First page link -->
+             <?php if (isset($this->previous)):
+                 $pageNo = $this->first;
+             ?>
+                 <a class="first display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'keyword'=>$this->keyword,'page' => $this->first))?>"></a>
+             <?php else: ?>
+                 <a class="first display-block float-left hidden"></a>
+             <?php endif; ?>
+     
+     
+             <!-- Previous page link -->
+             <?php if (isset($this->previous)): ?>
+             
+                 <a class="prev-post display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'keyword'=>$this->keyword,'page' => $this->previous)); ?>"></a>
+             
+             <?php else: ?>
+                 <a class="prev-disabled display-block float-left"></a>
+             <?php endif; ?>
+     
+     
+             <?php foreach($this->pagesInRange as $page) : ?>
+                     <?php if($page != $this->current): ?>
+                         <a class="page-link display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'keyword'=>$this->keyword,'page' => $page)) ?><?php if($this->row != null){echo '/fiterPageRow/'.$this->row;}?>"><?php echo $page; ?></a>
+                     <?php else : ?>
+                         <span class="current display-block float-left"><?php echo $page; ?></span>
+                     <?php endif; ?>
+             <?php endforeach; ?>
+     
+             
+             <!-- Next page link -->
+             <?php if (isset($this->next)): ?>
+
+               <a class="next-post display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'keyword'=>$this->keyword,'page' => $this->next)); ?>"></a>
+
+             <?php else: ?>
+               <a class="next-disabled display-block float-left"></a>
+             <?php endif; ?>
+     
+     
+             <!-- Last page link -->
+             <?php if (isset($this->next)): $pageNo = $this->last; ?>
+                 <a class="last display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'keyword'=>$this->keyword,'page' => $this->last))?>"></a>
+             <?php else: ?>
+                  <a class="last display-block float-left hidden"></a>
+            <?php endif; ?>
+
+        <!-- navigasi xx -->
+        <?php elseif(isset($this->category)) :?>
+
+            <!-- First page link -->
+             <?php if (isset($this->previous)):
+                 $pageNo = $this->first;
+             ?>
+                 <!--<a class="first display-block float-left" href="<?php echo $this->url(array('page' => $this->first))?>"></a>-->
+             <?php else: ?>
+                 <!--<a class="first display-block float-left"></a>-->
+             <?php endif; ?>
+     
+     
+             <!-- Previous page link -->
+             <?php if (isset($this->previous)): ?>
+             
+                 <a class="prev-post display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'page' => $this->previous)); ?>"></a>
+             
+             <?php else: ?>
+                 <a class="prev-disabled display-block float-left"></a>
+             <?php endif; ?>
+     
+     
+             <?php foreach($this->pagesInRange as $page) : ?>
+                     <?php if($page != $this->current): ?>
+                         <a class="page-link display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'page' => $page)) ?><?php if($this->row != null){echo '/fiterPageRow/'.$this->row;}?>"><?php echo $page; ?></a>
+                     <?php else : ?>
+                         <span class="current display-block float-left"><?php echo $page; ?></span>
+                     <?php endif; ?>
+             <?php endforeach; ?>
+     
+             
+             <!-- Next page link -->
+             <?php if (isset($this->next)): ?>
+
+               <a class="next-post display-block float-left" href="<?php echo $this->url(array('category'=>$this->category,'page' => $this->next)); ?>"></a>
+
+             <?php else: ?>
+               <a class="next-disabled display-block float-left"></a>
+             <?php endif; ?>
+     
+     
+             <!-- Last page link -->
+             <?php if (isset($this->next)): $pageNo = $this->last; ?>
+                 <a class="last display-block float-left" href="<?php echo $this->url(array('page' => $this->last))?>"></a>
+             <?php else: ?>
+                  <a class="last display-block float-left"></a>
+            <?php endif; ?>
+
+        <?php else:?>
+
+            <!-- First page link -->
+            <?php if (isset($this->previous)):
+                $pageNo = $this->first;
+            ?>
+                <a class="first display-block float-left" href="<?php echo $this->url(array('page' => $this->first))?>"></a>
+            <?php else: ?>
+                <a class="first display-block float-left hidden"></a>
+            <?php endif; ?>
+    
+    
+            <!-- Previous page link -->
+            <?php if (isset($this->previous)): ?>
+            
+                <a class="prev-post display-block float-left" href="<?php echo $this->url(array('page' => $this->previous)); ?>"></a>
+            
+            <?php else: ?>
+                <a class="prev-disabled display-block float-left"></a>
+            <?php endif; ?>
+    
+    
+            <?php foreach($this->pagesInRange as $page) : ?>
+                    <?php if($page != $this->current): ?>
+                        <a class="page-link display-block float-left" href="<?php echo $this->url(array('page' => $page)) ?><?php if($this->row != null){echo '/fiterPageRow/'.$this->row;}?>"><?php echo $page; ?></a>
+                    <?php else : ?>
+                        <span class="current display-block float-left"><?php echo $page; ?></span>
+                    <?php endif; ?>
+            <?php endforeach; ?>
+            
+            <!-- Next page link -->
+            <?php if (isset($this->next)): ?>
+              <a class="next-post display-block float-left" href="<?php echo $this->url(array('page' => $this->next)); ?>"></a>
+            <?php else: ?>
+              <a class="next-disabled display-block float-left"></a>
+            <?php endif; ?>
+    
+    
+            <!-- Last page link -->
+            <?php if (isset($this->next)): $pageNo = $this->last; ?>
+                <a class="last display-block float-left" href="<?php echo $this->url(array('page' => $this->last))?>"></a>
+            <?php else: ?>
+                 <a class="last display-block float-left hidden"></a>
+           <?php endif; ?>
+       
+        <?php endif;?>
+
+
+<?php endif;?>
+</div>
+

@@ -1,0 +1,84 @@
+<form method="post" action="<?php echo $this->currentUrl(); ?>" 
+      id="roleForm" name="roleForm" class="form-horizontal well">
+
+  <fieldset>
+    <legend class="f_legend">Detail Role</legend>
+
+    <div class="control-group">
+      <label for="" class="control-label">Nama Role</label>
+      <div class="controls">
+
+        <?php
+        if (!empty($this->name)) {
+          $default = "value='" . $this->name . "'";
+        } else {
+          $default = "";
+          ;
+        }
+        ?>
+        <input type="text" id="roleName" name="roleName" class="mediumele" <?php echo $default; ?>/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="" class="control-label">Pilih Izin</label>
+      <div class="controls">
+        <div id="roleTreeContainer">
+          <ul id="roleTree">
+            <?php if (!empty($this->treeData)): ?>
+              <?php $treeData = $this->treeData; ?>
+              <?php $ctr = 0; ?>
+              <?php foreach ($treeData as $value): ?>
+                <?php if (!empty($value['modules'])): ?>
+                  <li>
+                    <input type="checkbox" name="mod_<?php echo $value['name']; ?>" 
+                           onclick="setChildStatus($(this),<?php echo $ctr; ?>);" />
+                    <label><?php echo $value['name']; ?></label>
+                    <?php $ctr++; ?>
+                    <ul class="treeModule">
+                      <?php foreach ($value['modules'] as $temp): ?>
+                        <?php
+                        $checked = null;
+                        if (!empty($this->checked)) {
+                          if (in_array($temp['module_id'], $this->checked)) {
+                            $checked = 'checked';
+                            $modules[$temp['module_id']] = $temp['label'];
+                          } else {
+                            $checked = '';
+                          }
+                        }
+                        ?>
+                        <li><input type="checkbox" value="<?php echo $temp['module_id']; ?>"  name="mod_<?php echo $temp['module_name']; ?>" <?php echo $checked; ?> /><label class="treeLabel" ><?php echo $temp['label']; ?></label></li>
+                      <?php endforeach; ?>
+                    </ul>
+                  </li>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </ul>
+          <input type="hidden" id="allowedModule" name="allowedModule" class="mediumele"/>
+        </div>
+        <div id="previewRole">
+          <label>Daftar Role Admin</label><br />
+          <ul id="previewRoleContainer">
+            <?php
+            if (!empty($modules)) {
+              foreach ($modules as $key => $value) {
+                echo "<li id='module" . $key . "'>" . $value . "</li>";
+              }
+            }
+            ?>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+
+  <div class="control-group">
+    <div class="controls">
+      <input type="submit" value="Simpan" id="saveModule" name="saveModule" class="btn btn-success" />
+    </div>
+  </div>
+
+</form>

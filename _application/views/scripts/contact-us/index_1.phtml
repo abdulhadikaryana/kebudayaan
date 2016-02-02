@@ -1,0 +1,36 @@
+<div class="section">
+    <h2 class="section-title"><span><?php echo $this->titlehead; ?></span></h2>
+    <?php if($this->langId!=2){?>
+    <p id="ministry-address">
+        <strong>Ministry Of Culture And Tourism, Republic Of Indonesia</strong>
+        <br />Sapta Pesona Building
+        <br />Jl. Medan Merdeka Barat No. 17
+        <br />Jakarta 10110
+    </p>
+    <?php }else{
+        ?>
+        <p id="ministry-address">
+        <strong>Departemen Kebudayaan dan Pariwisata Republik Indonesia</strong>
+        <br />Sapta Pesona Building
+        <br />Jl. Medan Merdeka Barat No. 17
+        <br />Jakarta 10110
+    <?php
+    }?>
+</div>
+
+<div class="section">
+    <h2 class="section-title">
+        <span><?php echo $this->titleform; ?></span>
+    </h2>
+    <?php echo $this->form ?>
+</div>
+
+<?php if($this->success) : ?>
+    <div id="success-message" title="Activation Required">
+        <p>
+            <span class="ui-icon ui-icon-circle-check icon-msg"></span>
+            Your message has been sent to indonesia.travel. We will reply it soon.
+        </p>
+        <br /><p>Thank you for contacting us.</p>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,8 @@
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>
+    <script type="text/javascript">
+        var destId = '<?php echo $this->destId ?>';
+        var destTitle = '<?php echo $this->destTitle ?>';
+        var loadingLabel = '<?php echo $this->translate('id_loading_content') ;?>'
+    </script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

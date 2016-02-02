@@ -1,0 +1,26 @@
+<?php
+$src = 'default.jpg';
+$w   = 100;
+$h   = 100;
+$q   = 100;
+
+if (file_exists(UPLOAD_FOLDER . 'figure/' . $this->figure['image']))
+  $src = 'upload/figure/' . $this->figure['image'];
+
+$timthumb = $this->imageUrl(
+        "timthumb.php?src={$src}&w={$w}&h={$h}&q={$q}");
+?>
+
+<div class="section">
+  <h2 class="section-title">
+      <span><?php echo $this->escape($this->htmlDecode($this->figure['name'])); ?></span>
+  </h2> 
+    
+  <div class="content">
+      <center>
+      <img src="<?php echo $timthumb; ?>" alt="" />
+      </center>
+      <?php echo $this->figure['description']; ?>
+  </div>  
+  
+</div>

@@ -1,0 +1,94 @@
+<tr>
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td>
+                    <a href="<?php echo $this->rootUrl('/admin/news/edit/id/' . $this->news_id); ?>/lang/1">
+                        <?php echo $this->title; ?>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" 
+                                   href="<?php echo $this->rootUrl('/admin/news/edit/id/' . $this->news_id); ?>/lang/1">
+                                    Edit
+                                </a>
+                            </td>
+                            <td>
+                                <a class="general-remove" target ="_blank" 
+                                   href ="<?php echo $this->rootUrl('/en/news/detail/' . $this->news_id); ?>">
+                                    Preview
+                                </a>
+                            </td>
+                            <td>
+                                <div class="general-remove" onclick="deleteNews(<?php echo $this->news_id; ?>);">
+                                    Delete
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>            
+        </table>
+    </td>
+    <td>
+        <a><?php echo $this->date ?></a>
+    </td>
+    <td>
+        <div class = "general-remove" onclick = "changeNewsStatus(<?php echo $this->news_id ;?>, $(this), <?php echo $this->showing; ?>);">
+            <?php
+            if ($this->showing == 1)
+            {
+                echo 'published';
+            } else
+            {
+                echo 'draft';
+            }
+            ?>
+        </div>
+    </td>
+
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td>
+                    <a>Indonesia Translation
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove"
+                                   href="<?php echo $this->rootUrl('/admin/news/edit/id/' . $this->news_id); ?>/lang/2">
+                                       <?php $this->CheckNewsIndo($this->news_id, 2)?>
+                                </a>
+                            </td>
+                            <?php $indtrans = $this->CheckNewsIndoTrans($this->news_id, 2);
+                                  if($indtrans == true){?>
+                            <td>
+                                <a class="general-remove" target ="_blank"
+                                   href ="<?php echo $this->rootUrl('/id/news/detail/' . $this->news_id); ?>">
+                                    Preview
+                                </a>
+                            </td>
+                            <td>
+                                <div class="general-remove" onclick="deleteNews2(<?php echo $this->news_id; ?>);">
+                                    Delete
+                                </div>
+                            </td><?php } ?>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+
+
+</tr>

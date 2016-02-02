@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="twelve column">
+    <div class="panel" style="margin: 0;">
+      <h5><?php echo $this->polling->question; ?></h5>
+      <form action="<?php echo $this->url(); ?>" id="polling-form">
+        <ul>
+          <?php foreach ($this->answers as $key => $answer): ?>
+            <li><label for="<?php echo $answer['answer_id']; ?>">
+                <input type="radio" name="answer" value="<?php echo $answer['answer_id'] ?>"
+                       id="<?php echo $answer['answer_id'] ?>" />
+                       <?php echo $answer['answer']; ?>
+              </label></li>
+          <?php endforeach; ?>
+        </ul>
+        <div class="row">
+          <input type="submit" style="float: right;"  
+                 class="button small" value="Vote!" />
+        </div>
+
+      </form>
+      <script type="text/javascript">
+        $("#polling-form").submit(function(){
+          var url = $(this).attr('action');
+          $("#polling-container").empty()
+          $.ajax({
+            url: url,
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(data) {
+              $("#polling-container").html(data);
+            }
+          });
+          return false;
+        });
+      </script>
+    </div>
+  </div>
+</div>

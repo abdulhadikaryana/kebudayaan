@@ -1,0 +1,74 @@
+<div id="link-map">
+    <a href="<?php echo $this->baseUrl('/map/destination/' . $this->destId) ?>">
+        <?php if($this->languageID == 'en'): ?>
+        <img src="<?php echo $this->imageUrl('/destination/link-map.jpg') ?>" alt="" />
+        <?php elseif($this->languageID == 'id'): ?>
+        <img src="<?php echo $this->imageUrl('/destination/peta_indonesia.jpg') ?>" alt="" />
+        <?php endif; ?>
+    </a>
+</div>
+<div class="sidebar-shortcut">
+    <ul>
+    <?php if(sizeof($this->classToTourism)>0): ?>
+        <?php if(in_array(3, $this->classToTourism)) : ?>
+            <li>
+                <a href="<?php echo $this->url(array('action' => 'findtravel', 'language' => $this->languageID,
+                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="travel-menu" alt="Find Travel" />
+                </a>
+            </li>
+        <?php endif; ?>
+        <?php if(in_array(1, $this->classToTourism)) : ?>
+            <li>
+                <a href="<?php echo $this->url(array('action' => 'findhotel', 'language' => $this->languageID,
+                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="hotel-menu" alt="Find Hotel" />
+                </a>
+            </li>
+        <?php endif; ?>
+        <?php if(in_array(2, $this->classToTourism)) : ?>
+            <li>
+                <a href="<?php echo $this->url(array('action' => 'findrestaurant', 'language' => $this->languageID,
+                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="restaurant-menu" alt="Find Restaurant" />
+                </a>
+            </li>
+        <?php endif; ?>
+        <?php if(in_array(4, $this->classToTourism)) : ?>
+            <li>
+                <a href="<?php echo $this->url(array('action' => 'findsouvenir', 'language' => $this->languageID,
+                    'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="souvenir-menu" alt="Find Souvenir" />
+                </a>
+            </li>
+        <?php endif; ?>
+    <?php endif; ?>
+    </ul>
+</div>
+<br />
+
+<div id="related_activity">
+    <?php if($this->languageID=='id'){?>
+    <h3>Aktivitas Terkait&nbsp;<?php echo $this->escape($this->htmlDecode($this->destTitle)) ?>:</h3>
+    <?php } else {?>
+    <h3><?php echo $this->escape($this->htmlDecode($this->destTitle)) ?>&#39;s Related Activity:</h3><?php } ?>
+    <?php foreach($this->relatedActivity as $activity): ?>
+        <div class="activity_container">
+            <div class="relactivity_image">
+                <a href="<?php echo $this->baseUrl('/activity/detail/'.$activity['category_id']); ?>"><img src="<?php echo $this->imageUrl('/upload/category/thumbnails/'.$activity['image']) ?>" width="70" height="60" /></a>
+            </div>
+            <div class="relactivity_label">
+                <a href="<?php echo $this->baseUrl('/activity/detail/'.$activity['category_id']); ?>"><?php echo $activity['name']; ?></a>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+
+    <?php echo $this->shareSave(); ?>
+
+
+<!--  addtoAny Js -->
+<?php $this->placeholder("jsInline")->captureStart() ?>
+    <script type="text/javascript">loadScript("http://static.addtoany.com/menu/page.js", function(){});</script>
+<?php $this->placeholder("jsInline")->captureEnd() ?>

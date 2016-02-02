@@ -1,0 +1,50 @@
+<div id="dest-title">
+    <h2 class="section-title">
+        <span><?php echo $this->destTitle; ?></span>
+    </h2>
+    <div id="dest-menu">
+
+        <div id="social-button">
+            <div id="rating-all">
+                <?php echo $this->partial('partials/rating.phtml',
+                    array(
+                          'rating' => $this->destination['rating'],
+                          'userRated' => $this->destination['totalrater']
+                    )); ?>
+            </div>
+            <?php if($this->sess->username OR $this->sess->fbname): ?>
+                <div id="rating-user-msg">
+                    <span><?php echo $this->translate('id_your_rate_text');?></span>
+                </div>
+                <div id="rating-user">
+                    <?php echo $this->partial('partials/rating-enable.phtml', array('rate' => $this->rate)); ?>
+                </div>
+            <?php else: ?>
+                <div id="rating-user-msg">
+                    <p><?php echo $this->translate('login_to_rate');?></p>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="clear-left"></div>
+        <div id="tweetme">
+            <script type="text/javascript">
+                tweetmeme_style = 'compact';
+                tweetmeme_url = '<?php echo $this->baseUrl('/destination/' .
+                    $this->destId . '/' . $this->makeUrlFormat($this->destTitle)) ?>';
+            </script>
+            <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+        </div>
+        <div id="fb-like">
+            <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo $this->baseUrl('/destination/' .
+                $this->destId . '/' . $this->makeUrlFormat($this->destTitle)) ?>&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+        </div>
+        <div class="clear-left"></div>
+        <div id="dest-link">
+            <a href="<?php echo $this->url(array(
+                'language' => $this->languageID,
+                'destId' => $this->destId,
+                'destTitle' => $this->formatDestTitle,
+                'action' => 'index'), 'dest-review', true); ?>"><?php echo $this->translate('id_review') ?></a>
+        </div>
+    </div>
+</div>

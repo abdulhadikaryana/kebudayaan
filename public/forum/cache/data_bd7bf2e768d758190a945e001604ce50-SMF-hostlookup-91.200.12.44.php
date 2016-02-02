@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454412242 < time()) $expired = true; else{$expired = false; $value = 's:23:"dsystemip10.vhoster.org";';}?>

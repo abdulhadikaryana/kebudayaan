@@ -1,0 +1,47 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart();
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+
+<script type="text/javascript">
+    tinyMCE.execCommand('mceAddControl', false, 'mailContent');
+    
+    $(function() {
+        $('#send-btn').removeAttr('disabled');
+        $('#cancel-btn').removeAttr('disabled');
+        
+        $("input[type*='text']").focus(function() {
+            $(this).css('border', '2px solid #1E385D');
+        });
+        
+        $("input[type*='text']").blur(function() {
+            $(this).css('border', 'none');
+        });
+        
+        $('#send-btn').click(function() {
+            var content = tinyMCE.activeEditor.getContent();
+            $('#mailContent').val(content);
+        });
+        
+        $("#mailForm").validate(
+        {
+            rules : 
+            {
+                mailRecipient:  { required:true },
+                mailSubject:    { required:true, maxlength: 255 },
+                mailContent:    { required:true },
+            },
+            messages : 
+            {
+                mailRecipient:  "Mail recipient cannot be empty!",
+                mailSubject:    
+                { required: "Mail subject cannot be empty!", 
+                  maxlength: "Mail subject cannot be longer than 256 characters"
+                },
+                mailContent:    "Mail content cannot be empty!",
+            }
+        });
+    });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

@@ -1,0 +1,81 @@
+<?php echo $this->render('photoessay/header.phtml'); ?>
+
+<div id="essay-content">
+	
+	<div id="translate-panel">
+		Translate into&#58;
+		<select id="language-translate">
+			<option>English</option>
+			<option>Indonesia</option>
+		</select>
+		&nbsp;
+		powered by Google Translate
+	</div>
+	
+	<div class="essay-post">
+
+		<div class="content">
+
+			<div class="info">
+	
+				<div class="essay-date"><?php echo date('j F Y', strtotime($this->data['publishdate'])); ?></div>
+	
+				<div class="essay-title"><?php echo $this->data['title']; ?></div>
+	
+			</div>
+
+			<div class="essay-text">
+				<?php echo html_entity_decode($this->data['description']); ?>
+			</div>
+			
+		</div>
+
+		<div class="share-box">
+			<div class="top-part">
+				<img src="<?php echo $this->imageUrl('/photoessay/chatbox.png'); ?>" />
+				<span class="comment-amount"><?php echo $this->commentCount; ?> Comments</span>
+			</div>
+
+			<div class="bottom-part">
+
+                <div class="essay-network">
+                    <div id="fb-root"></div>
+                    <script src="http://connect.facebook.net/en_US/all.js#appId=<?php echo Zend_Registry::get('fb_app_id'); ?>&amp;xfbml=1"></script>
+                    <fb:like href="<?php echo $this->baseUrl('/photoessay/details/post/'.$this->data['photoessay_id'].'/'.$this->makeUrlFormat($this->data['title']));?>" send="false" layout="button_count" width="60" show_faces="true" font="arial">
+                    </fb:like>
+                </div>
+                
+				<div class="essay-network">
+					<a href="http://twitter.com/share" class="twitter-share-button" 
+					data-url="<?php echo $this->baseUrl('/photoessay/details/post/'.
+					$this->data['photoessay_id'].'/'.$this->makeUrlFormat($this->data['title']));?>" 
+					data-count="horizontal" data-via="indotravel">Tweet</a>
+					<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+				</div>
+
+			</div>
+		</div>
+	
+		<?php $ctr = 1; ?>
+		<?php foreach($this->data['image'] as $image): ?>
+		<div class="essay-image">
+			<img src="<?php echo $this->imageUrl('/upload/photoessay/'.$image['file']); ?>" />
+			<div class="essay-description">
+				<div class="essay-number"><?php echo $ctr; ?></div>
+			    <div class="essay-caption">
+					<?php echo html_entity_decode($image['description'], ENT_QUOTES); ?>
+				</div>
+			</div>
+		</div>
+		
+		<?php $ctr++; ?>
+		<?php endforeach; ?>
+		
+	</div>
+</div>
+
+<div class="essay-comment-placeholder">
+	<div id="fb-root"></div>
+	<script src="http://connect.facebook.net/en_US/all.js#appId=<?php echo $this->appID; ?>&amp;xfbml=1"></script>
+	<fb:comments migrated=1 notify='true' xid="photoessay_<?php echo $this->postID; ?>" numposts="20" width="800" publish_feed="true"></fb:comments>
+</div>

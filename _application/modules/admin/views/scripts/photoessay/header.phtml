@@ -1,0 +1,129 @@
+<div id="photoessay-header">
+	<h1>Story of Indonesia, Every Picture Tells A Story</h1>
+</div>
+
+<div id="photoessay-filter">
+	
+	<div class="left-filter">
+		<label>Archives</label><br />
+		<select id="archives-filter">
+			<option value="0">select date</option>
+			<?php foreach($this->dateFilter as $date): ?>
+			
+			<option 
+				value="<?php echo date('F-Y', strtotime($date['publishdate'])); ?>"
+				<?php if($this->dateTerms == date('F-Y', strtotime($date['publishdate']))): ?>
+				selected="true"
+				<?php endif;?>
+			>
+				<?php echo $date['formated_date']; ?>
+			</option>
+			<?php endforeach; ?>
+		</select>
+	</div>
+
+	<div class="right-filter">
+		<label>Category</label>
+		<select id="category-filter">
+			<option value="0">Select a category</option>
+			<?php foreach($this->categoryFilter as $category): ?>
+			<option 
+				value="<?php echo $category['essaycategory_id'];?>"
+				<?php if($this->categoryTerms == $category['essaycategory_id']): ?>
+				selected="true"
+				<?php endif;?>
+			>
+				<?php echo $category['title']; ?>
+			</option>
+			<?php endforeach; ?>
+		</select>
+	</div>
+	
+	<div class="latest-essay">
+		<ul>
+		<?php foreach($this->latestEssay as $essay): ?>
+				<li>
+					<a href="<?php echo $this->baseUrl('/photoessay/details/post/'.$essay['photoessay_id'].'/'.$this->makeUrlFormat($essay['title'])); ?>">
+						<?php echo $essay['title']; ?>
+						&#44;&nbsp;
+						<?php echo date('j F Y', strtotime($essay['publishdate'])); ?>
+					</a>
+				</li>
+		<?php endforeach;?>
+		</ul>
+	</div>
+</div>
+
+<div id="photoessay-search">
+    <form action="<?php echo $this->baseUrl('photoessay/search/')?>" method="post">
+        <span>search</span>&nbsp;&nbsp;
+        <input type="text" name="keyword" />
+        <input type="submit" name="submit" value="GO" />
+    </form>
+</div>
+
+
+<div class="filter-terms">
+<?php if($this->terms): ?>
+Filtered <br /> <?php echo $this->terms; ?> <br />
+<a href="<?php echo $this->baseUrl('/photoessay'); ?>">
+clear filter
+</a>
+<?php endif;?>
+</div>
+
+<?php echo $this->placeholder('jsInline')->captureStart() ?>
+
+<script type="text/javascript">
+function getParam()
+{
+	params = '';
+	useFilter = false;
+
+	if($('#archives-filter').val() != 0)
+	{
+		params += '/'+$('#archives-filter').val();
+		useFilter = true;
+	}
+
+	if($('#category-filter').val() != 0)
+	{
+		params += '/'+$('#category-filter').val();
+		useFilter = true;
+	}
+	
+	if(useFilter == true)
+	{
+		params = '/filter'+params;
+	}
+	return params;
+}
+
+$('#language-translate').change(function(){
+	if($(this).val() == 'en'){
+		source = 'id'; dest = 'en';
+	}
+	else
+	{
+		source = 'en'; dest = 'id';
+	}
+	loadText = '<h1><img src="<?php echo $this->imageUrl('/mini-loader.gif'); ?>" />' +
+				'<b style="margin-left: 5px;">Translating, Please Wait...</b></h1>';
+	
+	$.blockUI({ message: loadText});
+	$('.essay-text').translate( source, dest, function(){$.unblockUI();});	
+	$('.essay-caption').translate( source, dest, function(){$.unblockUI();});	
+});
+
+$('#archives-filter').change(function(){
+	window.location = "<?php echo $this->baseUrl('/photoessay'); ?>"+getParam();
+});
+
+$('#category-filter').change(function(){
+	window.location = "<?php echo $this->baseUrl('/photoessay'); ?>"+getParam();
+});
+	
+	
+</script>
+
+<?php echo $this->placeholder('jsInline')->captureEnd() ?>

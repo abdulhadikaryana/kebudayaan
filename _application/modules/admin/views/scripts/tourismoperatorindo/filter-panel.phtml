@@ -1,0 +1,45 @@
+<div class="filter-panel hidden">
+    
+    <h4 style="margin-top: 10px;"><label for="filterPage">Filter:</label></h4>
+    
+    <form action="<?php echo $this->currentUrl(); ?>" method="post">
+        <select class="filter-box" name="filterPage" id="filterPage"
+                onchange="filterSwitch(this.value);">
+            <option value="0">Show All</option>
+            <option value="1">Name</option>
+            <option value="2">Class</option>
+            <option value="3">Area</option>
+        </select>
+        
+        <select class="area-box hidden" name="filterarea">
+            <?php foreach($this->island as $island_data): ?>
+<!--                <optgroup label="<?php echo $island_data['name']; ?>"> -->
+                    <?php $province_list = $this->ProvinceList($island_data['id']); ?>
+                        <?php foreach($province_list as $province_id => $province_name) : ?>
+                            <optgroup label="<?php echo $province_name; ?>">
+                            <?php $region_list = $this->AreaChild($province_id);?>
+                            <?php foreach($region_list as $value) : ?>
+                                <option value="<?php echo $value['area_id']; ?>">
+                                    <?php echo $value['name']; ?>
+                                </option>
+                            <?php endforeach;?>
+                            </optgroup>
+                        <?php endforeach; ?>
+<!--                </optgroup> -->
+            <?php endforeach; ?>
+        </select>
+        
+        <select class="classification-box hidden" name="filterclass">
+            <?php foreach($this->class as $class_name): ?>
+                <option value="<?php echo $class_name['id']; ?>">
+                    <?php echo $class_name['name']; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        
+        <input type="text" class="name-box mediumele hidden" name="filtertitle"/>
+        
+        <input type="submit" value="Go" class="btn radius" />
+        
+    </form>                    
+</div>

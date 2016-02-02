@@ -1,0 +1,5411 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Effective News v3.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-06 12:34+0200\n"
+"PO-Revision-Date: 2013-09-17 09:56:12+0000\n"
+"Last-Translator: elpuntografico.com <contacto@elpuntografico.com>\n"
+"Language-Team: elpuntografico.com <contacto@elpuntografico.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: /Users/mmihey/Sites/framework/wp-content/plugins/js_composer\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Textdomain-Support: yes"
+
+#: composer/js_composer/composer/build.php:148
+#, php-format
+#@ js_composer
+msgid "There is a new version of Visual Composer available. <a href=\"http://bit.ly/vcomposer\" target=\"_blank\">Download version <b>%s</b></a>."
+msgstr "Hay una nueva versión de Visual Composer disponible. <a href=\"http://bit.ly/vcomposer\" target=\"_blank\">Descargar version <b>%s</b></a>."
+
+#: composer/js_composer/composer/build.php:307
+#@ js_composer
+msgid "Add/remove picture"
+msgstr "Añadir/Quitar imagen"
+
+#: composer/js_composer/composer/build.php:308
+#, fuzzy
+#@ js_composer
+msgid "Finish Adding Images"
+msgstr "Añadir imágenes"
+
+#: composer/js_composer/composer/build.php:309
+#, fuzzy
+#@ js_composer
+msgid "Add Image"
+msgstr "Añadir imágenes"
+
+#: composer/js_composer/composer/build.php:310
+#, fuzzy
+#@ js_composer
+msgid "Add Images"
+msgstr "Añadir imágenes"
+
+#: composer/js_composer/composer/build.php:311
+#: composer/js_composer/composer/build.php:360
+#: composer/js_composer/composer/settings/settings.php:71
+#@ js_composer
+msgid "Visual Composer"
+msgstr "Maquetador Visual"
+
+#: composer/js_composer/composer/build.php:312
+#@ js_composer
+msgid "Classic editor"
+msgstr "Editor clásico"
+
+#: composer/js_composer/composer/build.php:313
+#, fuzzy
+#@ js_composer
+msgid "Please enter templates name"
+msgstr "Plantilla del diseño de la entrada."
+
+#: composer/js_composer/composer/build.php:314
+#@ js_composer
+msgid "Confirm deleting \"{template_name}\" template, press Cancel to leave. This action cannot be undone."
+msgstr "Confirma la eliminación de la plantilla \"{template_name}\", clica en Cancelar para salir. Esta acción no se puede deshacer."
+
+#: composer/js_composer/composer/build.php:315
+#@ js_composer
+msgid "Press OK to delete section, Cancel to leave"
+msgstr "Presiona OK para eliminar la sección, Cancelar para salir"
+
+#: composer/js_composer/composer/build.php:316
+#@ js_composer
+msgid "Drag and drop me in the column"
+msgstr "Arrástrame y suéltame en la columna"
+
+#: composer/js_composer/composer/build.php:317
+#@ js_composer
+msgid "Press OK to delete \"{tab_name}\" tab, Cancel to leave"
+msgstr "Presiona OK para eliminar la pestaña \"{template_name}\", Cancelar para salir"
+
+#: composer/js_composer/composer/build.php:318
+#: composer/js_composer/composer/lib/shortcodes/tour.php:4
+#, fuzzy
+#@ js_composer
+msgid "Slide"
+msgstr "Diapositiva 1"
+
+#: composer/js_composer/composer/build.php:319
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:4
+#: composer/js_composer/config/map.php:573
+#@ js_composer
+msgid "Tab"
+msgstr "Pestaña"
+
+#: composer/js_composer/composer/build.php:321
+#@ js_composer
+msgid "Please enter new tab title"
+msgstr "Por favor, introduce un nuevo título de pestaña"
+
+#: composer/js_composer/composer/build.php:322
+#@ js_composer
+msgid "Press OK to delete \"{tab_name}\" section, Cancel to leave"
+msgstr "Presiona OK para eliminar la sección \"{tab_name}\", Cancelar para salir"
+
+#: composer/js_composer/composer/build.php:320
+#: composer/js_composer/composer/build.php:323
+#: composer/js_composer/composer/shortcodes_templates/vc_accordion_tab.php:5
+#@ js_composer
+msgid "Section"
+msgstr "Sección"
+
+#: composer/js_composer/composer/build.php:324
+#, fuzzy
+#@ js_composer
+msgid "Please enter new section title"
+msgstr "Editar el título de la sección desplegable actual"
+
+#: composer/js_composer/composer/build.php:325
+#@ js_composer
+msgid "Error. Please try again."
+msgstr "Error. Por favor, vuélvelo a intentar."
+
+#: composer/js_composer/composer/build.php:326
+#@ js_composer
+msgid "If you close this window all shortcode settings will be lost. Close this window?"
+msgstr "Si cierras esta ventana, se perderán todos los ajustes de los shortcodes. Cerrar esta ventana?"
+
+#: composer/js_composer/composer/build.php:327
+#, fuzzy
+#@ js_composer
+msgid "Select element type"
+msgstr "Indica el tipo de mensaje."
+
+#: composer/js_composer/composer/build.php:328
+#, fuzzy
+#@ js_composer
+msgid "Media gallery"
+msgstr "Galería de imágenes"
+
+#: composer/js_composer/composer/build.php:329
+#@ js_composer
+msgid "Element settings"
+msgstr "Configuración de elemento"
+
+#: composer/js_composer/composer/build.php:330
+#@ js_composer
+msgid "Add tab"
+msgstr "Añadir pestaña"
+
+#: composer/js_composer/composer/build.php:331
+#@ js_composer
+msgid "Are you sure you want to convert to new version?"
+msgstr "¿Seguro que quieres actualizar a la nueva versión?"
+
+#: composer/js_composer/composer/build.php:332
+#: composer/js_composer/composer/lib/layouts.php:205
+#, fuzzy
+#@ js_composer
+msgid "Loading..."
+msgstr "Cargando. Por favor, espere..."
+
+#: composer/js_composer/composer/build.php:334
+#, fuzzy
+#@ js_composer
+msgid "Set Image"
+msgstr "Imágenes"
+
+#: composer/js_composer/composer/build.php:335
+#@ js_composer
+msgid "Are you sure taht you want to remove all your data?"
+msgstr "¿Seguro que quieres eliminar todos tus datos?"
+
+#: composer/js_composer/composer/lib/helpers_api.php:4
+#@ js_composer
+msgid "Wrong wpb_map object. Base attribute is required"
+msgstr "Objeto wpb_map erróneo. Es obligatorio un atributo base"
+
+#: composer/js_composer/composer/lib/helpers.php:232
+#@ js_composer
+msgid "Added"
+msgstr "Añadido"
+
+#: composer/js_composer/composer/lib/layouts.php:14
+#@ js_composer
+msgid "Wrong layout params"
+msgstr "Parámetros de diseño erróneos"
+
+#: composer/js_composer/composer/lib/layouts.php:92
+#@ js_composer
+msgid "Save current page as a Template"
+msgstr "Guardar la página actual como plantilla"
+
+#: composer/js_composer/composer/lib/layouts.php:94
+#@ js_composer
+msgid "Load Template"
+msgstr "Cargar Plantilla"
+
+#: composer/js_composer/composer/lib/layouts.php:107
+#@ js_composer
+msgid "No custom templates yet."
+msgstr "No existen plantillas personalizadas."
+
+#: composer/js_composer/composer/lib/layouts.php:150
+#@ js_composer
+msgid "Show all"
+msgstr "Mostrar todo"
+
+#: composer/js_composer/composer/lib/layouts.php:165
+#@ js_composer
+msgid "Other"
+msgstr "Otro"
+
+#: composer/js_composer/composer/lib/layouts.php:177
+#, fuzzy
+#@ js_composer
+msgid "Select Content Element"
+msgstr "Elementos de contenido"
+
+#: composer/js_composer/composer/lib/layouts.php:178
+#, fuzzy
+#@ js_composer
+msgid "Search by element name"
+msgstr "Indica el tipo de mensaje."
+
+#: composer/js_composer/composer/lib/layouts.php:193
+#, fuzzy
+#@ js_composer
+msgid "Close"
+msgstr "Cerrado"
+
+#: composer/js_composer/composer/lib/layouts.php:209
+#: composer/js_composer/composer/lib/shortcodes.php:449
+#@ js_composer
+msgid "Save"
+msgstr "Guardar"
+
+#: composer/js_composer/composer/lib/layouts.php:210
+#@ js_composer
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: composer/js_composer/composer/lib/layouts.php:254
+#, fuzzy
+#@ js_composer
+msgid "Visual Composer for WordPress"
+msgstr "Maquetador Visual"
+
+#: composer/js_composer/composer/lib/layouts.php:273
+#, fuzzy
+#@ js_composer
+msgid "Add element"
+msgstr "Añadir diapositiva"
+
+#: composer/js_composer/composer/lib/layouts.php:281
+#@ js_composer
+msgid "Add row"
+msgstr "Añadir fila"
+
+#: composer/js_composer/composer/lib/layouts.php:289
+#@ js_composer
+msgid "Templates"
+msgstr "Plantillas"
+
+#: composer/js_composer/composer/lib/layouts.php:259
+#@ js_composer
+msgid "Update"
+msgstr "Actualizar"
+
+#: composer/js_composer/composer/lib/layouts.php:331
+#@ js_composer
+msgid "Your page layout was created with previous Visual Composer version. Before converting your layout to the new version, make sure to <a target=\"_blank\" href=\"http://kb.wpbakery.com/index.php?title=Update_Visual_Composer_from_3.4_to_3.5\">read this page</a>."
+msgstr "El diseño de tu página se creó con una versión anterior del Visual Composer. Antes de actualizar el diseño a la nueva versión, asegúrate de <a target=\"_blank\" href=\"http://kb.wpbakery.com/index.php?title=Update_Visual_Composer_from_3.4_to_3.5\">leer esta página</a>."
+
+#: composer/js_composer/composer/lib/layouts.php:333
+#@ js_composer
+msgid "Convert to new version"
+msgstr "Actualizar a la nueva versión"
+
+#: composer/js_composer/composer/lib/layouts.php:339
+#: composer/js_composer/composer/lib/layouts.php:376
+#@ js_composer
+msgid "Loading, please wait..."
+msgstr "Cargando. Por favor, espere..."
+
+#: composer/js_composer/composer/lib/layouts.php:344
+#@ js_composer
+msgid "No content yet! You should add some..."
+msgstr "¡Aún no existe contenido! Deberías añadir alguno..."
+
+#: composer/js_composer/composer/lib/layouts.php:348
+#@ js_composer
+msgid "This is a visual preview of your page. Currently, you don't have any content elements. Click or drag the button <a href='#' class='add-element-to-layout'><i class='icon'></i> Add element</a> on the top to add content elements on your page. Alternatively add <a href='#' class='add-text-block-to-content' parent-container='#visual_composer_content'><i class='icon'></i> Text block</a> with single click."
+msgstr "Esta es una presentación visual de tu página. Actualmente, no tienes ningún elemento de contenido. Clica o arrastra el botón <a href='#' class='add-element-to-layout'><i class='icon'></i> Añadir elemento</a> de arriba para añadir elementos de contenido a tu página. Alternativamente, añade un <a href='#' class='add-text-block-to-content' parent-container='#visual_composer_content'><i class='icon'></i> Bloque de texto</a> con un clic."
+
+#: composer/js_composer/composer/lib/layouts.php:353
+#@ js_composer
+msgid "Click the pencil icon on the content elements to change their properties."
+msgstr "Clic en el icono del lápiz de los elementos de contenido para cambiar sus propiedades."
+
+#: composer/js_composer/composer/lib/layouts.php:377
+#@ js_composer
+msgid "Crunching..."
+msgstr "Cargando..."
+
+#: composer/js_composer/composer/lib/mapper.php:56
+#: composer/js_composer/composer/lib/mapper.php:146
+#: composer/js_composer/composer/lib/mapper.php:170
+#: composer/js_composer/composer/lib/mapper.php:223
+#, php-format
+#@ js_composer
+msgid "Wrong name for shortcode:%s. Name required"
+msgstr "Nombre erróneo del shortcode:%s. Nombre requerido"
+
+#: composer/js_composer/composer/lib/mapper.php:58
+#, php-format
+#@ js_composer
+msgid "Wrong base for shortcode:%s. Base required"
+msgstr "Base errónea del shortcode:%s. Base requerida"
+
+#: composer/js_composer/composer/lib/mapper.php:148
+#: composer/js_composer/composer/lib/mapper.php:172
+#, php-format
+#@ js_composer
+msgid "Wrong attribute for '%s' shortcode. Attribute 'param_name' required"
+msgstr "Atributo erróneo del shortcode '%s'. Atributo 'param_name' requerido"
+
+#: composer/js_composer/composer/lib/shortcodes.php:435
+#: composer/js_composer/composer/lib/shortcodes.php:655
+#@ js_composer
+msgid "Edit"
+msgstr "Editar"
+
+#: composer/js_composer/composer/lib/shortcodes/image_gallery.php:27
+#: composer/js_composer/composer/lib/shortcodes.php:573
+#@ js_composer
+msgid "Add images"
+msgstr "Añadir imágenes"
+
+#: composer/js_composer/composer/lib/shortcodes/single_image.php:22
+#: composer/js_composer/composer/lib/shortcodes.php:588
+#, fuzzy
+#@ js_composer
+msgid "Add image"
+msgstr "Añadir imágenes"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_accordion_tab.php:12
+#: composer/js_composer/composer/shortcodes_templates/vc_tab.php:9
+#@ js_composer
+msgid "Empty section. Edit page to add content here."
+msgstr "Sección vacía. Añadir contenido aquí para editar la página."
+
+#: composer/js_composer/composer/shortcodes_templates/vc_button.php:10
+#: composer/js_composer/composer/shortcodes_templates/vc_cta_button.php:9
+#: composer/js_composer/config/map.php:980
+#: composer/js_composer/config/map.php:984
+#: composer/js_composer/config/map.php:1049
+#: composer/js_composer/config/map.php:1051
+#@ js_composer
+msgid "Text on the button"
+msgstr "Texto del botón"
+
+#: composer/js_composer/composer/lib/shortcodes/column.php:23
+#@ js_composer
+msgid "Edit this column"
+msgstr "Editar esta columna"
+
+#: composer/js_composer/composer/lib/shortcodes/column.php:145
+#: composer/js_composer/config/map.php:61
+#, fuzzy
+#@ js_composer
+msgid "Column"
+msgstr "Número de columnas"
+
+#: composer/js_composer/composer/lib/shortcodes/column.php:157
+#: composer/js_composer/config/map.php:36
+#: composer/js_composer/config/map.php:53
+#: composer/js_composer/config/map.php:68
+#: composer/js_composer/config/map.php:95
+#: composer/js_composer/config/map.php:176
+#: composer/js_composer/config/map.php:211
+#: composer/js_composer/config/map.php:339
+#: composer/js_composer/config/map.php:397
+#: composer/js_composer/config/map.php:470
+#: composer/js_composer/config/map.php:505
+#: composer/js_composer/config/map.php:553
+#: composer/js_composer/config/map.php:625
+#: composer/js_composer/config/map.php:785
+#: composer/js_composer/config/map.php:897
+#: composer/js_composer/config/map.php:927
+#: composer/js_composer/config/map.php:1023
+#: composer/js_composer/config/map.php:1097
+#: composer/js_composer/config/map.php:1128
+#: composer/js_composer/config/map.php:1184
+#: composer/js_composer/config/map.php:1275
+#: composer/js_composer/config/map.php:1333
+#: composer/js_composer/config/map.php:1426
+#: composer/js_composer/config/map.php:1473
+#: composer/js_composer/config/map.php:1558
+#: composer/js_composer/config/map.php:1580
+#: composer/js_composer/config/map.php:1608
+#: composer/js_composer/config/map.php:1630
+#: composer/js_composer/config/map.php:1666
+#: composer/js_composer/config/map.php:1702
+#: composer/js_composer/config/map.php:1738
+#: composer/js_composer/config/map.php:1772
+#: composer/js_composer/config/map.php:1807
+#: composer/js_composer/config/map.php:1853
+#: composer/js_composer/config/map.php:1882
+#: composer/js_composer/config/map.php:1911
+#@ js_composer
+msgid "Extra class name"
+msgstr "Puedes introducir el nombre de una clase CSS extra para este elemento"
+
+#: composer/js_composer/composer/lib/shortcodes/column.php:160
+#: composer/js_composer/config/map.php:38
+#: composer/js_composer/config/map.php:55
+#: composer/js_composer/config/map.php:70
+#: composer/js_composer/config/map.php:97
+#: composer/js_composer/config/map.php:178
+#: composer/js_composer/config/map.php:213
+#: composer/js_composer/config/map.php:341
+#: composer/js_composer/config/map.php:399
+#: composer/js_composer/config/map.php:472
+#: composer/js_composer/config/map.php:507
+#: composer/js_composer/config/map.php:555
+#: composer/js_composer/config/map.php:627
+#: composer/js_composer/config/map.php:787
+#: composer/js_composer/config/map.php:899
+#: composer/js_composer/config/map.php:929
+#: composer/js_composer/config/map.php:1025
+#: composer/js_composer/config/map.php:1099
+#: composer/js_composer/config/map.php:1130
+#: composer/js_composer/config/map.php:1186
+#: composer/js_composer/config/map.php:1277
+#: composer/js_composer/config/map.php:1335
+#: composer/js_composer/config/map.php:1428
+#: composer/js_composer/config/map.php:1475
+#: composer/js_composer/config/map.php:1560
+#: composer/js_composer/config/map.php:1582
+#: composer/js_composer/config/map.php:1610
+#: composer/js_composer/config/map.php:1632
+#: composer/js_composer/config/map.php:1668
+#: composer/js_composer/config/map.php:1704
+#: composer/js_composer/config/map.php:1740
+#: composer/js_composer/config/map.php:1774
+#: composer/js_composer/config/map.php:1809
+#: composer/js_composer/config/map.php:1855
+#: composer/js_composer/config/map.php:1884
+#: composer/js_composer/config/map.php:1913
+#@ js_composer
+msgid "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file."
+msgstr "Si quieres aplicar un estilo CSS distinto a un elemento del contenido, introduce el nombre de la clase CSS en este campo y llámala desde tu archivo CSS"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:226
+#: composer/js_composer/composer/lib/params/vc_link/vc_link.php:6
+#: composer/js_composer/composer/shortcodes_templates/vc_text_separator.php:4
+#: composer/js_composer/config/map.php:161
+#: composer/js_composer/config/map.php:164
+#: composer/js_composer/config/map.php:581
+#: composer/js_composer/config/map.php:653
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#: lib/shortcodes/composer.php:117
+#: lib/shortcodes/composer.php:366
+#: lib/shortcodes/composer.php:432
+#: lib/shortcodes/composer.php:470
+#: lib/social/settings.php:38
+#: lib/social/settings.php:108
+#@ js_composer
+#@ default
+#@ theme
+msgid "Title"
+msgstr "Título"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_toggle.php:4
+#@ js_composer
+msgid "Click to toggle"
+msgstr "Clic para alternar"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:94
+#@ js_composer
+msgid "Hello World"
+msgstr "Hola Mundo"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:102
+#@ js_composer
+msgid "Foo attribute"
+msgstr "Atributo foo"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:104
+#@ js_composer
+msgid "I'm foo attribute"
+msgstr "Soy un atributo foo"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:105
+#@ js_composer
+msgid "Enter foo value."
+msgstr "Introduce un atributo foo"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:111
+#: composer/js_composer/config/map.php:88
+#: composer/js_composer/config/map.php:1042
+#: composer/js_composer/config/map.php:1747
+#: composer/js_composer/config/map.php:1761
+#@ js_composer
+#@ default
+msgid "Text"
+msgstr "Texto"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:113
+#@ js_composer
+msgid "I'm hello world"
+msgstr "Soy un hola mundo"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:114
+#: composer/js_composer/config/map.php:1045
+#@ js_composer
+msgid "Enter your content."
+msgstr "Introduce tu contenido."
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:118
+#@ js_composer
+msgid "Drop down example"
+msgstr "Ejemplo de desplegable"
+
+#: composer/js_composer/composer/lib/shortcodes/example.php:121
+#@ js_composer
+msgid "One, two or three?"
+msgstr "¿Uno, dos o tres?"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_single_image.php:18
+#@ js_composer
+msgid "This is image placeholder, edit your page to replace it."
+msgstr "Esto es un marcador de posición de imagen, edita tu página para reemplazarlo."
+
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_grid.php:111
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_grid.php:132
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_grid.php:133
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_grid.php:151
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_slider.php:151
+#: composer/js_composer/composer/shortcodes_templates/vc_teaser_grid.php:183
+#: composer/js_composer/composer/shortcodes_templates/vc_teaser_grid.php:204
+#: composer/js_composer/composer/shortcodes_templates/vc_teaser_grid.php:205
+#: composer/js_composer/composer/shortcodes_templates/vc_teaser_grid.php:223
+#, php-format
+#@ js_composer
+msgid "Permalink to %s"
+msgstr "Enlace permanente para %s"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_grid.php:188
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_slider.php:191
+#: composer/js_composer/composer/shortcodes_templates/vc_teaser_grid.php:333
+#@ js_composer
+msgid "Nothing found."
+msgstr "No se ha encontrado nada."
+
+#: composer/js_composer/composer/lib/shortcodes/row.php:32
+#@ js_composer
+msgid "Drag row to reorder"
+msgstr "Arrastra la fila para reordenarla"
+
+#: composer/js_composer/composer/lib/shortcodes/row.php:33
+#@ js_composer
+msgid "Delete this row"
+msgstr "Eliminar esta fila"
+
+#: composer/js_composer/composer/lib/shortcodes/row.php:34
+#@ js_composer
+msgid "Edit this row"
+msgstr "Editar esta fila"
+
+#: composer/js_composer/composer/lib/shortcodes/row.php:35
+#@ js_composer
+msgid "Clone this row"
+msgstr "Cerrar esta fila"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_twitter.php:19
+#@ js_composer
+msgid "Follow us on twitter"
+msgstr "Síguenos en Twitter"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_tweetmeme.php:9
+#@ js_composer
+msgid "Tweet"
+msgstr "Tweet"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_flickr.php:19
+#@ js_composer
+msgid "View stream on flickr"
+msgstr "Ver stream en flickr"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_tabs.php:44
+#@ js_composer
+msgid "Previous slide"
+msgstr "Diapositiva anterior"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_tabs.php:44
+#@ js_composer
+msgid "Next slide"
+msgstr "Diapositiva siguiente"
+
+#: composer/js_composer/composer/lib/shortcodes/teaser_grid.php:14
+#, php-format
+#@ js_composer
+msgid "View all posts filed under %s"
+msgstr "Ver todas las entradas archivadas bajo %s"
+
+#: composer/js_composer/composer/lib/shortcodes/teaser_grid.php:31
+#, php-format
+#@ js_composer
+msgid "Feed for all posts filed under %s"
+msgstr "Feed para todas las entradas archivadas bajo %s"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_grid.php:111
+#: composer/js_composer/composer/shortcodes_templates/vc_teaser_grid.php:183
+#@ js_composer
+msgid "Read more"
+msgstr "Leer más"
+
+#: composer/js_composer/composer/shortcodes_templates/teaser/_filter.php:10
+#: composer/js_composer/composer/shortcodes_templates/vc_posts_grid.php:177
+#: composer/js_composer/composer/shortcodes_templates/vc_teaser_grid.php:323
+#@ js_composer
+msgid "All"
+msgstr "Todo"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_wp_meta.php:4
+#: composer/js_composer/config/map.php:1566
+#@ default
+msgid "Meta"
+msgstr "Meta"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_wp_recentcomments.php:4
+#: composer/js_composer/config/map.php:1588
+#@ default
+msgid "Recent Comments"
+msgstr "Comentarios Recientes"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_wp_pages.php:4
+#: composer/js_composer/config/map.php:1638
+#: page-sitemap.php:31
+#, fuzzy
+#@ default
+#@ framework
+msgid "Pages"
+msgstr "Imágenes"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:167
+#: composer/js_composer/composer/shortcodes_templates/vc_wp_tagcloud.php:4
+#: lib/admin/functions/functions.options.php:1958
+#: lib/shortcodes/composer.php:310
+#: lib/shortcodes/composer.php:424
+#: page-sitemap.php:47
+#@ js_composer
+#@ default
+#@ framework
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_wp_posts.php:4
+#: composer/js_composer/config/map.php:1781
+#@ default
+msgid "Recent Posts"
+msgstr "Entradas Recientes"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:166
+#: composer/js_composer/composer/shortcodes_templates/vc_wp_categories.php:4
+#: composer/js_composer/config/map.php:765
+#: composer/js_composer/config/map.php:877
+#: composer/js_composer/config/map.php:1862
+#@ js_composer
+#@ default
+msgid "Categories"
+msgstr "Categorías"
+
+#: composer/js_composer/composer/shortcodes_templates/vc_wp_archives.php:4
+#: composer/js_composer/config/map.php:1891
+#@ default
+msgid "Archives"
+msgstr "Archivos"
+
+#: composer/js_composer/composer/settings/settings.php:21
+#@ js_composer
+msgid "General Settings"
+msgstr "Configuración General"
+
+#: composer/js_composer/composer/settings/settings.php:24
+#, fuzzy
+#@ js_composer
+msgid "Design Options"
+msgstr "Descripción"
+
+#: composer/js_composer/composer/settings/settings.php:25
+#, fuzzy
+#@ js_composer
+msgid "Element Class Names"
+msgstr "Puedes introducir el nombre de una clase CSS extra para este elemento"
+
+#: composer/js_composer/composer/settings/settings.php:26
+#, fuzzy
+#@ js_composer
+msgid "Custom CSS"
+msgstr "Links personalizados"
+
+#: composer/js_composer/composer/settings/settings.php:40
+#@ js_composer
+msgid "Main accent color"
+msgstr "Color principal del acento"
+
+#: composer/js_composer/composer/settings/settings.php:41
+#@ js_composer
+msgid "Hover color"
+msgstr "Color hover"
+
+#: composer/js_composer/composer/settings/settings.php:42
+#, fuzzy
+#@ js_composer
+msgid "Call to action background color"
+msgstr "Llamada al botón de acción"
+
+#: composer/js_composer/composer/settings/settings.php:44
+#@ js_composer
+msgid "Google maps background color"
+msgstr "Color de fondo de los Mapas Google"
+
+#: composer/js_composer/composer/settings/settings.php:45
+#@ js_composer
+msgid "Post slider caption background color"
+msgstr ""
+
+#: composer/js_composer/composer/settings/settings.php:46
+#@ js_composer
+msgid "Progress bar background color"
+msgstr "Color de fondo de la barra de progreso"
+
+#: composer/js_composer/composer/settings/settings.php:47
+#, fuzzy
+#@ js_composer
+msgid "Separator border color"
+msgstr "Separador (Divisor)"
+
+#: composer/js_composer/composer/settings/settings.php:48
+#@ js_composer
+msgid "Tabs navigation background color"
+msgstr "Color de fondo de las pestañas de navegación"
+
+#: composer/js_composer/composer/settings/settings.php:49
+#@ js_composer
+msgid "Active tab background color"
+msgstr "Color de fondo de la pestaña activa"
+
+#: composer/js_composer/composer/settings/settings.php:70
+#@ js_composer
+msgid "Visual Composer Settings"
+msgstr "Configuración del Maquetador Visual"
+
+#: composer/js_composer/composer/settings/settings.php:94
+#: composer/js_composer/composer/settings/settings.php:96
+#@ js_composer
+msgid "Content types"
+msgstr "Tipos de contenidos"
+
+#: composer/js_composer/composer/settings/settings.php:98
+#@ js_composer
+msgid "User groups access rules"
+msgstr "Normas de acceso de los grupos de usuarios"
+
+#: composer/js_composer/composer/settings/settings.php:99
+#@ js_composer
+msgid "Disable responsive content elements"
+msgstr "Desactivar los elementos de contenidos adaptables"
+
+#: composer/js_composer/composer/settings/settings.php:106
+#@ js_composer
+msgid "Use custom design options"
+msgstr "Usar las opcionoes personalizadas de diseño"
+
+#: composer/js_composer/composer/settings/settings.php:119
+#@ js_composer
+msgid "Elements bottom margin"
+msgstr "Elementos bottom margin (margen inferior)"
+
+#: composer/js_composer/composer/settings/settings.php:123
+#@ js_composer
+msgid "Grid gutter width"
+msgstr "Ancho de canal de cuadrícula"
+
+#: composer/js_composer/composer/settings/settings.php:127
+#, fuzzy
+#@ js_composer
+msgid "Mobile screen width"
+msgstr "Reducir anchura"
+
+#: composer/js_composer/composer/settings/settings.php:155
+#@ js_composer
+msgid "Paste your CSS code"
+msgstr "Pega tu código CSS"
+
+#: composer/js_composer/composer/settings/settings.php:236
+#: composer/js_composer/composer/settings/settings.php:237
+#@ js_composer
+msgid "Are you sure you want to reset to defaults?"
+msgstr "¿Seguro que quieres reestablecer las opciones predefinidas?"
+
+#: composer/js_composer/composer/settings/settings.php:250
+#, fuzzy
+#@ js_composer
+msgid "Show Visual Composer & default editor"
+msgstr "Configuración del Maquetador Visual"
+
+#: composer/js_composer/composer/settings/settings.php:251
+#, fuzzy
+#@ js_composer
+msgid "Show only Visual Composer"
+msgstr "Maquetador Visual"
+
+#: composer/js_composer/composer/settings/settings.php:252
+#, fuzzy
+#@ js_composer
+msgid "Don't allow to use Visual Composer"
+msgstr "Maquetador Visual"
+
+#: composer/js_composer/composer/settings/settings.php:271
+#, fuzzy
+#@ js_composer
+msgid "Visual Composer access"
+msgstr "Maquetador Visual"
+
+#: composer/js_composer/composer/settings/settings.php:279
+#@ js_composer
+msgid "Enabled shortcodes"
+msgstr "Activar shortcodes"
+
+#: composer/js_composer/composer/settings/settings.php:293
+#@ js_composer
+msgid "Select All"
+msgstr "Seleccionar Todo"
+
+#: composer/js_composer/composer/settings/settings.php:293
+#, fuzzy
+#@ js_composer
+msgid "Select none"
+msgstr "Indica el tipo de botón."
+
+#: composer/js_composer/composer/settings/settings.php:321
+#: composer/js_composer/composer/settings/settings.php:342
+#@ js_composer
+msgid "Select for which content types Visual Composer should be available during post creation/editing."
+msgstr "Indica para qué tipo de contenido debe estar disponible el Maquetador Visual mientras se crea/edita."
+
+#: composer/js_composer/composer/settings/settings.php:348
+#@ js_composer
+msgid "If you want to add some custom CSS code to the plugin and don't want to modify any files, then it's a good place to enter your code at this field."
+msgstr "Si quieres añadir código CSS personalizado al plugin y no quieres modificar ningún archivo, introduce tu código en este campo."
+
+#: composer/js_composer/composer/settings/settings.php:358
+#: composer/js_composer/config/map.php:429
+#: composer/js_composer/config/map.php:500
+#: composer/js_composer/config/map.php:548
+#: composer/js_composer/config/map.php:824
+#@ js_composer
+msgid "Disable"
+msgstr "Desactivar"
+
+#: composer/js_composer/composer/settings/settings.php:360
+#@ js_composer
+msgid "Check this checkbox to prevent content elements from \"stacking\" one on top other (on small media screens, eg. mobile)."
+msgstr "Selecciona esta casilla para evitar que los elementos de contenido se \"superpongan\" unos sobre otros (en pantallas pequeñas, p.ej: un móvil)."
+
+#: composer/js_composer/composer/settings/settings.php:369
+#@ js_composer
+msgid "To change class name for the row element, enter it here. By default vc_row is used."
+msgstr "Para cambiar el nombre de la clase del elemento de la fila, introdúcelo aquí. Por defecto se usa vc_row."
+
+#: composer/js_composer/composer/settings/settings.php:386
+#@ js_composer
+msgid "To change class names for the columns elements, enter them here. By default vc_spanX are used, where X number from 1 to 12."
+msgstr "Para cambiar los nombres de las clases de los elementos de las columnas, introdúcelos aquí. Por defecto se usa vc_spanX, dónde X es un número del 1 al 12."
+
+#: composer/js_composer/composer/settings/settings.php:397
+#@ js_composer
+msgid "Enable"
+msgstr "Activado"
+
+#: composer/js_composer/composer/settings/settings.php:399
+#@ js_composer
+msgid "Enable the use of custom design options for your site. When checked, custom css file will be used."
+msgstr "Activa el uso de opciones personalizadas de diseño en tu web. Cuando está seleccionado, se usará el archivo de css personalizado."
+
+#: composer/js_composer/composer/settings/settings.php:411
+#@ js_composer
+msgid "To change default vertical spacing between content elements, enter new value here. Example: 20px"
+msgstr "Para cambiar la separación vertical por defecto entre los elementos de contenido, introduce un nuevo valor aquí. Ejemplo: 20px"
+
+#: composer/js_composer/composer/settings/settings.php:416
+#, fuzzy
+#@ js_composer
+msgid "To change default horizontal spacing between columns, enter new value in percents here."
+msgstr "Para cambiar la separación vertical por defecto entre los elementos de contenido, introduce un nuevo valor aquí. Ejemplo: 20px"
+
+#: composer/js_composer/composer/settings/settings.php:422
+#@ js_composer
+msgid "By default content elements \"stack\" one on top other when screen size is smaller then 480px. Here you can change that value if needed."
+msgstr "Por defecto, los elementos de contenido se \"superponen\" unos sobre otros cuando el tamaño de pantalla es menor a 480px. Aquí puedes cambiar dicho valor."
+
+#: composer/js_composer/composer/settings/settings.php:437
+#@ js_composer
+msgid "Here you can tweak default Visual Composer content elements visual appearance. By default Visual Composer is using neutral light-grey theme. Changing \"Main accent color\" will affect all content elements if no specific \"content block\" related color is set."
+msgstr "Aquí puedes ajustar la apariencia visual por defecto de los elementos de contenido del Visual Composer. Por defecto, Visual Composer usa el tema gris-claro neutro. Cambiar el \"Color principal del acento\" afectará a todos los elementos de contenido, a menos que ya se haya configurado un color relacionado con el \"bloque de contenido\". "
+
+#: composer/js_composer/composer/settings/settings.php:520
+#, fuzzy
+#@ js_composer
+msgid "Invalid Margin value."
+msgstr "Valor de margin (margen) inválido."
+
+#: composer/js_composer/composer/settings/settings.php:525
+#, fuzzy
+#@ js_composer
+msgid "Invalid Gutter value."
+msgstr "Valor de margin (margen) inválido."
+
+#: composer/js_composer/composer/settings/settings.php:531
+#, fuzzy
+#@ js_composer
+msgid "Invalid \"Responsive max\" value."
+msgstr "Valor de margin (margen) inválido."
+
+#: composer/js_composer/composer/settings/settings.php:562
+#, php-format
+#@ js_composer
+msgid "Visual Composer: Your css class names settings are deprecated. <a href=\"%s\">Click here to resolve</a>."
+msgstr "Visual Composer: Los ajustes de los nombres de tus clases css están desaprobados. <a href=\"%s\">Clica aquí para resolverlo</a>."
+
+#: composer/js_composer/composer/settings/settings.php:595
+#, fuzzy
+#@ js_composer
+msgid "WPBakery Visual Composer Settings"
+msgstr "Configuración del Maquetador Visual"
+
+#: composer/js_composer/composer/settings/settings.php:609
+#@ js_composer
+msgid "<strong>Deprecated:</strong> To override class names that are applied to Visual Composer content elements you should use WordPress add_filter('vc_shortcodes_css_class') function. <a class='vc_show_example'>See Example</a>."
+msgstr "<strong>Desaprovado:</strong> Para reemplazar nombres de clases aplicadas a los elementos de contenido del Visual Composer debes usar la función add_filter('vc_shortcodes_css_class') de WordPress. <a class='vc_show_example'>Ver Ejemplo</a>"
+
+#: composer/js_composer/composer/settings/settings.php:617
+#@ default
+msgid "You have used element class names settings to replace row and column css classes."
+msgstr "Has utilizado ajustes de los nombres de las clases de los elementos para reemplazar clases css de las filas y columnas."
+
+#: composer/js_composer/composer/settings/settings.php:618
+#@ default
+msgid "Below is code snippet which you should add to your functions.php file in your theme, to replace row and column classes with custom classes saved by you earlier."
+msgstr "A continuación, está el código snippet que debes añadir al archivo functions.php de tu tema, para reemplazar las clases de las filas y columnas con clases personalizadas guardadas previamente por tí."
+
+#: composer/js_composer/composer/settings/settings.php:692
+#: composer/js_composer/composer/settings/settings.php:701
+#@ js_composer
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#: composer/js_composer/composer/settings/settings.php:692
+#@ js_composer
+msgid "Remove all"
+msgstr "Eliminar todo"
+
+#: composer/js_composer/composer/settings/settings.php:704
+#@ js_composer
+msgid "Restore to defaults"
+msgstr "Reestablecer opciones por defecto"
+
+#: composer/js_composer/composer/settings/settings.php:820
+#@ js_composer
+msgid "Something went wrong: js_composer_front_custom.css could not be created."
+msgstr "Algo no ha funcionado: js_composer_front_custom.css no se ha podido crear."
+
+#: composer/js_composer/composer/settings/settings.php:822
+#@ js_composer
+msgid "js_composer_front_custom.css could not be created. Connection error."
+msgstr "js_composer_front_custom.css no se ha podido crear. Error de conexión."
+
+#: composer/js_composer/composer/settings/settings.php:856
+#@ js_composer
+msgid "Something went wrong: custom.css could not be created."
+msgstr "Algo no ha funcionado: custom.css no se ha podido crear."
+
+#: composer/js_composer/composer/settings/settings.php:858
+#@ js_composer
+msgid "custom.css could not be created. Connection error."
+msgstr "custom.css no se ha podido crear. Error de conexión."
+
+#: composer/js_composer/config/map.php:10
+#: composer/js_composer/config/map.php:1314
+#@ js_composer
+msgid "Grey"
+msgstr "Gris"
+
+#: composer/js_composer/config/map.php:10
+#: composer/js_composer/config/map.php:1314
+#@ js_composer
+msgid "Blue"
+msgstr "Azul"
+
+#: composer/js_composer/config/map.php:10
+#: composer/js_composer/config/map.php:1314
+#@ js_composer
+msgid "Turquoise"
+msgstr "Turquesa"
+
+#: composer/js_composer/config/map.php:10
+#: composer/js_composer/config/map.php:1314
+#@ js_composer
+msgid "Green"
+msgstr "Verde"
+
+#: composer/js_composer/config/map.php:10
+#: composer/js_composer/config/map.php:1314
+#@ js_composer
+msgid "Orange"
+msgstr "Naranja"
+
+#: composer/js_composer/config/map.php:10
+#: composer/js_composer/config/map.php:1314
+#@ js_composer
+msgid "Red"
+msgstr "Rojo"
+
+#: composer/js_composer/config/map.php:10
+#: composer/js_composer/config/map.php:1314
+#@ js_composer
+msgid "Black"
+msgstr "Negro"
+
+#: composer/js_composer/config/map.php:13
+#@ js_composer
+msgid "Regular size"
+msgstr "Tamaño normal"
+
+#: composer/js_composer/config/map.php:13
+#@ js_composer
+msgid "Large"
+msgstr "Grande"
+
+#: composer/js_composer/config/map.php:13
+#: composer/js_composer/config/map.php:270
+#@ js_composer
+msgid "Small"
+msgstr "Pequeño"
+
+#: composer/js_composer/config/map.php:13
+#@ js_composer
+msgid "Mini"
+msgstr "Mini"
+
+#: composer/js_composer/config/map.php:15
+#@ js_composer
+msgid "Same window"
+msgstr "Misma ventana"
+
+#: composer/js_composer/config/map.php:15
+#@ js_composer
+msgid "New window"
+msgstr "Nueva ventana"
+
+#: composer/js_composer/config/map.php:27
+#: composer/js_composer/config/map.php:44
+#@ js_composer
+msgid "Row"
+msgstr "Fila"
+
+#: composer/js_composer/config/map.php:32
+#: composer/js_composer/config/map.php:83
+#: composer/js_composer/config/map.php:147
+#: composer/js_composer/config/map.php:157
+#: composer/js_composer/config/map.php:191
+#: composer/js_composer/config/map.php:309
+#: composer/js_composer/config/map.php:352
+#: composer/js_composer/config/map.php:410
+#: composer/js_composer/config/map.php:488
+#: composer/js_composer/config/map.php:535
+#: composer/js_composer/config/map.php:602
+#: composer/js_composer/config/map.php:667
+#: composer/js_composer/config/map.php:697
+#: composer/js_composer/config/map.php:798
+#: composer/js_composer/config/map.php:976
+#: composer/js_composer/config/map.php:1037
+#: composer/js_composer/config/map.php:1111
+#: composer/js_composer/config/map.php:1141
+#: composer/js_composer/config/map.php:1237
+#: composer/js_composer/config/map.php:1289
+#: composer/js_composer/config/map.php:1366
+#: composer/js_composer/config/map.php:1408
+#: composer/js_composer/config/map.php:1455
+#: composer/js_composer/config/map.php:1496
+#: lib/shortcodes/composer.php:125
+#@ js_composer
+#@ default
+msgid "Content"
+msgstr "Contenido"
+
+#: composer/js_composer/config/map.php:79
+#, fuzzy
+#@ js_composer
+msgid "Text Block"
+msgstr "Bloque de texto"
+
+#: composer/js_composer/config/map.php:90
+#@ js_composer
+msgid "<p>I am text block. Click edit button to change this text.</p>"
+msgstr "<p>Soy un bloque de texto. Clic en el botón 'Editar' (icono: lápiz amarillo) para cambiar este texto.</p>"
+
+#: composer/js_composer/config/map.php:225
+#: composer/js_composer/config/map.php:244
+#: composer/js_composer/config/map.php:263
+#: composer/js_composer/config/map.php:290
+#@ js_composer
+msgid "Social"
+msgstr "Social"
+
+#: composer/js_composer/config/map.php:356
+#: composer/js_composer/config/map.php:414
+#: composer/js_composer/config/map.php:492
+#: composer/js_composer/config/map.php:540
+#: composer/js_composer/config/map.php:606
+#: composer/js_composer/config/map.php:671
+#: composer/js_composer/config/map.php:802
+#: composer/js_composer/config/map.php:915
+#: composer/js_composer/config/map.php:1115
+#: composer/js_composer/config/map.php:1145
+#: composer/js_composer/config/map.php:1241
+#: composer/js_composer/config/map.php:1293
+#: composer/js_composer/config/map.php:1412
+#: composer/js_composer/config/map.php:1459
+#: composer/js_composer/config/map.php:1552
+#: composer/js_composer/config/map.php:1574
+#: composer/js_composer/config/map.php:1596
+#: composer/js_composer/config/map.php:1624
+#: composer/js_composer/config/map.php:1646
+#: composer/js_composer/config/map.php:1689
+#: composer/js_composer/config/map.php:1724
+#: composer/js_composer/config/map.php:1755
+#: composer/js_composer/config/map.php:1789
+#: composer/js_composer/config/map.php:1870
+#: composer/js_composer/config/map.php:1899
+#@ js_composer
+msgid "Widget title"
+msgstr "Título del widget"
+
+#: composer/js_composer/config/map.php:358
+#: composer/js_composer/config/map.php:416
+#: composer/js_composer/config/map.php:494
+#: composer/js_composer/config/map.php:542
+#: composer/js_composer/config/map.php:608
+#: composer/js_composer/config/map.php:673
+#: composer/js_composer/config/map.php:804
+#: composer/js_composer/config/map.php:917
+#: composer/js_composer/config/map.php:1117
+#: composer/js_composer/config/map.php:1147
+#: composer/js_composer/config/map.php:1243
+#: composer/js_composer/config/map.php:1295
+#: composer/js_composer/config/map.php:1414
+#: composer/js_composer/config/map.php:1461
+#, fuzzy
+#@ js_composer
+msgid "What text use as a widget title. Leave blank if no title is needed."
+msgstr "Introduce el texto a usar como título del widget. Si no quieres mostrar título, déjalo en blanco."
+
+#: composer/js_composer/config/map.php:143
+#, fuzzy
+#@ js_composer
+msgid "Separator"
+msgstr "Título del separador."
+
+#: composer/js_composer/config/map.php:154
+#, fuzzy
+#@ js_composer
+msgid "Separator with Text"
+msgstr "Separador (Divisor) con texto"
+
+#: composer/js_composer/config/map.php:165
+#@ js_composer
+msgid "Separator title."
+msgstr "Título del separador."
+
+#: composer/js_composer/config/map.php:169
+#@ js_composer
+msgid "Title position"
+msgstr "Posición del título"
+
+#: composer/js_composer/config/map.php:171
+#@ js_composer
+msgid "Align center"
+msgstr "Alinear al centro"
+
+#: composer/js_composer/config/map.php:171
+#: composer/js_composer/config/map.php:1092
+#@ js_composer
+msgid "Align left"
+msgstr "Alinear a la izquierda"
+
+#: composer/js_composer/config/map.php:171
+#: composer/js_composer/config/map.php:1092
+#@ js_composer
+msgid "Align right"
+msgstr "Alinear a la derecha"
+
+#: composer/js_composer/config/map.php:172
+#@ js_composer
+msgid "Select title location."
+msgstr "Seleccionar la localización del título."
+
+#: composer/js_composer/config/map.php:187
+#, fuzzy
+#@ js_composer
+msgid "Message Box"
+msgstr "Caja de mensaje"
+
+#: composer/js_composer/config/map.php:195
+#@ js_composer
+msgid "Message box type"
+msgstr "Tipo de caja de mensaje"
+
+#: composer/js_composer/config/map.php:197
+#@ js_composer
+msgid "Informational"
+msgstr "Informativo"
+
+#: composer/js_composer/config/map.php:197
+#@ js_composer
+msgid "Warning"
+msgstr "Advertencia"
+
+#: composer/js_composer/config/map.php:197
+#@ js_composer
+msgid "Success"
+msgstr "Éxito"
+
+#: composer/js_composer/config/map.php:197
+#@ js_composer
+msgid "Error"
+msgstr "Error"
+
+#: composer/js_composer/config/map.php:198
+#@ js_composer
+msgid "Select message type."
+msgstr "Indica el tipo de mensaje."
+
+#: composer/js_composer/config/map.php:204
+#@ js_composer
+msgid "Message text"
+msgstr "Mensaje de texto"
+
+#: composer/js_composer/config/map.php:206
+#@ js_composer
+msgid "<p>I am message box. Click edit button to change this text.</p>"
+msgstr "<p>Soy una caja de mensaje. Clic en el botón 'Editar' (icono: lápiz amarillo) para cambiar este texto.</p>"
+
+#: composer/js_composer/config/map.php:222
+#, fuzzy
+#@ js_composer
+msgid "Facebook Like"
+msgstr "Botón de 'Me gusta' de Facebook"
+
+#: composer/js_composer/config/map.php:229
+#: composer/js_composer/config/map.php:248
+#@ js_composer
+msgid "Button type"
+msgstr "Tipo de botón"
+
+#: composer/js_composer/config/map.php:232
+#: composer/js_composer/config/map.php:270
+#@ js_composer
+msgid "Standard"
+msgstr "Estándar"
+
+#: composer/js_composer/config/map.php:232
+#@ js_composer
+msgid "Button count"
+msgstr "Botón de contador"
+
+#: composer/js_composer/config/map.php:232
+#@ js_composer
+msgid "Box count"
+msgstr "Caja de contador"
+
+#: composer/js_composer/config/map.php:233
+#: composer/js_composer/config/map.php:252
+#@ js_composer
+msgid "Select button type."
+msgstr "Indica el tipo de botón."
+
+#: composer/js_composer/config/map.php:241
+#, fuzzy
+#@ js_composer
+msgid "Tweetmeme Button"
+msgstr "Botón de 'TwitteaMe' de Twitter"
+
+#: composer/js_composer/config/map.php:251
+#: composer/js_composer/config/map.php:297
+#@ js_composer
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: composer/js_composer/config/map.php:251
+#: composer/js_composer/config/map.php:297
+#@ js_composer
+msgid "Vertical"
+msgstr "Vertical"
+
+#: composer/js_composer/config/map.php:251
+#: composer/js_composer/config/map.php:278
+#: composer/js_composer/config/map.php:937
+#@ js_composer
+msgid "None"
+msgstr "Ninguno"
+
+#: composer/js_composer/config/map.php:260
+#, fuzzy
+#@ js_composer
+msgid "Google+ Button"
+msgstr "Botón de 'Google+'"
+
+#: composer/js_composer/config/map.php:267
+#@ js_composer
+msgid "Button size"
+msgstr "Tamaño de botón"
+
+#: composer/js_composer/config/map.php:270
+#@ js_composer
+msgid "Medium"
+msgstr "Mediano"
+
+#: composer/js_composer/config/map.php:270
+#@ js_composer
+msgid "Tall"
+msgstr "Grande"
+
+#: composer/js_composer/config/map.php:271
+#, fuzzy
+#@ js_composer
+msgid "Select button size."
+msgstr "Indica el tipo de botón."
+
+#: composer/js_composer/config/map.php:275
+#@ js_composer
+msgid "Annotation"
+msgstr "Anotación"
+
+#: composer/js_composer/config/map.php:278
+#@ js_composer
+msgid "Inline"
+msgstr "En línea"
+
+#: composer/js_composer/config/map.php:278
+#@ js_composer
+msgid "Bubble"
+msgstr "Bocadillo"
+
+#: composer/js_composer/config/map.php:279
+#@ js_composer
+msgid "Select annotation type."
+msgstr "Indica el tipo de anotación."
+
+#: composer/js_composer/config/map.php:287
+#, fuzzy
+#@ js_composer
+msgid "Pinterest Button"
+msgstr "Botón de 'Pinterest'"
+
+#: composer/js_composer/config/map.php:294
+#@ js_composer
+msgid "Button layout"
+msgstr "Diseño de botón"
+
+#: composer/js_composer/config/map.php:297
+#@ js_composer
+msgid "No count"
+msgstr "Sin contador"
+
+#: composer/js_composer/config/map.php:298
+#, fuzzy
+#@ js_composer
+msgid "Select button layout."
+msgstr "Indica el tipo de botón."
+
+#: composer/js_composer/config/map.php:306
+#@ js_composer
+msgid "FAQ"
+msgstr "Preguntas Frecuentes"
+
+#: composer/js_composer/config/map.php:315
+#: composer/js_composer/config/map.php:317
+#@ js_composer
+msgid "Toggle title"
+msgstr "Título de alternador"
+
+#: composer/js_composer/config/map.php:318
+#@ js_composer
+msgid "Toggle block title."
+msgstr "Título del bloque del alternador."
+
+#: composer/js_composer/config/map.php:324
+#@ js_composer
+msgid "Toggle content"
+msgstr "Contenido del alternador"
+
+#: composer/js_composer/config/map.php:326
+#, fuzzy
+#@ js_composer
+msgid "<p>Toggle content goes here, click edit button to change this text.</p>"
+msgstr "<p>El contenido del alternador va aquí, clic en el botón 'Editar' (icono: lápiz amarillo) para cambiar este texto.</p>"
+
+#: composer/js_composer/config/map.php:327
+#@ js_composer
+msgid "Toggle block content."
+msgstr "Contenido del bloque del alternador."
+
+#: composer/js_composer/config/map.php:331
+#@ js_composer
+msgid "Default state"
+msgstr "Estado por defecto"
+
+#: composer/js_composer/config/map.php:333
+#@ js_composer
+msgid "Closed"
+msgstr "Cerrado"
+
+#: composer/js_composer/config/map.php:333
+#@ js_composer
+msgid "Open"
+msgstr "Abierto"
+
+#: composer/js_composer/config/map.php:334
+#, fuzzy
+#@ js_composer
+msgid "Select \"Open\" if you want toggle to be open by default."
+msgstr "Selecciona esto si quieres que el alternador esté abierto por defecto."
+
+#: composer/js_composer/config/map.php:349
+#@ js_composer
+msgid "Single Image"
+msgstr "Imagen única"
+
+#: composer/js_composer/config/map.php:362
+#, fuzzy
+#@ js_composer
+msgid "Image"
+msgstr "Imágenes"
+
+#: composer/js_composer/config/map.php:365
+#@ js_composer
+msgid "Select image from media library."
+msgstr "Selecciona una imagen de la librería multimedia."
+
+#: composer/js_composer/config/map.php:370
+#: composer/js_composer/config/map.php:442
+#@ js_composer
+msgid "Image size"
+msgstr "Tamaño de imagen"
+
+#: composer/js_composer/config/map.php:372
+#: composer/js_composer/config/map.php:444
+#@ js_composer
+msgid "Enter image size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height). Leave empty to use 'thumbnail' size."
+msgstr "Introduce el tamaño de la imagen. Ejemplo: thumbnail, medium, large, full u otros tamaños definidos por el tema actual. También puedes introducir el tamaño en píxeles: 200x100 (Anchura x Altura). Si lo dejas en blanco, por defecto utilizará el tamaño 'thumbnail'."
+
+#: composer/js_composer/config/map.php:376
+#, fuzzy
+#@ js_composer
+msgid "Link to large image?"
+msgstr "Link a la imagen grande"
+
+#: composer/js_composer/config/map.php:378
+#@ js_composer
+msgid "If selected, image will be linked to the bigger image."
+msgstr "Si se activa, la imagen se linkará a la imagen de mayor tamaño."
+
+#: composer/js_composer/config/map.php:379
+#: composer/js_composer/config/map.php:846
+#: composer/js_composer/config/map.php:1180
+#@ js_composer
+msgid "Yes, please"
+msgstr "Sí, por favor"
+
+#: composer/js_composer/config/map.php:383
+#, fuzzy
+#@ js_composer
+msgid "Image link"
+msgstr "Cuadrícula de imágenes"
+
+#: composer/js_composer/config/map.php:385
+#@ js_composer
+msgid "Enter url if you want this image to have link."
+msgstr "Introduce una url si quieres q esta imagen tenga un link."
+
+#: composer/js_composer/config/map.php:390
+#, fuzzy
+#@ js_composer
+msgid "Link Target"
+msgstr "Destino"
+
+#: composer/js_composer/config/map.php:407
+#, fuzzy
+#@ js_composer
+msgid "Image Gallery"
+msgstr "Galería de imágenes"
+
+#: composer/js_composer/config/map.php:420
+#@ js_composer
+msgid "Gallery type"
+msgstr "Tipo de galería"
+
+#: composer/js_composer/config/map.php:422
+#: composer/js_composer/config/map.php:811
+#@ js_composer
+msgid "Flex slider fade"
+msgstr "Pase de diapositivas Flex con fundido"
+
+#: composer/js_composer/config/map.php:422
+#: composer/js_composer/config/map.php:811
+#@ js_composer
+msgid "Flex slider slide"
+msgstr "Pase de diapositivas Flex con deslizado"
+
+#: composer/js_composer/config/map.php:422
+#: composer/js_composer/config/map.php:811
+#@ js_composer
+msgid "Nivo slider"
+msgstr "Pase de diapositivas Nivo"
+
+#: composer/js_composer/config/map.php:422
+#@ js_composer
+msgid "Image grid"
+msgstr "Cuadrícula de imágenes"
+
+#: composer/js_composer/config/map.php:423
+#, fuzzy
+#@ js_composer
+msgid "Select gallery type."
+msgstr "Indica el tipo de mensaje."
+
+#: composer/js_composer/config/map.php:427
+#: composer/js_composer/config/map.php:546
+#: composer/js_composer/config/map.php:822
+#@ js_composer
+msgid "Auto rotate slides"
+msgstr "Rotación automática de las diapositivas"
+
+#: composer/js_composer/config/map.php:430
+#: composer/js_composer/config/map.php:549
+#: composer/js_composer/config/map.php:825
+#, fuzzy
+#@ js_composer
+msgid "Auto rotate slides each X seconds."
+msgstr "Rotación automática de las diapositivas cada X segundos. Introduce 0 para deshabilitarla."
+
+#: composer/js_composer/config/map.php:435
+#@ js_composer
+msgid "Images"
+msgstr "Imágenes"
+
+#: composer/js_composer/config/map.php:438
+#@ js_composer
+msgid "Select images from media library."
+msgstr "Selecciona imágenes de la librería multimedia."
+
+#: composer/js_composer/config/map.php:448
+#@ js_composer
+msgid "On click"
+msgstr "Al clicar"
+
+#: composer/js_composer/config/map.php:450
+#@ js_composer
+msgid "Open prettyPhoto"
+msgstr "Abrir con prettyPhoto"
+
+#: composer/js_composer/config/map.php:450
+#@ js_composer
+msgid "Do nothing"
+msgstr "No hacer nada"
+
+#: composer/js_composer/config/map.php:450
+#: composer/js_composer/config/map.php:853
+#@ js_composer
+msgid "Open custom link"
+msgstr "Abrir link personalizado"
+
+#: composer/js_composer/config/map.php:451
+#, fuzzy
+#@ js_composer
+msgid "What to do when slide is clicked?"
+msgstr "¿Qué hacer cuando se clica en una diapositiva?"
+
+#: composer/js_composer/config/map.php:455
+#: composer/js_composer/config/map.php:858
+#@ js_composer
+msgid "Custom links"
+msgstr "Links personalizados"
+
+#: composer/js_composer/config/map.php:457
+#: composer/js_composer/config/map.php:861
+#, fuzzy
+#@ js_composer
+msgid "Enter links for each slide here. Divide links with linebreaks (Enter)."
+msgstr "Selecciona 'Abrir link personalizado' in el parámetro 'Link' y, luego, introduce aquí los links para cada diapositiva. Escribe cada link en una línea distinta."
+
+#: composer/js_composer/config/map.php:462
+#, fuzzy
+#@ js_composer
+msgid "Custom link target"
+msgstr "Links personalizados"
+
+#: composer/js_composer/config/map.php:464
+#@ js_composer
+msgid "Select where to open  custom links."
+msgstr "Indica dónde abrir los links personalizados."
+
+#: composer/js_composer/config/map.php:483
+#@ js_composer
+msgid "Tabs"
+msgstr "Pestañas"
+
+#: composer/js_composer/config/map.php:498
+#, fuzzy
+#@ js_composer
+msgid "Auto rotate tabs"
+msgstr "Rotación automática de las diapositivas"
+
+#: composer/js_composer/config/map.php:501
+#, fuzzy
+#@ js_composer
+msgid "Auto rotate tabs each X seconds."
+msgstr "Rotación automática de las diapositivas cada X segundos. Introduce 0 para deshabilitarla."
+
+#: composer/js_composer/config/map.php:518
+#@ js_composer
+msgid "Tab 1"
+msgstr "Pestaña 1"
+
+#: composer/js_composer/config/map.php:519
+#@ js_composer
+msgid "Tab 2"
+msgstr "Pestaña 2"
+
+#: composer/js_composer/config/map.php:529
+#, fuzzy
+#@ js_composer
+msgid "Tour Section"
+msgstr "Contenido por pasos"
+
+#: composer/js_composer/config/map.php:566
+#@ js_composer
+msgid "Slide 1"
+msgstr "Diapositiva 1"
+
+#: composer/js_composer/config/map.php:567
+#@ js_composer
+msgid "Slide 2"
+msgstr "Diapositiva 2"
+
+#: composer/js_composer/config/map.php:583
+#, fuzzy
+#@ js_composer
+msgid "Tab title."
+msgstr "Título"
+
+#: composer/js_composer/config/map.php:587
+#, fuzzy
+#@ js_composer
+msgid "Tab ID"
+msgstr "Pestaña 1"
+
+#: composer/js_composer/config/map.php:597
+#, fuzzy
+#@ js_composer
+msgid "Accordion"
+msgstr "Contenido desplegable en acordeón"
+
+#: composer/js_composer/config/map.php:618
+#@ js_composer
+msgid "Allow collapsible all"
+msgstr "Permitir que todo sea plegable"
+
+#: composer/js_composer/config/map.php:621
+#@ js_composer
+msgid "Allow"
+msgstr "Permitir"
+
+#: composer/js_composer/config/map.php:635
+#, fuzzy
+#@ js_composer
+msgid "Add accordion section"
+msgstr "Contenido desplegable en acordeón"
+
+#: composer/js_composer/config/map.php:645
+#, fuzzy
+#@ js_composer
+msgid "Accordion Section"
+msgstr "Contenido desplegable en acordeón"
+
+#: composer/js_composer/config/map.php:655
+#, fuzzy
+#@ js_composer
+msgid "Accordion section title."
+msgstr "Contenido desplegable en acordeón"
+
+#: composer/js_composer/config/map.php:664
+#, fuzzy
+#@ js_composer
+msgid "Teaser (posts) Grid"
+msgstr "Cuadrícula de entradas"
+
+#: composer/js_composer/config/map.php:677
+#@ js_composer
+msgid "Columns count"
+msgstr "Número de columnas"
+
+#: composer/js_composer/config/map.php:681
+#@ js_composer
+msgid "Select columns count."
+msgstr "Indica el número de columnas."
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:164
+#: composer/js_composer/config/map.php:685
+#: composer/js_composer/config/map.php:829
+#@ js_composer
+msgid "Post types"
+msgstr "Tipos de entradas"
+
+#: composer/js_composer/config/map.php:687
+#: composer/js_composer/config/map.php:831
+#@ js_composer
+msgid "Select post types to populate posts from."
+msgstr "Indica el tipo de entrada del cual quieres mostras entradas."
+
+#: composer/js_composer/config/map.php:691
+#, fuzzy
+#@ js_composer
+msgid "Teasers count"
+msgstr "Indica el número de entradas"
+
+#: composer/js_composer/config/map.php:693
+#, fuzzy
+#@ js_composer
+msgid "How many teasers to show? Enter number or word \"All\"."
+msgstr "¿Cuántas entradas quieres mostrar? Introduce el número o 'Todos'."
+
+#: composer/js_composer/config/map.php:699
+#: composer/js_composer/config/map.php:837
+#@ js_composer
+msgid "Teaser (Excerpt)"
+msgstr "Entrada (Resumen)"
+
+#: composer/js_composer/config/map.php:699
+#@ js_composer
+msgid "Full Content"
+msgstr "Todo el contenido"
+
+#: composer/js_composer/config/map.php:700
+#: composer/js_composer/config/map.php:728
+#: composer/js_composer/config/map.php:736
+#@ js_composer
+msgid "Teaser layout template."
+msgstr "Plantilla del diseño de la entrada."
+
+#: composer/js_composer/config/map.php:704
+#@ js_composer
+msgid "Layout"
+msgstr "Diseño"
+
+#: composer/js_composer/composer/lib/params/teaser_template/teaser_template.php:24
+#: composer/js_composer/config/map.php:706
+#@ js_composer
+msgid "Title + Thumbnail + Text"
+msgstr "Título + Imagen miniatura + Texto"
+
+#: composer/js_composer/composer/lib/params/teaser_template/teaser_template.php:25
+#: composer/js_composer/config/map.php:706
+#@ js_composer
+msgid "Thumbnail + Title + Text"
+msgstr "Imagen miniatura + Título + Texto"
+
+#: composer/js_composer/composer/lib/params/teaser_template/teaser_template.php:26
+#: composer/js_composer/config/map.php:706
+#@ js_composer
+msgid "Thumbnail + Text"
+msgstr "Imagen miniatura + Texto"
+
+#: composer/js_composer/composer/lib/params/teaser_template/teaser_template.php:27
+#: composer/js_composer/config/map.php:706
+#@ js_composer
+msgid "Thumbnail + Title"
+msgstr "Imagen miniatura + Título"
+
+#: composer/js_composer/composer/lib/params/teaser_template/teaser_template.php:28
+#: composer/js_composer/config/map.php:706
+#@ js_composer
+msgid "Thumbnail only"
+msgstr "Solo imagen miniatura"
+
+#: composer/js_composer/composer/lib/params/teaser_template/teaser_template.php:29
+#: composer/js_composer/config/map.php:706
+#@ js_composer
+msgid "Title + Text"
+msgstr "Título + Texto"
+
+#: composer/js_composer/config/map.php:707
+#@ js_composer
+msgid "Teaser layout."
+msgstr "Diseño de la entrada."
+
+#: composer/js_composer/config/map.php:711
+#: composer/js_composer/config/map.php:851
+#: lib/social/settings.php:33
+#: lib/social/settings.php:107
+#@ js_composer
+#@ theme
+msgid "Link"
+msgstr "Link"
+
+#: composer/js_composer/config/map.php:713
+#: composer/js_composer/config/map.php:853
+#@ js_composer
+msgid "Link to post"
+msgstr "Link a la entrada"
+
+#: composer/js_composer/config/map.php:713
+#: composer/js_composer/config/map.php:853
+#@ js_composer
+msgid "Link to bigger image"
+msgstr "Link a la imagen grande"
+
+#: composer/js_composer/config/map.php:713
+#@ js_composer
+msgid "Thumbnail to bigger image, title to post"
+msgstr "De imagen miniatura a imagen grande, de título a entrada"
+
+#: composer/js_composer/config/map.php:713
+#: composer/js_composer/config/map.php:853
+#@ js_composer
+msgid "No link"
+msgstr "Sin link"
+
+#: composer/js_composer/config/map.php:714
+#: composer/js_composer/config/map.php:854
+#@ js_composer
+msgid "Link type."
+msgstr "Tipo de link"
+
+#: composer/js_composer/config/map.php:718
+#, fuzzy
+#@ js_composer
+msgid "Link target"
+msgstr "Tipo de link"
+
+#: composer/js_composer/config/map.php:725
+#, fuzzy
+#@ js_composer
+msgid "Teaser grid layout"
+msgstr "Diseño de la entrada."
+
+#: composer/js_composer/config/map.php:727
+#@ js_composer
+msgid "Grid"
+msgstr "Cuadrícula"
+
+#: composer/js_composer/config/map.php:727
+#@ js_composer
+msgid "Grid with filter"
+msgstr "Cuadrícula con filtro"
+
+#: composer/js_composer/config/map.php:727
+#@ js_composer
+msgid "Carousel"
+msgstr "Carrusel"
+
+#: composer/js_composer/config/map.php:732
+#, fuzzy
+#@ js_composer
+msgid "Layout mode"
+msgstr "Diseño"
+
+#: composer/js_composer/config/map.php:734
+#@ js_composer
+msgid "Fit rows"
+msgstr "Ajustar filas"
+
+#: composer/js_composer/config/map.php:734
+#@ js_composer
+msgid "Masonry"
+msgstr "Masonry"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:168
+#: composer/js_composer/config/map.php:740
+#@ js_composer
+msgid "Taxonomies"
+msgstr "Taxonomías"
+
+#: composer/js_composer/config/map.php:743
+#@ js_composer
+msgid "Select taxonomies from."
+msgstr "Seleccionar taxonomías de."
+
+#: composer/js_composer/config/map.php:747
+#: composer/js_composer/config/map.php:865
+#@ js_composer
+msgid "Thumbnail size"
+msgstr "Tamaño de la imagen miniatura"
+
+#: composer/js_composer/config/map.php:749
+#: composer/js_composer/config/map.php:867
+#@ js_composer
+msgid "Enter thumbnail size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height)."
+msgstr "Introduce el tamaño de la imagen miniatura. Ejemplo: thumbnail, medium, large, full u otros tamaños definidos por el tema actual. También puedes introducir el tamaño en píxeles: 200x100 (Anchura x Altura)."
+
+#: composer/js_composer/config/map.php:753
+#: composer/js_composer/config/map.php:871
+#@ js_composer
+msgid "Post/Page IDs"
+msgstr "IDs de las Entradas/Páginas"
+
+#: composer/js_composer/config/map.php:755
+#@ js_composer
+msgid "Fill this field with page/posts IDs separated by commas (,) to retrieve only them. Use this in conjunction with \"Post types\" field."
+msgstr "Para mostrar solo unas entradas concretas, rellena este campo con sus IDs separados por comas (,). Utiliza esto conjunto con el campo de 'Tipo de entrada'."
+
+#: composer/js_composer/config/map.php:759
+#@ js_composer
+msgid "Exclude Post/Page IDs"
+msgstr "IDs de las Entradas/Páginas a excluir"
+
+#: composer/js_composer/config/map.php:761
+#@ js_composer
+msgid "Fill this field with page/posts IDs separated by commas (,) to exclude them from query."
+msgstr "Para excluir algunas entradas concretas, rellena este campo con sus IDs separados por comas (,)."
+
+#: composer/js_composer/config/map.php:767
+#: composer/js_composer/config/map.php:879
+#@ js_composer
+msgid "If you want to narrow output, enter category names here. Note: Only listed categories will be included. Divide categories with linebreaks (Enter)."
+msgstr "Si quieres restringir las categorías, introduce sus nombres aquí. Nota: Se incluirán solo las categorías listadas.  Escribe cada categoría en una línea distinta."
+
+#: composer/js_composer/config/map.php:771
+#: composer/js_composer/config/map.php:883
+#: composer/js_composer/config/map.php:890
+#@ js_composer
+msgid "Order by"
+msgstr "Ordenar por"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:223
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#@ js_composer
+msgid "Date"
+msgstr "Fecha"
+
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#@ js_composer
+msgid "ID"
+msgstr "ID"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:165
+#: composer/js_composer/composer/lib/params/loop/loop.php:225
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#@ js_composer
+msgid "Author"
+msgstr "Autor"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:228
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#@ js_composer
+msgid "Modified"
+msgstr "Modificado"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:230
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#: composer/js_composer/config/map.php:1270
+#: composer/js_composer/config/map.php:1838
+#: lib/admin/functions/functions.options.php:666
+#@ js_composer
+#@ framework
+msgid "Random"
+msgstr "Aleatorio"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:231
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#@ js_composer
+msgid "Comment count"
+msgstr "Número de commentarios"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:232
+#: composer/js_composer/config/map.php:773
+#: composer/js_composer/config/map.php:885
+#@ js_composer
+msgid "Menu order"
+msgstr "Posición del menú"
+
+#: composer/js_composer/config/map.php:774
+#: composer/js_composer/config/map.php:886
+#, php-format
+#@ js_composer
+msgid "Select how to sort retrieved posts. More at %s."
+msgstr "Indica cómo ordenar las entradas obtenidas. Más en %s."
+
+#: composer/js_composer/config/map.php:778
+#, fuzzy
+#@ js_composer
+msgid "Order way"
+msgstr "Ordenar por"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:241
+#: composer/js_composer/config/map.php:780
+#: composer/js_composer/config/map.php:892
+#@ js_composer
+msgid "Descending"
+msgstr "Descendiente"
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:240
+#: composer/js_composer/config/map.php:780
+#: composer/js_composer/config/map.php:892
+#@ js_composer
+msgid "Ascending"
+msgstr "Ascendiente"
+
+#: composer/js_composer/config/map.php:781
+#: composer/js_composer/config/map.php:893
+#, php-format
+#@ js_composer
+msgid "Designates the ascending or descending order. More at %s."
+msgstr "Indica el orden ascendiente o descendiente. Más en %s."
+
+#: composer/js_composer/config/map.php:795
+#, fuzzy
+#@ js_composer
+msgid "Posts Slider"
+msgstr "Pase de diapositivas de entradas"
+
+#: composer/js_composer/config/map.php:808
+#@ js_composer
+msgid "Slider type"
+msgstr "Tipo de pase de diapositivas"
+
+#: composer/js_composer/config/map.php:812
+#, fuzzy
+#@ js_composer
+msgid "Select slider type."
+msgstr "Indica el tipo de mensaje."
+
+#: composer/js_composer/config/map.php:816
+#@ js_composer
+msgid "Slides count"
+msgstr "Número de diapositivas"
+
+#: composer/js_composer/config/map.php:818
+#, fuzzy
+#@ js_composer
+msgid "How many slides to show? Enter number or word \"All\"."
+msgstr "¿Cuántas diapositivas quieres mostrar? Introduce el número o 'Todas'."
+
+#: composer/js_composer/config/map.php:835
+#@ js_composer
+msgid "Description"
+msgstr "Descripción"
+
+#: composer/js_composer/config/map.php:837
+#@ js_composer
+msgid "No description"
+msgstr "Sin descripción"
+
+#: composer/js_composer/config/map.php:838
+#@ js_composer
+msgid "Some sliders support description text, what content use for it?"
+msgstr "Algunos sistemas de pase de diapositivas permiten descripciones de texto, qué contenido te gustaría usar?"
+
+#: composer/js_composer/config/map.php:843
+#@ js_composer
+msgid "Output post title?"
+msgstr "¿Mostrar el título de la entrada?"
+
+#: composer/js_composer/config/map.php:845
+#@ js_composer
+msgid "If selected, title will be printed before the teaser text."
+msgstr "Si se activa, el título se mostrará antes del texto de muestra."
+
+#: composer/js_composer/config/map.php:873
+#@ js_composer
+msgid "Fill this field with page/posts IDs separated by commas (,), to retrieve only them. Use this in conjunction with \"Post types\" field."
+msgstr "Para mostrar solo unas entradas concretas, rellena este campo con sus IDs separados por comas (,). Utiliza esto conjunto con el campo de 'Tipo de entrada'."
+
+#: composer/js_composer/config/map.php:907
+#@ js_composer
+msgid "Widgetised Sidebar"
+msgstr "Barra adicional con widgets"
+
+#: composer/js_composer/config/map.php:911
+#: composer/js_composer/config/map.php:1197
+#: composer/js_composer/config/map.php:1217
+#@ js_composer
+msgid "Structure"
+msgstr "Estructura"
+
+#: composer/js_composer/config/map.php:921
+#@ js_composer
+msgid "Sidebar"
+msgstr "Barra adicional"
+
+#: composer/js_composer/config/map.php:923
+#@ js_composer
+msgid "Select which widget area output."
+msgstr "Indica qué área de widgets usar."
+
+#: composer/js_composer/config/map.php:938
+#@ js_composer
+msgid "Address book icon"
+msgstr "Icono de agenda"
+
+#: composer/js_composer/config/map.php:939
+#@ js_composer
+msgid "Alarm clock icon"
+msgstr "Icono de reloj despertador"
+
+#: composer/js_composer/config/map.php:940
+#@ js_composer
+msgid "Anchor icon"
+msgstr "Icono de ancla"
+
+#: composer/js_composer/config/map.php:941
+#@ js_composer
+msgid "Application Image icon"
+msgstr "Icono de aplicación de imagen"
+
+#: composer/js_composer/config/map.php:942
+#@ js_composer
+msgid "Arrow icon"
+msgstr "Icono de flecha"
+
+#: composer/js_composer/config/map.php:943
+#@ js_composer
+msgid "Asterisk icon"
+msgstr "Icono de asterisco"
+
+#: composer/js_composer/config/map.php:944
+#@ js_composer
+msgid "Hammer icon"
+msgstr "Icono de martillo"
+
+#: composer/js_composer/config/map.php:945
+#@ js_composer
+msgid "Balloon icon"
+msgstr "Icono de bocadillo"
+
+#: composer/js_composer/config/map.php:946
+#@ js_composer
+msgid "Balloon Buzz icon"
+msgstr "Icono de bocadillo de Buzz"
+
+#: composer/js_composer/config/map.php:947
+#@ js_composer
+msgid "Balloon Facebook icon"
+msgstr "Icono de bocadillo de Facebook"
+
+#: composer/js_composer/config/map.php:948
+#@ js_composer
+msgid "Balloon Twitter icon"
+msgstr "Icono de bocadillo de Twitter"
+
+#: composer/js_composer/config/map.php:949
+#@ js_composer
+msgid "Battery icon"
+msgstr "Icono de batería"
+
+#: composer/js_composer/config/map.php:950
+#@ js_composer
+msgid "Binocular icon"
+msgstr "Icono de prismáticos"
+
+#: composer/js_composer/config/map.php:951
+#@ js_composer
+msgid "Document Excel icon"
+msgstr "Icono de documento Excel"
+
+#: composer/js_composer/config/map.php:952
+#@ js_composer
+msgid "Document Image icon"
+msgstr "Icono de documento de imagen"
+
+#: composer/js_composer/config/map.php:953
+#@ js_composer
+msgid "Document Music icon"
+msgstr "Icono de documento de música"
+
+#: composer/js_composer/config/map.php:954
+#@ js_composer
+msgid "Document Office icon"
+msgstr "Icono de documento de oficina"
+
+#: composer/js_composer/config/map.php:955
+#@ js_composer
+msgid "Document PDF icon"
+msgstr "Icono de documento PDF"
+
+#: composer/js_composer/config/map.php:956
+#@ js_composer
+msgid "Document Powerpoint icon"
+msgstr "Icono de documento PowerPoint"
+
+#: composer/js_composer/config/map.php:957
+#@ js_composer
+msgid "Document Word icon"
+msgstr "Icono de documento Word"
+
+#: composer/js_composer/config/map.php:958
+#@ js_composer
+msgid "Bookmark icon"
+msgstr "Icono de marcador"
+
+#: composer/js_composer/config/map.php:959
+#@ js_composer
+msgid "Camcorder icon"
+msgstr "Icono de cámara de vídeo"
+
+#: composer/js_composer/config/map.php:960
+#@ js_composer
+msgid "Camera icon"
+msgstr "Icono de cámara"
+
+#: composer/js_composer/config/map.php:961
+#@ js_composer
+msgid "Chart icon"
+msgstr "Icono de gráfica"
+
+#: composer/js_composer/config/map.php:962
+#@ js_composer
+msgid "Chart pie icon"
+msgstr "Icono de gráfica tipo tarta"
+
+#: composer/js_composer/config/map.php:963
+#@ js_composer
+msgid "Clock icon"
+msgstr "Icono de reloj"
+
+#: composer/js_composer/config/map.php:964
+#@ js_composer
+msgid "Fire icon"
+msgstr "Icono de fuego"
+
+#: composer/js_composer/config/map.php:965
+#@ js_composer
+msgid "Heart icon"
+msgstr "Icono de corazón"
+
+#: composer/js_composer/config/map.php:966
+#@ js_composer
+msgid "Mail icon"
+msgstr "Icono de correo"
+
+#: composer/js_composer/config/map.php:967
+#@ js_composer
+msgid "Play icon"
+msgstr "Icono de Play"
+
+#: composer/js_composer/config/map.php:968
+#@ js_composer
+msgid "Shield icon"
+msgstr "Icono de escudo"
+
+#: composer/js_composer/config/map.php:969
+#@ js_composer
+msgid "Video icon"
+msgstr "Icono de vídeo"
+
+#: composer/js_composer/config/map.php:973
+#@ js_composer
+msgid "Button"
+msgstr "Botón"
+
+#: composer/js_composer/config/map.php:985
+#: composer/js_composer/config/map.php:1052
+#@ js_composer
+msgid "Text on the button."
+msgstr "Texto del botón."
+
+#: composer/js_composer/config/map.php:989
+#: composer/js_composer/config/map.php:1056
+#@ js_composer
+msgid "URL (Link)"
+msgstr "URL (Link)"
+
+#: composer/js_composer/config/map.php:991
+#: composer/js_composer/config/map.php:1058
+#@ js_composer
+msgid "Button link."
+msgstr "Link del botón."
+
+#: composer/js_composer/config/map.php:995
+#: composer/js_composer/config/map.php:1062
+#@ js_composer
+msgid "Target"
+msgstr "Destino"
+
+#: composer/js_composer/config/map.php:1002
+#: composer/js_composer/config/map.php:1069
+#: lib/functions/eff_function.php:999
+#@ js_composer
+#@ default
+msgid "Color"
+msgstr "Color"
+
+#: composer/js_composer/config/map.php:1005
+#: composer/js_composer/config/map.php:1072
+#@ js_composer
+msgid "Button color."
+msgstr "Color del botón."
+
+#: composer/js_composer/config/map.php:1009
+#: composer/js_composer/config/map.php:1076
+#: lib/social/settings.php:43
+#: lib/social/settings.php:106
+#@ js_composer
+#@ theme
+msgid "Icon"
+msgstr "Icono"
+
+#: composer/js_composer/config/map.php:1012
+#: composer/js_composer/config/map.php:1079
+#, fuzzy
+#@ js_composer
+msgid "Button icon."
+msgstr "Botón de contador"
+
+#: composer/js_composer/config/map.php:1016
+#: composer/js_composer/config/map.php:1083
+#@ js_composer
+msgid "Size"
+msgstr "Tamaño"
+
+#: composer/js_composer/config/map.php:1019
+#: composer/js_composer/config/map.php:1086
+#@ js_composer
+msgid "Button size."
+msgstr "Tamaño del botón."
+
+#: composer/js_composer/config/map.php:1034
+#, fuzzy
+#@ js_composer
+msgid "Call to Action Button"
+msgstr "Llamada al botón de acción"
+
+#: composer/js_composer/config/map.php:1044
+#@ js_composer
+msgid "Click edit button to change this text."
+msgstr "Clic en el botón 'Editar' (icono: lápiz amarillo) para cambiar este texto."
+
+#: composer/js_composer/config/map.php:1090
+#@ js_composer
+msgid "Button position"
+msgstr "Posición del botón"
+
+#: composer/js_composer/config/map.php:1092
+#@ js_composer
+msgid "Align bottom"
+msgstr "Alinear abajo"
+
+#: composer/js_composer/config/map.php:1093
+#@ js_composer
+msgid "Select button alignment."
+msgstr "Seleccionar la alineación del botón."
+
+#: composer/js_composer/config/map.php:1108
+#, fuzzy
+#@ js_composer
+msgid "Video Player"
+msgstr "Reproductor de vídeo"
+
+#: composer/js_composer/config/map.php:1121
+#@ js_composer
+msgid "Video link"
+msgstr "Link del vídeo"
+
+#: composer/js_composer/config/map.php:1124
+#, php-format
+#@ js_composer
+msgid "Link to the video. More about supported formats at %s."
+msgstr "Link al vídeo. Más acerca de los formatos soportados en %s."
+
+#: composer/js_composer/config/map.php:1151
+#@ js_composer
+msgid "Google map link"
+msgstr "Link del mapa Google"
+
+#: composer/js_composer/config/map.php:1154
+#, fuzzy, php-format, php-format
+#@ js_composer
+msgid "Link to your map. Visit %s find your address and then click \"Link\" button to obtain your map link."
+msgstr "Link a tu mapa. Visita <a href=\"http://maps.google.com\" target=\"_blank\">Mapas Google</a>, encuentra tu dirección y haz clic en el botón 'Link' (icono de la cadena) para obtener el link a tu mapa."
+
+#: composer/js_composer/config/map.php:1158
+#@ js_composer
+msgid "Map height"
+msgstr "Altura del mapa"
+
+#: composer/js_composer/config/map.php:1164
+#@ js_composer
+msgid "Map type"
+msgstr "Tipo de mapa"
+
+#: composer/js_composer/config/map.php:1166
+#@ js_composer
+msgid "Map"
+msgstr "Mapa"
+
+#: composer/js_composer/config/map.php:1166
+#@ js_composer
+msgid "Satellite"
+msgstr "Satélite"
+
+#: composer/js_composer/config/map.php:1166
+#@ js_composer
+msgid "Map + Terrain"
+msgstr "Mapa + Terreno"
+
+#: composer/js_composer/config/map.php:1171
+#@ js_composer
+msgid "Map Zoom"
+msgstr "Zoom del mapa"
+
+#: composer/js_composer/config/map.php:1173
+#@ js_composer
+msgid "14 - Default"
+msgstr "14 - Por defecto"
+
+#: composer/js_composer/config/map.php:1194
+#: composer/js_composer/config/map.php:1203
+#@ js_composer
+msgid "Raw HTML"
+msgstr "HTML Puro"
+
+#: composer/js_composer/config/map.php:1206
+#, fuzzy
+#@ js_composer
+msgid "Enter your HTML content."
+msgstr "Introduce tu contenido."
+
+#: composer/js_composer/config/map.php:1214
+#@ js_composer
+msgid "Raw JS"
+msgstr "JS Puro"
+
+#: composer/js_composer/config/map.php:1223
+#@ js_composer
+msgid "Raw js"
+msgstr "js Puro"
+
+#: composer/js_composer/config/map.php:1226
+#, fuzzy
+#@ js_composer
+msgid "Enter your JS code."
+msgstr "Introduce tu contenido."
+
+#: composer/js_composer/config/map.php:1235
+#@ js_composer
+msgid "Flickr Widget"
+msgstr "Widget de flickr"
+
+#: composer/js_composer/config/map.php:1247
+#@ js_composer
+msgid "Flickr ID"
+msgstr "ID de flickr"
+
+#: composer/js_composer/config/map.php:1250
+#, php-format
+#@ js_composer
+msgid "To find your flickID visit %s."
+msgstr "Para encontrar tu ID de flickr visita %s."
+
+#: composer/js_composer/config/map.php:1254
+#@ js_composer
+msgid "Number of photos"
+msgstr "Número de fotos"
+
+#: composer/js_composer/config/map.php:1257
+#@ js_composer
+msgid "Number of photos."
+msgstr "Número de fotos."
+
+#: composer/js_composer/config/map.php:1261
+#: lib/shortcodes/composer.php:95
+#: lib/shortcodes/composer.php:276
+#@ js_composer
+#@ default
+msgid "Type"
+msgstr "Tipo"
+
+#: composer/js_composer/config/map.php:1263
+#@ js_composer
+msgid "User"
+msgstr "Usuario"
+
+#: composer/js_composer/config/map.php:1263
+#@ js_composer
+msgid "Group"
+msgstr "Grupo"
+
+#: composer/js_composer/config/map.php:1264
+#, fuzzy
+#@ js_composer
+msgid "Photo stream type."
+msgstr "Tipos de entradas"
+
+#: composer/js_composer/config/map.php:1268
+#: lib/shortcodes/composer.php:175
+#: lib/shortcodes/composer.php:240
+#: lib/shortcodes/composer.php:290
+#: lib/shortcodes/composer.php:347
+#: lib/shortcodes/composer.php:404
+#@ js_composer
+#@ default
+msgid "Display"
+msgstr "Mostrar"
+
+#: composer/js_composer/config/map.php:1270
+#: lib/admin/functions/functions.options.php:665
+#@ js_composer
+#@ framework
+msgid "Latest"
+msgstr "Los más recientes"
+
+#: composer/js_composer/config/map.php:1271
+#@ js_composer
+msgid "Photo order."
+msgstr "Orden de foto."
+
+#: composer/js_composer/config/map.php:1286
+#@ js_composer
+msgid "Progress Bar"
+msgstr "Barra de Progreso"
+
+#: composer/js_composer/config/map.php:1299
+#@ js_composer
+msgid "Graphic values"
+msgstr "Valores de gráficos"
+
+#: composer/js_composer/config/map.php:1301
+#@ js_composer
+msgid "Input graph values here. Divide values with linebreaks (Enter). Example: 90|Development"
+msgstr "Introduce los valores de la gráfica aquí. Separa los valores con saltos de línea (Enter). Ejemplo: 90|Desarrollo"
+
+#: composer/js_composer/config/map.php:1306
+#@ js_composer
+msgid "Units"
+msgstr "Unidades"
+
+#: composer/js_composer/config/map.php:1308
+#@ js_composer
+msgid "Enter measurement units (if needed) Eg. %, px, points, etc. Graph value and unit will be appended to the graph title."
+msgstr "Introduce unidades de medida (si es necesario) Ej: %, px, puntos, etc. El valor y unidad de la gráfica se anexará al título de la gráfica."
+
+#: composer/js_composer/config/map.php:1312
+#, fuzzy
+#@ js_composer
+msgid "Bar color"
+msgstr "Color del botón."
+
+#: composer/js_composer/config/map.php:1314
+#, fuzzy
+#@ js_composer
+msgid "Custom Color"
+msgstr "Links personalizados"
+
+#: composer/js_composer/config/map.php:1380
+#@ js_composer
+msgid "Choose previously created contact form from the drop down list."
+msgstr "Selecciona el formulario de contacto creado previamente, de la lista desplegable."
+
+#: composer/js_composer/config/map.php:1320
+#, fuzzy
+#@ js_composer
+msgid "Bar custom color"
+msgstr "Color del botón."
+
+#: composer/js_composer/config/map.php:1322
+#@ js_composer
+msgid "Select custom background color for bars."
+msgstr "Selecciona los colores de fondo personalizados de las barras."
+
+#: composer/js_composer/config/map.php:1327
+#: composer/js_composer/config/map.php:1842
+#: composer/js_composer/config/map.php:1876
+#: composer/js_composer/config/map.php:1905
+#@ js_composer
+msgid "Options"
+msgstr "Opciones"
+
+#: composer/js_composer/config/map.php:1329
+#, fuzzy
+#@ js_composer
+msgid "Add Stripes?"
+msgstr "Añadir imágenes"
+
+#: composer/js_composer/config/map.php:1329
+#@ js_composer
+msgid "Add animation? Will be visible with striped bars."
+msgstr "¿Añadir animación? Será visible con barras rayadas."
+
+#: composer/js_composer/config/map.php:1364
+#@ js_composer
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
+
+#: composer/js_composer/config/map.php:1370
+#, fuzzy
+#@ js_composer
+msgid "Form title"
+msgstr "Título de alternador"
+
+#: composer/js_composer/config/map.php:1373
+#, fuzzy
+#@ js_composer
+msgid "What text use as form title. Leave blank if no title is needed."
+msgstr "Introduce el texto a usar como título del widget. Si no quieres mostrar título, déjalo en blanco."
+
+#: composer/js_composer/config/map.php:1377
+#, fuzzy
+#@ js_composer
+msgid "Select contact form"
+msgstr "Indica el número de columnas."
+
+#: composer/js_composer/config/map.php:1406
+#@ js_composer
+msgid "Layer Slider"
+msgstr "Layer Slider"
+
+#: composer/js_composer/config/map.php:1418
+#@ js_composer
+msgid "LayerSlider ID"
+msgstr "ID del LayerSlider"
+
+#: composer/js_composer/config/map.php:1422
+#@ js_composer
+msgid "Select your LayerSlider."
+msgstr "Selecciono tu LayerSlider."
+
+#: composer/js_composer/config/map.php:1453
+#: composer/js_composer/config/map.php:1465
+#@ js_composer
+msgid "Revolution Slider"
+msgstr "Revolution Slider"
+
+#: composer/js_composer/config/map.php:1469
+#@ js_composer
+msgid "Select your Revolution Slider."
+msgstr "Selecciona tu Revolution Slider."
+
+#: composer/js_composer/config/map.php:1482
+#@ js_composer
+msgid "No Gravity forms found."
+msgstr "Formularios Gravity Form no encontrados."
+
+#: composer/js_composer/config/map.php:1486
+#@ js_composer
+msgid "Select a form to display."
+msgstr "Selecciona un formulario a mostrar."
+
+#: composer/js_composer/config/map.php:1493
+#@ js_composer
+msgid "Gravity Form"
+msgstr "Gravity Form"
+
+#: composer/js_composer/config/map.php:1500
+#@ js_composer
+msgid "Form"
+msgstr "Formulario"
+
+#: composer/js_composer/config/map.php:1503
+#@ js_composer
+msgid "Select a form to add it to your post or page."
+msgstr "Selecciona un formulario a añadir a tu entrada o página."
+
+#: composer/js_composer/config/map.php:1508
+#@ js_composer
+msgid "Display Form Title"
+msgstr "Mostrar Título de Formulario"
+
+#: composer/js_composer/config/map.php:22
+#: composer/js_composer/config/map.php:1510
+#: composer/js_composer/config/map.php:1518
+#: composer/js_composer/config/map.php:1526
+#, fuzzy
+#@ js_composer
+msgid "No"
+msgstr "Ninguno"
+
+#: composer/js_composer/config/map.php:1510
+#: composer/js_composer/config/map.php:1518
+#: composer/js_composer/config/map.php:1526
+#@ js_composer
+msgid "Yes"
+msgstr "Sí"
+
+#: composer/js_composer/config/map.php:1511
+#@ js_composer
+msgid "Would you like to display the forms title?"
+msgstr "¿Quieres mostrar el título del formulario?"
+
+#: composer/js_composer/config/map.php:1516
+#, fuzzy
+#@ js_composer
+msgid "Display Form Description"
+msgstr "Sin descripción"
+
+#: composer/js_composer/config/map.php:1519
+#@ js_composer
+msgid "Would you like to display the forms description?"
+msgstr "¿Quieres mostrar la descripción del formulario?"
+
+#: composer/js_composer/config/map.php:1524
+#@ js_composer
+msgid "Enable AJAX?"
+msgstr "¿Activar AJAX?"
+
+#: composer/js_composer/config/map.php:1527
+#@ js_composer
+msgid "Enable AJAX submission?"
+msgstr "¿Activar envío con AJAX?"
+
+#: composer/js_composer/config/map.php:1532
+#@ js_composer
+msgid "Tab Index"
+msgstr "Índice de Pestaña"
+
+#: composer/js_composer/config/map.php:1534
+#@ js_composer
+msgid "(Optional) Specify the starting tab index for the fields of this form. Leave blank if you're not sure what this is."
+msgstr ""
+
+#: 404.php:18
+#: composer/js_composer/config/map.php:1544
+#: searchform.php:5
+#@ framework
+#@ default
+msgid "Search"
+msgstr "Buscar"
+
+#: composer/js_composer/config/map.php:1547
+#: composer/js_composer/config/map.php:1569
+#: composer/js_composer/config/map.php:1591
+#: composer/js_composer/config/map.php:1619
+#: composer/js_composer/config/map.php:1641
+#: composer/js_composer/config/map.php:1684
+#: composer/js_composer/config/map.php:1719
+#: composer/js_composer/config/map.php:1750
+#: composer/js_composer/config/map.php:1784
+#: composer/js_composer/config/map.php:1824
+#: composer/js_composer/config/map.php:1865
+#: composer/js_composer/config/map.php:1894
+#@ js_composer
+msgid "WordPress Widgets"
+msgstr "Widget de WordPress"
+
+#: composer/js_composer/config/map.php:1554
+#: composer/js_composer/config/map.php:1576
+#: composer/js_composer/config/map.php:1598
+#: composer/js_composer/config/map.php:1626
+#: composer/js_composer/config/map.php:1648
+#: composer/js_composer/config/map.php:1691
+#: composer/js_composer/config/map.php:1726
+#: composer/js_composer/config/map.php:1757
+#: composer/js_composer/config/map.php:1791
+#: composer/js_composer/config/map.php:1872
+#: composer/js_composer/config/map.php:1901
+#, fuzzy
+#@ js_composer
+msgid "What text use as a widget title. Leave blank to use default widget title."
+msgstr "Introduce el texto a usar como título del widget. Si no quieres mostrar título, déjalo en blanco."
+
+#: composer/js_composer/config/map.php:1602
+#@ js_composer
+msgid "Number of comments to show"
+msgstr "Número de comentarios a mostrar"
+
+#: composer/js_composer/config/map.php:1616
+#, fuzzy
+#@ default
+msgid "Calendar"
+msgstr "Estándar"
+
+#: composer/js_composer/config/map.php:1652
+#: composer/js_composer/config/map.php:1836
+#@ js_composer
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#: composer/js_composer/config/map.php:1654
+#, fuzzy
+#@ js_composer
+msgid "Page title"
+msgstr "Título de alternador"
+
+#: composer/js_composer/config/map.php:1654
+#, fuzzy
+#@ js_composer
+msgid "Page order"
+msgstr "Posición del menú"
+
+#: composer/js_composer/config/map.php:1654
+#, fuzzy
+#@ js_composer
+msgid "Page ID"
+msgstr "IDs de las Entradas/Páginas"
+
+#: composer/js_composer/config/map.php:1659
+#@ js_composer
+msgid "Exclude"
+msgstr "Excluír"
+
+#: composer/js_composer/config/map.php:1661
+#@ js_composer
+msgid "Page IDs, separated by commas."
+msgstr "IDs de página, separados por comas."
+
+#: composer/js_composer/config/map.php:1681
+#@ default
+msgid "Tag Cloud"
+msgstr "Nube de Etiquetas"
+
+#: composer/js_composer/config/map.php:1695
+#@ js_composer
+msgid "Taxonomy"
+msgstr "Taxonomía"
+
+#: composer/js_composer/config/map.php:1716
+#, fuzzy
+#@ default
+msgid "Custom Menu"
+msgstr "Links personalizados"
+
+#: composer/js_composer/config/map.php:1730
+#@ js_composer
+msgid "Menu"
+msgstr "Menú"
+
+#: composer/js_composer/config/map.php:1733
+#, fuzzy
+#@ js_composer
+msgid "Select menu"
+msgstr "Indica el número de columnas."
+
+#: composer/js_composer/config/map.php:1795
+#@ js_composer
+msgid "Number of posts to show"
+msgstr "Número de entradas a mostrar"
+
+#: composer/js_composer/config/map.php:1801
+#: composer/js_composer/config/map.php:1803
+#@ js_composer
+#@ default
+msgid "Display post date?"
+msgstr "¿Mostrar fecha de la entrada?"
+
+#: composer/js_composer/config/map.php:1815
+#, fuzzy
+#@ js_composer
+msgid "All Links"
+msgstr "Link"
+
+#: composer/js_composer/config/map.php:1821
+#, fuzzy
+#@ default
+msgid "Links"
+msgstr "Link"
+
+#: composer/js_composer/config/map.php:1829
+#, fuzzy
+#@ js_composer
+msgid "Link Category"
+msgstr "Categorías"
+
+#: composer/js_composer/config/map.php:1838
+#, fuzzy
+#@ js_composer
+msgid "Link title"
+msgstr "Tipo de link"
+
+#: composer/js_composer/config/map.php:1838
+#@ js_composer
+msgid "Link rating"
+msgstr "Valoración del Link"
+
+#: composer/js_composer/config/map.php:1838
+#, fuzzy
+#@ js_composer
+msgid "Link ID"
+msgstr "Link"
+
+#: composer/js_composer/config/map.php:1844
+#@ js_composer
+msgid "Show Link Image"
+msgstr "Mostrar el Link de la Imagen"
+
+#: composer/js_composer/config/map.php:1844
+#@ js_composer
+msgid "Show Link Name"
+msgstr "Mostrar el Nombre del Link"
+
+#: composer/js_composer/config/map.php:1844
+#, fuzzy
+#@ js_composer
+msgid "Show Link Description"
+msgstr "Descripción"
+
+#: composer/js_composer/config/map.php:1844
+#@ js_composer
+msgid "Show Link Rating"
+msgstr "Mostrar la Valoración del Link"
+
+#: composer/js_composer/config/map.php:1848
+#@ js_composer
+msgid "Number of links to show"
+msgstr "Número de links a mostrar"
+
+#: composer/js_composer/config/map.php:1878
+#: composer/js_composer/config/map.php:1907
+#@ js_composer
+msgid "Display as dropdown"
+msgstr "Mostrar como desplegable"
+
+#: composer/js_composer/config/map.php:1878
+#: composer/js_composer/config/map.php:1907
+#@ js_composer
+msgid "Show post counts"
+msgstr "Mostrar número de entradas"
+
+#: composer/js_composer/config/map.php:1878
+#@ js_composer
+msgid "Show hierarchy"
+msgstr "Mostrar jerarquía"
+
+#: 404.php:10
+#@ framework
+msgid "404"
+msgstr ""
+
+#: 404.php:11
+#@ framework
+msgid "The page you are looking for doesn't seem to exist."
+msgstr ""
+
+#: 404.php:13
+#@ framework
+msgid "Why don't you try Search or back to "
+msgstr ""
+
+#: 404.php:17
+#: header.php:80
+#: header.php:195
+#: searchform.php:4
+#@ framework
+#@ theme
+msgid "Search here ..."
+msgstr ""
+
+#: archive.php:6
+#: archives.php:6
+#, php-format
+#@ framework
+msgid "Daily Archives: <span>%s</span>"
+msgstr ""
+
+#: archive.php:8
+#: archives.php:8
+#, php-format
+#@ framework
+msgid "Monthly Archives: <span>%s</span>"
+msgstr ""
+
+#: archive.php:10
+#: archives.php:10
+#, php-format
+#@ framework
+msgid "Yearly Archives: <span>%s</span>"
+msgstr ""
+
+#: archive.php:12
+#: archives.php:12
+#@ framework
+msgid "Blog Archives"
+msgstr ""
+
+#: archive.php:59
+#: archives.php:59
+#: author.php:90
+#: category.php:152
+#: lib/functions/eff_loop.php:78
+#: lib/functions/eff_loop.php:205
+#: lib/functions/eff_loop.php:308
+#: lib/functions/eff_loop.php:372
+#: lib/functions/eff_loop.php:432
+#: lib/functions/eff_loop.php:1531
+#: lib/functions/eff_loop.php:1606
+#: lib/functions/eff_loop.php:1748
+#: lib/functions/eff_sc.php:70
+#: lib/functions/eff_sc.php:171
+#: lib/functions/eff_sc.php:274
+#: lib/functions/eff_sc.php:336
+#: lib/functions/eff_sc.php:396
+#: lib/functions/eff_sc.php:649
+#: lib/functions/eff_sc.php:729
+#: page-review.php:88
+#: search.php:45
+#: tag.php:36
+#@ framework
+msgid "Read More &raquo;"
+msgstr ""
+
+#: archive.php:69
+#: archives.php:69
+#: attachment.php:16
+#: search.php:53
+#: tag.php:46
+#@ framework
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr ""
+
+#: author.php:12
+#@ framework
+msgid "About "
+msgstr ""
+
+#: author.php:31
+#: lib/functions/eff_function.php:546
+#: page-authors.php:43
+#: single.php:202
+#@ framework
+msgid " 's site"
+msgstr ""
+
+#: author.php:34
+#: lib/functions/eff_function.php:549
+#: page-authors.php:46
+#: single.php:205
+#@ framework
+msgid "  on Facebook"
+msgstr ""
+
+#: author.php:37
+#: lib/functions/eff_function.php:552
+#: page-authors.php:49
+#: single.php:208
+#@ framework
+msgid "  on Twitter"
+msgstr ""
+
+#: author.php:40
+#: lib/functions/eff_function.php:555
+#: page-authors.php:52
+#: single.php:211
+#@ framework
+msgid "  on Google+"
+msgstr ""
+
+#: author.php:43
+#: lib/functions/eff_function.php:558
+#: page-authors.php:55
+#: single.php:214
+#@ framework
+msgid "  on Linkedin"
+msgstr ""
+
+#: author.php:46
+#: lib/functions/eff_function.php:561
+#: page-authors.php:58
+#: single.php:217
+#@ framework
+msgid "  on Flickr"
+msgstr ""
+
+#: author.php:49
+#: lib/functions/eff_function.php:564
+#: page-authors.php:61
+#: single.php:220
+#@ framework
+msgid "  on YouTube"
+msgstr ""
+
+#: author.php:52
+#: lib/functions/eff_function.php:567
+#: page-authors.php:64
+#: single.php:223
+#@ framework
+msgid "  on Pinterest"
+msgstr ""
+
+#: author.php:55
+#: lib/functions/eff_function.php:570
+#: page-authors.php:67
+#: single.php:226
+#@ framework
+msgid "  on Dribbble"
+msgstr ""
+
+#: category.php:5
+#, php-format
+#@ framework
+msgid "Category: %s"
+msgstr ""
+
+#: category.php:8
+#@ framework
+msgid "Feed Subscription"
+msgstr ""
+
+#: comments.php:12
+#@ framework
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:24
+#: lib/widgets/comments-widget.php:77
+#: lib/widgets/tabbed-widget.php:58
+#@ framework
+msgid "Comments"
+msgstr ""
+
+#: comments.php:35
+#@ framework
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:36
+#@ framework
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:48
+#@ framework
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:48
+#, php-format
+#@ framework
+msgid "Leave a Comment to %s"
+msgstr ""
+
+#: comments.php:55
+#, php-format
+#@ framework
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr ""
+
+#: comments.php:66
+#, php-format
+#@ framework
+msgid "Logged in as %1$s. %2$sLog out &raquo;%3$s"
+msgstr ""
+
+#: comments.php:66
+#@ framework
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:71
+#: lib/functions/eff_function.php:579
+#@ framework
+msgid "Username"
+msgstr ""
+
+#: comments.php:75
+#@ framework
+msgid "Email"
+msgstr ""
+
+#: comments.php:79
+#@ framework
+msgid "Website"
+msgstr ""
+
+#: comments.php:90
+#@ framework
+msgid "Post Comment"
+msgstr ""
+
+#: composer/js_composer/composer/build.php:44
+#@ js_composer
+msgid "Dowload new version"
+msgstr ""
+
+#: composer/js_composer/composer/build.php:336
+#@ default
+msgid "Loop settings"
+msgstr ""
+
+#: composer/js_composer/composer/lib/mapper.php:225
+#, php-format
+#@ js_composer
+msgid "Wrong setting_name for shortcode:%s. Base can't be modified."
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:14
+#@ js_composer
+msgid "Build query"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:15
+#@ default
+msgid "Saved data"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:161
+#@ js_composer
+msgid "Post Count"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:162
+#@ js_composer
+msgid "Order By"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:163
+#: lib/shortcodes/composer.php:458
+#@ js_composer
+#@ default
+msgid "Order"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/loop/loop.php:169
+#@ js_composer
+msgid "Individual Posts/Pages"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/options/options.php:5
+#@ js_composer
+msgid "Manage options"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/vc_link/vc_link.php:6
+#@ js_composer
+msgid "Select URL"
+msgstr ""
+
+#: composer/js_composer/composer/lib/params/vc_link/vc_link.php:6
+#@ js_composer
+msgid "URL"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/accordion.php:165
+#: composer/js_composer/composer/lib/shortcodes/accordion.php:170
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:65
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:71
+#: composer/js_composer/composer/lib/shortcodes.php:142
+#: composer/js_composer/composer/lib/shortcodes.php:147
+#@ js_composer
+msgid "value"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/column.php:19
+#@ js_composer
+msgid "Append to this column"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/column.php:20
+#@ js_composer
+msgid "Prepend to this column"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:23
+#, php-format
+#@ js_composer
+msgid "Append to this %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:24
+#, php-format
+#@ js_composer
+msgid "Prepend to this %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:27
+#, php-format
+#@ js_composer
+msgid "Edit this %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:28
+#, php-format
+#@ js_composer
+msgid "Clone this %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes/tabs.php:30
+#, php-format
+#@ js_composer
+msgid "Delete this %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes.php:124
+#, php-format
+#@ js_composer
+msgid "Wrong template for `%s` shortcode in class `%s`. Please check your mapping settings for this code. Error"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes.php:321
+#, php-format
+#@ js_composer
+msgid "Edit %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes.php:322
+#, php-format
+#@ js_composer
+msgid "Clone %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes.php:322
+#, php-format
+#@ js_composer
+msgid "Delete %s"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes.php:380
+#: composer/js_composer/composer/lib/shortcodes.php:457
+#@ js_composer
+msgid "heading"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes.php:461
+#@ js_composer
+msgid "description"
+msgstr ""
+
+#: composer/js_composer/composer/lib/shortcodes.php:599
+#: composer/js_composer/composer/settings/settings.php:285
+#@ js_composer
+msgid "name"
+msgstr ""
+
+#: composer/js_composer/composer/lib/wpb_automatic_updater.php:16
+#@ js_composer
+msgid "Error! Can't connect to filesystem"
+msgstr ""
+
+#: composer/js_composer/composer/lib/wpb_automatic_updater.php:27
+#@ js_composer
+msgid "Error! Envato API errorerror: error."
+msgstr ""
+
+#: composer/js_composer/composer/lib/wpb_automatic_updater.php:42
+#@ js_composer
+msgid "Error on unzipping package"
+msgstr ""
+
+#: composer/js_composer/composer/lib/wpb_automatic_updater.php:55
+#@ js_composer
+msgid "Downloading package from envato market&#8230;"
+msgstr ""
+
+#: composer/js_composer/composer/settings/settings.php:824
+#, php-format
+#@ js_composer
+msgid "js_composer_front_custom.css could not be created. Cannot write custom css to \"%s\"."
+msgstr ""
+
+#: composer/js_composer/composer/settings/settings.php:826
+#@ js_composer
+msgid "js_composer_front_custom.css could not be created. Problem with access."
+msgstr ""
+
+#: composer/js_composer/composer/settings/settings.php:860
+#@ js_composer
+msgid "custom.css could not be created. Cannot write custom css to \"\"."
+msgstr ""
+
+#: composer/js_composer/composer/settings/settings.php:862
+#@ js_composer
+msgid "custom.css could not be created. Problem with access."
+msgstr ""
+
+#: composer/js_composer/composer/settings/settings.php:891
+#: composer/js_composer/composer/settings/settings.php:897
+#@ js_composer
+msgid "This is required to enable file writing for js_composer"
+msgstr ""
+
+#: composer/js_composer/config/map.php:19
+#@ js_composer
+msgid "CSS Animation"
+msgstr ""
+
+#: composer/js_composer/config/map.php:22
+#@ js_composer
+msgid "Top to bottom"
+msgstr ""
+
+#: composer/js_composer/config/map.php:22
+#@ js_composer
+msgid "Bottom to top"
+msgstr ""
+
+#: composer/js_composer/config/map.php:22
+#@ js_composer
+msgid "Left to right"
+msgstr ""
+
+#: composer/js_composer/config/map.php:22
+#@ js_composer
+msgid "Right to left"
+msgstr ""
+
+#: composer/js_composer/config/map.php:22
+#@ js_composer
+msgid "Appear from center"
+msgstr ""
+
+#: composer/js_composer/config/map.php:23
+#@ js_composer
+msgid "Select animation type if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers."
+msgstr ""
+
+#: composer/js_composer/config/map.php:612
+#@ js_composer
+msgid "Active tab"
+msgstr ""
+
+#: composer/js_composer/config/map.php:614
+#@ js_composer
+msgid "Enter tab number to be active on load or enter false to collapse all tabs."
+msgstr ""
+
+#: composer/js_composer/config/map.php:620
+#@ js_composer
+msgid "Select checkbox to allow for all sections to be be collapsible."
+msgstr ""
+
+#: composer/js_composer/config/map.php:639
+#@ js_composer
+msgid "Section 1"
+msgstr ""
+
+#: composer/js_composer/config/map.php:640
+#@ js_composer
+msgid "Section 2"
+msgstr ""
+
+#: composer/js_composer/config/map.php:1138
+#@ js_composer
+msgid "Google Maps"
+msgstr ""
+
+#: composer/js_composer/config/map.php:1160
+#@ js_composer
+msgid "Enter map height in pixels. Example: 200."
+msgstr ""
+
+#: composer/js_composer/config/map.php:1167
+#@ js_composer
+msgid "Select map type."
+msgstr ""
+
+#: composer/js_composer/config/map.php:1177
+#@ js_composer
+msgid "Remove info bubble"
+msgstr ""
+
+#: composer/js_composer/config/map.php:1179
+#@ js_composer
+msgid "If selected, information bubble will be hidden."
+msgstr ""
+
+#: composer/js_composer/config/map.php:1315
+#@ js_composer
+msgid "Select bar background color."
+msgstr ""
+
+#: lib/admin/classes/class.options_machine.php:642
+#@ default
+msgid "Last Backup : "
+msgstr ""
+
+#: lib/admin/front-end/options.php:40
+#: lib/admin/front-end/options.php:70
+#@ default
+msgid "Options Reset"
+msgstr ""
+
+#: lib/admin/front-end/options.php:45
+#: lib/admin/front-end/options.php:69
+#@ default
+msgid "Save All Changes"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:157
+#@ framework
+msgid "Select main layout. Choose between Boxed / Wide layout."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:167
+#@ framework
+msgid "Select sidebar alignment."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:177
+#@ framework
+msgid "Upload a 16px x 16px Png/Gif image that will represent your website's favicon."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:183
+#@ framework
+msgid "Enter your Gravatar Link here."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:189
+#@ framework
+msgid "Upload Wordpress admin Login page Logo."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:196
+#@ framework
+msgid "Enable / Disable Responsive."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:202
+#@ framework
+msgid "Enable / Disable breadcrumb in Pages."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:209
+#@ framework
+msgid "Contact us Recipient Email."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:216
+#@ framework
+msgid "Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:228
+#@ framework
+msgid "Enable / Disable Notification Box."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:235
+#@ framework
+msgid "Add your notification box text."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:242
+#@ framework
+msgid "if you want add link in notification type text here and link below."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:249
+#@ framework
+msgid "Add url as you want."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:269
+#@ framework
+msgid "Enable / Disable Today Date in Topbar."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:276
+#@ framework
+msgid "Date Format for more information <a href=\"http://codex.wordpress.org/Formatting_Date_and_Time\" target=\"_new\">here</a>."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:326
+#@ framework
+msgid "Enable / Disable Sticky Navigation menu."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:332
+#@ framework
+msgid "Enable / Disable Bottom Shadow in Navigation menu."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:344
+#@ framework
+msgid "Enable / Disable main bar after Header."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:350
+#@ framework
+msgid "Enable / Disable Search Form in main bar."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:361
+#@ framework
+msgid "Enable / Disable Breaking News."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:391
+#@ framework
+msgid "Insert Custom Text, One Sentence Per Line."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:440
+#@ framework
+msgid "Organize how you want the layout to appear on the homepage"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:446
+#@ framework
+msgid "Select Blog Style, Choose between Small , Big , Masonry Style"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:457
+#@ framework
+msgid "Enable Feature Slider in homepage If used blog Style."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:464
+#@ framework
+msgid "Enable Carousel in homepage If used blog Style."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:474
+#@ framework
+msgid "Select your Slider, Choose between Default , Cycle , Filex Slider , Caro"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:582
+#@ framework
+msgid "Select Carousel Style."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:667
+#: lib/widgets/tabbed-widget.php:56
+#@ framework
+msgid "Popular"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:748
+#: lib/admin/functions/functions.options.php:807
+#: lib/admin/functions/functions.options.php:866
+#: lib/admin/functions/functions.options.php:925
+#: lib/admin/functions/functions.options.php:984
+#: lib/admin/functions/functions.options.php:1043
+#: lib/admin/functions/functions.options.php:1101
+#: lib/admin/functions/functions.options.php:1159
+#: lib/admin/functions/functions.options.php:1217
+#: lib/admin/functions/functions.options.php:1275
+#@ framework
+msgid "Select News Box Style. Choose between 1,2,3,4,5 Styles."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1298
+#@ framework
+msgid "Select Tabs Style. Choose between Horizontal / Vertical."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1307
+#: lib/admin/functions/functions.options.php:1941
+#@ framework
+msgid "Number Of Posts"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1323
+#: lib/admin/functions/functions.options.php:1356
+#: lib/admin/functions/functions.options.php:1390
+#: lib/admin/functions/functions.options.php:1423
+#: lib/admin/functions/functions.options.php:1456
+#: lib/admin/functions/functions.options.php:1489
+#@ framework
+msgid "If empty there is no tab"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1519
+#@ framework
+msgid "Select News in picture Box Style. Choose between 1,2 Styles."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1551
+#@ framework
+msgid "You can specify the number of pictures if you choose style 2."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1569
+#: lib/admin/functions/functions.options.php:1613
+#@ framework
+msgid "Enable / Disable Header banner."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1771
+#@ framework
+msgid "Enable / Disable Social Icons In Top Header To custom it from Appearance > Social icons"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1784
+#@ framework
+msgid "Enable / Disable Social Icons In footer."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1862
+#@ framework
+msgid "Enable / Disable Post Meta bar in Posts."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1869
+#@ framework
+msgid "Enable / Disable Date in Post Meta."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1876
+#@ framework
+msgid "Enable / Disable Author in Post Meta."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1883
+#@ framework
+msgid "Enable / Disable Category in Post Meta."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1890
+#@ framework
+msgid "Enable / Disable Comment in Post Meta."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1897
+#@ framework
+msgid "Enable / Disable Font Resize in Post Meta."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1910
+#@ framework
+msgid "Enable / Disable Next/Prev Article."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1917
+#@ framework
+msgid "Enable / Disable Post Tags."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1924
+#@ framework
+msgid "Enable / Disable Author Box."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1938
+#@ framework
+msgid "Enable / Disable Related Posts."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1951
+#@ framework
+msgid "Related Posts By"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1957
+#: lib/shortcodes/composer.php:142
+#: lib/shortcodes/composer.php:187
+#: lib/shortcodes/composer.php:251
+#: lib/shortcodes/composer.php:302
+#: lib/shortcodes/composer.php:358
+#: lib/shortcodes/composer.php:416
+#: page-sitemap.php:39
+#@ framework
+#@ default
+msgid "Category"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1962
+#@ theme
+msgid "Related Posts Style"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:1982
+#@ framework
+msgid "Enable / Disable Share Posts ."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2083
+#@ framework
+msgid "Enable / Disable Category Color in Home page."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2090
+#@ framework
+msgid "Enable / Disable Rss Feed Subscription in category."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2097
+#@ framework
+msgid "Enable / Disable Category description."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2104
+#@ framework
+msgid "Enable / Disable Slidshow in Category page."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2588
+#@ framework
+msgid "Custom CSS For device with 768px width like ipad"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2594
+#@ framework
+msgid "Custom CSS For device with 480px width like Landscape phones"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2600
+#@ framework
+msgid "Custom CSS For device with 320px width like iPhones"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2609
+#@ framework
+msgid "Enable / Disable Meta Description Tag in pages."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2615
+#@ framework
+msgid "Add you keywords saperate each keyword with comma"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2623
+#@ framework
+msgid "Enable / Disable Bottom Area."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2629
+#@ framework
+msgid "How many chose boxes that you want to appear on the Bottom"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2698
+#@ framework
+msgid "Select Footer Layout"
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2720
+#@ framework
+msgid "Enable / Disable To Top."
+msgstr ""
+
+#: lib/admin/functions/functions.options.php:2726
+#@ framework
+msgid "Change to top image."
+msgstr ""
+
+#: lib/functions/eff_function.php:41
+#, php-format
+#@ framework
+msgid "Page %s"
+msgstr ""
+
+#: lib/functions/eff_function.php:301
+#@ framework
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: lib/functions/eff_function.php:304
+#, php-format
+#@ framwork
+msgid "%s "
+msgstr ""
+
+#: lib/functions/eff_function.php:305
+#, php-format
+#@ framework
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: lib/functions/eff_function.php:305
+#@ framework
+msgid "(Edit)"
+msgstr ""
+
+#: lib/functions/eff_function.php:323
+#@ framework
+msgid "Theme Option"
+msgstr ""
+
+#: lib/functions/eff_function.php:346
+#@ framework
+msgid "Move to Trash"
+msgstr ""
+
+#: lib/functions/eff_function.php:408
+#@ framework
+msgid "Home"
+msgstr ""
+
+#: lib/functions/eff_function.php:480
+#@ framework
+msgid "Search results for "
+msgstr ""
+
+#: lib/functions/eff_function.php:483
+#@ framework
+msgid "Posts tagged "
+msgstr ""
+
+#: lib/functions/eff_function.php:488
+#@ framework
+msgid "Articles posted by "
+msgstr ""
+
+#: lib/functions/eff_function.php:491
+#@ framework
+msgid "Error 404 "
+msgstr ""
+
+#: lib/functions/eff_function.php:496
+#@ framework
+msgid "Page"
+msgstr ""
+
+#: lib/functions/eff_function.php:514
+#@ framework
+msgid "by: "
+msgstr ""
+
+#: lib/functions/eff_function.php:514
+#: lib/functions/eff_loop.php:1518
+#: lib/functions/eff_sc.php:636
+#, php-format
+#@ framework
+msgid "View all posts by %s"
+msgstr ""
+
+#: lib/functions/eff_function.php:517
+#: lib/functions/eff_loop.php:1518
+#: lib/functions/eff_sc.php:636
+#@ framework
+msgid "Category: "
+msgstr ""
+
+#: lib/functions/eff_function.php:520
+#@ framework
+msgid "Leave a comment"
+msgstr ""
+
+#: lib/functions/eff_function.php:520
+#@ framework
+msgid "1 Comment"
+msgstr ""
+
+#: lib/functions/eff_function.php:520
+#@ framework
+msgid "% Comments"
+msgstr ""
+
+#: lib/functions/eff_function.php:536
+#@ framework
+msgid "Welcome"
+msgstr ""
+
+#: lib/functions/eff_function.php:539
+#@ framework
+msgid "Dashboard"
+msgstr ""
+
+#: lib/functions/eff_function.php:540
+#@ framework
+msgid "Your Profile"
+msgstr ""
+
+#: lib/functions/eff_function.php:541
+#@ framework
+msgid "Logout"
+msgstr ""
+
+#: lib/functions/eff_function.php:580
+#@ framework
+msgid "Password"
+msgstr ""
+
+#: lib/functions/eff_function.php:581
+#@ framework
+msgid "Log in"
+msgstr ""
+
+#: lib/functions/eff_function.php:582
+#@ framework
+msgid "Remember Me"
+msgstr ""
+
+#: lib/functions/eff_function.php:586
+#@ framework
+msgid "Register"
+msgstr ""
+
+#: lib/functions/eff_function.php:587
+#@ framework
+msgid "Lost your password?"
+msgstr ""
+
+#: lib/functions/eff_function.php:686
+#: lib/functions/eff_function.php:736
+#@ framework
+msgid "&raquo; "
+msgstr ""
+
+#: lib/functions/eff_function.php:894
+#@ framwork
+msgid "Pages &rarr;&nbsp;"
+msgstr ""
+
+#: lib/functions/eff_function.php:918
+#: lib/functions/eff_function.php:946
+#@ default
+msgid "Go To.."
+msgstr ""
+
+#: lib/functions/eff_function.php:1009
+#@ default
+msgid "Background Image"
+msgstr ""
+
+#: lib/functions/eff_loop.php:510
+#: lib/functions/eff_loop.php:553
+#: lib/functions/eff_sc.php:1105
+#: lib/functions/eff_sc.php:1146
+#@ framework
+msgid "News In Picture"
+msgstr ""
+
+#: lib/functions/eff_loop.php:1518
+#: lib/functions/eff_sc.php:636
+#@ framework
+msgid "Posted by: "
+msgstr ""
+
+#: lib/functions/sidebar_generator.php:176
+#: lib/functions/sidebar_generator.php:198
+#@ theme
+msgid "Custom Sidebars"
+msgstr ""
+
+#: lib/functions/sidebar_generator.php:229
+#@ theme
+msgid "No Sidebars defined"
+msgstr ""
+
+#: lib/functions/sidebar_generator.php:280
+#@ theme
+msgid "Select the custom sidebar, leave unselected to use the default sidebar"
+msgstr ""
+
+#: lib/main.php:57
+#@ framework
+msgid "Main"
+msgstr ""
+
+#: lib/main.php:58
+#@ framework
+msgid "Top Nav"
+msgstr ""
+
+#: lib/main.php:86
+#@ framewrok
+msgid "Main sidebar"
+msgstr ""
+
+#: lib/main.php:97
+#@ framewrok
+msgid "WooCommerce sidebar"
+msgstr ""
+
+#: lib/main.php:108
+#@ framewrok
+msgid "Footer 1"
+msgstr ""
+
+#: lib/main.php:118
+#@ framewrok
+msgid "Footer 2"
+msgstr ""
+
+#: lib/main.php:128
+#@ framewrok
+msgid "Footer 3"
+msgstr ""
+
+#: lib/main.php:138
+#@ framewrok
+msgid "Footer 4"
+msgstr ""
+
+#: lib/main.php:148
+#@ framewrok
+msgid "Footer 5"
+msgstr ""
+
+#: lib/main.php:158
+#@ framewrok
+msgid "Footer 6"
+msgstr ""
+
+#: lib/metaboxes/inc/classes/meta-box.php:301
+#@ rwmb
+msgid "Please correct the errors highlighted below and try again."
+msgstr ""
+
+#: lib/metaboxes/inc/classes/meta-box.php:362
+#@ rwmb
+msgid "+"
+msgstr ""
+
+#: lib/metaboxes/inc/classes/meta-box.php:384
+#@ rwmb
+msgid "&#8211;"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/file-advanced.php:59
+#@ rwmb
+msgctxt "file upload"
+msgid "Select Files"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/file.php:66
+#@ rwmb
+msgid "Error: Cannot delete file"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/file.php:80
+#@ rwmb
+msgctxt "file upload"
+msgid "Upload Files"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/file.php:81
+#@ rwmb
+msgctxt "file upload"
+msgid "+ Add new file"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/file.php:133
+#@ rwmb
+msgctxt "file upload"
+msgid "Delete"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/file.php:134
+#@ rwmb
+msgctxt "file upload"
+msgid "Edit"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/image-advanced.php:63
+#@ rwmb
+msgctxt "image upload"
+msgid "Select or Upload Images"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/image.php:64
+#@ rwmb
+msgid "Order saved"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/image.php:78
+#: lib/metaboxes/inc/fields/thickbox-image.php:35
+#@ rwmb
+msgctxt "image upload"
+msgid "Upload Images"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/image.php:79
+#@ rwmb
+msgctxt "image upload"
+msgid "+ Add new image"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/image.php:144
+#@ rwmb
+msgctxt "image upload"
+msgid "Delete"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/image.php:145
+#@ rwmb
+msgctxt "image upload"
+msgid "Edit"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/map.php:46
+#@ rwmb
+msgid "Find Address"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/plupload-image.php:104
+#@ rwmb
+msgctxt "image upload"
+msgid "Drop images here"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/plupload-image.php:105
+#@ rwmb
+msgctxt "image upload"
+msgid "or"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/plupload-image.php:106
+#@ rwmb
+msgctxt "image upload"
+msgid "Select Files"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/plupload-image.php:181
+#@ rwmb
+msgctxt "image upload"
+msgid "Allowed Image Files"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/posts.php:54
+#@ rwmb
+msgid "Post"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/posts.php:64
+#: lib/metaboxes/inc/fields/taxonomy.php:42
+#, php-format
+#@ rwmb
+msgid "Select a %s"
+msgstr ""
+
+#: lib/metaboxes/inc/fields/select-advanced.php:69
+#@ rwmb
+msgid "Select a value"
+msgstr ""
+
+#: lib/metaboxes/meta.php:239
+#@ theme
+msgid "Review Settings"
+msgstr ""
+
+#: lib/metaboxes/meta.php:244
+#@ theme
+msgid "Enable Review"
+msgstr ""
+
+#: lib/metaboxes/meta.php:251
+#@ theme
+msgid "Review Position"
+msgstr ""
+
+#: lib/metaboxes/meta.php:256
+#@ theme
+msgid "If you select <strong>Custom</strong> you can add the review manually by <img style=\"background:#fff; border:1px solid #e0e0e0; vertical-align:middle;\" src=\"\"> button in the editor"
+msgstr ""
+
+#: lib/metaboxes/meta.php:265
+#@ theme
+msgid "Review Style"
+msgstr ""
+
+#: lib/metaboxes/meta.php:277
+#@ theme
+msgid "Review header"
+msgstr ""
+
+#: lib/metaboxes/meta.php:280
+#@ theme
+msgid "reviw box header leave blank to disable it"
+msgstr ""
+
+#: lib/metaboxes/meta.php:284
+#@ theme
+msgid "Review Footer"
+msgstr ""
+
+#: lib/metaboxes/meta.php:288
+#@ theme
+msgid "reviw box footer leave blank to disable it"
+msgstr ""
+
+#: lib/metaboxes/meta.php:292
+#@ theme
+msgid "Review Summary"
+msgstr ""
+
+#: lib/metaboxes/meta.php:301
+#@ theme
+msgid "Score Title"
+msgstr ""
+
+#: lib/metaboxes/meta.php:304
+#@ theme
+msgid "the text under the score eg: Awesome, Great, Must Buy"
+msgstr ""
+
+#: lib/metaboxes/meta.php:313
+#@ theme
+msgid "Review Criterias"
+msgstr ""
+
+#: lib/metaboxes/meta.php:335
+#@ theme
+msgid "stars = <em class=\"cr1_stars_rt_prev\">--</em> - points = <em class=\"cr1_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:355
+#@ theme
+msgid "stars = <em class=\"cr2_stars_rt_prev\">--</em> - points = <em class=\"cr2_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:375
+#@ theme
+msgid "stars = <em class=\"cr3_stars_rt_prev\">--</em> - points = <em class=\"cr3_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:395
+#@ theme
+msgid "stars = <em class=\"cr4_stars_rt_prev\">--</em> - points = <em class=\"cr4_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:415
+#@ theme
+msgid "stars = <em class=\"cr5_stars_rt_prev\">--</em> - points = <em class=\"cr5_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:435
+#@ theme
+msgid "stars = <em class=\"cr6_stars_rt_prev\">--</em> - points = <em class=\"cr6_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:455
+#@ theme
+msgid "stars = <em class=\"cr7_stars_rt_prev\">--</em> - points = <em class=\"cr7_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:475
+#@ theme
+msgid "stars = <em class=\"cr8_stars_rt_prev\">--</em> - points = <em class=\"cr8_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:495
+#@ theme
+msgid "stars = <em class=\"cr9_stars_rt_prev\">--</em> - points = <em class=\"cr9_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/metaboxes/meta.php:515
+#@ theme
+msgid "stars = <em class=\"cr10_stars_rt_prev\">--</em> - points = <em class=\"cr10_points_rt_prev\">--</em>"
+msgstr ""
+
+#: lib/shortcodes/composer.php:13
+#@ default
+msgid "Clear"
+msgstr ""
+
+#: lib/shortcodes/composer.php:17
+#: lib/shortcodes/composer.php:24
+#: lib/shortcodes/composer.php:69
+#: lib/shortcodes/composer.php:90
+#: lib/shortcodes/composer.php:137
+#: lib/shortcodes/composer.php:154
+#: lib/shortcodes/composer.php:222
+#: lib/shortcodes/composer.php:270
+#: lib/shortcodes/composer.php:329
+#: lib/shortcodes/composer.php:386
+#: lib/shortcodes/composer.php:452
+#@ default
+msgid "Effective Lab"
+msgstr ""
+
+#: lib/shortcodes/composer.php:20
+#: lib/widgets/video-widget.php:61
+#@ default
+#@ framework
+msgid "Video"
+msgstr ""
+
+#: lib/shortcodes/composer.php:29
+#@ default
+msgid "Select type"
+msgstr ""
+
+#: lib/shortcodes/composer.php:35
+#@ default
+msgid "Select video type."
+msgstr ""
+
+#: lib/shortcodes/composer.php:40
+#@ default
+msgid "Width"
+msgstr ""
+
+#: lib/shortcodes/composer.php:48
+#@ default
+msgid "Height"
+msgstr ""
+
+#: lib/shortcodes/composer.php:56
+#@ default
+msgid "Video ID"
+msgstr ""
+
+#: lib/shortcodes/composer.php:65
+#@ default
+msgid "Divide"
+msgstr ""
+
+#: lib/shortcodes/composer.php:74
+#@ default
+msgid "Select Style"
+msgstr ""
+
+#: lib/shortcodes/composer.php:86
+#@ default
+msgid "Toggle"
+msgstr ""
+
+#: lib/shortcodes/composer.php:106
+#: lib/shortcodes/composer.php:160
+#: lib/shortcodes/composer.php:228
+#: lib/shortcodes/composer.php:335
+#: lib/shortcodes/composer.php:392
+#@ default
+msgid "Style"
+msgstr ""
+
+#: lib/shortcodes/composer.php:133
+#@ default
+msgid "Bottom News Box"
+msgstr ""
+
+#: lib/shortcodes/composer.php:150
+#@ default
+msgid "News Box"
+msgstr ""
+
+#: lib/shortcodes/composer.php:194
+#@ default
+msgid "Tag"
+msgstr ""
+
+#: lib/shortcodes/composer.php:202
+#@ default
+msgid "Box Title"
+msgstr ""
+
+#: lib/shortcodes/composer.php:205
+#: lib/shortcodes/composer.php:369
+#: lib/shortcodes/composer.php:435
+#@ default
+msgid "insert custom title just if you select display as latest posts."
+msgstr ""
+
+#: lib/shortcodes/composer.php:211
+#: lib/shortcodes/composer.php:259
+#: lib/shortcodes/composer.php:318
+#: lib/shortcodes/composer.php:375
+#: lib/shortcodes/composer.php:441
+#: lib/shortcodes/composer.php:478
+#@ default
+msgid "Number of posts"
+msgstr ""
+
+#: lib/shortcodes/composer.php:218
+#@ default
+msgid "Blog Post"
+msgstr ""
+
+#: lib/shortcodes/composer.php:266
+#@ default
+msgid "Slider"
+msgstr ""
+
+#: lib/shortcodes/composer.php:325
+#@ default
+msgid "News Picture"
+msgstr ""
+
+#: lib/shortcodes/composer.php:382
+#@ default
+msgid "News Scroller"
+msgstr ""
+
+#: lib/shortcodes/composer.php:448
+#@ default
+msgid "Latest Videos"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:24
+#: lib/widgets/twitter-widget.php:54
+#, php-format
+#@ framework
+msgid "about %d seconds ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:25
+#: lib/widgets/twitter-widget.php:55
+#@ framework
+msgid "about a minute ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:26
+#: lib/widgets/twitter-widget.php:56
+#, php-format
+#@ framework
+msgid "about %d minutes ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:27
+#: lib/widgets/twitter-widget.php:57
+#@ framework
+msgid "about an hour ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:28
+#: lib/widgets/twitter-widget.php:58
+#, php-format
+#@ framework
+msgid "about %d hours ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:29
+#: lib/widgets/twitter-widget.php:59
+#@ framework
+msgid "about a day ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:30
+#: lib/widgets/twitter-widget.php:60
+#, php-format
+#@ framework
+msgid "about %d days ago"
+msgstr ""
+
+#: lib/shortcodes/widgets.php:31
+#: lib/widgets/twitter-widget.php:61
+#@ framework
+msgid "view tweet on twitter"
+msgstr ""
+
+#: lib/social/help.php:15
+#: lib/social/help.php:90
+#@ theme
+msgid "Help"
+msgstr ""
+
+#: lib/social/help.php:17
+#: lib/social/help.php:92
+#@ theme
+msgid "Including the list of links in your theme"
+msgstr ""
+
+#: lib/social/help.php:19
+#: lib/social/help.php:94
+#@ theme
+msgid "To include the list of links in your theme, you need to place the following PHP function in the location where you want the links to appear:"
+msgstr ""
+
+#: lib/social/help.php:23
+#: lib/social/help.php:124
+#@ theme
+msgid "Theme Developers"
+msgstr ""
+
+#: lib/social/help.php:25
+#: lib/social/help.php:126
+#@ theme
+msgid "If you would like to make your own icon set available to users in the Icon Box, just place the images inside of an \"images/sb-icons\" folder of your theme."
+msgstr ""
+
+#: lib/social/help.php:27
+#@ theme
+msgid "Credits"
+msgstr ""
+
+#: lib/social/help.php:29
+#: lib/social/help.php:132
+#@ theme
+msgid "Contributors:"
+msgstr ""
+
+#: lib/social/help.php:33
+#@ framework
+msgid "Overview"
+msgstr ""
+
+#: lib/social/help.php:39
+#: lib/social/help.php:51
+#: lib/social/help.php:100
+#@ theme
+#@ framework
+msgid "Parameters"
+msgstr ""
+
+#: lib/social/help.php:41
+#: lib/social/help.php:102
+#@ theme
+msgid "(string) Sets the text or html that precedes the &lt;a&gt; tag. Default = ' '"
+msgstr ""
+
+#: lib/social/help.php:43
+#: lib/social/help.php:104
+#@ theme
+msgid "(string) Sets the text or html that follows the &lt;a&gt; tag. Default = ' '"
+msgstr ""
+
+#: lib/social/help.php:45
+#: lib/social/help.php:106
+#@ theme
+msgid "(boolean) Toggles the display of the generated list of links or return the list as an HTML text string to be used in PHP. Default = 1"
+msgstr ""
+
+#: lib/social/help.php:62
+#: lib/social/help.php:110
+#@ framework
+#@ theme
+msgid "Example Output"
+msgstr ""
+
+#: lib/social/help.php:67
+#@ framework
+msgid "For more information:"
+msgstr ""
+
+#: lib/social/help.php:68
+#@ default
+msgid "<a href=\"https://github.com/sawyerh/social-bartender\" target=\"_blank\">Contribute on Github</a>"
+msgstr ""
+
+#: lib/social/help.php:69
+#@ default
+msgid "<a href=\"http://themeandstirredweb.com\">Shaken and Stirred Web</a>"
+msgstr ""
+
+#: lib/social/help.php:70
+#@ default
+msgid "<a href=\"http://onlythefunctions.com\" target=\"_blank\">Only the Functions</a>"
+msgstr ""
+
+#: lib/social/help.php:74
+#@ framework
+msgid "Plugin Info"
+msgstr ""
+
+#: lib/social/help.php:112
+#@ theme
+msgid "Using the default settings, the <code>social_bartender()</code> function would output the following:"
+msgstr ""
+
+#: lib/social/help.php:128
+#@ theme
+msgid "Credits / Support"
+msgstr ""
+
+#: lib/social/help.php:130
+#@ theme
+msgid "The Social Bartender plugin was created by"
+msgstr ""
+
+#: lib/social/help.php:130
+#@ theme
+msgid "If you find any bugs, have feature requests, or would like to contribute, please visit the plugin's <a href=\"https://github.com/sawyerh/social-bartender\">GitHub page</a>."
+msgstr ""
+
+#: lib/social/settings.php:7
+#@ theme
+msgid "Insufficient permissions"
+msgstr ""
+
+#: lib/social/settings.php:27
+#@ theme
+msgid "Create New Item"
+msgstr ""
+
+#: lib/social/settings.php:46
+#@ theme
+msgid "Upload"
+msgstr ""
+
+#: lib/social/settings.php:51
+#@ theme
+msgid "Create Item"
+msgstr ""
+
+#: lib/social/settings.php:61
+#@ theme
+msgid "Icon Bucket"
+msgstr ""
+
+#: lib/social/settings.php:86
+#@ theme
+msgid "Select an icon above and its URL will be automatically entered for you."
+msgstr ""
+
+#: lib/social/settings.php:145
+#@ theme
+msgid "Display the titles instead of images"
+msgstr ""
+
+#: lib/social/settings.php:157
+#@ theme
+msgid "You don't have any items in your bar, why not create some?"
+msgstr ""
+
+#: lib/social/settings.php:201
+#@ theme
+msgid "Item added"
+msgstr ""
+
+#: lib/social/settings.php:250
+#@ theme
+msgid "Items updated"
+msgstr ""
+
+#: lib/social/social-bartender.php:45
+#@ framework
+msgid "Social Icons"
+msgstr ""
+
+#: lib/social/widget.php:25
+#@ theme
+msgid "Set up Social Bartender"
+msgstr ""
+
+#: lib/social/widget.php:25
+#@ theme
+msgid "here."
+msgstr ""
+
+#: lib/social/widget.php:28
+#@ theme
+msgid "Title (optional):"
+msgstr ""
+
+#: lib/widgets/ads120.php:13
+#@ framework
+msgid "Widget display 120*140 Ads"
+msgstr ""
+
+#: lib/widgets/ads120.php:14
+#@ framework
+msgid "Widget - Ads 120*140"
+msgstr ""
+
+#: lib/widgets/ads120.php:81
+#: lib/widgets/ads120b.php:112
+#: lib/widgets/ads120x.php:81
+#: lib/widgets/ads125.php:112
+#: lib/widgets/ads160.php:68
+#: lib/widgets/ads250.php:70
+#: lib/widgets/ads300.php:70
+#: lib/widgets/ads300x.php:82
+#@ framework
+msgid "advertisement"
+msgstr ""
+
+#: lib/widgets/ads120.php:92
+#: lib/widgets/ads120b.php:127
+#: lib/widgets/ads120x.php:92
+#: lib/widgets/ads125.php:127
+#: lib/widgets/ads160.php:77
+#: lib/widgets/ads250.php:78
+#: lib/widgets/ads300.php:78
+#: lib/widgets/ads300x.php:93
+#: lib/widgets/custom_html.php:69
+#: lib/widgets/fb_likebox.php:86
+#: lib/widgets/flickr.php:82
+#: lib/widgets/posts-widget.php:175
+#: lib/widgets/postsImages-widget.php:145
+#: lib/widgets/postsList-widget.php:97
+#: lib/widgets/twitter-widget.php:95
+#: lib/widgets/video-widget.php:66
+#@ framework
+msgid "Title:"
+msgstr ""
+
+#: lib/widgets/ads120.php:98
+#: lib/widgets/ads120b.php:133
+#: lib/widgets/ads120x.php:98
+#: lib/widgets/ads160.php:83
+#: lib/widgets/ads250.php:84
+#: lib/widgets/ads300.php:84
+#: lib/widgets/ads300x.php:99
+#: lib/widgets/custom_html.php:75
+#@ framework
+msgid "transparent background"
+msgstr ""
+
+#: lib/widgets/ads120.php:101
+#: lib/widgets/ads120b.php:136
+#: lib/widgets/ads120x.php:101
+#: lib/widgets/ads300x.php:102
+#@ framework
+msgid "First Ad"
+msgstr ""
+
+#: lib/widgets/ads120.php:103
+#: lib/widgets/ads120.php:119
+#: lib/widgets/ads120b.php:138
+#: lib/widgets/ads120b.php:154
+#: lib/widgets/ads120b.php:171
+#: lib/widgets/ads120b.php:187
+#: lib/widgets/ads120x.php:103
+#: lib/widgets/ads120x.php:119
+#: lib/widgets/ads125.php:133
+#: lib/widgets/ads125.php:149
+#: lib/widgets/ads125.php:166
+#: lib/widgets/ads125.php:182
+#: lib/widgets/ads160.php:87
+#: lib/widgets/ads250.php:88
+#: lib/widgets/ads300.php:88
+#: lib/widgets/ads300x.php:104
+#: lib/widgets/ads300x.php:120
+#@ framework
+msgid "image:"
+msgstr ""
+
+#: lib/widgets/ads120.php:108
+#: lib/widgets/ads120b.php:143
+#: lib/widgets/ads120x.php:108
+#: lib/widgets/ads125.php:138
+#: lib/widgets/ads160.php:92
+#: lib/widgets/ads250.php:93
+#: lib/widgets/ads300.php:93
+#: lib/widgets/ads300x.php:109
+#@ framework
+msgid "Link :"
+msgstr ""
+
+#: lib/widgets/ads120.php:113
+#: lib/widgets/ads120.php:129
+#: lib/widgets/ads120b.php:148
+#: lib/widgets/ads120b.php:164
+#: lib/widgets/ads120b.php:181
+#: lib/widgets/ads120b.php:197
+#: lib/widgets/ads120x.php:113
+#: lib/widgets/ads120x.php:129
+#: lib/widgets/ads125.php:143
+#: lib/widgets/ads125.php:159
+#: lib/widgets/ads125.php:176
+#: lib/widgets/ads125.php:192
+#: lib/widgets/ads160.php:97
+#: lib/widgets/ads250.php:98
+#: lib/widgets/ads300.php:98
+#: lib/widgets/ads300x.php:114
+#: lib/widgets/ads300x.php:130
+#@ framework
+msgid "ad code :"
+msgstr ""
+
+#: lib/widgets/ads120.php:117
+#: lib/widgets/ads120b.php:152
+#: lib/widgets/ads120x.php:117
+#: lib/widgets/ads300x.php:118
+#@ framework
+msgid "Second Ad"
+msgstr ""
+
+#: lib/widgets/ads120.php:124
+#: lib/widgets/ads120b.php:159
+#: lib/widgets/ads120x.php:124
+#: lib/widgets/ads125.php:154
+#: lib/widgets/ads300x.php:125
+#@ framework
+msgid "link2 :"
+msgstr ""
+
+#: lib/widgets/ads120b.php:13
+#@ framework
+msgid "Widget display 120*90 Ads"
+msgstr ""
+
+#: lib/widgets/ads120b.php:14
+#@ framework
+msgid "Widget - Ads 120*90"
+msgstr ""
+
+#: lib/widgets/ads120b.php:169
+#@ framework
+msgid "Third Ad"
+msgstr ""
+
+#: lib/widgets/ads120b.php:176
+#: lib/widgets/ads125.php:171
+#@ framework
+msgid "link3 :"
+msgstr ""
+
+#: lib/widgets/ads120b.php:185
+#@ framework
+msgid "fourth Ad"
+msgstr ""
+
+#: lib/widgets/ads120b.php:192
+#: lib/widgets/ads125.php:187
+#@ framework
+msgid "link4 :"
+msgstr ""
+
+#: lib/widgets/ads120x.php:13
+#@ framework
+msgid "Widget display 120*600 Ads"
+msgstr ""
+
+#: lib/widgets/ads120x.php:14
+#@ framework
+msgid "Widget - Ads 120*600"
+msgstr ""
+
+#: lib/widgets/ads125.php:13
+#@ framework
+msgid "Widget display 125*125 Ads"
+msgstr ""
+
+#: lib/widgets/ads125.php:14
+#@ framework
+msgid "Widget - Ads 125*125"
+msgstr ""
+
+#: lib/widgets/ads125.php:131
+#@ framework
+msgid "Ads #1"
+msgstr ""
+
+#: lib/widgets/ads125.php:147
+#@ framework
+msgid "Ads #2"
+msgstr ""
+
+#: lib/widgets/ads125.php:164
+#@ framework
+msgid "Ads #3"
+msgstr ""
+
+#: lib/widgets/ads125.php:180
+#@ framework
+msgid "Ads #4"
+msgstr ""
+
+#: lib/widgets/ads160.php:13
+#@ framework
+msgid "Widget display 160*600 Ads"
+msgstr ""
+
+#: lib/widgets/ads160.php:14
+#@ framework
+msgid "Widget - Ads 160*600"
+msgstr ""
+
+#: lib/widgets/ads250.php:13
+#@ framework
+msgid "Widget display 250*250 Ads"
+msgstr ""
+
+#: lib/widgets/ads250.php:14
+#@ framework
+msgid "Widget - Ads 250*250"
+msgstr ""
+
+#: lib/widgets/ads300.php:13
+#@ framework
+msgid "Widget display 300*250 Ads"
+msgstr ""
+
+#: lib/widgets/ads300.php:14
+#@ framework
+msgid "Widget - Ads 300*250"
+msgstr ""
+
+#: lib/widgets/ads300x.php:13
+#@ framework
+msgid "Widget display 300*100 Ads"
+msgstr ""
+
+#: lib/widgets/ads300x.php:14
+#@ framework
+msgid "Widget - Ads 300*100"
+msgstr ""
+
+#: lib/widgets/comments-widget.php:12
+#@ framework
+msgid "Widget display Recent Comments with avatar"
+msgstr ""
+
+#: lib/widgets/comments-widget.php:14
+#@ framework
+msgid "Widget - Recent Comments"
+msgstr ""
+
+#: lib/widgets/comments-widget.php:42
+#: lib/widgets/comments-widget.php:44
+#: lib/widgets/tabbed-widget.php:153
+#: lib/widgets/tabbed-widget.php:157
+#@ framework
+msgid "on "
+msgstr ""
+
+#: lib/widgets/comments-widget.php:83
+#: lib/widgets/newsletter.php:58
+#@ framework
+msgid "title:"
+msgstr ""
+
+#: lib/widgets/comments-widget.php:88
+#@ framework
+msgid "Number of comments"
+msgstr ""
+
+#: lib/widgets/custom_html.php:13
+#@ framework
+msgid "Arbitrary text or HTML with transparent background Ability"
+msgstr ""
+
+#: lib/widgets/custom_html.php:14
+#@ framework
+msgid "widget - Custom Text Widget"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:13
+#@ framework
+msgid "Facebook Like Box"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:15
+#@ framework
+msgid "Widget - Facebook Likebox"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:75
+#@ framework
+msgid "Facebook"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:91
+#@ framework
+msgid "Facebook Page URL:"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:97
+#@ framework
+msgid "Width:"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:102
+#@ framework
+msgid "Height:"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:107
+#@ framework
+msgid "Color Scheme"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:116
+#@ framework
+msgid "Background Color: (color code without #)"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:120
+#@ framework
+msgid "Box border Color: (color code without #)"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:126
+#@ framework
+msgid "Show faces"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:131
+#@ framework
+msgid "Show stream"
+msgstr ""
+
+#: lib/widgets/fb_likebox.php:136
+#@ framework
+msgid "Show header"
+msgstr ""
+
+#: lib/widgets/flickr.php:13
+#@ framework
+msgid "Widget display Flickr Photo"
+msgstr ""
+
+#: lib/widgets/flickr.php:14
+#@ framework
+msgid "Widget - Flickr"
+msgstr ""
+
+#: lib/widgets/flickr.php:75
+#@ framework
+msgid "Flickr"
+msgstr ""
+
+#: lib/widgets/flickr.php:87
+#@ framework
+msgid "Flickr ID:"
+msgstr ""
+
+#: lib/widgets/flickr.php:92
+#@ framework
+msgid "Number of Photos:"
+msgstr ""
+
+#: lib/widgets/gpluse.php:12
+#@ framework
+msgid "widget - Google+ Box"
+msgstr ""
+
+#: lib/widgets/gpluse.php:52
+#@ framework
+msgid "Find us on Google+"
+msgstr ""
+
+#: lib/widgets/gpluse.php:60
+#: lib/widgets/widget-login.php:56
+#@ framework
+msgid "Title : "
+msgstr ""
+
+#: lib/widgets/gpluse.php:64
+#@ framework
+msgid "Page Url : "
+msgstr ""
+
+#: lib/widgets/newsletter.php:12
+#@ framework
+msgid "Widget display the Subscribe box"
+msgstr ""
+
+#: lib/widgets/newsletter.php:14
+#@ framework
+msgid "Widget - Newsletter"
+msgstr ""
+
+#: lib/widgets/newsletter.php:27
+#@ framework
+msgid "Your Email"
+msgstr ""
+
+#: lib/widgets/newsletter.php:52
+#@ framework
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: lib/widgets/newsletter.php:63
+#@ framework
+msgid "feedburner name: (your name without http://feeds.feedburner.com/) "
+msgstr ""
+
+#: lib/widgets/posts-widget.php:13
+#: lib/widgets/postsImages-widget.php:13
+#: lib/widgets/postsList-widget.php:13
+#@ framework
+msgid "Widget display Posts order by : Popular, Random, Recent"
+msgstr ""
+
+#: lib/widgets/posts-widget.php:14
+#@ framework
+msgid "Widget - Posts"
+msgstr ""
+
+#: lib/widgets/posts-widget.php:169
+#: lib/widgets/postsImages-widget.php:139
+#: lib/widgets/postsList-widget.php:91
+#@ framework
+msgid "Most Popular"
+msgstr ""
+
+#: lib/widgets/posts-widget.php:180
+#: lib/widgets/postsImages-widget.php:150
+#: lib/widgets/postsList-widget.php:102
+#@ framework
+msgid "orderby"
+msgstr ""
+
+#: lib/widgets/posts-widget.php:190
+#: lib/widgets/postsImages-widget.php:160
+#: lib/widgets/postsList-widget.php:112
+#@ framework
+msgid "Number Of Posts:"
+msgstr ""
+
+#: lib/widgets/postsImages-widget.php:14
+#@ framework
+msgid "Widget - Posts in images"
+msgstr ""
+
+#: lib/widgets/postsList-widget.php:14
+#@ framework
+msgid "Widget - Posts List"
+msgstr ""
+
+#: lib/widgets/social-counter.php:12
+#@ framework
+msgid "Widget display a count of your rss subscribers, Twitter followers, facebook fans"
+msgstr ""
+
+#: lib/widgets/social-counter.php:14
+#@ framework
+msgid "Widget - Social Counter"
+msgstr ""
+
+#: lib/widgets/social-counter.php:90
+#: lib/widgets/social-counter.php:113
+#@ framework
+msgid "Subscribers"
+msgstr ""
+
+#: lib/widgets/social-counter.php:99
+#@ framework
+msgid "Followers"
+msgstr ""
+
+#: lib/widgets/social-counter.php:148
+#@ framework
+msgid "rss number (if not use feedburner, or want static number)"
+msgstr ""
+
+#: lib/widgets/social-counter.php:153
+#@ framework
+msgid "RSS Link (leave empty to use default rss link)"
+msgstr ""
+
+#: lib/widgets/social-counter.php:159
+#@ framework
+msgid "Twitter Name"
+msgstr ""
+
+#: lib/widgets/social-counter.php:164
+#@ framework
+msgid "facebook page ID (<a target=\"_blank\" href=\"http://hellboundbloggers.com/2010/07/10/find-facebook-profile-and-page-id/\">more Info</a>)"
+msgstr ""
+
+#: lib/widgets/tabbed-widget.php:16
+#@ framework
+msgid "A tabbed widget that display popular posts, recent posts, comments and tags."
+msgstr ""
+
+#: lib/widgets/tabbed-widget.php:22
+#@ framework
+msgid "Widget - Tabbed"
+msgstr ""
+
+#: lib/widgets/tabbed-widget.php:57
+#@ framework
+msgid "Recent"
+msgstr ""
+
+#: lib/widgets/tabbed-widget.php:220
+#@ framework
+msgid "No Setting"
+msgstr ""
+
+#: lib/widgets/twitter-widget.php:13
+#@ framework
+msgid "Widget display Latest Tweets"
+msgstr ""
+
+#: lib/widgets/twitter-widget.php:15
+#@ framework
+msgid "Widget - Twitter"
+msgstr ""
+
+#: lib/widgets/twitter-widget.php:88
+#@ framework
+msgid "Twitter"
+msgstr ""
+
+#: lib/widgets/twitter-widget.php:100
+#@ framework
+msgid "Twitter username:"
+msgstr ""
+
+#: lib/widgets/twitter-widget.php:105
+#@ framework
+msgid "Number of tweets:"
+msgstr ""
+
+#: lib/widgets/video-widget.php:13
+#@ framework
+msgid "Widget display video support Youtube, vimeo, dailymotion"
+msgstr ""
+
+#: lib/widgets/video-widget.php:15
+#@ framework
+msgid "Widget - Videos"
+msgstr ""
+
+#: lib/widgets/video-widget.php:71
+#@ framework
+msgid "type"
+msgstr ""
+
+#: lib/widgets/video-widget.php:80
+#@ framework
+msgid "Video ID:"
+msgstr ""
+
+#: lib/widgets/widget-login.php:11
+#@ framework
+msgid "Widget - Login"
+msgstr ""
+
+#: lib/widgets/widget-login.php:52
+#@ framework
+msgid "Login"
+msgstr ""
+
+#: page-authors.php:91
+#: page-authors.php:95
+#: page-authors.php:100
+#: page-contact.php:137
+#: page-contact.php:141
+#: page-contact.php:146
+#: page-review.php:111
+#: page-review.php:115
+#: page-review.php:120
+#: page-sitemap.php:84
+#: page-sitemap.php:88
+#: page-sitemap.php:93
+#: page.php:51
+#: page.php:55
+#: page.php:60
+#: sidebar.php:4
+#: single.php:273
+#: single.php:277
+#: single.php:282
+#: woocommerce.php:23
+#@ framework
+msgid "There Is No Sidebar Widgets Yet"
+msgstr ""
+
+#: page-contact.php:12
+#@ framework
+msgid "Please enter your name."
+msgstr ""
+
+#: page-contact.php:19
+#@ framework
+msgid "Please enter your email address."
+msgstr ""
+
+#: page-contact.php:29
+#@ framework
+msgid "Please enter a message."
+msgstr ""
+
+#: page-contact.php:74
+#@ framework
+msgid "Thanks, your email was sent successfully."
+msgstr ""
+
+#: page-contact.php:85
+#@ framework
+msgid "Sorry, an error occurred."
+msgstr ""
+
+#: page-contact.php:91
+#@ framework
+msgid "Name:"
+msgstr ""
+
+#: page-contact.php:99
+#@ framework
+msgid "Email:"
+msgstr ""
+
+#: page-contact.php:106
+#@ framework
+msgid "Message:"
+msgstr ""
+
+#: page-contact.php:115
+#@ framework
+msgid "Send Email"
+msgstr ""
+
+#: page-sitemap.php:60
+#@ framework
+msgid "Authors"
+msgstr ""
+
+#: page.php:23
+#: page.php:33
+#: single.php:121
+#@ framework
+msgid "Pages:"
+msgstr ""
+
+#: search.php:5
+#, php-format
+#@ framework
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:7
+#@ framework
+msgid "Nothing Found"
+msgstr ""
+
+#: single.php:181
+#@ framework
+msgid "About"
+msgstr ""
+
+#: single.php:243
+#@ framework
+msgid "Related Posts"
+msgstr ""
+

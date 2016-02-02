@@ -1,0 +1,100 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart();
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&key=<?php echo $this->gkey; ?>" type="text/javascript"></script> 
+<script type="text/javascript">
+//Google Map object
+var map; 
+var position_marker = null; 
+
+    function BuildMap() 
+    {
+        document.getElementById("mapCMS").style.display = "block";
+        if(GBrowserIsCompatible()) {
+            map = new GMap2(document.getElementById("mapCMS"));
+            map.setCenter(new GLatLng(-2.0, 118.0), 4);
+            map.addControl(new GSmallMapControl());
+            map.addControl(new GMapTypeControl());
+            map.addControl(new GScaleControl());
+            map.disableDoubleClickZoom();
+        }
+        UpdatePosition();
+        GEvent.addListener(map, "click", ShowPosition);
+    }
+
+    function ShowPosition(marker, point) {
+        if (typeof(point) == "undefined" || point == null) {
+            // Catch if point is undefined when showPosition is called.
+            // Even though we don't expect this to happen, it does.
+            return;
+        }
+        if (position_marker != null) {
+            map.removeOverlay(position_marker);
+        }
+        position_marker = new GMarker(point);
+        map.addOverlay(position_marker);
+        document.getElementById('pointx').value=point.lng().toFixed(5).toString();
+        document.getElementById('pointy').value=point.lat().toFixed(5).toString();
+        map.panTo(point);
+    }
+
+    function UpdatePosition() {
+        if (map != null) {
+            if ((document.getElementById("pointy").value != "") && ((document.getElementById("pointx").value != ""))) {
+                point = new GLatLng(document.getElementById('pointy').value,document.getElementById('pointx').value);
+                if (position_marker != null) {
+                    map.removeOverlay(position_marker);
+                }
+                position_marker = new GMarker(point);
+                position_marker = new GMarker(point);
+                map.addOverlay(position_marker);
+                map.panTo(point);
+            }
+        }
+    }
+
+    function changeState(obj)
+    {
+         content = obj.children('.slideHeader-state').text();
+         if(content == '+'){obj.children('.slideHeader-state').html('&ndash;');}
+         else
+         if(content == '–'){obj.children('.slideHeader-state').html('&#43;');}
+    }
+    
+    function convertTinyMCE(id)
+    {
+        tinyMCE.execCommand('mceAddControl', false, id);
+    }
+    
+$(function(){
+
+$("#regionForm input").blur(function(){
+    $("#regionForm").validate().element($(this));
+});
+
+$("#regionForm").validate({
+            meta: "validate",
+            rules : {
+                        areaNameLan:{
+                          required:true,
+                        }<?php if($this->language_id!=2):?>,
+                        pointx:{
+                          required:true,
+                        },                        
+                        pointy:{
+                          required:true,
+                        }
+                        <?php endif;?>
+                    },
+            messages : {
+                         areaNameLan : "Please enter a name!",
+                         pointx : "Please enter coordinates",
+                         pointy : "Please enter coordinates"
+                      } 
+        });
+});
+
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd();?>

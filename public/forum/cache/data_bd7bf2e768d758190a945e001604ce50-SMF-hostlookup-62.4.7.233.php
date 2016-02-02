@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454402322 < time()) $expired = true; else{$expired = false; $value = 's:30:"233.224-27.7.4.62.in-addr.arpa";';}?>

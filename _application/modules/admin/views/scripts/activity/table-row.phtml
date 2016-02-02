@@ -1,0 +1,48 @@
+<tr>
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td><a href="<?php echo $this->rootUrl(); ?>/admin/activity/edit/id/<?php echo $this->category_id; ?>/lang/1"><?php echo $this->HtmlDecode($this->name); ?></a></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/activity/edit/id/<?php echo $this->category_id; ?>/lang/1">Edit</a>
+                            </td>
+                            <td>
+                                <div id ="removeActivity" class="general-remove" onclick="deleteActivity(<?php echo $this->category_id; ?>);">Delete</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td><a>Indonesian Translation</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/activity/edit/id/<?php echo $this->category_id; ?>/lang/2"><?php $this->CheckActivityIndo($this->category_id, 2)?></a>
+                            </td>
+                            <?php $indtrans = $this->CheckActivityIndoTranslation($this->category_id, 2);
+                                  if($indtrans == true){?>
+                            <td>
+                                <div id ="removeActivity" class="general-remove" onclick="deleteActivity2(<?php echo $this->category_id; ?>);">Delete</div>
+                            </td><?php } ?>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+
+</tr>

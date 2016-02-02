@@ -1,0 +1,152 @@
+<style type="text/css">
+  .accordion-inner {
+    padding: 0;
+  }
+</style>
+<form method="post" id="regionForm" action="<?php echo $this->currentUrl(); ?>" name="poiForm" class="">
+  <?php if ($this->language_id != 2) { ?>
+    <div class="control-group">
+      <label for="parentArea" class="control-label">Area Induk</label>
+      <div class="controls">
+        <?php $parent_id = $this->parent_id ?>
+        <select id="parentArea" name="parentArea">
+          <option value="0" <?php
+      if ($parent_id == 0) {
+        echo " selected = 'selected'";
+      }
+        ?> >Indonesia
+                    <?php foreach ($this->parent_data as $parent): ?>
+            <option value="<?php echo $parent['area_id']; ?>" <?php
+                  if ($parent_id == $parent['area_id']) {
+                    echo " selected = 'selected'";
+                  }
+                      ?>>&ndash;<?php echo $parent['name']; ?></option>
+                    <?php
+                    $child_list = $this->AreaChild($parent['area_id'],
+                            $this->language_id, '--');
+                    ?>
+                    <?php foreach ($child_list as $child) : ?>
+              <option value="<?php echo $child['area_id']; ?>" <?php
+                if ($parent_id == $child['area_id']) {
+                  echo " selected = 'selected'";
+                }
+                      ?>><?php echo $child['name']; ?></option>
+                    <?php endforeach; ?>
+                  <?php endforeach; ?>
+        </select>
+      </div>
+    </div>
+  <?php } ?>
+  <div class="control-group">
+    <label for="areaNameLang" class="control-label">Nama Area</label>
+    <div class="controls">
+      <?php echo $this->form->areaNameLang; ?>
+    </div>
+  </div>
+
+  <?php if ($this->language_id != 2): ?>
+    <div class="row-fluid">
+      <div class="span10 well">
+        <div class="control-group">
+          <div class="controls">
+            <div id="mapCMS"></div>
+            <?php echo $this->form->Poi_x; ?>
+            <?php echo $this->form->Poi_y; ?>
+            <span class="help-inline">Klik pada map untuk menentukan lokasi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+
+  <div class="row-fluid">
+    <div class="span10">
+      <fieldset>
+        <legend class="f_legend">Informasi</legend>
+
+        <div class="control-group">
+          <div class="controls">
+            <div id="information-accordion" class="accordion">
+
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a href="#colapse1" data-parent="#information-accordion" data-toggle="collapse" class="accordion-toggle">
+                    Deskripsi
+                  </a>
+                </div>
+                <div class="accordion-body collapse" id="colapse1">
+                  <div class="accordion-inner">
+                    <?php echo $this->form->areaDescription; ?>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a href="#colapse2" data-parent="#information-accordion" data-toggle="collapse" class="accordion-toggle">
+                    Sejarah
+                  </a>
+                </div>
+                <div class="accordion-body collapse" id="colapse2">
+                  <div class="accordion-inner">
+                    <?php echo $this->form->areaHistory; ?>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a href="#colapse3" data-parent="#information-accordion" data-toggle="collapse" class="accordion-toggle">
+                    Tokoh
+                  </a>
+                </div>
+                <div class="accordion-body collapse" id="colapse3">
+                  <div class="accordion-inner">
+                    <?php echo $this->form->areaPeople; ?>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a href="#colapse4" data-parent="#information-accordion" data-toggle="collapse" class="accordion-toggle">
+                    Masukan
+                  </a>
+                </div>
+                <div class="accordion-body collapse" id="colapse4">
+                  <div class="accordion-inner">
+                    <?php echo $this->form->areaEntry; ?>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a href="#collapse5" data-toggle="collapse" data-parent="#information-accordion" class="accordion-toggle">
+                    Kuliner
+                  </a>
+                </div>
+                <div class="accordion-body collapse" id="collapse5">
+                  <div class="accordion-inner">
+                    <?php echo $this->form->areaCuisine; ?>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="control-group">
+    <div class="controls">
+      <input type="submit" class="btn btn-success" value="Simpan"/>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,41 @@
+<div id="single-content">
+    <div class="row">
+       <div class="twelve column">
+           <h2 class="section-title"><span><?php echo $this->titlehead; ?></span></h2>
+           <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.id/maps?q=-6.225929,106.802643&amp;num=1&amp;hl=id&amp;ie=UTF8&amp;t=m&amp;z=14&amp;iwloc=near&amp;ll=-6.225545,106.802194&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.id/maps?q=-6.225929,106.802643&amp;num=1&amp;hl=id&amp;ie=UTF8&amp;t=m&amp;z=14&amp;iwloc=near&amp;ll=-6.225545,106.802194&amp;source=embed" style="color:#0000FF;text-align:left">Lihat Peta Lebih Besar</a></small> 
+       </div>
+    </div>
+    <div class="row">
+        <div class="six column">        
+            <h2 class="section-title"><?php echo $this->translate('Address') ?></h2>
+            <p>
+            <strong>Direktorat Jenderal Kebudayaan Republik Indonesia</strong>
+            <br />Komplek Kemdikbud
+            <br />Gedung E Lt.4
+            <br />Jl. Jenderal Senayan Sudirman
+            <br />Jakarta 10270
+            <br />
+            <br />Telepon: (021) 5731063, (021) 5725035
+            <br />Fax: (021) 5731063, (021) 5725578
+            </p>
+        </div>
+        <div class="six column">
+            <h2 class="section-title">
+                <span><?php echo $this->titleform; ?></span>
+            </h2>
+            <?php echo $this->form ?>
+        </div>
+    </div>
+
+    <?php if($this->success) : ?>
+        <div id="success-message" title="<?php echo $this->translate('dialog_msg');?>">
+            <p>
+                <span class="ui-icon ui-icon-circle-check icon-msg"></span>
+                <?php echo $this->translate('id_text_msg_delivered');?>
+            </p>
+            <br /><p><?php echo $this->translate('id_thanks_contact');?></p>
+        </div>
+    <?php endif; ?>
+
+    <br />
+</div>

@@ -1,0 +1,54 @@
+<div class="section">
+    <a name="firstsection"></a>
+    <h2 class="section-title <?php echo $this->colorClass ?>">
+        <span><?php echo $this->pageTitle; ?></span>
+    </h2>
+
+    <?php
+    echo $this->paginationControl($this->culture, 'Sliding', 'partials/pagination.phtml', array('message' => $this->pageTitle, 'upMessage' => true));
+    ?>
+
+    <?php foreach ($this->culture as $culture): ?>
+        <div class="en-list">
+            <div class="en-img-list four columns">
+                <?php if ($culture['image'] != '') { ?>
+                    <a href="<?php echo $this->imageUrl('/upload/culture/' . basename($culture['image'])) ?>" class="zoom">
+                        <img src="<?php echo $this->imageUrl('timthumb.php?src=upload/culture/' . basename($culture['image']) . '&w=150&h=150&p=100') ?>"
+                             alt="<?php echo $culture['name'] ?>" title="<?php echo $culture['name'] ?>" />
+                         <?php } else { ?>
+                        <img src="<?php echo $this->imageUrl('/default.jpg'); ?>"
+                             alt="<?php echo $culture['name'] ?>" title="no image for this destination" />
+                         <?php } ?>
+                </a> 
+            </div>
+            <div class="en-desc-list eight columns">
+                <h3>
+                    <a href="<?php
+                     echo $this->baseUrl('/culture/' . $culture['poi_id']
+                             . '/' . $this->makeUrlFormat($culture['name']))
+                         ?>">
+                           <?php echo $culture['name'] ?>
+                    </a>
+                </h3>
+                <p>
+                    <?php echo $this->truncate($culture['description'], 250) ?>
+                </p>
+
+                <?php
+                echo $this->partial('partials/read-more.phtml', array(
+                    'controller' => $this->controller,
+                    'id' => $culture['poi_id'],
+                    'title' => $culture['name'],
+                    'readMore' => 'Read More'
+                ));
+                ?>
+
+            </div>
+            <div class="clear-left"></div>
+        </div>
+
+    <?php endforeach; ?>
+    <?php
+    echo $this->paginationControl($this->culture, 'Sliding', 'partials/pagination.phtml', array('message' => $this->pageTitle, 'upMessage' => true));
+    ?>
+</div>

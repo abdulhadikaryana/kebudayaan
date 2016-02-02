@@ -1,0 +1,7 @@
+<div class="sidebar-event-image">
+  <?php foreach ($this->smallHighlight as $data) : ?>
+    <a href="<?php echo $data['link']; ?>" title="img">
+      <img src="<?php echo $this->imageUrl('upload/highlight/' . $data['path_image']) ?> " alt="<?php echo $data['path_image']; ?>" />
+    </a>
+  <?php endforeach; ?>
+</div>

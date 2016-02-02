@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454375316 < time()) $expired = true; else{$expired = false; $value = 's:33:"mailout-55-79.aggressivetruly.com";';}?>

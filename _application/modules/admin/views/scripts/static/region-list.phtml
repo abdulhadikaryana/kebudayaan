@@ -1,0 +1,41 @@
+<?php 
+    $batas =  3; // batas berapa island yg ditampilkan
+?>
+<div class="section">
+
+    <div id="region-list">
+        <div id="region-map"></div>
+        <div id="region-col-1">
+            <?php for($i = 0; $i < count($this->island)/$batas; $i++) : ?>
+                <a href = "<?php echo $this->baseUrl('/discover-indonesia/region-detail/' . 
+                    $this->island[$i]['area_id'] . '/' .
+                    $this->makeUrlFormat($this->island[$i]['area_name'])) ?>"><strong><?php echo $this->island[$i]['area_name']?></strong></a>
+                <br />
+                <?php foreach ($this->province[$i] as $province):?>
+                    <?php $provinceName = $this->makeUrlFormat($province['area_name']); ?>
+                    <a href = "<?php echo $this->baseUrl('/discover-indonesia/region-detail/' .
+                        $province['area_id'] . '/' . $provinceName) ?>"><?php echo $province['area_name']?></a>
+                    <br />
+                <?php endforeach; ?>
+                <br />
+            <?php endfor; ?>
+        </div>
+
+        <div id="region-col-2">
+            <?php for($i = $batas; $i < count($this->island); $i++) : ?>
+                <a href = "<?php echo $this->baseUrl('/discover-indonesia/region-detail/' .
+                    $this->island[$i]['area_id'] . '/' .
+                    $this->makeUrlFormat($this->island[$i]['area_name'])) ?>"><strong><?php echo $this->island[$i]['area_name']?></strong></a>
+                <br />
+                <?php foreach ($this->province[$i] as $province):?>
+                    <?php $provinceName = $this->makeUrlFormat($province['area_name']); ?>
+                    <a href = "<?php echo $this->baseUrl('/discover-indonesia/region-detail/' .
+                        $province['area_id'] . '/' . $provinceName) ?>"><?php echo $province['area_name']?></a>
+                    <br />
+                <?php endforeach; ?>
+                <br />
+            <?php endfor; ?>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

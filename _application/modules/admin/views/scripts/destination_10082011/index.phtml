@@ -1,0 +1,293 @@
+<?php $this->placeholder('styles')->captureStart(); ?>
+<link href="<?php echo $this->scriptUrl('/styles/table-css.php'); ?>" rel="stylesheet" type="text/css" />
+<?php $this->placeholder('styles')->captureEnd(); ?>
+
+    <!-- print out any message from create/saved page proccess-->
+    <?php 
+        if (!empty($this->message)) {
+            foreach ($this->message as $warn) echo $this->flashMessage($warn);
+        }
+    ?>
+    
+    <!-- set page context -->
+    <h2>Destination Menu</h2>
+	<h3 class="wide">Create, Update, or Delete from the list</h3>
+    <div class="table-container">
+    <input type="button" class="btn radius" style="margin-bottom: 10px;" value="+ Add Destination" onclick="window.location='<?php echo $this->rootUrl('admin/destination/create') ?>'"/>
+
+    <br class="clearfloat"  />
+    <!-- generating the filter panel and row show per page filter -->
+    <?php $panel_data = array('category' => $this->all_category,'area' => $this->all_area); ?>
+    <?php echo $this->partial('destination/filter-panel.phtml',$panel_data)."\n"; ?>
+    <?php echo $this->render('partial/page-filter.phtml'); ?>
+    
+    <!-- generating alert on filter selected -->
+    <br class="clearfloat" />
+    <?php if (!empty($this->alert)) : ?>
+        <div class="tip"> Current filter selected: <?php echo $this->alert; ?>
+        </div>
+    <?php endif; ?> 
+    
+    <br class="clearfloat"  />
+    <!-- if the paginator is not empty then print out the data-->
+    <?php if(count($this->paginator)>0) :?>
+            <!-- print out the pagination control at the top of the table-->
+                                <?php echo $this->paginationControl($this->paginator,'Sliding','partial/pagination-control.phtml'); ?>
+            <br class="clearfloat"  />
+
+            <table style="width:100%;" cellspacing="0">
+                    <?php echo $this->partial('destination/table-header.phtml')."\n"; ?>
+                <tbody>
+                    <?php $row_index = 0; ?>
+                                    <?php echo $this->partialLoop('destination/table-row.phtml',$this->paginator)."\n"; ?>
+                </tbody>
+            </table>
+            <!-- print out the pagination control at the bottom of the table-->
+                                <?php echo $this->paginationControl($this->paginator,'Sliding','partial/pagination-control.phtml'); ?>
+            <br class="clearfloat"  />
+                <?php endif; ?>
+    </div>
+
+   <div id="processLoader" class="hidden">
+       <img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>
+   </div>
+   
+	<!-- start capturing the javascript -->
+    <?php 
+	$this->placeholder('jsInline')->captureStart();
+    ?>
+
+    <script type="text/javascript">
+    
+    /*on the fly category editing*/
+    function editCategory(poi_id,obj)
+    {
+        obj.empty();
+        dom_index = obj.parents('table.categoryPanel').index('table.categoryPanel');
+        obj.html("<img src='<?php echo $this->imageUrl('ajax-loader-medium.gif'); ?>'/>");
+        $.ajax({
+           type: "POST",
+           url: "<?php echo $this->rootUrl().'/admin/ajax/parentcategoryselect'; ?>",
+           data: {type:'list',poi:poi_id,index:dom_index}, 
+           success: function(data){
+                obj.removeAttr('onMousedown');
+                obj.html(data);
+                obj.append("<div class='child-category-select"+poi_id+"'></div>");
+           }});
+    }
+    
+    /*send ajax request, get the child category*/
+    function getChildCategory(cat_id,poi_id,index)
+    {
+        idx = index;
+        $('.child-category-select'+poi_id).html("<img src='<?php echo $this->imageUrl('ajax-loader-medium.gif'); ?>'/>");
+        if(cat_id != 0)
+        {
+            $.ajax({
+               type: "POST",
+               url: "<?php echo $this->rootUrl().'/admin/ajax/childcategoryselect'; ?>",
+               data: {type:'list',poi:poi_id,index:idx,catid:cat_id}, 
+               success: function(data){
+                    $('.child-category-select'+poi_id).html(data);
+               }});
+        }
+    }
+    
+    /*this function called whenever the user is canceling the category edit proccess*/
+    function CancelCategory(index,poi_id)
+    {
+        onclickvalue = "editCategory("+poi_id+",$(this),$('.edit-category').index(this));";
+        $('.edit-category:eq('+index+')').html("<div class='general-remove'>Edit</div>");
+        $('.edit-category:eq('+index+')').attr({onMousedown:onclickvalue});
+    }
+    
+    /*saving category, send request via ajax for saving the category into the table*/
+    function saveCategory(poi_id,cat_id,index)
+    {
+       $('.edit-category:eq('+index+')').html("<img src='<?php echo $this->imageUrl('ajax-loader-medium.gif');?>'/>");
+       idx = index;
+       $.ajax({
+           type: "POST",
+           url: "<?php echo $this->rootUrl().'/admin/ajax/savecategorypoi'; ?>",
+           data: {poi:poi_id,catid:cat_id}, 
+           success: function(data){
+                if(data.length > 0)
+                {
+                    $('table.admindestcategorylist tbody:eq('+index+')').append(data);
+                    CancelCategory(index,poi_id);
+                }
+                else
+                {
+                    alert('That category already registered for this destination');
+                    CancelCategory(index,poi_id);
+                }                
+           },
+           error: function(){alert('Error Occured, please report this to the developer');}
+           });
+    }
+    
+    /*remove category, send request via ajax for deleting the category into the table*/
+    function removeCategory(obj,poi_id,cat_id)
+    {
+        if($('#cat'+cat_id+'poi'+poi_id).is(':checked'))
+        {
+            alert('This is a Main Category! If You Want to Delete this Category, Please Apply another Category as a Main Category First');
+        }
+        else
+        {
+            if(confirm('Remove this category from this Destination ?'))
+            {
+                tb_show("", "#TB_inline?height=25&width=210&inlineId=processLoader&modal=true", "");
+                obj.parents("tr.category-list").remove();
+                $.ajax({
+                   type: "POST",
+                   url: "<?php echo $this->rootUrl().'/admin/ajax/deletecategorypoi'; ?>",
+                   data: {poi:poi_id,catid:cat_id}, 
+                   success: function(data){
+                        if(data.length > 0){
+                            alert('Error occured, please report this to the developer');
+                            tb_remove();
+                        }else
+                        {
+                            alert('This category has been successfully unregistered for this destination');
+                            tb_remove();
+                        }
+                   },
+                   error: function(){alert('Error Occured, please report this to the developer');tb_remove();}
+                   });
+            }              
+        }
+    }
+    
+    /*send request via ajax, set a category as main category*/
+    function setMainCategory(poi_id,cat_id,obj)
+    {
+        if(confirm('Do you want to set this Category as Main Category?'))
+        {
+            $('.categoryRadio'+poi_id).removeAttr('checked');
+            obj.attr('checked',true);
+            $.ajax({
+                   type: "POST",
+                   url: "<?php echo $this->rootUrl().'/admin/ajax/destinationlist'; ?>",
+                   data: {poiid:poi_id,catid:cat_id,type:1}, 
+                   success: function(data){
+                        if(data.length > 0){
+                            alert('Error Occured, please report this to the developer');
+                        }else
+                        {
+                            alert('This category has been successfully registered as main category');
+                        }
+                   },
+                   error: function(){alert('Error Occured, please report this to the developer');}
+                   });
+        }
+        else
+        {
+            obj.removeAttr('checked');
+        }
+    }
+    
+    /*change status of the destination publish/draft*/
+    function changePoiStatus(poi_id,obj,state)
+    {
+        if(confirm('Do you really want to change this destination status?'))
+        {
+            tb_show("", "#TB_inline?height=25&width=210&inlineId=processLoader&modal=true", "");
+            $.ajax({
+                   type: "POST",
+                   url: "<?php echo $this->rootUrl().'/admin/ajax/destinationlist'; ?>",
+                   data: {poiid:poi_id,type:2}, 
+                   success: function(data){
+                        obj.html(data);
+                        tb_remove();
+                        window.location.reload(true);
+                   },
+                   error: function(){alert('Error Occured, please report this to the developer');}
+            });
+        }
+    }
+    
+    /*send request via ajax for deleting the destination from the database*/
+    function DeletePoi(poi_id,obj,state)
+    {
+        if(confirm('Do you really want to delete this Destination?'))
+        {
+            tb_show("", "#TB_inline?height=25&width=210&inlineId=processLoader&modal=true", "");
+            $.ajax({
+                   type: "POST",
+                   url: "<?php echo $this->rootUrl().'/admin/ajax/destinationlist'; ?>",
+                   data: {poiid:poi_id,type:3}, 
+                   success: function(data){
+                        obj.parents('tr.tableDataDefault').remove();
+                        window.location.reload(true);
+                   },
+                   error: function(){alert('Error Occured, please report this to the developer');}
+                   });
+        }
+    }
+
+    function DeletePoi2(poi_id,obj,state)
+    {
+        if(confirm('Do you really want to delete this Indonesian Translation?'))
+        {
+            tb_show("", "#TB_inline?height=25&width=210&inlineId=processLoader&modal=true", "");
+            $.ajax({
+                   type: "POST",
+                   url: "<?php echo $this->rootUrl().'/admin/ajax/destinationlist2'; ?>",
+                   data: {poiid:poi_id,type:3},
+                   success: function(data){
+                        obj.parents('tr.tableDataDefault').remove();
+                        window.location.reload(true);
+                   },
+                   error: function(){alert('Error Occured, please report this to the developer');}
+                   });
+        }
+    }
+    
+    /*hide all filter*/
+    function hideAllFilter()
+    {
+        $('.area-box').hide();
+        $('.language-box').hide();
+        $('.name-box').hide();
+        $('.status-box').hide();
+        $('.category-box').hide();
+        $('.special-box').hide();
+    }
+    
+    /*switch filter appearance*/
+    function filterSwitch(value)
+    {   
+                
+        switch(value)
+        {
+		    case "0": hideAllFilter();
+		    		  break;
+            case "1": hideAllFilter();
+                      $('.name-box').fadeIn('slow');
+                      $('.filter-btn').fadeIn('slow');
+                      break;
+            case "2": hideAllFilter();
+                      $('.area-box').fadeIn('slow');
+                      break;
+            case "3": hideAllFilter();
+                      $('.category-box').fadeIn('slow');
+                      $('.filter-btn').fadeIn('slow');
+                      break;
+            case "4": hideAllFilter();
+                      $('.status-box').fadeIn('slow');
+                      $('.filter-btn').fadeIn('slow');
+                      break;
+            case "5": hideAllFilter();
+                      $('.special-box').fadeIn('slow');
+                      $('.filter-btn').fadeIn('slow');
+        }
+    }
+    
+    $(function(){
+        $('.filter-panel').show();
+    });
+    </script>
+    
+<?php $this->placeholder('jsInline')->captureEnd();?>
+       

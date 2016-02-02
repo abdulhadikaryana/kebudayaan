@@ -1,0 +1,202 @@
+<?php
+$js_link = array('tiny_mce/tiny_mce_popup', 'tiny_mce/tiny_mce', 'jquery/jquery-1.4.1.min');
+echo $this->jsView(2, $js_link);
+$next = 0;
+?>
+<link href="<?php echo $this->scriptUrl('/styles/jquery.lightbox-0.5.css'); ?>" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->scriptUrl('/lib/bootstrap/css/bootstrap.min.css') ?>" />
+<link rel="stylesheet" href="<?php echo $this->scriptUrl('/lib/bootstrap/css/bootstrap-responsive.min.css') ?>" />
+<link rel="stylesheet" href="<?php echo $this->scriptUrl('/lib/plupload/js/jquery.plupload.queue/css/plupload-gebo.css') ?>" />
+
+
+<?php
+$image_files = $this->image_files;
+$limit = $this->limit;
+$folder = $this->folder;
+$query = $this->query;
+?>
+<?php if (count($image_files)) : ?>
+  <?php
+  $page = $this->page;
+  $start = $page * $limit;
+  $top = $start + $limit;
+  if ($top > sizeof($image_files)) {
+    $top = sizeof($image_files);
+  }
+  ?>
+
+  <div class="row-fluid">
+    <div class="span12">
+      <div id="multi_upload" class="gebo-upload" style="position: relative;">
+        <div class="plupload_wrapper plupload_scroll">
+          <div id="multi_upload_container" class="plupload_container" title="Using runtime: html5">
+            <div class="plupload">
+              <div class="plupload_content">
+                <div class="plupload_filelist_header">
+                  <div class="plupload_file_name">Filename</div>
+                  <div class="plupload_file_action">&nbsp;</div>
+                  <div class="plupload_file_status"><span>Status</span></div>
+                  <div class="plupload_file_size">Size</div>
+                  <div class="plupload_clearer">&nbsp;</div>
+                </div>
+                <ul id="multi_upload_filelist" class="plupload_filelist">
+                </ul>
+                <div class="plupload_filelist_footer">
+                  <div class="plupload_file_name">
+                    <div class="plupload_buttons">
+                      <a href="#"
+                         class="btn btn-mini plupload_add sepV_b"
+                         id="multi_upload_browse"
+                         style="position: relative; z-index: 0;">
+                        <i class="icon-plus"></i> Add files
+                      </a>
+                      <a href="#" class="btn btn-mini plupload_start"><i class="icon-upload"></i> Start upload</a>
+                    </div>
+                    <span class="plupload_upload_status">Uploaded 0/1 files</span>
+                  </div>
+                  <div class="plupload_file_action"></div>
+                  <div class="plupload_file_status">
+                    <span class="plupload_total_status">0%</span>
+                  </div>
+                  <div class="plupload_file_size">
+                    <span class="plupload_total_file_size">62 KB</span>
+                  </div>
+                  <div class="plupload_progress"><div class="plupload_progress_container"><div class="plupload_progress_bar" style="width: 0%;"></div></div>
+                  </div><div class="plupload_clearer">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" id="multi_upload_count" name="multi_upload_count" value="0">
+        </div>
+      </div>
+    </div><div id="p17fbbjmar13bj1pjf5be16ce1fcf0_html5_container" style="position: absolute; background-color: transparent; width: 89px; height: 23px; overflow: hidden; z-index: -1; opacity: 0; top: 171px; left: 8px; background-position: initial initial; background-repeat: initial initial;" class="plupload html5"><input id="p17fbbjmar13bj1pjf5be16ce1fcf0_html5" style="font-size: 999px; position: absolute; width: 100%; height: 100%;" type="file" accept="image/jpeg,image/gif,image/png,application/zip" multiple="multiple"></div>
+  </div>
+
+
+  <div class="row-fluid">
+    <div class="span12">
+      <ul class="thumbnails">
+          <?php for ($i = $start; $i < $top; $i++) : ?>
+          <li>
+            <?php
+            $source_url = $this->imageUrl() . '/upload/' . $folder . $image_files[$i];
+            $thumbnails_url = $this->imageUrl() . '/upload/' . $folder . 'thumbnails/' . $image_files[$i];
+            $timthumb = $this->imageUrl("timthumb.php?src=upload/{$folder}{$image_files[$i]}&w=100&h=100&q=100");
+            ?>
+            <img class="thumbnail"
+                 id="list<?php echo $i; ?>" 
+                 onclick="FileBrowserDialogue.mySubmit($('#list<?php echo $i; ?>'));"
+                 data="<?php echo $source_url; ?>"
+                 src="<?php echo $timthumb ?>"/>
+          </li>
+  <?php endfor; ?>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <?php if ($this->state_search): ?>
+      <?php if ($this->article): ?>
+        <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/attr/1"; ?>">show all</a>
+      <?php else: ?>
+        <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir; ?>">show all</a>
+      <?php endif; ?>
+      <?php if ($page > 0): ?>
+        <?php $prev = $page - 1; ?>
+        <?php if ($this->article): ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/attr/1/page/" . $prev . "/imagename/" . $query; ?>">prev</a>
+        <?php else: ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/page/" . $prev . "/imagename/" . $query; ?>">prev</a>
+        <?php endif; ?>
+      <?php endif; ?>
+
+      <?php if ($next + 1 * $limit <= sizeof($image_files)): ?>
+        <?php $next = $page + 1; ?>
+        <?php if ($this->article): ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/attr/1/page/" . $next . "/imagename/" . $query; ?>">next</a>
+        <?php else: ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/attr/1/page/" . $next . "/imagename/" . $query; ?>">next</a>
+        <?php endif; ?>
+      <?php endif; ?>
+    <?php else: ?>
+      <?php if ($page > 0): ?>
+        <?php $prev = $page - 1; ?>
+        <?php if ($this->article): ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/attr/1/page/" . $prev; ?>">prev</a>
+        <?php else: ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/page/" . $prev; ?>">prev</a>
+        <?php endif; ?>
+      <?php endif; ?>
+
+      <?php if ($next + 1 * $limit <= sizeof($image_files)): ?>
+        <?php $next = $page + 1; ?>
+        <?php if ($this->article): ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/attr/1/page/" . $next; ?>">next</a>
+        <?php else: ?>
+          <a class="tip" href="<?php echo $this->rootUrl() . "/admin/ajax/imagebrowser/dir/" . $this->dir . "/page/" . $next; ?>">next</a>
+        <?php endif; ?>
+      <?php endif; ?>
+  <?php endif; ?>
+  </div>
+<?php else: ?>
+  <p>there are no images in destination folder!</p>
+<?php endif; //endif for if theres image in destination folder        ?>
+
+
+
+<script type="text/javascript" src="<?php echo $this->scriptUrl('/lib/plupload/js/plupload.full.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->scriptUrl('/lib/plupload/js/jquery.plupload.queue/jquery.plupload.queue.full.js') ?>"></script>
+<script type="text/javascript">
+  
+  $(function() {
+    
+    $("#multi_upload").pluploadQueue({
+      // General settings
+      runtimes : 'html5,flash,silverlight',
+      url : '<?php echo $this->rootUrl() . '/admin/ajax/upload' . $this->folder; ?>',
+      max_file_size : '10mb',
+      chunk_size : '1mb',
+      unique_names : true,
+      browse_button : 'pickfiles',
+        
+      // Specify what files to browse for 
+      filters : [
+        {title : "Image files", extensions : "jpg,gif,png"},
+      ],
+        
+      // Flash settings
+      flash_swf_url : 'lib/plupload/js/plupload.flash.swf',
+        
+      // Silverlight settings
+      silverlight_xap_url : 'lib/plupload/js/plupload.silverlight.xap'
+    });
+    
+    var uploader = $('#multi_upload').pluploadQueue();
+
+    uploader.bind('FileUploaded', function() {
+      if (uploader.files.length == (uploader.total.uploaded + uploader.total.failed)) {
+        location.reload();
+      }
+    });
+  });
+  
+  
+
+  var win = tinyMCEPopup.getWindowArg("window");
+  var input = tinyMCEPopup.getWindowArg("input");
+  var res = tinyMCEPopup.getWindowArg("resizable");
+  var inline = tinyMCEPopup.getWindowArg("inline")
+
+  var FileBrowserDialogue = {
+    init : function () {
+    },
+    mySubmit : function (obj) {
+      URL = obj.attr('data');
+      win.document.getElementById(tinyMCEPopup.getWindowArg("input")).value = URL;
+      win.ImageDialog.showPreviewImage(URL);
+      tinyMCEPopup.close();
+    }
+  }
+  tinyMCEPopup.onInit.add(FileBrowserDialogue.init, FileBrowserDialogue);
+</script>

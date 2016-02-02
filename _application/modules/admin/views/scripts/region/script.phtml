@@ -1,0 +1,93 @@
+<?php
+$this->placeholder('jsInline')->captureStart();
+echo $this->render('partial/tinyMCE.phtml');
+?>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript">
+  //google map v3
+  var map;
+  var marker = null;
+  function initialize() {
+    var mapOptions = {
+      zoom: 5,
+      center: new google.maps.LatLng(-2.0, 118.0),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: true,
+      scaleControl:true,
+      overviewMapControl: true,
+      disableDoubleClickZoom: true
+    };
+    map = new google.maps.Map(document.getElementById('mapCMS'), mapOptions);
+    marker = new google.maps.Marker();
+    marker.setMap(map);
+    map.addListener('click', function(event){
+      $('#pointx').val(event.latLng.lng().toFixed(5).toString());
+      $('#pointy').val(event.latLng.lat().toFixed(5).toString());
+      marker.setPosition(event.latLng);
+      map.panTo(event.latLng);
+    })
+    updatePosition();
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  function updatePosition(){ 
+    if(map != null) {
+      if(($("#pointy").val() != "") && (($('#pointx').val() != ""))) {
+        point = new google.maps.LatLng($('#pointy').val(), $('#pointx').val());
+        marker.setPosition(point);
+        map.panTo(point);
+      }
+    }
+  }
+  //google map v3
+
+  function changeState(obj)
+  {
+    content = obj.children('.slideHeader-state').text();
+    if(content == '+'){obj.children('.slideHeader-state').html('&ndash;');}
+    else
+      if(content == '–'){obj.children('.slideHeader-state').html('&#43;');}
+  }
+    
+  function convertTinyMCE(id)
+  {
+    tinyMCE.execCommand('mceAddControl', false, id);
+  }
+    
+  $(function(){
+    tinymce.execCommand('mceAddControl', false, 'areaDescription');
+    tinymce.execCommand('mceAddControl', false, 'areaHistory');
+    tinymce.execCommand('mceAddControl', false, 'areaPeople');
+    tinymce.execCommand('mceAddControl', false, 'areaEntry');
+    tinymce.execCommand('mceAddControl', false, 'areaCuisine');
+    tinymce.execCommand('mceAddControl', false, 'areaTourismOffice');
+
+    $("#regionForm input").blur(function(){
+      $("#regionForm").validate().element($(this));
+    });
+
+    $("#regionForm").validate({
+      meta: "validate",
+      rules : {
+        areaNameLan:{
+          required:true,
+        }<?php if ($this->language_id != 2): ?>,
+          pointx:{
+            required:true,
+          },                        
+          pointy:{
+            required:true,
+          }
+<?php endif; ?>
+      },
+      messages : {
+        areaNameLan : "Masukan Nama Region!",
+        pointx : "Masukan Koordinat",
+        pointy : ""
+      } 
+    });
+  });
+
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

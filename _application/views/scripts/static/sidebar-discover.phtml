@@ -1,0 +1,193 @@
+<!--sidebar-->
+<div id="sidebar-destdisc">
+
+    <div id="sidebar-highlight">
+        <a href="<?php echo $this->highlightImage[0]['link_path'] ?>">
+        <img src="<?php echo $this->imageUrl('upload/highlight/'.$this->highlightImage[0]['img_path']) ?>" alt="<?php echo $this->highlightImage[0]['img_path']; ?>" />
+        </a>
+    </div>
+    <div id="sidebar-shortcut">
+        <a href="<?php echo $this->baseUrl('map') ?>">
+            <img src="<?php echo $this->imageUrl('transparent.gif') ?>"
+                 id="sidebar-map" alt="tour packages" />
+        </a>
+        
+        <a class="essay-shortcut" href="<?php echo $this->baseUrl('photoessay') ?>">
+            <img src="<?php echo $this->imageUrl('transparent.gif') ?>"
+                 alt="photo essay"/>
+        </a>
+    </div>
+
+    <div class="sidebar-shortcut">
+        <ul style="margin-left:-5px;">
+            <li>
+                <a href="http://indonesia.travel/trip">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="plan-trip-menu" alt="plan your trip" />
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $this->baseUrl('package') ?>">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="tour-packages-menu" alt="tour packages" />
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $this->baseUrl('overseas-representatives') ?>">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="overseas-rep-menu" alt="overseas" />
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $this->baseUrl('material') ?>">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="promo-material-menu" alt="promo material" />
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sidebar-event-image" style="margin-bottom: 20px;">
+        <?php foreach($this->smallHighlight as $data) : ?>
+    
+            <a href="<?php echo $data['link']; ?>">
+                <img src="<?php echo $this->imageUrl('upload/highlight/'.$data['path_image']) ?>" alt="" />
+            </a>
+    
+        <?php endforeach; ?>
+    
+    </div>
+
+
+    <!--destination box-->
+    <div id="discover-box">
+        <div class="header">
+            <?php echo strtoupper($this->translate('destinations'));?>
+        </div>
+        <div class="content">
+
+            <?php if(sizeof($this->destinasi)):?>
+                <?php foreach($this->destinasi as $destinasi):?>
+                <?php if($destinasi->name != '' AND $destinasi->source != ''):?>
+                    <div class="block-content">
+                    <div class="block-content-left">
+                        <?php if(file_exists(UPLOAD_FOLDER.'/poi/thumbnails/'.basename($destinasi->source))):?>
+
+                            <img alt="<?php echo $destinasi->source;?>" src="<?php echo $this->imageUrl('upload/poi/thumbnails/' . basename($destinasi->source));?>" />
+                        <?php else:?>
+                            <img alt="<?php echo $destinasi->source;?>" src="<?php echo $this->imageUrl('default.jpg');?>" />
+                        <?php endif;?>
+                    </div>
+
+                    <div class="block-content-right">
+                        <div class="places bold" style="margin-top:10px;">
+                            <a href="<?php echo $this->baseUrl('destination/' . $destinasi->poi_id . '/' . $this->makeUrlFormat($destinasi->name)) ?>">
+                                <span class="href-nostyle"><?php echo $destinasi->name;?></span>
+                            </a>
+                        </div>
+                        <!--<div class="short-desc"><?php echo $destinasi->name;?></div>-->
+                    </div>
+                </div>            
+                <?php endif;?>
+                
+                <?php endforeach;?>
+            <?php endif;?>            
+            <div class="button-discover">
+                <div class="text">
+                    <a href="<?php echo $this->baseUrl('destination/search');?>">
+                        <span>BROWSE ALL</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>    
+    </div>
+    <!--end destination box-->
+
+    <!--activity box-->
+    <div id="discover-box">
+        <div class="header"><?php echo strtoupper($this->translate('recent_activity'));?></div>    
+        <div class="content">
+            
+            <?php if(sizeof($this->activity)):?>
+                <?php foreach($this->activity as $activity):?>
+
+                    <div class="block-content">
+                        <div class="block-content-left">
+    
+                            <?php if(file_exists(UPLOAD_FOLDER.'/category/thumbnails/'.$activity->image)):?>
+                                <img alt="<?php echo $activity->image;?>" src="<?php echo $this->imageUrl('upload/category/thumbnails/' . $activity->image);?>" />
+                            <?php else:?>
+                                <img alt="<?php echo $activity->image;?>" src="<?php echo $this->imageUrl('default.jpg');?>" />
+                            <?php endif;?>
+                        </div>
+
+                        <div class="block-content-right">
+                            <div class="places bold" style="margin-top:18px;">
+                                <a href="<?php echo $this->baseUrl('activity/detail/' . $activity->category_id . '/' . $this->makeUrlFormat($activity->name)) ?>">
+                                    <span class="href-nostyle"><?php echo $activity->name;?></span>
+                                </a>
+                            </div>
+                            <!--<div class="short-desc"><?php echo $activity->name;?></div>-->
+                        </div>
+                    </div>
+                
+                <?php endforeach;?>
+            <?php endif;?>
+            
+            
+            <div class="button-discover">
+                <div class="text">
+                    <a href="<?php echo $this->baseUrl('activity');?>">
+                        <span>VIEW ACTIVITY</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>    
+    </div>
+    <!--end activity box-->
+
+
+    <div class="sidebar-shortcut">
+        <ul style="margin-left:-9px;">
+            <li>
+                <a href="http://indonesiatravel.biz/">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="blog-menu" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="http://diving-indonesia.net/">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="diving-indonesia" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $this->baseUrl('airline') ?>">
+                    <img <?php echo ($this->languageId == 2)? 'style="margin-left:-3px;"' :'';?> src="<?php echo $this->imageUrl('transparent.gif') ?>" id="flight-menu" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="http://www.koprol.com/users/indonesiatravel">
+                    <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="koprol-menu" alt="" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="sidebar-adv">
+        <a href="http://www.garuda-indonesia.com/">
+            <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="garuda-adv" alt="garuda indonesia" />
+        </a>
+        <a href="http://budpar.go.id/">
+            <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="budpar-adv" alt="kemenbudpar" />
+        </a>
+        <!--<a href="http://www.aseancommunityindonesia.org/">
+            <img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="asean-adv" alt="kemenbudpar" />
+        </a>-->
+    </div>
+<div id="sidebar-highlight">
+<a href="http://www.southeastasia.org/" target="_blank">
+	<img src="<?php echo $this->imageUrl('upload/asean-feelthewarmth.png') ?>" alt="Southeast Asia - feel the warmth" />
+    </a>
+        
+    </div>
+
+
+</div>
+<!--end sidebar-->

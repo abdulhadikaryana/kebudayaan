@@ -1,0 +1,63 @@
+<?php
+if ($this->pageCount) {
+  $params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+  unset($params['module']);
+  unset($params['controller']);
+  unset($params['action']);
+}
+?>
+<div class="paginator">
+  <ul class="btn-group">
+    <?php if (isset($this->first)): ?>
+      <li class ="btn"><a href="<?php echo $this->url(array('page' => $this->first)); ?><?php
+    if ($this->row != null) {
+      echo '/fiterPageRow/' . $this->row;
+    }
+      ?> ">First</a></li>
+      <?php else : ?>
+      <li disabled>First</li>
+    <?php endif; ?>
+
+    <?php if (isset($this->previous)): ?>
+      <li class="btn"><a href="<?php echo $this->url(array('page' => $this->previous)); ?><?php
+    if ($this->row != null) {
+      echo '/fiterPageRow/' . $this->row;
+    }
+      ?>">Prev</a></li>
+      <?php else : ?>
+      <li class="btn"><a href="#">Prev</a></li>
+    <?php endif; ?>
+
+    <?php foreach ($this->pagesInRange as $page) : ?>
+      <?php if ($page != $this->current): ?>
+        <li class="btn"><a  href="<?php echo $this->url(array('page' => $page)) ?><?php
+    if ($this->row != null) {
+      echo '/fiterPageRow/' . $this->row;
+    }
+        ?>"><?php echo $page; ?></a></li>
+        <?php else : ?>
+        <li class="btn btn-primary"><?php echo $page; ?></li>
+      <?php endif; ?>
+    <?php endforeach; ?>
+
+    <?php if (isset($this->next)): ?>
+      <li class="btn"><a href="<?php echo $this->url(array('page' => $this->next)); ?><?php
+    if ($this->row != null) {
+      echo '/fiterPageRow/' . $this->row;
+    }
+      ?>">Next</a></li>
+      <?php else : ?>
+      <li class="btn"><a href="#">Next</a></li>
+    <?php endif; ?>
+
+    <?php if (isset($this->last)): ?>
+      <li class="btn"><a href="<?php echo $this->url(array('page' => $this->last)); ?><?php
+    if ($this->row != null) {
+      echo '/fiterPageRow/' . $this->row;
+    }
+      ?>">Last</a></li>
+      <?php else : ?>
+      <li class="btn" disabled>Last</li>
+    <?php endif; ?>
+  </ul>						
+</div>

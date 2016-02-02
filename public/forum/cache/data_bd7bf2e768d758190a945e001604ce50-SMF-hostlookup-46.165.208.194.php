@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454393641 < time()) $expired = true; else{$expired = false; $value = 's:22:"hosted-by.leaseweb.com";';}?>

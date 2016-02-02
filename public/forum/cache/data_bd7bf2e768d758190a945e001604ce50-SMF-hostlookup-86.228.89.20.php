@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454390897 < time()) $expired = true; else{$expired = false; $value = 's:41:"ALille-657-1-38-20.w86-228.abo.wanadoo.fr";';}?>

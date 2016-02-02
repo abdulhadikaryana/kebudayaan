@@ -1,0 +1,66 @@
+<tr>
+  <td>
+    <a href="<?php echo $this->rootUrl('/admin/news/edit/id/' . $this->news_id); ?>/lang/1">
+      <?php echo $this->title; ?>
+    </a> -
+    <small>
+      <?php switch ($this->status): case Model_DbTable_News::DRAFT : ?>
+          <span class="muted">Draft</span>
+          <?php break; ?>
+        <?php case "PENDING": ?>
+          <span class="text-error">Need Approval</span>
+          <?php break; ?>
+        <?php case Model_DbTable_News::PUBLISH : ?>
+          <span class="text-success">Publish</span>
+          <?php break; ?>
+      <?php endswitch; ?>
+    </small>
+    <div class="control">
+      <a class="btn btn-mini" 
+         href="<?php echo $this->rootUrl('/admin/news/edit/id/' . $this->news_id); ?>/lang/1">
+        Edit
+      </a>
+      <a class="btn btn-mini" target ="_blank" 
+         href ="<?php echo $this->rootUrl('/id/news/detail/' . $this->news_id); ?>">
+        Preview
+      </a>
+      <?php if ($this->partialLoop()->view->userCanApprove && $this->status == "PENDING"): ?>
+        <a class="btn btn-success btn-mini"
+           href="<?php echo $this->rootUrl("/admin/news/approve/id/{$this->news_id}") ?>" >
+          Approve
+        </a>
+      <?php endif; ?>
+      <a class="btn btn-mini btn-danger" 
+         onclick="deleteNews(<?php echo $this->news_id; ?>);">
+        <i class="icon-trash"></i>
+        Trash
+      </a>
+    </div>
+  </td>
+  <td>
+    <?php echo $this->date ?>
+  </td>
+  <td>
+
+    <?php if ($this->CheckNewsIndoTrans($this->news_id, 2)) : ?>
+      <span class="text-success">Available</span>
+    <?php else: ?>
+      <span class="text-error">Not available</span>
+    <?php endif; ?>
+    <div class="control">
+      <a class="btn btn-mini"
+         href="<?php echo $this->rootUrl('/admin/news/edit/id/' . $this->news_id); ?>/lang/2">
+           <?php $this->CheckNewsIndo($this->news_id, 2) ?>
+      </a>
+      <?php if ($this->CheckNewsIndoTrans($this->news_id, 2)) : ?>
+        <a class="btn btn-mini" target ="_blank"
+           href ="<?php echo $this->rootUrl('/en/news/detail/' . $this->news_id); ?>">
+          Preview
+        </a>
+        <a class="btn btn-mini btn-danger" onclick="deleteNews2(<?php echo $this->news_id; ?>);">
+          Delete 
+        </a>
+      <?php endif; ?>
+    </div>
+  </td>
+</tr>

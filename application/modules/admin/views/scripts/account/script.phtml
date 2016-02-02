@@ -1,0 +1,37 @@
+<?php $this->placeholder('jsInline')->captureStart(); ?>
+<script type="text/javascript">
+    $(function() {
+        $("#adminForm input").blur(function() {
+            $("#adminForm").validate().element($(this));
+        });
+
+        $("#adminForm").validate({
+            rules: {
+                adminUser: {
+                    required: true
+                },
+                adminEmail: {
+                    email: true
+                },
+                adminRole: {
+                    required: true
+                },
+                adminPassword: {
+                    minlength: 6
+                },
+                adminPasswordConfirm: {
+                    equalTo: "#adminPassword"
+                }
+            },
+            messages: {
+                adminUser: "Masukan Nama Username!",
+                adminEmail: "Masukan Email Yang Benar!",
+                adminRole: "Pilih Role!",
+                adminPassword: "Kata Sandi Minimum 6 Karakter!",
+                adminPasswordConfirm: "Kata Sandi Tidak Cocok!"
+            }
+        });
+    });
+
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

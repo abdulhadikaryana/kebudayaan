@@ -1,0 +1,32 @@
+<style>
+.folderstyle{
+    float: left;
+    width: 128px;
+    height: 150px;
+}
+
+.folderstyle img{
+    border:none;
+}
+
+.foldername {text-align: center; margin: 5px auto; display: block;}
+.foldername a{text-decoration: none; font-weight: bold; font-family: Segoe UI,Arial,sans-serif; color:black;}
+
+</style>
+<div class="folderstyle">
+    <a href="<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/2/attr/1'; ?>">
+        <img src="<?php echo $this->imageUrl('folder.png')?>"/>
+    </a>
+    <span class="foldername">
+        <a href="<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/2/attr/1'; ?>">attraction</a>
+    </span>
+</div>
+
+<div class="folderstyle">
+    <a href="<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/1/attr/1'; ?>">
+        <img src="<?php echo $this->imageUrl('folder.png')?>"/>
+    </a>
+    <span class="foldername">
+        <a href="<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/1/attr/1'; ?>">destination</a>
+    </span>
+</div>

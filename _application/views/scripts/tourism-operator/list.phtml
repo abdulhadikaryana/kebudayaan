@@ -1,0 +1,80 @@
+<?php $msgres = $this->translate('id_result_text');?>
+<?php echo $this->paginationControl($this->directory, 'Sliding',
+                'partials/pagination.phtml',
+                array('message' => $msgres, 'upMessage' => true)); ?>
+
+<!-- TODO: Mengganti seluruh bentuk styling menggunakan tabel dengan div. -->
+<?php foreach($this->directory as $directory) : ?>
+    <div class="en-list">
+        <h3>
+            <a href="<?php echo $this->readMoreLink 
+                    . '/' . $directory['tourismoperator_id'] . '/'
+                    . $this->makeUrlFormat($directory['nama']) ?>">
+                    <?php echo $directory['nama'] ?>
+            </a>
+            <?php if($directory['star'] > 0):?>
+                <img src="<?php echo $this->imageUrl(
+                    '/bintang/bintang' . $directory['star'] . '.png')?>"
+                    alt="<?php echo $directory['star']?> star(s)"
+                    title="<?php echo $directory['star']?> star(s)" />
+            <?php endif; ?>
+        </h3>
+	<p>
+            <?php echo $this->truncate($directory['description'], 150)?>
+            <?php if( ! empty($directory['description'])) : ?>
+            <span class="read-more-lb"><a href="<?php echo $this->readMoreLink
+                . '/' . $directory['tourismoperator_id']
+                . '/' . $this->makeUrlFormat($directory['nama']) ?>"><?php echo $this->translate('id_read_more_new'); ?> &gt;&gt;</a>
+            </span>
+            <?php endif; ?>
+        </p>
+
+        <table>
+        <?php if (!empty ($directory['address'])) : ?>
+            <tr>
+                <td><span class='address'><?php echo $this->translate('id_list_address'); ?></span></td>
+                <td class='double-dot'>:</td>
+                <td><?php echo $directory['address'] ?></td>
+            </tr>
+        <?php endif; ?>
+        <?php if (!empty ($directory['phone'])) : ?>
+            <tr>
+                <td><span class='phone'><?php echo $this->translate('id_list_phone'); ?></span></td>
+                <td class='double-dot'>:</td>
+                <td><?php echo $directory['phone'] ?></td>
+            </tr>
+        <?php endif; ?>
+        <?php if (!empty ($directory['fax'])) : ?>
+            <tr>
+                <td><span class='fax'>Fax</span></td>
+                <td class='double-dot' >:</td>
+                <td><?php echo $directory['fax'] ?></td>
+            </tr>
+        <?php endif; ?>
+        <?php if (!empty ($directory['email'])) : ?>
+            <tr>
+                <td><span class='email'>Email</span></td>
+                <td class='double-dot'>:</td>
+                <td><a href="mailto:<?php echo $directory['email'] ?>">
+                        <?php echo $directory['email'] ?>
+                    </a>
+                </td>
+            </tr>
+        <?php endif; ?>
+        <?php if (!empty ($directory['website'])) : ?>
+            <tr>
+                <td><span class='website'>Website</span></td>
+                <td class='double-dot'>:</td>
+                <td><a href="<?php echo $directory['website'] ?>">
+                        <?php echo $directory['website'] ?>
+                    </a>
+                </td>
+            </tr>
+        <?php endif; ?>
+        </table>
+    </div>
+<?php endforeach; ?>
+
+<?php echo $this->paginationControl($this->directory, 'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $msgres, 'downMessage' => true)); ?>

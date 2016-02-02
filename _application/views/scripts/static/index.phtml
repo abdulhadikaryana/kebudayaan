@@ -1,0 +1,26 @@
+<!--
+ * StaticIndexViewer
+ *
+ * Viewer untuk halaman index:
+ * Discover Indonesia: Ultimate in Diversity, History, Language, Flora & Fauna,
+ *      Climate, People & Culture
+ * Travel Information: Entry Points, General Information, Indonesian Phrases,
+ *      Do's and Don'ts
+ * FAQ's, Terms and Conditions, Site Map, Privacy Policy
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+<div class="section travel">
+    <?php if($this->menuType == 'discover') : ?>
+
+        <?php
+        echo $this->render('static/index-discover.phtml')
+        ?>
+
+    <?php else :?>
+        <?php
+            echo $this->staticContent[0]['content'];
+        ?>
+    <?php endif;?>
+</div>

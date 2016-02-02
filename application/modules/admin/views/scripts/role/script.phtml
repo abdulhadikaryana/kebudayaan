@@ -1,0 +1,86 @@
+<?php $this->placeholder('styles')->captureStart();?>
+    <link href="<?php echo $this->scriptUrl('/styles/treeview/jquery.treeview.css'); ?>" 
+          rel="stylesheet" type="text/css" /> 
+<?php $this->placeholder('styles')->captureEnd();?>
+
+<?php
+    $this->placeholder('jsInline')->captureStart();
+?>
+<script type="text/javascript">
+var module_stack = [];
+
+function setChildStatus(obj, ctr)
+{
+    if(obj.is(':checked')) {
+        $('.treeModule:eq('+ctr+') input:checkbox').attr('checked', true);
+        $('.treeModule:eq('+ctr+')').children().each(function()
+        {
+            module_id = $(this).children('input:checkbox').val();
+            module_text = $(this).children('.treeLabel').text();
+            module_stack.push(module_id);
+            $('#previewRoleContainer').append("<li id='module"+module_id+"'>"+module_text+"</li>");
+        });
+    } else {
+        $('.treeModule:eq('+ctr+') input:checkbox').attr('checked', false);
+        $('.treeModule:eq('+ctr+')').children().each(function()
+        {
+            module_id = $(this).children('input:checkbox').val();
+            module_stack.splice(module_stack.indexOf(module_id), 1);
+            $('li#module'+module_id).remove();
+        });
+    }
+}
+
+function setAllowedModule()
+{
+    var moduleTemp = '';
+    for (var i in module_stack) {
+        if (i != module_stack.length-1) {
+            moduleTemp += module_stack[i]+',';
+        } else {
+            moduleTemp += module_stack[i];
+        }
+    }
+    $('#allowedModule').val(moduleTemp);
+}
+
+$(function ()
+{
+    $("#roleForm").validate({
+        rules : {
+            roleName     :{ required:true },
+            allowedModule:{ required:true }
+        },
+        messages : {
+            roleName     : "Masukan Nama Role!",
+            allowedModule: "Pilih Minimal Satu Izin"
+        }
+    });
+    
+    $('#saveModule').click(function() { setAllowedModule(); });
+    
+    <?php if (sizeof($this->checked) > 0) : ?>
+        <?php foreach ($this->checked as $module) : ?>
+            module_stack.push(<?php echo $module; ?>);
+        <?php endforeach; ?>
+    <?php endif; ?>
+    
+    $('.treeModule li input:checkbox').click(function()
+    {
+        var module_id = parseInt($(this).val());
+        module_text = $(this).parent().children('.treeLabel').text();
+        if ($(this).is(':checked')) {
+            if (module_stack.indexOf(module_id) < 0) {
+                module_stack.push(module_id);
+                $('#previewRoleContainer').append("<li id='module"+module_id+"'>"+module_text+"</li>");
+            }
+        } else {
+            module_stack.splice(module_stack.indexOf(module_id), 1);
+            $('li#module'+module_id).remove();
+        }
+    });
+
+	$("#roleTree").treeview();
+});
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

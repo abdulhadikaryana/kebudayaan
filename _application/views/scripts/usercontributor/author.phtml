@@ -1,0 +1,251 @@
+            <div class="author-title">
+                <div class="title-left float-left">
+                    <span>
+                    <?php if($this->lang_id == 2):?>Tentang<?php else:?>About<?php endif;?>
+                    <?php echo $this->author['nama']?>
+                    </span>
+                </div>
+
+                <div class="title-right float-right">
+                    <form id="form-filter" method="get" action="<?php echo $this->baseUrl('/usercontributor/sortby/')?>">
+                        <label><?php if($this->lang_id == 2):?>Urutkan berdasarkan<?php else:?>Sort by<?php endif;?> : </label>
+                        <input type="hidden" name="id" value="<?php echo $this->author_id?>" />
+                        <select id="sort-by" name="sortby">
+                            
+                            <?php if($this->sort_by == "default"):?>
+                                <option value="default" selected="selected">
+                                    <?php if($this->lang_id == 2):?>Pilih<?php else:?>Choose<?php endif;?>
+                                </option>
+                            <?php else :?>
+                                <option value="default"></option>
+                            <?php endif;?>
+                            
+                            <?php if($this->sort_by == "date"):?>
+                                <option value="date" selected="selected">
+                                    <?php if($this->lang_id == 2):?>Tanggal<?php else:?>Date<?php endif;?>
+                                </option>
+                            <?php else :?>
+                                <option value="date">
+                                    <?php if($this->lang_id == 2):?>Tanggal<?php else:?>Date<?php endif;?>
+                                </option>
+                            <?php endif;?>
+
+                            <?php if($this->sort_by == "popular-post"):?>
+                                <option value="popular-post" selected="selected">
+                                    <?php echo $this->translate('id_usercontributor_popularpost');?>
+                                </option>
+                            <?php else :?>
+                                <option value="popular-post">
+                                    <?php echo $this->translate('id_usercontributor_popularpost');?>
+                                </option>
+                            <?php endif;?>
+                        </select>
+                    </form>
+                    <span class="no-display" id="author-id"><?php echo $this->author_id?></span>
+                </div>
+            </div>
+
+            <!--author description-->
+            <div class="wrap-author-description float-left">
+                <div class="author-left float-left">
+                    <?php if($this->author['foto'] != NULL OR $this->author['foto'] !=''):?>
+                        <img src="<?php echo $this->imageUrl().'/upload/usercontributor/'.$this->author['foto']?>" class="author-photo" />
+                    <?php else:?>
+                        <img src="<?php echo $this->rootUrl();?>/media/images/usercon/user-photo.png" class="author-photo" />
+                    <?php endif;?>
+
+                    <div class="rating">
+                            <span class="spanrate"><?php echo $this->translate('id_usercontributor_rate_author');?></span>
+                            <div class="rating" id="rate-author<?php echo $this->author['id'];?>"></div>
+                    </div>
+
+                </div>
+                
+                <div class="author-right float-left">
+                    <div class="desc_user">
+                        <?php echo strip_tags($this->htmlDecode($this->author['moto']))?>
+                    </div>
+
+                    <div class="author-data">
+
+                        <?php if($this->author['website']):?>
+                            <span class="teks-label float-left" style="text-align: left;">Website</span>
+                            <span class="teks-value float-left">: <?php echo $this->escapeCheckEmpty($this->author['website']);?></span>
+                            <br />
+                        <?php endif;?>
+
+
+                        <?php if($this->author['contact']):?>
+                        <span class="teks-label float-left">
+                            <?php if($this->lang_id == 2):?>Telpon<?php else:?>Phone<?php endif;?>
+                        </span>
+                        <span class="teks-value float-left">: <?php echo $this->escapeCheckEmpty($this->author['contact']);?></span>
+                        <br />
+                        <?php endif;?>
+
+                        <?php if($this->author['email']):?>
+                        <span class="teks-label float-left">Email</span>
+                        <span class="teks-value float-left">:
+                            <a href="mailto:<?php echo $this->author['email']?>">
+                                <?php echo $this->escapeCheckEmpty($this->author['email']);?>
+                            </a>
+                        </span>
+                        <?php endif;?>
+
+                        <div class="rate rate-author" id="<?php echo $this->author['id'];?>" title="<?php echo $this->author['rating'];?>">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div><!--author description-->
+
+            <div class="author-title author-title-transparant float-left">
+                <label>
+                    <?php echo $this->translate('id_usercontributor_authorpost');?>
+                    <?php echo $this->author['nama']?> :</label>
+            </div>
+
+
+            <?php if(sizeof($this->content_author)) :?>
+                    <?php
+                        $a = 1;
+                        $x = 1;
+                        $y = 1;
+                        $top_content = '';
+                        $botom_content = '';
+                        //$jumlah = count($this->content_author);
+                        //echo $jumlah;
+                    ?>
+                    
+                    <?php foreach($this->content_author as $content_author) :?>
+                    
+                        <?php
+                            if($a < 3)
+                            {
+                                if($x == 1){
+                                    
+                                    //kiri atas
+                                    $top_content .= '<div class="posting-left">';
+                                    
+                                    $top_content .= '<div class="posting-title">';
+                                    $top_content .= '<h2>';
+                                    $top_content .= '<a href="'.$this->baseUrl('/travelers-stories-detail/all/'.$content_author->id.'/'.$this->makeUrlFormat($content_author->title)).'">';
+                                    $top_content .= stripcslashes($content_author->title);
+                                    $top_content .= '</a>';
+                                    $top_content .= '</h2>';
+                                    $top_content .= '<div class="for-dates"><span>'.$content_author->tanggal.' '.$this->month($content_author->bulan,$this->lang_id).' '.$content_author->tahun.'</span></div>';
+                                    $top_content .= '</div>';
+                                    
+                                    $top_content .= '<div class="headline">';
+                                    $top_content .= $content_author->short_content;
+                                    $top_content .= '</div>';
+    
+                                    $top_content .= '<div class="posting-content">'.stripcslashes(substr(strip_tags($this->htmlDecode($content_author->content)),0,550)).' ...</div>';
+                                    $top_content .= '</div>';
+                                    
+                                    
+                                    $x++;
+                                }
+                                else
+                                {
+                                    //kanan atas
+                                    $top_content .= '<div class="posting-right">';
+                                    
+                                    $top_content .= '<div class="posting-title">';
+                                    $top_content .= '<h2>';
+                                    $top_content .= '<a href="'.$this->baseUrl('/travelers-stories-detail/all/'.$content_author->id.'/'.$this->makeUrlFormat($content_author->title)).'">';
+                                    $top_content .= stripcslashes($content_author->title);
+                                    $top_content .= '</a>';
+                                    $top_content .= '</h2>';
+                                    $top_content .= '<div class="for-dates"><span>'.$content_author->tanggal.' '.$this->month($content_author->bulan,$this->lang_id).' '.$content_author->tahun.'</span></div>';
+                                    $top_content .= '</div>';
+                                    
+                                    $top_content .= '<div class="headline">';
+                                    $top_content .= $content_author->short_content;
+                                    $top_content .= '</div>';
+
+                                    $top_content .= '<div class="posting-content">'.stripcslashes(substr(strip_tags($this->htmlDecode($content_author->content)),0,550)).' ...</div>';
+                                    $top_content .= '</div>';
+    
+                                }
+                                $a++;
+                            }
+                            else
+                            {
+                                if($y == 1){
+                                    
+                                    //kiri bawah
+                                    $botom_content .= '<div class="posting-left">';
+
+                                    $botom_content .= '<div class="posting-title">';
+                                    $botom_content .= '<h2>';
+                                    $botom_content .= '<a href="'.$this->baseUrl('/travelers-stories-detail/all/'.$content_author->id.'/'.$this->makeUrlFormat($content_author->title)).'">';
+                                    $botom_content .= stripcslashes($content_author->title);
+                                    $botom_content .= '</a>';
+                                    $botom_content .= '</h2>';
+                                    $botom_content .= '<div class="for-dates"><span>'.$content_author->tanggal.' '.$this->month($content_author->bulan,$this->lang_id).' '.$content_author->tahun.'</span></div>';
+                                    $botom_content .= '</div>';
+                                    
+                                    $botom_content .= '<div class="headline">';
+                                    $botom_content .= $content_author->short_content;
+                                    $botom_content .= '</div>';
+
+
+                                    $botom_content .= '<div class="posting-content">'.stripcslashes(substr(strip_tags($this->htmlDecode($content_author->content)),0,550)).' ...</div>';
+                                    $botom_content .= '</div>';
+                                    
+                                    
+                                    $y++;
+                                }
+                                else
+                                {
+                                    //kanan bawah
+                                    $botom_content .= '<div class="posting-right">';
+                                    
+                                    $botom_content .= '<div class="posting-title">';
+                                    $botom_content .= '<h2>';
+                                    $botom_content .= '<a href="'.$this->baseUrl('/travelers-stories-detail/all/'.$content_author->id.'/'.$this->makeUrlFormat($content_author->title)).'">';
+                                    $botom_content .= stripcslashes($content_author->title);
+                                    $botom_content .= '</a>';
+                                    $botom_content .= '</h2>';
+                                    $botom_content .= '<div class="for-dates"><span>'.$content_author->tanggal.' '.$this->month($content_author->bulan,$this->lang_id).' '.$content_author->tahun.'</span></div>';
+                                    $botom_content .= '</div>';
+                                    
+                                    $botom_content .= '<div class="headline">';
+                                    $botom_content .= $content_author->short_content;
+                                    $botom_content .= '</div>';
+    
+                                    $botom_content .= '<div class="posting-content">'.stripcslashes(substr(strip_tags($this->htmlDecode($content_author->content)),0,550)).' ...</div>';
+                                    $botom_content .= '</div>';
+    
+                                }
+                                $a++;
+                            }
+                        ?>
+                    
+                    <?php endforeach;?>
+
+            <div class="wrap-author-posting float-left">
+                <?php echo $top_content;?>
+            </div>
+
+            <div class="wrap-author-posting bottom-post float-left">
+                <?php echo $botom_content;?>
+            </div>
+
+            <?php echo $this->paginationControl($this->content_author,'Elastic','partials/pagination-usercontributor.phtml'); ?>
+            
+        <?php else : ?>
+
+            <div class="wrap-author-posting bottom-post float-left" style="margin-left:150px;">
+                <h1>
+                    <?php if($this->lang_id == 2):?>
+                        Tidak ada tulisan <?php echo $this->author['nama']?> dalam versi bahasa ini.
+                    <?php else:?>
+                        Nothing <?php echo $this->author['nama']?>'s post in this language.
+                    <?php endif;?>                    
+                </h1>
+            </div>
+        <?php endif;?>

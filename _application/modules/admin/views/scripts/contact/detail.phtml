@@ -1,0 +1,51 @@
+<?php $subj = $this->detail[0]['subject']; ?>
+<?php switch($subj){
+        case "1": $subj = 'Destination Information Inquiry';break;
+        case "2": $subj = 'Site Promotional / Marketing Cooperation Offers';break;
+        case "3": $subj = 'Affiliation Information Inquiry';break;
+        case "4": $subj = 'Feedback / Comment on this Site';break;
+        case "0": $subj = 'Others';break;
+}
+    if($this->detail[0][reply] != null)
+            {
+        $reply = $this->detail[0]['reply'];
+    }else{
+        $reply = "<div id='notreply'>Not yet replied</div><br> Please reply this message <a href=".$this->rootUrl()."/admin/contact/editdraft/id/".$this->detail[0]['contact_id'].">Here</a>";
+    }
+
+?>
+
+<form method="post" action="<?php echo $this->currentUrl();?>" id="contactForm" name="contactForm">
+    <fieldset class="wide">
+        <legend>Contact Message Detail</legend>
+        <table>
+            <tr>
+                <td><label>Date Message</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['date']); ?></td>
+            </tr>
+            <tr>
+                <td><label>Name Contact</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['name']); ?></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['email']); ?></td>
+            </tr>
+            <tr>
+                <td><label>Subject</label></td><td>&#58;</td>
+                <td><?php print_r ($subj); ?></td>
+            </tr>
+            <tr><td></td><td></td></tr>
+            <tr>
+                <td><label>Content</label></td><td>&#58;</td>
+                <td><?php print_r ($this->detail[0]['comment']); ?></td>
+            </tr>
+            <tr><td></td><td></td></tr>
+            <tr>
+                <td><label>Reply</label></td><td>&#58;</td>
+                <td><?php print_r ($reply); ?></td>
+            </tr>
+        </table>
+        <div id="buttondetail"><a href="<?php echo $this->rootUrl(); ?>/admin/contact/">Back To Contact List>></a></div>
+    </fieldset>
+</form>

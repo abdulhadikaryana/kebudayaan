@@ -1,0 +1,15 @@
+<div id="dest-title">
+    <h2 class="section-title">
+        <span><?php echo $this->destTitle; ?></span>
+    </h2>
+    
+    <p class="section-metadata">
+        <span class="category"><?php echo $this->category['name']; ?></span>        
+        <?php if(!empty($this->author['name'])): ?>
+            <span class="author"><?php echo $this->translate('by') .' ' . $this->author['name'] ?></span>                
+        <?php else: ?>
+            <span class="author"><?php echo $this->translate('by') .' ' . $this->translate('contributor') ?></span>
+        <?php endif; ?>
+    </p>
+    
+</div>

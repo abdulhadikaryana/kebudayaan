@@ -1,0 +1,53 @@
+
+<div class="section">
+
+    <h2 class="section-title"><span><?php echo $this->region['area_name'] ?></span></h2>
+    <?php if ($this->areaType == 1) : ?>
+        <div id="province-map">
+           <a href="">
+            <img src="<?php echo $this->imageUrl('/map/province/' .
+                $this->region['area_id'] . '.png') ?>"
+                title="<?php echo $this->region['area_name'] ?>"
+                alt="<?php echo $this->region['area_name'] ?>"/>
+           </a>
+        </div>
+	<?php endif;?>
+
+    <?php echo $this->partial('static/item-region-detail.phtml',
+        array(
+            'name' => 'id_static_description',
+            'description' => $this->region['regional_description'],
+        ));
+    ?>
+    <?php echo $this->partial('static/item-region-detail.phtml',
+        array(
+            'name' => 'id_static_history',
+            'description' => $this->region['history'],
+        ));
+    ?>
+    <?php echo $this->partial('static/item-region-detail.phtml',
+        array(
+            'name' => 'id_static_entry',
+            'description' => $this->region['entry'],
+        ));
+    ?>
+    <?php echo $this->partial('static/item-region-detail.phtml',
+        array(
+            'name' => 'id_static_people',
+            'description' => $this->region['people_and_customs'],
+        ));
+    ?>
+    <?php echo $this->partial('static/item-region-detail.phtml',
+        array(
+            'name' => 'id_static_cuisine',
+            'description' => $this->region['cuisine'],
+        ));
+    ?>
+    <?php echo $this->partial('static/item-region-detail.phtml',
+        array(
+            'name' => 'id_static_tourism',
+            'description' => $this->region['tourism_office'],
+        ));
+    ?>
+
+</div>

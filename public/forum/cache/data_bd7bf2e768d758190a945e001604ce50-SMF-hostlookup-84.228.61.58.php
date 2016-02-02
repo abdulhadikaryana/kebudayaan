@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454402477 < time()) $expired = true; else{$expired = false; $value = 's:30:"IGLD-84-228-61-58.inter.net.il";';}?>

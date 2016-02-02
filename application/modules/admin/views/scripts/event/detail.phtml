@@ -1,0 +1,60 @@
+<?php if(count($this->event)) : ?>
+    <div class="section">
+        <h2 class="section-title">
+            <span><?php echo $this->event['name'] ?></span>
+        </h2>
+        
+        <p class="section-metadata">
+            <?php echo $this->partial('event/event-date-time.phtml',
+                    array(
+                          'dateStart' => $this->event['date_start'],
+                          'dateEnd' => $this->event['date_end'],
+                    ));            
+            ?>
+            <?php if(!empty($this->author['name'])): ?>
+                <span class="author"><?php echo $this->translate('by') .' ' . $this->author['name'] ?></span>                
+            <?php endif; ?>
+        </p>
+        
+        <div id="event_content">
+            <?php echo $this->HtmlDecode($this->event['description']) ?>
+           <?php if(count($this->poiRelated)) : ?>
+           <p><b><?php echo $this->translate('event_related_poi'); ?></b></p>
+               <ul>
+               <?php foreach($this->poiRelated as $destination) : ?>
+                   <li>
+                       <a href="<?php echo $this->baseUrl('/destination/' .
+                           $destination['poi_id'] . '/' .
+                           $this->makeUrlFormat($destination['name'])) ?>"><?php echo $destination['name'] ?></a>
+                   </li>
+               <?php endforeach; ?>
+               </ul>
+           <?php endif; ?>
+       </div>
+
+       <?php echo $this->render('partials/socialnetwork.phtml') ?>
+       <?php echo $this->render('partials/fb-comments.phtml') ?>
+       
+    </div>    
+
+<?php else: ?>
+    <?php echo $this->translate('event_not_exist'); ?>
+<?php endif; ?>
+
+
+
+<!--  addtoAny Js -->
+<?php $this->placeholder("jsInline")->captureStart() ?>
+<!-- AddToAny BEGIN -->
+<!--<a class="a2a_dd" href="http://www.addtoany.com/share_save?linkurl=<?php echo $this->currentUrl();?>&amp;linkname=event-detail"><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"/></a>
+<script type="text/javascript">
+var a2a_config = a2a_config || {};
+a2a_config.linkname = "indonesia.travel";
+a2a_config.linkurl = "<?php //echo $this->currentUrl();?>";
+</script>
+<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>-->
+<!-- AddToAny END -->
+
+<!--    <script type="text/javascript">loadScript("http://static.addtoany.com/menu/page.js", function(){});</script>-->
+<?php $this->placeholder("jsInline")->captureEnd() ?>
+

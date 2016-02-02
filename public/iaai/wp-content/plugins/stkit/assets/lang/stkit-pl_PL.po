@@ -1,0 +1,1575 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: strictthemes.com\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-09 17:54+0100\n"
+"PO-Revision-Date: 2014-05-09 17:54+0100\n"
+"Last-Translator: StrictThemes <info@strictthemes.com>\n"
+"Language-Team: StrictThemes <info@strictthemes.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl_PL\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: stkit.php:92
+msgid "Current theme isn't compatible with ST Kit plugin."
+msgstr "Aktualne ustawienia wyświetlania czasu nie są kompatybilne z wtyczką ST Kit."
+
+#: stkit.php:92
+msgid "Get a compatible theme"
+msgstr "Zainstaluj kompatybilny szablon"
+
+#: admin/st_admin.php:141
+msgid "Theme Panel"
+msgstr "Szablon"
+
+#: admin/st_admin.php:144
+msgid "Projects"
+msgstr "Projekty"
+
+#: admin/st_admin.php:147
+#: admin/st_layout_settings.php:122
+msgid "Layout"
+msgstr "Layout"
+
+#: admin/st_admin.php:150
+msgid "Fonts"
+msgstr "Fonty"
+
+#: admin/st_admin.php:153
+#: admin/st_style_settings.php:113
+msgid "Style"
+msgstr "Styl"
+
+#: admin/st_admin.php:156
+#: admin/st_misc_settings.php:401
+msgid "Miscellaneous"
+msgstr "Różne"
+
+#: admin/st_admin.php:159
+#: admin/st_demo_settings.php:43
+#: admin/st_demo_settings.php:59
+msgid "Setup Demo"
+msgstr ""
+
+#: admin/st_admin.php:162
+msgid "Import / Export"
+msgstr "Import / Eksport"
+
+#: admin/st_admin.php:165
+msgid "Update"
+msgstr "Aktualizacja"
+
+#: admin/st_admin.php:286
+#: admin/st_admin.php:357
+#: admin/st_admin.php:428
+#: admin/st_admin.php:491
+#: admin/st_admin.php:553
+#: admin/st_admin.php:638
+#: admin/st_admin.php:698
+#: admin/st_admin.php:752
+msgid "Changes have been saved."
+msgstr "Zmiany zapisane."
+
+#: admin/st_fonts_settings.php:58
+msgid "Fonts Settings"
+msgstr "Ustawienia fontów"
+
+#: admin/st_fonts_settings.php:71
+#: admin/st_fonts_settings.php:101
+#: admin/st_import_settings.php:64
+#: admin/st_import_settings.php:84
+#: admin/st_layout_settings.php:79
+#: admin/st_major_settings.php:107
+#: admin/st_misc_settings.php:80
+#: admin/st_misc_settings.php:113
+#: admin/st_projects_settings.php:78
+#: admin/st_projects_settings.php:119
+#: admin/st_style_settings.php:72
+#: admin/st_style_settings.php:109
+#: admin/st_update_settings.php:69
+msgid "General"
+msgstr "Główne"
+
+#: admin/st_fonts_settings.php:108
+msgid "Font size"
+msgstr "Stopień pisma"
+
+#: admin/st_fonts_settings.php:114
+msgid "Content font size."
+msgstr "Stopień pisma dla tekstu głównego."
+
+#: admin/st_fonts_settings.php:128
+msgid "Font type"
+msgstr "Krój"
+
+#: admin/st_fonts_settings.php:142
+msgid "System fonts"
+msgstr "Fonty systemowe"
+
+#: admin/st_fonts_settings.php:143
+msgid "Standard"
+msgstr "Standard"
+
+#: admin/st_fonts_settings.php:145
+msgid "Google fonts"
+msgstr "Fonty Google"
+
+#: admin/st_fonts_settings.php:146
+#: admin/st_style_settings.php:76
+#: admin/st_style_settings.php:235
+msgid "Custom"
+msgstr "Własne"
+
+#: admin/st_fonts_settings.php:182
+msgid "Select a font family."
+msgstr "Wybierz rodzinę fontów."
+
+#: admin/st_fonts_settings.php:207
+msgid "Choose the font you want from Google <a href=\"http://google.com/fonts\">library</a> and press"
+msgstr "Wybierz font z <a href=\"http://google.com/fonts\">biblioteki Google</a> i wciśnij"
+
+#: admin/st_fonts_settings.php:221
+msgid "Choose the styles you want."
+msgstr "Wybierz interesujące Cię odmiany."
+
+#: admin/st_fonts_settings.php:233
+msgid "Choose the character sets you want."
+msgstr "Wybierz interesujące Cię zestawy znaków."
+
+#: admin/st_fonts_settings.php:246
+msgid "Add code."
+msgstr "Dodaj kod."
+
+#: admin/st_fonts_settings.php:259
+msgid "Add CSS"
+msgstr "Dodaj CSS"
+
+#: admin/st_import_settings.php:51
+msgid "Import-Export Settings"
+msgstr "Ustawienia importu-eksportu"
+
+#: admin/st_import_settings.php:53
+msgid "Save changes"
+msgstr "Zapisz zmiany"
+
+#: admin/st_import_settings.php:89
+msgid "Data"
+msgstr "Dane"
+
+#: admin/st_import_settings.php:93
+msgid "Import or Export all settings."
+msgstr "Importuj lub eksportuj wszystkie ustawienia"
+
+#: admin/st_layout_settings.php:66
+msgid "Layout Settings"
+msgstr "Ustawienia wyglądu"
+
+#: admin/st_layout_settings.php:83
+msgid "Header"
+msgstr "Nagłówek"
+
+#: admin/st_layout_settings.php:87
+#: admin/st_layout_settings.php:215
+msgid "Footer"
+msgstr "Stopka"
+
+#: admin/st_layout_settings.php:91
+#: admin/st_layout_settings.php:287
+msgid "Social"
+msgstr "Społecznościowe"
+
+#: admin/st_layout_settings.php:129
+#: admin/st_major_settings.php:161
+msgid "Type"
+msgstr "Rodzaj"
+
+#: admin/st_layout_settings.php:134
+msgid "Responsive"
+msgstr "Responsywny"
+
+#: admin/st_layout_settings.php:137
+msgid "Classic"
+msgstr "Klasyczny"
+
+#: admin/st_layout_settings.php:150
+msgid "Design"
+msgstr "Wygląd"
+
+#: admin/st_layout_settings.php:155
+msgid "Wide"
+msgstr "Szeroki"
+
+#: admin/st_layout_settings.php:158
+msgid "Boxed"
+msgstr "Pudełkowy"
+
+#: admin/st_layout_settings.php:219
+msgid "Scheme"
+msgstr "Schemat"
+
+#: admin/st_layout_settings.php:249
+msgid " Select a scheme of footer sidebars."
+msgstr "Wybierz schemat (layout) dla stopki."
+
+#: admin/st_layout_settings.php:293
+msgid "Icons"
+msgstr "Ikony"
+
+#: admin/st_layout_settings.php:298
+#: admin/st_major_settings.php:753
+msgid "Display"
+msgstr "Wyświetlanie"
+
+#: admin/st_layout_settings.php:300
+msgid "Display social icons."
+msgstr "Wyświetl ikony społecznościowe."
+
+#: admin/st_layout_settings.php:308
+msgid "URLs"
+msgstr "URLe"
+
+#: admin/st_layout_settings.php:322
+msgid "Enter URL paths to your network profiles."
+msgstr "Podaj adresy URL do Twoich profili społecznościowych."
+
+#: admin/st_layout_settings.php:328
+msgid "Custom Icons"
+msgstr "Własne ikony"
+
+#: admin/st_layout_settings.php:333
+msgid "You also can set a custom icons, counters etc. Shortcodes allowed."
+msgstr "Możesz zdefiniować własne ikony, liczniki, etc. Shortcode dozwolone."
+
+#: admin/st_layout_settings.php:334
+msgid "Draft"
+msgstr "Szkic"
+
+#: admin/st_major_settings.php:94
+msgid "Main Settings"
+msgstr "Ustawienia Podstawowe"
+
+#: admin/st_major_settings.php:111
+#: admin/st_major_settings.php:377
+msgid "Blog"
+msgstr "Blog"
+
+#: admin/st_major_settings.php:115
+#: admin/st_major_settings.php:617
+msgid "Post"
+msgstr "Wpis"
+
+#: admin/st_major_settings.php:119
+#: admin/st_major_settings.php:928
+msgid "Page"
+msgstr "Strona"
+
+#: admin/st_major_settings.php:123
+msgid "Sidebar"
+msgstr "Pasek boczny"
+
+#: admin/st_major_settings.php:153
+msgid "Logo"
+msgstr "Logo"
+
+#: admin/st_major_settings.php:167
+msgid "Text"
+msgstr "Tekst"
+
+#: admin/st_major_settings.php:172
+msgid "Image"
+msgstr "Obraz"
+
+#: admin/st_major_settings.php:185
+msgid "Site Name"
+msgstr "Nazwa strony"
+
+#: admin/st_major_settings.php:191
+msgid "Enter the site name e.g. <code>Site&lt;strong>Name&lt;/strong></code>"
+msgstr "Podaj nazwę strony np. <code>Site&lt;strong>Name&lt;/strong></code>"
+
+#: admin/st_major_settings.php:205
+#: admin/st_major_settings.php:266
+msgid "Image URL"
+msgstr "Adres URL obrazu"
+
+#: admin/st_major_settings.php:211
+msgid "Insert an image URL e.q. <code>http://yoursite.com/image.png</code> <br>JPG, GIF or PNG formats allowed."
+msgstr "Podaj adres URL obrazu np. <code>http://yoursite.com/image.png</code> <br>Dozwolone formaty - JPG, GIF, PNG."
+
+#: admin/st_major_settings.php:223
+msgid "Image 2x URL"
+msgstr "URL obrazu 2x (retina)"
+
+#: admin/st_major_settings.php:229
+msgid "If you would like to provide a compatibility with HiDPI screens, please, insert a doubled logo e.g. if your normal logo dimentions are 150x50 pixels, the doubled version must be 300x100 pixels."
+msgstr "Jeżeli chcesz udostępnić obrazy przygotowane dla wyświetlaczy HiDPI, podaj adres URL do logo w podwójnych wymiarach (np. jeżeli Twoje logo ma wymiary 150x50 pikseli, jego większy odpowiednik powinien posiadać 300x100 pikseli)."
+
+#: admin/st_major_settings.php:262
+msgid "Favicon"
+msgstr "Favikona"
+
+#: admin/st_major_settings.php:270
+#: admin/st_misc_settings.php:337
+msgid "e.q."
+msgstr "np."
+
+#: admin/st_major_settings.php:288
+msgid "Copyrights"
+msgstr "Prawa autorskie"
+
+#: admin/st_major_settings.php:292
+msgid "Yours"
+msgstr "Twoje"
+
+#: admin/st_major_settings.php:296
+msgid "Enter your copyrights here."
+msgstr "Podaj swoją notę copyright."
+
+#: admin/st_major_settings.php:305
+msgid "Developer's"
+msgstr "Twórcy szablonu"
+
+#: admin/st_major_settings.php:310
+#: admin/st_misc_settings.php:129
+#: admin/st_misc_settings.php:152
+#: admin/st_misc_settings.php:176
+#: admin/st_misc_settings.php:200
+#: admin/st_misc_settings.php:224
+#: admin/st_misc_settings.php:248
+#: admin/st_misc_settings.php:410
+msgid "Disabled"
+msgstr "Wyłączone"
+
+#: admin/st_major_settings.php:312
+msgid "Remove developer's link from the footer."
+msgstr "Usuń link do twórcy szablonu w stopce Twojej strony."
+
+#: admin/st_major_settings.php:332
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: admin/st_major_settings.php:336
+msgid "Code"
+msgstr "Kod"
+
+#: admin/st_major_settings.php:340
+msgid "Put here your tracking code."
+msgstr "Wklej tutaj swój kod Google Analytics."
+
+#: admin/st_major_settings.php:387
+#: admin/st_projects_settings.php:247
+msgid "Template"
+msgstr "Szablon"
+
+#: admin/st_major_settings.php:420
+msgid "Select template for archive and blog page."
+msgstr "Wybierz szablon (layout) dla archiwum oraz wpisów blogowych."
+
+#: admin/st_major_settings.php:436
+#: admin/st_major_settings.php:445
+msgid "Featured posts"
+msgstr "Polecane wiadomości"
+
+#: admin/st_major_settings.php:451
+msgid "A quantity of featured (sticky) posts."
+msgstr "Ilość Polecanych (przyklejonych) postów."
+
+#: admin/st_major_settings.php:471
+msgid "Display on frontpage"
+msgstr "Wyświetl na stronie głównej"
+
+#: admin/st_major_settings.php:473
+msgid "Display sticky posts on frontpage."
+msgstr "Wyświetl przyczepione wiadomości na stronie głównej"
+
+#: admin/st_major_settings.php:493
+msgid "Display on archives"
+msgstr "Pokaż w archiwum"
+
+#: admin/st_major_settings.php:495
+msgid "Display sticky posts on archives: categories, tags, formats."
+msgstr "Wyświetl przyklejone posty w archiwum: kategorie, tagi, formaty."
+
+#: admin/st_major_settings.php:515
+msgid "Display on single post"
+msgstr "Wyświetl w jednym wątku"
+
+#: admin/st_major_settings.php:517
+msgid "Display sticky posts on single post."
+msgstr "Wyświetl przyczepione wiadomości w jednym wątku."
+
+#: admin/st_major_settings.php:537
+msgid "Display on other pages"
+msgstr "Wyświetl na innych stronach"
+
+#: admin/st_major_settings.php:539
+msgid "Display sticky posts on other kind of pages."
+msgstr "Wyświetl przyczepione wiadomości na podobnych stronach"
+
+#: admin/st_major_settings.php:559
+msgid "Exclude from blogroll"
+msgstr "Wyklucz z linii bloga"
+
+#: admin/st_major_settings.php:561
+msgid "Do not display sticky posts on blogroll."
+msgstr "Nie wyświetlaj przyklejonych postów na blogu."
+
+#: admin/st_major_settings.php:581
+msgid "Query cache"
+msgstr "Odpytaj pamięć podręczną"
+
+#: admin/st_major_settings.php:583
+msgid "Store query result within 12 hours."
+msgstr "Zapisuj wyniki zapytań przez 12 godzin."
+
+#: admin/st_major_settings.php:634
+msgid "Under title"
+msgstr "Pod tytułem"
+
+#: admin/st_major_settings.php:636
+msgid "Display custom data under a title. Shortcodes allowed."
+msgstr "Umieść dodatkowe informacje pod tytułem. Shortcodes dozwolone."
+
+#: admin/st_major_settings.php:661
+msgid "Above post"
+msgstr "Nad tytułem"
+
+#: admin/st_major_settings.php:663
+msgid "Display custom data above a post. Shortcodes allowed."
+msgstr "Umieść dodatkowe informacje nad tytułem. Shortcodes dozwolone."
+
+#: admin/st_major_settings.php:688
+msgid "Featured image"
+msgstr "Wyróżniony obraz"
+
+#: admin/st_major_settings.php:690
+msgid "Display featured image on post page."
+msgstr "Wyświetl wyróżniony obraz na stronie wpisu."
+
+#: admin/st_major_settings.php:712
+msgid "Excerpt"
+msgstr "Wypis"
+
+#: admin/st_major_settings.php:714
+msgid "Display excerpt on post page."
+msgstr "Wyświetl wypis na stronie wpisu."
+
+#: admin/st_major_settings.php:736
+msgid "Meta"
+msgstr "Meta"
+
+#: admin/st_major_settings.php:738
+msgid "Author info, post views, nice time."
+msgstr "Informacje o autorze, ilość odwiedzin wpisów, alternatywna data."
+
+#: admin/st_major_settings.php:751
+msgid "Author's info"
+msgstr "Informacje o autorze"
+
+#: admin/st_major_settings.php:753
+msgid "and"
+msgstr "oraz"
+
+#: admin/st_major_settings.php:753
+msgid "author's bio"
+msgstr "biogram"
+
+#: admin/st_major_settings.php:753
+msgid "at the post page"
+msgstr "na stronie wpisu"
+
+#: admin/st_major_settings.php:767
+msgid "Post views"
+msgstr "Wyświetleń"
+
+#: admin/st_major_settings.php:769
+msgid "Number of views per each post."
+msgstr "Ilość odwiedzin dla każdego wpisu."
+
+#: admin/st_major_settings.php:783
+msgid "Nice time"
+msgstr "Alternatywna data"
+
+#: admin/st_major_settings.php:785
+msgid "e.g. <strong>3 days ago</strong> instead of"
+msgstr "np. <strong>3 dni temu</strong> zamiast"
+
+#: admin/st_major_settings.php:814
+msgid "Under post"
+msgstr "Pod wpisem"
+
+#: admin/st_major_settings.php:816
+msgid "Display custom data under a post. Shortcodes allowed."
+msgstr "Wyświetl dodatkowe informacje pod wpisem. Shortcodes dozwolone."
+
+#: admin/st_major_settings.php:841
+#: admin/st_major_settings.php:945
+msgid "Comments"
+msgstr "Komentarze"
+
+#: admin/st_major_settings.php:843
+#: admin/st_major_settings.php:947
+msgid "Display comments."
+msgstr "Wyświetl komentarze."
+
+#: admin/st_major_settings.php:853
+msgid "Website the input field"
+msgstr "Adres strony internetowej w komentarzach"
+
+#: admin/st_major_settings.php:855
+msgid "Display the 'Website' input field on the comment form."
+msgstr "Wyświetl pole 'Strona internetowa' w komentarzach. Umożliwi to komentującym podanie adresu URL do swojej strony internetowej."
+
+#: admin/st_major_settings.php:864
+msgid "Pingbacks"
+msgstr "Pingback"
+
+#: admin/st_major_settings.php:866
+msgid "Enable pingbacks."
+msgstr "Włącz mechanizm pingback."
+
+#: admin/st_major_settings.php:893
+msgid "Related posts"
+msgstr "Podobne wiadomości"
+
+#: admin/st_major_settings.php:895
+msgid "Display related posts."
+msgstr "Wyświetl podobne wiadomości."
+
+#: admin/st_major_settings.php:987
+msgid "Additional Sidebars"
+msgstr "Dodatkowe paski boczne"
+
+#: admin/st_major_settings.php:991
+#: admin/st_misc_settings.php:378
+msgid "Quantity"
+msgstr "Ilość"
+
+#: admin/st_major_settings.php:997
+msgid "If you need more sidebars besides standard, please, set a number you want, but at least 2."
+msgstr "Jeżeli potrzebujesz dodatkowych pasków bocznych zamiast standardowych, proszę podaj ich ilość (minimum 2)."
+
+#: admin/st_misc_settings.php:67
+msgid "Miscellaneous Settings"
+msgstr "Ustawienia dodatkowe"
+
+#: admin/st_misc_settings.php:84
+#: admin/st_misc_settings.php:306
+msgid "AdSense"
+msgstr "AdSense"
+
+#: admin/st_misc_settings.php:88
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: admin/st_misc_settings.php:124
+msgid "Sanitization"
+msgstr "Walidacja"
+
+#: admin/st_misc_settings.php:131
+msgid "Do not sanitize input data on text areas of Theme Panel."
+msgstr "Nie sprawdzaj danych wejściowych w obszarach tekstowych panelu skórki."
+
+#: admin/st_misc_settings.php:147
+msgid "Admin Bar"
+msgstr "Pasek administratora"
+
+#: admin/st_misc_settings.php:154
+msgid "Do not show admin bar on the front-end."
+msgstr "Nie wyświetlaj paska administratora na stronie."
+
+#: admin/st_misc_settings.php:171
+msgid "prettyPhoto"
+msgstr "prettyPhoto"
+
+#: admin/st_misc_settings.php:178
+msgid "Disable the built-in lightbox plugin."
+msgstr "Wyłącz wbudowaną wtyczkę lightbox (przydatne jeżeli zamierzasz używać innego mechanizmu, np. Fancybox)."
+
+#: admin/st_misc_settings.php:195
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: admin/st_misc_settings.php:202
+msgid "Disable compatibility with HiDPI devices like a laptops with Retina display."
+msgstr "Wyłącz kompatybilność z wyświetlaczami o wysokiej rozdzielczości (np. Retina)."
+
+#: admin/st_misc_settings.php:219
+msgid "Shortcodes"
+msgstr "Shortcode"
+
+#: admin/st_misc_settings.php:226
+msgid "Disable the built-in ST shortcodes. Some functionality based on shortcodes will be inactive e.g. Gallery post format."
+msgstr "Wyłącz shortcode wbudowane w szablon StrictThemes. Spowoduje to wyłaczenie wybranych funkcjonalności, np. wpisów w formacie galerii."
+
+#: admin/st_misc_settings.php:243
+msgid "Sticky Menu"
+msgstr "Przyklejane menu"
+
+#: admin/st_misc_settings.php:250
+msgid "Disable Sticky Menu option."
+msgstr "Wyłącz przyklejane menu"
+
+#: admin/st_misc_settings.php:267
+msgid "Sidebar Width"
+msgstr "Szerokość paska bocznego"
+
+#: admin/st_misc_settings.php:272
+msgid "Alternative"
+msgstr "Alternatywnie"
+
+#: admin/st_misc_settings.php:274
+msgid "Set an alternative width of general sidebar."
+msgstr "Ustaw alternatywną szerokość paska głównego."
+
+#: admin/st_misc_settings.php:315
+#: admin/st_projects_settings.php:123
+msgid "Status"
+msgstr "Status"
+
+#: admin/st_misc_settings.php:320
+#: admin/st_projects_settings.php:128
+msgid "Enabled"
+msgstr "Włączone"
+
+#: admin/st_misc_settings.php:322
+msgid "Make the AdSense ad units responsive. Fill form below, and use ST AdSense widget or shortcode <br>e.g. <code>[adsense slot=1234567890 sizes=728x90|580x400|468x60|300x250]</code>"
+msgstr "Zrób AdSense responsywnym. Wypełnij poniższy formularz i korzystaj z widżetu ST AdSense lub skrótu <br>np. <code>[adsense slot=1234567890 sizes=728x90|580x400|468x60|300x250]</code>"
+
+#: admin/st_misc_settings.php:333
+msgid "Client ID"
+msgstr "ID klienta"
+
+#: admin/st_misc_settings.php:374
+msgid "Products per page"
+msgstr "Produktów na stronie"
+
+#: admin/st_misc_settings.php:384
+msgid "Set a number of products per page."
+msgstr "Określ liczbę produktów na stronie."
+
+#: admin/st_misc_settings.php:405
+msgid "Assets"
+msgstr "Wartość"
+
+#: admin/st_misc_settings.php:412
+msgid "Do not load JS & CSS files on non-WooCommerce pages."
+msgstr "Nie ładuj plików JS i CSS na stronach nie będących częścią WooCommerce."
+
+#: admin/st_projects_settings.php:65
+msgid "Projects Settings"
+msgstr "Ustawienia projektów"
+
+#: admin/st_projects_settings.php:82
+#: admin/st_projects_settings.php:216
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: admin/st_projects_settings.php:86
+msgid "Taxonomy"
+msgstr "Taksonomie"
+
+#: admin/st_projects_settings.php:130
+msgid "Turn on projects on the website."
+msgstr "Włącz mechanizm projektów na Twojej stronie."
+
+#: admin/st_projects_settings.php:148
+msgid "Slugs"
+msgstr "Krótkie adresy"
+
+#: admin/st_projects_settings.php:152
+msgid "Post slug"
+msgstr "Krótki adres dla wpisu"
+
+#: admin/st_projects_settings.php:155
+#: admin/st_projects_settings.php:165
+#: admin/st_projects_settings.php:175
+msgid "Do not forget to update Permalinks Settings after these changes."
+msgstr "Nie zapomnij zaktualizować ustawień bezpośrednich odnośników."
+
+#: admin/st_projects_settings.php:156
+#: admin/st_projects_settings.php:166
+#: admin/st_projects_settings.php:176
+#: admin/st_projects_settings.php:332
+#: admin/st_projects_settings.php:342
+#: admin/st_projects_settings.php:352
+msgid "<strong>WARNING!</strong> No white spaces, please. Latin symbols only."
+msgstr "<strong>UWAGA!</strong> Tylko znaki alfabetu łacińskiego, bez spacji."
+
+#: admin/st_projects_settings.php:162
+msgid "Category slug"
+msgstr "Krótki adres dla kategorii"
+
+#: admin/st_projects_settings.php:166
+msgid "The <code>category</code> slug not allowed."
+msgstr "<code>category</code> - niedozwolony."
+
+#: admin/st_projects_settings.php:172
+msgid "Tag slug"
+msgstr "Krótki adres dla tagu"
+
+#: admin/st_projects_settings.php:176
+msgid "The <code>tag</code> slug not allowed."
+msgstr "<code>tag</code> - niedozwolony."
+
+#: admin/st_projects_settings.php:226
+msgid "Projects per page"
+msgstr "Projektów na stronę"
+
+#: admin/st_projects_settings.php:232
+msgid "A quantity of projects per portfolio page."
+msgstr "Ilość projektów wyświetlanych na stronie portfolio."
+
+#: admin/st_projects_settings.php:283
+msgid "Select template for portolio."
+msgstr "Wybierz szablon (layout) dla archiwum oraz wpisów blogowych."
+
+#: admin/st_projects_settings.php:324
+msgid "Taxonomies"
+msgstr "Taksonomie"
+
+#: admin/st_projects_settings.php:328
+msgid "Post type"
+msgstr "Rodzaj wpisu"
+
+#: admin/st_projects_settings.php:331
+#: admin/st_projects_settings.php:341
+#: admin/st_projects_settings.php:351
+msgid "Make sure you have to make these changes. Otherwise, please, leave it default."
+msgstr "Upewnij się, że potrzebujesz wprowadzić zmiany. W innym wypadku, pozostaw te ustawienia bez zmiany."
+
+#: admin/st_projects_settings.php:338
+msgid "Category"
+msgstr "Kategoria"
+
+#: admin/st_projects_settings.php:348
+msgid "Tag"
+msgstr "Tag"
+
+#: admin/st_style_settings.php:59
+msgid "Style Settings"
+msgstr "Ustawienia styli"
+
+#: admin/st_style_settings.php:142
+msgid "Select a style."
+msgstr "Wybierz styl."
+
+#: admin/st_style_settings.php:160
+msgid "Colors"
+msgstr "Kolory"
+
+#: admin/st_style_settings.php:170
+msgid "Primary"
+msgstr "Główny"
+
+#: admin/st_style_settings.php:176
+msgid "Select a primary color."
+msgstr "Wybierz kolor główny."
+
+#: admin/st_style_settings.php:192
+msgid "Secondary"
+msgstr "Dodatkowy"
+
+#: admin/st_style_settings.php:198
+msgid "Select a secondary color."
+msgstr "Wybierz kolor dodatkowy."
+
+#: admin/st_style_settings.php:239
+msgid "CSS styles"
+msgstr "style CSS"
+
+#: admin/st_style_settings.php:243
+msgid "To prevent problems with theme update, write here any custom CSS (or use <a href=\"http://codex.wordpress.org/Child_Themes\">child themes</a>)."
+msgstr "Aby wystrzec się problemów z przyszłymi aktualizacjami szablonu, wpisz tutaj swój kod CSS lub wykorzystaj mechanizm szablonów potomnych (child themes)."
+
+#: admin/st_update_settings.php:56
+msgid "Update Settings"
+msgstr "Ustawienia aktualizacji"
+
+#: admin/st_update_settings.php:102
+msgid "ThemeForest"
+msgstr "ThemeForesst"
+
+#: admin/st_update_settings.php:107
+msgid "Fill fields below to get notification about new version of theme."
+msgstr "Wypełnij pola widoczne poniżej aby otrzymywać powiadomienia o nowych wersjach szablonu."
+
+#: admin/st_update_settings.php:113
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: admin/st_update_settings.php:117
+msgid "Enter your ThemeForest username."
+msgstr "Podaj swoją nazwę użytkownika ThemeForest."
+
+#: admin/st_update_settings.php:123
+msgid "API key"
+msgstr "klucz API"
+
+#: admin/st_update_settings.php:127
+msgid "To get your API key go to <code>ThemeForest > Your profile > Settings > API Keys</code> and Generate API Key."
+msgstr "Aby otrzymać swój klucz API, przejdź na stronę <code>ThemeForest > Profile > My Settings > API Keys</code> i wygeneruj klucz API."
+
+#: components/adsense/functions/adsense.php:36
+msgid "Responsive AdSense units."
+msgstr "Responsywne moduły AdSense."
+
+#: components/adsense/functions/adsense.php:154
+msgid "Slot"
+msgstr "Slot"
+
+#: components/adsense/functions/adsense.php:157
+msgid "Ad unit slot."
+msgstr "Slot modułu."
+
+#: components/adsense/functions/adsense.php:163
+msgid "Sizes"
+msgstr "Wymiary"
+
+#: components/adsense/functions/adsense.php:182
+msgid "Select the sizes."
+msgstr "Wybierz rozmiary."
+
+#: components/adsense/functions/adsense.php:230
+msgid "Enter your AdSense client ID on Theme Panel, and select a sizes of Ad Unit."
+msgstr "Podaj ID klienta AdSense, oraz wybierz wymiary modułów AdSense."
+
+#: components/adsense/functions/adsense.php:322
+msgid "Make sure the slot number, client ID, and sizes of ad unit."
+msgstr "Sprawdź numer slotu, ID klienta oraz wymiary modułu AdSense."
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:62
+msgid "Browse:"
+msgstr "Przeglądaj:"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:65
+#: components/breadcrumbs/functions/breadcrumbs.php:43
+msgid "Home"
+msgstr "Strona główna"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:314
+msgid "g:i a"
+msgstr "g:i a"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:317
+#, php-format
+msgid "Minute %1$s"
+msgstr "Minut %1$s"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:317
+msgid "i"
+msgstr "i"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:320
+msgid "g a"
+msgstr "g a"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:331
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:337
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:342
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:347
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:411
+msgid "Y"
+msgstr "Y"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:332
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:343
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:415
+msgid "F"
+msgstr "F"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:333
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:419
+msgid "d"
+msgstr "d"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:338
+#, php-format
+msgid "Week %1$s"
+msgstr "Tygodni %1$s"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:354
+#, php-format
+msgid "Search results for &quot;%1$s&quot;"
+msgstr "Wyniki wyszukiwania dla &quot;%1$s&quot;"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:358
+msgid "404 Not Found"
+msgstr "404 nie znaleziono"
+
+#: components/ctp/functions/projects.php:45
+msgid "Project"
+msgstr "Projekt"
+
+#: components/ctp/functions/projects.php:46
+msgid "Add New"
+msgstr "Dodaj nowy"
+
+#: components/ctp/functions/projects.php:47
+msgid "Add New Project"
+msgstr "Dodaj nowy projekt"
+
+#: components/ctp/functions/projects.php:48
+msgid "Edit Project"
+msgstr "Edytuj projekt"
+
+#: components/ctp/functions/projects.php:49
+msgid "New Project"
+msgstr "Nowy projekt"
+
+#: components/ctp/functions/projects.php:50
+msgid "View Project"
+msgstr "Wyświetl projekt"
+
+#: components/ctp/functions/projects.php:51
+msgid "Search Project"
+msgstr "Znajdź projekt"
+
+#: components/ctp/functions/projects.php:52
+msgid "No projects found"
+msgstr "Nie znaleziono projektów"
+
+#: components/ctp/functions/projects.php:53
+msgid "No projects found in Trash"
+msgstr "Nie znaleziono projektów w koszu"
+
+#: components/ctp/functions/projects.php:57
+msgid "A group of posts which can be used as portfolio."
+msgstr "Grupa wpisów które mogą byc wykorzystane jako portfolio"
+
+#: components/ctp/functions/projects.php:83
+msgid "Categories"
+msgstr "Kategorie"
+
+#: components/ctp/functions/projects.php:102
+msgid "Tags"
+msgstr "Tagi"
+
+#: components/ctp/functions/projects.php:127
+msgid "Formats"
+msgstr "Formaty"
+
+#: components/ctp/functions/projects.php:128
+#: components/metaboxes/functions/metabox-ctp-formats.php:37
+msgid "Format"
+msgstr "Format"
+
+#: components/ctp/functions/projects.php:140
+#: components/metaboxes/functions/metabox-ctp-formats.php:90
+#: components/metaboxes/functions/metabox-post-formats.php:140
+msgid "Gallery"
+msgstr "Galeria"
+
+#: components/ctp/functions/projects.php:141
+msgid "Audio"
+msgstr "Dźwięk"
+
+#: components/ctp/functions/projects.php:142
+msgid "Video"
+msgstr "Video"
+
+#: components/ctp/functions/projects.php:184
+#: components/metaboxes/functions/metabox-post-formats.php:43
+msgid "Title"
+msgstr "Tytuł"
+
+#: components/ctp/functions/projects.php:185
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: components/ctp/functions/projects.php:187
+msgid "Author"
+msgstr "Autor"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:43
+#: components/metaboxes/functions/metabox-post-formats.php:93
+msgid "Self hosted video"
+msgstr "Wideo z Twojego serwera"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:45
+#: components/metaboxes/functions/metabox-ctp-formats.php:52
+#: components/metaboxes/functions/metabox-ctp-formats.php:59
+#: components/metaboxes/functions/metabox-ctp-formats.php:72
+#: components/metaboxes/functions/metabox-ctp-formats.php:79
+#: components/metaboxes/functions/metabox-post-formats.php:95
+#: components/metaboxes/functions/metabox-post-formats.php:102
+#: components/metaboxes/functions/metabox-post-formats.php:109
+#: components/metaboxes/functions/metabox-post-formats.php:122
+#: components/metaboxes/functions/metabox-post-formats.php:129
+msgid "e.g. http://site.com/file"
+msgstr "np. http://strona.pl/plik"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:64
+#: components/metaboxes/functions/metabox-post-formats.php:114
+msgid "Embedded video"
+msgstr "Zakotwiczone wideo"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:65
+#: components/metaboxes/functions/metabox-post-formats.php:115
+msgid "If you are not using self hosted video then you can include embedded code here."
+msgstr "Jeżeli nie chcesz udostępniać pliku wideo z Twojego serwera, możesz umieścić tutaj kod do aplikacji zewnętrznej (np. YouTube, Vimeo, etc.)."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:70
+#: components/metaboxes/functions/metabox-post-formats.php:120
+msgid "Self hosted audio"
+msgstr "Audio z Twojego serwera"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:84
+#: components/metaboxes/functions/metabox-post-formats.php:134
+msgid "Embedded audio"
+msgstr "Zakotwiczone audio"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:85
+#: components/metaboxes/functions/metabox-post-formats.php:135
+msgid "If you are not using self hosted audio then you can include embedded code here."
+msgstr "Jeżeli nie chcesz udostępniać pliku audio z Twojego serwera, możesz umieścić tutaj kod do aplikacji zewnętrznej."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:96
+msgid "Color"
+msgstr "Kolor"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:97
+msgid "Select a color of project."
+msgstr "Wybierz kolor dla projektu."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:183
+#: components/metaboxes/functions/metabox-ctp-formats.php:222
+#: components/metaboxes/functions/metabox-ctp-formats.php:246
+#: components/metaboxes/functions/metabox-ctp-formats.php:278
+#: components/metaboxes/functions/metabox-post-formats.php:344
+#: components/metaboxes/functions/metabox-post-formats.php:383
+#: components/metaboxes/functions/metabox-post-formats.php:407
+#: components/metaboxes/functions/metabox-post-formats.php:439
+msgid "Note:"
+msgstr "Uwaga:"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:184
+#: components/metaboxes/functions/metabox-post-formats.php:345
+msgid "You must supply an MP4 file to satisfy both HTML5 and Flash solutions. The optional OGV format is used to increase x-browser support for HTML5 browsers such as Firefox and Opera."
+msgstr "Musisz podać adres do pliku MP4 w celu zgodności z HTML5 oraz Flash. Opcjonalny format OGV używany jest przez niektóre przeglądarki HTML5 tj. Firefox lub Opera."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:223
+#: components/metaboxes/functions/metabox-ctp-formats.php:279
+#: components/metaboxes/functions/metabox-post-formats.php:384
+#: components/metaboxes/functions/metabox-post-formats.php:440
+msgid "This field will override the above."
+msgstr "To pole jest nadrzędne względem poprzedniego."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:223
+#: components/metaboxes/functions/metabox-post-formats.php:384
+msgid "YouTube and Vimeo preferred."
+msgstr "Preferowane YouTube oraz Vimeo."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:247
+#: components/metaboxes/functions/metabox-post-formats.php:408
+msgid "You must supply both MP3 and OGG files to satisfy all browsers."
+msgstr "W celach zgodności z różnymi przeglądarkami, wymagane jest podanie źródła do plików MP3 oraz OGG."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:305
+#: components/metaboxes/functions/metabox-post-formats.php:466
+msgid "Create Gallery"
+msgstr "Utwórz galerię"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:305
+#: components/metaboxes/functions/metabox-post-formats.php:466
+msgid "Edit Gallery"
+msgstr "Edytuj galerię"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:307
+#: components/metaboxes/functions/metabox-post-formats.php:468
+msgid "Delete Gallery"
+msgstr "Usuń galerię"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:322
+msgid "Background"
+msgstr "Tło"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:330
+msgid "Default"
+msgstr "Domyślny"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:350
+msgid "Select Image"
+msgstr "Wybierz obraz"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:352
+msgid "Delete Image"
+msgstr "Usuń obraz"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:383
+msgid "Project Options"
+msgstr "Ustawienia projektu"
+
+#: components/metaboxes/functions/metabox-post-formats.php:37
+msgid "Breadcrumbs"
+msgstr "Nawigacja okruszkowa"
+
+#: components/metaboxes/functions/metabox-post-formats.php:38
+msgid "Do not show breadcrumbs."
+msgstr "Ukryj nawigację okruszkową"
+
+#: components/metaboxes/functions/metabox-post-formats.php:44
+msgid "Do not show post title."
+msgstr "Nie wyświetlaj tytułu wpisu."
+
+#: components/metaboxes/functions/metabox-post-formats.php:49
+msgid "Sub title"
+msgstr "Podtytuł"
+
+#: components/metaboxes/functions/metabox-post-formats.php:50
+#: components/metaboxes/functions/metabox-post-options.php:50
+msgid "Secondary title of entry."
+msgstr "Dodatkowy tytuł dla wpisu."
+
+#: components/metaboxes/functions/metabox-post-formats.php:55
+msgid "Zoom"
+msgstr "Zoom"
+
+#: components/metaboxes/functions/metabox-post-formats.php:56
+msgid "Open a full sized featured image in modal window by clicking on thumbnail."
+msgstr "Otwórz pełnowymiarowy obraz w oknie modalnym po kliknięciu w miniaturę."
+
+#: components/metaboxes/functions/metabox-post-formats.php:61
+msgid "Link"
+msgstr "Link"
+
+#: components/metaboxes/functions/metabox-post-formats.php:62
+msgid "Put an URL path."
+msgstr "Podaj adres URL."
+
+#: components/metaboxes/functions/metabox-post-formats.php:63
+msgid "e.g. http://google.com"
+msgstr "np. http://google.pl"
+
+#: components/metaboxes/functions/metabox-post-formats.php:68
+msgid "Label"
+msgstr "Etykieta"
+
+#: components/metaboxes/functions/metabox-post-formats.php:69
+msgid "Insert a text of link."
+msgstr "Podaj tekst dla linku."
+
+#: components/metaboxes/functions/metabox-post-formats.php:70
+msgid "e.g. Google"
+msgstr "np. Google"
+
+#: components/metaboxes/functions/metabox-post-formats.php:75
+msgid "Redirect"
+msgstr "Przekierowanie"
+
+#: components/metaboxes/functions/metabox-post-formats.php:76
+msgid "Open the link through redirect."
+msgstr "Otwórz ten link za pomocą przekierowania."
+
+#: components/metaboxes/functions/metabox-post-formats.php:81
+msgid "Quote"
+msgstr "Cytat"
+
+#: components/metaboxes/functions/metabox-post-formats.php:82
+msgid "Insert a quote."
+msgstr "Wpisz cytat."
+
+#: components/metaboxes/functions/metabox-post-formats.php:88
+msgid "Share a status."
+msgstr "Udostępnij status."
+
+#: components/metaboxes/functions/metabox-post-formats.php:178
+msgid "Common"
+msgstr "Wspólne"
+
+#: components/metaboxes/functions/metabox-post-formats.php:183
+#: components/metaboxes/functions/metabox-post-formats.php:200
+msgid "Hide"
+msgstr "Ukryj"
+
+#: components/metaboxes/functions/metabox-post-formats.php:238
+#: components/metaboxes/functions/metabox-post-formats.php:287
+msgid "Enable"
+msgstr "Włącz"
+
+#: components/metaboxes/functions/metabox-post-formats.php:495
+msgid "Format Options"
+msgstr "Opcje formatu"
+
+#: components/metaboxes/functions/metabox-post-options.php:37
+msgid "Do not show breadcrumbs"
+msgstr "Nie wyświetlaj nawigacji okruszkowej"
+
+#: components/metaboxes/functions/metabox-post-options.php:43
+msgid "Do not show title"
+msgstr "Nie wyświetlaj tytułu"
+
+#: components/metaboxes/functions/metabox-post-options.php:49
+msgid "Subtitle"
+msgstr "Podtytuł"
+
+#: components/metaboxes/functions/metabox-post-options.php:84
+msgid "Options"
+msgstr "Opcje"
+
+#: components/metaboxes/functions/metabox-post-options.php:140
+#: components/metaboxes/functions/metabox-post-options.php:143
+msgid "Page Options"
+msgstr "Opcje strony"
+
+#: components/metaboxes/functions/metabox-sidebar.php:36
+msgid "Name"
+msgstr "Nazwa"
+
+#: components/metaboxes/functions/metabox-sidebar.php:37
+msgid "Select a sidebar or <a href=\"admin.php?page=st-major-settings#sidebar\">create new one</a>."
+msgstr "Wybierz pasek boczny lub <a href=\"admin.php?page=st-major-settings#sidebar\">stwórz nowy</a>."
+
+#: components/metaboxes/functions/metabox-sidebar.php:42
+msgid "Position"
+msgstr "Pozycja"
+
+#: components/metaboxes/functions/metabox-sidebar.php:43
+msgid "Choose the position of sidebar."
+msgstr "Wybierz pozycję paska bocznego."
+
+#: components/metaboxes/functions/metabox-sidebar.php:86
+msgid "Default Sidebar"
+msgstr "Pasek domyślny"
+
+#: components/metaboxes/functions/metabox-sidebar.php:88
+msgid "Projects Sidebar"
+msgstr "Pasek projektów"
+
+#: components/metaboxes/functions/metabox-sidebar.php:94
+msgid "Custom bar"
+msgstr "Własny pasek"
+
+#: components/metaboxes/functions/metabox-sidebar.php:116
+msgid "L"
+msgstr "L"
+
+#: components/metaboxes/functions/metabox-sidebar.php:124
+msgid "n/a"
+msgstr "n/a"
+
+#: components/metaboxes/functions/metabox-sidebar.php:132
+msgid "R"
+msgstr "P"
+
+#: components/shortcodes/functions/shortcodes.php:195
+msgid "Notice this:"
+msgstr "Uwaga:"
+
+#: components/shortcodes/functions/shortcodes.php:196
+msgid "Warning!"
+msgstr "Uwaga!"
+
+#: components/shortcodes/functions/shortcodes.php:197
+msgid "Well done!"
+msgstr "Świetnie!"
+
+#: components/shortcodes/functions/shortcodes.php:198
+msgid "Oh snap!"
+msgstr ":("
+
+#: components/shortcodes/functions/shortcodes.php:199
+msgid "Heads up!"
+msgstr "Uwaga!"
+
+#: components/shortcodes/functions/shortcodes.php:367
+msgid "The labels have not been selected."
+msgstr "Etykiety nie zostały wybrane."
+
+#: components/widgets/functions/contact-info.php:17
+msgid "Share your contact information like an address, phone number, email etc."
+msgstr "Udostępnij swoje dane kontaktowe tj. adres, numer telefonu, email, etc."
+
+#: components/widgets/functions/contact-info.php:115
+msgid "Widget"
+msgstr "Widżet"
+
+#: components/widgets/functions/contact-info.php:123
+msgid "Widget title."
+msgstr "Tytuł widżetu."
+
+#: components/widgets/functions/contact-info.php:131
+msgid "Contacts"
+msgstr "Kontakty"
+
+#: components/widgets/functions/contact-info.php:136
+msgid "Enter an introduce text or leave it blank."
+msgstr "Wpisz wstęp lub pozostaw to pole puste."
+
+#: components/widgets/functions/contact-info.php:144
+#: components/widgets/functions/contact-info.php:241
+msgid "Address"
+msgstr "Adres"
+
+#: components/widgets/functions/contact-info.php:157
+#: components/widgets/functions/contact-info.php:245
+msgid "Phone"
+msgstr "Telefon"
+
+#: components/widgets/functions/contact-info.php:170
+#: components/widgets/functions/contact-info.php:249
+msgid "Email"
+msgstr "Email"
+
+#: components/widgets/functions/flickr.php:17
+msgid "Your photos from Flickr."
+msgstr "Twoje zdjęcia z serwisu Flickr."
+
+#: components/widgets/functions/flickr.php:131
+msgid "Flickr"
+msgstr "Flickr"
+
+#: components/widgets/functions/flickr.php:135
+msgid "Account ID"
+msgstr "ID konta"
+
+#: components/widgets/functions/flickr.php:139
+msgid "Enter your Flickr ID"
+msgstr "Podaj swój numer ID konta Flickr"
+
+#: components/widgets/functions/flickr.php:147
+msgid "Account type"
+msgstr "Typ konta"
+
+#: components/widgets/functions/flickr.php:150
+msgid "User"
+msgstr "Użytkownik"
+
+#: components/widgets/functions/flickr.php:151
+msgid "Group"
+msgstr "Grupa"
+
+#: components/widgets/functions/flickr.php:159
+msgid "Photos"
+msgstr "Fotografie"
+
+#: components/widgets/functions/flickr.php:185
+msgid "Select number of photos."
+msgstr "Wybierz ilość fotografii."
+
+#: components/widgets/functions/flickr.php:193
+msgid "Order"
+msgstr "Porządek"
+
+#: components/widgets/functions/flickr.php:196
+#: components/widgets/functions/recent-posts.php:161
+msgid "Random"
+msgstr "Losowo"
+
+#: components/widgets/functions/flickr.php:197
+#: components/widgets/functions/recent-posts.php:160
+msgid "Recent"
+msgstr "Ostatnie"
+
+#: components/widgets/functions/recent-posts.php:17
+msgid "Display a recent, random or popular posts with thumbnails and excerpts."
+msgstr "Wyświetl ostatnie, losowe lub popularne wpisy z miniaturami oraz wypisami."
+
+#: components/widgets/functions/recent-posts.php:137
+#: components/widgets/functions/recent-posts.php:144
+msgid "Posts"
+msgstr "Wpisy"
+
+#: components/widgets/functions/recent-posts.php:149
+msgid "Select a type of posts."
+msgstr "Wybierz rodzaj wpisu."
+
+#: components/widgets/functions/recent-posts.php:162
+msgid "Most viewed"
+msgstr "Majczęściej czytane"
+
+#: components/widgets/functions/recent-posts.php:163
+msgid "Most commented"
+msgstr "Najczęściej komentowane"
+
+#: components/widgets/functions/recent-posts.php:166
+msgid "Select a kind of posts."
+msgstr "Wybierz rozdzaj wpisów."
+
+#: components/widgets/functions/recent-posts.php:171
+msgid "Checkbox <a href='admin.php?page=st-major-settings'>Post Views</a> in case you'd like to show a most viewed posts."
+msgstr "Zaznacz <a href='admin.php?page=st-major-settings'>Liczba odwiedzin</a>jeżeli chcesz wyświetlić najczęściej czytane wpisy."
+
+#: components/widgets/functions/recent-posts.php:180
+msgid "For all time"
+msgstr "Na zawsze"
+
+#: components/widgets/functions/recent-posts.php:181
+msgid "For last month"
+msgstr "Dla ostatniego miesiąca"
+
+#: components/widgets/functions/recent-posts.php:182
+msgid "For last week"
+msgstr "Dla ostatniego tygodnia"
+
+#: components/widgets/functions/recent-posts.php:185
+msgid "Select a time frame."
+msgstr "Wybierz przedział czasu"
+
+#: components/widgets/functions/recent-posts.php:193
+msgid "Enter a slugs of categories separated by comma. Optional."
+msgstr "Podaj krótkie adresy kategorii oddzielone przecinkami. Dla najnowszych, losowych lub najczęściej komentowanych wpisów."
+
+#: components/widgets/functions/recent-posts.php:219
+msgid "Select a number of posts."
+msgstr "Wybierz liczbę wpisów."
+
+#: components/widgets/functions/recent-posts.php:231
+msgid "Date"
+msgstr "Data"
+
+#: components/widgets/functions/recent-posts.php:245
+msgid "Misc"
+msgstr "Pozostałe"
+
+#: components/widgets/functions/recent-posts.php:247
+msgid "Cache"
+msgstr "Cache"
+
+#: components/widgets/functions/recent-posts.php:248
+msgid "Store a query result within 12 hours. Recommended."
+msgstr "Zapisuj wyniki zapytań przez 12 godzin. Rekomendowane."
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "No Comments"
+msgstr "Brak komentarzy"
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "1 Comment"
+msgstr "1 komentarz"
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "% Comments"
+msgstr "% komentarzy"
+
+#: components/widgets/functions/recent-posts.php:499
+msgid "views"
+msgstr "odwiedzin"
+
+#: components/widgets/functions/sharrre.php:20
+msgid "ST Sharrre is a nice widgets sharing for Facebook, Twitter, Google Plus (with PHP script) and more."
+msgstr "ST Sharrre jest ciekawym widżetem umożliwiającym łatwe udostępnianie Twoich wpisów na mediach społecznościowych."
+
+#: components/widgets/functions/sharrre.php:133
+msgid "Buttons"
+msgstr "Przyciski"
+
+#: components/widgets/functions/social-icons.php:17
+msgid "Display a social networks icons linked to your profiles."
+msgstr "Wyświetl ikony mediów społecznościowych połączonych z Twoimi profilami."
+
+#: components/widgets/functions/social-icons.php:121
+msgid "Manage"
+msgstr "Zarządzaj"
+
+#: components/widgets/functions/social-icons.php:122
+msgid "Fill forms on Social tab."
+msgstr "Wypełnij formularze w zakładce mediów społecznościowych."
+
+#: components/widgets/functions/subscribe.php:17
+msgid "Allow visitors to subscribe to your website via FeedBurner"
+msgstr "Zezwól odwiedzającym subskrypcję wpisów na Twojej stronie za pomocą serwisu FeedBurner"
+
+#: components/widgets/functions/subscribe.php:107
+#: components/widgets/functions/subscribe.php:164
+msgid "Sign up for our newsletter to receive the latest news and event postings."
+msgstr "Zapisz się do naszego newslettera aby otrzymywać aktualizację o nowościach na stronie."
+
+#: components/widgets/functions/subscribe.php:119
+msgid "Feedburner"
+msgstr "Feedburner"
+
+#: components/widgets/functions/subscribe.php:122
+msgid "Enter you Feedburner ID"
+msgstr "Podaj swój numer ID serwisu Feedburner"
+
+#: components/widgets/functions/subscribe.php:128
+msgid "Email-subscribe"
+msgstr "Email - subskrypcja"
+
+#: components/widgets/functions/subscribe.php:131
+msgid "Description"
+msgstr "Opis"
+
+#: components/widgets/functions/subscribe.php:162
+msgid "Email subscription"
+msgstr "Subskrybuj email"
+
+#: components/widgets/functions/subscribe.php:180
+msgid "your.email@address"
+msgstr "Twój adres e-mail"
+
+#: components/widgets/functions/subscribe.php:183
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: functions/global.php:502
+msgid "Nothing Found"
+msgstr "Nic nie znaleziono"
+
+#: functions/global.php:608
+msgid "less than 1 minute ago"
+msgstr "Mniej niż minutę temu"
+
+#: functions/global.php:609
+msgid "1 minute ago"
+msgstr "Minutę temu"
+
+#: functions/global.php:611
+#, php-format
+msgid "%d minutes ago"
+msgstr "%d min temu"
+
+#: functions/global.php:612
+msgid "1 hour ago"
+msgstr "Godzinę temu"
+
+#: functions/global.php:614
+#, php-format
+msgid "%d hours ago"
+msgstr "%d godz. temu"
+
+#: functions/global.php:615
+msgid "1 day ago"
+msgstr "Wczoraj"
+
+#: functions/global.php:617
+#: functions/global.php:628
+#, php-format
+msgid "%d days ago"
+msgstr "%d dni temu"
+
+#: functions/global.php:618
+msgid "1 month ago"
+msgstr "Miesiąc temu"
+
+#: functions/global.php:620
+#, php-format
+msgid "%d months ago"
+msgstr "%d mc. temu"
+
+#: functions/global.php:621
+msgid "1 year ago"
+msgstr "Rok temu"
+
+#: functions/global.php:623
+#, php-format
+msgid "%d years ago"
+msgstr "%d lat temu"
+
+#: functions/write-custom-css.php:278
+msgid "Cannot open CSS file"
+msgstr "Nie można otworzyć pliku CSS"
+
+#~ msgid "Major Settings"
+#~ msgstr "Główne ustawienia"
+
+#~ msgid "IDs separated by comma."
+#~ msgstr "ID obrazu oddzielone przecinkiem."

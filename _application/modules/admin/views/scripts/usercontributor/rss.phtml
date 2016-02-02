@@ -1,0 +1,16 @@
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
+<rss version="2">
+	<channel>
+		<title>Visit Indonesia latest story RSS</title>
+		<link><?php echo $this->baseUrl('/news/') ?></link>
+		<description>Latest story about Indonesian Tourism</description>
+		<language>English</language>
+		<?php foreach($this->data as $feed): ?>
+			<item>
+				<title><?php echo stripcslashes($feed['title']); ?></title>
+				<link><?php echo $this->baseUrl('/travel-story-detail/'.$feed['article_id'].'/'.$this->makeUrlFormat($feed['title'])) ?></link>
+				<description><?php echo stripcslashes($feed['content']);?></description>
+			</item>
+		<?php endforeach;?>
+	</channel>
+</rss>

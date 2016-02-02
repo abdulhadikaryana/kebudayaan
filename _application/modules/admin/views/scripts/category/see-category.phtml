@@ -1,0 +1,27 @@
+<div class="one-column">
+    <a name="firstsection"></a>
+    <h2 class="section-title space"><span><?php echo $this->category['name'] ?></span></h2>    
+    <br />
+    <div class="row">
+        <div class="twelve columns">                
+            <?php foreach ($this->subCategories as $category): ?>            
+                    <div class="widget widget-full-hor">
+                        <?php 
+                            $categoryImage = $category['image'];
+                            $categoryImageUrl = 'upload/category/' . $categoryImage;
+                            if (!file_exists(IMAGE_FOLDER . $categoryImageUrl)) {
+                                $categoryImageUrl = 'default.jpg';
+                            }                    
+                            
+                            $linkUrl = $this->baseUrl('/category/' . $this->category['category_id'] . '/detail/' . $category['category_id']);
+                        ?>
+                        <a href="<?php echo $linkUrl ?>">
+                            <img src="<?php echo $this->imageUrl('timthumb.php?src=' . $categoryImageUrl . '&w=205&h=150&q=100') ?>" alt="" class="thumbnail" />
+                        </a>                
+                        <h2 class="widget-title yellow"><a href="<?php echo $linkUrl ?>"><?php echo $category['name'] ?></a></h2>    
+                    </div>            
+            <?php endforeach; ?>  
+        </div>
+    </div>
+</div><!-- end one column-->
+

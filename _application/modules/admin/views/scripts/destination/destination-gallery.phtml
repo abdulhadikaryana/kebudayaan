@@ -1,0 +1,17 @@
+<?php if(count($this->imageGallery)): ?>
+    <ul id="gallery-carousel">
+            <?php foreach($this->imageGallery as $counter => $image) : ?>
+                <?php if($counter == 4) break; ?>
+                <!-- Fungsi fancybox disini dipanggil di general.js -->
+                <li><a class="zoom" href="<?php echo $this->imageUrl('/upload/culture/' . basename($image['url'])) ?>" title="<?php echo strip_tags($image['description']) ?>"><img src="<?php echo $this->imageUrl('/upload/culture/thumbnails/' . basename($image['url'])) ?>" width="110px" height="70px" alt="" /></a></li>
+            <?php endforeach; ?>
+    </ul>
+    <div class="clear-left"></div>
+    <div id="view-all-gallery">
+        <a id="all-gallery" href="<?php echo $this->baseUrl('destination/' . $this->destId . '/' . $this->makeUrlFormat($this->destTitle) . '/gallery') ?>">
+            <img src="<?php echo $this->imageUrl('transparent.gif') ?>" class="see-more" alt="" />
+        </a>
+    </div>
+<?php else: ?>
+    <p><?php echo $this->translate('empty_gallery'); ?></p>
+<?php endif; ?>

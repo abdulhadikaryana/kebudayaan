@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454395838 < time()) $expired = true; else{$expired = false; $value = 's:22:"webxc18s04.ad.aruba.it";';}?>

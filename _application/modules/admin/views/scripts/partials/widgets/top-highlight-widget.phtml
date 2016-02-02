@@ -1,0 +1,8 @@
+<div id="sidebar-highlight">   
+  <?php if (isset($this->highlightImage[0])): ?>
+    <a href="<?php echo $this->highlightImage[0]['link_path'] ?>">
+      <img src="<?php echo $this->imageUrl('upload/highlight/' . $this->highlightImage[0]['img_path']) ?>"
+           alt="<?php echo $this->highlightImage[0]['img_path']; ?>"/>
+    </a>
+  <?php endif ?>
+</div>

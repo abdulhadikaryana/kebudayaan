@@ -1,0 +1,58 @@
+<!-- PAGE-TITLE begins here -->
+<div class="row-fluid section-title" style="border-left-color: #00baff">
+    <div class="pull-left">
+        <h1 style="font-size: 28px;"><?php echo $this->event['name'] ?></h1>
+    </div>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array(), ($this->langId == 1) ? 'beranda' : 'home'); ?>"><?php echo ($this->langId == 1) ? "Beranda" : "Home"; ?></a></li>
+    <li><a href="<?php echo $this->url(array(), ($this->langId == 1) ? 'kegiatan' : 'event'); ?>"><?php echo ($this->langId == 1) ? "Kegiatan" : "Event"; ?></a></li>
+    <li class="active"><?php echo $this->event['name'] ?></li>
+</ul>
+
+<div class="row-fluid" id="culture-section">
+    <div class="span24">
+        <div class="row-fluid section-content">
+            <div class="cont span22">
+                <p class="section-metadata">
+                    <?php
+                    echo $this->partial('event/event-date-time.phtml', array(
+                        'dateStart' => $this->event['date_start'],
+                        'dateEnd' => $this->event['date_end']
+                    ));
+                    ?>
+                    <b> &middot; </b>
+                    <span><?php echo $this->translate('by') . ' <b>' . $this->event['created_by'] . '</b>' ?></span>                
+                </p>
+
+                <div id="event_content">
+                    <?php if (is_file(IMAGE_FOLDER . 'upload/event/' . $this->event['main_pics'])): ?>
+                        <img style="float: left;margin: 0 10px 10px 0" src="<?php echo $this->imageUrl('timthumb.php?src=upload/event/' . $this->event['main_pics'] . '&w=350&q=100'); ?>" alt="" />
+                    <?php endif; ?>
+
+                    <?php echo $this->HtmlDecode($this->event['description']) ?>
+                    <?php if (count($this->poiRelated)) : ?>
+                        <p><b><?php echo $this->translate('event_related_poi'); ?></b></p>
+
+                        <ul>
+
+                            <?php foreach ($this->poiRelated as $destination) : ?>
+                                <li>
+                                    <a href="<?php
+                                    echo $this->baseUrl('/destination/' .
+                                            $destination['poi_id'] . '/' .
+                                            $this->makeUrlFormat($destination['name']))
+                                    ?>"><?php echo $destination['name'] ?></a>
+
+                                </li>
+
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

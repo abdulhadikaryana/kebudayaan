@@ -1,0 +1,33 @@
+<!--
+ * IndexPackageViewer
+ *
+ * Viewer untuk halaman view tour package
+ *
+ * Code blame to: BEM
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+<div class="section">
+
+    <h2 class="section-title">
+        <span><?php echo $this->material['title']; ?></span>
+    </h2>
+
+    <div style="margin-left: 80px; margin-right: 50px;">
+        <p style="text-align: justify;">
+            <?php echo $this->material['description']; ?>
+        </p>
+
+        <ul>
+            <?php foreach ($this->materialLink as $materialLink) : ?>
+                <li>
+                    <a href="<?php echo $materialLink['link']; ?>">
+                        <?php echo $materialLink['link']; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    
+</div>

@@ -1,0 +1,48 @@
+<!-- tab bottom -->
+
+<div id="wrap-tab-dest-bottom">
+
+    <?php if(!empty($this->destination['whatToDo'])) : ?>
+    <div class="tab-bottom <?php echo ($this->tab == 'todo')? 'current' : ''?>">
+        <a href="<?php echo $this->url(array('action' => 'todo',  'language' => $this->languageID,'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"><?php echo strtoupper($this->translate('id_poi_todo')); ?></a>
+    </div>  
+    <?php endif; ?>
+
+
+    <?php if(!empty($this->destination['whereToStay'])) : ?>
+    <div class="tab-bottom  <?php echo ($this->tab == 'tostay')? 'current' : ''?>">
+        <a href="<?php echo $this->url(array('action' => 'tostay', 'language' => $this->languageID,'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"><?php echo strtoupper($this->translate('id_poi_stay')); ?></a>
+    </div>  
+    <?php endif; ?>
+
+    <?php if(!empty($this->destination['whereToEat'])) : ?>
+    <div class="tab-bottom <?php echo ($this->tab == 'toeat')? 'current' : ''?>">
+        <a href="<?php echo $this->url(array('action' => 'toeat', 'language' => $this->languageID,'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"><?php echo strtoupper($this->translate('id_poi_eat')); ?></a>
+    </div>
+    <?php endif; ?>
+    
+    <?php if(!empty($this->destination['whatToBuy'])) : ?>
+    <div class="tab-bottom <?php echo ($this->tab == 'tobuy')? 'current' : ''?>">
+        <a href="<?php echo $this->url(array('action' => 'tobuy', 'language' => $this->languageID,'destId' => $this->destId,'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"><?php echo strtoupper($this->translate('id_poi_buy')); ?></a>
+    </div>
+    <?php endif; ?>
+
+    <?php if(!empty($this->destination['howToGetAround'])) : ?>
+    <div class="tab-bottom <?php echo ($this->tab == 'getaround')? 'current' : ''?>">
+        <a href="<?php echo $this->url(array('action' => 'getaround', 'language' => $this->languageID,'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"><?php echo strtoupper($this->translate('id_poi_around')); ?></a>
+    </div>
+    <?php endif; ?>
+    
+    <?php if(!empty($this->destination['howToGetThere'])) : ?>
+    <div class="tab-bottom <?php echo ($this->tab == 'getthere')? 'current' : ''?>">
+        <a href="<?php echo $this->url(array('action' => 'getthere', 'language' => $this->languageID,'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"><?php echo strtoupper($this->translate('id_poi_where')); ?></a>
+    </div>
+    <?php endif; ?>
+    
+    <?php if(!empty($this->destination['tips'])) : ?>
+    <div class="tab-bottom <?php echo ($this->tab == 'tips')? 'current' : ''?>">
+        <a href="<?php echo $this->url(array('action' => 'tips', 'language' => $this->languageID,'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action') ?>"><?php echo strtoupper($this->translate('id_poi_tips')); ?></a>
+    </div> 
+    <?php endif; ?>
+</div>
+<!--end tab bottom-->

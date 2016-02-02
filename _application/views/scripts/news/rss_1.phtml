@@ -1,0 +1,17 @@
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
+<rss version ="2">
+    <channel>
+        <title>Indonesia Berbudaya News RSS</title>
+        <link><?php echo $this->baseUrl('/news') ?></link>
+        <description>Latest news about Indonesia Berbudaya</description>
+        <language>English</language>
+        <?php foreach($this->data as $feed): ?>
+            <item>
+                    <title><?php echo $feed['title']; ?></title>
+                    <link><?php echo $this->baseUrl('/news/detail' .$feed['news_id'].'/'.$this->makeUrlFormat($feed['title'])) ?></link>
+                    <description><?php echo $feed['content']; ?></description>
+            </item>
+        <?php endforeach; ?>
+    </channel>
+    
+</rss>

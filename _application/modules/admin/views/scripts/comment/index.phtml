@@ -1,0 +1,148 @@
+<!-- style css untuk halaman admin -->
+<?php $this->placeholder('styles')->captureStart(); ?>
+<link href="<?php echo $this->scriptUrl('/styles/table-css.php'); ?>" 
+      rel="stylesheet" type="text/css" />
+      <?php $this->placeholder('styles')->captureEnd(); ?>
+
+<!-- print out any message from create/saved page proccess -->
+<?php
+if (!empty($this->message)) {
+  foreach ($this->message as $warn)
+    echo $this->flashMessage($warn);
+}
+?>
+
+<!-- set page context -->
+<h2>Comment Menu</h2>
+<h3 class="wide">Update or Delete from the list</h3>
+
+<div class="table-container">
+  <!-- generating the filter panel and row show per page filter -->
+  <?php echo $this->partial('comment/filter-panel.phtml', $this->filter); ?>
+  <?php echo $this->render('partial/page-filter.phtml'); ?>
+
+  <!-- if the paginator is not empty then print out the data -->
+  <br class="clearfloat" />
+  <?php if (count($this->paginator) > 0) : ?>
+
+    <!-- print out the pagination control at the top of the table-->
+    <?php echo $this->paginationControl($this->paginator, 'Sliding', 'partial/pagination-control.phtml');
+    ?>
+
+    <br class="clearfloat" />
+    <form name="comment" id="comment" method="post" action="<?php echo $this->rootUrl(); ?>/admin/comment/action/">
+      <div align="center" id="selectFlag" >
+        <table id="flagSelect">
+          <td><a href="javascript:doSubmit('delete_selected')" class="btn btn-warning pull-left">Delete Selected</a></td>
+        </table>
+        <input type="hidden" name="actionnya" value="" />
+      </div>
+      <table style="width: 100%;" cellspacing="0" class="table table-striped table-bordered">
+
+        <?php echo $this->partial('comment/table-header.phtml') . "\n"; ?>
+        <tbody>
+          <?php $row_index = 0; ?>
+          <?php echo $this->partialLoop('comment/table-row.phtml', $this->paginator) . "\n";
+          ?>
+        </tbody>
+      </table>
+    </form>
+    <!-- print out the pagination control at the bottom of the table -->
+    <?php echo $this->paginationControl($this->paginator, 'Sliding', 'partial/pagination-control.phtml');
+    ?>
+
+    <br class="clearfloat" />
+  <?php endif; ?>
+</div>
+
+<div id="processLoader" class="hidden">
+  <img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>
+</div>
+
+<!-- start capturing the javascript -->
+<?php
+$this->placeholder('jsInline')->captureStart();
+$js_link = array('jquery/thickbox-compressed');
+echo $this->jsView(2, $js_link);
+?>
+<script type="text/javascript">   
+  /**
+   * IS: Comment ada
+   * FS: Comment tidak ada, dan dihapus dari basis data
+   * Desc: Menghapus comment, 
+   *       send request via ajax for deleting the comment from the table
+   */
+  function deleteComment(comment_id)
+  {
+    if (confirm('Do you really want to delete this comment?')) {
+      tb_show("", "#TB_inline?height=25&width=210&inlineId=processLoader&modal=true", "");
+      $.ajax(
+      {
+        type: "POST",
+        url: "<?php echo $this->rootUrl('/admin/ajax/deletecomment'); ?>",
+        data: {commentId:comment_id}, 
+        success: function(data) {
+          window.location.reload(true); },
+        error: function() {
+          alert('Error occured, please report this to the developer'); }
+      });    
+    }        
+  }
+
+  function getAllCheckBoxes(elform, elname) {
+    var hasil = Array();
+    var n = 0;
+    for (var i=0; i<elform.elements.length; i++) {
+      if (elform.elements[i].type == 'checkbox' && elform.elements[i].name == elname) {
+        hasil[n++] = elform.elements[i];
+      }
+    }
+    return hasil;
+  }
+
+  var checkedAll = false;
+  var chk = getAllCheckBoxes(document.comment, 'comment_item[]');
+
+  function checkBoxAll(){
+    if (!checkedAll) {
+      checkedAll = true;
+      for (i = 0; i < chk.length; i++)
+        chk[i].checked = true;
+    } else {
+      checkedAll = false;
+      for (i = 0; i < chk.length; i++)
+        chk[i].checked = false;
+    }
+  }
+
+  function doSubmit(action) {
+
+    var eform = document.comment;
+       
+    if (confirm("This will delete multiple comment. Proceed? "))
+    {
+      eform.actionnya.value = 'delete_selected';
+      eform.submit();
+      for (i = 0; i < eform.elements.length; i++){
+        if (eform.elements[i].type == 'checkbox')
+          if(eform.elements[i].checked){
+            switch (action) {
+              case 'delete_selected':
+                break;
+              default:
+              //do nothing
+          }
+      }
+    }
+  }
+}
+
+
+
+
+$(function()
+{
+  $('.filter-panel').show();
+});
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

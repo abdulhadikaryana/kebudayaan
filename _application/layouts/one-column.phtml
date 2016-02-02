@@ -1,0 +1,24 @@
+<?php echo $this->layout()->render('html-header') ?>
+
+<div class="row">
+    <div class="twelve columns">
+        <div id="wrapper-content">            
+            <div class="row">
+                <div class="twelve columns">
+                    <?php if(!$this->disableHeader == TRUE): ?>
+                            <?php echo $this->layout()->render('header-image'); ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div id="content">
+                <div class="row"> 
+                    <div class="twelve columns">                        
+                        <?php echo $this->layout()->content ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->layout()->render('html-footer') ?>

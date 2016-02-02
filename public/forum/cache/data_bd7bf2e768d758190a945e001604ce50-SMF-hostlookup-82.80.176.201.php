@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454403789 < time()) $expired = true; else{$expired = false; $value = 's:37:"bzq-82-80-176-201.static.bezeqint.net";';}?>

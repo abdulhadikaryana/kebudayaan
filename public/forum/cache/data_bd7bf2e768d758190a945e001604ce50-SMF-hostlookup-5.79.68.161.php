@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454408369 < time()) $expired = true; else{$expired = false; $value = 's:24:"Relay-J.tor-exit.network";';}?>

@@ -1,0 +1,1572 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: strictthemes.com\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-20 21:35+0100\n"
+"PO-Revision-Date: 2014-04-20 21:35+0100\n"
+"Last-Translator: StrictThemes <info@strictthemes.com>\n"
+"Language-Team: StrictThemes <info@strictthemes.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: stkit.php:92
+msgid "Current theme isn't compatible with ST Kit plugin."
+msgstr "Дана тема не сумісна з плагіном ST Kit."
+
+#: stkit.php:92
+msgid "Get a compatible theme"
+msgstr "Купити сумісну тему."
+
+#: admin/st_admin.php:136
+msgid "Theme Panel"
+msgstr "Панель теми"
+
+#: admin/st_admin.php:139
+msgid "Projects"
+msgstr "Проекти"
+
+#: admin/st_admin.php:142
+#: admin/st_layout_settings.php:122
+msgid "Layout"
+msgstr "Макет"
+
+#: admin/st_admin.php:145
+msgid "Fonts"
+msgstr "Шрифти"
+
+#: admin/st_admin.php:148
+#: admin/st_style_settings.php:113
+msgid "Style"
+msgstr "Стиль"
+
+#: admin/st_admin.php:151
+#: admin/st_misc_settings.php:401
+msgid "Miscellaneous"
+msgstr "Різне"
+
+#: admin/st_admin.php:154
+msgid "Import / Export"
+msgstr "Імпорт / Експорт"
+
+#: admin/st_admin.php:157
+msgid "Update"
+msgstr "Оновлення"
+
+#: admin/st_admin.php:278
+#: admin/st_admin.php:349
+#: admin/st_admin.php:420
+#: admin/st_admin.php:483
+#: admin/st_admin.php:545
+#: admin/st_admin.php:630
+#: admin/st_admin.php:672
+#: admin/st_admin.php:726
+msgid "Changes have been saved."
+msgstr "Збережено."
+
+#: admin/st_fonts_settings.php:58
+msgid "Fonts Settings"
+msgstr "Параметры шрифтов"
+
+#: admin/st_fonts_settings.php:71
+#: admin/st_fonts_settings.php:101
+#: admin/st_import_settings.php:64
+#: admin/st_import_settings.php:84
+#: admin/st_layout_settings.php:79
+#: admin/st_major_settings.php:107
+#: admin/st_misc_settings.php:80
+#: admin/st_misc_settings.php:113
+#: admin/st_projects_settings.php:78
+#: admin/st_projects_settings.php:119
+#: admin/st_style_settings.php:72
+#: admin/st_style_settings.php:109
+#: admin/st_update_settings.php:69
+msgid "General"
+msgstr "Основне"
+
+#: admin/st_fonts_settings.php:108
+msgid "Font size"
+msgstr "Розмір шрифту"
+
+#: admin/st_fonts_settings.php:114
+msgid "Content font size."
+msgstr "Розмір шрифту для контенту."
+
+#: admin/st_fonts_settings.php:128
+msgid "Font type"
+msgstr "Тип шрифта"
+
+#: admin/st_fonts_settings.php:142
+msgid "System fonts"
+msgstr "Системні шрифти"
+
+#: admin/st_fonts_settings.php:143
+msgid "Standard"
+msgstr "Стандарт"
+
+#: admin/st_fonts_settings.php:145
+msgid "Google fonts"
+msgstr "Google шрифти"
+
+#: admin/st_fonts_settings.php:146
+#: admin/st_style_settings.php:76
+#: admin/st_style_settings.php:235
+msgid "Custom"
+msgstr "Власне"
+
+#: admin/st_fonts_settings.php:182
+msgid "Select a font family."
+msgstr "Виберіть групу шрифтів."
+
+#: admin/st_fonts_settings.php:207
+msgid "Choose the font you want from Google <a href=\"http://google.com/fonts\">library</a> and press"
+msgstr "Виберіть шрифт з Google -<a href=\"http://google.com/fonts\">бібліотеки</a> і натисніть"
+
+#: admin/st_fonts_settings.php:221
+msgid "Choose the styles you want."
+msgstr "Виберіть стилі."
+
+#: admin/st_fonts_settings.php:233
+msgid "Choose the character sets you want."
+msgstr "Переконайтеся, що обраний шрифт підтримує кирилицю і не забудьте його ввімкнути."
+
+#: admin/st_fonts_settings.php:246
+msgid "Add code."
+msgstr "Додати код."
+
+#: admin/st_fonts_settings.php:259
+msgid "Add CSS"
+msgstr "Додайте CSS-стилі."
+
+#: admin/st_import_settings.php:51
+msgid "Import-Export Settings"
+msgstr "Імпорт/Експорт налаштувань"
+
+#: admin/st_import_settings.php:53
+msgid "Save changes"
+msgstr "Зберегти зміни"
+
+#: admin/st_import_settings.php:89
+msgid "Data"
+msgstr "Дані"
+
+#: admin/st_import_settings.php:93
+msgid "Import or Export all settings."
+msgstr "Імпорт-Експорт всіх налаштувань."
+
+#: admin/st_layout_settings.php:66
+msgid "Layout Settings"
+msgstr "Налаштування Layout"
+
+#: admin/st_layout_settings.php:83
+msgid "Header"
+msgstr "Хедер"
+
+#: admin/st_layout_settings.php:87
+#: admin/st_layout_settings.php:215
+msgid "Footer"
+msgstr "Футер"
+
+#: admin/st_layout_settings.php:91
+#: admin/st_layout_settings.php:287
+msgid "Social"
+msgstr "Соц. мережі"
+
+#: admin/st_layout_settings.php:129
+#: admin/st_major_settings.php:161
+msgid "Type"
+msgstr "Тип"
+
+#: admin/st_layout_settings.php:134
+msgid "Responsive"
+msgstr "Адаптивний"
+
+#: admin/st_layout_settings.php:137
+msgid "Classic"
+msgstr "Класичний"
+
+#: admin/st_layout_settings.php:150
+msgid "Design"
+msgstr "Дизайн"
+
+#: admin/st_layout_settings.php:155
+msgid "Wide"
+msgstr "Обмежений"
+
+#: admin/st_layout_settings.php:158
+msgid "Boxed"
+msgstr "Повнорозмірний"
+
+#: admin/st_layout_settings.php:219
+msgid "Scheme"
+msgstr "Схема"
+
+#: admin/st_layout_settings.php:249
+msgid " Select a scheme of footer sidebars."
+msgstr "Виберіть розташування сайдбарів у футерi."
+
+#: admin/st_layout_settings.php:293
+msgid "Icons"
+msgstr "Iконки"
+
+#: admin/st_layout_settings.php:298
+#: admin/st_major_settings.php:753
+msgid "Display"
+msgstr "Показати"
+
+#: admin/st_layout_settings.php:300
+msgid "Display social icons."
+msgstr "Показати іконки соц. мереж."
+
+#: admin/st_layout_settings.php:308
+msgid "URLs"
+msgstr "URLs"
+
+#: admin/st_layout_settings.php:322
+msgid "Enter URL paths to your network profiles."
+msgstr "Вкажіть адреси своїх профайлів в соц. мережах."
+
+#: admin/st_layout_settings.php:328
+msgid "Custom Icons"
+msgstr "Cвої іконки"
+
+#: admin/st_layout_settings.php:333
+msgid "You also can set a custom icons, counters etc. Shortcodes allowed."
+msgstr "Ви також можете додати власні іконки, лічильники та ін. Можна використовувати шорткоди."
+
+#: admin/st_layout_settings.php:334
+msgid "Draft"
+msgstr "Приклад"
+
+#: admin/st_major_settings.php:94
+msgid "Main Settings"
+msgstr "Основні налаштування"
+
+#: admin/st_major_settings.php:111
+#: admin/st_major_settings.php:377
+msgid "Blog"
+msgstr "Блог"
+
+#: admin/st_major_settings.php:115
+#: admin/st_major_settings.php:617
+msgid "Post"
+msgstr "Пост"
+
+#: admin/st_major_settings.php:119
+#: admin/st_major_settings.php:928
+msgid "Page"
+msgstr "Сторінка"
+
+#: admin/st_major_settings.php:123
+msgid "Sidebar"
+msgstr "Сайдбар"
+
+#: admin/st_major_settings.php:153
+msgid "Logo"
+msgstr "Логотип"
+
+#: admin/st_major_settings.php:167
+msgid "Text"
+msgstr "Текст"
+
+#: admin/st_major_settings.php:172
+msgid "Image"
+msgstr "Зображення"
+
+#: admin/st_major_settings.php:185
+msgid "Site Name"
+msgstr "Назва сайту"
+
+#: admin/st_major_settings.php:191
+msgid "Enter the site name e.g. <code>Site&lt;strong>Name&lt;/strong></code>"
+msgstr "Вкажіть назву сайту напр. <code>Мій&lt;strong>Сайт&lt;/strong></code>"
+
+#: admin/st_major_settings.php:205
+#: admin/st_major_settings.php:266
+msgid "Image URL"
+msgstr "Логотип"
+
+#: admin/st_major_settings.php:211
+msgid "Insert an image URL e.q. <code>http://yoursite.com/image.png</code> <br>JPG, GIF or PNG formats allowed."
+msgstr "Вкажіть адресу картинки напр. <code>http://yoursite.com/image.png</code><br>Можна використовувати JPG, GIF або PNG формат."
+
+#: admin/st_major_settings.php:223
+msgid "Image 2x URL"
+msgstr "Логотипу подвійного розміру"
+
+#: admin/st_major_settings.php:229
+msgid "If you would like to provide a compatibility with HiDPI screens, please, insert a doubled logo e.g. if your normal logo dimentions are 150x50 pixels, the doubled version must be 300x100 pixels."
+msgstr "Якщо ви бажаєте щоб сайт був сумісний з високодіскретнимі дисплеями, будь ласка, майте логотип з подвоєними розмірами. Наприклад, якщо звичайний логотип має розміри 150 на 50 пікселів, то подвоєна версія повинна бути 300 на 100 пікселів."
+
+#: admin/st_major_settings.php:262
+msgid "Favicon"
+msgstr "Іконка сайту"
+
+#: admin/st_major_settings.php:270
+#: admin/st_misc_settings.php:337
+msgid "e.q."
+msgstr "напр."
+
+#: admin/st_major_settings.php:288
+msgid "Copyrights"
+msgstr "Копірайти"
+
+#: admin/st_major_settings.php:292
+msgid "Yours"
+msgstr "Ваші"
+
+#: admin/st_major_settings.php:296
+msgid "Enter your copyrights here."
+msgstr "Вкажіть свої копірайти."
+
+#: admin/st_major_settings.php:305
+msgid "Developer's"
+msgstr "Розробника"
+
+#: admin/st_major_settings.php:310
+#: admin/st_misc_settings.php:129
+#: admin/st_misc_settings.php:152
+#: admin/st_misc_settings.php:176
+#: admin/st_misc_settings.php:200
+#: admin/st_misc_settings.php:224
+#: admin/st_misc_settings.php:248
+#: admin/st_misc_settings.php:410
+msgid "Disabled"
+msgstr "Відключено"
+
+#: admin/st_major_settings.php:312
+msgid "Remove developer's link from the footer."
+msgstr "Видалити посилання розробника з футера."
+
+#: admin/st_major_settings.php:332
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: admin/st_major_settings.php:336
+msgid "Code"
+msgstr "Код"
+
+#: admin/st_major_settings.php:340
+msgid "Put here your tracking code."
+msgstr "Вставте трекінг-код."
+
+#: admin/st_major_settings.php:387
+#: admin/st_projects_settings.php:247
+msgid "Template"
+msgstr "Шаблон"
+
+#: admin/st_major_settings.php:420
+msgid "Select template for archive and blog page."
+msgstr "Виберіть шаблон для архівів і блогу."
+
+#: admin/st_major_settings.php:436
+#: admin/st_major_settings.php:445
+msgid "Featured posts"
+msgstr "Виділені пости"
+
+#: admin/st_major_settings.php:451
+msgid "A quantity of featured (sticky) posts."
+msgstr "Кількість виділених (верхніх) постів."
+
+#: admin/st_major_settings.php:471
+msgid "Display on frontpage"
+msgstr "Показувати на головній сторінці."
+
+#: admin/st_major_settings.php:473
+msgid "Display sticky posts on frontpage."
+msgstr "Показувати \"липкі\" пости на головній сторінці."
+
+#: admin/st_major_settings.php:493
+msgid "Display on archives"
+msgstr "Показувати в архівах."
+
+#: admin/st_major_settings.php:495
+msgid "Display sticky posts on archives: categories, tags, formats."
+msgstr "Показувати \"липкі\" пости на сторінках архівів: категорій, тегів, форматів та iн."
+
+#: admin/st_major_settings.php:515
+msgid "Display on single post"
+msgstr "Показувати на сторінці з постом."
+
+#: admin/st_major_settings.php:517
+msgid "Display sticky posts on single post."
+msgstr "Показувати \"липкі\" пости на сторінці з постом."
+
+#: admin/st_major_settings.php:537
+msgid "Display on other pages"
+msgstr "Показувати на інших сторінках."
+
+#: admin/st_major_settings.php:539
+msgid "Display sticky posts on other kind of pages."
+msgstr "Показувати \"липкі\" пости на інших сторінках."
+
+#: admin/st_major_settings.php:559
+msgid "Exclude from blogroll"
+msgstr "Виключити з блогролла"
+
+#: admin/st_major_settings.php:561
+msgid "Do not display sticky posts on blogroll."
+msgstr "Чи не показувати \"липкі\" пости в списку останніх постів."
+
+#: admin/st_major_settings.php:581
+msgid "Query cache"
+msgstr "Кеш результатів запиту"
+
+#: admin/st_major_settings.php:583
+msgid "Store query result within 12 hours."
+msgstr "Зберігати результат протягом 12 годин."
+
+#: admin/st_major_settings.php:634
+msgid "Under title"
+msgstr "Під заголовком"
+
+#: admin/st_major_settings.php:636
+msgid "Display custom data under a title. Shortcodes allowed."
+msgstr "Показувати власний контент під заголовком. Можна використовувати шорткоди."
+
+#: admin/st_major_settings.php:661
+msgid "Above post"
+msgstr "Вище поста"
+
+#: admin/st_major_settings.php:663
+msgid "Display custom data above a post. Shortcodes allowed."
+msgstr "Показувати власний контент перед постом. Можна використовувати шорткоди."
+
+#: admin/st_major_settings.php:688
+msgid "Featured image"
+msgstr "Обране зображення"
+
+#: admin/st_major_settings.php:690
+msgid "Display featured image on post page."
+msgstr "Показувати обране зображення на сторінці з постом."
+
+#: admin/st_major_settings.php:712
+msgid "Excerpt"
+msgstr "Витримка"
+
+#: admin/st_major_settings.php:714
+msgid "Display excerpt on post page."
+msgstr "Показувати витримку на сторінці з постом."
+
+#: admin/st_major_settings.php:736
+msgid "Meta"
+msgstr "Метадані"
+
+#: admin/st_major_settings.php:738
+msgid "Author info, post views, nice time."
+msgstr "Інформація про автора, лічильник переглядів, красивий час."
+
+#: admin/st_major_settings.php:751
+msgid "Author's info"
+msgstr "Інформація про автора"
+
+#: admin/st_major_settings.php:753
+msgid "and"
+msgstr "і"
+
+#: admin/st_major_settings.php:753
+msgid "author's bio"
+msgstr "Iнформація про автора"
+
+#: admin/st_major_settings.php:753
+msgid "at the post page"
+msgstr "на сторінці з постом"
+
+#: admin/st_major_settings.php:767
+msgid "Post views"
+msgstr "Лічильник переглядів"
+
+#: admin/st_major_settings.php:769
+msgid "Number of views per each post."
+msgstr "Кількість переглядів кожного поста."
+
+#: admin/st_major_settings.php:783
+msgid "Nice time"
+msgstr "Гарний час"
+
+#: admin/st_major_settings.php:785
+msgid "e.g. <strong>3 days ago</strong> instead of"
+msgstr "напр. <strong>3 дні тому</strong> замість"
+
+#: admin/st_major_settings.php:814
+msgid "Under post"
+msgstr "Під постом"
+
+#: admin/st_major_settings.php:816
+msgid "Display custom data under a post. Shortcodes allowed."
+msgstr "Показувати власний контент в кінці поста. Можна використовувати шорткоди."
+
+#: admin/st_major_settings.php:841
+#: admin/st_major_settings.php:945
+msgid "Comments"
+msgstr "Коментарі"
+
+#: admin/st_major_settings.php:843
+#: admin/st_major_settings.php:947
+msgid "Display comments."
+msgstr "Показувати коментарі."
+
+#: admin/st_major_settings.php:853
+msgid "Website the input field"
+msgstr "Сайт"
+
+#: admin/st_major_settings.php:855
+msgid "Display the 'Website' input field on the comment form."
+msgstr "Показувати поле \"Сайт\" у формі для коментування."
+
+#: admin/st_major_settings.php:864
+msgid "Pingbacks"
+msgstr "Пінгбекі"
+
+#: admin/st_major_settings.php:866
+msgid "Enable pingbacks."
+msgstr "Включити пінгбекі."
+
+#: admin/st_major_settings.php:893
+msgid "Related posts"
+msgstr "Схожі пости."
+
+#: admin/st_major_settings.php:895
+msgid "Display related posts."
+msgstr "Показувати схожі пости."
+
+#: admin/st_major_settings.php:987
+msgid "Additional Sidebars"
+msgstr "Додаткові сайдбари"
+
+#: admin/st_major_settings.php:991
+#: admin/st_misc_settings.php:378
+msgid "Quantity"
+msgstr "Кількість"
+
+#: admin/st_major_settings.php:997
+msgid "If you need more sidebars besides standard, please, set a number you want, but at least 2."
+msgstr "Якщо Вам необхідно більше сайдбарiв крім стандартних, будь ласка, вкажіть кількість, яка Вам потрібна, але не менше двох."
+
+#: admin/st_misc_settings.php:67
+msgid "Miscellaneous Settings"
+msgstr "Різні настройки"
+
+#: admin/st_misc_settings.php:84
+#: admin/st_misc_settings.php:306
+msgid "AdSense"
+msgstr "AdSense"
+
+#: admin/st_misc_settings.php:88
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: admin/st_misc_settings.php:124
+msgid "Sanitization"
+msgstr "Фільтрація даних"
+
+#: admin/st_misc_settings.php:131
+msgid "Do not sanitize input data on text areas of Theme Panel."
+msgstr "Не робити фільтрацію даних, якi вводяться в текстові поля Панелі Теми."
+
+#: admin/st_misc_settings.php:147
+msgid "Admin Bar"
+msgstr "Адмін-панель"
+
+#: admin/st_misc_settings.php:154
+msgid "Do not show admin bar on the front-end."
+msgstr "Не показувати адмін-панель на сайті."
+
+#: admin/st_misc_settings.php:171
+msgid "prettyPhoto"
+msgstr "prettyPhoto"
+
+#: admin/st_misc_settings.php:178
+msgid "Disable the built-in lightbox plugin."
+msgstr "Відключити вбудований плагін модальних вікон."
+
+#: admin/st_misc_settings.php:195
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: admin/st_misc_settings.php:202
+msgid "Disable compatibility with HiDPI devices like a laptops with Retina display."
+msgstr "Відключити сумісність з високодіскретнимі дисплеями такими як ноутбуки з екранами Retina."
+
+#: admin/st_misc_settings.php:219
+msgid "Shortcodes"
+msgstr "Шорткоди"
+
+#: admin/st_misc_settings.php:226
+msgid "Disable the built-in ST shortcodes. Some functionality based on shortcodes will be inactive e.g. Gallery post format."
+msgstr "Відключити вбудовані ST-шорткоди. Деяка частина функціоналу заснованого на даних шорткодах буде недоступна. Напр. формат постів \"Галерея \"."
+
+#: admin/st_misc_settings.php:243
+msgid "Sticky Menu"
+msgstr "\"Липке\" меню"
+
+#: admin/st_misc_settings.php:250
+msgid "Disable Sticky Menu option."
+msgstr "Відключити опцію \"липкого\" меню."
+
+#: admin/st_misc_settings.php:267
+msgid "Sidebar Width"
+msgstr "Ширина сайдбара"
+
+#: admin/st_misc_settings.php:272
+msgid "Alternative"
+msgstr "Альтернативний"
+
+#: admin/st_misc_settings.php:274
+msgid "Set an alternative width of general sidebar."
+msgstr "Альтернативная ширина основного сайдбара."
+
+#: admin/st_misc_settings.php:315
+#: admin/st_projects_settings.php:123
+msgid "Status"
+msgstr "Статус"
+
+#: admin/st_misc_settings.php:320
+#: admin/st_projects_settings.php:128
+msgid "Enabled"
+msgstr "Включено"
+
+#: admin/st_misc_settings.php:322
+msgid "Make the AdSense ad units responsive. Fill form below, and use ST AdSense widget or shortcode <br>e.g. <code>[adsense slot=1234567890 sizes=728x90|580x400|468x60|300x250]</code>"
+msgstr "Зробити рекламні блоки AdSense адаптивними. Заповніть форму і можете починати використовувати віджет ST AdSense або шотркод <code>[adsense slot=1234567890 sizes=728x90|580x400|468x60|300x250]</code>"
+
+#: admin/st_misc_settings.php:333
+msgid "Client ID"
+msgstr "Номер клієнта"
+
+#: admin/st_misc_settings.php:374
+msgid "Products per page"
+msgstr "Продуктів на сторінку"
+
+#: admin/st_misc_settings.php:384
+msgid "Set a number of products per page."
+msgstr "Виберіть кількість продуктів відображаємих на сторінці."
+
+#: admin/st_misc_settings.php:405
+msgid "Assets"
+msgstr "Активи"
+
+#: admin/st_misc_settings.php:412
+msgid "Do not load JS & CSS files on non-WooCommerce pages."
+msgstr "Не довантажувати JS і CSS-файли WooCommerce на нерелевантних сторінках."
+
+#: admin/st_projects_settings.php:65
+msgid "Projects Settings"
+msgstr "Налаштування проектів"
+
+#: admin/st_projects_settings.php:82
+#: admin/st_projects_settings.php:216
+msgid "Portfolio"
+msgstr "Портфоліо"
+
+#: admin/st_projects_settings.php:86
+msgid "Taxonomy"
+msgstr "Таксонометрiя"
+
+#: admin/st_projects_settings.php:130
+msgid "Turn on projects on the website."
+msgstr "Активувати проекти на даному сайті."
+
+#: admin/st_projects_settings.php:148
+msgid "Slugs"
+msgstr "Шляхи"
+
+#: admin/st_projects_settings.php:152
+msgid "Post slug"
+msgstr "Шлях для постів"
+
+#: admin/st_projects_settings.php:155
+#: admin/st_projects_settings.php:165
+#: admin/st_projects_settings.php:175
+msgid "Do not forget to update Permalinks Settings after these changes."
+msgstr "Після цього, будь ласка, не забудьте оновити налаштування посилань."
+
+#: admin/st_projects_settings.php:156
+#: admin/st_projects_settings.php:166
+#: admin/st_projects_settings.php:176
+#: admin/st_projects_settings.php:332
+#: admin/st_projects_settings.php:342
+#: admin/st_projects_settings.php:352
+msgid "<strong>WARNING!</strong> No white spaces, please. Latin symbols only."
+msgstr "<strong>УВАГА!</strong> Без пробілу, будь ласка. Тільки латинські символи."
+
+#: admin/st_projects_settings.php:162
+msgid "Category slug"
+msgstr "Шлях для категорій"
+
+#: admin/st_projects_settings.php:166
+msgid "The <code>category</code> slug not allowed."
+msgstr "Шлях <code>category</code> не допустимо."
+
+#: admin/st_projects_settings.php:172
+msgid "Tag slug"
+msgstr "Шлях для тегів"
+
+#: admin/st_projects_settings.php:176
+msgid "The <code>tag</code> slug not allowed."
+msgstr "Шлях <code>tag</code> не допустимо."
+
+#: admin/st_projects_settings.php:226
+msgid "Projects per page"
+msgstr "Проектів на сторінку"
+
+#: admin/st_projects_settings.php:232
+msgid "A quantity of projects per portfolio page."
+msgstr "Кількість проектів на сторінку."
+
+#: admin/st_projects_settings.php:283
+msgid "Select template for portolio."
+msgstr "Виберіть шаблон для портфоліо."
+
+#: admin/st_projects_settings.php:324
+msgid "Taxonomies"
+msgstr "Таксонометріі"
+
+#: admin/st_projects_settings.php:328
+msgid "Post type"
+msgstr "Тип поста"
+
+#: admin/st_projects_settings.php:331
+#: admin/st_projects_settings.php:341
+#: admin/st_projects_settings.php:351
+msgid "Make sure you have to make these changes. Otherwise, please, leave it default."
+msgstr "Вносьте зміни тільки в разі крайньої необхідності. Рекомендується залишити як є."
+
+#: admin/st_projects_settings.php:338
+msgid "Category"
+msgstr "Категорія"
+
+#: admin/st_projects_settings.php:348
+msgid "Tag"
+msgstr "Тег"
+
+#: admin/st_style_settings.php:59
+msgid "Style Settings"
+msgstr "Налаштування стилю"
+
+#: admin/st_style_settings.php:142
+msgid "Select a style."
+msgstr "Виберіть стиль."
+
+#: admin/st_style_settings.php:160
+msgid "Colors"
+msgstr "Кольори"
+
+#: admin/st_style_settings.php:170
+msgid "Primary"
+msgstr "Основний"
+
+#: admin/st_style_settings.php:176
+msgid "Select a primary color."
+msgstr "Виберіть основний колір."
+
+#: admin/st_style_settings.php:192
+msgid "Secondary"
+msgstr "Додатковий"
+
+#: admin/st_style_settings.php:198
+msgid "Select a secondary color."
+msgstr "Виберіть додатковий колір."
+
+#: admin/st_style_settings.php:239
+msgid "CSS styles"
+msgstr "CSS-стилі"
+
+#: admin/st_style_settings.php:243
+msgid "To prevent problems with theme update, write here any custom CSS (or use <a href=\"http://codex.wordpress.org/Child_Themes\">child themes</a>)."
+msgstr "Щоб уникнути проблем з оновленнями теми рекомендується використовувати дане поле для власних CSS-стилів (або використовувати <a href=\"http://codex.wordpress.org/%D0%94%D0%BE%D1%87%D0%B5%D1%80%D0%BD%D0%B8%D0%B5_%D1%82%D0%B5%D0%BC%D1%8B\">дочірні теми</a>)."
+
+#: admin/st_update_settings.php:56
+msgid "Update Settings"
+msgstr "Налаштування оновлень"
+
+#: admin/st_update_settings.php:102
+msgid "ThemeForest"
+msgstr "ThemeForest"
+
+#: admin/st_update_settings.php:107
+msgid "Fill fields below to get notification about new version of theme."
+msgstr "Заповніть цю форму щоб отримувати автоматичні оновлення теми."
+
+#: admin/st_update_settings.php:113
+msgid "Username"
+msgstr "Iм'я користувача"
+
+#: admin/st_update_settings.php:117
+msgid "Enter your ThemeForest username."
+msgstr "Введіть ваше ім'я користувача в маркетплейс ThemeForest."
+
+#: admin/st_update_settings.php:123
+msgid "API key"
+msgstr "API-ключ"
+
+#: admin/st_update_settings.php:127
+msgid "To get your API key go to <code>ThemeForest > Your profile > Settings > API Keys</code> and Generate API Key."
+msgstr "Щоб отримати ключ, будь ласка, згенеруйте його на сторінці <code>ThemeForest > Your profile > Settings > API Keys</code>."
+
+#: components/adsense/functions/adsense.php:36
+msgid "Responsive AdSense units."
+msgstr "Адаптивні AdSense-блоки"
+
+#: components/adsense/functions/adsense.php:154
+msgid "Slot"
+msgstr "Слот"
+
+#: components/adsense/functions/adsense.php:157
+msgid "Ad unit slot."
+msgstr "Слот рекламного блоку."
+
+#: components/adsense/functions/adsense.php:163
+msgid "Sizes"
+msgstr "Розміри"
+
+#: components/adsense/functions/adsense.php:182
+msgid "Select the sizes."
+msgstr "Виберіть розміри."
+
+#: components/adsense/functions/adsense.php:230
+msgid "Enter your AdSense client ID on Theme Panel, and select a sizes of Ad Unit."
+msgstr "Вкажіть ваш клієнтський номер AdSense в панелі теми та виберіть розміри рекламного блоку."
+
+#: components/adsense/functions/adsense.php:322
+msgid "Make sure the slot number, client ID, and sizes of ad unit."
+msgstr "Перевірте номер слота, номер клієнта і розміри рекламного блоку."
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:62
+msgid "Browse:"
+msgstr " "
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:65
+#: components/breadcrumbs/functions/breadcrumbs.php:43
+msgid "Home"
+msgstr "Головна"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:314
+msgid "g:i a"
+msgstr "g:i a"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:317
+#, php-format
+msgid "Minute %1$s"
+msgstr "Хвил. %1$s"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:317
+msgid "i"
+msgstr "i"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:320
+msgid "g a"
+msgstr "g a"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:331
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:337
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:342
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:347
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:411
+msgid "Y"
+msgstr "Y"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:332
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:343
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:415
+msgid "F"
+msgstr "F"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:333
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:419
+msgid "d"
+msgstr "d"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:338
+#, php-format
+msgid "Week %1$s"
+msgstr "Тиж. %1$s"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:354
+#, php-format
+msgid "Search results for &quot;%1$s&quot;"
+msgstr "Результати пошуку для &quot;%1$s&quot;"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:358
+msgid "404 Not Found"
+msgstr "404 - Нічого не знайдено"
+
+#: components/ctp/functions/projects.php:45
+msgid "Project"
+msgstr "Проект"
+
+#: components/ctp/functions/projects.php:46
+msgid "Add New"
+msgstr "Додати новий"
+
+#: components/ctp/functions/projects.php:47
+msgid "Add New Project"
+msgstr "Додати новий проект"
+
+#: components/ctp/functions/projects.php:48
+msgid "Edit Project"
+msgstr "Редагувати проект"
+
+#: components/ctp/functions/projects.php:49
+msgid "New Project"
+msgstr "Новий проект"
+
+#: components/ctp/functions/projects.php:50
+msgid "View Project"
+msgstr "Перегляд проекту"
+
+#: components/ctp/functions/projects.php:51
+msgid "Search Project"
+msgstr "Поиск проекта"
+
+#: components/ctp/functions/projects.php:52
+msgid "No projects found"
+msgstr "Жодного проекту не знайдено"
+
+#: components/ctp/functions/projects.php:53
+msgid "No projects found in Trash"
+msgstr "У кошику проектів немає"
+
+#: components/ctp/functions/projects.php:57
+msgid "A group of posts which can be used as portfolio."
+msgstr "Група постів, які можуть бути використані як портфоліо."
+
+#: components/ctp/functions/projects.php:83
+msgid "Categories"
+msgstr "Категорії"
+
+#: components/ctp/functions/projects.php:102
+msgid "Tags"
+msgstr "Теги"
+
+#: components/ctp/functions/projects.php:127
+msgid "Formats"
+msgstr "Формати"
+
+#: components/ctp/functions/projects.php:128
+#: components/metaboxes/functions/metabox-ctp-formats.php:37
+msgid "Format"
+msgstr "Формат"
+
+#: components/ctp/functions/projects.php:140
+#: components/metaboxes/functions/metabox-ctp-formats.php:90
+#: components/metaboxes/functions/metabox-post-formats.php:140
+msgid "Gallery"
+msgstr "Галерея"
+
+#: components/ctp/functions/projects.php:141
+msgid "Audio"
+msgstr "Аудіо"
+
+#: components/ctp/functions/projects.php:142
+msgid "Video"
+msgstr "Відео"
+
+#: components/ctp/functions/projects.php:184
+#: components/metaboxes/functions/metabox-post-formats.php:43
+msgid "Title"
+msgstr "Заголовок"
+
+#: components/ctp/functions/projects.php:185
+msgid "Thumbnail"
+msgstr "мініатюра"
+
+#: components/ctp/functions/projects.php:187
+msgid "Author"
+msgstr "Автор"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:43
+#: components/metaboxes/functions/metabox-post-formats.php:93
+msgid "Self hosted video"
+msgstr "Відео завантажене на власний сайт"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:45
+#: components/metaboxes/functions/metabox-ctp-formats.php:52
+#: components/metaboxes/functions/metabox-ctp-formats.php:59
+#: components/metaboxes/functions/metabox-ctp-formats.php:72
+#: components/metaboxes/functions/metabox-ctp-formats.php:79
+#: components/metaboxes/functions/metabox-post-formats.php:95
+#: components/metaboxes/functions/metabox-post-formats.php:102
+#: components/metaboxes/functions/metabox-post-formats.php:109
+#: components/metaboxes/functions/metabox-post-formats.php:122
+#: components/metaboxes/functions/metabox-post-formats.php:129
+msgid "e.g. http://site.com/file"
+msgstr "напр. http://site.ru/file"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:64
+#: components/metaboxes/functions/metabox-post-formats.php:114
+msgid "Embedded video"
+msgstr "Вбудоване відео"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:65
+#: components/metaboxes/functions/metabox-post-formats.php:115
+msgid "If you are not using self hosted video then you can include embedded code here."
+msgstr "Ви можете використовувати вбудоване відео замість того, що могло бути завантажено на власний сайт."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:70
+#: components/metaboxes/functions/metabox-post-formats.php:120
+msgid "Self hosted audio"
+msgstr "Аудіо завантажене на власний сайт"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:84
+#: components/metaboxes/functions/metabox-post-formats.php:134
+msgid "Embedded audio"
+msgstr "Вбудоване аудіо"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:85
+#: components/metaboxes/functions/metabox-post-formats.php:135
+msgid "If you are not using self hosted audio then you can include embedded code here."
+msgstr "Ви можете використовувати вбудоване аудіо замість того, що могло бути завантажено на власний сайт."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:96
+msgid "Color"
+msgstr "Колір"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:97
+msgid "Select a color of project."
+msgstr "Виберіть колір проекту."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:183
+#: components/metaboxes/functions/metabox-ctp-formats.php:222
+#: components/metaboxes/functions/metabox-ctp-formats.php:246
+#: components/metaboxes/functions/metabox-ctp-formats.php:278
+#: components/metaboxes/functions/metabox-post-formats.php:344
+#: components/metaboxes/functions/metabox-post-formats.php:383
+#: components/metaboxes/functions/metabox-post-formats.php:407
+#: components/metaboxes/functions/metabox-post-formats.php:439
+msgid "Note:"
+msgstr "Замітка:"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:184
+#: components/metaboxes/functions/metabox-post-formats.php:345
+msgid "You must supply an MP4 file to satisfy both HTML5 and Flash solutions. The optional OGV format is used to increase x-browser support for HTML5 browsers such as Firefox and Opera."
+msgstr "MP4 обов'язковий для того щоб відео було доступно в режимах HTML5 і Flash. Формат OGV опціональний, однак користувачі браузерів Firefox і Opera це оцінять."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:223
+#: components/metaboxes/functions/metabox-ctp-formats.php:279
+#: components/metaboxes/functions/metabox-post-formats.php:384
+#: components/metaboxes/functions/metabox-post-formats.php:440
+msgid "This field will override the above."
+msgstr "Це поле має пріоритет над вищестоящими."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:223
+#: components/metaboxes/functions/metabox-post-formats.php:384
+msgid "YouTube and Vimeo preferred."
+msgstr "YouTube або Vimeo переважніше."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:247
+#: components/metaboxes/functions/metabox-post-formats.php:408
+msgid "You must supply both MP3 and OGG files to satisfy all browsers."
+msgstr "Щоб аудіо було доступне в усіх браузерах, будь ласка, використовуйте обидва формату."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:305
+#: components/metaboxes/functions/metabox-post-formats.php:466
+msgid "Create Gallery"
+msgstr "Нова галерея"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:305
+#: components/metaboxes/functions/metabox-post-formats.php:466
+msgid "Edit Gallery"
+msgstr "Редагувати"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:307
+#: components/metaboxes/functions/metabox-post-formats.php:468
+msgid "Delete Gallery"
+msgstr "Видалити галерею"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:322
+msgid "Background"
+msgstr "Фон"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:330
+msgid "Default"
+msgstr "За замовчуванням"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:350
+msgid "Select Image"
+msgstr "Виберіть зображення"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:352
+msgid "Delete Image"
+msgstr "Видалити зображення"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:383
+msgid "Project Options"
+msgstr "Налаштування проекту"
+
+#: components/metaboxes/functions/metabox-post-formats.php:37
+msgid "Breadcrumbs"
+msgstr "Хлібні крихти"
+
+#: components/metaboxes/functions/metabox-post-formats.php:38
+msgid "Do not show breadcrumbs."
+msgstr "Не показувати хлібні крихти."
+
+#: components/metaboxes/functions/metabox-post-formats.php:44
+msgid "Do not show post title."
+msgstr "Не показувати заголовок посту."
+
+#: components/metaboxes/functions/metabox-post-formats.php:49
+msgid "Sub title"
+msgstr "Подзаголовок"
+
+#: components/metaboxes/functions/metabox-post-formats.php:50
+#: components/metaboxes/functions/metabox-post-options.php:50
+msgid "Secondary title of entry."
+msgstr "Додатковий заголовок посту."
+
+#: components/metaboxes/functions/metabox-post-formats.php:55
+msgid "Zoom"
+msgstr "Збільшити"
+
+#: components/metaboxes/functions/metabox-post-formats.php:56
+msgid "Open a full sized featured image in modal window by clicking on thumbnail."
+msgstr "При натисканні на мініатюру відкривати повнорозмірне зображення в модальному вікні."
+
+#: components/metaboxes/functions/metabox-post-formats.php:61
+msgid "Link"
+msgstr "Посилання"
+
+#: components/metaboxes/functions/metabox-post-formats.php:62
+msgid "Put an URL path."
+msgstr "Вкажіть шлях."
+
+#: components/metaboxes/functions/metabox-post-formats.php:63
+msgid "e.g. http://google.com"
+msgstr "напр. http://yandex.ru"
+
+#: components/metaboxes/functions/metabox-post-formats.php:68
+msgid "Label"
+msgstr "Ярлик"
+
+#: components/metaboxes/functions/metabox-post-formats.php:69
+msgid "Insert a text of link."
+msgstr "Вкажіть текст посилання."
+
+#: components/metaboxes/functions/metabox-post-formats.php:70
+msgid "e.g. Google"
+msgstr "напр. Яндекс"
+
+#: components/metaboxes/functions/metabox-post-formats.php:75
+msgid "Redirect"
+msgstr "Редірект"
+
+#: components/metaboxes/functions/metabox-post-formats.php:76
+msgid "Open the link through redirect."
+msgstr "Відкривати посилання в новому вікні."
+
+#: components/metaboxes/functions/metabox-post-formats.php:81
+msgid "Quote"
+msgstr "Цитата"
+
+#: components/metaboxes/functions/metabox-post-formats.php:82
+msgid "Insert a quote."
+msgstr "Вставте цитату."
+
+#: components/metaboxes/functions/metabox-post-formats.php:88
+msgid "Share a status."
+msgstr "Призначте новий статус."
+
+#: components/metaboxes/functions/metabox-post-formats.php:178
+msgid "Common"
+msgstr "Загальне"
+
+#: components/metaboxes/functions/metabox-post-formats.php:183
+#: components/metaboxes/functions/metabox-post-formats.php:200
+msgid "Hide"
+msgstr "Приховати"
+
+#: components/metaboxes/functions/metabox-post-formats.php:238
+#: components/metaboxes/functions/metabox-post-formats.php:287
+msgid "Enable"
+msgstr "Включити"
+
+#: components/metaboxes/functions/metabox-post-formats.php:495
+msgid "Format Options"
+msgstr "Налаштування формату"
+
+#: components/metaboxes/functions/metabox-post-options.php:37
+msgid "Do not show breadcrumbs"
+msgstr "Не показувати хлібні крихти."
+
+#: components/metaboxes/functions/metabox-post-options.php:43
+msgid "Do not show title"
+msgstr "Не показувати заголовок."
+
+#: components/metaboxes/functions/metabox-post-options.php:49
+msgid "Subtitle"
+msgstr "Подзаголовок"
+
+#: components/metaboxes/functions/metabox-post-options.php:84
+msgid "Options"
+msgstr "Налаштування"
+
+#: components/metaboxes/functions/metabox-post-options.php:140
+#: components/metaboxes/functions/metabox-post-options.php:143
+msgid "Page Options"
+msgstr "Установки сторінки"
+
+#: components/metaboxes/functions/metabox-sidebar.php:36
+msgid "Name"
+msgstr "Iм'я"
+
+#: components/metaboxes/functions/metabox-sidebar.php:37
+msgid "Select a sidebar or <a href=\"admin.php?page=st-major-settings#sidebar\">create new one</a>."
+msgstr "Виберіть сайдбар або <a href=\"admin.php?page=st-major-settings#sidebar\">створіть новий</a>."
+
+#: components/metaboxes/functions/metabox-sidebar.php:42
+msgid "Position"
+msgstr "Позиція"
+
+#: components/metaboxes/functions/metabox-sidebar.php:43
+msgid "Choose the position of sidebar."
+msgstr "Виберіть позицію сайдбара."
+
+#: components/metaboxes/functions/metabox-sidebar.php:86
+msgid "Default Sidebar"
+msgstr "Сайдбар по-замовчуванням"
+
+#: components/metaboxes/functions/metabox-sidebar.php:88
+msgid "Projects Sidebar"
+msgstr "Сайдбар для проектів"
+
+#: components/metaboxes/functions/metabox-sidebar.php:94
+msgid "Custom bar"
+msgstr "Власний сайдбар"
+
+#: components/metaboxes/functions/metabox-sidebar.php:116
+msgid "L"
+msgstr "Л"
+
+#: components/metaboxes/functions/metabox-sidebar.php:124
+msgid "n/a"
+msgstr "нi"
+
+#: components/metaboxes/functions/metabox-sidebar.php:132
+msgid "R"
+msgstr "П"
+
+#: components/shortcodes/functions/shortcodes.php:195
+msgid "Notice this:"
+msgstr "Зверніть увагу, що:"
+
+#: components/shortcodes/functions/shortcodes.php:196
+msgid "Warning!"
+msgstr "Увага!"
+
+#: components/shortcodes/functions/shortcodes.php:197
+msgid "Well done!"
+msgstr "Відмінно!"
+
+#: components/shortcodes/functions/shortcodes.php:198
+msgid "Oh snap!"
+msgstr "Ой!"
+
+#: components/shortcodes/functions/shortcodes.php:199
+msgid "Heads up!"
+msgstr "Увага!"
+
+#: components/shortcodes/functions/shortcodes.php:367
+msgid "The labels have not been selected."
+msgstr "Ярлики на були призначені."
+
+#: components/widgets/functions/contact-info.php:17
+msgid "Share your contact information like an address, phone number, email etc."
+msgstr "Показати контактну інформацію таку як адреса, телефон, e-mail і пр."
+
+#: components/widgets/functions/contact-info.php:115
+#: components/widgets/functions/flickr.php:115
+msgid "Widget"
+msgstr "Віджет"
+
+#: components/widgets/functions/contact-info.php:123
+#: components/widgets/functions/flickr.php:123
+msgid "Widget title."
+msgstr "Тема віджету."
+
+#: components/widgets/functions/contact-info.php:131
+msgid "Contacts"
+msgstr "Контакти"
+
+#: components/widgets/functions/contact-info.php:136
+msgid "Enter an introduce text or leave it blank."
+msgstr "Введіть коротке повідомлення або залиште це поле порожнім."
+
+#: components/widgets/functions/contact-info.php:144
+#: components/widgets/functions/contact-info.php:241
+msgid "Address"
+msgstr "Адреса"
+
+#: components/widgets/functions/contact-info.php:157
+#: components/widgets/functions/contact-info.php:245
+msgid "Phone"
+msgstr "Телефон"
+
+#: components/widgets/functions/contact-info.php:170
+#: components/widgets/functions/contact-info.php:249
+msgid "Email"
+msgstr "E-mail"
+
+#: components/widgets/functions/flickr.php:17
+msgid "Your photos from Flickr."
+msgstr "Ваші фотографії на Flickr."
+
+#: components/widgets/functions/flickr.php:131
+msgid "Flickr"
+msgstr "Flickr"
+
+#: components/widgets/functions/flickr.php:135
+msgid "Account ID"
+msgstr "Iдентифікатор аккаунта"
+
+#: components/widgets/functions/flickr.php:139
+msgid "Enter your Flickr ID"
+msgstr "Введіть ваш ідентифікатор на Flickr"
+
+#: components/widgets/functions/flickr.php:147
+msgid "Account type"
+msgstr "Тип аккаунта"
+
+#: components/widgets/functions/flickr.php:150
+msgid "User"
+msgstr "Користувач"
+
+#: components/widgets/functions/flickr.php:151
+msgid "Group"
+msgstr "Група"
+
+#: components/widgets/functions/flickr.php:159
+msgid "Photos"
+msgstr "Фотографії"
+
+#: components/widgets/functions/flickr.php:185
+msgid "Select number of photos."
+msgstr "Виберіть кількість фотографій"
+
+#: components/widgets/functions/flickr.php:193
+msgid "Order"
+msgstr "Порядок"
+
+#: components/widgets/functions/flickr.php:196
+msgid "Random"
+msgstr "Випадковий порядок"
+
+#: components/widgets/functions/flickr.php:197
+msgid "Recent"
+msgstr "Нові"
+
+#: components/widgets/functions/recent-posts.php:17
+msgid "Display a recent, random or popular posts with thumbnails and excerpts."
+msgstr "Показувати нові, випадкові або популярні пости зі слайдами та витягами."
+
+#: components/widgets/functions/recent-posts.php:137
+#: components/widgets/functions/recent-posts.php:144
+msgid "Posts"
+msgstr "Пости"
+
+#: components/widgets/functions/recent-posts.php:149
+msgid "Select a type of posts."
+msgstr "Виберіть тип постів."
+
+#: components/widgets/functions/recent-posts.php:162
+msgid "Most viewed"
+msgstr "Найбільше переглянуті"
+
+#: components/widgets/functions/recent-posts.php:163
+msgid "Most commented"
+msgstr "Найбільш коментовані"
+
+#: components/widgets/functions/recent-posts.php:166
+msgid "Select a kind of posts."
+msgstr "Виберіть тип постів"
+
+#: components/widgets/functions/recent-posts.php:171
+msgid "Checkbox <a href='admin.php?page=st-major-settings'>Post Views</a> in case you'd like to show a most viewed posts."
+msgstr "Поставте галочку <a href='admin.php?page=st-major-settings'>Лічильник переглядів</a> якщо ви бажаєте щоб були показані найбільш популярні пости."
+
+#: components/widgets/functions/recent-posts.php:180
+msgid "For all time"
+msgstr "За весь час"
+
+#: components/widgets/functions/recent-posts.php:181
+msgid "For last month"
+msgstr "За останній місяць"
+
+#: components/widgets/functions/recent-posts.php:182
+msgid "For last week"
+msgstr "За останній тиждень"
+
+#: components/widgets/functions/recent-posts.php:185
+msgid "Select a time frame."
+msgstr "Оберіть період."
+
+#: components/widgets/functions/recent-posts.php:193
+msgid "Enter a slugs of categories separated by comma. Optional."
+msgstr "Вкажіть шляхи категорій (slugs). Не обов'язково."
+
+#: components/widgets/functions/recent-posts.php:219
+msgid "Select a number of posts."
+msgstr "Виберіть кількість постів."
+
+#: components/widgets/functions/recent-posts.php:231
+msgid "Date"
+msgstr "Дата"
+
+#: components/widgets/functions/recent-posts.php:245
+msgid "Misc"
+msgstr "Різне"
+
+#: components/widgets/functions/recent-posts.php:247
+msgid "Cache"
+msgstr "Кеш"
+
+#: components/widgets/functions/recent-posts.php:248
+msgid "Store a query result within 12 hours. Recommended."
+msgstr "Зберігати результат протягом 12 годин. Рекомендуємо."
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "No Comments"
+msgstr "Немає коментарів"
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "1 Comment"
+msgstr "Коментарів: 1"
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "% Comments"
+msgstr "Коментарів: %"
+
+#: components/widgets/functions/recent-posts.php:499
+msgid "views"
+msgstr "Переглядів"
+
+#: components/widgets/functions/sharrre.php:20
+msgid "ST Sharrre is a nice widgets sharing for Facebook, Twitter, Google Plus (with PHP script) and more."
+msgstr "ST Sharrre дозволяє швидко запостити в Фейсбук, Твіттер, Гугл + та ін. Українська мова підтримується."
+
+#: components/widgets/functions/sharrre.php:133
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: components/widgets/functions/social-icons.php:17
+msgid "Display a social networks icons linked to your profiles."
+msgstr "Показує іконки соціальних мереж що ведуть на ваші профайли."
+
+#: components/widgets/functions/social-icons.php:121
+msgid "Manage"
+msgstr "Редагувати"
+
+#: components/widgets/functions/social-icons.php:122
+msgid "Fill forms on Social tab."
+msgstr "Заповніть форму в закладці \"Соціальні мережі\"."
+
+#: components/widgets/functions/subscribe.php:17
+msgid "Allow visitors to subscribe to your website via FeedBurner"
+msgstr "Дозволяє відвідувачам підписатися на оновлення сайту через FeedBurner"
+
+#: components/widgets/functions/subscribe.php:107
+#: components/widgets/functions/subscribe.php:164
+msgid "Sign up for our newsletter to receive the latest news and event postings."
+msgstr "Заповніть форму щоб отримувати оновлення поштою."
+
+#: components/widgets/functions/subscribe.php:119
+msgid "Feedburner"
+msgstr "Feedburner"
+
+#: components/widgets/functions/subscribe.php:122
+msgid "Enter you Feedburner ID"
+msgstr "Вкажіть свій Feedburner-ідентифікатор"
+
+#: components/widgets/functions/subscribe.php:128
+msgid "Email-subscribe"
+msgstr "Email-підписка"
+
+#: components/widgets/functions/subscribe.php:131
+msgid "Description"
+msgstr "Описання"
+
+#: components/widgets/functions/subscribe.php:162
+msgid "Email subscription"
+msgstr "Email-підписка"
+
+#: components/widgets/functions/subscribe.php:180
+msgid "your.email@address"
+msgstr "example@mail"
+
+#: components/widgets/functions/subscribe.php:183
+msgid "Subscribe"
+msgstr "Підписка"
+
+#: functions/global.php:502
+msgid "Nothing Found"
+msgstr "Нічого не знайдено"
+
+#: functions/global.php:608
+msgid "less than 1 minute ago"
+msgstr "менше однієї хвилини тому"
+
+#: functions/global.php:609
+msgid "1 minute ago"
+msgstr "1 хвилину тому"
+
+#: functions/global.php:611
+#, php-format
+msgid "%d minutes ago"
+msgstr "%d хв. назад"
+
+#: functions/global.php:612
+msgid "1 hour ago"
+msgstr "1 год. тому"
+
+#: functions/global.php:614
+#, php-format
+msgid "%d hours ago"
+msgstr "%d год. назад"
+
+#: functions/global.php:615
+msgid "1 day ago"
+msgstr "1 день тому"
+
+#: functions/global.php:617
+#: functions/global.php:628
+#, php-format
+msgid "%d days ago"
+msgstr "%d дн. назад"
+
+#: functions/global.php:618
+msgid "1 month ago"
+msgstr "1 міс. тому"
+
+#: functions/global.php:620
+#, php-format
+msgid "%d months ago"
+msgstr "%d міс. назад"
+
+#: functions/global.php:621
+msgid "1 year ago"
+msgstr "1 рiк тому"
+
+#: functions/global.php:623
+#, php-format
+msgid "%d years ago"
+msgstr "%d рокiв назад"
+
+#: functions/write-custom-css.php:277
+msgid "Cannot open CSS file"
+msgstr "Не виходить відкрити CSS-файл."
+
+#~ msgid "Major Settings"
+#~ msgstr "Основні налаштування"
+
+#~ msgid "Create New"
+#~ msgstr "Создать новую"
+
+#~ msgid "IDs separated by comma."
+#~ msgstr "Идентификаторы. Через запятую, пожалуйста."

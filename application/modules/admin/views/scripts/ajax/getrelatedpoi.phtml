@@ -1,0 +1,8 @@
+<data>
+    <?php foreach($this->data as $value): ?>
+    <destination>
+        <id><?php echo $value['related_poi']; ?></id>
+        <name><?php echo htmlspecialchars($value['name'],ENT_QUOTES); ?></name>
+    </destination>
+    <?php endforeach; ?>
+</data>

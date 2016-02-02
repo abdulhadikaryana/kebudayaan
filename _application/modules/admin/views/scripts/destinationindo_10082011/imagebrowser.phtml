@@ -1,0 +1,85 @@
+<?php
+    $js_link = array('tiny_mce/tiny_mce_popup','tiny_mce/tiny_mce','jquery/jquery-1.4.1.min');
+    echo $this->jsView(2,$js_link);
+?>
+<style>
+.clear			{ clear:both; }
+.photo-link		{ padding:5px; margin:5px; border:1px solid #ccc; display:block; width:100px; float:left; cursor:pointer; }
+.photo-link:hover	{ border-color:#999; cursor:pointer; }
+.imageContainer{ width: 750px; height: auto; float: left;}
+.navigation{width: 750px; text-align: center; height: 30px;}
+.navigation a{color:blue; font-weight: bold;}
+</style>
+
+<script type="text/javascript">
+          var win = tinyMCEPopup.getWindowArg("window");
+          var input = tinyMCEPopup.getWindowArg("input");
+          var res = tinyMCEPopup.getWindowArg("resizable");
+          var inline = tinyMCEPopup.getWindowArg("inline")
+
+          var FileBrowserDialogue = {
+          init : function () {
+          },
+          mySubmit : function (obj) {
+                URL = format(obj);
+                win.document.getElementById(tinyMCEPopup.getWindowArg("input")).value = URL;
+                win.ImageDialog.showPreviewImage(URL);
+                tinyMCEPopup.close();
+            }
+          }
+          tinyMCEPopup.onInit.add(FileBrowserDialogue.init, FileBrowserDialogue);
+
+          function format(obj)
+          {
+                temp = obj.attr('src');
+                var patharr = temp.split('/');
+                thumbidx = patharr.length-1;
+                patharr.splice(thumbidx-1,1);
+                temp = '';
+                for(x in patharr)
+                {
+                  if(x==0)
+                  {
+                    temp = patharr[x];
+                  }
+                  else
+                  {
+                     temp = temp + '/' + patharr[x];
+                  }
+                }
+                return temp;
+          }
+</script>
+
+<?php $image_files = $this->image_files; ?>
+<?php if(count(image_files)) : ?>
+<?php 
+    $page = $this->page;
+    $start = $page*15; 
+    $top = $start+15;
+?>
+<div class="imageContainer">
+<?php for($i=$start;$i<$top;$i++) :?>
+<?php
+   $source_url = $this->imageUrl().'/upload/poi/'.$image_files[$i];
+   $thumbnails_url = $this->imageUrl().'/upload/poi/thumbnails/'.$image_files[$i];
+?>
+<div class="photo-link smoothbox"><img width="100px" height="100px" src="<?php echo $thumbnails_url ?>" onclick="FileBrowserDialogue.mySubmit($(this));" /></div>
+<?php endfor; ?>
+</div>
+
+    <div class="navigation">
+    <?php if($page>0): ?>
+    <?php $prev = $page - 1;?>
+        <a href="<?php echo $this->rootUrl()."/admin/destinationindo/imagebrowser/page/".$prev;?>">prev</a>
+    <?php endif;?>
+    
+    <?php if($next*15 <= sizeof($image_files)): ?>
+    <?php $next = $page + 1;?>
+        <a href="<?php echo $this->rootUrl()."/admin/destinationindo/imagebrowser/page/".$next;?>">next</a>
+    <?php endif;?>
+    </div>
+
+<?php else: ?>
+<p>there are no images in destination folder!</p>
+<?php endif; ?>

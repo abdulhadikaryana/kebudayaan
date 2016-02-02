@@ -1,0 +1,9 @@
+<?php echo $this->selectbox; ?>
+<?php if($this->list) : ?>
+<div style="width: 150px;">
+<?php echo $this->savebutton; ?>
+<?php echo $this->cancelbutton; ?>
+</div>
+<?php else: ?>
+<?php echo $this->addbutton; ?>
+<?php endif; ?>

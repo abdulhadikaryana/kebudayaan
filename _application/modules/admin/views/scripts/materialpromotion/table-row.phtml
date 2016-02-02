@@ -1,0 +1,17 @@
+<tr>
+    <td>
+        <a href="<?php echo $this->rootUrl('/admin/materialpromotion/edit/id/' . $this->material_id); ?>/lang/1">
+            <?php echo $this->HtmlDecode($this->title); ?></a></td>
+    <td>
+        <a class="general-remove" 
+           href="<?php echo $this->rootUrl('/admin/materialpromotion/edit/id/' . $this->material_id); ?>/lang/1">
+            Edit</a></td>
+    <td>
+        <a 
+           href="<?php echo $this->rootUrl('/admin/materialpromotion/edit/id/' . $this->material_id); ?>/lang/2">
+            <?php $this->CheckMaterialIndo($this->material_id, 2)?></a></td>
+    <td>
+        <div class="general-remove" 
+             onclick="deleteMaterial(<?php echo $this->material_id; ?>);">
+            Delete</div></td>
+</tr>

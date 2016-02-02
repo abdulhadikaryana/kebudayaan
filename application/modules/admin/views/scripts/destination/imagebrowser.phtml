@@ -1,0 +1,70 @@
+<?php
+$js_link = array('tiny_mce/tiny_mce_popup', 'tiny_mce/tiny_mce', 'jquery/jquery-1.4.1.min');
+echo $this->jsView(2, $js_link);
+$next        = 0;
+?>
+<style>
+  .clear			{ clear:both; }
+  .photo-link		{ padding:5px; margin:5px; border:1px solid #ccc; display:block; width:100px; float:left; cursor:pointer; }
+  .photo-link:hover	{ border-color:#999; cursor:pointer; }
+  .imageContainer{ width: 750px; height: auto; float: left;}
+  .navigation{width: 750px; text-align: center; height: 30px;}
+  .navigation a{color:blue; font-weight: bold;}
+</style>
+
+<script type="text/javascript">
+  var win = tinyMCEPopup.getWindowArg("window");
+  var input = tinyMCEPopup.getWindowArg("input");
+  var res = tinyMCEPopup.getWindowArg("resizable");
+  var inline = tinyMCEPopup.getWindowArg("inline")
+
+  var FileBrowserDialogue = {
+    init : function () {
+    },
+    mySubmit : function (obj) {
+      URL = obj.attr('data');
+      win.document.getElementById(tinyMCEPopup.getWindowArg("input")).value = URL;
+      win.ImageDialog.showPreviewImage(URL);
+      tinyMCEPopup.close();
+    }
+  }
+  tinyMCEPopup.onInit.add(FileBrowserDialogue.init, FileBrowserDialogue);
+
+  function format(obj)
+  {
+    temp = obj.attr('src');
+    var patharr = temp.split('/');
+    thumbidx = patharr.length-1;
+    patharr.splice(thumbidx-1,1);
+    temp = '';
+    for(x in patharr)
+    {
+      if(x==0)
+      {
+        temp = patharr[x];
+      }
+      else
+      {
+        temp = temp + '/' + patharr[x];
+      }
+    }
+    return temp;
+  }
+</script>
+
+<?php $image_files = $this->image_files; ?>
+<?php if (count($image_files)) : ?>
+  <div class="imageContainer">
+    <?php foreach ($image_files as $index => $image_file) : ?>
+      <?php
+      $source_url     = $this->imageUrl() . '/upload/culture/' . $image_file;
+//   $thumbnails_url = $this->imageUrl().'/upload/poi/thumbnails/'.$image_files[$i];
+      $thumbnails_url = $this->imageUrl("timthumb.php?src=upload/culture/{$image_file}&w=100&h=100");
+      ?>
+      <div class="photo-link smoothbox"><img width="100px" height="100px" data="<?php echo $source_url; ?>" src="<?php echo $thumbnails_url ?>" onclick="FileBrowserDialogue.mySubmit($(this));" /></div>
+      <?php endforeach; ?>
+  </div>
+
+<?php else: ?>
+  <p>there are no images in culture folder!</p>
+<?php endif; ?>

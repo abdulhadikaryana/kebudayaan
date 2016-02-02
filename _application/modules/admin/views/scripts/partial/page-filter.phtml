@@ -1,0 +1,28 @@
+<div class="pagefilter">
+  <label for="filterPageRow">Rows per-Page:</label>
+  <select name="filterPageRow" id="filterPageRow" >
+    <?php
+    /** Pilihan banyaknya baris per halaman */
+    $option = array('5', '10', '15');
+    /** Jika tidak ditentukan, maka nilai default adalah 10 */
+    (empty($this->row)) ? $sess_row = '10' : $sess_row = $this->row;
+    /** Menulis option dropdown list */
+    foreach ($option as $row) {
+      $selected = ($row == $sess_row) ? ' selected' : '';
+      echo "<option value='" . $row . "'" . $selected . ">" . $row . "</option>";
+    }
+    ?>
+  </select>
+
+  <input class="btn" type="button" value="Go" onclick="changePageRow();"/>
+</div>
+
+<script type="text/javascript">
+
+  function changePageRow()
+  {
+    url = '<?php echo $this->cleanurl . '/page/1/filterPageRow/'; ?>'+$('#filterPageRow').val();  
+    window.location = url;
+  }
+
+</script>

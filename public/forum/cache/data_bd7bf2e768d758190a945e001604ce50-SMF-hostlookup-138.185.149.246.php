@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454408535 < time()) $expired = true; else{$expired = false; $value = 's:35:"246-149-185-138.planetacyber.psi.br";';}?>

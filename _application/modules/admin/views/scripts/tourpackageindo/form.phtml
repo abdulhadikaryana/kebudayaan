@@ -1,0 +1,26 @@
+<form method="post" id="tourpackageForm" action="<?php echo $this->currentUrl(); ?>" name="tourpackageForm">
+<fieldset class="medium">
+    <legend>Package Detail</legend>
+    <table>
+        <tr>
+            <td><label>Name</label></td><td>&#58;</td>
+            <td><?php echo $this->form->packTitle; ?></td>
+        </tr>
+        <?php if($this->language_id!=1){?>
+        <tr>
+            <td><label>Website</label></td><td>&#58;</td>
+            <td><?php echo $this->form->packWebsite; ?></td>
+        </tr>
+        <tr>
+            <td><label>Contact</label></td><td>&#58;</td>
+            <td><?php echo $this->form->packContact; ?></td>
+        </tr><?php }?>
+    </table>
+</fieldset>
+<fieldset class="wide">
+    <legend>Package Description</legend>
+    <table><tr><td>Description</td><td>&#58;</td></tr></table>
+    <table><tr><td><?php echo $this->form->packDescription; ?></td></tr></table>
+</fieldset>
+    <input type="submit" value="save" class="btn radius space_l" />
+</form>

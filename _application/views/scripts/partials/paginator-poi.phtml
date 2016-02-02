@@ -1,0 +1,37 @@
+<!--prev control-->
+<div id="prev">
+<?php if (isset($this->previous)): ?>
+    <a href="<?php echo $this->url(array('page' => $this->previous)); ?>"><?php echo strtoupper($this->translate('id_menu_prev'));?></a>
+<?php else:?>
+    <a class="disable"><?php echo strtoupper($this->translate('id_menu_prev'));?></a>
+<?php endif;?>
+</div>
+
+<!--<div id="number">-->
+
+    <?php
+    //foreach($this->pagesInRange as $page) : ?>
+            <?php
+            //if($page != $this->current): ?>
+                <!--<div class="link">-->
+                    <!--<a href="<?php echo $this->url(array('page' => $page)) ?><?php if($this->row != null){echo '/fiterPageRow/'.$this->row;}?>"><?php echo $page; ?></a>-->
+                <!--</div>-->
+            <?php
+            //else : ?>
+                <!--<div class="link current">-->
+                    <!--<span><?php echo $page; ?></span>-->
+                <!--</div>-->
+            <?php
+            //endif; ?>
+    <?php
+    //endforeach; ?>
+    
+<!--</div>-->
+<!--next control-->
+<div id="next">
+<?php if (isset($this->next)): ?>
+   <a href="<?php echo $this->url(array('page' => $this->next)); ?>"><?php echo strtoupper($this->translate('id_menu_next'));?></a>
+<?php else:?>
+   <a class="disable"><?php echo strtoupper($this->translate('id_menu_next'));?></a>
+<?php endif;?>
+

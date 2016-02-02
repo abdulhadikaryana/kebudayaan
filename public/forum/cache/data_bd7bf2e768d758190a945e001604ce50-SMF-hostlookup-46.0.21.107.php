@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454381332 < time()) $expired = true; else{$expired = false; $value = 's:47:"dynamicip-46-0-21-107.pppoe.samara.ertelecom.ru";';}?>

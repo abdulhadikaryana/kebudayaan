@@ -1,0 +1,29 @@
+
+<tr>
+    <td><?php echo $this->HtmlDecode($this->name); ?></td>
+    <td><?php echo $this->HtmlDecode($this->website); ?></td>
+    <td><?php echo $this->HtmlDecode($this->email); ?></td>
+    <td><?php echo $this->HtmlDecode($this->fax); ?></td>
+    <td><a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/airlinesindo/edit/id/<?php echo $this->airline_id; ?>/lang/2">Edit</a></td>
+
+    <td>
+        <table class="cleartable">
+            <tr><td><a>English Translation</a></td></tr>
+            <tr>
+                <td>
+                    <table class="cleartable mini">
+                        <tr>
+                            <td><a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/airlinesindo/edit/id/<?php echo $this->airline_id; ?>/lang/1"><?php $this->CheckAirlinesIndo($this->airline_id, 1)?></a></td>
+                            <?php $indtrans = $this->CheckAirlinesIndoTrans($this->airline_id, 1);
+                                  if($indtrans == true){?>
+                            <td><div id ="removeAirlines" class="general-remove" onclick="deleteAirlinesEnglish(<?php echo $this->airline_id; ?>);">Delete</div></td>
+                            <?php } ?>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+
+    <td><div id ="removeAirlines" class="general-remove" onclick="deleteAirlines(<?php echo $this->airline_id; ?>);">Delete</div></td>
+</tr>

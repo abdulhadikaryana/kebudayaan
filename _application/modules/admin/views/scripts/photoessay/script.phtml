@@ -1,0 +1,10 @@
+<?php
+$this->placeholder('jsInline')->captureStart();
+echo $this->render('partial/tinyMCE.phtml');
+/*Put all your Javascript function below*/
+?>
+<script type="text/javascript">
+    tinyMCE.execCommand('mceAddControl', false, 'photoessayDescription');
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd();?>  

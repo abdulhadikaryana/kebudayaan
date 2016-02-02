@@ -1,0 +1,23 @@
+<tr>
+    <td>
+        <?php echo $this->HtmlDecode($this->username); ?>
+    </td>
+    <td style="text-align: center;">
+        
+        <select class="" name="status" id="status" 
+                onchange="changeUserStatus(<?php echo $this->user_id; ?>, $(this).val())">
+            <?php 
+                $option = array('verify', 'active', 'blacklist');
+                foreach ($option as $value) {
+                    if ($this->status == $value) {
+                        $selected = 'selected';
+                    } else {
+                        $selected = '';
+                    } 
+                    echo "<option value='" . $value . "' " . $selected . " >" . $value . "</option>"; 
+                }
+                 
+            ?>
+        </select>
+    </td>
+</tr>

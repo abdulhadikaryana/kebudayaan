@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454388524 < time()) $expired = true; else{$expired = false; $value = 's:34:"195-154-61-122.rev.poneytelecom.eu";';}?>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454385876 < time()) $expired = true; else{$expired = false; $value = 's:18:"exit1.ipredator.se";';}?>

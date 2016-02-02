@@ -1,0 +1,48 @@
+<form method="post" id="articleForm" 44name="poiForm" class="form-horizontal well">
+  <?php echo $this->form->article_poi_id; ?>
+  <?php echo $this->form->SaveStatus; ?>
+  <fieldset>
+    <legend class="f_legend">Article Details</legend>
+    <div class="control-group">
+      <label for="article_title" class="control-label">Title</label>
+      <div class="controls">
+        <?php echo $this->form->article_title; ?>
+      </div>
+    </div>
+
+    <?php if($this->langid_id!=2): ?>
+    <div class="control-group">
+      <label for="category_select" class="control-label">Category</label>
+      <div class="controls">
+        <?php echo $this->form->category_select ?>
+      </div>
+    </div>
+    <?php endif; ?>
+
+    <div class="control-group">
+      <label for="article_content" class="control-label">Content</label>
+      <div class="controls">
+        <?php echo $this->form->article_content; ?>
+      </div>
+    </div>
+
+    <?php if ($this->langid_id != 2): ?>
+
+      <div class="control-group">
+        <label for="article_main_image" class="control-label">Image</label>
+        <div class="controls">
+          <?php echo $this->form->article_main_image ?>
+          <input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" />
+        </div>
+      </div>
+
+    <?php endif; ?>
+
+      <div class="form-actions">
+        <?php echo $this->form->draft; ?>
+        <?php echo $this->form->submit; ?>
+      </div>
+
+  </fieldset>
+</form>
+<?php echo $this->render('partial/upload-image-dialog.phtml'); ?>

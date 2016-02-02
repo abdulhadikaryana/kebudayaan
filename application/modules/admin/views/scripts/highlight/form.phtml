@@ -1,0 +1,98 @@
+<form method="post" id="highlightForm" action="<?php $this->currentUrl(); ?>" name="highlightForm" class="form-horizontal well">
+  <fieldset>
+    <legend class="f_legend">Detail Highlight</legend>
+	
+	<div class="control-group">
+      <label for="highlightName" class="control-label">Bahasa</label>
+      <div class="controls">
+        <?php echo $this->form->hightlightLanguage ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="highlightName" class="control-label">Nama</label>
+      <div class="controls">
+        <?php echo $this->form->highlightName ?>
+      </div>
+    </div>
+    <?php if ($this->language_id != 2) { ?>
+
+      <div class="control-group">
+        <label for="highlightType" class="control-label">Tipe</label>
+        <div class="controls">
+          <?php echo $this->form->highlightType; ?>
+        </div>
+      </div>
+
+      <div class="control-group"  <?php if (($this->state_edit) && ($this->highlight_type == 1)): ?>
+             style="display:none;"
+           <?php endif; ?>>
+        <label for="highlightSortOrder" class="control-label">Tata Urutan</label>
+        <div class="controls">
+          <?php echo $this->form->highlightSortOrder; ?>
+          <span class="help-inline">(Hanya angka desimal)</span>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="highlightLink" class="control-label">Tautan</label>
+        <div class="controls">
+          <?php echo $this->form->highlightLink; ?>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="highlightImage" class="control-label">Gambar</label>
+        <div class="controls">
+          <?php echo $this->form->highlightImage; ?>
+          <input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" />
+          <?php if ($this->state_edit): ?>
+            <?php if ($this->highlightType == 1): ?>
+              <span class="image-size help-block">Lebar yang disarankan 323px</span>
+            <?php elseif ($this->highlightType == 4): ?>
+              <span class="image-size help-block">Lebar yang disarankan 323px*105px</span>
+            <?php elseif ($this->highlightType == 3): ?>
+              <span class="image-size help-block">Lebar yang disarankan 970px*332px</span>
+            <?php endif; ?>
+          <?php else: ?>
+            <span class="image-size help-block">Lebar yang disarankan 970px*332px</span>
+          <?php endif; ?>
+        </div>
+      </div>
+
+    <?php } ?>
+
+    <?php if ($this->language_id != 2) { ?>
+      <?php if ($this->state_edit): ?>
+        <div class="image control-group">
+          <div class="controls">
+            <img style="max-heigt:120px; max-width: 350px;" src="<?php echo $this->imageUrl('upload/highlight/' . $this->image); ?>" />
+          </div>
+        </div>
+      <?php endif; ?>
+
+      <div class="control-group">
+        <label for="highlightStatus" class="control-label">Status</label>
+        <div class="controls">
+          <?php echo $this->form->highlightStatus; ?>
+        </div>
+      </div>
+
+    <?php } ?>
+
+    <fieldset>
+      <legend class="f_legend">Deskripsi Highlight</legend>
+	  <div class="control-group">
+		<label for="highlightDescription" class="control-label">Deskripsi</label>
+		<div class="controls">
+			<?php echo $this->form->highlightDescription; ?>
+		</div>
+	</div>
+    </fieldset>
+
+      <div class="form-actions">
+        <input id="highlightSubmit" type="submit" class="btn btn-success" value="Simpan"/>
+      </div>
+</form>
+
+<?php echo $this->partial('partial/upload-image-dialog.phtml', 'admin', array('type' => 4)); ?>

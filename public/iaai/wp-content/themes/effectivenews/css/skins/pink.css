@@ -1,0 +1,302 @@
+::-webkit-scrollbar-thumb {background: #fc8199;-webkit-box-shadow: inset 1px 1px 2px rgba(155, 155, 155, 0.4);}
+a:hover {
+    color: #fc8199;
+}
+
+/****************************
+/* Top Bar
+****************************/
+/* Top Menu */
+.t_menu ul li a:hover {
+    color: #fc8199;
+}
+.t_menu ul li ul li a:hover{
+    color: #fc8199;
+}
+
+/****************************
+/* Navigation
+****************************/
+ul.main_menu li.current-menu-item,
+ul.main_menu li:hover, ul.main_menu li.current-menu-ancestor {
+    border-bottom: 3px solid #fc8199;
+}
+ul.main_menu li:hover {
+    border-bottom: 3px solid #fc8199;
+}
+
+/*Drop Down*/
+ul.main_menu li ul li a:hover {
+    color: #fc8199;
+}
+
+/****************************
+/* Breaking News
+****************************/
+.breaking_news span.ticker_title {
+    background: #fc8199;
+    border-color: #fc6180;
+    color: #fff;
+}
+.ticker_bg span.wrap_arrow {
+    background-color: #fc8199;
+}
+/****************************
+/* Search FOrm
+****************************/
+.submit-container {
+    background: #fc8199;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#faabbb), to(#fc8199));
+    background-image: -webkit-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -moz-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -ms-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -o-linear-gradient(top, #faabbb, #fc8199);
+    background-image: linear-gradient(top, #faabbb, #fc8199);
+}
+.submit-container:hover {
+    background: #faabbb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fc8199), to(#faabbb));
+    background-image: -webkit-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -moz-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -ms-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -o-linear-gradient(top, #fc8199, #faabbb);
+    background-image: linear-gradient(top, #fc8199, #faabbb);
+}
+/****************************
+/* Main Content
+****************************/
+.block_title h2 {
+    background: #fc8199;
+}
+.block_title h2:after {
+    background: #fc8199;
+}
+a.read_more {
+    color: #faabbb;
+}
+a.read_more:hover {
+    color: #fc8199;
+}
+
+/****************************
+/* Tabs Category Style 2
+****************************/
+.tabs_cat ul.tabs_head li:hover:before, .tabs_cat ul.tabs_head li.ui-state-active:before{
+    background: #fc8199;
+    border-top: 1px solid #fc8199;
+    border-bottom: 1px solid #fc8199;
+}
+.tabs2_head li.ui-state-active, .tabs2_head li:hover {
+    border-bottom: 3px solid #fc8199;
+}
+/****************************
+/* Blog Style 2
+****************************/
+span.post_type {
+    background: #fc8199;
+}
+/****************************
+/* sidebar
+****************************/
+
+/****************************
+/* sidebar Widgets
+****************************/
+
+/* Tabs Widget */
+.tabs_widget_head li.ui-state-active,
+.tabs_widget_head li:hover {
+    border-bottom: 3px solid #fc8199 !important;
+}
+
+/* Search Form Widget */
+#searchsubmit {
+    background: #fc8199;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#faabbb), to(#fc8199));
+    background-image: -webkit-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -moz-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -ms-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -o-linear-gradient(top, #faabbb, #fc8199);
+    background-image: linear-gradient(top, #faabbb, #fc8199);
+}
+#searchsubmit:hover {
+    background: #faabbb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fc8199), to(#faabbb));
+    background-image: -webkit-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -moz-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -ms-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -o-linear-gradient(top, #fc8199, #faabbb);
+    background-image: linear-gradient(top, #fc8199, #faabbb);
+}
+
+/* News Letter */
+.newsletter .nsb {
+    background: #fc8199;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#faabbb), to(#fc8199));
+    background-image: -webkit-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -moz-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -ms-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -o-linear-gradient(top, #faabbb, #fc8199);
+    background-image: linear-gradient(top, #faabbb, #fc8199);
+}
+
+/* TagCloud */
+.sidebar .tagcloud a:hover {
+    background: #faabbb;
+}
+
+/* WP Widgets */
+.sidebar .widget_recent_comments ul li
+.sidebar .widget_links  ul li,
+.sidebar .widget_pages ul li,
+.sidebar .widget_recent_entries ul li,
+.sidebar .widget_meta ul li,
+.sidebar .widget_categories ul li,
+.sidebar .widget_archive ul li{
+    color: #fc8199;
+}
+/* Calender */
+#calendar_wrap #wp-calendar #today, #calendar_wrap #wp-calendar #today { background: #fc8199; }
+
+
+/* twitter */
+.sidebar .widget .tweet_list a:hover {
+    color: #fc8199;
+}
+
+/* Login */
+#login-form #log:focus, #login-form #pwd:focus {
+	border-color: #fc8199;
+}
+#login-form .login-button {
+	background: #fc8199;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#faabbb), to(#fc8199));
+	background-image: -webkit-linear-gradient(top, #faabbb, #fc8199);
+	background-image: -moz-linear-gradient(top, #faabbb, #fc8199);
+	background-image: -ms-linear-gradient(top, #faabbb, #fc8199);
+	background-image: -o-linear-gradient(top, #faabbb, #fc8199);
+	background-image: linear-gradient(top, #faabbb, #fc8199);
+}
+
+/****************************
+/* Footer
+****************************/
+/****************************
+/* Footer Widgets
+****************************/
+
+/* footer Tagcloud */
+footer .tagcloud a:hover {
+    background: #faabbb;
+}
+
+/* Twitter List */
+footer ul.tweet_list li a:hover {
+    color: #faabbb;
+}
+/****************************
+/* Copyright
+****************************/
+.copyright a:hover{
+    color: #faabbb;
+}
+/****************************
+/* Post
+****************************/
+/* Post Nav */
+
+.post-nav a:hover {
+	color: #faabbb;
+}
+/* POst Tags */
+.post_tags a:hover {
+    background: #faabbb;
+}
+
+/* Related Posts */
+.related_list h3 a:hover,
+.related_posts li h3 a:hover {
+    color: #faabbb;
+}
+/*------------------------------------------*/
+/*   comments
+/*------------------------------------------*/
+
+.commentlist h4,
+.commentlist h4 a{
+    color: #faabbb;
+}
+.post-comment #submit {
+    background: #fc8199;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#faabbb), to(#fc8199));
+    background-image: -webkit-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -moz-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -ms-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -o-linear-gradient(top, #faabbb, #fc8199);
+    background-image: linear-gradient(top, #faabbb, #fc8199);
+}
+.post-comment #submit:hover {
+    background: #faabbb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fc8199), to(#faabbb));
+    background-image: -webkit-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -moz-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -ms-linear-gradient(top, #fc8199, #faabbb);
+    background-image: -o-linear-gradient(top, #fc8199, #faabbb);
+    background-image: linear-gradient(top, #fc8199, #faabbb);
+}
+/*------------------------------------------*/
+/*   Meta box 
+/*------------------------------------------*/
+
+.slidePager a:hover {
+    background:#faabbb;
+}
+.slidePager a.activeSlide {
+    background:#faabbb;
+}
+.blog_masonry .slidePager a:hover {
+    background:#faabbb;
+}
+.blog_masonry .slidePager a.activeSlide {
+    background:#faabbb;
+}
+/*------------------------------------------*/
+/*   Pagination 
+/*------------------------------------------*/
+.pagination span.current {
+    background: #faabbb;
+}
+/*------------------------------------------*/
+/*   Pages
+/*------------------------------------------*/
+.page_title i{
+    color: #faabbb;
+}
+/*------------------------------------------*/
+/*   404
+/*------------------------------------------*/
+.error_page h2.errorMessage {
+    color: #faabbb;
+}
+/*--------------------------------------------------*/
+/*	Contact Form
+/*-------------------------------------------------*/
+.contact_form .send_comment {
+    background: #fc8199;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#faabbb), to(#fc8199));
+    background-image: -webkit-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -moz-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -ms-linear-gradient(top, #faabbb, #fc8199);
+    background-image: -o-linear-gradient(top, #faabbb, #fc8199);
+    background-image: linear-gradient(top, #faabbb, #fc8199);
+}
+.news_box5 .read_more:hover {
+    background: #fc8199;
+    border-color: #fb466a;
+}
+.bblock_title h2 {
+    background: #fc8199;
+}
+.def_slider {
+    border-bottom-color: #fb466a;
+}

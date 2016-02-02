@@ -1,0 +1,18 @@
+<div class="row-fluid">
+  <h3>Buat Laporan Kegiatan</h3>
+</div>
+<div class="row-fluid">
+  <form method="post" action="<?php echo $this->currentUrl() ?>" id="eventReportForm" name="eventReportForm" class="">
+    <div class="span8">
+      <div class="control-group">
+        <div class="controls">
+          <textarea id="eventReport" name="eventReport"><?php echo $this->HtmlDecode($this->report); ?></textarea>
+          <br />
+          <input type="submit"  class="btn btn-success" name="submit" class="btn radius space_l" value="Save"/>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<?php echo $this->render('partial/tinyMCE.phtml'); ?>

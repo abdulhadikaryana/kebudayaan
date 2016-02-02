@@ -1,0 +1,10 @@
+
+<tr>
+    <td><?php echo $this->HtmlDecode($this->name); ?></td>
+    <td><?php echo $this->HtmlDecode($this->website); ?></td>
+    <td><?php echo $this->HtmlDecode($this->email); ?></td>
+    <td><?php echo $this->HtmlDecode($this->fax); ?></td>
+    <td><a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/airlines/edit/id/<?php echo $this->airline_id; ?>/lang/1">Edit</a></td>
+    <td><a href="<?php echo $this->rootUrl(); ?>/admin/airlines/edit/id/<?php echo $this->airline_id; ?>/lang/2"><?php $this->CheckAirlinesIndo($this->airline_id, 2)?></a></td>
+    <td><div id ="removeAirlines" class="general-remove" onclick="deleteAirlines(<?php echo $this->airline_id; ?>);">Delete</div></td>
+</tr>

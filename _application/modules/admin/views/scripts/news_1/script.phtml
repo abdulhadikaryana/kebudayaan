@@ -1,0 +1,294 @@
+<?php $this->placeholder('styles')->captureStart(); ?>
+<link href="<?php echo $this->scriptUrl('/styles/jqueryui/base/ui.all.css'); ?>" 
+      rel="stylesheet" type="text/css" />    
+<link href="<?php echo $this->scriptUrl('/styles/vader/jquery-ui-1.7.2.custom.css'); ?>" 
+      rel="stylesheet" type="text/css" />    
+      <?php $this->placeholder('styles')->captureEnd(); ?>
+
+<?php
+$this->placeholder('jsInline')->captureStart();
+echo $this->render('partial/tinyMCE.phtml');
+echo $this->render('partial/upload-image-script.phtml');
+?>
+<script type="text/javascript">
+  var poi_stack = [];
+  var poi_max = 0;
+    
+  tinyMCE.execCommand('mceAddControl', false, 'newsContent');
+    
+  /**
+   * IS: 
+   * FS: 
+   * Desc: Mengatur file browser di dalam active manager
+   */
+  function myFileBrowser (field_name, url, type, win)
+  {
+    var cmsURL = '<?php echo $this->rootUrl('/admin/destination/imagebrowser'); ?>';
+    if (cmsURL.indexOf("?") < 0) {
+      cmsURL = cmsURL + "?type=" + type;
+    } else {
+      cmsURL = cmsURL + "&type=" + type;
+    }
+
+    tinyMCE.activeEditor.windowManager.open(
+    {
+      file : cmsURL,
+      title : 'My File Browser',
+      width : 800,
+      height : 500,
+      popup_css : false,
+      resizable : "yes",
+      inline : "yes",
+      close_previous : "no"
+    }, 
+    {
+      window : win,
+      input : field_name
+    });
+    return false;
+  } 
+
+  /**
+   * IS: 
+   * FS: 
+   * Desc: Menampilkan destination yang berkaitan dengan news.
+   *       Hanya digunakan pada mode edit
+   */
+<?php if ($this->state_edit) : ?>
+        function loadPoi()
+        {
+          $.ajax(
+          {
+            type: "POST",
+            url: "<?php echo $this->rootUrl('/admin/ajax/newspoilist'); ?>",
+            data: {newsId:<?php echo $this->news_id; ?>},
+            success: generatePoi,
+            dataType: "xml"
+          });
+        }
+      
+        /**
+         * IS: 
+         * FS: 
+         * Desc: Menampilkan destination untuk auto complete
+         */
+        function generatePoi(xml)
+        {
+          $(xml).find("poi").each(function()
+          {
+            poi_id = $(this).find("id").text();
+            poi_name = $(this).find("name").text();
+            addPoi(poi_name, poi_id);
+          }); 
+        }
+<?php endif; ?>
+    
+      /**
+       * IS: 
+       * FS: 
+       * Desc: Memeriksa destination yang akan diubah ke basis data
+       */
+      function checkpoi(poi_name)
+      {  
+        $('.ajaxloader').html("<img src='<?php echo $this->rootUrl('/media/images/mini-loader.gif') ?>'/>");
+        $('#newsPoi').attr('disabled', true);
+        $.ajax(
+        {
+          type: "POST",
+          url: "<?php echo $this->rootUrl('/admin/ajax/checkpoiname'); ?>",
+          data: {poiname:poi_name},
+          success: function(data)
+          {
+            if(data != 'error') {
+              $('#newsPoiId').val(data);
+              addPoi(poi_name,data);
+            } else {
+              alert('No Destination with name "' + poi_name + '" found! Please Check Your Entry!');
+            }
+          }
+        });
+      }
+
+      /**
+       * IS: 
+       * FS: 
+       * Desc: Menambahkan destination baru ke news
+       */
+      function addPoi(poi_name, poi_id)
+      {   
+        flag = jQuery.inArray(poi_id, poi_stack);
+        if (flag < 0) {
+          poi_stack.push(poi_id);
+          html = "<tr><td style='font-weight:700'>" + poi_name + "</td><td class='general-remove' onclick='removePoi("+ poi_max + ",$(this));'>Remove</td><td><input type='hidden'"+ " value=" + poi_id + " name='poiValue" + poi_max + "' /></td></tr>";
+          poi_max++;
+          $('#poiContainer').append(html);
+          $('#PoiCounter').val(poi_max);
+        } else {
+          alert('That Destination Already Added');
+        }
+        $('#newsPoi').focus();
+        $('#newsPoi').removeAttr('disabled');
+        $('.ajaxloader').empty();
+        $('#newsPoi').val('');
+      }    
+
+      /**
+       * IS: 
+       * FS: 
+       * Desc: Menghapus destination dari news
+       */
+      function removePoi(index, obj)
+      {
+        obj.parent().remove();
+        delete poi_stack[index];
+      }
+
+
+      //Add related article
+      var counter = $('#counterRelated').val();
+      function relatedArticle()
+      {
+
+        if($('#relatedLabel'+counter).val() == "" || $('#relatedLink'+counter).val() == "")
+        //if(removeSpaces($('#relatedLabel'+counter).val()) == "" || removeSpaces($('#relatedLink'+counter).val()) == "")
+        {
+          alert('There are still empty string!!');
+        }
+        else
+        {
+          counter++;
+
+          var html = '<tr>';
+          html +='<td><input type="text" id="relatedLabel'+ counter +'" class="mediumele valid" name="label'+ counter +'" /></td>';
+          html +='<td><input type="text" id="relatedLink'+ counter +'" class="mediumele valid" name="link'+ counter +'" /></td>';
+          html +='<td><div class="general-remove" onclick="delRelatedArticle($(this));">Delete</div></td>';
+          html +='</tr>';
+            
+          $('#tbrelated-header').show();
+          $('#tbrelated-article tbody').append(html);
+          $('#counterRelated').val((counter));
+
+          $('#relatedLink'+counter).rules("add", {
+            required: true,
+            url     : true,
+            messages: {
+              required: "<br/>Please enter an URL!",
+              url     : "<br/>Please enter a valid URL!"
+            }
+          });
+          $('#relatedLabel'+counter).rules("add", {
+            required: true,
+            messages: {required: "<br/>Please enter a related article name!"}
+          });
+
+
+        }
+      
+      }
+
+      //Delete related article
+      function delRelatedArticle(obj)
+      {
+        counter--;
+        if(counter == 0)
+        {
+          $('#tbrelated-header').hide();
+        }
+        $('#counterRelated').val(counter);
+        obj.parents('tr').remove();
+      }
+
+      //Delete related article in form edite
+      var counterDel = 1;
+      function delRelatedArticleEdit(obj)
+      {
+        //if confirm true, will sending reques to controller to delete field
+        if (confirm("Are you sure want to delete?")){
+
+          var id = obj.attr('id');
+          var label = $('#relatedLabel'+id).val();
+          var link = $('#relatedLink'+id).val();
+    
+          var html ='<input type="hidden" name="labeldel'+ counterDel +'" value="'+ label +'" /><input type="hidden" name="linkdel'+ counterDel +'" value="'+ link +'" />';
+
+          $('#tmpDelete').append(html);
+          $('#counterDel').val(counterDel);
+          obj.parents('tr').remove();
+        
+          counterDel++;
+          counter--;
+          $('#counterRelated').val(counter);
+        }
+        else
+        {
+          //alert("that's aborted ahaha!")
+        }
+
+
+      }
+
+
+      $(function() {
+        
+        $('#newsImage').keypress(function(){
+          return false;
+        });
+        $('#newsPublishDate').keypress(function(){ return false; });
+        $('#newsPublishDate').datepicker({ dateFormat : "yy-mm-dd" });
+        
+        $('#submit-btn').removeAttr('disabled');
+        $('#draft-btn').removeAttr('disabled');
+        
+        $("input[type*='text']").focus(function() {
+          $(this).css('border','2px solid #1E385D');
+        });
+        
+        $("input[type*='text']").blur(function() {
+          $(this).css('border','none');
+        });
+        
+<?php if ($this->state_edit) : ?>
+              loadPoi();
+<?php endif; ?>
+        
+            $('#newsPoi').autocomplete("<?php echo $this->rootUrl('/admin/ajax/poiautocomplete'); ?>",
+            {
+              minChars: 2,
+              width: 200,
+              matchContains: true,
+              loaderImage: "<?php echo $this->rootUrl('/media/images/mini-loader.gif') ?>"
+            });
+        
+            $("#newsPoi").result(function(event, data, formatted) {
+              if (data) { checkpoi(data); }
+            });
+        
+            $('#submit-btn').click(function() {
+              var content = tinyMCE.activeEditor.getContent();
+              $('#newsContent').val(content);
+            });
+        
+            $('#draft-btn').click(function() {
+              var content = tinyMCE.activeEditor.getContent();
+              $('#newsContent').val(content);
+            });
+        
+            $("#newsForm").validate(
+            {
+              rules : 
+                {
+                newsTitle:      { required:true },
+//                newsContent:    { required:true },
+                newsPublishDate:{ required:true },
+              },
+              messages : 
+                {
+                newsTitle:      "<br /> &nbsp; The news title cannot be empty!",
+//                newsContent:    "The news content cannot be empty!",
+                newsPublishDate:"Please choose a publishing date!",
+              }
+            });
+          });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

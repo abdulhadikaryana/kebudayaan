@@ -1,0 +1,302 @@
+{
+	"Global": [
+		/* Global */
+		{ "selector": "html,body", "type": "background-color", "label": "Outer area" },
+		{ "selector": "#page", "type": "background-color", "label": "Inner area" },
+		{ "selector": "#page", "type": "text", "label": "Default" },
+		{ "selector": "#page", "type": "color", "label": "Default" },
+		/* Link */
+		{ "selector": "#page a", "type": "text", "label": "Default link" },
+		{ "selector": "#page a", "type": "color", "label": "Default link" },
+		{ "selector": "#page a:hover", "type": "color", "label": "Default link" },
+		{}
+	],
+	"Header": [
+		/* Background */
+		{ "selector": "#page #masthead", "type": "background-color", "label": "Header" },
+		/* Title */
+		{ "selector": "#page .site-title, #page .site-title a", "type": "text", "label": "Title" },
+		{ "selector": "#page .site-title a", "type": "color", "label": "Title", "important": true },
+		{ "selector": "#page .site-title a:hover", "type": "color", "label": "Title", "important": true },
+		/* Tagline */
+		{ "selector": ".site-description", "type": "text", "label": "Tagline" },
+		{ "selector": ".site-description", "type": "color", "label": "Tagline", "important": true },
+		{}
+	],
+	"Menu – Primary": [
+		/* Background */
+		{ "selector": ".nav-menu", "type": "background-color", "label": "Area" },
+		/* Border */
+		{ "selector": ".main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul", "type": "border-color", "label": "Area" },
+		/* Top items */
+		{ "selector": "#page .main-navigation li a", "type": "text", "label": "Top item" },
+		{ "selector": "#page .main-navigation li a", "type": "color", "label": "Top item" },
+		{ "selector": "#page .main-navigation li a:hover", "type": "color", "label": "Top item" },
+		{ "selector": ".main-navigation li a", "type": "background-color", "label": "Top item" },
+		{ "selector": ".main-navigation li > a:hover", "type": "background-color", "label": "Top item" },
+		/* Sub items */
+		{ "selector": "#page .main-navigation ul ul a", "type": "text", "label": "Submenu item" },
+		{ "selector": "#page .main-navigation li li a", "type": "color", "label": "Submenu item" },
+		{ "selector": "#page .main-navigation li li a:hover", "type": "color", "label": "Submenu item" },
+		{ "selector": ".main-navigation li li a", "type": "background-color", "label": "Submenu item" },
+		{ "selector": ".main-navigation li li a:hover", "type": "background-color", "label": "Submenu item" },
+		/* Sub item border -- Specific to the this theme */
+		{ "selector": ".main-navigation li ul li a", "type": "border-bottom-color", "label": "Submenu item" },
+		{}
+	],
+	"Search Form": [
+		/*  Input */
+		{ "selector": "#s", "type": "text", "label": "Form" },
+		{ "selector": "#s", "type": "color", "label": "Form" },
+		{ "selector": "#s", "type": "background-color", "label": "Form" },
+		/* Focus */
+		{ "selector": "#s:focus", "type": "background-color", "label": "Form" },
+		/* Border */
+		{ "selector": "#s", "type": "border-color", "label": "Form" },
+		/* Submit */
+		{ "selector": "#searchsubmit", "type": "text", "label": "Submit" },
+		{ "selector": "#searchsubmit", "type": "color", "label": "Submit" },
+		{ "selector": "#searchsubmit", "type": "background-color", "label": "Submit" },
+		{ "selector": "#searchsubmit", "type": "border-color", "label": "Form" },
+		{}
+	],
+	"Widgets – Sidebar": [
+		/* Widget Title */
+		{ "selector": "#secondary .widget-title", "type": "text", "label": "Title" },
+		{ "selector": "#secondary .widget-title", "type": "color", "label": "Title" },
+		/* Widget Content */
+		{ "selector": "#secondary aside, #secondary aside ul li, #secondary aside a", "type": "text", "label": "Content" },
+		{ "selector": "#secondary aside, #secondary aside ul li", "type": "color", "label": "Content" },
+		/* Widget Link */
+		{ "selector": "#secondary aside a", "type": "color", "label": "Link" },
+		{ "selector": "#secondary aside a:hover", "type": "color", "label": "Link" },
+		{}
+	],
+	"Widgets – Front Page": [
+		/* Widget Title */
+		{ "selector": ".template-front-page #secondary .widget-title", "type": "text", "label": "Title" },
+		{ "selector": ".template-front-page #secondary .widget-title", "type": "color", "label": "Title" },
+		/* Widget Content */
+		{ "selector": ".template-front-page #secondary aside, .template-front-page #secondary aside ul li, .template-front-page #secondary aside a", "type": "text", "label": "Content" },
+		{ "selector": ".template-front-page #secondary aside, .template-front-page #secondary aside ul li", "type": "color", "label": "Content" },
+		/* Widget Link */
+		{ "selector": ".template-front-page #secondary aside a", "type": "color", "label": "Link" },
+		{ "selector": ".template-front-page #secondary aside a:hover", "type": "color", "label": "Link" },
+		{}
+	],
+	"Entry – Headings": [
+		/* Title */
+		{ "selector": ".entry-title, #page .entry-title a", "type": "text", "label": "Title" },
+		{ "selector": ".entry-title, #page .entry-title a", "type": "color", "label": "Title" },
+		{ "selector": "#page .entry-title a:hover", "type": "color", "label": "Title link" },
+		/* Headers */
+		{ "selector": ".entry-content h1", "type": "text", "label": "Heading 1" },
+		{ "selector": ".entry-content h1", "type": "color", "label": "Heading 1" },
+		{ "selector": ".entry-content h2", "type": "text", "label": "Heading 2" },
+		{ "selector": ".entry-content h2", "type": "color", "label": "Heading 2" },
+		{ "selector": ".entry-content h3", "type": "text", "label": "Heading 3" },
+		{ "selector": ".entry-content h3", "type": "color", "label": "Heading 3" },
+		{ "selector": ".entry-content h4", "type": "text", "label": "Heading 4" },
+		{ "selector": ".entry-content h4", "type": "color", "label": "Heading 4" },
+		{ "selector": ".entry-content h5", "type": "text", "label": "Heading 5" },
+		{ "selector": ".entry-content h5", "type": "color", "label": "Heading 5" },
+		{ "selector": ".entry-content h6", "type": "text", "label": "Heading 6" },
+		{ "selector": ".entry-content h6", "type": "color", "label": "Heading 6" },
+		/* Archive Title */
+		{ "selector": ".archive-header", "type": "background-color", "label": "Archive title" },
+		{ "selector": ".archive-title", "type": "text", "label": "Archive title" },
+		{ "selector": ".archive-title", "type": "color", "label": "Archive title" },
+		/* Featured Post Title */
+		{ "selector": "article.sticky .featured-post", "type": "border-color", "label": "Featured Post title" },
+		{ "selector": "article.sticky .featured-post", "type": "text", "label": "Featured Post title" },
+		{ "selector": "article.sticky .featured-post", "type": "color", "label": "Featured Post title" },
+		{}
+	],
+	"Entry – Content": [
+		/* Bottom Border */
+		{ "selector": ".site-content article", "type": "border-bottom-color", "label": "Area" },
+		/* Paragraph */
+		{ "selector": ".entry-content p, #page .entry-content p a, #respond p", "type": "text", "label": "Paragraph" },
+		{ "selector": ".entry-content p, #respond p", "type": "color", "label": "Paragraph" },
+		 /* Links set for content and comments. Comment selection should override */
+		{ "selector": "#page .entry-content a, #commentform a", "type": "color", "label": "Link" },
+		{ "selector": "#page .entry-content a:hover, #commentform a:hover", "type": "color", "label": "Link" },
+		 /* Lists */ { "selector": ".entry-content li, .entry-content li p", "type": "text", "label": "List" },
+		{ "selector": ".entry-content li, .entry-content li p", "type": "color", "label": "List" },
+		/* Small */
+		{ "selector": ".entry-content small", "type": "text", "label": "Small" },
+		{ "selector": ".entry-content small", "type": "color", "label": "Small" },
+		 /* Preformatted & Code - Set for content and comments. Comments section might override */
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "text", "label": "Preformatted, code" },
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "color", "label": "Preformatted, code" },
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "background-color", "label": "Preformatted, code" },
+		/* Blockquote */
+		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "text", "label": "Blockquote" },
+		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "color", "label": "Blockquote" },
+		{ "selector": ".entry-content blockquote", "type": "background-color", "label": "Blockquote" },
+		/* Address */
+		{ "selector": ".entry-content address", "type": "text", "label": "Address" },
+		{ "selector": ".entry-content address", "type": "color", "label": "Address" },
+		 /* Table */
+		{ "selector": ".entry-content table", "type": "border-bottom-color", "label": "Table" },
+		 /* Table Heading */
+		{ "selector": "#content th", "type": "text", "label": "Table heading" },
+		{ "selector": "#content th", "type": "color", "label": "Table heading" },
+		{ "selector": "#content th", "type": "background-color", "label": "Table heading" },
+		/* Table Content */
+		{ "selector": "#content td, #content td p", "type": "text", "label": "Table content" },
+		{ "selector": "#content td, #content td p", "type": "color", "label": "Table content" },
+		{ "selector": "#content td", "type": "background-color", "label": "Table content" },
+		{ "selector": ".entry-content td", "type": "border-top-color", "label": "Table content" },
+		 /* Image */
+		{ "selector": ".entry-content .wp-caption-text", "type": "text", "label": "Caption" },
+		{ "selector": ".entry-content .wp-caption-text", "type": "color", "label": "Caption" },
+		 /* Password */
+		{ "selector": ".post-password-required input[type='password']", "type": "text", "label": "Password input" },
+		{ "selector": ".post-password-required input[type='password']", "type": "color", "label": "Password input" },
+		{ "selector": ".post-password-required input[type='password']", "type": "background-color", "label": "Password input" },
+		{ "selector": ".post-password-required input[type='password']:focus", "type": "background-color", "label": "Password input" },
+		{ "selector": ".post-password-required input[type='password']", "type": "border-color", "label": "Password input" },
+		{ "selector": ".post-password-required input[type='submit']", "type": "text", "label": "Password submit" },
+		{ "selector": ".post-password-required input[type='submit']", "type": "color", "label": "Password submit" },
+		{ "selector": ".post-password-required input[type='submit']", "type": "background-color", "label": "Password submit" },
+		{ "selector": ".post-password-required input[type='submit']", "type": "border-color", "label": "Password submit" },
+		{}
+	],
+	"Entry – Navigation": [
+		/* Previous/next */
+		{ "selector": "#content nav a", "type": "text", "label": "Previous/next link" },
+		{ "selector": "#content nav a", "type": "color", "label": "Previous/next link" },
+		{ "selector": "#content nav a:hover", "type": "color", "label": "Previous/next link" },
+		/* Paging */
+		{ "selector": ".page-links, .page-links a", "type": "text", "label": "Paging" },
+		{ "selector": ".page-links", "type": "color", "label": "Paging label" },
+		{ "selector": "#page .page-links a", "type": "color", "label": "Paging link" },
+		{ "selector": "#page .page-links a:hover", "type": "color", "label": "Paging link" },
+		{}
+	],
+	"Entry – Meta": [
+		/* Meta */
+		{ "selector": ".entry-meta, #page .entry-meta a", "type": "text", "label": "Meta" },
+		{ "selector": ".entry-meta", "type": "color", "label": "Meta" },
+		{ "selector": "#page .entry-meta a", "type": "color", "label": "Meta link" },
+		{ "selector": "#page .entry-meta a:hover", "type": "color", "label": "Meta link" },
+		/* Edit link - Affects Entry, Comment, Showcase */
+		{ "selector": "#page .edit-link a", "type": "text", "label": "Edit link" },
+		{ "selector": "#page .edit-link a", "type": "color", "label": "Edit link" },
+		{ "selector": "#page .edit-link a:hover", "type": "color", "label": "Edit link" },
+		{}
+	],
+	"Comments – Content": [
+		{ "selector": "#comments .comment", "type": "background-color", "label": "Area" },
+		/* Comment content    - This may need to change to effect comment meta as well */
+		{ "selector": ".comment-content, .comment-content p, #page .comment-content a", "type": "text", "label": "Content" },
+		{ "selector": ".comment-content, .comment-content p, .comment-content h1, .comment-content h2, .comment-content h3, .comment-content h4, .comment-content h5, .comment-content h6, .comment-content blockquote cite, .comment-content th, .comment-content dt", "type": "color", "label": "Content" },
+		/* Comment link    - Also set in Entry Content
+		                   - Affects comment content and meta links. Following sections should override */
+		{ "selector": "#comments a", "type": "color", "label": "Link" },
+		{ "selector": "#comments a:hover", "type": "color", "label": "Link" },
+		/* Preformatted & Code - Also set in Entry Content  */
+		{ "selector": ".comment-content pre, .comment-content code", "type": "text", "label": "Preformatted, code" },
+		{ "selector": ".comment-content pre, .comment-content code", "type": "color", "label": "Preformatted, code" },
+		{ "selector": ".comment-content pre, .comment-content code", "type": "background-color", "label": "Preformatted, code" },
+		{}
+	],
+	"Comments – Author": [
+		/* Author */
+		{ "selector": "#comments .comment-author", "type": "text", "label": "Author" },
+		{ "selector": "#comments .comment-author", "type": "color", "label": "Author" },
+		{ "selector": "#comments .comment-author .fn", "type": "color", "label": "Author name" },
+		{ "selector": "#comments .comment-author .fn a", "type": "color", "label": "Author name link" },
+		{ "selector": "#comments .comment-author .fn a:hover", "type": "color", "label": "Author name link" },
+		{}
+	],
+	"Comments – Meta": [
+		/* List title */
+		{ "selector": ".comments-title", "type": "text", "label": "List title" },
+		{ "selector": ".comments-title", "type": "color", "label": "List title" },
+		/* Meta */
+		{ "selector": "#comments .comment-meta time", "type": "text", "label": "Date" },
+		{ "selector": "#comments .comment-meta a time", "type": "color", "label": "Date link" },
+		{ "selector": "#comments .comment-meta a:hover time", "type": "color", "label": "Date link" },
+		/* Reply link */
+		{ "selector": "#comments a.comment-reply-link", "type": "text", "label": "Reply link" },
+		{ "selector": "#comments a.comment-reply-link", "type": "color", "label": "Reply link" },
+		{ "selector": "#comments a.comment-reply-link:hover", "type": "color", "label": "Reply link" },
+		{}
+	],
+	"Comments – Pingback": [
+		/* Pingbacks */
+		{ "selector": "#page #comments .pingback, #page #comments .pingback a", "type": "text", "label": "Pingback" },
+		{ "selector": "#page #comments .pingback", "type": "color", "label": "Pingback" },
+		{ "selector": "#page #comments .pingback a", "type": "color", "label": "Pingback link" },
+		{ "selector": "#page #comments .pingback a:hover", "type": "color", "label": "Pingback link" },
+		{}
+	],
+	"Comments – Response Form": [
+		/* Area */
+		{ "selector": "#respond, .no-comments", "type": "background-color", "label": "Area" },
+		/* Title */
+		{ "selector": "#respond h3#reply-title", "type": "text", "label": "Title" },
+		{ "selector": "#respond h3#reply-title, #respond h3#reply-title a", "type": "color", "label": "Title" },
+		/* Description */
+		{ "selector": "#respond p, p.no-comments", "type": "text", "label": "Description" },
+		{ "selector": "#respond p, p.no-comments", "type": "color", "label": "Description" },
+		{ "selector": "#commentform a", "type": "text", "label": "Description link" },
+		{ "selector": "#commentform a", "type": "color", "label": "Description link" },
+		{ "selector": "#commentform a:hover", "type": "color", "label": "Description link" },
+		/* Allowed Tags */
+		{ "selector": "#respond form p.form-allowed-tags, #respond form .form-allowed-tags code", "type": "text", "label": "Allowed tags" },
+		{ "selector": "#respond form p.form-allowed-tags, #respond form .form-allowed-tags code", "type": "color", "label": "Allowed tags" },
+		/* Label */
+		{ "selector": "#respond p label", "type": "text", "label": "Label" },
+		{ "selector": "#respond p label", "type": "color", "label": "Label" },
+		/* Response field (textarea) */
+		{ "selector": "#respond textarea, #respond input[type='text'], #respond input[type='email'], #respond input[type='url']", "type": "text", "label": "Textarea" },
+		{ "selector": "#respond textarea, #respond input[type='text'], #respond input[type='email'], #respond input[type='url']", "type": "color", "label": "Textarea" },
+		{ "selector": "#respond textarea, #respond input[type='text'], #respond input[type='email'], #respond input[type='url']", "type": "background-color", "label": "Textarea" },
+		{ "selector": "#respond textarea:focus, #respond input[type='text']:focus, #respond input[type='email']:focus, #respond input[type='url']:focus", "type": "background-color", "label": "Textarea" },
+		{ "selector": "#respond textarea, #respond input[type='text'], #respond input[type='email'], #respond input[type='url']", "type": "border-color", "label": "Textarea" },
+		/* Submit button */
+		{ "selector": "#respond input#submit", "type": "text", "label": "Submit button" },
+		{ "selector": "#respond input#submit", "type": "color", "label": "Submit button" },
+		{ "selector": "#respond input#submit", "type": "background-color", "label": "Submit button" },
+		{ "selector": "#respond input#submit", "type": "border-color", "label": "Submit button" },
+		{}
+	],
+	"Post Format  – Aside" : [
+		/* Background */
+		{ "selector": "article.format-aside .aside", "type": "background-color", "label": "Area" },
+		/* Left Border */
+		{ "selector": "article.format-aside .aside", "type": "border-left-color", "label": "Area" },
+		/* Title */
+		{ "selector": "#page article.format-aside h1 a", "type": "color", "label": "Title" },
+		{ "selector": "#page article.format-aside h1 a:hover", "type": "color", "label": "Title" },
+		/* Content */
+		{ "selector": "article.format-aside .aside, article.format-aside p", "type": "color", "label": "Content" },
+		/* Link */
+		{ "selector": "#page article.format-aside p a", "type": "color", "label": "Link" },
+		{ "selector": "#page article.format-aside p a:hover", "type": "color", "label": "Link" },
+		{}
+	],
+	"Post Format  – Quote" : [
+		/* Background */
+		{ "selector": "article.format-quote .entry-content blockquote", "type": "background-color", "label": "Area" },
+		/* Content */
+		{ "selector": "article.format-quote .entry-content blockquote, article.format-quote .entry-content blockquote p", "type": "color", "label": "Content" },
+		/* Link */
+		{ "selector": "#page article.format-quote .entry-content blockquote a, #page article.format-quote .entry-content blockquote p a", "type": "color", "label": "Link" },
+		{ "selector": "#page article.format-quote .entry-content blockquote a:hover, #page article.format-quote .entry-content blockquote p a:hover", "type": "color", "label": "Link" },
+		{}
+	],
+	"Footer": [
+		/* Area */
+		{ "selector": "footer[role='contentinfo']", "type": "background-color", "label": "Area" },
+		{ "selector": "footer[role='contentinfo']", "type": "border-top-color", "label": "Area" },
+		/* Credit */
+		{ "selector": "#page .site-info, #page .site-info a", "type": "text", "label": "Credit" },
+		{ "selector": "#page .site-info a", "type": "color", "label": "Credit link" },
+		{ "selector": "#page .site-info a:hover", "type": "color", "label": "Credit link" },
+		{}
+	]
+}

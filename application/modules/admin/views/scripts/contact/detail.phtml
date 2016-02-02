@@ -1,0 +1,56 @@
+<?php $subj = $this->contact->subject; ?>
+<?php
+switch ($subj) {
+    case "1": $subj = 'Pertanyaan Informasi Kebudayaan';
+        break;
+    case "4": $subj = 'Respon / Komentar Situs Ini';
+        break;
+    case "5": $subj = 'Lain-Lain';
+        break;
+    case "6": $subj = 'Pendaftaran Kontributor';
+        break;
+}
+?>
+
+<div class="row-fluid">
+    <h3>Kontak</h3>
+    <h5 class="medium">Detail Kontak</h5>
+</div>
+<div class="row-fluid">
+    <form class="form form-horizontal">
+        <div class="control-group">
+            <label for="static-date" class="control-label">Tanggal</label>
+            <div class="controls readonly">
+                <?php echo date_format(new DateTime($this->contact->date), 'd/m/Y'); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="static-name" class="control-label">Nama</label>
+            <div class="controls readonly">
+                <?php echo $this->contact->name; ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="" class="control-label">Alamat Email</label>
+            <div class="controls readonly">
+                <?php echo $this->contact->email; ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="static-subject" class="control-label">Subyek</label>
+            <div class="controls readonly">
+                <?php echo $subj; ?>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="static-subject" class="control-label">Pesan</label>
+            <div class="controls readonly">
+                <?php echo $this->contact->comment; ?>
+            </div>
+        </div>
+        <div id="buttondetail"><a href="<?php echo $this->rootUrl(); ?>/admin/contact/">&laquo; Kembali</a></div>
+    </form>
+</div>

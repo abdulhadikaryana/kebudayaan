@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454386207 < time()) $expired = true; else{$expired = false; $value = 's:38:"81-20-179-154.wimax-dynamic4.newtel.je";';}?>

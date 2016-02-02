@@ -1,0 +1,29 @@
+
+<div id="activity-content">
+    <div id="breadcrumb">
+        <?php echo $this->breadcrumb() ?>
+    </div>
+    <h2><?php echo $this->translate('id_menu_activity_things') ?></h2>
+
+    <?php foreach($this->activities as $activity) : ?>
+        <div class="top-category" style="background: url(<?php echo $this->imageUrl('/upload/category/' . $activity['image']) ?>) no-repeat">
+            <h3><?php echo $activity['name'] ?></h3>
+            <div class="child-category">
+                <?php foreach($activity['child'] as $child) : ?>
+                <div class="child-list">
+                    <div class="child-img">
+                        <img src="<?php echo $this->imageUrl('/upload/category/thumbnails/' . $child['image']) ?>" alt="" title="<?php echo $child['name']?>" style="width: 70px; height: 60px" />
+                    </div>
+                    <div class="child-desc">
+                        <h4><a href="<?php echo $this->baseUrl('/activity/detail/') . $child['category_id'] ?>"><?php echo $child['name'] ?></a></h4>
+                        <?php echo $this->truncate($child['description'], 100) ?>
+                        <div class="read-more-activity"><a href="<?php echo $this->baseUrl('/activity/detail/') . $child['category_id'] ?>"><?php echo $this->translate('read_more') ?> &gt;&gt;</a></div>
+                    </div>
+                </div>
+                <div class="clear-left"></div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <div class="clear-left"></div>
+</div>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <title>
+            <?php if ($this->pageTitle): ?>
+                <?php echo $this->pageTitle; ?>
+                <?php if (!$this->removeWebTitle): ?>
+                    <?php echo ' | ' . $this->webTitle ?>
+                <?php endif; ?>
+            <?php else: ?>
+                <?php echo $this->webTitle ?>
+            <?php endif; ?>
+        </title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="keywords" content="website kebudayaan indonesia, ragam kebudayaan indonesia"/>	
+        <meta name="language" content="<?php echo $this->selectedLanguage; ?>"/>
+        <meta name="description" content="Official Website for Indonesia Culture Information"/>	
+        <meta name="subject" content="Indonesia Culture Information"/>
+        <meta name="copyright"content="Indonesia Ministry of Education and Culture"/>
+        <!--geo tag-->
+        <meta name="geo.position" content="-6.174689,106.842041"/>
+        <meta name="geo.placename" content="Jakarta Raya, Indonesia"/>
+        <meta name="geo.region" content="id-jk"/>
+        <meta property="fb:app_id" content="<?php echo Zend_Registry::get('fb_app_id'); ?>">	
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->imageUrl('logo-img.png'); ?>" />           
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
+
+        <?php if (APPLICATION_ENV == "production" || APPLICATION_ENV == "testing"): ?>
+            <link rel="stylesheet" href="<?php echo $this->scriptUrl('styles/frontend/site.min.css'); ?>" type="text/css" />    
+        <?php else: ?>
+            <link rel="stylesheet" href="<?php echo $this->scriptUrl('styles/frontend/layout.css'); ?>" type="text/css" />    
+
+            <!-- foundation lib -->
+            <link rel="stylesheet" href="<?php echo $this->scriptUrl('lib/foundation/stylesheets/foundation.css'); ?>" type="text/css" />    
+            <link rel="stylesheet" href="<?php echo $this->scriptUrl('lib/foundation/stylesheets/app.css'); ?>" type="text/css" />    
+
+            <!-- lain lain -->
+            <link rel='stylesheet' type='text/css' href='<?php echo $this->scriptUrl('styles/frontend/lib/fullcalendar.css') ?>' />    
+        <?php endif; ?>
+
+        <?php
+        /* Digunakan untuk include css inline di tiap view */
+        echo $this->placeholder('cssInline');
+        ?>        
+
+        <script src="<?php echo $this->scriptUrl('lib/foundation/javascripts/modernizr.foundation.js') ?>"></script>
+        <!-- IE Fix for HTML5 Tags -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->            
+
+        <style>
+            @import url(http://fonts.googleapis.com/css?family=Arimo);
+
+            body {
+                font-family: Arimo, Helvetica, "Open Sans" !important;
+            }
+
+            .widget-full-desc p {
+                font-family: Arimo, Helvetica, "Open Sans" !important;
+            }
+
+
+            .widget-full-desc h3 {
+                font-family: Arimo, Helvetica, "Open Sans" !important;
+            }
+
+            .widget-list-news a {
+                font-family: Arimo, Helvetica, "Open Sans" !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Budaya Banner -->
+        <header id="header">
+            <div id="topheader">
+                <div class="row">
+                    <div id="country-select" class="hidden">
+                        <dl id="target" class="dropdown">
+                            <dt>
+                            <span class="flag">
+                                <a href="#"><em><img src="<?php echo $this->imageUrl('/flag-' . $this->selectedLanguage . '.png') ?>" alt="flag" /> <?php echo strtoupper($this->selectedLanguage); ?></em></a>
+                            </span>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li class="id"><a href="http://localhost/lamanbudaya/public/id"><span class="flag"><em>ID</em></span></a></li>
+                                    <li class="en"><a href="http://localhost/lamanbudaya/public/en"><span class="flag"><em>EN</em></span></a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div id="mainheader">
+                <div class="row">
+                    <div id="logo">
+                        <a href="<?php echo $this->baseUrl() ?>"><img src="<?php echo $this->imageUrl('black-logo-new.png') ?>" alt="Website Kebudayaan" /></a>                
+                    </div>    
+                    <div id="navigation">
+                        <ul class="sf-menu sf-vertical">
+                            <li><a id="submenu" href="<?php echo $this->baseUrl() ?>"><?php echo $this->translate('id_menu_home') ?></a></li>
+                            <li id="parent-menu-culture">
+                                <a id="submenu" href="#"><?php echo $this->translate('id_menu_culture') ?></a>
+
+                                <?php if (!empty($this->categories)): ?>
+                                    <ul>
+                                        <?php foreach ($this->categories as $category): ?>                                                                                                    
+                                            <li class="child-menu-culture">
+                                                <a href="<?php echo $this->baseUrl('/category/see-category/' . $category['category_id']) ?>" class="sub-menu-header"><?php echo $category['name'] ?></a>
+
+                                                <!--children menu-->
+                                                <?php if (!empty($category['children'])): ?>
+                                                    <!--                        <ul id="list" style="display: none;">
+                                    
+                                                    <?php foreach ($category['children'] as $catChild): ?>
+                                                                                    <li>
+                                                                                    <a href="#"><?php echo $catChild['name'] ?></a>
+                                                    <?php endforeach; ?>
+                                                                                </li>
+                                                                            </ul>-->
+                                                <?php endif; ?>
+                                                <!--end of children menu-->
+
+                                            </li>                               
+                                        <?php endforeach; ?>                   
+                                    </ul>    
+                                <?php endif; ?>                        
+                            </li>
+                            <li><a id="submenu" href="<?php echo $this->baseUrl('news') ?>"><?php echo $this->translate('id_menu_news') ?></a></li>              
+                            <li><a id="submenu" href="<?php echo $this->rootUrl('forum') ?>" target="_blank"><?php echo $this->translate('Forum') ?></a></li>
+                            <li><a id="submenu" href="<?php echo $this->baseUrl('partner') ?>"><?php echo $this->translate('Partner') ?></a></li>
+                            <li><a id="submenu" href="<?php echo $this->baseUrl('contact-us') ?>"><?php echo $this->translate('id_menu_contact') ?></a></li>
+
+                        </ul>
+                    </div>    
+                </div><!-- end div row -->
+            </div><!-- end div main header -->
+        </header>
+
+        <?php if (!$this->homepage): ?>  
+            <div id="header-divider">
+                <div class="row">
+                    <div class="twelve columns batik">
+                        <p class="breadcrumb"><?php echo $this->breadcrumb() ?></p>
+                        <h1 class="<?php echo $this->bgClass ?>"><?php echo $this->bigPageTitle ?></h1>
+                    </div>
+                </div>        
+            </div>
+        <?php endif; ?>
+
+        <div id="ajax-message" style="display:none;"> 
+            <?php echo $this->translate('Processing') . '.....' ?> 
+        </div> 
+
+        <div id="wrapper" style="<?php if (!$this->homepage) {
+                echo 'margin-top: 0';
+            } ?>">        

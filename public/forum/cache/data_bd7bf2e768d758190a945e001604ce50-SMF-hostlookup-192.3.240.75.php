@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454391531 < time()) $expired = true; else{$expired = false; $value = 's:34:"192-3-240-75-host.colocrossing.com";';}?>

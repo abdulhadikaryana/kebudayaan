@@ -1,0 +1,25 @@
+<?php
+    $class = 'rating';
+    if($this->class) {
+        $class = $this->class;
+    }
+
+    $rating = round($this->rating);
+
+    $enable = true;
+    if($this->disable)
+        $enable = false;
+?>
+
+<div class="<?php echo $class ?>">
+    <input type="radio" name="vote" id="vote1" value="1" <?php echo ($rating == 1)? 'checked="checked"' : '' ?> />
+    <input type="radio" name="vote" id="vote2" value="2" <?php echo ($rating == 2)? 'checked="checked"' : '' ?> />
+    <input type="radio" name="vote" id="vote3" value="3" <?php echo ($rating == 3)? 'checked="checked"' : '' ?> />
+    <input type="radio" name="vote" id="vote4" value="4" <?php echo ($rating == 4)? 'checked="checked"' : '' ?> />
+    <input type="radio" name="vote" id="vote5" value="5" <?php echo ($rating == 5)? 'checked="checked"' : '' ?> />
+</div>
+<?php if($enable): ?>
+    <div class="user-rated">
+        <?php echo number_format($this->rating, 2, '.', '') . '/5' . ' (' . $this->userRated . ' votes)' ?>
+    </div>
+<?php endif; ?>

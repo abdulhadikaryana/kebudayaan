@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454408703 < time()) $expired = true; else{$expired = false; $value = 's:48:"mm-19-202-125-178.mfilial.dynamic.pppoe.byfly.by";';}?>

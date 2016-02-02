@@ -1,0 +1,54 @@
+<div class="filter-panel" filter-hidden>
+
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="form-inline well">
+    <label for="filterPage" class="control-label">Filter</label>
+    <select class="filter-box" name="filterPage" id="filterPage"
+            onchange="filterSwitch(this.value);">
+      <option value="0">Tampilkan Semua</option>
+      <option value="1">Nama</option>
+      <option value="2">Area</option>
+      <option value="3">Kategori</option>
+      <option value="4">Status</option>
+      <option value="5">Tipe</option>
+    </select>
+
+    <select class="status-box filter-hidden" name="filterStatus">
+      <option value="2">Diterbitkan</option>
+      <option value="1">Butuh Penerimaan</option>
+      <option value="0">Draft</option>
+    </select>
+
+    <select class="special-box filter-hidden" name="filterSpecial">
+      <option value="1">Fitur</option>
+      <option value="0">Non Fitur</option>
+    </select>
+
+    <select class="category-box filter-hidden" name="filterCategory">
+      <?php foreach ($this->category as $category) : ?>
+        <option value="<?php echo $category['category_id']; ?>">
+          <?php echo $category['name']; ?>
+        </option>
+      <?php endforeach; ?>
+    </select>
+
+    <select class="area-box filter-hidden" name="filterArea">
+      <?php foreach ($this->area as $area) : ?>
+        <option value="<?php echo $area['area_id']; ?>">
+          <?php echo $area['name']; ?>
+        </option>
+      <?php endforeach; ?>
+    </select>
+
+    <span class="name-box filter-hidden">
+      <input type="text" class="" name="filterName"/>
+    </span>
+
+
+    <input type="submit" value="Go" class="btn radius"/>
+
+    <hr />
+    <?php if (!empty($this->alert)) : ?>
+      <div class="tip">Filter yang sedang digunakan: <?php echo $this->alert; ?></div>
+    <?php endif; ?> 
+  </form>
+</div>

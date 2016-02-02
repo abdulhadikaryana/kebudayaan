@@ -1,0 +1,65 @@
+<div class="section">
+
+
+  <h2 class="section-title">
+    <span><?php echo $this->title; ?></span>
+  </h2>
+
+  <?php
+  echo $this->paginationControl($this->article, 'Sliding',
+          'partials/pagination.phtml',
+          array('message'   => $this->controller, 'upMessage' => true));
+  ?>
+
+<?php foreach ($this->article as $article) : ?>
+    <div class="en-list">
+      <div class="en-img-list">
+        <a>
+               <?php if ((file_exists(UPLOAD_FOLDER . 'article/figure/' . $article['image'])) && !empty($article['image'])) : ?>
+            <img src="<?php echo $this->imageUrl('timthumb.php?src=/upload/article/figure/' . $article['image'] . '&a=t&w=150&h=130&q=100'); ?>"
+                 alt="<?php echo $article['name']; ?>" />
+               <?php else : ?>
+            <img src="<?php echo $this->imageUrl('default.jpg'); ?>"
+                 alt="<?php echo $article['name']; ?>" />
+  <?php endif; ?>  
+  <!--          <img src="<?php echo $this->mediaUrl('images/upload/article/figure' . $article['image']) ?>" alt="" />-->
+        </a>
+      </div>
+      <div class="en-desc-list">
+        <h3>
+          <?php
+          $act = '';
+          switch ($article['category']) {
+            case 1: $act = 'komunitas-kebudayaan';
+              break;
+            case 2: $act = 'tokoh-kebudayaan';
+              break;
+          }
+          $url = $this->baseUrl($act . '/' . $article['id'] . '/' . $this->makeUrlFormat($article['name']));
+          ?>
+
+          <a href="<?php echo $url ?>">
+  <?php echo $article['name'] ?>
+          </a>
+        </h3>
+        <p>
+  <?php echo $this->truncate($article['description'],
+          250) ?>
+        </p>
+        <span class="read-more-lb">
+          <a class="small button button-grey" href="<?php echo $url ?>">
+  <?php echo $this->translate('id_read_more_new'); ?>
+          </a>
+        </span>
+      </div>
+      <div class="clear-left"></div>
+    </div>
+  <?php endforeach; ?>
+
+<?php
+echo $this->paginationControl($this->article, 'Sliding',
+        'partials/pagination.phtml',
+        array('message'     => $this->controller, 'downMessage' => true));
+?>
+
+</div>

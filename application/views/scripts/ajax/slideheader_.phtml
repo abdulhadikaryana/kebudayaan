@@ -1,0 +1,9 @@
+<?php 
+    $slideimage_url = $this->serverUrl().$this->imageUrl().'/upload/highlight/';
+?>
+
+<?php foreach ($this->imageData as $counter => $data) : ?>
+    <div <?php echo ($counter == 0)? 'class = "active"' : '' ?>>
+        <img src="<?php echo $this->imageUrl('/upload/highlight/' . $data['path_image']) ?>" alt="" />
+    </div>
+<?php endforeach; ?>

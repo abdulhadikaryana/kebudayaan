@@ -1,0 +1,72 @@
+<form method="post" action="<?php echo $this->currentUrl(); ?>" 
+      id="materialPromotionForm" name="materialPromotionForm">
+    <fieldset class="wide">
+        <legend>Material Promotion Detail</legend>
+        <?php echo $this->form->materialCtr; ?>
+        <table>
+            <tr>
+                <td width="82px"><label for="materialTitle">Title</label></td><td>&#58;</td>
+                <td><?php echo $this->form->materialTitle; ?></td>
+            </tr>
+        </table>
+        <?php if($this->language_id!=2){?>
+        <table id="material-container">
+        <?php if(!$this->state_edit): ?>
+            <tr>
+                <td><label for="materialName1">material Name</label></td><td>&#58;</td>
+                <td>
+                    <input type="text" id="materialName1" name="materialName1" 
+                           class="mediumele" 
+                           value="<?php if ($this->state_edit) {echo $this->datamaterial[0]['file'];} ?>"/>
+                </td>
+                <td><label for="materialUrl1">URL</label></td><td>&#58;</td>
+                <td>
+                    <input type="text" id="materialUrl1" name="materialUrl1" 
+                           class="mediumele" 
+                           value="<?php if ($this->state_edit) {echo $this->datamaterial[0]['material'];} ?>"/>
+                </td><td></td>
+            </tr>
+        <?php endif; ?>
+            <?php $max = $this->numbCtr; ?>
+            <?php if ($this->state_edit) : ?>
+                <?php for ($i = 0; $i < $max; $i++) : ?>
+                    <tr>
+                        <td></td><td></td>
+                        <td>
+                            <input type="text" class="mediumele"
+                                   id="materialName<?php echo $i+1; ?>" 
+                                   name="materialName<?php echo $i+1; ?>"
+                                   value="<?php echo $this->datamaterial[$i]['file']; ?>"/>
+                        </td>
+                        <td></td><td></td>
+                        <td>
+                            <input type="text" class="mediumele"
+                                   id="materialUrl<?php echo $i+1; ?>" 
+                                   name="materialUrl<?php echo $i+1; ?>" 
+                                   value="<?php echo $this->datamaterial[$i]['link']; ?>"/>
+                        </td>
+                        <td>
+                            <div class='general-remove' 
+                                 onclick='deletematerial($(this));'>Delete</div>
+                        </td>
+                    </tr>
+                <?php endfor; ?>
+            <?php endif; ?>
+        </table>
+        <?php } ?>
+        <table>
+            <?php if($this->language_id!=2){?>
+            <tr>
+                <td><input type="button" style="margin-bottom:10px;" 
+                           class="btn radius" value="+ Add New material" 
+                           onclick="addmaterial();"/></td></tr><?php } ?>
+            <tr>
+                <td><label for="materialDescription">Description:</label></td>
+                <td></td></tr>
+            <tr>
+                <td><?php echo $this->htmlDecode($this->form->materialDescription); ?></td></tr>
+        </table>
+    </fieldset>
+    <input type="submit" id="materialSubmit" name="materialSubmit" 
+           value="Save" class="btn radius space_l" />
+</form>

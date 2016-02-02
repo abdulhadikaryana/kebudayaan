@@ -1,0 +1,404 @@
+<!-- HEADLINE begins here -->
+<div class="row-fluid" id="headline">
+    <div class="span24 section-content">
+        <div id="headline-carousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <?php foreach ($this->activeHeaders as $index => $header): ?>
+                    <li data-target="#headline-carousel" 
+                        data-slide-to="<?php echo $index; ?>"
+                        class="<?php echo ($index == 0) ? 'active' : '' ?>">
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+            <div class="carousel-inner">
+                <?php foreach ($this->activeHeaders as $index => $header): ?>
+                    <?php
+                    $src = "default.jpg";
+                    $imgPath = UPLOAD_FOLDER . '/highlight/' . $header['img_path'];
+                    if (file_exists($imgPath)) {
+                        $src = "upload/highlight/" . $header['img_path'];
+                    }
+                    ?>
+                    <div class="item <?php echo ($index == 0) ? 'active' : '' ?>">
+                        <img src="<?php
+                        echo $this->imageUrl('timthumb.php?src=' . $src
+                                . '&w=645&h=335&5=235&q=100')
+                        ?>" alt="<?php echo $header['name']; ?>" title="<?php echo $header['name']; ?>">
+                        <div class="carousel-caption">
+                            <h2><?php echo $header['name']; ?></h2>
+                            <p><?php echo $header['description']; ?></p>
+                            <p><a class="s-btn s-btn-with-icon read-more pull-right" 
+                                  href="<?php echo $header['link_path']; ?>">
+                                    <span class="rulycon-plus"></span> 
+                                    <?php $carousel = ($this->langId == 1) ? "Selengkapnya" : "Read more"; ?>
+                                    <?php echo $carousel; ?>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <a class="left carousel-control" href="#headline-carousel" data-slide="prev"></a>
+            <a class="right carousel-control" href="#headline-carousel" data-slide="next"></a>
+        </div>
+    </div>
+</div>
+<!-- HEADLINE ends here -->
+
+<!-- PREPENDED SECTION begins here -->
+<div class="row-fluid" id="prepended-section">
+    <div class="span24">
+        <div class="row-fluid" id="the-three-apps">
+            <?php if ($this->langId == 1) { ?>
+                <div class="span8">
+                    <a href="<?php echo $this->url(array(), 'peta'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/petabudaya.jpg'); ?>" 
+                             alt="Peta Budaya Indonesia"/>
+                    </a>
+                </div>
+                <div class="span8">
+                    <a href="<?php echo $this->url(array(), 'galeri'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/galeribudaya.jpg'); ?>"
+                             alt="Galeri Budaya Indonesia"/></a>
+                </div>
+                <div class="span8">
+                    <a href="<?php echo $this->url(array(), 'grafik'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/grafikbudaya.jpg'); ?>"
+                             alt="Grafik Budaya Indonesia"/></a>
+                </div>
+            <?php } else { ?>
+                <div class="span8">
+                    <a href="<?php echo $this->url(array(), 'map'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/petabudaya-en.jpg'); ?>" 
+                             alt="Peta Budaya Indonesia"/>
+                    </a>
+                </div>
+                <div class="span8">
+                    <a href="<?php echo $this->url(array(), 'gallery'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/galeribudaya-en.jpg'); ?>"
+                             alt="Galeri Budaya Indonesia"/></a>
+                </div>
+                <div class="span8">
+                    <a href="<?php echo $this->url(array(), 'chart'); ?>">
+                        <img src="<?php echo $this->rootUrl('img/grafikbudaya-en.jpg'); ?>"
+                             alt="Grafik Budaya Indonesia"/></a>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+<!-- PREPENDED SECTION ends here -->
+
+<!-- NEWS SECTION begins here -->
+<div class="row-fluid" id="news-section">
+    <div class="span24">
+        <!-- NEWS SECTION TITLE begins here -->
+        <?php $labelBerita = ($this->langId == 1) ? "Berita" : "News"; ?>
+        <h2 class="section-title"><?php echo $labelBerita; ?></h2>
+        <!-- NEWS SECTION TITLE ends here -->
+        <!-- NEWS SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <?php foreach ($this->news as $index => $news): ?>
+                    <?php
+                    $url = $this->url(array(
+                        'id' => $news['id'],
+                        'slug' => $this->makeUrlFormat($news['title'])
+                            ), $this->langId == 1 ? 'detail-berita' : 'news-detail');
+                    $featured_news_image = 'upload/news/' . $news['image'];
+                    if (!is_file(IMAGE_FOLDER . $featured_news_image)) {
+                        $featured_news_image = 'default.jpg';
+                    }
+                    ?>
+                    <div class="span6">
+                        <div class="thumbnail">
+                            <a href="<?php echo $url; ?>">
+                                <img src="<?php
+                                echo $this->imageUrl('timthumb.php?src='
+                                        . $featured_news_image
+                                        . '&w=275&h=175&q=100')
+                                ?>"
+                                     alt="<?php echo $news['title']; ?>" 
+                                     class="thumbnail" />
+                                <div class="caption">
+                                    <h3><?php echo $news['title']; ?></h3>
+                                </div>
+                                <span class="hidden-caption">
+                                    <p>
+                                        <?php echo $this->truncate($this->htmlDecode($news['content']), 150); ?>
+                                    </p>
+                                    <p><button class="s-btn s-btn-with-icon read-more pull-right"><span class="rulycon-plus"></span> <?php echo ($this->langId == 1) ? "Selengkapnya" : "Read More"; ?></button></p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+        <!-- NEWS SECTION CONTENT ends here -->
+
+        <!-- NEWS SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <?php $seeNews = ($this->langId == 1) ? "Lihat semua berita" : "See all news"; ?>
+            <a href="<?php echo $this->url(array(), $this->langId == 1 ? 'berita' : 'news') ?>" class="pull-right"><?php echo $seeNews; ?> &raquo;</a>
+        </div>
+        <!-- NEWS SECTION TITLE ends here -->
+    </div>
+</div>
+<!-- NEWS SECTION ends here -->
+
+<!-- CULTURE SECTION begins here -->
+<div class="row-fluid" id="culture-section">
+    <div class="span24">
+        <!-- CULTURE SECTION TITLE begins here -->
+        <?php $labelCulture = ($this->langId == 1) ? "Kebudayaan" : "Culture"; ?>
+        <h2 class="section-title"><?php echo $labelCulture; ?></h2>
+        <!-- CULTURE SECTION TITLE ends here -->
+        <!-- CULTURE SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <?php foreach ($this->featured_culture as $index => $culture): ?>
+                    <?php
+                    $url = $this->url(array(
+                        'destId' => $culture['poi_id'],
+                        'slug' => $this->makeUrlFormat($culture['name'])
+                            ), $this->langId == 1 ? 'detail-kebudayaan' : 'culture-detail');
+                    $featured_culture_image = 'upload/culture/' . $culture['image'];
+                    if (!is_file(IMAGE_FOLDER . $featured_culture_image)) {
+                        $featured_culture_image = 'default.jpg';
+                    }
+                    ?>
+                    <div class="span6">
+                        <div class="thumbnail">
+                            <a href="<?php echo $url; ?>">
+                                <img src="<?php
+                                echo $this->imageUrl('timthumb.php?src='
+                                        . $featured_culture_image
+                                        . '&w=275&h=175&q=100')
+                                ?>" 
+                                     alt="<?php echo $culture['name']; ?>"/>
+                                <div class="caption">
+                                    <h3><?php echo $culture['name']; ?></h3>
+                                </div>
+                                <span class="hidden-caption">
+                                    <p>
+                                        <?php
+                                        echo $this->truncate($this->htmlDecode($culture['description']), 150)
+                                        ?> 
+                                    </p>
+                                    <p><button class="s-btn s-btn-with-icon read-more pull-right"><span class="rulycon-plus"></span> <?php echo ($this->langId == 1) ? "Selengkapnya" : "Read More"; ?></button></p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+        <!-- CULTURE SECTION CONTENT ends here -->
+        <!-- CULTURE SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <a class="pull-right" href="<?php echo $this->url(array(), $this->langId == 1 ? 'kebudayaan' : 'culture') ?>"><?php echo ($this->langId == 1) ? "Lihat semua kebudayaan" : "See all cultures"; ?> &raquo;</a>
+        </div>
+        <!-- CULTURE SECTION TITLE ends here -->
+    </div>
+</div>
+<!-- CULTURE SECTION ends here -->
+
+<!-- CRUISING CULTURE SECTION begins here -->
+<div class="row-fluid" id="cruising-culture-section">
+    <div class="span24">
+        <!-- CRUISING CULTURE SECTION TITLE begins here -->
+        <?php $labelJelajah = ($this->langId == 1) ? "Jelajah Budaya Indonesia" : "Explore the Culture of Indonesia"; ?>
+        <h2 class="section-title"><?php echo $labelJelajah; ?></h2>
+        <!-- CRUISING CULTURE SECTION TITLE ends here -->
+        <!-- CRUISING CULTURE SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <ul id="cruising-culture-tab" class="nav nav-tabs">
+                    <?php foreach ($this->categories as $index => $category): ?>
+                        <li class="<?php echo $index == 0 ? 'active' : ''; ?>">
+                            <a href="#category_<?php echo $category['category_id']; ?>"
+                               data-toggle="tab">
+                                   <?php echo $category['name']; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div id="cruising-culture-tab-content" class="tab-content">
+                    <?php foreach ($this->categories as $index => $category): ?>
+                        <div class="tab-pane fade in <?php echo ($index == 0) ? "active" : "" ?>" 
+                             id="category_<?php echo $category['category_id']; ?>">
+                                 <?php
+                                 $rows = array_chunk($category['children'], 4);
+                                 ?>
+                                 <?php foreach ($rows as $index => $row): ?>
+                                <div class="row-fluid">
+                                    <?php foreach ($row as $index => $subcategory): ?>
+                                        <?php
+                                        $imageFile = 'upload/category/' . $subcategory['image'];
+                                        if (!file_exists(IMAGE_FOLDER . $imageFile)) {
+                                            $imageFile = 'default.jpg';
+                                        }
+                                        ?>
+                                        <div class="span6">
+                                            <a href="<?php
+                                            echo $this->url(array(
+                                                'id' => $subcategory['category_id'],
+                                                'slug' => $this->makeUrlFormat($subcategory['name'])
+                                                    ), ($this->langId == 1 ? 'subkategori' : 'subcategory'));
+                                            ?>" class="cruising-culture-item thumbnail">
+                                                <img src="<?php echo $this->imageUrl('timthumb.php?src=' . $imageFile . '&w=180&h=180&q=100') ?>" alt="<?php echo $subcategory['image']; ?>" class="thumbnail" />
+                                                <h6><?php echo $subcategory['name']; ?> 
+                                                    (<?php echo $subcategory['total_culture']; ?>)
+                                                </h6>
+                                            </a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+
+                </div>
+            </div>
+        </div>
+        <!-- CRUISING CULTURE SECTION CONTENT ends here -->
+    </div>
+</div>
+<!-- CRUISING CULTURE SECTION ends here -->
+
+<!-- AGENDA SECTION begins here -->
+<div class="row-fluid" id="agenda-section">
+    <div class="span16">
+        <!-- AGENDA SECTION TITLE begins here -->
+        <?php $labelAgenda = ($this->langId == 1) ? "Agenda Kegiatan" : "Event Agenda"; ?>
+        <h2 class="section-title"><?php echo $labelAgenda; ?></h2>
+        <!-- AGENDA SECTION TITLE ends here -->
+        <!-- AGENDA SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <div id="kebudayaanIndonesiaEventCalendar"></div>
+            </div>
+        </div>
+        <!-- AGENDA SECTION CONTENT ends here -->
+        <!-- AGENDA SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <?php $seeEvent = ($this->langId == 1) ? "Lihat semua kegiatan" : "See all events"; ?>
+            <a href="<?php echo $this->url(array(), $this->langId == 1 ? 'kegiatan' : 'event') ?>" class="pull-right"><?php echo $seeEvent; ?> &gt;&gt;</a>
+        </div>
+        <!-- AGENDA SECTION TITLE ends here -->
+    </div>
+    <div class="widget-wrap span8" id="twitter">
+        <a class="twitter-timeline" href="https://twitter.com/budayasaya" data-widget-id="273304782976991233">Tweet oleh @budayasaya</a>
+        <script>!function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");</script>
+        </script>
+    </div>
+</div>
+<!-- AGENDA SECTION ends here -->
+
+<!-- FIGURE SECTION begins here -->
+<div class="row-fluid" id="figure-section">
+    <div class="span24">
+        <!-- FIGURE SECTION TITLE begins here -->
+        <?php $labelSosok = ($this->langId == 1) ? "Sosok" : "Figure"; ?>
+        <h2 class="section-title"><?php echo $labelSosok; ?></h2>
+        <!-- FIGURE SECTION TITLE ends here -->
+        <!-- FIGURE SECTION CONTENT begins here -->
+        <div class="row-fluid section-content">
+            <div class="span24">
+                <?php foreach ($this->figures as $index => $figure): ?>
+                    <?php
+                    $tokoh_image = UPLOAD_FOLDER . 'figure/' . $figure['image'];
+                    $thumb = $this->imageUrl('timthumb.php?src=default.jpg');
+                    $url = $this->url(array(
+                        'id' => $figure['id'],
+                        'slug' => $this->makeUrlFormat($figure['name'])
+                            ), ($this->langId == 1 ? 'detail-sosok' : 'figure-detail'));
+                    if (file_exists($tokoh_image))
+                        $thumb = $this->imageUrl('timthumb.php?src=upload/figure/' . $figure['image'] . '&w=100&h=100&q=100');
+                    ?>
+                    <div class="media">
+                        <a class="pull-left" href="<?php echo $url; ?>">
+                            <img class="media-object" 
+                                 alt="<?php echo $figure['name']; ?>" 
+                                 src="<?php echo $thumb; ?>">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a style="color: #333" href="<?php echo $url; ?>"><?php echo $figure['name']; ?></a></h4>
+                            <p><?php echo $this->truncate($this->htmlDecode($figure['description']), 300); ?>
+                                <a href="<?php echo $url; ?>">
+                                    <?php echo ($this->langId == 1) ? "Selengkapnya" : "Read more"; ?> &raquo;</a></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <!-- FIGURE SECTION CONTENT ends here -->
+        <!-- FIGURE SECTION LINK begins here -->
+        <div class="row-fluid section-link">
+            <?php $seeFigure = ($this->langId == 1) ? "Lihat semua sosok" : "See all figures"; ?>
+            <a href="<?php echo $this->url(array(), $this->langId == 1 ? 'sosok' : 'figure'); ?>" class="pull-right"><?php echo $seeFigure; ?> &gt;&gt;</a>
+        </div>
+        <!-- FIGURE SECTION TITLE ends here -->
+    </div>
+</div>
+<!-- FIGURE SECTION ends here -->
+
+<?php $this->placeholder('jsInline')->captureStart(); ?>   
+
+<script>
+    $(document).ready(function() {
+        var baseUrl = '<?php echo $this->baseUrl() ?>';
+        $(".carousel").carousel();
+
+        $("#kebudayaanIndonesiaEventCalendar").eventCalendar({
+            eventsjson: baseUrl + '/api/eventdata',
+            jsonDateFormat: 'human',
+            monthNames: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+            dayNames: ["minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+            dayNamesShort: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+            txt_noEvents: "Tidak Ada Event di Bulan Ini.",
+            startWeekOnMonday: false,
+            showDayNameInCalendar: true,
+            moveOpacity: 1,
+            moveSpeed: 10,
+            txt_GoToEventUrl: "<?php echo $this->langId == 1 ? "Lihat selengkapnya" : "Read more"; ?>",
+            eventsScrollable: true
+        });
+
+        // Customize twitter feed
+        var hideTwitterAttempts = 0;
+        function editTheFuckingTwitterFeeds() {
+            setTimeout(function() {
+                if ($('[id*=twitter]').length) {
+                    $('[id*=twitter]').each(function() {
+                        var ibody = $(this).contents().find('body');
+
+                        if (ibody.find('.timeline .stream .h-feed li.tweet').length) {
+                            ibody.find('.timeline').css('border-radius', 0);
+                            ibody.find('.timeline.customisable-border').css('border', 0);
+                        }
+                    });
+                }
+                hideTwitterAttempts++;
+                if (hideTwitterAttempts < 3) {
+                    editTheFuckingTwitterFeeds();
+                }
+            }, 1500);
+        }
+
+        editTheFuckingTwitterFeeds();
+    });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

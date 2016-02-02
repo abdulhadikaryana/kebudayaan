@@ -1,0 +1,85 @@
+<?php $subj = $this->subject; ?>
+<?php switch($subj)
+{
+    case "1": $subj = 'Destination Information Inquiry';
+        break;
+    case "2": $subj = 'Site Promotional / Marketing Cooperation Offers';
+        break;
+    case "3": $subj = 'Affiliation Information Inquiry';
+        break;
+    case "4": $subj = 'Feedback / Comment on this Site';
+        break;
+    case "0": $subj = 'Others';
+        break;
+}
+
+    $flag = $this->flag;
+    if($flag == 1)
+    {
+        $imgflag = "<img src=".$this->imageUrl()."/admin/flag.gif>";
+        $link = "<div style='cursor:pointer' id='changeFlag' onclick='updateflag1(".$this->contact_id.");'>".$this->HtmlDecode($imgflag)."</div>";
+    }else{
+        $imgflag = "<img src=".$this->imageUrl()."/admin/unflag.gif>";
+        $link = "<div style='cursor:pointer' id='changeFlag' onclick='updateflag(".$this->contact_id.");'>".$this->HtmlDecode($imgflag)."</div>";
+    }
+
+    $check =	"<div align='center'><input type='checkbox' name='contact_item[]' value='".$this->contact_id."'></div>";
+
+?>
+
+<?php $status = $this->status;
+
+switch($status)
+{
+    case "0": $status = 'Belum Dibalas';
+        break;
+    case "1": $status = 'Balasan Sedang Menunggu Persetujuan';
+        break;
+    case "2": $status = 'Sudah Dibalas';
+        break;
+}
+?>
+
+<?php
+if($this->status == 2)
+{
+    $rep = "<a href=".$this->rootUrl()."/admin/contact/detail/id/$this->contact_id>View Reply</a>";
+} else if ($this->status == 1)
+{
+    $rep = "<a href=".$this->rootUrl()."/admin/contact/editdraft/id/$this->contact_id/?page=".$this->currentUrl().">Sunting Draft Balasan</a>";
+
+} else if ($this->status == 0)
+{
+    $rep = "<a href=".$this->rootUrl()."/admin/contact/editdraft/id/$this->contact_id/?page=".$this->currentUrl().">Tulis Draft Balasan</a>";
+}
+?>
+<?php
+if($this->status == 2)
+{
+    $table = "Email<br />Sent";
+} else if ($this->status == 1)
+{
+    $table = "<a href=".$this->rootUrl("/admin/contact/send/id/" . $this->contact_id . "/?page=" .$this->currentUrl()).">Kirim Balasan</a>";
+
+} else if ($this->status == 0)
+{
+    $table = "Belum Dibalas";
+}
+?>
+
+<tr>
+    <td><?php echo $this->HtmlDecode($check); ?></td>
+    <td><?php echo $this->HtmlDecode($link); ?></td>
+    <td><?php echo $this->HtmlDecode($this->date); ?></td>
+    <td><?php echo $this->HtmlDecode($this->name); ?><br/>
+        <?php echo $this->HtmlDecode($this->country); ?><br/>
+        <?php echo $this->HtmlDecode($this->email); ?><br/>
+        <?php echo $this->HtmlDecode($subj); ?><br/>
+        <?php echo $this->truncate($this->comment,60);?> <br/>
+		<a href="<?php echo $this->rootUrl(); ?>/admin/contact/detail/id/<?php echo $this->contact_id; ?>">Selengkapnya&gt;&gt;</a>
+    </td>
+    <td><?php echo $this->HtmlDecode($status); ?></td>    
+    <td><?php echo $this->HtmlDecode($rep); ?></td>
+    <td><?php echo $this->HtmlDecode($table); ?></td>
+    <td><div id ="removeContact" class="general-remove" onclick="deleteContact(<?php echo $this->contact_id; ?>);">Hapus</div></td>
+</tr>

@@ -1,0 +1,47 @@
+<tr>
+  <td>
+    <table class="cleartable">
+      <tr>
+        <td><a href="<?php echo $this->rootUrl(); ?>/admin/image/edit/id/<?php echo $this->gallery_id; ?>"><?php echo $this->HtmlDecode($this->name_language); ?></a></td>
+      </tr>
+      <tr>
+        <td>
+          <table class="cleartable mini">
+            <tr>
+              <td><a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/image/edit/id/<?php echo $this->gallery_id; ?>">Edit</a></td>
+              <td><div class="general-remove" onclick="deleteImage(<?php echo $this->gallery_id ?>,$(this));">Delete</div></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td>
+    <a href="<?php echo $this->imageUrl() . '/upload/' . $type_value . '/' . basename($this->source); ?>" class="highlightImage">
+      <?php
+      switch ($this->type) {
+        case 0 : $type_value = 'culture';
+          break;
+        case 1 : $type_value = 'culture';
+          break;
+        case 4 : $type_value = 'news';
+          break;
+      }
+      ?>
+      <img src="<?php echo $this->imageUrl('timthumb.php?src=upload/' . $type_value . '/' . basename($this->source) . '&w=270&h=100&q=100') ?>" alt="" />
+    </a>
+  </td>
+  <td><a target="_blank" href="<?php echo $this->rootUrl() . '/media/images/upload/' . $type_value . '/' . basename($this->source); ?>"><?php echo $this->rootUrl() . '/media/images/upload/' . $type_value . '/' . basename($this->source); ?></a></td>
+  <td><?php
+      if (!empty($this->poi_id)) {
+        $poi_name = $this->poiName($this->poi_id);
+        if (!empty($poi_name)) {
+          echo $this->poiName($this->poi_id);
+        } else {
+          echo 'Destination is not exist!';
+        }
+      } else {
+        echo 'No Related Destination!';
+      }
+      ?></td>
+</tr>

@@ -1,0 +1,79 @@
+<!--
+ * StaticForeignViewer
+ *
+ * Viewer untuk halaman (Travel Information) Foreign Representatives
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+<div class="section">
+
+    <?php echo $this->paginationControl(
+            $this->foreign,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'upMessage' => true)); ?>
+
+    <div style="margin-left: 80px;">
+    <?php foreach($this->foreign as $foreign) : ?>
+
+        <div class="en-list">
+
+            <h3><?php echo $this->escape($foreign['nama']); ?></h3>
+
+            <?php if (!empty($foreign['alamat'])) : ?>
+                <!-- id_list_address = 'Address' -->
+                <div class="address" style="float: left; width: 80px;">
+                    <?php echo $this->translate('id_list_address'); ?></div>
+                <div class="double-dot" style="float: left; width: 10px;">
+                    :</div>
+                <div style="float: left; width: 500px;">
+                    <?php echo $foreign['alamat']; ?></div>
+            <?php endif; ?>
+
+            <?php if (!empty($foreign['telpon'])) : ?>
+                <br style="clear: both;" />
+                <!-- id_list_phone = 'Phone' -->
+                <div class="phone" style="float: left; width: 80px;">
+                    <?php echo $this->translate('id_list_phone'); ?></div>
+                <div class="double-dot" style="float: left; width: 10px;">
+                    :</div>
+                <div style="float: left;">
+                    <?php echo $foreign['telpon']; ?></div>
+            <?php endif; ?>
+
+            <?php if (!empty($foreign['fax'])) : ?>
+                <br style="clear: both;" />
+                <!-- id_list_fax = 'Fax' -->
+                <div class="fax" style="float: left; width: 80px;">
+                    <?php echo $this->translate('id_list_fax'); ?></div>
+                <div class="double-dot" style="float: left; width: 10px;">
+                    :</div>
+                <div style="float: left;">
+                    <?php echo $foreign['fax']; ?></div>
+            <?php endif; ?>
+
+            <?php if (!empty($foreign['email'])) : ?>
+                <br style="clear: both;" />
+                <!-- id_list_email = 'Email' -->
+                <div class="email" style="float: left; width: 80px;">
+                    <?php echo $this->translate('id_list_email'); ?></div>
+                <div class="double-dot" style="float: left; width: 10px;">
+                    :</div>
+                <div><a href="mailto:<?php echo $foreign['email']; ?>">
+                    <?php echo $foreign['email']; ?>
+                </a></div>
+            <?php endif; ?>
+
+        </div>
+        <div class="clear-left"></div>
+
+    <?php endforeach; ?>
+    </div>
+
+    <?php echo $this->paginationControl(
+            $this->foreign,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'downMessage' => true)); ?>
+</div>

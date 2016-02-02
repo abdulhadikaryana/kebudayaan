@@ -1,0 +1,35 @@
+===Database visitindonesia
+== Id and name for table area
+|19|Nanggroe Aceh Darussalam 
+|20|North Sumatra
+|21|Riau 
+|22|Riau Archipelago 
+|23|West Sumatra
+|24|South Sumatra 
+|25|Jambi
+|26|Bangka Belitung
+|27|Bengkulu
+|28|Lampung 
+|29|Banten
+|30|DKI Jakarta
+|31|West Java
+|32|Central Java
+|33|DI Yogyakarta
+|34|East Java 
+|35|Bali
+|36|West Nusa Tenggara 
+|37|East Nusa Tenggara 
+|38|West Kalimantan
+|39|Central Kalimantan
+|40|East Kalimantan
+|41|South Kalimantan 
+|42|North Sulawesi
+|43|Gorontalo 
+|44|Central Sulawesi 
+|45|South Sulawesi 
+|46|West Sulawesi  
+|47|South East Sulawesi 
+|48|North Maluku 
+|49|Maluku
+|50|Papua
+|51|West Papua 

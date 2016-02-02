@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454397659 < time()) $expired = true; else{$expired = false; $value = 's:29:"23.110.143.6.rdns.as15003.net";';}?>

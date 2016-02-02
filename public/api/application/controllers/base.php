@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Base class for lamanbudaya API
+ */
+class Base_Controller extends Controller
+{
+    /**
+     * Use RESTful routing
+     */
+    public $restful = true;
+
+    /**
+     * Catch-all method for requests that can't be matched.
+     *
+     * @param  string    $method
+     * @param  array     $parameters
+     * @return Response
+     */
+    public function __call($method, $parameters)
+    {
+        return Response::error('404');
+    }
+
+}

@@ -1,0 +1,76 @@
+<div class="filter-panel filter-hidden">
+
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="well form-inline">
+    <fieldset>
+      <div class="control-group">
+        <label for="filterPage" class="control-label">Filter</label>
+        <div class="controls">
+          <select class="filter-box" name="filterPage" id="filterPage" 
+                  onchange="filterSwitch(this.value);">
+            <option value="0">Show All</option>
+            <option value="1">Admin Name</option>
+            <option value="2">Module</option>
+            <option value="3">Date</option>
+          </select>
+
+          <span class="name-box mediumele filter-hidden">
+            <input type="text" name="filterName"/>
+          </span>
+
+          <select class="module-box filter-hidden" name="filterModule">
+            <option value="account">             Admin Account</option>
+            <option value="activity">            Activity</option>
+            <option value="airlines">            Airlines</option>
+            <option value="attraction">          Attraction</option>
+            <option value="comment">             Comment</option>
+            <option value="contact">             Contact</option>
+            <option value="destination">         Destination</option>
+            <option value="event">               Event</option>
+            <option value="highlight">           Highlight</option>
+            <option value="image">               Image</option>
+            <option value="news">                News</option>
+            <option value="page">                Page</option>
+            <option value="promotionalmaterials">Promotional Materials</option>
+            <option value="region">              Region</option>
+            <option value="relatedlinks">        Related Links</option>
+            <option value="review">              Review</option>
+            <option value="role">                Role</option>
+            <option value="tourpackages">        Tour Packages</option>
+            <option value="tourismoperator">     Tourism Operator</option>
+            <option value="user">     User</option>
+          </select>
+
+          <span class="smallele filter-hidden startDate">
+            <input type="text" name="filterDate1" id="startDate" 
+                   class=""/>
+          </span>
+
+          <span class="filter-date filter-hidden">
+            Until
+          </span>
+
+          <span class="smallele filter-hidden endDate">
+            <input type="text" name="filterDate2" id="endDate" 
+                   class=""/>
+          </span>
+
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="controls">
+          <input type="submit" value="Go" class="btn radius"/>
+          
+        </div>
+      </div>
+      
+    </fieldset>
+
+
+
+
+
+
+    <span class="ajax-loader"></span>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+<div id="login-box" class="hidden">
+    <div class="error-box">Invalid Username</div>
+    <?php
+    $form = new Form_LoginForm();
+    $form->clearDecorators();
+    $langId = $this->languageID;
+    if($langId == 1){
+        $rem = 'Remember me';
+        $forg = ' Forgot password?';
+    }else{
+        $rem = 'Ingat saya';
+        $forg = ' Lupa password?';
+    }
+    ?>
+    <form id="loginForm" action="<?php echo $this->baseUrl('/login/index') ?>" method="post">
+        <table>
+            <?php echo $form->username ?>
+            <?php echo $form->password ?>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="remember" value="1" />
+                    <label for="remember"><?php echo $rem; ?></label>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <a class="small alignright" href="<?php echo $this->baseUrl('/registration/forgot') ?>"><?php echo $forg; ?></a>
+</div>

@@ -1,0 +1,13 @@
+<tr>
+    <td>
+        <a href="<?php echo $this->rootUrl('/admin/role/edit/id/' . $this->role_id); ?>">
+            <?php echo $this->role_name; ?></a>
+    </td>
+    <td>
+        <a class="general-remove" 
+           href="<?php echo $this->rootUrl('/admin/role/edit/id/' . $this->role_id); ?>">
+            Sunting</a>
+        <div class="general-remove" 
+             onclick="deleteRole(<?php echo $this->role_id; ?>)"> Hapus</div>
+    </td>
+</tr>

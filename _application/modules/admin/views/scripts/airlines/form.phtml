@@ -1,0 +1,71 @@
+<form method="post" action="<?php echo $this->currentUrl();?>" id="airlinesForm" name="airlinesForm">
+    <fieldset class="wide">
+        <legend>Airlines Detail</legend>
+        <?php echo $this->form->linkCtr; ?>
+        <table>
+            <tr>
+                <td><label for="linkName">Airline's Name</label></td><td>&#58;</td>
+                <td><?php echo $this->form->linkName; ?></td>
+            </tr>
+            <?php if($this->language_id!=2){?>
+            <tr>
+                <td><label for="linkWebsite">Website</label></td><td>&#58;</td>
+                <td><?php echo $this->form->linkWebsite; ?></td>
+            </tr>
+            <tr>
+                <td><label for="linkEmail">Email</label></td><td>&#58;</td>
+                <td><?php echo $this->form->linkEmail; ?></td>
+            </tr>
+            <tr>
+                <td><label for="linkFax">Fax</label></td><td>&#58;</td>
+                <td><?php echo $this->form->linkFax; ?></td>
+            </tr>
+        </table>
+        <table id="telp-container">
+            <?php if($this->state_edit): ?>
+                <?php for($i=0; $i <= $this->numbCtr2; $i++): ?> 
+                    <?php if($i==0): ?>                
+                    <tr>
+                        <td style="width: 113px;"><label>Telephone</label></td><td>&#58;</td><td><input value="<?php echo $this->datatelp[$i]['telephone']; ?>" name="linkTelephone<?php echo $i; ?>" id="linkTelephone<?php echo $i; ?>" class="mediumele" type="text" /></td>
+                    </tr>
+                    <?php else: ?>
+                    <tr>
+                        <td style="width: 113px;"></td><td></td><td><input value="<?php echo $this->datatelp[$i]['telephone']; ?>" name="linkTelephone<?php echo $i; ?>" id="linkTelephone<?php echo $i; ?>" class="mediumele" type="text" /></td><td><div class='general-remove' onclick='deleteTelp($(this));'>Delete</div></td>
+                    </tr>
+                    <?php endif; ?>
+                <?php endfor; ?>
+            <?php else: ?>
+                <tr>
+                    <td style="width: 113px;"><label>Telephone</label></td><td>&#58;</td><td><input name="linkTelephone0" id="linkTelephone0" class="mediumele" type="text" /></td>
+                </tr>
+            <?php endif;?>
+            <?php } ?>
+        </table>
+        <table>
+            <?php if($this->language_id!=2){?>
+            <tr><td><input type="button" style="margin-bottom:10px;" class="btn radius" value="+ Add Telephone Number " onclick="addNumb();"/></td></tr>
+            <?php } ?>
+            <tr>
+                <td><label for="linkDescription">Description</label></td><td>&#58;</td>
+            </tr>
+            <tr>
+                <td><?php echo $this->form->linkDescription; ?></td>
+            </tr>
+
+        </table>
+        <?php if($this->language_id!=2){?>
+        <table>
+            <tr>
+                <td><label for="airlineImage">Add Airline Image</label></td>
+                <td>&#58;</td>
+                <td>
+                    <?php echo $this->form->airlineImage; ?>
+                    <span><input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" /></span>
+                </td>
+            </tr>
+        </table>
+        <?php } ?>
+    </fieldset>
+    <input type="submit" id="airlinesSubmit" name="airlinesSubmit" value="Save" class="btn radius space_l" />
+</form>
+<?php echo $this->render('partial/upload-image-dialog.phtml');?>

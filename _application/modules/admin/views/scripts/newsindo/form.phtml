@@ -1,0 +1,144 @@
+<form name="newsForm" id="newsForm"  method="post"
+      onsubmit="return onSubmitForm();" class="form-horizontal well">
+  <!-- set hidden element-->
+  <?php echo $this->form->newsStatus; ?>
+  <?php echo $this->form->PoiCounter; ?>
+
+  <fieldset>
+    <legend class="f_legend">News Detail</legend>
+
+    <div class="control-group">
+      <label for="newsTitle" class="control-label">News Title</label>
+      <div class="controls">
+        <?php echo html_entity_decode($this->form->newsTitle); ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="newsContent" class="control-label">Content</label>
+      <div class="controls">
+        <?php echo $this->form->newsContent; ?>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <?php if ($this->language_id != 1) { ?>
+
+    <fieldset>
+      <legend class="f_legend">News Information</legend>
+
+      <div class="control-group">
+        <label for="newsPoi" class="control-label">Add Related Culture</label>
+        <div class="controls">
+          <?php echo $this->form->newsPoi; ?>
+          <span class="help-block">
+            Type and Choose Destination from Autocomplete
+          </span>
+          <table class="" id="poiContainer" cellpadding="0"></table>
+        </div>
+      </div>
+
+      <table>
+
+        <div class="control-group">
+          <label for="newsImage" class="control-label">Add News Image</label>
+          <div class="controls">
+            <?php echo $this->form->newsImage; ?>
+            <input alt="#TB_inline?height=300&width=400&inlineId=imageUploadDialog&modal=true" title="Upload Image" class="thickbox btn radius" type="button" value="Upload" />
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <label for="newsPublishDate" class="control-label">Publish Date</label>
+          <div class="controls">
+            <?php echo $this->form->newsPublishDate; ?>
+          </div>
+        </div>
+      </table>
+    </fieldset>
+  <?php } ?>
+
+
+  <?php
+  //untuk menambahkan related article
+  /* start here */
+  ?>
+  <fieldset>
+    <legend class="f_legend">Related Article</legend>
+    <?php if ($this->edit == 1): ?>
+      <input type="hidden" size=1 id="counterRelated" name="counterRelated" value="<?php echo count($this->ralated_news); ?>" />
+      <input type="hidden" size=1 id="counterDel" name="counterDel" value="0" />
+
+
+
+      <div class="control-group">
+        <div class="controls">
+
+          <table id="tbrelated-article">
+            <tr id="tbrelated-header" style="display:none"></tr>
+
+            <?php if (sizeof($this->ralated_news)): ?>
+              <?php
+              $counter = 1;
+              ?>
+              <?php foreach ($this->ralated_news as $ralated_news): ?>
+                <tr>
+                  <td>
+                    <input type="text" id="relatedLabel<?php echo $ralated_news->related_id; ?>" class="mediumele valid" name="label<?php echo $counter; ?>" value="<?php echo $ralated_news->label; ?>" />
+                  </td>
+                  <td>
+                    <input type="text" id="relatedLink<?php echo $ralated_news->related_id; ?>" class="mediumele valid" name="link<?php echo $counter; ?>" value="<?php echo $ralated_news->link; ?>" />
+                  </td>
+                  <td>
+                    <div class="general-remove" id="<?php echo $ralated_news->related_id; ?>" onclick="delRelatedArticleEdit($(this));">Delete</div>
+                  </td>
+                </tr>
+
+                <?php $counter++; ?>
+              <?php endforeach; ?>
+            <?php endif; ?>
+
+          </table>
+          <div id="tmpDelete">
+            <?php
+            /*
+              div ini digunakan untuk menampung data related article yang di delete
+              (temporary_field), bentuknya texbox yang di hidden
+              yang akan dikirimkan ke controller
+             */
+            ?>
+          </div>
+
+        <?php else: ?>
+          <table id="tbrelated-article">
+            <tr id="tbrelated-header" style="display:none"></tr>
+          </table>
+          <input type="hidden" id="counterRelated" name="counterRelated" value="0" />
+        <?php endif; ?>
+
+        <input class="btn" type="button" onclick="relatedArticle();" value="+ Related Article" style="margin-bottom:10px;">
+      </div>
+    </div>
+  </fieldset>
+  <?php
+  /* end here */
+  ?>
+
+
+
+  <fieldset>
+    <legend class="f_legend">Action</legend>
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" class="btn" value="Draft" id="draft-btn"
+               disabled="disabled" onclick="document.pressed=this.value"/>
+        <input type="submit" class="btn btn-success" value="Publish" id="submit-btn"
+               disabled="disabled" onclick="document.pressed=this.value"/>
+      </div>
+    </div>
+  </fieldset>
+  
+</form>
+<?php echo $this->render('partial/upload-image-dialog.phtml'); ?>

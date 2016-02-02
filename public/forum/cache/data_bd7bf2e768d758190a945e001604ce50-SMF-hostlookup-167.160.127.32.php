@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454400514 < time()) $expired = true; else{$expired = false; $value = 's:26:"167-160-127-32.contina.com";';}?>

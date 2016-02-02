@@ -1,0 +1,247 @@
+/* =Styles for 'normal' meta boxes
+-------------------------------------------------------------- */
+
+.rwmb-field {
+	margin: 10px 0;
+}
+.rwmb-label,
+.rwmb-input {
+	display: inline-block;
+	vertical-align: top;
+}
+.rwmb-label {
+	width: 24%;
+}
+.rwmb-label.required {
+	font-weight: bold;
+}
+.rwmb-label.required > span
+{
+	color: #c00;
+}
+
+/* 75% if field has label, 100% if no label */
+.rwmb-input {
+	width: 100%;
+}
+.rwmb-label ~ .rwmb-input {
+	width: 75%;
+}
+.rwmb-input h4 {
+	margin: 0;
+}
+.rwmb-textarea {
+	resize: vertical;
+}
+
+/* Clone */
+.rwmb-clone {
+	min-height: 24px;
+}
+.rwmb-clone > input[type="radio"],
+.rwmb-clone > input[type="checkbox"] {
+	margin: 6px 0 0 4px;
+}
+.rwmb-button {
+	display: inline;
+	float: right;
+}
+
+/* Fix width to not overlap button for cloned sliders */
+.rwmb-clone .rwmb-slider {
+	width: 80%;
+	margin: 6px 0 0;
+}
+
+/* Fix buttons after sliders */
+.clearfix + .rwmb-button {
+	margin-top: -16px;
+}
+
+/* Fix empty block below admin footer (issue #24) */
+#ui-datepicker-div {
+	display: none;
+}
+
+/* jQuery validation */
+label.error {
+	padding-left: 3px;
+	color: red;
+}
+input.error,
+textarea.error,
+select.error {
+	border: #c00 solid 1px !important;
+	background: #ffebe8 !important;
+}
+
+/* =Styles for 'side' meta boxes
+-------------------------------------------------------------- */
+
+#side-sortables .rwmb-label,
+#side-sortables .rwmb-input {
+	width: 100%;
+}
+
+.sidebar_layout .rwmb-input label{
+	margin-right: 35px;
+}
+
+
+.hide {
+	display: none;
+}
+.none {
+	border:none;
+}
+.ri_select {
+	border: 2px solid #dfdfdf;
+}
+.radio_img {
+	margin-right: 10px;
+}
+
+/* = Reviews
+-------------------------------------------------------------- */
+.inside {
+	position: relative;
+}
+.rt_hide {
+}
+.small_textearea textarea {
+	width:60%;
+}
+.suffix {
+	line-height: 31px;
+	padding: 0 5px;
+	font-size: 18px;
+	font-family: georgia;
+}
+
+.inside .rt_final_score {
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	width: 102px;
+	background: #fff;
+	padding: 13px 10px 28px 10px;
+	border:1px solid #dfdfdf;
+	border-bottom: none;
+}
+
+.inside .rt_final_score_stars {
+	position: absolute;
+	top: 160px;
+	right: 30px;
+	width: 102px;
+	padding: 0 10px 33px 10px;
+	background: #fff;
+	border:1px solid #dfdfdf;
+	border-bottom: none;
+	border-top: none;
+}
+
+.inside .rt_final_score_po {
+	position: absolute;
+	top: 300px;
+	right: 30px;
+	width: 102px;
+	padding: 0 10px 10px 10px;
+	background: #fff;
+	border:1px solid #dfdfdf;
+	border-top: none;
+}
+
+.rt_fs_desc {
+	text-align: center;
+	display: block;
+	margin-bottom: 10px;
+	width: 100px;
+	font-family: georgia;
+	font-size: 20px;
+}
+#eff_rt_final_score,
+#eff_rt_final_score_stars,
+#eff_rt_final_score_po {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	font-size: 40px;
+}
+#review_cr .inside .divider {
+	border-bottom: 3px solid #eee;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+/* slider root element */
+.slider { 
+	height: .8em;
+	background: #8fc4ef;
+	background: -moz-linear-gradient(top, #8fc4ef 0%, #629bd2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8fc4ef), color-stop(100%,#629bd2));
+	background: -webkit-linear-gradient(top, #8fc4ef 0%,#629bd2 100%);
+	background: -o-linear-gradient(top, #8fc4ef 0%,#629bd2 100%);
+	background: -ms-linear-gradient(top, #8fc4ef 0%,#629bd2 100%);
+	background: linear-gradient(top, #8fc4ef 0%,#629bd2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fc4ef', endColorstr='#629bd2',GradientType=0 );
+	border: 1px solid #0088F7;
+	border-color: #0088F7 #0088F7 #2B5893;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(255,255,255,.2);
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,.1), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(255,255,255,.2);
+	box-shadow: 0 1px 0 rgba(0,0,0,.1), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(255,255,255,.2);
+	position:relative;
+	cursor:pointer;
+	width:200px;
+	float:left; 
+	clear:right;
+	margin-top:10px;
+}
+
+/* progress bar (enabled with progress: true) */
+.progress {
+	height:9px; 
+	background-color:#C5FF00; 
+	display:none;
+	opacity:0.6;
+}
+
+/* drag handle */
+.handle { 
+	position: absolute;
+	z-index: 2;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	background: url(../img/handle.png) no-repeat center center;
+	border: 0;
+	top: -9px;
+}
+
+/* the input field */
+.range {
+	float:left;
+	width:50px !important;
+	font-size:20px;
+	margin:0 0 0 15px;
+	padding:3px 0;
+	text-align:center;
+	width:50px;
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px;
+}
+
+span.space {
+	padding-left:10px;
+	line-height:35px;
+	float:left;
+	text-transform:uppercase;
+}
+span.space2 {
+	padding-left:10px;
+	line-height:0.7;
+	text-align:center;
+	display:block;
+	margin-bottom:5px;
+	text-transform:uppercase;
+}

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454400895 < time()) $expired = true; else{$expired = false; $value = 's:18:"seo007.heilink.com";';}?>

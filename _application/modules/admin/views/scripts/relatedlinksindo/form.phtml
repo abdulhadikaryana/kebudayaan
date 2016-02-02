@@ -1,0 +1,30 @@
+<form method="post" action="<?php echo $this->currentUrl();?>" id="relatedForm" name="relatedForm">
+    <fieldset class="wide">
+        <legend>Relatedlinks Detail</legend>
+        <table>
+             <?php if($this->langId == 2) {?>
+            <tr>
+                <td><label for="linkType">Type</label></td><td>&#58;</td>
+                <td><?php echo $this->form->linkType; ?></td>
+            </tr>
+               <?php } ?>
+            <tr>
+                <td><label for="linkTitle">Title</label></td><td>&#58;</td>
+                <td><?php echo $this->form->linkTitle; ?></td>
+            </tr>
+            <tr>
+                <td><label for="linkUrl">URL</label></td><td>&#58;</td>
+                <td><?php echo $this->form->linkUrl; ?></td>
+            </tr>
+       </table>
+       <table>     
+            <tr>
+                <td><label for="linkDescription">Description:</label></td>
+            </tr>
+            <tr>
+                <td><?php echo $this->form->linkDescription; ?></td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="submit" value="Save" class="btn radius space_l" />
+</form>

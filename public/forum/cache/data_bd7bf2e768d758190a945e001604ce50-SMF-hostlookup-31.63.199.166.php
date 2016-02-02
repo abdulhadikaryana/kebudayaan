@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454410355 < time()) $expired = true; else{$expired = false; $value = 's:29:"agwt166.neoplus.adsl.tpnet.pl";';}?>

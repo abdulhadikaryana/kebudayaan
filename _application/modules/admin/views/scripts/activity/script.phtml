@@ -1,0 +1,67 @@
+<?php $this->placeholder('jsInline')->captureStart();?>
+<?php echo $this->render('partial/upload-image-script.phtml');?>
+<?php echo $this->render('partial/tinyMCE.phtml');?>
+<script type="text/javascript">
+tinyMCE.execCommand('mceAddControl', false, 'categoryDescription');
+function recommendSize()
+{
+    if($('#categoryParent').val()>0)
+    {
+        $('.image-size').html('Recommended Size 300px*260px');
+    }
+    else
+    {
+        $('.image-size').html('Recommended Size 475px*215px');
+    }
+}
+
+function myFileBrowser (field_name, url, type, win) 
+{
+    var cmsURL = '<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/7'; ?>';
+    if (cmsURL.indexOf("?") < 0) {
+        //add the type as the only query parameter
+        cmsURL = cmsURL + "?type=" + type;
+    }
+    else {
+        //add the type as an additional query parameter
+        // (PHP session ID is now included if there is one at all)
+        cmsURL = cmsURL + "&type=" + type;
+    }
+
+    tinyMCE.activeEditor.windowManager.open({
+        file : cmsURL,
+        title : 'My File Browser',
+        width : 800,  // Your dimensions may differ - toy around with them!
+        height : 600,
+        popup_css : false,
+        resizable : "yes",
+        inline : "yes",  // This parameter only has an effect if you use the inlinepopups plugin!
+        close_previous : "no"
+    }, {
+        window : win,
+        input : field_name
+    });
+    return false;
+}
+
+$(function(){
+
+    $("#activityForm input").blur(function(){
+        $("#activityForm").validate().element($(this));
+    });
+    
+    $("#activityForm").validate({
+        rules : {
+                    categoryName: "required",
+                    categoryPicture: "required"
+                },
+        messages : {
+                     categoryPicture : "Please upload an images for this activity",
+                     categoryName : "Please enter a name for this activity"
+        }
+    });    
+    
+    
+});
+</script>
+<?php $this->placeholder('jsInline')->captureEnd();?>

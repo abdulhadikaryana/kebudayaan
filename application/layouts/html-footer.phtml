@@ -1,0 +1,112 @@
+<div class="row">
+  <div class="twelve columns">
+    <!--<div id="footer-divider"></div>-->
+    <div id="footer">   
+       
+      <div class="four columns">
+              <img id="footer-logo" style="padding-top:5%;" src="<?php echo $this->imageUrl('white-logo.png'); ?>" alt="footer" /><br />       
+            
+        <p>Laman referensi kebudayaan Indonesia. Turut mewujudkan bangsa Indonesia yang cerdas dan berbudaya</p>
+        
+
+      </div>
+      <div class="three columns" id="related">
+           <h4><?php echo $this->translate('Related Links') ?></h4>
+        
+        <ul>
+          <li><a href="http://kemdikbud.go.id">Kemdikbud</a></li>
+          <li><a href="http://unesco.com">UNESCO</a></li>
+          <li><a href="http://indonesia.go.id">Indonesia Government Website</a></li>
+          <li><a href="http://indonesia.travel">Indonesia Travel</a></li>
+        </ul>
+      </div>
+      <div class="five columns" id="footer-copyright">
+        <div class="copyright">&copy; <?php echo date('Y') ?> Direktorat Jenderal Kebudayaan Republik Indonesia</div>
+      </div>
+      <div class="clear"></div>
+    </div>    
+  </div>
+</div>        
+</div><!-- end wrapper div -->         
+
+<script type="text/javascript">
+  /* <![CDATA[ */
+    
+  // Harus selalu paling atas
+  var lamanbudaya = lamanbudaya || {};
+        
+  lamanbudaya.url = {
+    baseUrl : '<?php echo $this->baseUrl() ?>',
+    rootUrl : '<?php echo $this->rootUrl() ?>',
+    restUrl : '<?php echo $this->restUrl($this->rootUrl()) ?>',
+    imageUrl : '<?php echo $this->imageUrl() ?>'
+  };
+
+  // Inisialisasi variabel yang digunakan di javascript
+<?php
+if ($this->moduleName == 'default') {
+  //handling server error - apabila zend registry tidak teregister maka gunakan bahasa inggris
+  if (Zend_Registry::isRegistered('languageId')) {
+    switch (Zend_Registry::get('languageId')) {
+      case 1 : $langID = 'id';
+        break;
+      case 2 : $langID = 'en';
+        break;
+      default : $langID = 'en';
+        break;
+    }
+  } else {
+    $langID = 'en';
+  }
+}
+?>            
+  lamanbudaya.setting = {
+      lang : '<?php echo $langID ?>'      
+  }
+  var urlForSlider = '<?php echo $this->rootUrl('/' . $langID . '/ajax/slideheader') ?>';        
+  var fbApiKey = '<?php echo Zend_Registry::get('fb_api_key') ?>';
+  var fbAppId = '<?php echo Zend_Registry::get('fb_app_id') ?>';
+
+  /*]]>*/
+</script>
+
+<?php if(APPLICATION_ENV == "production" || APPLICATION_ENV == "testing"): ?>
+    <script src="<?php echo $this->scriptUrl('javascripts/frontend/site.min.js') ?>" type="text/javascript"></script>
+    <script src="<?php echo $this->scriptUrl('javascripts/frontend/analytics.js') ?>" type="text/javascript"></script>
+<?php else: ?>    
+    <script src="<?php echo $this->scriptUrl('lib/foundation/javascripts/jquery.js') ?>"></script>
+    <script src="<?php echo $this->scriptUrl('lib/jquery-ui/jquery-ui-1.8.23.custom.min.js') ?>"></script> 
+
+    <!-- foundation lib -->    
+    <script src="<?php echo $this->scriptUrl('lib/foundation/javascripts/foundation.min.js') ?>"></script>        
+    <script src="<?php echo $this->scriptUrl('lib/foundation/javascripts/app.js') ?>"></script>                   
+
+    <!--superfish-->
+    <script src="<?php echo $this->scriptUrl('javascripts/frontend/lib/superfish/js/hoverIntent.js'); ?>"></script>
+    <script src="<?php echo $this->scriptUrl('javascripts/frontend/lib/superfish/js/superfish.js'); ?>"></script>
+
+    <script src="<?php echo $this->scriptUrl('javascripts/frontend/script.js') ?>"></script>
+    <!--language selector-->
+    <script src="<?php echo $this->scriptUrl('javascripts/frontend/language.js');?>" ></script>        
+    
+    <script src="<?php echo $this->scriptUrl('lib/blockui/jquery.blockUI.js');?>" ></script> 
+    
+    <!--search function-->
+    <script src="<?php echo $this->scriptUrl('javascripts/frontend/search.js') ?>"></script> 
+    
+<?php endif; ?>      
+    
+
+
+<?php
+    /* Digunakan untuk include js inline di tiap view tapi nanti js tsb
+     * akan muncul di bagian ini         
+     */
+    echo $this->placeholder('jsInline');
+?>
+
+
+
+
+</body>
+</html>

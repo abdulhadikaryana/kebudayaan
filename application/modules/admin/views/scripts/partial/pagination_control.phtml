@@ -1,0 +1,37 @@
+<?php if ($this->pageCount): ?>
+  <div class="pagination pull-right" style="margin:0;">
+
+    <ul>
+      <?php if (isset($this->previous)): ?>
+        <li>
+          <a href="<?php echo $this->url(array('page' => $this->previous)); ?>">
+            &lt; Sebelumnya
+          </a>
+        </li>
+      <?php else: ?>
+        <li class="disabled"><a>&lt; Sebelumnya</a></li>
+      <?php endif; ?>
+
+      <?php foreach ($this->pagesInRange as $page): ?>
+        <?php if ($page != $this->current): ?>
+          <li><a href="<?php echo $this->url(array('page' => $page)); ?>">
+              <?php echo $page; ?></a>
+          </li>
+        <?php else: ?>
+          <li class="active"><a><?php echo $page; ?></a></li>
+        <?php endif; ?>
+      <?php endforeach; ?>
+
+      <?php if (isset($this->next)): ?>
+        <li>
+          <a href="<?php echo $this->url(array('page' => $this->next)); ?>">
+            Berikutnya &gt; 
+          </a>
+        </li>
+      <?php else: ?>
+        <li class="disabled"><a>Berikutnya &gt;</a></li>
+      <?php endif; ?>
+    </ul>
+
+  </div>
+<?php endif; ?>

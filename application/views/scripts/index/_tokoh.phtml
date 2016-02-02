@@ -1,0 +1,46 @@
+<div class="widget-full">
+    <div class="widget-full-wrap">
+        <h2 class="widget-title blue"><span><?php echo strtoupper($this->translate('Figures')) ?></span></h2>
+
+        <?php foreach ($this->figures as $figure): ?>
+            <?php
+            $tokoh_image = UPLOAD_FOLDER . 'figure/' . $figure['image'];
+            $thumb = $this->imageUrl('timthumb.php?src=default.jpg');
+            $url = $this->baseUrl('figure/detail/' . $figure['id'] . '/' . $this->makeUrlFormat($figure['name']));
+            if (file_exists($tokoh_image))
+                $thumb = $this->imageUrl('timthumb.php?src=upload/figure/' . $figure['image'] . '&w=100&h=100&q=100');
+            ?>
+
+            <div id="figures">
+                <div class="widget-full-img">
+                    <img src="<?php echo $thumb ?>" 
+                         style="max-width:100px;"
+                         />
+                </div>
+                <div class="widget-full-desc">
+                    <h3>
+                        <a href="<?php echo $url ?>">
+                            <?php echo $this->escape($this->htmlDecode($figure['name'])) ?>
+                        </a>
+                    </h3>
+                    <p><?php
+                        echo $this->truncate($this->htmlDecode($figure['description']), 300)
+                            ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+<!--        <div class="three columns offset-by-nine" style="background:red;">
+                <p class="view-more"    >
+                    <a href="<?php echo $this->baseUrl('figure') ?>"><?php echo $this->translate('See All Figures') ?> &raquo;</a>
+                </p>
+            </div>
+        
+        -->
+    </div>
+    
+    
+
+
+</div>
+
+

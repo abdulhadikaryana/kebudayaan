@@ -1,0 +1,1570 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: strictthemes.com\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-20 21:36+0100\n"
+"PO-Revision-Date: 2014-04-20 21:36+0100\n"
+"Last-Translator: StrictThemes <info@strictthemes.com>\n"
+"Language-Team: StrictThemes <info@strictthemes.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: stkit.php:92
+msgid "Current theme isn't compatible with ST Kit plugin."
+msgstr "Данная тема не совместима с плагином ST Kit."
+
+#: stkit.php:92
+msgid "Get a compatible theme"
+msgstr "Купить совместимую тему."
+
+#: admin/st_admin.php:136
+msgid "Theme Panel"
+msgstr "Панель темы"
+
+#: admin/st_admin.php:139
+msgid "Projects"
+msgstr "Проекты"
+
+#: admin/st_admin.php:142
+#: admin/st_layout_settings.php:122
+msgid "Layout"
+msgstr "Лейаут"
+
+#: admin/st_admin.php:145
+msgid "Fonts"
+msgstr "Шрифты"
+
+#: admin/st_admin.php:148
+#: admin/st_style_settings.php:113
+msgid "Style"
+msgstr "Стиль"
+
+#: admin/st_admin.php:151
+#: admin/st_misc_settings.php:401
+msgid "Miscellaneous"
+msgstr "Разное"
+
+#: admin/st_admin.php:154
+msgid "Import / Export"
+msgstr "Импорт / Экспорт"
+
+#: admin/st_admin.php:157
+msgid "Update"
+msgstr "Обновление"
+
+#: admin/st_admin.php:278
+#: admin/st_admin.php:349
+#: admin/st_admin.php:420
+#: admin/st_admin.php:483
+#: admin/st_admin.php:545
+#: admin/st_admin.php:630
+#: admin/st_admin.php:672
+#: admin/st_admin.php:726
+msgid "Changes have been saved."
+msgstr "Сохранено."
+
+#: admin/st_fonts_settings.php:58
+msgid "Fonts Settings"
+msgstr "Настройки шрифтов"
+
+#: admin/st_fonts_settings.php:71
+#: admin/st_fonts_settings.php:101
+#: admin/st_import_settings.php:64
+#: admin/st_import_settings.php:84
+#: admin/st_layout_settings.php:79
+#: admin/st_major_settings.php:107
+#: admin/st_misc_settings.php:80
+#: admin/st_misc_settings.php:113
+#: admin/st_projects_settings.php:78
+#: admin/st_projects_settings.php:119
+#: admin/st_style_settings.php:72
+#: admin/st_style_settings.php:109
+#: admin/st_update_settings.php:69
+msgid "General"
+msgstr "Основное"
+
+#: admin/st_fonts_settings.php:108
+msgid "Font size"
+msgstr "Размер шрифта"
+
+#: admin/st_fonts_settings.php:114
+msgid "Content font size."
+msgstr "Размер шрифта для контента."
+
+#: admin/st_fonts_settings.php:128
+msgid "Font type"
+msgstr "Тип шрифта"
+
+#: admin/st_fonts_settings.php:142
+msgid "System fonts"
+msgstr "Системные шрифты"
+
+#: admin/st_fonts_settings.php:143
+msgid "Standard"
+msgstr "Стандарт"
+
+#: admin/st_fonts_settings.php:145
+msgid "Google fonts"
+msgstr "Гугл-шрифты"
+
+#: admin/st_fonts_settings.php:146
+#: admin/st_style_settings.php:76
+#: admin/st_style_settings.php:235
+msgid "Custom"
+msgstr "Собственное"
+
+#: admin/st_fonts_settings.php:182
+msgid "Select a font family."
+msgstr "Выберите группу шрифтов."
+
+#: admin/st_fonts_settings.php:207
+msgid "Choose the font you want from Google <a href=\"http://google.com/fonts\">library</a> and press"
+msgstr "Выберите шрифт из Гугл-<a href=\"http://google.com/fonts\">библиотеки</a> и нажмите"
+
+#: admin/st_fonts_settings.php:221
+msgid "Choose the styles you want."
+msgstr "Выберите стили."
+
+#: admin/st_fonts_settings.php:233
+msgid "Choose the character sets you want."
+msgstr "Убедитесь, что выбранный шрифт поддерживает кириллицу и не забудьте ее включить."
+
+#: admin/st_fonts_settings.php:246
+msgid "Add code."
+msgstr "Добавить код."
+
+#: admin/st_fonts_settings.php:259
+msgid "Add CSS"
+msgstr "Добавьте CSS-стили."
+
+#: admin/st_import_settings.php:51
+msgid "Import-Export Settings"
+msgstr "Импорт-Экспорт настроек"
+
+#: admin/st_import_settings.php:53
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: admin/st_import_settings.php:89
+msgid "Data"
+msgstr "Данные"
+
+#: admin/st_import_settings.php:93
+msgid "Import or Export all settings."
+msgstr "Импорт-Экспорт всех настроек."
+
+#: admin/st_layout_settings.php:66
+msgid "Layout Settings"
+msgstr "Настройки лейаута"
+
+#: admin/st_layout_settings.php:83
+msgid "Header"
+msgstr "Хедер"
+
+#: admin/st_layout_settings.php:87
+#: admin/st_layout_settings.php:215
+msgid "Footer"
+msgstr "Футер"
+
+#: admin/st_layout_settings.php:91
+#: admin/st_layout_settings.php:287
+msgid "Social"
+msgstr "Соц. сети"
+
+#: admin/st_layout_settings.php:129
+#: admin/st_major_settings.php:161
+msgid "Type"
+msgstr "Тип"
+
+#: admin/st_layout_settings.php:134
+msgid "Responsive"
+msgstr "Респонсив"
+
+#: admin/st_layout_settings.php:137
+msgid "Classic"
+msgstr "Классик"
+
+#: admin/st_layout_settings.php:150
+msgid "Design"
+msgstr "Дизайн"
+
+#: admin/st_layout_settings.php:155
+msgid "Wide"
+msgstr "Полноразмерный"
+
+#: admin/st_layout_settings.php:158
+msgid "Boxed"
+msgstr "Ограниченный"
+
+#: admin/st_layout_settings.php:219
+msgid "Scheme"
+msgstr "Схема"
+
+#: admin/st_layout_settings.php:249
+msgid " Select a scheme of footer sidebars."
+msgstr "Выберите расположение сайдбаров в футере."
+
+#: admin/st_layout_settings.php:293
+msgid "Icons"
+msgstr "Иконки"
+
+#: admin/st_layout_settings.php:298
+#: admin/st_major_settings.php:753
+msgid "Display"
+msgstr "Показать"
+
+#: admin/st_layout_settings.php:300
+msgid "Display social icons."
+msgstr "Показать иконки соц. сетей."
+
+#: admin/st_layout_settings.php:308
+msgid "URLs"
+msgstr "УРЛы"
+
+#: admin/st_layout_settings.php:322
+msgid "Enter URL paths to your network profiles."
+msgstr "Укажите адреса своих профайлов в соц. сетях."
+
+#: admin/st_layout_settings.php:328
+msgid "Custom Icons"
+msgstr "Свои иконки"
+
+#: admin/st_layout_settings.php:333
+msgid "You also can set a custom icons, counters etc. Shortcodes allowed."
+msgstr "Вы также можете добавить собственные иконки, счетчики и пр. Можно использовать шоткоды."
+
+#: admin/st_layout_settings.php:334
+msgid "Draft"
+msgstr "Пример"
+
+#: admin/st_major_settings.php:94
+msgid "Main Settings"
+msgstr "Основные настройки"
+
+#: admin/st_major_settings.php:111
+#: admin/st_major_settings.php:377
+msgid "Blog"
+msgstr "Блог"
+
+#: admin/st_major_settings.php:115
+#: admin/st_major_settings.php:617
+msgid "Post"
+msgstr "Пост"
+
+#: admin/st_major_settings.php:119
+#: admin/st_major_settings.php:928
+msgid "Page"
+msgstr "Страница"
+
+#: admin/st_major_settings.php:123
+msgid "Sidebar"
+msgstr "Сайдбар"
+
+#: admin/st_major_settings.php:153
+msgid "Logo"
+msgstr "Логотип"
+
+#: admin/st_major_settings.php:167
+msgid "Text"
+msgstr "Текст"
+
+#: admin/st_major_settings.php:172
+msgid "Image"
+msgstr "Изображение"
+
+#: admin/st_major_settings.php:185
+msgid "Site Name"
+msgstr "Название сайта"
+
+#: admin/st_major_settings.php:191
+msgid "Enter the site name e.g. <code>Site&lt;strong>Name&lt;/strong></code>"
+msgstr "Укажите название сайта напр. <code>Мой&lt;strong>Сайт&lt;/strong></code>"
+
+#: admin/st_major_settings.php:205
+#: admin/st_major_settings.php:266
+msgid "Image URL"
+msgstr "Логотип"
+
+#: admin/st_major_settings.php:211
+msgid "Insert an image URL e.q. <code>http://yoursite.com/image.png</code> <br>JPG, GIF or PNG formats allowed."
+msgstr "Укажите адрес картинки напр. <code>http://sait.ru/logo.png</code> <br>Можно использовать JPG, GIF или PNG формат."
+
+#: admin/st_major_settings.php:223
+msgid "Image 2x URL"
+msgstr "Логотипа двойного размера"
+
+#: admin/st_major_settings.php:229
+msgid "If you would like to provide a compatibility with HiDPI screens, please, insert a doubled logo e.g. if your normal logo dimentions are 150x50 pixels, the doubled version must be 300x100 pixels."
+msgstr "Если вы желаете чтобы сайт был совместим с высокодискретными дисплеями, пожалуйста, имейте логотип с удвоенными размерами. Например, если обычный логотип имеет размеры 150 на 50 пикселей, то удвоенная версия должна быть 300 на 100 пикселей."
+
+#: admin/st_major_settings.php:262
+msgid "Favicon"
+msgstr "Иконка сайта"
+
+#: admin/st_major_settings.php:270
+#: admin/st_misc_settings.php:337
+msgid "e.q."
+msgstr "напр."
+
+#: admin/st_major_settings.php:288
+msgid "Copyrights"
+msgstr "Копирайты"
+
+#: admin/st_major_settings.php:292
+msgid "Yours"
+msgstr "Ваши"
+
+#: admin/st_major_settings.php:296
+msgid "Enter your copyrights here."
+msgstr "Укажите свои копирайты."
+
+#: admin/st_major_settings.php:305
+msgid "Developer's"
+msgstr "Разработчика"
+
+#: admin/st_major_settings.php:310
+#: admin/st_misc_settings.php:129
+#: admin/st_misc_settings.php:152
+#: admin/st_misc_settings.php:176
+#: admin/st_misc_settings.php:200
+#: admin/st_misc_settings.php:224
+#: admin/st_misc_settings.php:248
+#: admin/st_misc_settings.php:410
+msgid "Disabled"
+msgstr "Отключено"
+
+#: admin/st_major_settings.php:312
+msgid "Remove developer's link from the footer."
+msgstr "Удалить ссылку разработчика из футера."
+
+#: admin/st_major_settings.php:332
+msgid "Google Analytics"
+msgstr "Гугл Аналитикс"
+
+#: admin/st_major_settings.php:336
+msgid "Code"
+msgstr "Код"
+
+#: admin/st_major_settings.php:340
+msgid "Put here your tracking code."
+msgstr "Вставьте трекинг-код."
+
+#: admin/st_major_settings.php:387
+#: admin/st_projects_settings.php:247
+msgid "Template"
+msgstr "Шаблон"
+
+#: admin/st_major_settings.php:420
+msgid "Select template for archive and blog page."
+msgstr "Выберите шаблон для архивов и блога."
+
+#: admin/st_major_settings.php:436
+#: admin/st_major_settings.php:445
+msgid "Featured posts"
+msgstr "Выделенные посты"
+
+#: admin/st_major_settings.php:451
+msgid "A quantity of featured (sticky) posts."
+msgstr "Количество выделенных (верхних) постов."
+
+#: admin/st_major_settings.php:471
+msgid "Display on frontpage"
+msgstr "Показывать на главной странице."
+
+#: admin/st_major_settings.php:473
+msgid "Display sticky posts on frontpage."
+msgstr "Показывать \"липкие\" посты на главной странице."
+
+#: admin/st_major_settings.php:493
+msgid "Display on archives"
+msgstr "Показывать в архивах."
+
+#: admin/st_major_settings.php:495
+msgid "Display sticky posts on archives: categories, tags, formats."
+msgstr "Показывать \"липкие\" посты на страницах архивов: категорий, тегов, форматов и пр."
+
+#: admin/st_major_settings.php:515
+msgid "Display on single post"
+msgstr "Показывать на странице с постом."
+
+#: admin/st_major_settings.php:517
+msgid "Display sticky posts on single post."
+msgstr "Показывать \"липкие\" посты на странице с постом."
+
+#: admin/st_major_settings.php:537
+msgid "Display on other pages"
+msgstr "Показывать на других страницах."
+
+#: admin/st_major_settings.php:539
+msgid "Display sticky posts on other kind of pages."
+msgstr "Показывать \"липкие\" посты на других страницах."
+
+#: admin/st_major_settings.php:559
+msgid "Exclude from blogroll"
+msgstr "Исключить из блогролла"
+
+#: admin/st_major_settings.php:561
+msgid "Do not display sticky posts on blogroll."
+msgstr "Не показывать \"липкие\" посты в списке последних постов."
+
+#: admin/st_major_settings.php:581
+msgid "Query cache"
+msgstr "Кеш результатов запроса"
+
+#: admin/st_major_settings.php:583
+msgid "Store query result within 12 hours."
+msgstr "Хранить результат в течение 12 часов."
+
+#: admin/st_major_settings.php:634
+msgid "Under title"
+msgstr "Под заголовком"
+
+#: admin/st_major_settings.php:636
+msgid "Display custom data under a title. Shortcodes allowed."
+msgstr "Показывать собственный контент под заголовком. Можно использовать шоткоды."
+
+#: admin/st_major_settings.php:661
+msgid "Above post"
+msgstr "Выше поста"
+
+#: admin/st_major_settings.php:663
+msgid "Display custom data above a post. Shortcodes allowed."
+msgstr "Показывать собственный контент перед постом. Можно использовать шоткоды."
+
+#: admin/st_major_settings.php:688
+msgid "Featured image"
+msgstr "Избранное изображение"
+
+#: admin/st_major_settings.php:690
+msgid "Display featured image on post page."
+msgstr "Показывать избранное изображение на странице с постом."
+
+#: admin/st_major_settings.php:712
+msgid "Excerpt"
+msgstr "Выдержка"
+
+#: admin/st_major_settings.php:714
+msgid "Display excerpt on post page."
+msgstr "Показывать выдержку на странице с постом."
+
+#: admin/st_major_settings.php:736
+msgid "Meta"
+msgstr "Метаданные"
+
+#: admin/st_major_settings.php:738
+msgid "Author info, post views, nice time."
+msgstr "Информация об авторе, счетчик просмотров, красивое время."
+
+#: admin/st_major_settings.php:751
+msgid "Author's info"
+msgstr "Информация об авторе"
+
+#: admin/st_major_settings.php:753
+msgid "and"
+msgstr "и"
+
+#: admin/st_major_settings.php:753
+msgid "author's bio"
+msgstr "информация об авторе"
+
+#: admin/st_major_settings.php:753
+msgid "at the post page"
+msgstr "на странице с постом"
+
+#: admin/st_major_settings.php:767
+msgid "Post views"
+msgstr "Счетчик просмотров"
+
+#: admin/st_major_settings.php:769
+msgid "Number of views per each post."
+msgstr "Количество просмотров каждого поста."
+
+#: admin/st_major_settings.php:783
+msgid "Nice time"
+msgstr "Красивое время"
+
+#: admin/st_major_settings.php:785
+msgid "e.g. <strong>3 days ago</strong> instead of"
+msgstr "напр. <strong>3 дня назад</strong> вместо"
+
+#: admin/st_major_settings.php:814
+msgid "Under post"
+msgstr "Под постом"
+
+#: admin/st_major_settings.php:816
+msgid "Display custom data under a post. Shortcodes allowed."
+msgstr "Показывать собственный контент в конце поста. Можно использовать шоткоды."
+
+#: admin/st_major_settings.php:841
+#: admin/st_major_settings.php:945
+msgid "Comments"
+msgstr "Комментарии"
+
+#: admin/st_major_settings.php:843
+#: admin/st_major_settings.php:947
+msgid "Display comments."
+msgstr "Показывать комментарии."
+
+#: admin/st_major_settings.php:853
+msgid "Website the input field"
+msgstr "Сайт"
+
+#: admin/st_major_settings.php:855
+msgid "Display the 'Website' input field on the comment form."
+msgstr "Показывать поле \"Сайт\" в форме для комментирования."
+
+#: admin/st_major_settings.php:864
+msgid "Pingbacks"
+msgstr "Пингбеки"
+
+#: admin/st_major_settings.php:866
+msgid "Enable pingbacks."
+msgstr "Включить пингбеки."
+
+#: admin/st_major_settings.php:893
+msgid "Related posts"
+msgstr "Схожие посты."
+
+#: admin/st_major_settings.php:895
+msgid "Display related posts."
+msgstr "Показывать схожие посты."
+
+#: admin/st_major_settings.php:987
+msgid "Additional Sidebars"
+msgstr "Дополнительные сайдбары"
+
+#: admin/st_major_settings.php:991
+#: admin/st_misc_settings.php:378
+msgid "Quantity"
+msgstr "Количество"
+
+#: admin/st_major_settings.php:997
+msgid "If you need more sidebars besides standard, please, set a number you want, but at least 2."
+msgstr "Если Вам необходимо больше сайдбаров помимо стандартных, пожалуйста, укажите количество, которое Вам нужно, но не менее двух."
+
+#: admin/st_misc_settings.php:67
+msgid "Miscellaneous Settings"
+msgstr "Разные настройки"
+
+#: admin/st_misc_settings.php:84
+#: admin/st_misc_settings.php:306
+msgid "AdSense"
+msgstr "AdSense"
+
+#: admin/st_misc_settings.php:88
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: admin/st_misc_settings.php:124
+msgid "Sanitization"
+msgstr "Фильтрация данных"
+
+#: admin/st_misc_settings.php:131
+msgid "Do not sanitize input data on text areas of Theme Panel."
+msgstr "Не делать фильтрацию данных вводимых в текстовые поля Панели Темы."
+
+#: admin/st_misc_settings.php:147
+msgid "Admin Bar"
+msgstr "Админ-панель"
+
+#: admin/st_misc_settings.php:154
+msgid "Do not show admin bar on the front-end."
+msgstr "Не показывать админ-панель на сайте."
+
+#: admin/st_misc_settings.php:171
+msgid "prettyPhoto"
+msgstr "prettyPhoto"
+
+#: admin/st_misc_settings.php:178
+msgid "Disable the built-in lightbox plugin."
+msgstr "Отключить встроенный плагин модальных окон."
+
+#: admin/st_misc_settings.php:195
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: admin/st_misc_settings.php:202
+msgid "Disable compatibility with HiDPI devices like a laptops with Retina display."
+msgstr "Отключить совместимость с высокодискретными дисплеями такими как ноутбуки с экранами Ретина."
+
+#: admin/st_misc_settings.php:219
+msgid "Shortcodes"
+msgstr "Шоткоды"
+
+#: admin/st_misc_settings.php:226
+msgid "Disable the built-in ST shortcodes. Some functionality based on shortcodes will be inactive e.g. Gallery post format."
+msgstr "Отключить встроенные ST-шоткоды. Некоторая часть функционала основанного на данных шоткодах будет недоступна напр. формат постов \"Галлерея\"."
+
+#: admin/st_misc_settings.php:243
+msgid "Sticky Menu"
+msgstr "\"Липкое\" меню"
+
+#: admin/st_misc_settings.php:250
+msgid "Disable Sticky Menu option."
+msgstr "Отключить опцию \"липкого\" меню."
+
+#: admin/st_misc_settings.php:267
+msgid "Sidebar Width"
+msgstr "Ширина сайдбара"
+
+#: admin/st_misc_settings.php:272
+msgid "Alternative"
+msgstr "Альтернативный"
+
+#: admin/st_misc_settings.php:274
+msgid "Set an alternative width of general sidebar."
+msgstr "Альтернативная ширина основного сайдбара."
+
+#: admin/st_misc_settings.php:315
+#: admin/st_projects_settings.php:123
+msgid "Status"
+msgstr "Статус"
+
+#: admin/st_misc_settings.php:320
+#: admin/st_projects_settings.php:128
+msgid "Enabled"
+msgstr "Включено"
+
+#: admin/st_misc_settings.php:322
+msgid "Make the AdSense ad units responsive. Fill form below, and use ST AdSense widget or shortcode <br>e.g. <code>[adsense slot=1234567890 sizes=728x90|580x400|468x60|300x250]</code>"
+msgstr "Сделать рекламные блоки AdSense адаптивными. Заполните форму и можете начинать использовать виджет ST AdSense или шоткод <code>[adsense slot=1234567890 sizes=728x90|580x400|468x60|300x250]</code>"
+
+#: admin/st_misc_settings.php:333
+msgid "Client ID"
+msgstr "Номер клиента"
+
+#: admin/st_misc_settings.php:374
+msgid "Products per page"
+msgstr "Продуктов на страницу"
+
+#: admin/st_misc_settings.php:384
+msgid "Set a number of products per page."
+msgstr "Выберите количество продуктов отображаемых на странице."
+
+#: admin/st_misc_settings.php:405
+msgid "Assets"
+msgstr "Активы"
+
+#: admin/st_misc_settings.php:412
+msgid "Do not load JS & CSS files on non-WooCommerce pages."
+msgstr "Не подгружать JS и CSS-файлы WooCommerce на нерелевантных страницах."
+
+#: admin/st_projects_settings.php:65
+msgid "Projects Settings"
+msgstr "Настройки проектов"
+
+#: admin/st_projects_settings.php:82
+#: admin/st_projects_settings.php:216
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: admin/st_projects_settings.php:86
+msgid "Taxonomy"
+msgstr "Таксонометрия"
+
+#: admin/st_projects_settings.php:130
+msgid "Turn on projects on the website."
+msgstr "Активировать проекты на данном сайте."
+
+#: admin/st_projects_settings.php:148
+msgid "Slugs"
+msgstr "Пути"
+
+#: admin/st_projects_settings.php:152
+msgid "Post slug"
+msgstr "Путь для постов"
+
+#: admin/st_projects_settings.php:155
+#: admin/st_projects_settings.php:165
+#: admin/st_projects_settings.php:175
+msgid "Do not forget to update Permalinks Settings after these changes."
+msgstr "После этого, пожалуйста, не забудьте обновить настройки ссылок."
+
+#: admin/st_projects_settings.php:156
+#: admin/st_projects_settings.php:166
+#: admin/st_projects_settings.php:176
+#: admin/st_projects_settings.php:332
+#: admin/st_projects_settings.php:342
+#: admin/st_projects_settings.php:352
+msgid "<strong>WARNING!</strong> No white spaces, please. Latin symbols only."
+msgstr "<strong>ВНИМАНИЕ!</strong> Без пробелов, пожалуйста. Только латинские символы."
+
+#: admin/st_projects_settings.php:162
+msgid "Category slug"
+msgstr "Путь для категорий"
+
+#: admin/st_projects_settings.php:166
+msgid "The <code>category</code> slug not allowed."
+msgstr "Путь <code>category</code> не допустим."
+
+#: admin/st_projects_settings.php:172
+msgid "Tag slug"
+msgstr "Путь для тегов"
+
+#: admin/st_projects_settings.php:176
+msgid "The <code>tag</code> slug not allowed."
+msgstr "Путь <code>tag</code> не допустим."
+
+#: admin/st_projects_settings.php:226
+msgid "Projects per page"
+msgstr "Проектов на страницу"
+
+#: admin/st_projects_settings.php:232
+msgid "A quantity of projects per portfolio page."
+msgstr "Количество проектов на страницу."
+
+#: admin/st_projects_settings.php:283
+msgid "Select template for portolio."
+msgstr "Выберите шаблон для портфолио."
+
+#: admin/st_projects_settings.php:324
+msgid "Taxonomies"
+msgstr "Таксонометрии"
+
+#: admin/st_projects_settings.php:328
+msgid "Post type"
+msgstr "Тип поста"
+
+#: admin/st_projects_settings.php:331
+#: admin/st_projects_settings.php:341
+#: admin/st_projects_settings.php:351
+msgid "Make sure you have to make these changes. Otherwise, please, leave it default."
+msgstr "Вносите изменения только в случае крайней необходимости. Рекомендуется оставить как есть."
+
+#: admin/st_projects_settings.php:338
+msgid "Category"
+msgstr "Категория"
+
+#: admin/st_projects_settings.php:348
+msgid "Tag"
+msgstr "Тег"
+
+#: admin/st_style_settings.php:59
+msgid "Style Settings"
+msgstr "Настройки стиля"
+
+#: admin/st_style_settings.php:142
+msgid "Select a style."
+msgstr "Выберите стиль."
+
+#: admin/st_style_settings.php:160
+msgid "Colors"
+msgstr "Цвета"
+
+#: admin/st_style_settings.php:170
+msgid "Primary"
+msgstr "Основной"
+
+#: admin/st_style_settings.php:176
+msgid "Select a primary color."
+msgstr "Выберите основной цвет."
+
+#: admin/st_style_settings.php:192
+msgid "Secondary"
+msgstr "Дополнительный"
+
+#: admin/st_style_settings.php:198
+msgid "Select a secondary color."
+msgstr "Выберите дополнительный цвет."
+
+#: admin/st_style_settings.php:239
+msgid "CSS styles"
+msgstr "CSS-стили"
+
+#: admin/st_style_settings.php:243
+msgid "To prevent problems with theme update, write here any custom CSS (or use <a href=\"http://codex.wordpress.org/Child_Themes\">child themes</a>)."
+msgstr "Чтобы избежать проблем с обновлениями темы рекомендуется использовать данное поле для собственных CSS-стилей (или использовать <a href=\"http://codex.wordpress.org/%D0%94%D0%BE%D1%87%D0%B5%D1%80%D0%BD%D0%B8%D0%B5_%D1%82%D0%B5%D0%BC%D1%8B\">дочерние темы</a>)."
+
+#: admin/st_update_settings.php:56
+msgid "Update Settings"
+msgstr "Настройки обновлений"
+
+#: admin/st_update_settings.php:102
+msgid "ThemeForest"
+msgstr "ThemeForest"
+
+#: admin/st_update_settings.php:107
+msgid "Fill fields below to get notification about new version of theme."
+msgstr "Заполните эту форму чтобы получать автоматические обновления темы."
+
+#: admin/st_update_settings.php:113
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: admin/st_update_settings.php:117
+msgid "Enter your ThemeForest username."
+msgstr "Введите ваше имя пользователя в маркетплейсе ThemeForest."
+
+#: admin/st_update_settings.php:123
+msgid "API key"
+msgstr "API-ключ"
+
+#: admin/st_update_settings.php:127
+msgid "To get your API key go to <code>ThemeForest > Your profile > Settings > API Keys</code> and Generate API Key."
+msgstr "Чтобы получить ключ, пожалуйста, сгенерируйте его на странице <code>ThemeForest > Your profile > Settings > API Keys</code>."
+
+#: components/adsense/functions/adsense.php:36
+msgid "Responsive AdSense units."
+msgstr "Адаптивные AdSense-блоки"
+
+#: components/adsense/functions/adsense.php:154
+msgid "Slot"
+msgstr "Слот"
+
+#: components/adsense/functions/adsense.php:157
+msgid "Ad unit slot."
+msgstr "Слот рекламного блока."
+
+#: components/adsense/functions/adsense.php:163
+msgid "Sizes"
+msgstr "Размеры"
+
+#: components/adsense/functions/adsense.php:182
+msgid "Select the sizes."
+msgstr "Выберите размеры."
+
+#: components/adsense/functions/adsense.php:230
+msgid "Enter your AdSense client ID on Theme Panel, and select a sizes of Ad Unit."
+msgstr "Укажите ваш клиентский номер AdSense в панели темы и выберите размеры рекламного блока."
+
+#: components/adsense/functions/adsense.php:322
+msgid "Make sure the slot number, client ID, and sizes of ad unit."
+msgstr "Проверьте номер слота, номер клиента и размеры рекламного блока."
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:62
+msgid "Browse:"
+msgstr " "
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:65
+#: components/breadcrumbs/functions/breadcrumbs.php:43
+msgid "Home"
+msgstr "Главная"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:314
+msgid "g:i a"
+msgstr "g:i a"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:317
+#, php-format
+msgid "Minute %1$s"
+msgstr "Мин. %1$s"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:317
+msgid "i"
+msgstr "i"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:320
+msgid "g a"
+msgstr "g a"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:331
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:337
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:342
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:347
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:411
+msgid "Y"
+msgstr "Y"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:332
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:343
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:415
+msgid "F"
+msgstr "F"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:333
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:419
+msgid "d"
+msgstr "d"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:338
+#, php-format
+msgid "Week %1$s"
+msgstr "Нед. %1$s"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:354
+#, php-format
+msgid "Search results for &quot;%1$s&quot;"
+msgstr "Результаты поиска для &quot;%1$s&quot;"
+
+#: components/breadcrumbs/assets/plugins/breadcrumb-trail/breadcrumb-trail.php:358
+msgid "404 Not Found"
+msgstr "404 -  Ничего не найдено"
+
+#: components/ctp/functions/projects.php:45
+msgid "Project"
+msgstr "Проект"
+
+#: components/ctp/functions/projects.php:46
+msgid "Add New"
+msgstr "Добавить новый"
+
+#: components/ctp/functions/projects.php:47
+msgid "Add New Project"
+msgstr "Добавить новый проект"
+
+#: components/ctp/functions/projects.php:48
+msgid "Edit Project"
+msgstr "Редактировать проект"
+
+#: components/ctp/functions/projects.php:49
+msgid "New Project"
+msgstr "Новый проект"
+
+#: components/ctp/functions/projects.php:50
+msgid "View Project"
+msgstr "Просмотр проекта"
+
+#: components/ctp/functions/projects.php:51
+msgid "Search Project"
+msgstr "Поиск проекта"
+
+#: components/ctp/functions/projects.php:52
+msgid "No projects found"
+msgstr "Ни одного проекта не найдено"
+
+#: components/ctp/functions/projects.php:53
+msgid "No projects found in Trash"
+msgstr "В корзине проектов нет"
+
+#: components/ctp/functions/projects.php:57
+msgid "A group of posts which can be used as portfolio."
+msgstr "Группа постов, которые могут быть использованы как портфолио."
+
+#: components/ctp/functions/projects.php:83
+msgid "Categories"
+msgstr "Категории"
+
+#: components/ctp/functions/projects.php:102
+msgid "Tags"
+msgstr "Теги"
+
+#: components/ctp/functions/projects.php:127
+msgid "Formats"
+msgstr "Форматы"
+
+#: components/ctp/functions/projects.php:128
+#: components/metaboxes/functions/metabox-ctp-formats.php:37
+msgid "Format"
+msgstr "Формат"
+
+#: components/ctp/functions/projects.php:140
+#: components/metaboxes/functions/metabox-ctp-formats.php:90
+#: components/metaboxes/functions/metabox-post-formats.php:140
+msgid "Gallery"
+msgstr "Галлерея"
+
+#: components/ctp/functions/projects.php:141
+msgid "Audio"
+msgstr "Аудио"
+
+#: components/ctp/functions/projects.php:142
+msgid "Video"
+msgstr "Видео"
+
+#: components/ctp/functions/projects.php:184
+#: components/metaboxes/functions/metabox-post-formats.php:43
+msgid "Title"
+msgstr "Заголовок"
+
+#: components/ctp/functions/projects.php:185
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#: components/ctp/functions/projects.php:187
+msgid "Author"
+msgstr "Автор"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:43
+#: components/metaboxes/functions/metabox-post-formats.php:93
+msgid "Self hosted video"
+msgstr "Видео загруженное на собственный сайт"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:45
+#: components/metaboxes/functions/metabox-ctp-formats.php:52
+#: components/metaboxes/functions/metabox-ctp-formats.php:59
+#: components/metaboxes/functions/metabox-ctp-formats.php:72
+#: components/metaboxes/functions/metabox-ctp-formats.php:79
+#: components/metaboxes/functions/metabox-post-formats.php:95
+#: components/metaboxes/functions/metabox-post-formats.php:102
+#: components/metaboxes/functions/metabox-post-formats.php:109
+#: components/metaboxes/functions/metabox-post-formats.php:122
+#: components/metaboxes/functions/metabox-post-formats.php:129
+msgid "e.g. http://site.com/file"
+msgstr "напр. http://site.ru/file"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:64
+#: components/metaboxes/functions/metabox-post-formats.php:114
+msgid "Embedded video"
+msgstr "Встроенное видео"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:65
+#: components/metaboxes/functions/metabox-post-formats.php:115
+msgid "If you are not using self hosted video then you can include embedded code here."
+msgstr "Вы можете использовать встроенное видео вместо того, что могло быть загружено на собственный сайт."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:70
+#: components/metaboxes/functions/metabox-post-formats.php:120
+msgid "Self hosted audio"
+msgstr "Аудио загруженное на собственный сайт"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:84
+#: components/metaboxes/functions/metabox-post-formats.php:134
+msgid "Embedded audio"
+msgstr "Встроенное аудио"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:85
+#: components/metaboxes/functions/metabox-post-formats.php:135
+msgid "If you are not using self hosted audio then you can include embedded code here."
+msgstr "Вы можете использовать встроенное аудио вместо того, что могло быть загружено на собственный сайт."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:96
+msgid "Color"
+msgstr "Цвет"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:97
+msgid "Select a color of project."
+msgstr "Выберите цвет проекта."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:183
+#: components/metaboxes/functions/metabox-ctp-formats.php:222
+#: components/metaboxes/functions/metabox-ctp-formats.php:246
+#: components/metaboxes/functions/metabox-ctp-formats.php:278
+#: components/metaboxes/functions/metabox-post-formats.php:344
+#: components/metaboxes/functions/metabox-post-formats.php:383
+#: components/metaboxes/functions/metabox-post-formats.php:407
+#: components/metaboxes/functions/metabox-post-formats.php:439
+msgid "Note:"
+msgstr "Заметка:"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:184
+#: components/metaboxes/functions/metabox-post-formats.php:345
+msgid "You must supply an MP4 file to satisfy both HTML5 and Flash solutions. The optional OGV format is used to increase x-browser support for HTML5 browsers such as Firefox and Opera."
+msgstr "MP4 обязателен для того чтобы видео было доступно в режимах HTML5 и Flash. Формат OGV опционален, однако пользователи браузеров Firefox и Opera это оценят."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:223
+#: components/metaboxes/functions/metabox-ctp-formats.php:279
+#: components/metaboxes/functions/metabox-post-formats.php:384
+#: components/metaboxes/functions/metabox-post-formats.php:440
+msgid "This field will override the above."
+msgstr "Это поле имеет приоритет над вышестоящими."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:223
+#: components/metaboxes/functions/metabox-post-formats.php:384
+msgid "YouTube and Vimeo preferred."
+msgstr "YouTube или Vimeo предпочтительнее."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:247
+#: components/metaboxes/functions/metabox-post-formats.php:408
+msgid "You must supply both MP3 and OGG files to satisfy all browsers."
+msgstr "Чтобы аудио было доступно во всех браузерах, пожалуйста, используйте оба формата."
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:305
+#: components/metaboxes/functions/metabox-post-formats.php:466
+msgid "Create Gallery"
+msgstr "Новая галлерея"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:305
+#: components/metaboxes/functions/metabox-post-formats.php:466
+msgid "Edit Gallery"
+msgstr "Редактировать"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:307
+#: components/metaboxes/functions/metabox-post-formats.php:468
+msgid "Delete Gallery"
+msgstr "Удалить галлерею"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:322
+msgid "Background"
+msgstr "Бекграунд"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:330
+msgid "Default"
+msgstr "По-умолчанию"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:350
+msgid "Select Image"
+msgstr "Выберите изображение"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:352
+msgid "Delete Image"
+msgstr "Удалить изображение"
+
+#: components/metaboxes/functions/metabox-ctp-formats.php:383
+msgid "Project Options"
+msgstr "Настройки проекта"
+
+#: components/metaboxes/functions/metabox-post-formats.php:37
+msgid "Breadcrumbs"
+msgstr "Хлебные крошки"
+
+#: components/metaboxes/functions/metabox-post-formats.php:38
+msgid "Do not show breadcrumbs."
+msgstr "Не показывать хлебные крошки."
+
+#: components/metaboxes/functions/metabox-post-formats.php:44
+msgid "Do not show post title."
+msgstr "Не показывать заголовок поста."
+
+#: components/metaboxes/functions/metabox-post-formats.php:49
+msgid "Sub title"
+msgstr "Подзаголовок"
+
+#: components/metaboxes/functions/metabox-post-formats.php:50
+#: components/metaboxes/functions/metabox-post-options.php:50
+msgid "Secondary title of entry."
+msgstr "Дополнительный заголовок поста."
+
+#: components/metaboxes/functions/metabox-post-formats.php:55
+msgid "Zoom"
+msgstr "Зум"
+
+#: components/metaboxes/functions/metabox-post-formats.php:56
+msgid "Open a full sized featured image in modal window by clicking on thumbnail."
+msgstr "При нажатии на миниатюру открывать полноразмерное изображение в модальном окне."
+
+#: components/metaboxes/functions/metabox-post-formats.php:61
+msgid "Link"
+msgstr "Ссылка"
+
+#: components/metaboxes/functions/metabox-post-formats.php:62
+msgid "Put an URL path."
+msgstr "Укажите путь."
+
+#: components/metaboxes/functions/metabox-post-formats.php:63
+msgid "e.g. http://google.com"
+msgstr "напр. http://yandex.ru"
+
+#: components/metaboxes/functions/metabox-post-formats.php:68
+msgid "Label"
+msgstr "Ярлык"
+
+#: components/metaboxes/functions/metabox-post-formats.php:69
+msgid "Insert a text of link."
+msgstr "Укажите текст ссылки."
+
+#: components/metaboxes/functions/metabox-post-formats.php:70
+msgid "e.g. Google"
+msgstr "напр. Яндекс"
+
+#: components/metaboxes/functions/metabox-post-formats.php:75
+msgid "Redirect"
+msgstr "Редирект"
+
+#: components/metaboxes/functions/metabox-post-formats.php:76
+msgid "Open the link through redirect."
+msgstr "Открывать ссылку в новом окне."
+
+#: components/metaboxes/functions/metabox-post-formats.php:81
+msgid "Quote"
+msgstr "Цитата"
+
+#: components/metaboxes/functions/metabox-post-formats.php:82
+msgid "Insert a quote."
+msgstr "Вставьте цитату."
+
+#: components/metaboxes/functions/metabox-post-formats.php:88
+msgid "Share a status."
+msgstr "Назначьте новый статус."
+
+#: components/metaboxes/functions/metabox-post-formats.php:178
+msgid "Common"
+msgstr "Общее"
+
+#: components/metaboxes/functions/metabox-post-formats.php:183
+#: components/metaboxes/functions/metabox-post-formats.php:200
+msgid "Hide"
+msgstr "Скрыть"
+
+#: components/metaboxes/functions/metabox-post-formats.php:238
+#: components/metaboxes/functions/metabox-post-formats.php:287
+msgid "Enable"
+msgstr "Включить"
+
+#: components/metaboxes/functions/metabox-post-formats.php:495
+msgid "Format Options"
+msgstr "Настройки формата"
+
+#: components/metaboxes/functions/metabox-post-options.php:37
+msgid "Do not show breadcrumbs"
+msgstr "Не показывать хлебные крошки."
+
+#: components/metaboxes/functions/metabox-post-options.php:43
+msgid "Do not show title"
+msgstr "Не показывать заголовок."
+
+#: components/metaboxes/functions/metabox-post-options.php:49
+msgid "Subtitle"
+msgstr "Подзаголовок"
+
+#: components/metaboxes/functions/metabox-post-options.php:84
+msgid "Options"
+msgstr "Настройки"
+
+#: components/metaboxes/functions/metabox-post-options.php:140
+#: components/metaboxes/functions/metabox-post-options.php:143
+msgid "Page Options"
+msgstr "Настройки страницы"
+
+#: components/metaboxes/functions/metabox-sidebar.php:36
+msgid "Name"
+msgstr "Имя"
+
+#: components/metaboxes/functions/metabox-sidebar.php:37
+msgid "Select a sidebar or <a href=\"admin.php?page=st-major-settings#sidebar\">create new one</a>."
+msgstr "Выберите сайдбар или <a href=\"admin.php?page=st-major-settings#sidebar\">создайте новый</a>."
+
+#: components/metaboxes/functions/metabox-sidebar.php:42
+msgid "Position"
+msgstr "Позиция"
+
+#: components/metaboxes/functions/metabox-sidebar.php:43
+msgid "Choose the position of sidebar."
+msgstr "Выберите позицию сайдбара."
+
+#: components/metaboxes/functions/metabox-sidebar.php:86
+msgid "Default Sidebar"
+msgstr "Сайдбар по-умолчанию"
+
+#: components/metaboxes/functions/metabox-sidebar.php:88
+msgid "Projects Sidebar"
+msgstr "Сайдбар для проектов"
+
+#: components/metaboxes/functions/metabox-sidebar.php:94
+msgid "Custom bar"
+msgstr "Собственный сайдбар"
+
+#: components/metaboxes/functions/metabox-sidebar.php:116
+msgid "L"
+msgstr "Л"
+
+#: components/metaboxes/functions/metabox-sidebar.php:124
+msgid "n/a"
+msgstr "нет"
+
+#: components/metaboxes/functions/metabox-sidebar.php:132
+msgid "R"
+msgstr "П"
+
+#: components/shortcodes/functions/shortcodes.php:195
+msgid "Notice this:"
+msgstr "Обратите внимание, что:"
+
+#: components/shortcodes/functions/shortcodes.php:196
+msgid "Warning!"
+msgstr "Внимание!"
+
+#: components/shortcodes/functions/shortcodes.php:197
+msgid "Well done!"
+msgstr "Отлично!"
+
+#: components/shortcodes/functions/shortcodes.php:198
+msgid "Oh snap!"
+msgstr "Ой!"
+
+#: components/shortcodes/functions/shortcodes.php:199
+msgid "Heads up!"
+msgstr "Внимание!"
+
+#: components/shortcodes/functions/shortcodes.php:367
+msgid "The labels have not been selected."
+msgstr "Ярлыки на были назначены."
+
+#: components/widgets/functions/contact-info.php:17
+msgid "Share your contact information like an address, phone number, email etc."
+msgstr "Показать контактную информацию такую как адрес, телефон, имейл и пр."
+
+#: components/widgets/functions/contact-info.php:115
+#: components/widgets/functions/flickr.php:115
+msgid "Widget"
+msgstr "Виджет"
+
+#: components/widgets/functions/contact-info.php:123
+#: components/widgets/functions/flickr.php:123
+msgid "Widget title."
+msgstr "Заголовок виджета."
+
+#: components/widgets/functions/contact-info.php:131
+msgid "Contacts"
+msgstr "Контакты"
+
+#: components/widgets/functions/contact-info.php:136
+msgid "Enter an introduce text or leave it blank."
+msgstr "Введите краткое сообщение или оставьте это поле пустым."
+
+#: components/widgets/functions/contact-info.php:144
+#: components/widgets/functions/contact-info.php:241
+msgid "Address"
+msgstr "Адрес"
+
+#: components/widgets/functions/contact-info.php:157
+#: components/widgets/functions/contact-info.php:245
+msgid "Phone"
+msgstr "Телефон"
+
+#: components/widgets/functions/contact-info.php:170
+#: components/widgets/functions/contact-info.php:249
+msgid "Email"
+msgstr "Имейл"
+
+#: components/widgets/functions/flickr.php:17
+msgid "Your photos from Flickr."
+msgstr "Ваши фотографии на Фликре."
+
+#: components/widgets/functions/flickr.php:131
+msgid "Flickr"
+msgstr "Фликр"
+
+#: components/widgets/functions/flickr.php:135
+msgid "Account ID"
+msgstr "Идентификатор аккаунта"
+
+#: components/widgets/functions/flickr.php:139
+msgid "Enter your Flickr ID"
+msgstr "Введите ваш идентификатор на Фликре"
+
+#: components/widgets/functions/flickr.php:147
+msgid "Account type"
+msgstr "Тип аккаунта"
+
+#: components/widgets/functions/flickr.php:150
+msgid "User"
+msgstr "Пользователь"
+
+#: components/widgets/functions/flickr.php:151
+msgid "Group"
+msgstr "Группа"
+
+#: components/widgets/functions/flickr.php:159
+msgid "Photos"
+msgstr "Фотографии"
+
+#: components/widgets/functions/flickr.php:185
+msgid "Select number of photos."
+msgstr "Выберите количество фотографий"
+
+#: components/widgets/functions/flickr.php:193
+msgid "Order"
+msgstr "Порядок"
+
+#: components/widgets/functions/flickr.php:196
+msgid "Random"
+msgstr "Случайный порядок"
+
+#: components/widgets/functions/flickr.php:197
+msgid "Recent"
+msgstr "Новые"
+
+#: components/widgets/functions/recent-posts.php:17
+msgid "Display a recent, random or popular posts with thumbnails and excerpts."
+msgstr "Показывать новые, случайные или популярные посты с миниатюрами и выдержками."
+
+#: components/widgets/functions/recent-posts.php:137
+#: components/widgets/functions/recent-posts.php:144
+msgid "Posts"
+msgstr "Посты"
+
+#: components/widgets/functions/recent-posts.php:149
+msgid "Select a type of posts."
+msgstr "Выберите тип постов."
+
+#: components/widgets/functions/recent-posts.php:162
+msgid "Most viewed"
+msgstr "Наиболее просматриваемые"
+
+#: components/widgets/functions/recent-posts.php:163
+msgid "Most commented"
+msgstr "Наиболее комментируемые"
+
+#: components/widgets/functions/recent-posts.php:166
+msgid "Select a kind of posts."
+msgstr "Выберите тип постов"
+
+#: components/widgets/functions/recent-posts.php:171
+msgid "Checkbox <a href='admin.php?page=st-major-settings'>Post Views</a> in case you'd like to show a most viewed posts."
+msgstr "Поставьте галочку <a href='admin.php?page=st-major-settings'>Счетчик просмотров</a> если вы желаете чтобы были показаны наиболее просматриваемые посты."
+
+#: components/widgets/functions/recent-posts.php:180
+msgid "For all time"
+msgstr "За все время"
+
+#: components/widgets/functions/recent-posts.php:181
+msgid "For last month"
+msgstr "За последний месяц"
+
+#: components/widgets/functions/recent-posts.php:182
+msgid "For last week"
+msgstr "За последнюю неделю"
+
+#: components/widgets/functions/recent-posts.php:185
+msgid "Select a time frame."
+msgstr "Выберите период."
+
+#: components/widgets/functions/recent-posts.php:193
+msgid "Enter a slugs of categories separated by comma. Optional."
+msgstr "Укажите пути категорий (slugs). Не обязательно."
+
+#: components/widgets/functions/recent-posts.php:219
+msgid "Select a number of posts."
+msgstr "Выберите количество постов."
+
+#: components/widgets/functions/recent-posts.php:231
+msgid "Date"
+msgstr "Дата"
+
+#: components/widgets/functions/recent-posts.php:245
+msgid "Misc"
+msgstr "Разное"
+
+#: components/widgets/functions/recent-posts.php:247
+msgid "Cache"
+msgstr "Кэш"
+
+#: components/widgets/functions/recent-posts.php:248
+msgid "Store a query result within 12 hours. Recommended."
+msgstr "Хранить результат в течение 12 часов."
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "No Comments"
+msgstr "Нет комментариев"
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "1 Comment"
+msgstr "Комментариев: 1"
+
+#: components/widgets/functions/recent-posts.php:487
+msgid "% Comments"
+msgstr "Комментариев: %"
+
+#: components/widgets/functions/recent-posts.php:499
+msgid "views"
+msgstr "просмотров"
+
+#: components/widgets/functions/sharrre.php:20
+msgid "ST Sharrre is a nice widgets sharing for Facebook, Twitter, Google Plus (with PHP script) and more."
+msgstr "ST Sharrre позволяет быстро запостить в Фейсбук, Твиттер, Гугл+ и др. Русский язык поддерживается."
+
+#: components/widgets/functions/sharrre.php:133
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: components/widgets/functions/social-icons.php:17
+msgid "Display a social networks icons linked to your profiles."
+msgstr "Показывает иконки социальных сетей ведущих на ваши профайлы."
+
+#: components/widgets/functions/social-icons.php:121
+msgid "Manage"
+msgstr "Редактировать"
+
+#: components/widgets/functions/social-icons.php:122
+msgid "Fill forms on Social tab."
+msgstr "Заполните форму в закладке \"Социальные сети\"."
+
+#: components/widgets/functions/subscribe.php:17
+msgid "Allow visitors to subscribe to your website via FeedBurner"
+msgstr "Позволяет посетителям подписаться на обновления сайта через FeedBurner"
+
+#: components/widgets/functions/subscribe.php:107
+#: components/widgets/functions/subscribe.php:164
+msgid "Sign up for our newsletter to receive the latest news and event postings."
+msgstr "Заполните форму чтобы получать обновления по почте."
+
+#: components/widgets/functions/subscribe.php:119
+msgid "Feedburner"
+msgstr "Feedburner"
+
+#: components/widgets/functions/subscribe.php:122
+msgid "Enter you Feedburner ID"
+msgstr "Укажите свой Feedburner-идентификатор"
+
+#: components/widgets/functions/subscribe.php:128
+msgid "Email-subscribe"
+msgstr "Имейл-подписка"
+
+#: components/widgets/functions/subscribe.php:131
+msgid "Description"
+msgstr "Описание"
+
+#: components/widgets/functions/subscribe.php:162
+msgid "Email subscription"
+msgstr "Имейл-подписка"
+
+#: components/widgets/functions/subscribe.php:180
+msgid "your.email@address"
+msgstr "ваш.почтовый@ящик"
+
+#: components/widgets/functions/subscribe.php:183
+msgid "Subscribe"
+msgstr "Подписка"
+
+#: functions/global.php:502
+msgid "Nothing Found"
+msgstr " Ничего не найдено"
+
+#: functions/global.php:608
+msgid "less than 1 minute ago"
+msgstr "менее одной минуты назад"
+
+#: functions/global.php:609
+msgid "1 minute ago"
+msgstr "1 минуту назад"
+
+#: functions/global.php:611
+#, php-format
+msgid "%d minutes ago"
+msgstr "%d мин. назад"
+
+#: functions/global.php:612
+msgid "1 hour ago"
+msgstr "1 час назад"
+
+#: functions/global.php:614
+#, php-format
+msgid "%d hours ago"
+msgstr "%d час. назад"
+
+#: functions/global.php:615
+msgid "1 day ago"
+msgstr "1 день назад"
+
+#: functions/global.php:617
+#: functions/global.php:628
+#, php-format
+msgid "%d days ago"
+msgstr "%d дн. назад"
+
+#: functions/global.php:618
+msgid "1 month ago"
+msgstr "1 мес. назад"
+
+#: functions/global.php:620
+#, php-format
+msgid "%d months ago"
+msgstr "%d мес. назад"
+
+#: functions/global.php:621
+msgid "1 year ago"
+msgstr "1 год назад"
+
+#: functions/global.php:623
+#, php-format
+msgid "%d years ago"
+msgstr "%d г. назад"
+
+#: functions/write-custom-css.php:277
+msgid "Cannot open CSS file"
+msgstr "Не получается открыть CSS-файл."
+
+#~ msgid "Major Settings"
+#~ msgstr "Основные настройки"
+
+#~ msgid "Create New"
+#~ msgstr "Создать новую"
+
+#~ msgid "IDs separated by comma."
+#~ msgstr "Идентификаторы. Через запятую, пожалуйста."

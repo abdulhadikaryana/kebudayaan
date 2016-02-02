@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454375844 < time()) $expired = true; else{$expired = false; $value = 's:37:"216-18-209-44.hosted.static.webnx.com";';}?>

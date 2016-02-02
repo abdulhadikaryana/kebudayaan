@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+<title>Visit Indonesia - Image Gallery</title>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $this->scriptUrl('/styles/tango/jquery.jcarousel.css')?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->scriptUrl('/styles/tango/skin.css')?>" />
+</head>
+<body>
+<div id="wrap">
+    <div id="slideshow-main">
+        <ul>
+            <?php foreach($this->imageGallery as $count => $image) : ?>
+                <li class="p<?php echo $count ?><?php if($count == 0) echo ' active' ?>">
+                    <a href="#">
+                        <img src="<?php echo $this->imageUrl('/upload/poi/' . basename($image['url'])) ?>" alt="" />
+                        <?php if( ! empty($image['name'])): ?>
+                            <span class="opacity"></span>
+                            <span class="content"><h2><?php echo strip_tags($image['name']) ?></h2><p><?php echo strip_tags($image['description']) ?></p></span>
+                        <?php endif; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        
+    </div>
+    <div id="slideshow-carousel">
+          <ul id="carousel" class="jcarousel jcarousel-skin-tango">
+            <?php foreach($this->imageGallery as $count => $image) : ?>
+                <?php if(file_exists(UPLOAD_FOLDER . '/poi/' . basename($image['url'])) AND
+                            file_exists(UPLOAD_FOLDER . '/poi/thumbnails/' . basename($image['url']))
+                        ): ?>
+                    <li><a href="#" rel="<?php echo 'p' . $count ?>"><img src="<?php echo $this->imageUrl('/upload/poi/thumbnails/' . basename($image['url'])) ?>" alt="" width="220" height="130" /></a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+          </ul>
+    </div>
+
+</div>
+<!--
+  jQuery library
+-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<!--
+  jCarousel library
+-->
+<script type="text/javascript" src="<?php echo $this->scriptUrl('/javascripts/jquery/jcarousel/jquery.jcarousel.pack.js') ?>"></script>
+<!--
+  jCarousel skin stylesheet
+-->
+<script type="text/javascript">
+
+    $(function() {
+        $('#carousel').jcarousel({
+            vertical: true,
+            scroll: 1,
+            auto: 2,
+            wrap: 'last',
+            initCallback: carousel_initCallback
+        });
+
+        totalwidth = $('li.p0').width() + $('#slideshow-carousel').width()+70;
+        leftPos = (screen.width - totalwidth)/2;
+        framewidth = totalwidth-10;
+        parent.$('#fancybox-frame').width(framewidth);
+        parent.$('#fancybox-outer').width(totalwidth);
+        parent.$('#fancybox-wrap').css('left',parseInt(leftPos));
+        imageHeight = parseInt(400-$('li.p0').height());
+        //if(parseInt($('li.p0').height())<420){$('#slideshow-main').css('margin-top',imageHeight/2);}
+        //if($('li.p0').height()>300){$('#slideshow-main').css('margin-top',imageHeight/2+16);}
+        $('#slideshow-main').css('margin-top',imageHeight/2+16);            
+        
+        $('#slideshow-carousel li a').click(function() {
+            //alert('tes');
+            realImageClass = $(this).attr('rel');
+            totalwidth = $('li.'+realImageClass).width() + $('#slideshow-carousel').width()+70;
+            framewidth = totalwidth-10;
+            //alert(totalwidth);
+            leftPos = (screen.width - totalwidth)/2;
+            parent.$('#fancybox-frame').width(framewidth);
+            parent.$('#fancybox-outer').width(totalwidth);
+            parent.$('#fancybox-wrap').css('left',parseInt(leftPos));
+            $('#slideshow-main li').removeClass('active');
+            $('#slideshow-main li').css('display', 'none');
+            $('#slideshow-main li span.content').hide();
+            $('#slideshow-main li span.opacity').hide();
+            imageHeight = parseInt(430-$('li.'+realImageClass).height());
+            if($('li.'+realImageClass).height()>300){$('#slideshow-main').css('margin-top',imageHeight/2);}
+            $('#slideshow-main li.' + $(this).attr('rel')).fadeIn('slow', function(){
+                $('#slideshow-main li.' + $(this).attr('rel')).addClass('active');
+            });
+            
+            return false;
+        });
+        
+        $('#slideshow-main ul li a img').hover(function(){
+            $('#slideshow-main li span.content').fadeIn();
+            $('#slideshow-main li span.opacity').fadeIn();
+        },
+        function(){
+            $('#slideshow-main li span.content').fadeOut();
+            $('#slideshow-main li span.opacity').fadeOut();
+        })
+    });
+
+    function carousel_initCallback(carousel)
+    {
+        // Disable autoscrolling if the user clicks the prev or next button.
+        carousel.buttonNext.bind('click', function() {
+            carousel.startAuto(0);
+        });
+
+        carousel.buttonPrev.bind('click', function() {
+            carousel.startAuto(0);
+        });
+
+        // Pause autoscrolling if the user moves with the cursor over the clip.
+        carousel.clip.hover(function() {
+            carousel.stopAuto();
+        }, function() {
+            carousel.startAuto();
+        });
+    };
+
+</script>
+</body>
+</html>

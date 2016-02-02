@@ -1,0 +1,88 @@
+<div class="row-fluid">
+  <form action="" method="post" name="article"
+        enctype="multipart/form-data">
+    <div class="control-group">
+      <label class="control-label" for="name">Nama</label>
+      <div class="controls">
+        <?php echo $this->form->name; ?>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="span8">
+        <div class="control-group">
+          <div class="controls">
+            <?php echo $this->form->description; ?>
+          </div>
+        </div>
+      </div>
+      <div class="span4 well">
+        <div class="control-group">
+          <div class="controls">
+            <div class="fileupload fileupload-new"
+                 data-provides="fileupload">
+              <div class="fileupload-new thumbnail"
+                   style="width: 200px;height:150px;">
+
+                <?php if (isset($this->image)): ?>
+                  <img src="<?php echo $this->imageUrl($this->image); ?>" alt="" />
+                <?php else: ?>
+                  <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=200+x+150" alt="" />
+                <?php endif; ?>
+
+              </div>
+              <div class="fileupload-preview fileupload-exists
+                   thumbnail"
+                   style="width:200px;height:150px;">
+              </div>
+              <div>
+                <?php
+                $disabled   = '';
+                if ($this->form->image->getAttrib('disabled') == true)
+                  $disabled   = 'disabled';
+                ?>
+                <div class="btn btn-file <?php echo $disabled; ?>">
+                  <span class="fileupload-new">Pilih Gambar</span>
+                  <span class="fileupload-exists">Ganti</span>
+                  <?php echo $this->form->image; ?>
+                </div>
+                <a href="#" class="btn fileupload-exists"
+                   data-dismiss="fileupload">
+                  Hapus
+                </a>
+              </div>
+            </div>
+            <ul class="errors">
+              <?php $img_errors = $this->form->image->getMessages(); ?>
+              <?php foreach ($img_errors as $type => $msg): ?>
+                <li><?php echo $msg; ?></li>
+              <?php endforeach; ?>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <?php echo $this->form->draft; ?>
+      <?php echo $this->form->submit; ?>    
+    </div>
+  </form>
+</div>
+
+<?php
+$mce_src = $this->rootUrl('scripts/javascripts/tiny_mce/tiny_mce.js');
+?>
+<script type="text/javascript" src="<?php echo $mce_src ?>">
+</script>
+<script type="text/javascript">
+  tinyMCE.init({
+    // General options
+    mode : "textareas",
+    theme : "advanced",
+    width: '100%',
+    theme_advanced_toolbar_location: 'top',
+    theme_advanced_toolbar_align: 'left'
+  });
+</script>
+

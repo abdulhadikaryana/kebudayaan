@@ -1,0 +1,21 @@
+<?php $flashMessenger = Zend_Controller_Action_HelperBroker::getStaticHelper("FlashMessenger"); ?>
+<?php if ($flashMessenger->setNamespace("success")->hasMessages()): ?>
+    <?php foreach ($flashMessenger->getMessages() as $message): ?>
+        <div class="alert alert-success">
+            <a href="" data-dismiss="alert" class="close">x</a>
+            <strong>
+                <?php echo $message; ?>
+            </strong>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>
+<?php if ($flashMessenger->setNamespace("error")->hasMessages()): ?>
+    <?php foreach ($flashMessenger->getMessages() as $message): ?>
+        <div class="alert alert-error">
+            <a href="" data-dismiss="alert" class="close">x</a>
+            <strong>
+                <?php echo $message; ?>
+            </strong>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>

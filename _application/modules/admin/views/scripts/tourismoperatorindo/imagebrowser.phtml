@@ -1,0 +1,28 @@
+<?php
+    $js_link = array('tiny_mce/tiny_mce_popup','tiny_mce/tiny_mce','jquery/jquery-1.4.1.min');
+    echo $this->jsView(2,$js_link);
+?>
+<style>
+.clear			{ clear:both; }
+.photo-link		{ padding:5px; margin:5px; border:1px solid #ccc; display:block; width:100px; float:left; cursor:pointer; }
+.photo-link:hover	{ border-color:#999; cursor:pointer; }
+</style>
+
+<script type="text/javascript">
+          var win = tinyMCEPopup.getWindowArg("window");
+          var input = tinyMCEPopup.getWindowArg("input");
+          var res = tinyMCEPopup.getWindowArg("resizable");
+          var inline = tinyMCEPopup.getWindowArg("inline")
+
+          var FileBrowserDialogue = {
+          init : function () {
+          },
+          mySubmit : function (obj) {
+                URL = obj.attr('src');
+                win.document.getElementById(tinyMCEPopup.getWindowArg("input")).value = URL;
+                win.ImageDialog.showPreviewImage(URL);
+                tinyMCEPopup.close();
+            }
+          }
+          tinyMCEPopup.onInit.add(FileBrowserDialogue.init, FileBrowserDialogue);
+</script>

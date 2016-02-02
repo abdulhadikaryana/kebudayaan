@@ -1,0 +1,70 @@
+<!--
+ * IndexPackageViewer
+ *
+ * Viewer untuk halaman index tour package
+ *
+ * Code blame to: BEM
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+ <?php if($this->languageID!=2){
+    $textName = 'Name';
+    $msgsort = 'SortBy:';
+ }else{
+     $textName= 'Nama';
+     $msgsort = 'Diurut berdasarkan:';
+ }    ?>
+
+<div class="section">
+    <h2 class="section-title">
+        <!-- id_menu_package = 'Tour Packages' -->
+        <span><?php echo $this->translate('id_menu_package'); ?></span>
+    </h2>
+    <?php echo $msgsort;?> <?php echo $this->columnSort($this->nameSort,
+                            array(
+                                  'param' => $this->sortBy,
+                                  'title' => $textName)); ?>
+    <?php echo $this->paginationControl(
+            $this->package,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'upMessage' => true)); ?>
+
+    <div style="margin-left: 80px; margin-right: 50px;">
+    <?php foreach($this->package as $package) : ?>
+        <div class="en-list">
+
+            <h3>
+                <a href="<?php echo $this->baseUrl(
+                        '/package/detail/' . $package['package_id'] . '/'
+                        . $this->makeUrlFormat($package['title'])) ?>">
+                        <?php echo $package['title']?>
+                </a>
+            </h3>
+
+            <p style="text-align: justify">
+                <?php echo strip_tags($this->HtmlDecode($this->truncate($package['description'], 250)));?>
+            </p>
+
+            <span class="read-more-lb">
+                <a href="<?php echo $this->baseUrl(
+                        '/package/detail/' . $package['package_id'] . '/'
+                        . $this->makeUrlFormat($package['title'])) ?>">
+                        <?php echo $this->translate('id_read_more_new'); ?> &gt;&gt;
+                </a>
+            </span>
+
+            <div class="clear-left"></div>
+
+        </div>
+    <?php endforeach; ?>
+    </div>
+
+    <?php echo $this->paginationControl(
+            $this->package,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'downMessage' => true)); ?>
+
+</div>

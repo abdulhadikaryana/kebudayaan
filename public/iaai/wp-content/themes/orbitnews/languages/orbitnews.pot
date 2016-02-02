@@ -1,0 +1,164 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Orbit News\n"
+"POT-Creation-Date: 2014-01-14 15:12+0100\n"
+"PO-Revision-Date: 2014-01-15 02:39+0100\n"
+"Last-Translator: jetonr <jetonr@gmail.com>\n"
+"Language-Team: SNJ <info@nextwpthemes.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17 ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:36 ../comments.php:57
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:37 ../comments.php:58
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:38 ../comments.php:59
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:74
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:75
+msgid "E-mail"
+msgstr ""
+
+#: ../comments.php:76
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:77
+msgid "Comment"
+msgstr ""
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:17
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:21
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-page.php:14 ../content.php:42 ../template-sitemap.php:20
+msgid "Pages:"
+msgstr ""
+
+#: ../content.php:94 ../template-sitemap.php:35
+msgid "Tags"
+msgstr ""
+
+#: ../searchform.php:11
+msgid "Search"
+msgstr ""
+
+#: ../template-sitemap.php:27
+msgid "Pages"
+msgstr ""
+
+#: ../template-sitemap.php:31
+msgid "Categories"
+msgstr ""
+
+#: ../template-sitemap.php:46
+msgid "Authors"
+msgstr ""
+
+#: ../inc/extras.php:71 ../inc/template-tags.php:504
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/template-tags.php:39
+msgid "&laquo; Previous"
+msgstr ""
+
+#: ../inc/template-tags.php:49
+msgid "Next &raquo;"
+msgstr ""
+
+#: ../inc/template-tags.php:88
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../inc/template-tags.php:92
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:204
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/template-tags.php:204 ../inc/template-tags.php:234
+msgid "Edit"
+msgstr ""
+
+#: ../inc/template-tags.php:238
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/template-tags.php:373
+msgid "Home"
+msgstr ""
+
+#: ../inc/template-tags.php:374
+#, php-format
+msgid "Archive by Category \"%s\""
+msgstr ""
+
+#: ../inc/template-tags.php:375
+#, php-format
+msgid "Search Results for \"%s\""
+msgstr ""
+
+#: ../inc/template-tags.php:376
+#, php-format
+msgid "Posts Tagged \"%s\""
+msgstr ""
+
+#: ../inc/template-tags.php:377
+#, php-format
+msgid "Articles Posted by %s"
+msgstr ""
+
+#: ../inc/template-tags.php:378
+#, php-format
+msgid "Post Format: %s"
+msgstr ""

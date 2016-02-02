@@ -1,0 +1,46 @@
+<form name="mailForm" id="mailForm"  method="post"
+      action="<?php $this->currentUrl(); ?>">
+    
+    <fieldset class="wide">
+        <legend>Message Header</legend>
+        <table class="resetTable">
+            <tr>
+                <td><label for="mailRecipient">Recipient</label></td>
+                <td>&#58;</td>
+                <td><?php echo $this->form->mailRecipient; ?></td>
+            </tr>
+            <tr>
+                <td></td><td></td>
+                <td class="tip"> Pisahkan recipient yang berbeda dengan tanda koma. </td>
+            </tr>
+            
+            <tr>
+                <td><label for="mailSubject">Subject</label></td>
+                <td>&#58;</td>
+                <td><?php echo $this->form->mailSubject; ?></td>
+            </tr>
+        </table>
+    </fieldset>
+    
+    <fieldset class="wide">
+        <legend>Message Content</legend>
+        <table class="resetTable">
+            <tr>
+                <td><label for="mailContent">Content</label></td>
+                <td>&#58;</td><td style="width: 715px;"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><?php echo $this->form->mailContent; ?></td>
+            </tr>
+        </table>
+    </fieldset>
+    
+    <fieldset class="small">
+        <legend>Action</legend>
+        <input type="submit" class="btn radius" value="Send" id="send-btn"
+               disabled="disabled" onclick="document.pressed=this.value"/>
+        <input type="button" class="btn radius" value="Cancel" id="cancel-btn"
+               disabled="disabled" 
+               onclick="window.location='<?php echo $this->rootUrl('admin/mail/') ?>'"/>
+    </fieldset>
+</form>

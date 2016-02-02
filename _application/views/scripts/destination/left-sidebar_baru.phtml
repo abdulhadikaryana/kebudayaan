@@ -1,0 +1,97 @@
+<ul id="side-menu">
+    <?php if(!empty($this->destination['whatToDo'])) : ?>
+        <li><a class="ajax" href="<?php echo $this->url(array('action' => 'todo',  'language' => $this->languageID,
+            'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"
+               id="menu-todo" onclick="getContent('todo', $(this).attr('href'));"><?php echo strtoupper($this->translate('id_poi_todo')); ?></a></li>
+    <?php endif; ?>
+
+    <?php if(!empty($this->destination['whereToStay'])) : ?>
+        <li><a class="ajax" href="<?php echo $this->url(array('action' => 'tostay', 'language' => $this->languageID,
+            'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"
+               id="menu-tostay" onclick="getContent('tostay', $(this).attr('href'));"><?php echo strtoupper($this->translate('id_poi_stay')); ?></a></li>
+    <?php endif; ?>
+
+    <?php if(!empty($this->destination['whereToEat'])) : ?>
+        <li><a class="ajax" href="<?php echo $this->url(array('action' => 'toeat', 'language' => $this->languageID,
+            'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"
+               id="menu-toeat" onclick="getContent('toeat', $(this).attr('href'));"><?php echo strtoupper($this->translate('id_poi_eat')); ?></a></li>
+    <?php endif; ?>
+               
+    <?php if(!empty($this->destination['whatToBuy'])) : ?>
+        <li><a class="ajax" href="<?php echo $this->url(array('action' => 'tobuy', 'language' => $this->languageID,
+            'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"
+               id="menu-tobuy" onclick="getContent('tobuy', $(this).attr('href'));"><?php echo strtoupper($this->translate('id_poi_buy')); ?></a></li>
+    <?php endif; ?>
+              
+    <?php if(!empty($this->destination['howToGetAround'])) : ?>
+        <li><a class="ajax" href="<?php echo $this->url(array('action' => 'getaround', 'language' => $this->languageID,
+            'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"
+               id="menu-getaround" onclick="getContent('getaround', $(this).attr('href'));"><?php echo strtoupper($this->translate('id_poi_around')); ?></a></li>
+    <?php endif; ?>
+
+    <?php if(!empty($this->destination['howToGetThere'])) : ?>
+        <li><a class="ajax" href="<?php echo $this->url(array('action' => 'getthere', 'language' => $this->languageID,
+            'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action', true) ?>"
+               id="menu-getthere" onclick="getContent('getthere', $(this).attr('href'));"><?php echo strtoupper($this->translate('id_poi_where')); ?></a></li>
+    <?php endif; ?>
+
+    <?php if(!empty($this->destination['tips'])) : ?>
+        <li><a class="ajax" href="<?php echo $this->url(array('action' => 'tips', 'language' => $this->languageID,
+            'destId' => $this->destId, 'destTitle' => $this->formatDestTitle), 'dest-action') ?>"
+               id="menu-tips" onclick="getContent('tips', $(this).attr('href'));"><?php echo strtoupper($this->translate('id_poi_tips')); ?></a></li>
+    <?php endif; ?>
+</ul>
+
+<br />
+<div class="related">
+<?php if($this->use_related_poi) : ?>
+    <?php if(count($this->relatedDestination) > 0) : ?>
+        <h3><?php echo $this->translate('id_title_relateddest'); ?></h3>
+        <ul class="related-menu">
+                <?php foreach($this->relatedDestination as $key => $values) : ?>
+                    <li><a href="<?php echo $this->baseUrl('/destination/' . $key .
+                        '/' . $this->makeUrlFormat($values)) ?>"><?php echo $values ?></a></li>
+                <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+<?php else: ?>
+    <?php if(count($this->relatedDestination) > 0) : ?>
+        <h3><?php echo $this->translate('id_title_relateddest'); ?></h3>
+        <ul class="related-menu">
+                <?php foreach($this->relatedDestination as $values) : ?>
+                    <li><a href="<?php echo $this->baseUrl('/destination/' . $values['related_poi'] .
+                        '/' . $this->makeUrlFormat($values['name'])) ?>"><?php echo $values['name'] ?></a></li>
+                <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+<?php endif; ?>
+</div>
+
+<?php if(count($this->relatedArticle) > 0) : ?>
+    <div class="related">
+        <h3><?php echo $this->translate('id_title_attraction'); ?></h3>
+        <ul class="related-menu">
+            <?php foreach($this->relatedArticle as $article) : ?>
+                <li><a href="<?php echo $this->url(array(
+                    'destId' => $this->destId,
+                    'destTitle' => $this->formatDestTitle,
+                    'language' => $this->languageID,
+                    'articleId' => $article['article_id'],
+                    'articleTitle' => $this->makeUrlFormat($article['title'])),
+                        'dest-article') ?>"><?php echo $article['title'] ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
+<?php if (count($this->relatedEvent) > 0) { ?>
+    <div class="related">
+        <h3><?php echo $this->translate('event_related'); ?></h3>
+        <ul class="related-menu">
+            <?php foreach($this->relatedEvent as $event) : ?>
+                <li><a href="<?php echo $this->baseUrl('/event/detail/' . $event['event_id']) ?>"><?php echo $event['name'] ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php } ?>

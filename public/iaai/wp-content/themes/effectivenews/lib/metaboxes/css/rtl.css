@@ -1,0 +1,16 @@
+.slider {
+    clear: left !important;
+    float: right !important;
+    
+}
+
+.range {
+    float: right;
+    margin: 0 15px 0 0;
+}
+p.help, p.description, span.description, .form-wrap p {
+    clear: both;
+}
+.inside > .rt_final_score, .inside > .rt_final_score_stars, .inside > .rt_final_score_po {
+    right: 800px;
+}

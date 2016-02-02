@@ -1,0 +1,68 @@
+<!--
+ * OverseasRepresentativesViewer
+ *
+ * Viewer untuk halaman overseas representatives
+ *
+ * Code blame to: BEM
+ *
+ * @copyright Copyright (c) 2010 Sangkuriang Studio
+ * @author Sangkuriang Studio <www.sangkuriangstudio.com>
+ -->
+<div class="section">
+    <!-- id_title_overseas = 'Overseas Representatives' -->
+    <h2 class="section-title">
+        <span><?php echo $this->translate('id_title_overseas'); ?></span>
+    </h2>
+    <?php echo $this->paginationControl(
+            $this->tourism,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'upMessage' => true)); ?>
+    
+    <div style="margin-left: 80px; margin-right: 50px;">
+    <?php foreach($this->tourism as $tourism) : ?>
+        <div class="en-list">
+            <h3 style="font-weight: bold">
+                <?php echo $tourism['name']; ?>
+            </h3>
+            <br />
+
+            <?php echo $tourism['description']; ?>
+            <p><?php echo $tourism['address']; ?></p>
+
+            <?php if (!empty ($tourism['phone'])) : ?>
+                <p><?php echo $this->translate('id_list_phone'); ?> : <?php echo $tourism['phone']; ?></p>
+            <?php endif; ?>
+
+            <?php if (!empty ($tourism['fax'])) : ?>
+                <p>Fax : <?php echo $tourism['fax']; ?></p>
+            <?php endif; ?>
+
+            <?php if (!empty ($tourism['email'])) : ?>
+                <p>Email :
+                    <a href="mailto: <?php echo $tourism['email']; ?>">
+                        <?php echo $tourism['email']; ?>
+                    </a>
+                </p>
+            <?php endif; ?>
+
+            <?php if (!empty ($tourism['website'])) : ?>
+                <p>Website : 
+                    <a href="<?php echo $tourism['website']; ?>">
+                        <?php echo $tourism['website']; ?>
+                    </a>
+                </p>
+            <?php endif; ?>
+                
+            <div class="clear-left"></div>
+            
+        </div>
+    <?php endforeach; ?>
+    </div>
+
+    <?php echo $this->paginationControl(
+            $this->tourism,
+            'Sliding',
+            'partials/pagination.phtml',
+            array('message' => $this->customName, 'downMessage' => true)); ?>
+</div>

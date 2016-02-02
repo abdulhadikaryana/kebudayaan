@@ -1,0 +1,27 @@
+<?php 
+    $imageUrl = $this->imageUrl('/upload/poi/thumbnails/');
+    //processing image data, add image directory
+    $elementCounter = 0;
+    if(sizeof($this->imageGallery > 0))
+    {
+        foreach ($this->imageGallery as $tempData)
+        {
+            $imgData[$elementCounter] = basename($tempData['url']);
+            $elementCounter++;
+        }
+    }
+?>
+<div class="section">
+    <?php if($imgData != null):?>
+    <h3>Image Gallery</h3>
+    <div class="imageGallery">
+    <?php $ctr = 1; ?>
+    <?php if(sizeof($imgData)>0): ?>
+        <?php foreach($imgData as $img): ?>
+        <a class="tes" href="#photos"><img src="<?php echo $imageUrl.$img;?>" width="110px" height="70px" onclick="" /></a>
+        <?php $ctr= $ctr+1; ?>
+        <?php endforeach; ?>
+    <?php endif;?>
+    </div>
+    <?php endif; ?>
+</div>

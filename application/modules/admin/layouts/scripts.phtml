@@ -1,0 +1,22 @@
+<script type="text/javascript" src="<?php echo $this->scriptUrl('/javascripts/jquery/jquery-1.4.2.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->rootUrl() . '/min/admin-js.php'; ?>"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $('#clock') 
+    .epiclock()      // We define the clock...   
+    .clocks(EC_RUN); // Then start the manager. 
+
+    $(window).keypress(function(event) {
+      if ((event.which == 13)){
+        if(!confirm('You are pressing the Enter key, it may processing some form data that you working on(insert/update/delete), do you want to process?'))
+        {
+          event.preventDefault();
+        }
+      }
+    });
+  });
+</script>
+<?php
+echo $this->placeholder('jsInline');
+?>

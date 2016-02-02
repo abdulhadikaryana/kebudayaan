@@ -1,0 +1,316 @@
+<?php
+$this->placeholder('jsInline')->captureStart();
+echo $this->render('partial/tinyMCE.phtml');
+/*Put all your Javascript function below*/
+?>
+<script type="text/javascript">
+    tinyMCE.execCommand('mceAddControl', false, 'ArticleContent');
+    function myFileBrowser (field_name, url, type, win)
+    {
+        var cmsURL = '<?php echo $this->rootUrl().'/admin/ajax/imagebrowser/dir/2'; ?>';
+        if (cmsURL.indexOf("?") < 0) {
+            //add the type as the only query parameter
+            cmsURL = cmsURL + "?type=" + type;
+        }
+        else {
+            //add the type as an additional query parameter
+            // (PHP session ID is now included if there is one at all)
+            cmsURL = cmsURL + "&type=" + type;
+        }
+
+        tinyMCE.activeEditor.windowManager.open({
+            file : cmsURL,
+            title : 'My File Browser',
+            width : 800,  // Your dimensions may differ - toy around with them!
+            height : 600,
+            popup_css : false,
+            resizable : "yes",
+            inline : "yes",  // This parameter only has an effect if you use the inlinepopups plugin!
+            close_previous : "no"
+        }, {
+            window : win,
+            input : field_name
+        });
+        return false;
+    }
+
+   function removeSpaces(string)
+   {
+       return string.split(' ').join('');
+   }
+   
+   //Add related article
+   var counter = $('#counterRelated').val();
+   function relatedArticle()
+   {
+
+      if($('#relatedLabel'+counter).val() == "" || $('#relatedLink'+counter).val() == "")
+      {
+         alert('There are still empty string!!');
+      }
+      else
+      {
+        //var is_edit = "<?php echo $this->edit;?>";
+            counter++;
+   
+            var html = '<tr>';
+                  html +='<td><input type="text" id="relatedLabel'+ counter +'" class="mediumele valid" name="label'+ counter +'" /></td>';
+                  html +='<td><input type="text" id="relatedLink'+ counter +'" class="mediumele valid" name="link'+ counter +'" /></td>';
+                  html +='<td><div class="general-remove" onclick="delRelatedArticle($(this));">Delete</div></td>';
+                  html +='</tr>';
+               
+               $('#tbrelated-header').show();
+               $('#tbrelated-article').prepend(html);
+               
+               $('#counterRelated').val((counter));
+               
+               //alert(html);
+   
+               $('#relatedLink'+counter).rules("add", {
+                     required: true,
+                     url     : true,
+                     messages: {
+                         required: "<br/>Please enter an URL!",
+                         url     : "<br/>Please enter a valid URL!"
+                     }
+               });
+               $('#relatedLabel'+counter).rules("add", {
+                     required: true,
+                     messages: {required: "<br/>Please enter a related article name!"}
+               });
+
+
+      }
+      
+   }
+   //Delete related article
+   function delRelatedArticle(obj)
+   {
+      counter--;
+      if(counter == 0)
+      {
+         $('#tbrelated').hide();
+      }
+      $('#counterRelated').val(counter);
+       obj.parents('tr').remove();
+   }
+
+   //Delete related article in form edite
+    var counterDel = 1;
+    function delRelatedArticleEdit(obj)
+    {
+         //if confirm true, will sending reques to controller to delete field
+	if (confirm("Are you sure want to delete?")){
+
+            var id = obj.attr('id');
+            var label = $('#relatedLabel'+id).val();
+            var link = $('#relatedLink'+id).val();
+    
+            var html ='<input type="hidden" name="labeldel'+ counterDel +'" value="'+ label +'" /><input type="hidden" name="linkdel'+ counterDel +'" value="'+ link +'" />';
+            $('#tmpDelete').append(html);
+            $('#counterDel').val(counterDel);
+            obj.parents('tr').remove();
+        
+            counterDel++;
+            counter--;
+            $('#counterRelated').val(counter);
+        }
+	else
+        {
+            //alert("that's aborted ahaha!")
+	}
+
+
+   }
+
+    function OnSubmitForm()
+    {
+        if(document.pressed == 'Save')
+        {
+            $('#SaveStatus').val(1);
+            document.poiForm.action = "<?php echo $this->currentUrl(); ?>";
+        }
+        else
+            if(document.pressed == 'Draft')
+        {
+            $('#SaveStatus').val(0);
+            document.poiForm.action = "<?php echo $this->currentUrl(); ?>";
+        }
+        return true;
+    }
+
+    function setRelatedPoi()
+    {
+        if($('#SelectPoi :selected').val()!=0)
+        {
+            html = "<tr><td class='space_r'>"+$('#SelectPoi :selected').text()+"</td>";
+            html2 = html + "<td id='remove-poi' class='general-remove' onclick='deletePoi();'>Delete</td></tr>";
+            $('td.RelatedPoi').html(html2);
+            $('#PoiId').val($('#SelectPoi :selected').val());
+        }
+        else
+        {
+            alert('Please select a Poi first!');
+        }
+    }
+
+    function deletePoi()
+    {
+        $('td.RelatedPoi').html('no destination set');
+    }
+
+    function showRelatedPoi()
+    {
+        $('#getRelBtn').attr('disabled','true');
+        if($('#IslandListOptions :selected').val()!=0)
+        {
+            if($('#ProvinceListOptions :selected').val()!=0)
+            {
+                if($('#AreaListOptions :selected').val()!=0)
+                {
+                    area_id = $('#AreaListOptions :selected').val();
+                    createPoiSelect(area_id);
+                }
+                else
+                {
+                    area_id = $('#ProvinceListOptions :selected').val();
+                    createPoiSelect(area_id);
+                }
+            }
+            else
+            {
+                area_id = $('#IslandListOptions :selected').val();
+                createPoiSelect(area_id);
+            }
+        }
+        else
+        {
+            $('#getRelBtn').removeAttr('disabled');
+            alert('Please Select a Region First');
+        }
+    }
+
+    function createPoiSelect(area_id)
+    {
+        $('#related-dest').show();
+        $('.selectPoiRow').show();
+        $('td.poi-list').html("<img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>");
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->rootUrl().'/admin/ajax/arearelatedpoi'; ?>",
+            data: {areaid:area_id,type:1,language:<?php echo $this->languageID; ?>},
+            success: showPoi
+        });
+        $('#getRelBtn').removeAttr('disabled');
+    }
+
+    function showPoi(data)
+    {
+        $('td.poi-list').html(data);
+    }
+
+    function refreshPoi()
+    {
+        $('.selectPoiRow').hide();
+    }
+
+    function getAreaList(area_id,level,lang_id)
+    {
+        if(area_id == 0)
+        {
+            $('.poi-list').empty();
+            $('.selectPoiRow').hide();
+        }
+
+        //level = 0  -> get province list, 1 -> get area list
+        if(level == 0)
+        {
+            container = 'td.province-list';
+            $('td.area-list').empty();
+        }else
+            if(level == 1)
+        {
+            container = 'td.area-list';
+        }
+
+        if(area_id != 0){
+            $(container).empty();
+            $(container).html("<img src='<?php echo $this->imageUrl('ajax-loader-big.gif'); ?>'/>");
+            $.ajax({
+                type: "POST",
+                url: "<?php echo $this->rootUrl().'/admin/ajax/childareaselect'; ?>",
+                data: {areaid:area_id, arealevel:level, langid:lang_id},
+                success: loadArea
+            });
+        }
+        else
+        {
+            if(level == 0)
+            {
+                $('td.province-list').empty();
+            }
+            $('td.area-list').empty();
+        }
+    }
+
+    function loadArea(data,level)
+    {
+        $(container).html(data);
+    }
+
+</script>
+
+<?php echo $this->render('partial/upload-image-script.phtml');?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#articleForm input").blur(function(){
+            $("#articleForm").validate().element($(this));
+        });
+
+        $('#submitBtn').click(function() {
+            var content = tinyMCE.activeEditor.getContent();
+            $('#ArticleContent').val(content);
+        });
+
+        $('#draftBtn').click(function() {
+            var content = tinyMCE.activeEditor.getContent();
+            $('#ArticleContent').val(content);
+        });
+
+
+        $("#articleForm").validate({
+            meta: "validate",
+            rules : {
+                ArticleTitle:{
+                    required:true
+                },
+                articleSortOrder:{
+                    range: [0,100],
+                    digits: true
+                }
+            },
+            messages : {
+                ArticleTitle: "Please enter a title!",
+                articleSortOrder:{
+                    range: "Please input only 0 to 100 value",
+                    digits: "Please input only digits for Sort Order"
+                }
+            }
+        });
+
+        $("input[type*='text']").focus(function(){
+            $(this).css('border','2px solid #1E385D');
+        });
+
+        $("input[type*='text']").blur(function(){
+            $(this).css('border','none');
+        });
+
+
+
+
+    });
+</script>
+
+<?php $this->placeholder('jsInline')->captureEnd();?>  

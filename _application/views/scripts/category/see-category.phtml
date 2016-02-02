@@ -1,0 +1,31 @@
+<div class="row-fluid" id="culture-section">
+    <div class="span28">
+        <h3 class="section-title"><?php echo $this->category['name']; ?></h3>
+        <div class="row-fluid section-content">
+            <div class="span28">
+                <ul class="thumbnails" id="see-category-list">
+                    <?php foreach ($this->subCategories as $category): ?>            
+                        <?php
+                        $categoryImage = $category['image'];
+                        $categoryImageUrl = 'upload/category/' . $categoryImage;
+                        if (!file_exists(IMAGE_FOLDER . $categoryImageUrl)) {
+                            $categoryImageUrl = 'default.jpg';
+                        }
+
+                        $linkUrl = $this->baseUrl('/category/' . $this->category['category_id'] . '/detail/' . $category['category_id']);
+                        ?>
+                        <li class="thumbnail">
+                            <a href="<?php echo $linkUrl; ?>">
+                                <img src="<?php echo $this->imageUrl('timthumb.php?src=' . $categoryImageUrl . '&w=205&h=150&q=100') ?>"  class="thumbnail">
+                                <div class="caption">
+                                    <h4><?php echo $category['name']; ?></h4>
+                                </div>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>  
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!-- end one column-->
+

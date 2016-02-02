@@ -1,0 +1,13 @@
+<div id="dest-content">
+    <h2><?php echo $this->pageTitle . ' - '. $this->sectionTitle ?></h2>
+    <div class="section-directory">    
+        <?php if(count($this->sectionContent) > 0) : ?>
+            <?php echo $this->partial('tourism-operator/list.phtml',
+                array(
+                    'directory' => $this->sectionContent,
+                    'readMoreLink' => $this->baseUrl('/destination/' . $this->poiId . '/' .
+                        $this->makeUrlFormat($this->pageTitle) . '/directory-detail'),
+                )); ?>
+        <?php endif; ?>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+
+<table class="grid" style="width:100%">
+
+	<tr>
+		<th>Sun</th>
+		<th>Mon</th>
+		<th>Tue</th>
+		<th>Wed</th>
+		<th>Thu</th>
+		<th>Fri</th>
+		<th>Sat</th>
+	</tr>
+
+	<?php for ($i = 0; $i<$this->weeksInMonth; $i++) : ?>
+	<tr>
+		<?php for ($j = 0; $j < 7; $j++) : ?>
+			<td class='dayColumn'>
+				<?php if(!empty($this->days[$i][$j])) : ?>
+					<?php
+						// construct tanggal dulu
+						$date = $this->yearMonth . "-" . $this->days[$i][$j];
+						// manggil helper EventByDate
+						$events = $this->eventByDate($this->eventDescDb, $date,
+                            $this->languageId);
+					?>
+					<table class="eventGrid">
+							<tr>
+								<td class='eventList'>
+									<a href="<?php echo $this->baseUrl('/event/search/date-start/' .  $date . '/date-end/' . $date) ?>"><?php echo $this->days[$i][$j] ?></a>
+								</td>
+							</tr>
+							<?php $count = 0; ?>
+							<?php foreach($events as $event) : ?>
+									<?php if($count < 2) : ?>
+										<tr>
+											<td class='event'>
+												<a class="event-name" style="color : <?php echo $this->eventColor($event['category']) ?>" id="event<?php echo $i.$j.$event['event_id'] ?>" href="<?php echo $this->baseUrl('/event/detail/' . $event['event_id']) ?>" >
+													&raquo; <?php echo $this->truncate($event['name'], 15); ?>
+												</a>
+
+                                                <div class="tooltip">
+													<h3 style="color : <?php echo $this->eventColor($event['category']) ?>">
+														<?php echo $event['name'] ?>
+													</h3>
+
+                                                    <div class="alignleft">
+                                                        <img src="<?php echo $this->imageUrl('/upload/event/thumbnails/' .
+                                                            $event['main_pics']) ?>" alt="" />
+                                                    </div>
+                                                    <div class="desc-list">
+                                                        <?php echo $this->truncate($event['description'], 320); ?>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <?php echo $this->partial('event/event-date-time.phtml',
+                                                                    array(
+                                                                          'dateStart' => $event['date_start'],
+                                                                          'dateEnd' => $event['date_end'],
+                                                                    )); ?>
+                                                </div>
+
+											</td>
+										</tr>
+									<?php else: ?>
+										<tr>
+											<td class="moreEvent">
+												<a href="<?php echo $this->baseUrl('/event/search/date-start/' .  $date . '/date-end/' . $date) ?>">
+													More &gt;
+												</a>
+											</td>
+										</tr>
+										<?php break; ?>
+									<?php endif;  // end if count?>
+								<?php $count++ ?>
+							<?php endforeach; ?>
+
+					</table>
+				<?php endif; // end for isempty ?>
+			</td>
+		<?php endfor; // end for counter ?>
+	</tr>
+	<?php endfor; // end for this week ?>
+</table>
+
+<!-- trigger element. a regular workable link -->
+<a id="download_now">Download now</a>
+
+<!-- tooltip element -->
+<div class="tooltip">tes jing</div>
+
+<div id="event-list">
+    <?php echo $this->render('event/event-list-page.phtml') ?>
+</div>
+
+<a class="title" href="#" title="This is the title|The first set of contents comes after the first delimiter in the title.|In this case, the delimiter is a pipe">tres dong gwgwgw</a>
+
+<div id="tes">hoy gila</div>
+<a id="download" href="download" title="gila">edan coy</a>
+<div id="livetip" style="position: absolute; background: red; width: 300px; height: 300px"></div>

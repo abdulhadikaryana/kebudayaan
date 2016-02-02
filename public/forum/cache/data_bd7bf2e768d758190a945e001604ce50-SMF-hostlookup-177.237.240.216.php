@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454393047 < time()) $expired = true; else{$expired = false; $value = 's:44:"177.237.240.216.cable.dyn.cableonline.com.mx";';}?>

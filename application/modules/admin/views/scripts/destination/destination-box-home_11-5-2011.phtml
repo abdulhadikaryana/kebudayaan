@@ -1,0 +1,129 @@
+    <div id="home-dest">
+    <div id="home-dest-list" style="margin-top: 10px;">
+      	<div id="feature-destination-header"></div>
+        <div id="home-dest-inner">
+        	<div class="slider" style="display:none;">
+        	<?php $ctr = 1;?>
+			<?php foreach($this->destination as $destination) : ?>
+	        
+			<?php if($ctr == 1): ?>
+   			<div class="page">
+   			<?php endif; ?>
+   			
+				<div class="home-en 
+					 <?php if($ctr < 3): ?>
+					 dotted-bottom
+					 <?php endif;?>				
+				">
+	                <div class="home-en-img">
+	                    <?php $imageDir = UPLOAD_FOLDER . 'poi/thumbnails/' . basename($destination['source']); ?>
+	                    <?php $imageUrl = $this->imageUrl('/upload/poi/thumbnails/' . basename($destination['source'])); ?>
+	                    <a href="<?php echo $this->baseUrl('destination/' . $destination['poi_id']) ?>">
+	                        <?php if(file_exists($imageDir)): ?>
+	                        <img src="<?php echo $imageUrl; ?>" alt="<?php echo $destination['name'] ?>" />
+	                        <?php else:?>
+	                        <img src="<?php echo $imageUrl; ?>" alt="<?php echo $destination['name'] ?>" />
+	                        <?php endif;?>
+		  	    </a>
+	                </div>
+	                <div class="home-en-desc">
+	                    <h3>
+	                        <a href="<?php echo $this->baseUrl('destination/' . $destination['poi_id'] . '/' .$this->makeUrlFormat($destination['name'])) ?>">
+	                            <?php echo $destination['name'] ?>
+	                        </a>
+	                    </h3>
+	                    <p>
+				<?php echo htmlspecialchars_decode($this->truncate($destination['description'], 80)) ?>
+	                	</p>
+	                    <?php echo $this->partial('partials/read-more.phtml',
+	                                array(
+	                                      'controller' => $this->controller,
+	                                      'id' => $destination['poi_id'],
+	                                      'title' => $destination['name']
+	                                )); ?>
+					</div>
+	                <div class="clear-left"></div>
+	            </div>
+
+	            <?php $ctr++; ?>
+	            
+				<?php if($ctr == 4): ?>
+				</div>
+	   			<?php $ctr = 1;  ?>
+				<?php endif; ?>        
+			<?php endforeach; ?>		
+			</div>
+		</div>
+ 	    
+	 	<div id="feature-destination-footer">
+		 	<ul class="panel">
+			 	<li>&nbsp;</li>
+			 	<li>&nbsp;</li>
+			 	<li>&nbsp;</li>
+			 </ul>
+		 </div>
+
+		<div id="random-dest-bottom">
+		
+			<div id="view-all-dest">
+		        <a href="<?php echo $this->baseUrl('destination/search') ?>">
+		            <img src="<?php echo $this->imageUrl('transparent.gif') ?>" class="more-featured" alt="view all" />
+		        </a>
+		    </div>
+			
+			<input type="button" value="<?php echo $this->translate('click_here'); ?>" class="links more-destination" onclick="window.location = '<?php echo $this->baseUrl('/destination/search'); ?>'" />
+		
+		</div>
+	
+    </div>
+    
+    <div id="home-dest-search">
+        <div id="home-dest-watch">
+            <div id="dest-watch-title"></div>
+            <div id="dest-watch-content">
+			<div id="video-col-left">
+				<div id="dest-watch-desc">
+                	<?php echo $this->translate('id_index_video'); ?>
+                </div>
+
+				<div id="dest-watch-more">
+		            <input type="button" value="Click Here" class="links video-btn" onclick="window.location = '<?php echo $this->baseUrl('/video/') ?>'" />
+				</div>
+			</div>
+
+			<div id="video-col-right">
+	            <div id="dest-watch-list">
+	                <?php foreach($this->videos as $video) : ?>
+	                    <?php $videoThumb = $video->getVideoThumbnails(); ?>
+	                    <a class="youtube" href="<?php echo str_replace('&', '&amp;', $video->getVideoWatchPageUrl()) ?>"><img class="thumb-video-small" src="<?php echo $videoThumb[0]['url'] ?>" alt="<?php echo $video->getVideoTitle() ?>" title="<?php echo $video->getVideoTitle() ?>" /></a>
+	                <?php endforeach; ?>
+				</div>
+			</div>
+				
+            </div>
+            <div id="dest-watch-footer"></div>
+        </div>
+        <div class="clear-left"></div>
+        <div id="home-dest-search-box">
+            <div id="dest-looking-for"></div>
+            <div id="dest-tabs">
+                <!-- jgn dikasih enter antar img ini -->
+                <span id="dest-link" class="pointer"><img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="dest-img" alt="" /></span><span id="dir-link" class="pointer"><img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="dir-img" alt="" /></span>
+            </div>
+            
+            <div id="dest-search-tab">
+                 <div class="error-box hidden">Please fill the empty field</div>
+                 <?php echo $this->destSearchForm ?>
+            </div>
+            
+            <div id="dir-search-tab" class="hidden">
+                <?php echo $this->activitySearchForm ?>
+            </div>
+            
+            <div id="button">
+                <a class="pointer" onclick="submitSearchForm()"><img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="dest-search-btn" alt="" /></a><a class="pointer" onclick="resetSearchForm()"><img src="<?php echo $this->imageUrl('transparent.gif') ?>" id="dest-reset-btn" alt="" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear-left"></div>

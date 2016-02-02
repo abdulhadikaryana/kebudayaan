@@ -1,0 +1,25 @@
+
+<div class="section">
+    <a name="firstsection"></a>
+    <h2 class="section-title"><span><?php echo $this->translate('Video Gallery') ?></span></h2>
+
+    <div id="video-list">
+        <?php echo $this->render('video/list.phtml') ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var baseUrl = '<?php echo $this->baseUrl() ?>';
+    function getVideos(page)
+    {
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/video/index',
+            data: {page: page},
+            success: function(data) {
+                $("#video-list").html(data);
+            }
+        });
+    }
+</script>

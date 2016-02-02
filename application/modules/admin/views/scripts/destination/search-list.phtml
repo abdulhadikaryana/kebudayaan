@@ -1,0 +1,58 @@
+<?php
+if ($this->langIId == 1) {
+  $msgpagin = 'culture(s)';
+} else {
+  $msgpagin = 'budaya';
+}
+?>
+<?php
+echo $this->paginationControl($this->destination, 'Sliding', 'partials/pagination.phtml', array('message' => $msgpagin, 'upMessage' => true));
+?>
+
+<?php foreach ($this->destination as $destination) : ?>
+  <div class="en-list">
+    <div class="en-img-list four columns">
+  <?php if ($destination['source'] != '') {
+    ?>
+        <a class="zoom" href="<?php echo $this->imageUrl('/upload/poi/' . basename($destination['source'])) ?>">
+
+          <img src="<?php echo $this->imageUrl('timthumb.php?src=upload/culture/' . basename($destination['source']) . '&w=150&h=150&p=100') ?>"
+               alt="<?php echo $destination['poiName'] ?>" title="<?php echo $destination['poiName'] ?>" />
+  <?php } else {
+    ?>
+          <img src="<?php echo $this->imageUrl('/default.jpg'); ?>"
+               alt="<?php echo $destination['poiName'] ?>" title="no image for this destination" />
+  <?php } ?>
+      </a>
+    </div>
+    <div class="en-desc-list eight columns">
+      <h3>
+        <a href="<?php
+  echo $this->baseUrl('/culture/' .
+          $destination['poi_id'] . '/' .
+          $this->makeUrlFormat($destination['poiName']))
+  ?>">
+             <?php echo $destination['poiName'] ?>
+        </a>
+      </h3>
+      <p>
+        <?php echo $this->truncate($destination['description'], 250) ?>
+      </p>
+
+
+      <?php
+      echo $this->partial('partials/read-more.phtml', array(
+          'controller' => $this->controller,
+          'id' => $destination['poi_id'],
+          'title' => $destination['poiName'],
+          'readMore' => 'Read More'
+      ));
+      ?>
+    </div>
+    <div class="clear-left"></div>
+  </div>
+<?php endforeach; ?>
+
+<?php
+echo $this->paginationControl($this->destination, 'Sliding', 'partials/pagination.phtml', array('message' => $msgpagin, 'downMessage' => true));
+?>

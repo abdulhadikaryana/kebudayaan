@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454412397 < time()) $expired = true; else{$expired = false; $value = 's:29:"78-58-143-166.static.zebra.lt";';}?>

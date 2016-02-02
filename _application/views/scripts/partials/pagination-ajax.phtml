@@ -1,0 +1,59 @@
+<?php $totalPage = ceil($this->totalItems/$this->itemPerPage); ?>
+    
+<?php if ($totalPage > 1): ?>
+
+    <div class="pagination">
+        
+        <!-- First page link -->
+        <?php if($this->current != 1) : ?>
+            <a class="pointer" onclick="<?php echo $this->method . '(1)' ?>"> &lt;&lt; </a>
+        <?php else: ?>
+            <span class="disabled"> &lt;&lt; </span>
+        <?php endif; ?>
+
+        <!-- Previous page link -->
+        <?php if($this->current != 1) : ?>
+            <a class="pointer" onclick="<?php echo $this->method . '(' . ($this->current - 1) . ')' ?>"> &lt; Previous </a>
+        <?php else: ?>
+            <span class="disabled"> &lt; Previous </span>
+        <?php endif; ?>
+         
+        <!-- Numbered page links -->
+        
+        <?php for($i = $this->pageRange; $i > 0; $i--) : ?>
+            <?php if (($this->current - $i) > 0):
+                $pageNo = $this->current - $i;
+            ?>
+                <a class="pointer" onclick="<?php echo $this->method . '(' . $pageNo . ')' ?>"><?php echo $pageNo; ?></a>
+            <?php endif; ?>
+        <?php endfor; ?>
+
+        <span class="current"><?php echo $this->current; ?></span>
+        
+        <?php for($i = 1; $i < $this->pageRange; $i++) : ?>
+            <?php if (($this->current + $i) <  $totalPage + 1):
+                $pageNo = $this->current + $i;
+            ?>
+                <a class="pointer" onclick="<?php echo $this->method . '(' . $pageNo . ')' ?>"><?php echo $pageNo; ?></a>
+            <?php endif; ?>
+        <?php endfor; ?>
+        
+        <!-- Next page link -->
+        <?php if($this->current < $totalPage) : ?>
+            <a class="pointer" onclick="<?php echo $this->method . '(' . $this->current + 1 . ')' ?>"> Next &gt; </a>
+        <?php else: ?>
+            <span class="disabled"> Next &gt; </span>
+        <?php endif; ?>
+
+        
+        <!-- Last page link -->
+        <?php if($this->current < $totalPage) : ?>
+            <a class="pointer" onclick="<?php echo $this->method . '(' . $totalPage . ')' ?>"> &gt; &gt; </a>
+        <?php else: ?>
+            <span class="disabled"> &gt; &gt; </span>
+        <?php endif; ?>
+ 
+        
+    </div>
+
+<?php endif; ?>

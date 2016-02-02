@@ -1,0 +1,302 @@
+::-webkit-scrollbar-thumb {background: #CD853F;-webkit-box-shadow: inset 1px 1px 2px rgba(155, 155, 155, 0.4);}
+a:hover {
+    color: #CD853F;
+}
+
+/****************************
+/* Top Bar
+****************************/
+/* Top Menu */
+.t_menu ul li a:hover {
+    color: #CD853F;
+}
+.t_menu ul li ul li a:hover{
+    color: #CD853F;
+}
+
+/****************************
+/* Navigation
+****************************/
+ul.main_menu li.current-menu-item,
+ul.main_menu li:hover, ul.main_menu li.current-menu-ancestor {
+    border-bottom: 3px solid #CD853F;
+}
+ul.main_menu li:hover {
+    border-bottom: 3px solid #CD853F;
+}
+
+/*Drop Down*/
+ul.main_menu li ul li a:hover {
+    color: #CD853F;
+}
+
+/****************************
+/* Breaking News
+****************************/
+.breaking_news span.ticker_title {
+    background: #CD853F;
+    border-color: #b67330;
+    color: #fff;
+}
+.ticker_bg span.wrap_arrow {
+    background-color: #CD853F;
+}
+/****************************
+/* Search FOrm
+****************************/
+.submit-container {
+    background: #CD853F;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d29455), to(#CD853F));
+    background-image: -webkit-linear-gradient(top, #d29455, #CD853F);
+    background-image: -moz-linear-gradient(top, #d29455, #CD853F);
+    background-image: -ms-linear-gradient(top, #d29455, #CD853F);
+    background-image: -o-linear-gradient(top, #d29455, #CD853F);
+    background-image: linear-gradient(top, #d29455, #CD853F);
+}
+.submit-container:hover {
+    background: #d29455;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#CD853F), to(#d29455));
+    background-image: -webkit-linear-gradient(top, #CD853F, #d29455);
+    background-image: -moz-linear-gradient(top, #CD853F, #d29455);
+    background-image: -ms-linear-gradient(top, #CD853F, #d29455);
+    background-image: -o-linear-gradient(top, #CD853F, #d29455);
+    background-image: linear-gradient(top, #CD853F, #d29455);
+}
+/****************************
+/* Main Content
+****************************/
+.block_title h2 {
+    background: #CD853F;
+}
+.block_title h2:after {
+    background: #CD853F;
+}
+a.read_more {
+    color: #d29455;
+}
+a.read_more:hover {
+    color: #CD853F;
+}
+
+/****************************
+/* Tabs Category Style 2
+****************************/
+.tabs_cat ul.tabs_head li:hover:before, .tabs_cat ul.tabs_head li.ui-state-active:before{
+    background: #CD853F;
+    border-top: 1px solid #CD853F;
+    border-bottom: 1px solid #CD853F;
+}
+.tabs2_head li.ui-state-active, .tabs2_head li:hover {
+    border-bottom: 3px solid #CD853F;
+}
+/****************************
+/* Blog Style 2
+****************************/
+span.post_type {
+    background: #CD853F;
+}
+/****************************
+/* sidebar
+****************************/
+
+/****************************
+/* sidebar Widgets
+****************************/
+
+/* Tabs Widget */
+.tabs_widget_head li.ui-state-active,
+.tabs_widget_head li:hover {
+    border-bottom: 3px solid #CD853F !important;
+}
+
+/* Search Form Widget */
+#searchsubmit {
+    background: #CD853F;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d29455), to(#CD853F));
+    background-image: -webkit-linear-gradient(top, #d29455, #CD853F);
+    background-image: -moz-linear-gradient(top, #d29455, #CD853F);
+    background-image: -ms-linear-gradient(top, #d29455, #CD853F);
+    background-image: -o-linear-gradient(top, #d29455, #CD853F);
+    background-image: linear-gradient(top, #d29455, #CD853F);
+}
+#searchsubmit:hover {
+    background: #d29455;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#CD853F), to(#d29455));
+    background-image: -webkit-linear-gradient(top, #CD853F, #d29455);
+    background-image: -moz-linear-gradient(top, #CD853F, #d29455);
+    background-image: -ms-linear-gradient(top, #CD853F, #d29455);
+    background-image: -o-linear-gradient(top, #CD853F, #d29455);
+    background-image: linear-gradient(top, #CD853F, #d29455);
+}
+
+/* News Letter */
+.newsletter .nsb {
+    background: #CD853F;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d29455), to(#CD853F));
+    background-image: -webkit-linear-gradient(top, #d29455, #CD853F);
+    background-image: -moz-linear-gradient(top, #d29455, #CD853F);
+    background-image: -ms-linear-gradient(top, #d29455, #CD853F);
+    background-image: -o-linear-gradient(top, #d29455, #CD853F);
+    background-image: linear-gradient(top, #d29455, #CD853F);
+}
+
+/* TagCloud */
+.sidebar .tagcloud a:hover {
+    background: #d29455;
+}
+
+/* WP Widgets */
+.sidebar .widget_recent_comments ul li
+.sidebar .widget_links  ul li,
+.sidebar .widget_pages ul li,
+.sidebar .widget_recent_entries ul li,
+.sidebar .widget_meta ul li,
+.sidebar .widget_categories ul li,
+.sidebar .widget_archive ul li{
+    color: #CD853F;
+}
+/* Calender */
+#calendar_wrap #wp-calendar #today, #calendar_wrap #wp-calendar #today { background: #CD853F; }
+
+
+/* twitter */
+.sidebar .widget .tweet_list a:hover {
+    color: #CD853F;
+}
+
+/* Login */
+#login-form #log:focus, #login-form #pwd:focus {
+	border-color: #CD853F;
+}
+#login-form .login-button {
+	background: #CD853F;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#d29455), to(#CD853F));
+	background-image: -webkit-linear-gradient(top, #d29455, #CD853F);
+	background-image: -moz-linear-gradient(top, #d29455, #CD853F);
+	background-image: -ms-linear-gradient(top, #d29455, #CD853F);
+	background-image: -o-linear-gradient(top, #d29455, #CD853F);
+	background-image: linear-gradient(top, #d29455, #CD853F);
+}
+
+/****************************
+/* Footer
+****************************/
+/****************************
+/* Footer Widgets
+****************************/
+
+/* footer Tagcloud */
+footer .tagcloud a:hover {
+    background: #d29455;
+}
+
+/* Twitter List */
+footer ul.tweet_list li a:hover {
+    color: #d29455;
+}
+/****************************
+/* Copyright
+****************************/
+.copyright a:hover{
+    color: #d29455;
+}
+/****************************
+/* Post
+****************************/
+/* Post Nav */
+
+.post-nav a:hover {
+	color: #d29455;
+}
+/* POst Tags */
+.post_tags a:hover {
+    background: #d29455;
+}
+
+/* Related Posts */
+.related_list h3 a:hover,
+.related_posts li h3 a:hover {
+    color: #d29455;
+}
+/*------------------------------------------*/
+/*   comments
+/*------------------------------------------*/
+
+.commentlist h4,
+.commentlist h4 a{
+    color: #d29455;
+}
+.post-comment #submit {
+    background: #CD853F;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d29455), to(#CD853F));
+    background-image: -webkit-linear-gradient(top, #d29455, #CD853F);
+    background-image: -moz-linear-gradient(top, #d29455, #CD853F);
+    background-image: -ms-linear-gradient(top, #d29455, #CD853F);
+    background-image: -o-linear-gradient(top, #d29455, #CD853F);
+    background-image: linear-gradient(top, #d29455, #CD853F);
+}
+.post-comment #submit:hover {
+    background: #d29455;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#CD853F), to(#d29455));
+    background-image: -webkit-linear-gradient(top, #CD853F, #d29455);
+    background-image: -moz-linear-gradient(top, #CD853F, #d29455);
+    background-image: -ms-linear-gradient(top, #CD853F, #d29455);
+    background-image: -o-linear-gradient(top, #CD853F, #d29455);
+    background-image: linear-gradient(top, #CD853F, #d29455);
+}
+/*------------------------------------------*/
+/*   Meta box 
+/*------------------------------------------*/
+
+.slidePager a:hover {
+    background:#d29455;
+}
+.slidePager a.activeSlide {
+    background:#d29455;
+}
+.blog_masonry .slidePager a:hover {
+    background:#d29455;
+}
+.blog_masonry .slidePager a.activeSlide {
+    background:#d29455;
+}
+/*------------------------------------------*/
+/*   Pagination 
+/*------------------------------------------*/
+.pagination span.current {
+    background: #d29455;
+}
+/*------------------------------------------*/
+/*   Pages
+/*------------------------------------------*/
+.page_title i{
+    color: #d29455;
+}
+/*------------------------------------------*/
+/*   404
+/*------------------------------------------*/
+.error_page h2.errorMessage {
+    color: #d29455;
+}
+/*--------------------------------------------------*/
+/*	Contact Form
+/*-------------------------------------------------*/
+.contact_form .send_comment {
+    background: #CD853F;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d29455), to(#CD853F));
+    background-image: -webkit-linear-gradient(top, #d29455, #CD853F);
+    background-image: -moz-linear-gradient(top, #d29455, #CD853F);
+    background-image: -ms-linear-gradient(top, #d29455, #CD853F);
+    background-image: -o-linear-gradient(top, #d29455, #CD853F);
+    background-image: linear-gradient(top, #d29455, #CD853F);
+}
+.news_box5 .read_more:hover {
+    background: #CD853F;
+    border-color: #bb7631;
+}
+.bblock_title h2 {
+    background: #CD853F;
+}
+.def_slider {
+    border-bottom-color: #bb7631;
+}

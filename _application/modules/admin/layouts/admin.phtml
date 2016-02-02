@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel Admin Laman Budaya</title>
+    <?php
+    echo $this->headLink()
+        ->appendStylesheet($this->scriptUrl('/lib/bootstrap/css/bootstrap.css'))
+        ->appendStylesheet($this->scriptUrl('/lib/bootstrap/css/bootstrap-responsive.css'))
+        ->appendStylesheet($this->scriptUrl('/styles/backend/admin.css'))
+        ->appendStylesheet($this->scriptUrl('/styles/jqueryui/base/ui.all.css'))
+        ->appendStylesheet($this->scriptUrl('/styles/backend/ui.timepickr.css'))
+        ->appendStylesheet($this->scriptUrl('/styles/backend/style.css'))
+        ->appendStylesheet($this->scriptUrl('/lib/bootstrap/css/sangkuriang-typefaces.min.css'))
+        ->appendStylesheet($this->scriptUrl('/lib/bootstrap/css/override-fuckers.css'));
+    echo $this->headScript()
+        ->appendFile($this->scriptUrl('/lib/jquery.min.js'))
+        ->appendFile($this->scriptUrl('/lib/bootstrap/js/bootstrap.min.js'))
+        ->appendFile($this->scriptUrl('/lib/other/bootstrap.plugins.js'))
+        ->appendFile($this->scriptUrl('/lib/other/gebo_common.js'))
+        ->appendFile($this->scriptUrl('/lib/plupload/js/plupload.js'))
+        ->appendFile($this->scriptUrl('/lib/plupload/js/plupload.full.js'))
+        ->appendFile($this->scriptUrl('javascripts/frontend/lib/highcharts/js/highcharts.js'));
+    ?>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans">
+  <script>
+    //* hide all elements & show preloader
+    document.documentElement.className += 'js';
+  </script>
+  <script type="text/javascript">
+    var baseUrl = '<?php echo $this->baseUrl(); ?>';
+  </script>
+</head>
+<body class="menu_hover" id="components-doc">
+<div id="loading_layer" style="display:none"><img src="<?php echo $this->rootUrl() ?>/media/images/ajax_loader.gif"
+                                                  alt=""/></div>
+<div id="maincontainer" class="clearfix">
+  <!-- header -->
+  <header>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="<?php echo $this->rootUrl('admin/index') ?>"><img
+                  src="<?php echo $this->imageUrl('logo-with-stroke.png'); ?>" alt="" width="180"/></a>
+          <a data-target=".nav-collapse" data-toggle="collapse" class="btn_menu">
+            <span class="icon-align-justify icon-white"></span>
+          </a>
+
+          <div class="nav-collapse">
+            <ul class="nav pull-right">
+              <li><a target="_blank" href="<?php echo $this->rootUrl('/') ?>"><span class="rulycon-home"></span> Halaman Depan</a></li>
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-hover" href="#"><span class="rulycon-list"></span> Konten Utama</a>
+                <ul class="dropdown-menu">
+                  <li><a href="<?php echo $this->rootUrl('admin/culture'); ?>">Kebudayaan</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/news'); ?>">Berita</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/event'); ?>">Kegiatan</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/figure'); ?>">Sosok</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/highlight'); ?>">Highlight</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/polling'); ?>">Polling</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/partner'); ?>">Partner</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/region'); ?>">Area</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/contact'); ?>">Kontak</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-hover" href="#"><span class="rulycon-spinner-3"></span> Sistem</a>
+                <ul class="dropdown-menu">
+                  <li><a href="<?php echo $this->rootUrl('admin/account'); ?>">Akun Admin</a>
+                  </li>
+                  <li><a href="<?php echo $this->rootUrl('admin/log'); ?>">Log</a></li>
+                  <li><a href="<?php echo $this->rootUrl('admin/role'); ?>">Role</a></li>
+                  <!--<li style="width:150px;"><a href="<?php echo $this->rootUrl('admin/user'); ?>">User</a></li>-->
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="rulycon-user"></span> <?php echo $this->userInfo_name; ?></a>
+                <ul class="dropdown-menu">
+                  <li><a href="<?php echo $this->rootUrl() . '/admin/user/setting'; ?>">Sunting Akun</a></li>
+                  <li><a href="<?php echo $this->rootUrl() . '/admin/index/bantuan'; ?>">Bantuan</a></li>
+                  <li><a href="<?php echo $this->rootUrl() . '/admin/index/logout'; ?>">Keluar</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- main content -->
+
+  <div class="container main_content">
+    <div class="row">
+      <div class="span12">
+          <?php echo $this->layout()->content ?>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      //* show all elements & remove preloader
+      setTimeout('$("html").removeClass("js")', 1000);
+    });
+  </script>
+
+  <script type="text/javascript" src="<?php echo $this->rootUrl() . '/min/admin-js.php'; ?>"></script>
+
+
+
+    <?php
+
+    echo $this->placeholder('jsInline');
+
+    ?>
+
+</body>
+
+</html>

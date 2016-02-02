@@ -1,0 +1,187 @@
+<form method="post" id="tourismop" onsubmit="return OnSubmitForm();" name="tourismop">
+    <fieldset class="wide">
+        <legend>Tourism Operator Detail</legend>
+        <?php echo $this->form->Count_class; ?>
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="TourismOperatorLangName">Name</label></td>
+                    <td>&#58;</td>
+                    <td><?php echo html_entity_decode($this->form->TourismOperatorLangName); ?></td>
+                </tr>
+                <?php if($this->language_id!=1)
+{?>
+                <tr>
+                    <td><label for="TourismOperatorPhone">Telephone</label></td>
+                    <td>&#58;</td>
+                    <td><?php echo html_entity_decode($this->form->TourismOperatorPhone); ?></td>
+                </tr>
+                <tr>
+                    <td><label for="TourismOperatorFax">Fax</label></td>
+                    <td>&#58;</td>
+                    <td><?php echo html_entity_decode($this->form->TourismOperatorFax); ?></td>
+                </tr>
+                <tr>
+                    <td><label for="TourismOperatorEmail">Email</label></td>
+                    <td>&#58;</td>
+                    <td><?php echo html_entity_decode($this->form->TourismOperatorEmail); ?></td>
+                </tr>
+                <tr>
+                    <td><label for="TourismOperatorWebsite">Website</label></td>
+                    <td>&#58;</td>
+                    <td><?php echo html_entity_decode($this->form->TourismOperatorWebsite); ?></td>
+                </tr>
+                <tr>
+                    <td><label for="ClassificationSelect">Classification</label></td>
+                    <td>&#58;</td>
+                    <td>
+                        <span class="margin_r"><?php echo $this->form->ClassificationSelect; ?></span>
+                        <span><input id="addClass" type="button" value="add Classification" class="btn radius" onclick="addClassification();" /></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <table id="classificationContainer"><tbody></tbody></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><?php echo $this->form->Class_counter; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="AreaSelect">Select Region</label></td>
+                    <td>&#58;</td>
+                    <td><?php echo $this->form->AreaSelect; ?></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="province-list">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="area-list">
+                    </td>
+                </tr>
+                <tr class="selectPoiRow" style="display: none;">
+                    <td><label>Select Destination</label></td>
+                    <td>&#58;</td>
+                    <td class="poi-list"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <span class="space_r" ><input class="btn radius" type="button" value="Add Area As Tourism Area" onclick="setArea();" /></span>
+                        <span><input class="btn radius" type="button" value="Show Related Destination" onclick="showRelatedPoi();" /></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <span id="mapCMS" style="width: 600px; height: 300px; display: none;" ></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>TourismOperator Area</label></td>
+                    <td>&#58;</td>
+                    <td id="toareacontainer">
+                        <span id="arealabel">
+                                <?php if($this->state_edit): ?>
+                                    <?php echo $this->areaName($this->area); ?>
+    <?php else: ?>
+                            no area set
+    <?php endif; ?>
+                        </span>
+    <?php echo $this->form->TourismOperatorArea; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <table class="resetTable">
+                            <tr>
+                                <td><input class="btn radius" type="button" value="Show/Hide Map" onclick="BuildMap();" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Coordinate</label></td>
+                    <td></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><label for="Pointx">X</label></td>
+                                <td>&#58;</td>
+                                <td style="width: 50px;"><?php echo $this->form->Pointx; ?></td>
+                                <td><label for="Pointy">Y</label></td>
+                                <td>&#58;</td>
+                                <td style="width: 50px;"><?php echo $this->form->Pointy; ?></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+    <?php } ?>
+            </tbody>
+        </table>
+    </fieldset>
+    <fieldset class="wide">
+        <legend>Additional Information</legend>
+<?php if($this->language_id!=1)
+{?><table>
+            <tbody>
+                <tr id="hotelAdditional" style="display: hidden;">
+                    <td><label for="TourismOperatorStar">Star</label><span class="tip">(*only for hotel)</span></td>
+                    <td>&#58;</td>
+                    <td><?php echo $this->form->TourismOperatorStar; ?></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="formLabel" style="margin-top: 10px; width: 100%;">Address:</div>
+        <br  class="clearfloat"/>
+    <?php echo html_entity_decode($this->form->TourismOperatorAddress); ?>
+    <?php } ?>
+        <div class="formLabel" style="margin-top: 10px; width: 100%;">Description:</div>
+        <br  class="clearfloat"/>
+    <?php echo $this->form->TourismOperatorDescription; ?>
+    </fieldset>
+<?php if($this->language_id!=1)
+{?>
+    <fieldset class="medium">
+        <legend>Coverage Area</legend>
+        <table>
+            <tr>
+                <td><label for="IslandListOptions">Choose Area</label></td><td>&#58;</td>
+                <td><?php echo $this->form->Island_Select; ?></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td class="province-coverlist"></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td class="area-coverlist"></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td><div id="areacontainer"></div>
+            </tr>
+            <tr>
+                <td></td><td></td>
+                <td>
+                    <span class="space_r"><input style="display:none;" id="addAreaBtn" class="btn radius" type="button" value="add Area" onclick="addArea();" /></span>
+                    <span class="ajax-loader"></span>
+                </td>
+            </tr>
+            <input type="hidden" name="MaxArea" id="MaxArea" value="0" />
+            <input type="hidden" name="AreaCounter" id="AreaCounter" value="0" />
+        </table>
+    </fieldset><?php } ?>
+    <input class="btn radius space_l" type="submit" value="Save"/>
+</form>  

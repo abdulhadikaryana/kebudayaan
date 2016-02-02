@@ -1,0 +1,71 @@
+<form class="form-horizontal well" enctype="multipart/form-data" action="<?php echo $this->currentUrl(); ?>" method="post" name="imageForm" id="imageForm">
+  <fieldset>
+    <legend class="f_legend">Image details</legend>
+    <div class="control-group">
+      <label for="image_type" class="control-label">Type</label>
+      <div class="controls">
+        <?php echo $this->form->image_type; ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="image_name" class="control-label">Title</label>
+      <div class="controls">
+        <?php echo $this->form->image_name; ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="image_upload" class="control-label">Picture</label>
+      <div class="controls">
+        <?php echo $this->form->image_upload; ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="language-choice" class="control-label">Culture Language</label>
+      <div class="controls">
+        <select name="language-choice" id="language-choice">
+          <option value="1" selected="">English</option>
+          <option value="2">Indonesia</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="ImagePoi" class="control-label">Related Culture</label>
+      <div class="controls">
+        <table>
+          <tr>
+            <td class="poicontainer"><?php echo $this->form->image_poi; ?><span class="ajax-loader"></span>
+              <?php if ($this->state_edit): ?>
+                <?php if ($this->poi_id > 0): ?>
+                  <div id="manipulation">
+                    <span id="poiname"><?php echo $this->poiName($this->poi_id); ?></span>
+                    <span id="removepoi" onclick="removePoi($(this));">Edit culture</span>
+                    <input type="hidden" value="<?php echo $this->poi_id; ?>" name="poivalue"/>
+                  </div>
+                <?php endif; ?>
+              <?php endif; ?>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="image_description" class="control-label">Description</label>
+      <div class="controls">
+        <img src="<?php echo $this->image; ?>"/>
+        <?php echo $this->form->image_description ?>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" class="btn btn-success" value="Save"/>
+      </div>
+    </div>
+
+  </fieldset>
+</form>

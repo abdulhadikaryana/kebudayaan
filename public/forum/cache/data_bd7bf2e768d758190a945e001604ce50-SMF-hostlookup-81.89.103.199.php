@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454411904 < time()) $expired = true; else{$expired = false; $value = 's:38:"81-89-103-199.blue.kundencontroller.de";';}?>

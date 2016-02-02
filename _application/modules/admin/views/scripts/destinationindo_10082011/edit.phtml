@@ -1,0 +1,12 @@
+<h2>Destination Menu</h2>
+<h3>Edit, and Update from the list</h3>
+<?php echo $this->render('destinationindo/form.phtml'); ?>
+<?php echo $this->render('destinationindo/script.phtml'); ?>
+<?php $this->placeholder('JsDocumentReady')->captureStart();?>
+    $('#addCategoryBtn').attr('disabled','true');
+    $('#addAreaBtn').attr('disabled','true');
+    pushAreaData();
+    pushCategoryData();
+    generateCategory();
+    generateArea();
+<?php $this->placeholder('JsDocumentReady')->captureEnd();?>

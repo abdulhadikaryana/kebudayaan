@@ -1,0 +1,17 @@
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
+<rss version="2">
+	<channel>
+		<title>Visit Indonesia Event RSS</title>
+		<link><?php echo $this->baseUrl('/event/') ?></link>
+		<description>Upcoming Event in Indonesia</description>
+		<language>English</language>
+		<?php foreach($this->data as $feed): ?>
+			<item>
+				<title><?php echo $feed['name']; ?></title>
+				<date><?php echo $feed['date_start']; ?></date>
+				<link><?php echo $this->baseUrl('/event/detail/'.$feed['event_id'].'/'.$this->makeUrlFormat($feed['name'])) ?></link>
+				<description><?php echo $feed['description']; ?></description>
+			</item>
+		<?php endforeach;?>
+	</channel>
+</rss>

@@ -1,0 +1,92 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart(); 
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+
+<script type="text/javascript">
+    tinyMCE.execCommand('mceAddControl', false, 'materialDescription');
+    
+    <?php if ($this->state_edit) : ?>
+        var maxCtr = <?php echo $this->numbCtr; ?>;
+    <?php else : ?>
+        var maxCtr = 1;
+    <?php endif; ?>
+    
+    function removeSpaces(string)
+    {
+        return string.split(' ').join('');
+    }
+
+    function addmaterial()
+    {
+        if (($('#materialUrl'+maxCtr).length > 0) && ($('#materialName'+maxCtr).length > 0)) {
+            nospace_materialUrl  = removeSpaces($('#materialUrl'+maxCtr).val());
+            nospace_materialName = removeSpaces($('#materialName'+maxCtr).val());
+        } else {
+            nospace_materialUrl  = -1;
+            nospace_materialName = -1;
+        }
+        if (((nospace_materialUrl.length > 0) && (nospace_materialName.length > 0)) || (($('#materialUrl'+maxCtr).length <= 0) && ($('#materialName'+maxCtr).length <= 0))) {
+            maxCtr++;
+            html = "<tr><td></td><td></td><td><input type='text' id='materialName"+ maxCtr +"' name='materialName"+ maxCtr +"' class='mediumele'/></td>";
+            html = html+ "<td></td><td></td><td><input type='text' id='materialUrl"+ maxCtr +"' name='materialUrl"+ maxCtr +"' class='mediumele'/></td>";
+            html2 = html+ "<td><div class='general-remove' onclick='deletematerial($(this));'>Delete</div></td></tr>";
+            $('#material-container tbody').append(html2);
+            $('#materialCtr').val(maxCtr);
+            $('#materialUrl'+maxCtr).rules("add", {
+                  required: true,
+                  url     : true,
+                  messages: {
+                      required: "<br/>Please enter an URL!",
+                      url     : "<br/>Please enter a valid URL!"
+                  }
+            });
+            $('#materialName'+maxCtr).rules("add", {
+                  required: true,
+                  messages: {required: "<br/>Please enter a material name!"}
+            });
+        } else {
+            alert('There are still empty fields!!');
+        }
+    }
+
+    function deletematerial(obj)
+    {
+        obj.parents('tr').remove();
+    }
+    
+    $(function(){
+        <?php if($this->state_edit) : ?>
+            $('#materialCtr').val(<?php echo $this->numbCtr; ?>);
+        <?php else: ?>
+            $('#materialCtr').val(1);
+        <?php endif; ?>
+
+        $("#materialPromotionForm").validate({
+            rules   : {
+                materialTitle: "required",
+                <?php $this->state_edit ? $ctrmaterial = $this->numbCtr : $ctrmaterial = 1; ?>
+                <?php for ($i = 1; $i <= $ctrmaterial; $i++ ) : ?>
+                    materialName<?php echo $i; ?>: "required",<?php echo "\n"; ?>
+                <?php endfor; ?>
+                <?php for ($i = 1; $i <= $ctrmaterial; $i++ ) : ?>
+                    materialUrl<?php echo $i; ?>: {required: true, url: true}<?php if ($i!=$ctrmaterial): ?>,<?php endif; echo "\n";?>
+                <?php endfor; ?>
+            },
+            messages: {
+                materialTitle: {required: " Please enter a title!"},
+                <?php for ($i = 1; $i <= $ctrmaterial; $i++ ) : ?>
+                    materialName<?php echo $i; ?>: {required: "<br/>Please enter a material name!"},<?php echo "\n"; ?>
+                <?php endfor; ?>
+                <?php for ($i = 1; $i <= $ctrmaterial; $i++ ) : ?>
+                    materialUrl<?php echo $i; ?>: {required: "<br/>Please enter an URL!", url: "<br/>Please enter a valid URL!"}<?php if ($i!=$ctrmaterial): ?>,<?php endif; echo "\n";?>
+                <?php endfor; ?>      
+            }
+        });
+            
+        $("#materialPromotionForm input").blur(function(){
+            $("#materialPromotionForm").validate().element($(this));
+        });
+    });
+</script>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

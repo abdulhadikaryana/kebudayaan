@@ -1,0 +1,28 @@
+
+    <div class="span24">
+        <h1 id="page-title" class="text-center"><span>Kebudayaan Indonesia</span></h1>
+    </div>
+
+    <div class="section">
+        <h2 class="jelajah-section-title span12"><span><?php echo $this->category['name'] ?></span></h2>
+         <img class="child-detail-img span12" src="<?php echo $this->imageUrl('timthumb.php?src=' . '/upload/category/' . 
+
+            $this->category['image'])  .  '&w=577&h=200&q=100' ?>" alt="" title="<?php echo $this->category['name']?>" />
+
+    </div>
+
+<div class="clear-left"></div>
+
+<br />
+
+<div class="paginate">
+</div>
+
+<div class="section">
+
+    <?php echo $this->render('destination/search-list.phtml'); ?>
+
+</div>
+
+<div class="paginate">
+</div>

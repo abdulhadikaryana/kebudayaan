@@ -1,0 +1,45 @@
+<div id="dest-content">
+    <div class="section-directory">
+        <h3>
+            <?php echo $this->directory['langname'] ?>
+            <?php if($this->directory['star'] > 0):?>
+                <img src="<?php echo $this->imageUrl('/bintang/bintang' . $this->directory['star'] . '.png')?>" alt="<?php echo $this->directory['star']?> star(s)" title="<?php echo $this->directory['star']?> star(s)" />
+            <?php endif; ?>
+        </h3>
+		<p>
+			<?php echo $this->directory['description'] ?>
+		</p>
+
+        <table>
+            <tr>
+                <td><span class="address">Address</span></td>
+                <td class="double-dot">:</td>
+                <td><?php echo $this->escapeCheckEmpty($this->directory['address']); ?></td>
+            </tr>
+            <tr>
+                <td><span class="phone">Phone</span></td>
+                <td class="double-dot">:</td>
+                <td><?php echo $this->escapeCheckEmpty($this->directory['phone']); ?></td>
+            </tr>
+            <tr>
+                <td><span class="fax">Fax</span></td>
+                <td class="double-dot" >:</td>
+                <td><?php echo $this->escapeCheckEmpty($this->directory['fax']); ?></td>
+            </tr>
+            <tr>
+                <td><span class="email">Email</span></td>
+                <td class="double-dot">:</td>
+                <td><?php echo $this->escapeCheckEmpty($this->directory['email']); ?></td>
+            </tr>
+            <tr>
+                <td><span class="website">Website</span></td>
+                <td class="double-dot">:</td>
+                <td>
+                    <a target="_blank" href="<?php echo $this->escapeCheckEmpty($this->directory['website']); ?>">
+                        <?php echo $this->escapeCheckEmpty($this->directory['website']); ?>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

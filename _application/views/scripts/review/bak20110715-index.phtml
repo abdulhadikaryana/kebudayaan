@@ -1,0 +1,48 @@
+
+<?php echo $this->render('destination/destination-title.phtml'); ?>
+
+<div id="dest-content">
+    <div class="section">
+        <a name="firstsection"></a>
+        <h3><?php echo $this->pageTitle ?></h3>
+
+        <?php if ( ! $this->sess->username AND ! $this->sess->fbname) : ?>
+            <p><?php echo $this->translate('id_need_login_text'); ?></p>
+            <p><fb:login-button autologoutlink="true" v="2"></fb:login-button></p>
+        <?php else : ?>
+            <?php if(count($this->reviewExist)) : ?>
+                <p>
+                    <a href="<?php echo $this->url(array(
+                            'action' => 'edit',
+                            'reviewId' => $this->reviewExist['review_id']
+                        ), 'dest-review') ?>">Edit your Review</a>
+                </p>
+                <?php echo $this->partial('review/list.phtml',
+                    array('review' => $this->reviewExist, 'fb' => $this->fb)) ?>
+            <?php else: ?>
+                <p>
+                    <a href="<?php echo $this->url(array('action' => 'add')) ?>"><?php echo $this->translate('id_write_rev');?></a>
+                </p>
+            <?php endif; ?>
+        <?php endif; ?>
+        <?php echo $this->paginationControl(
+                $this->reviews,
+                'Sliding',
+                'partials/pagination.phtml',
+                array('message' => $this->translate('id_review'), 'upMessage' => true)); ?>
+
+        <?php foreach($this->reviews as $review) : ?>
+            <?php echo $this->partial('review/list.phtml',
+                array('review' => $review, 'fb' => $this->fb)) ?>
+        <?php endforeach; ?>
+
+        <?php echo $this->paginationControl(
+                $this->reviews,
+                'Sliding',
+                'partials/pagination.phtml',
+                array('message' => $this->translate('id_review'), 'downMessage' => true)); ?>
+
+    </div>
+</div>
+
+<?php echo $this->render('destination/destination-footer.phtml'); ?>

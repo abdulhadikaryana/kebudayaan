@@ -1,0 +1,31 @@
+<div class="filter-panel">
+
+
+  <form action="<?php echo $this->currentUrl(); ?>" method="post" class="form-inline well">
+    <label for="filterPage" class="control-label">Filter</label>
+    <select class="filter-box" name="filterPage" id="filterPage" 
+            onchange="filterSwitch(this.value);">
+      <option value="0">Show All</option>
+      <option value="1">Name</option>
+      <option value="2">Parent</option>
+    </select>
+
+    <span class="area-box filter-hidden"> <select class="" name="filterParent">
+        <?php foreach ($this->area as $area) : ?>
+          <option value="<?php echo $area['area_id']; ?>">
+            <?php echo $area['name']; ?>
+          </option>
+        <?php endforeach; ?>
+      </select></span>
+
+    <span class="title-box mediumele filter-hidden"><input class="" type="text" 
+                                                           name="filterTitle"/></span>
+
+    <input type="submit" value="Go" class="btn radius"/>
+    <hr />
+    <?php if (!empty($this->alert)) : ?>
+      <div class="tip"> Filter yang sedang digunakan: <?php echo $this->alert; ?>
+      </div>
+    <?php endif; ?> 
+  </form>
+</div>

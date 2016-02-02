@@ -1,0 +1,99 @@
+<?php 
+    $this->placeholder('jsInline')->captureStart(); 
+    echo $this->render('partial/tinyMCE.phtml');
+?>
+<?php echo $this->render('partial/upload-image-script.phtml');?>
+<script type="text/javascript">
+    tinyMCE.execCommand('mceAddControl', false, 'linkDescription');
+    
+    <?php if($this->state_edit): ?>
+    var maxCtr = <?php echo $this->numbCtr2; ?>;
+    <?php else: ?>
+    var maxCtr = 0;
+    <?php endif;?>
+    
+    function removeSpaces(string) {
+        return string.split(' ').join('');
+    }
+
+    function addNumb()
+    {
+        if($('#linkTelephone'+maxCtr).length>0)
+        {
+            nospace_linkTelephone = removeSpaces($('#linkTelephone'+maxCtr).val());
+        }
+        else 
+        {
+            nospace_linkTelephone = -1;
+        }
+        if((nospace_linkTelephone.length > 0)||($('#linkTelephone'+maxCtr).length<=0))
+        {
+            maxCtr++;
+            html = "<tr><td></td><td></td><td><input type='text' id='linkTelephone"+ maxCtr +"' name='linkTelephone"+ maxCtr +"' class='mediumele'/></td>";
+            html2 = html+ "<td><div class='general-remove' onclick='deleteTelp($(this));'>Delete</div></td></tr>";
+            $('#telp-container tbody').append(html2);
+            $('#linkCtr').val(maxCtr);
+            $('#linkTelephone'+maxCtr).rules("add", {
+                  required: true,
+                  messages: {required: "<br/>Please enter a telephone number!"}
+            });
+        }
+        else
+        {
+            alert('There are still empty fields!!');
+        }
+    }
+
+    function deleteTelp(obj)
+    {
+        obj.parents('tr').remove();
+    }
+
+    $(function(){
+        
+        <?php if($this->state_edit): ?>
+            $('#linkCtr').val(<?php echo $this->numbCtr2; ?>);
+        <?php endif;?>
+        
+        $("#airlinesForm input").blur(function(){
+            $("#airlinesForm").validate().element($(this));
+        });
+
+        $("#airlinesForm").validate({
+            rules : {
+                linkName:{
+                    required:true
+                },
+                linkWebsite:{
+                    required:true,
+                    url:true
+                },
+                linkEmail:{
+                    email:true
+                },
+                linkFax:{
+                    required:true
+                },
+                <?php $this->state_edit ? $ctrLink = $this->numbCtr2 : $ctrLink = 0; ?>
+                <?php for ($i = 0; $i <= $ctrLink; $i++ ) : ?>
+                    linkTelephone<?php echo $i; ?>: "required"<?php if ($i!=$ctrLink): ?>,<?php endif; echo "\n";?>
+                <?php endfor; ?>
+            },
+            messages : {
+                linkName : "Please enter a title!",
+                linkWebsite : {required:"Please enter the website URL!",url:"Please enter a valid URL, make sure to use the Http:// prefix"},
+                linkEmail : "Please enter a verified email!",
+                linkFax : "Please enter a fax!",
+                <?php $this->state_edit ? $ctrLink = $this->numbCtr2 : $ctrLink = 0; ?>
+                <?php for ($i = 0; $i <= $ctrLink; $i++ ) : ?>
+                    linkTelephone<?php echo $i; ?>: "<br/>Please enter a telephone number!"<?php if ($i!=$ctrLink): ?>,<?php endif; echo "\n";?>
+                <?php endfor; ?>
+            }
+
+        });
+
+    });
+
+</script>
+<?php echo $this->render('partial/upload-image-script.phtml');?>
+<?php $this->placeholder('jsInline')->captureEnd(); ?>

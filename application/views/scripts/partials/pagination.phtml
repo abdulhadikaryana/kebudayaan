@@ -1,0 +1,93 @@
+<?php
+    $postfix = Zend_Registry::isRegistered('paginationData')
+    ? Zend_Registry::get('paginationData') : '' ;
+?>
+    
+<?php if ($this->pageCount > 1): ?>
+
+    <?php
+        // no item pertama di tiap halaman
+        // current => halaman sekarang
+        $itemAwal = (($this->current - 1) * $this->itemCountPerPage )+ 1;
+    ?>
+
+    <?php
+        // jika jumlah item di halaman tersebut kurang dari settingan jumlah item per halaman
+        // yang sudah ditentukan. Misalkan jumlah item per halaman diset ke 10.
+        // Total item ada 12 sehingga di halaman pertama ada 10 dan di halaman
+        // kedua hanya ada dua item saja.
+        if($this->currentItemCount < $this->itemCountPerPage)
+            $itemAkhir = $this->totalItemCount;
+        else // jika jumlahnya lebih dari settingan jumlah item per halaman
+            $itemAkhir = $this->current * $this->itemCountPerPage;
+
+        // jika cuma satu biji saja, tidak perlu ditampilkan informasi no item awal
+        if($this->currentItemCount == 1)
+            $strInfoPage = $this->totalItemCount;
+        else
+            $strInfoPage = $itemAwal." - ".$itemAkhir;
+    ?>
+
+        <?php // down message digunakan untuk menampilkan informasi halaman di bagian bawah ?>
+        <?php if($this->downMessage) : ?>
+            <div class="infoPagination" style="margin-top: 10px;">
+                <?php echo $strInfoPage ?> <?php echo $this->translate('of') ?> <?php echo $this->totalItemCount." ".$this->message ?>
+            </div>
+        <?php endif; ?>
+
+    <div class="pagination">
+
+        <!-- First page link -->
+        <?php if (isset($this->previous)):
+            $pageNo = $this->first;
+        ?>
+            <a href="<?php echo $this->url(array('page' => $this->first)) . $postfix .'#firstsection' ?>"> &lt;&lt; </a>
+        <?php else: ?>
+            <span class="disabled"> &lt;&lt; </span>
+        <?php endif; ?>
+        
+        <!-- Previous page link -->
+        <?php if (isset($this->previous)): $pageNo = $this->previous; ?>
+            <span class="previous">
+                <a href="<?php echo $this->url(array('page' => $this->previous)) . $postfix .'#firstsection' ?>"> &lt; </a>
+            </span>
+        <?php else: ?>
+            <span class="disabled"> &lt; </span> 
+        <?php endif; ?>
+         
+        <!-- Numbered page links -->
+        <?php foreach ($this->pagesInRange as $page): ?>
+            <?php if ($page != $this->current): $pageNo = $page; ?>
+                <a href="<?php echo $this->url(array('page' => $page)) . $postfix .'#firstsection' ?>"><?php echo $pageNo; ?></a>
+            <?php else: ?>
+                <span class="current"><?php echo $page; ?></span>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        
+        <!-- Next page link -->
+        <?php if (isset($this->next)): $pageNo = $this->next; ?>
+			<span class="previous">
+	            <a href="<?php echo $this->url(array('page' => $this->next)) . $postfix .'#firstsection' ?>"> &gt; </a>
+			</span>
+        <?php else: ?>
+            <span class="disabled"></span> 
+        <?php endif; ?>
+
+        <!-- Last page link -->
+        <?php if (isset($this->next)): $pageNo = $this->last; ?>
+            <a href="<?php echo $this->url(array('page' => $this->last)) . $postfix .'#firstsection' ?>"> &gt;&gt; </a>
+        <?php else: ?>
+            <span class="disabled">&gt;&gt;</span>
+        <?php endif; ?>
+     
+    </div>
+
+    <?php // up message digunakan untuk menampilkan informasi halaman di bagian atas ?>
+    <?php if($this->upMessage) : ?>
+        <div class="infoPagination" style="margin-bottom: 10px;">
+            <?php echo $strInfoPage ?> <?php echo $this->translate('of') ?> <?php echo $this->totalItemCount." ".$this->message ?>
+            <div class="line" style="margin-top: 10px;"></div>
+        </div>
+    <?php endif; ?>  
+
+<?php endif; ?>

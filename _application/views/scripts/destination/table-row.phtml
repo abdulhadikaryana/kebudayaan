@@ -1,0 +1,91 @@
+<tr>
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td><a href="<?php echo $this->rootUrl(); ?>/admin/destination/edit/id/<?php echo $this->poi_id; ?>/lang/1"><?php echo $this->HtmlDecode($this->name); ?></a></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/destination/edit/id/<?php echo $this->poi_id; ?>/lang/1">Edit</a>
+                            </td>
+                            <td>
+                                <a class="general-remove" target="_blank" href="<?php echo $this->rootUrl(); ?>/en/destination/<?php echo $this->poi_id; ?>">Preview</a>
+                            </td>
+                            <td>
+                                <div class="general-remove" onclick="DeletePoi(<?php echo $this->poi_id;?>,$(this));">Delete</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+
+    <td class="tablelist">
+        <?php foreach($this->PoiArea($this->poi_id) as $area) :?>
+            <?php echo $area['name']; ?><b>&nbsp;&#183;</b>
+        <?php endforeach;?>
+    </td>
+
+    <td class="tablelist">
+        <table class="cleartable tablelist admindestcategorylist">
+            <?php foreach($this->PoiCategory($this->poi_id,1) as $category) :?>
+            <tr class="category-list">
+                <td>
+                    <div class="category-name">
+                        <input id="cat<?php echo $category['category_id']; ?>poi<?php echo $this->poi_id;?>" class="categoryRadio<?php echo $this->poi_id; ?>" type="radio" value="<?php echo $category['category_id']; ?>" onclick = "setMainCategory(<?php echo $this->poi_id; ?>,$(this).val(),$(this));" <?php if ($category['category_id'] == $this->main_category) : ?> checked="checked" <?php endif; ?> />
+                            <?php echo $category['name']; ?>
+                    </div>
+                    <div class="general-remove nomargin" onclick="removeCategory($(this),<?php echo $this->poi_id; ?>,<?php echo $category['category_id'] ?>);">Remove</div>
+                </td>
+            </tr>
+            <?php endforeach;?>
+        </table>
+        <table class="cleartable categoryPanel">
+            <tr>
+                <td class="edit-category"><div class="general-remove" onmousedown="editCategory(<?php echo $this->poi_id; ?>,$(this));">Edit</div></td>
+            </tr>
+        </table>
+
+    </td>
+    <td><div class="general-remove" onclick="changePoiStatus(<?php echo $this->poi_id ;?>,$(this),<?php echo $this->status; ?>);"><?php if($this->status==1)
+{
+    echo 'published';
+}else
+{
+    echo 'draft';
+} ?></div></td>
+
+
+    <td>
+        <table class="cleartable">
+            <tr>
+                <td><a>Indonesian Translation</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="cleartable tiny">
+                        <tr>
+                            <td>
+                                <a class="general-remove" href="<?php echo $this->rootUrl(); ?>/admin/destination/edit/id/<?php echo $this->poi_id; ?>/lang/2"><?php $this->CheckDestiIndo($this->poi_id, 2)?></a>
+                            </td>
+                            <?php $indtrans = $this->CheckIndoTranslation($this->poi_id, 2);
+                                  if($indtrans == true){?>
+                            <td>
+                                <a class="general-remove" target="_blank" href="<?php echo $this->rootUrl(); ?>/id/destination/<?php echo $this->poi_id; ?>">Preview</a>
+                            </td>
+                            <td>
+                                <div class="general-remove" onclick="DeletePoi2(<?php echo $this->poi_id;?>,$(this));">Delete</div>
+                            </td><?php } ?>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+
+
+</tr>

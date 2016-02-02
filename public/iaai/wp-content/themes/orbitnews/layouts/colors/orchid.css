@@ -1,0 +1,30 @@
+/* #c84dc3 */
+blockquote {
+border-left:2px solid #c84dc3;
+border-right:2px solid #c84dc3;
+}
+
+.cat-title {
+background-color: #c84dc3;
+}
+
+ul.accordion > li.active,.tabs dd.active {
+border-top:3px solid #c84dc3;
+}
+
+.tabs-widget .tab-links li.active a {
+background: #c84dc3;
+border:1px solid #c84dc3;
+}
+
+.twitter-widget a {
+color: #c84dc3 !important;
+}
+
+ol#comments .comment-reply-edit a.comment-reply-link,ol#comments .comment-reply-edit a.comment-edit-link,#cancel-comment-reply-link,.contact-form input[type='submit'],.wpcf7 input[type="submit"],li.widget_tag_cloud .tagcloud a:hover,li.subscribe-widget input[type='submit'],.comment-form input[type='submit'],.copyright,.pagenation li,.pagenation li span,#main-menu a:hover,#main-menu a.active,#top-menu {
+background: #c84dc3;
+}
+
+a,.dropcap2 span.large-cap,.error-404 p b,li.widget_rss .rss-date,.tabs-widget > div h3 a,.post-title,.comment-reply-title,.flex-caption a,.other-posts .post-title {
+color: #c84dc3;
+}

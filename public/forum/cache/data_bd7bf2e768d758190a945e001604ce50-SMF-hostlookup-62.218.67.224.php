@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1454409939 < time()) $expired = true; else{$expired = false; $value = 's:26:"simmu1-67-224.utaonline.at";';}?>
